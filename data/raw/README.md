@@ -1,5 +1,6 @@
-Crashes and Magma folder collect the unique crashes which collect methods are from UNIFuzz and konwn bugs are from magma.
-ablation collects the raw data with SEAFuzz's ablation experiment.
-main folder collects the raw data with the baseline fuzzers during the experiment.
-parameter folder collects the parameter sensitive experiment.
-alpha_heatmap folder collects the data, this data is used to observe the effects of different smoothing coefficients α on the distribution of entropy values for various seeds in the target program.
+- **`Crashes/`** contains the unique crashes identified using the crash deduplication methodology adopted from UNIFuzz.
+- **`Magma/`** contains the known bugs identified using the Magma benchmark.
+- **`ablation/`** contains the raw data from SEAFuzz's ablation experiments.
+- **`main/`** contains the raw experimental data collected from the baseline fuzzers.
+- **`parameter/`** contains the raw data from the parameter sensitivity experiments.
+- **`alpha_heatmap/`** contains the data used to investigate how different smoothing coefficients (α) affect the distribution of entropy values across different seeds in the target programs.
