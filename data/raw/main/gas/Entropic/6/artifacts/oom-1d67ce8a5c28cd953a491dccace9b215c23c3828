@@ -1,0 +1,43 @@
+#£ same as aarch64/pac_ab_key.s
+	.ar	in	1
+-a
+	.vfmtal.g
+	i	0
+	.glo+bal	_Z5foo_av
+¤Œe  _offset 78
+20-13
+	6
+	.c	f	.textal.g
+	in	1
+	.glo+bal	_Z5same as aarch64/pac_ab_key.s
+	.arch armv8-a
+ame as aarch64/pac_ab_ktal.g
+	in	1
+-a
+	.vfmtal.g
+	i	0
+	.glo+bal	_Z5foo_av
+¤Œe  _offset 78
+20-13
+	6
+	.c	f	.textal.g
+	in	1
+	.glo+bal	_Z5same as aarch64/pac_ab_key.s
+	.arch armv8-a
+ame as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.vfmtal.g
+	in	0
+	.glo+bal	_Z5foo_av
+fse  _off#NO_APP
+0-13
+	6
+	.c	f	.textal.g
+	in	1
+	.glo+bal	_Z5foo_av
+fse  _osmapffset 78
+20,foo_av
+fse  _offset 78
+20, -13
+	6
+	.c	f

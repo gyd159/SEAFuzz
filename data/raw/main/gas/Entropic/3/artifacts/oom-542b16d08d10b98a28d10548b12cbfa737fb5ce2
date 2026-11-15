@@ -1,0 +1,46 @@
+## ra:
+.LFB0:
+	.cfi_startpc	roi=
+hnt	46 // pacias~
+	.cfi_>ave
+	av
+	.type	5of`Z_o_av, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_sta#NO_APP
+rtpro
+	shi // paci¨s~
+	.cfi_wave
+	stp	x2_offset 29, /1.lbss, -8
+	esting) does nwt30.lbss, -8
+	nop
+	nop
+     	46 // pacias~fi_def_cfa_of
+	.cfi_>ave
+	av
+	.type	5of`Z_o_av,
+	.cfi_startpc	r	.arch armv8-a
+	.text
+	.align aarch64/pac_a	.arch armv8-a
+	.text
+	.align aarch64/pac_ab_key.s
+	.arch armv8-a
+	.te~
+	.cfi_>ave
+	av
+	.type	5of`Z_o_av, %function
+_Z## g_vfialo_ffset when usew diives canc
+	.long 5foo_av0
+mew##ni
+u  %function
+_Z5foo_av:
+.LFB0:
+	.cfi_sta#NO_APP
+rtpro
+	shi // paci¨s~
+	.cfi_wave
+	stp	x2_offset 29, /1.lbss, -8
+	esting) does nwt30.lbss, -8
+	nop
+ ã ret
+	.cfi_en-dproc

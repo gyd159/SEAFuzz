@@ -1,0 +1,640 @@
+# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demang in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-exp¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled s--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Hash is ____________________________________________________________________________________________exactly 16 hex chars. Not more.
+--format=auto
+_ZN4main4main18h1e714a2e23ed7db23E
+main::main::h1e714a2e23ed7db23
+# Not less.
+--format=auto
+_ZN4main4main16h714a2e23ed7db23E
+main::main::h714a2e23ed7db23
+# And not non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--for# This file holds test cases for the demangler.
+# Each test case looks # This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Hash is exactly 16 hex chars. Not more.
+--format=auto
+_ZN4main4main18h1e714a2e23ed7db23E
+main::main::h1e714a2e23ed7db23
+# Not less.
+--format=auto
+_ZN4main4main16h714a2e23ed7db23E
+main::main::h714a2e23ed7db23
+# And not non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numberpps.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::ba-r
+#
+-format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--formaNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition:chrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=rust
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB_D0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const‚_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tesmain17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" tt contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::ba-r
+#
+-format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntOIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--formaNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free:::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=rust
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const‚_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tesmain17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--formaNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--forma                                                                                                t=rust
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<cnst_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_geneo "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--formaNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--forma                                                                                                t=rust
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_geer::traits::IntoIterator>::into_iter
+#
+--formaNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--forma                                                                                                t=rust
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<cnst_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_geneo "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--formaNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuELþ       _ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--forma                                                                                                t=rust
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic23ed7db23E
+main::main::h714a2e23ed7db23
+# And not non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::ba-r
+#
+-format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--formaNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=rust
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const‚_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tesmain17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" tt contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::ba-r
+#
+-format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntOIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--formaNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free:::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=rust
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const‚_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tesmain17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as f…oo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--formaNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--forma                                                                                                t=rust
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::Arraytor>::into_iter
+#
+--formaNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("traitt=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_geer::traits::IntoIterator>::into_iter
+#
+--formaNoBb_4iter8iterator8Iterator9like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+#  Supported options:
+#    --format=<name>     Sets the demangling style.
+#    --no-params         There are two lines of expected output; the first
+#                        is with DMGL_PARAMS, the second is without it.
+#    --is-v3-ctor        Calls is_gnu_vrpositionNCNgNpB9_6memÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--forma                                                                                                t=rust
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<cnst_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_geneo "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--formaNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBox3_mangled_ctor on input; expected
+#  7$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--for# This file holds test cases for the demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+#  Supported options:
+#    --format=<name>     Sets the demangling style.
+#    --no-params         There are two lines of expected output; the first
+#                        is with DMGL_PARAMS, the second is without it.
+#    --is-v3-ctor        Calls is_gnu_v3_mangled_ctor on input; expected
+#                        output is anmat=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN10parse_tsan4main17hdbbfdf1ccess violation PR70498
+
+_Z80800000000000000000000
+_Z80800000000000000000000
+#
+# Tests write access viol                              ation PR70926
+
+0__Ot2m02R5T0000500000
+0__Ot2m02R5T0000500000
+#
+
+0__GT50000000000_ymbol. But with extra Rust hash.
+--format=gnuuEp6OutputuEL_ECs1i-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> dopQ

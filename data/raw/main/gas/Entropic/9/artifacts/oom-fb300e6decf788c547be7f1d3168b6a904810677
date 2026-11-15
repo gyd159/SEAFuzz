@@ -1,0 +1,19 @@
+## same as airch64/pac_ab_key.s
+	.arch armv6-a
+	.text
+	.align	1
+	.global_Z5foo_apv
+	.type	_Z5foo_av, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_startproc
+	hint	25 // paciasp
+	.챖i77777777777777777777777777777777777777777777777.hfr_e77777777777777776
+	.께께께께께께께께께께께�3께께께께께께께께께�0께께께께5foo_av, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_startproc
+	hint	25 // paciasp
+	.챖i7께께께쾐fi_offset 31,- no	
+8pJ	nop1        ret
+	.cfi_endproc

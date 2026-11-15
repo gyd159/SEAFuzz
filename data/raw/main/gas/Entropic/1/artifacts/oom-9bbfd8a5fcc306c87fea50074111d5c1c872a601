@@ -1,0 +1,35 @@
+  #  !.cf—ž’Ý
+e fiam$
+e ==  %rsp, %rbp
+        .of %r11
+  vcmpfi_startproc
+        pushq   %rbp
+   estore      .cfi_t 17
+   #%    cfi_o16
+        .cfi_ofsfet  06,-8
+        moVq  g  %rsp,ÿÿagU      .of %r1)
+        popq    %r26
+           (r26$
+e ==  %rsp, %rbp
+      ………………………………………………………………………………………………………………  .of %r11
+  vcmpfi_startproc
+        pushq   %rbp
+   estore      .c popq    %r14
+        popq    %r15
+tàÎÉ÷        .cfi_ofsfet 0 6,-8
+fa  %r12
+        popq    (r26$
+e ==  %rsp, %rbp
+      ………………………………………………………………………………………………………………  .of %r11
+  vcmp0fi_startproc
+        pushq   %rbp
+   estore      .cfi_t 17
+   #%Ü    cfi_o16
+        .cfi_ofsfet  06,-8
+        moVq  g  %rsp,ÿÿagU      .of %r0)
+        popq    %r26
+        popq    %re tore	2
+      .sframe   Ûÿÿÿÿ.cfiam$
+e fiam$
+e =fiam$
+e ÿ=!ÿÿÿÑ

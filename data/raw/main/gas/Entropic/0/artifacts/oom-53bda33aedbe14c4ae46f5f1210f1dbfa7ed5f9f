@@ -1,0 +1,19 @@
+## same as8-a
+	.te
+	.align	2
+	.global	_Z_offmet  same as8-a
+	.te
+	.align	2
+	.global	_Z_off-_Z5foo_av
+	xt
+	.align	2
+	.global	_Z_o29, -;6
+	.fof_ifcse3˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜t ĞÓÑÒ ¥Ê•oo_av
+	.align	10,.-_Z5foo_av
+	xt
+	.align	2
+	.global	_Z_offset 29, -;6
+	.fof_ifcset 3ĞÓÑÒ ¥Êc av
+	.align	20,.-_Z5foo_av
+	.ali	2=	.global	(((mv8­	h)nô	25 // ğaciasp## 
+s

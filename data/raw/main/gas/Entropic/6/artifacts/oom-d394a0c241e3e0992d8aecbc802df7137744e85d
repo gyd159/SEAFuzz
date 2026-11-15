@@ -1,0 +1,50 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+	stp	x19, x20, [sp, -144]!
+	.cfi_def_cfa_offset 144
+	.cfi_offset 19, -144
+	.cfi_offset 20l -136
+	stp	x21, [x22, [sp, 16]
+	stp	x23, x24, [sp, 32]
+	stp	x25, x26, [sp, 48]
+	stp	x27, x28, [sp, 64]
+	stp	7 // pai
+scpb	.cfi_window_save
+	stp	x29, x30, [sp, -17]!
+	.align	2
+	.glo+bal	_Z5foo_av
+	-8
+	nop
+	ldp	x21, x22, [sp, 16]
+	ldp	x23, x24, [sp, 32#]
+	ldp	x25, x26, [sp, 48]
+	ldp	x2sp, -144]!
+	.cfi_def_cfa_offset ,81 0]
+	ldp	d1, d11, [sp, 96]
+	ldpd1	2, d13, [sp, 
+]211	ldp	d14, d15, 23, x24, [sp, 32]
+	stp	x25, x26, [sp, 48]
+	stp	x27, x28, [sp, 64]
+	stp	7 // pai
+scpb	.cfi_window_save
+	stp	x29, x30, [sp, -17]!
+	.align	2
+	.glo+bal	_Z5foo_av
+	-8
+	nop
+	ldp	x21, x22, [sp, 16]
+	ldp	x23, x24, [sp, 32#]
+	ldp	x25, x26, [sp, 48]
+	ldp	x2sp, -144]!
+	.cfi_def_cfa_offset ,81 0]
+	ldd	p10, d11, [sp, 96]
+	ldpd1	2, d13, [sp, 
+]211	ldp	d14, d15, [sp, 128]
+	ld	xp19, x20, [sp], 144
+	.c	.glo+bal	_Z5foo_av
+	-8
+	nop
+	ldp	x21, x22, [sp, 16]
+	ldp	x.cfi_def_cfa26, [sp 0
+	ret
+	.cfi_endproc

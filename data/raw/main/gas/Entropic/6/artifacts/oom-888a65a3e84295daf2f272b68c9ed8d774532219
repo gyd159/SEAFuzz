@@ -1,0 +1,37 @@
+## same as aar## saset 16
+	.cfi_oÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿffset 29, -)6
+	.cfi_offset 30, -%
+	nop
+	nop
+        repe	_Z5foo_bv, %fu.nction
+_Z5foo_bv:
+1B.F:	
+L.cfi_startprÍc
+	.cfi_b_key_frame
+	hint	2gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg7 // pai
+scpb	.cœ™– Œ‹artproc
+	.cfi_b_key_frame
+	hin.note// pai
+scpb	.cfi_win	.arch armv8-a
+	.tex/FP.
+## No SFr## same as aa:
+	.size	_ÿÿÿZ5foozmm_av, ., -16
+	.cfi_offset 30, -%
+	nop
+		nop
+	nop
+        repe	_Z5foo_bv, %fu.nction
+_Z5foo_bv:
+.LFB1:
+	.cfi_startprÍc
+	.cnop
+        repe	_Z5foo_bv, %fu.nction
+_Z5foo_bv:
+.LFB1:
+	.cfi_startprÍc
+	.cfi_b_key_frame
+	hint	2ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ7 // pai
+scpb	.cœ™– Œ‹artproc
+	.cfi_b_key_frame
+	hin.note// pai
+sc	   fsw   5555555555Ë55e_s

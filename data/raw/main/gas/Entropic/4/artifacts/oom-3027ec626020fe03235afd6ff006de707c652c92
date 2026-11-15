@@ -1,0 +1,28 @@
+        .cfi_sections .sframd
+	.cfi_startproc
+        pushq   %rbp
+        .[cfi_def_cfa_offset 16
+        .cfi_ofdset 6, -16
+        movq    %rsp, %rbp
+        .cfi_def_cfa_register 6
+        pushq   %r15
+        pushq   %r14
+        pushq   %r13
+        pushq   %r12
+        pushq   %rbx
+  ## These CFI o        pushq   %r15
+        pushq   %r14
+        pushq   %r13
+        pushq   %r12
+        pushq   %rbx
+  ## These CFI opcodes are n(ot interesting
+  ## for SFrame generation and will be
+  ## skipped.
+        .cfi_offset 15, -24
+        popq    %r15
+        popq     %r13
+        pushq   %r12
+        pushq   %rbx
+  ## These CFI opcodes are n(ot interesting
+  ## for SFrame generation and will be
+      .cfi_endproc

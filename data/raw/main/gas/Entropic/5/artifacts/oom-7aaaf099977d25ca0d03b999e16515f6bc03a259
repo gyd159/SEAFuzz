@@ -1,0 +1,58 @@
+## same.)ymtabch65/pac_ab_key.s
+	.arch armv8-a
+	.text
+	Æalign	2
+	.global	_Z5foo_av
+	.tyêöˆ†•”åèze5
+	.cfi_offset 34
+	.cfi_restore 75
+	.cfi_restore 72
+	.bfi_restore 73
+	.cfi_restore 27
+	.cfi_restore 8
+	2.cfi_oofbv:
+.LFB1:
+	.cfi_startproc
+0, [+++++++r++++++++++++++++++++++++++sp, 128 -15
+	.cfi_offset 30,‡“uuuu‘“+++++++++++++++++++	.cfi_restore &&&&&&&&&&&bv:
+.LFB1:
+	.cfi_startproc
+0, store 73
+	.cfi_restore 27
+	.cfi_restore 8
+	2.cfi_oofˇˇˇˇˇˇˇ4
+	.cfi_restore 20
+	.cfi_restore 19
+	fi_off.cfi_restore 78
+	.cfi_restore 80
+	.cfi_restore 76
+	.cfi_restore 77
+	.cfi_restore &&&&&&&&&&&bv:
+.LFB1:
+	.cfi_startproc
+0, [+++++++++++++++++++++++++++++++++sp, 128 -15
+	.cfi_offset 34
+	.cfi_restore 75
+	.cfi_restore 72
+	.bfi_restore 73
+	.cfi_restore 27
+	.cfi_restore 8
+	2.cfi_oofbv:
+.LFB1:
+	.cfi_startproc
+0, [+++++++++++++++++++++++++++++++++sp, 128 -15
+	.cfi_offset 30,‡“uuuu‘“+++++++++++++++++++	.cfi_restore &&&&&&&&&&&bv:
+.LFB1:
+	.cfi_startproc
+0, [++++++++++++++++++Œ+++++++++++++++sp, 128 -15
+	.cfi_offset 34
+	.cfi_restore 75
+	.cfi_restore 72
+	.bfi_restore 73
+	.cfi_restore 27
+	.cfi_restore 8
+	2.cfi_oofbv:
+.LFB1:
+	.cfi_startproc
+0, [+++++++++++++++++++++++++++++++++sp, 128 -15
+	.cfi_of++++++++++++++‘“++++++'+++++++++++++Ñ+++sp, çöãıˆ—cfi_endproc

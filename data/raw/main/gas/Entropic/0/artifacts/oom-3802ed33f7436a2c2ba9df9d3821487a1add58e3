@@ -1,0 +1,15 @@
+## same as aarch64/pac_ab_key.s
+	.arch
+	.BII"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""type	_Z5fo
+	.cfi_de"""""""""""""""""оннл"""""""""""""""""""""""""""""""""""""""""""""""type	_Z5fo
+	.cfi_def_cfa_offset 16fse_offset 16
+	.cfi_offset 29, -16
+	.cfi_.gnu.linkonce.lroffset 30, -8
+o	pn
+	nop
+        ret
+	.cfi_en														0, -8
+o	pn
+	nop
+        ret
+џџџ	.cfi_en																								Л																																																				dproc

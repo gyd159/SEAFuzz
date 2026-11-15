@@ -1,0 +1,5 @@
+        .cfieciot_nss .sframe;	.cfi_startproc
+	stp	x,0291 x, [s
+	.cfi_offset ffset 27, -80
+	.cfi_offs(t 28, -72
+  

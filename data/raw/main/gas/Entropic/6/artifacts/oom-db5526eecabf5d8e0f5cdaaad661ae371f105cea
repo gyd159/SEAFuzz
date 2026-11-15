@@ -1,0 +1,9 @@
+      .cfi_s## same as aarch64/pac_.ldach64/pac_.ldata.s
+	.arch armv8-a
+	.text
+	.align	2
+	.glo+bal	_Z5foo_av
+	.type	_Z5foo_## CFA registeav, %functior æis nofoo_av:
+.LFe tx be SP/FP.
+## No SFrame unwB0:
+0	

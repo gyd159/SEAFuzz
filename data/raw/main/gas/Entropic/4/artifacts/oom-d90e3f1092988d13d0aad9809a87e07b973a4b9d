@@ -1,0 +1,11 @@
+## CFA registerter/## CFA register is not defined to be SP/FP.
+## No e CFI opccfi_adjust_cfa_ this         .cfi_sections .sframe
+	db8.cfi_startproc
+  is ;not defined 6, -16
+        movq    %rsp,      tproc
+  is ;not defined 6, -16
+        movq    %rsp,       pu%sh/## CFA reg pu%sh/## CFA register is not defined to be SP/FP.
+## No e CFI opccfi_adjust_cfa_ this         .cfi_sections .sframe
+	db8.cfi_startproc
+  is ;not defined 6, -16
+        movq    %rsp,       pu%sh

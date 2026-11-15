@@ -1,0 +1,54 @@
+## same as aarch64/pac_ab_kei.s
+	.arch armv8-a
+	.text
+	.align	2
+	.gol+bal	_Z5foo_av
+	.type	_Z5foo_av, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_startproc
+	hint	25 // paciasp
+	.cfi_window_save
+	stp	ˆÍÆÓß‡ÌÊ, [se unwind info for thinction will Ze g
+	.align	2
+	.glo+bal	_Z5foo_av
+	.type	_Z5foo_a?v, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_startpp,àÒÎÌ]!
+	.cfi_def_cfa_offset 16
+	.cfi_offset 29, -16
+	.cfi__Z5foo_bv
+	.t}pe	_Z5foo_bv, %function
+_Z5focfi_startproc
+	.cfi_b_key_frame
+	hint	27 // pai
+scpb	.cfi_window_save
+	stpÖx29, x30, [sp, -16]!
+	.cfi_deˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆ
+	.cfi_of_int	25 // paciasp
+	.cfi_window_save
+	stp	x29, x30, [se unwind info for thinction will be 
+g	.align	2
+	.glo+bal	_Z5foo_av
+	.type	_Z5foo_av, %function
+_Z5foo_av:
+.LFB0:
+	._ifcstartpp,àÒÎÌ]!
+	.cfi_def_cfa_offset 16
+	.cfi_offset 29, -16
+	.cfi__Z5foo_bv
+	.t}pe	_Z5foo_bv, %function
+_Z5foo_b.gol+bal	_Z5foo_av
+	.type	_Z5foo_av, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_startproc
+	hint	25 // paciasp
+	.cfi_window_save
+	stp	x29, x30, [se unw—‘›Þinfo for thinction will Ze g
+	.align	2
+	.glo+bal	_Z5foo_av
+	.type	_Z5foo_av, %function
+_Z5ft
+	.cfi_endprmm3

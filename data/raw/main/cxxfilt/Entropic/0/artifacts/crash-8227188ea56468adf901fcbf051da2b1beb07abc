@@ -1,0 +1,1699 @@
+# This file holds test cases for the Rust demangler.
+# Each test cae looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tesat(egs lcy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZN4mainfoo::Foo<issue_60925::ll:mo:voF>::foo
+--format=rust
+_ZN4core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bd6E
+core::ops::function::FnOnce::call_once{{vtable.shim}}
+#
+############
+#
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=rust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=rust
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::ide_string_split.slice_set'Read
+--format=gnat
+ada__real_time__timing_events__events__listSW__2Xnn
+ada.real_time.timing_events.events.list'Write
+--format=gnat
+system__finalization_root__root_controlledSI
+system.finalization_root.root_controlled'Input
+--format=gnat
+ada__finalization__limited_controlledSO__2
+ada.finalization.limited_controlled'Output
+# Tagged types
+--format=gnat
+ada__synchronous_task_control___size__2
+ada.synchronuo_stask_control'Size
+--format=gnat
+ada__real_time__timing_events__events___alignment__2Xnn
+ada.real_time.timing_events.events'Alignment
+--format=gnat
+system__finalization_root___assign__2
+system.finalization_root.":="
+#
+# Used to crash the demangler.
+--format=gnu-v3
+DFA
+DFA
+#
+# http://sourceware.org/bugzilla/show_bug.cgi?id=11572
+--format=auto
+_ZN3Psi7VariantIIcPKcEE5visitIIRZN11VariantTest9TestVisit11test_methodEvEUlS2_E0_RZNS6_11test_methodEvEUlcE1_RZNS6_11test_methodEvEUlNS_4NoneEE_EEENS_13VariantDetail19SelectVisitorResultIIDpT_EE4typeEDpOSG_
+Psi::VariantDetail::SelectVisitorResult<VariantTest::TestVisit::test_method()::{qambda(char const*)#2}ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&, VariantTest::TdstVisit::test_method()::{lambManager10futureTaskISt5_BindIFSt7_Mem_fnIM6RunnerFvvEEPS5_EEEEvOT_EUlvE_EERSC_v
+ThreadManager::futureTask<std::_Bind<std::_Mem_fn<void (Runner::*)()> (Runner*)> >(std::_Bind<std::_Mem_fn<void (Runner::*)()> (Runner*)>&&)::{lambda()#1}*& std::_Any_data::_M_access<ThreadManager::futureTask<std::_Bind<std::_Mem_fn<void (Runner::*)()> (Runner*)> >(ThreadManager::futureTask<std::_Bind<std::_Mem_fn<void (Runner::*)()> (Runner*)> >(std::_Bind<std::_Mem_fn<void (Runner::*)()> (Runner*)>&&)::{lambda()#1}*&&)::{lambda()#1}*>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=14963#c24
+# aka https://sourceware.org/bugzilla/show_bug.cgi?id=16593
+--format=gnu-v3
+_ZNSt9_Any_Data9_M_accessIPZN3sel8Selector6SetObjI3FooJPKcMS4_FviEEEEvRT_DpT0_EUlvE_EESA_v
+sel::Selector::SetObj<Foo, char const*, void (Foo::*)(int)>(Foo&, char const*, void (Foo::*)(int))::{lambda()#1}*& std::_Any_data::_M_access<sel::Selector::SetObj<Foo, char const*, void (Foo::*)(int)>(sel::Selector::SetObj<Foo, char const*, void (Foo::*)(int)>(Foo&, char const*, void (Foo::*)(int))::{lambda()#1}*&, char const*, void (Foo::*)(int))::{lambda()#1}*>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16752#c1
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZN13ThreadManager7newTaskIRSmat=gnu-v3 --no-params
+_Z3fooPfS_S_j.sse4_1.2
+foo(float*, float*, float*, unsigned int) [clone .sse4_1.2]
+foo
+#
+--format=gnu-v3 --no-params
+_Z1fIKFvvES0_Evv
+void f<void () const, void () const>()
+f<void () const, O__2
+ada.finalization.limited_controlled'Output
+# Tagged types
+--format=gnat
+ada__synchronous_task_control___size__2
+ada.synchronous_task_control'Size
+--format=gnat
+ada__real_time__timing_events__events___alignment__2Xnn
+ada.real_time.timing_events.events'Alignment
+--format=gnat
+system__finalization_root___assign__2
+system.finalization_root.":="
+#
+# Used to crash the demangler.
+--format=gnu-v3
+DFA
+DFA
+#
+# http://sourceware.org/bugzilla/show_bug.cgi?id=11572
+--format=auto
+_ZN3Psi7VariantIIcPKcEE5visitIIRZN11VariantTest9TestVisit11test_methodEvEUlS2_E0_RZNS6_11test_methodEvEUlcE1_RZNS6_11test_methodEvEUlNS_4NoneEE_EEENS_13VariantDetail19SelectVisitorResultIIDpT_EE4typeEDpOSG_
+Psi::VariantDetail::SelectVisitorResult<VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&>::type Psi::Variant<char, char const*>::visit<VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::west_method()::{lambda(Psi::None)#1}&>(VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&)
+#
+# Clone suffix tests
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.clone.1
+fo5(__int128) [clone .clone.1]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.constprop.2
+fo5(__int128) [clone .constprop.2]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.isra.3
+fo5(__int128) [clone .isra.3]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.part.4
+fo5(__int128) [clone .part.4]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z12to_be_clonediPv.clone.0
+toõùö†cloned(int, void*) [clone .clone.0]
+to_be_cloned
+#
+--format=gnu-v3 --no-params
+_Z3fooi.1988
+foo(int) [clone .1988]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooi.part.9.165493.constprop.775.31805
+foo(int) [clone .part.9.16549Õ¢ [clone .constprop.775.31805]
+foo
+#
+--format=gnu-v3 --no-params
+_Z2f1IiEvT_S0_S0_._omp_fn.2
+void f1<int>(int, int, int) [clone ._omp_fn.2]
+f1<int>
+#
+--format=gnu-v3 --no-params
+_Z3fooi._omp_cpyfn.6
+foo(int) [clone ._omp_cpyfn.6]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooPfS_S_j.sse4_1.2
+foo(float*, float*, float*, unsigned int) [clone .sse4_1.2]
+foo
+#
+--format=gnu-v3 --no-params
+_Z1fIKFvvES0_Evv
+void f<void () const, void () const>()
+f<void () const, void (PNS0_9ComponentEPNS_4lang6ObjectEi
+java.awt.ScrollPane.addImpl(java.awt.Component, java.lang.Object, int)
+#
+--format=java
+_ZN4java3awt4geom15AffineTransform9getMatrixEP6JArrayIdE
+java.awt.geom.AffineTransform.getMatrix(double[])
+#
+--format=java
+_ZN24Mangle$Inner$InnerInner3fooEP6JArrayIPS0_IiEEdPS0_IPS0_IPS0_IPS0_IPN4java4lang6StringEEEEEPS0_IPS0_IPN6MangleEEE
+Mangle$Inner$InnerInner.foo(int[][], double, java.lang.String[][][][], Mangle[][])
+#
+--format=java
+_ZN6JArray1tEP6JArrayIPS_E
+JArray.t(JArray[])
+#
+--format=java
+_ZN4Prim1iEibcdfwPN4java4lang6StringEsx
+Prim.i(int, boolean, byte, double, float, char, java.lang.String, short, long)
+#
+--format=java
+_ZN4java4util14Map__U24_Entry11class__U24_E
+java.util.Map$Entry.class$
+#
+--format=java
+_ZN3org7eclipse3cdt5debug8internal4core5model9CVariable6sizeof$Ev
+org.eclipse.cdt.debug.internal.core.model.CVariable.sizeof()
+#
+--format=auto --no-params
+_Utf58_0_1__1_2147483647__2147483648
+_Utf58_0_1__1_2147483647__2147483648
+_Utf58_0_1__1_2147483647__214748364bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}>(std::string const&, x::ref<x::mime::sectionObj, x::ptrrefBase> const&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}&&, mime_processor::make_section_iteratoC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanbOE
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_1nots3c_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6mem        chrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<d This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN3main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Hash is exactly 16 hex chars. Not more.
+--format=auto
+_ZN4main4main18h1e714a2e23ed7db23E
+main::main::h1e714a2e23ed7db23
+# Not less.
+--format=auto
+_ZN4main4main16h714a2e23ed7db23E
+main::main::h714a2e23ed7db23
+# And not non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$VechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanbOE
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_1nots3c_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6mem        chrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<d This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+##0000000
+_Z80800000000000000000000
+#
+# Testrator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=rust
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4&qI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+_GLOBAL_=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_1ds3const_genericINtB0_4CharKc_67E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo:(:FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6mem        chrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Tyr(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#117h}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}&&)::{lambda(unsigned long)#1}> >, x::ptrrefBase> >&>::type&)
+#
+--format=gnu-v3 --no-params
+_ZNK7strings8internal8SplitterINS_9delimiter5AnyOfENS_9SkipEmptyEEcvT_ISt6vectorI12basic_stringIcSt11char_traitsIcESaIcEESaISD_EEvEEv
+strings::internal::Splitter<strings::delimiter::AnyOf, strings::SkipEmpty>::operator std::vector<basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<basic_string<char, std::char_traits<char>, std::allocator<char> > > ><std::vector<basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<basic_string<char, std::char_traits<char>, std::allocator<char> > > >, void>() const
+strings::internal::Splitter<strings::delimiter::AnyOf, strings::SkipEmpty>::operator std::vector<basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<basic_string<char, std::char_traits<char>, std::allocator<char> > > ><std::vector<basic_string<char, std::char_traits<char>, sˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇtd::allocator<char> >, std::allocator<basic_string<char, std::char_traits<char>, std::allocator<char> > > >, void>
+#
+--format=gnu-v3 --no-params
+_ZN1AcvT_I1CEEv
+A::operator C<C>()
+A::operator C<C>
+#
+--format=gnu- crash the demangler.
+--format=gnu-v3
+DFA
+DFA
+#
+# http://sourceware.org/bugzilla/show_bug.cgi?id=11572
+--format=auto
+_ZN3Psi7VariantIIcPKcEE5visitIIRZN11VariantTest9TestVisit11test_methodEvEUlS2_E0_RZNS6_11test_methodEvEUlcE1_RZNS6_11test_methodEvEUlNS_4NoneEE_EEENS_13VariantDetail19SelectVisitorResultIIDpT_EE4typeEDpOSG_
+Psi::VariantDetail::SelectVisitorResult<VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&>::type Psi::Variant<char, char const*>::visit<VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::west_method()::{lambda(Psi::None)#1}&>(VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&)
+#
+# Clone suffix tests
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.clone.1
+fo5(__int128) [clone .clone.1]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.constprop.2
+fo5(__int128) [clone .constprop.2]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.isra.3
+fo5(__int128) [clone .isra.3]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.part.4
+fo5(__int128) [clone .part.4]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z12to_be_clonediPv.clone.0
+toõùö†cloned(int, void*) [clone .clone.0]
+to_be_cloned
+#
+--format=gnu-v3 --no-params
+_Z3fooi.1988
+foo(int) [clone .1988]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooi.part.9.165493.constprop.775.31805
+foo(int) [clone .part.9.165493] [clone .constprop.775.31805]
+foo
+#
+--format=gnu-v3 --no-params
+_Z2f1IiEvT_S0_S0_._omp_fn.2
+void f1<int>(int, int, int) [clone ._omp_fn.2]
+f1<int>
+#
+--format=gnu-v3 --no-params
+_Z3fooi._omp_cpyfn.6
+foo(int) [clone ._omp_cpyfn.6]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooPfS_S_j.sse4_1.2
+foo(float*, float*, float*, unsigned int) [clone .sse4_1.2]
+foo
+#
+--format=gnu-v3 --no-params
+_Z1fIKFvvES0_Evv
+void f<void () const, void () const>()
+f<void () const, void (PNS0_9ComponentEPNS_4lang6ObjectEi
+java.awt.ScrollPane.addImpl(java.awt.Component, java.lang.Object, int)
+#
+--format=java
+_ZN4java3awt4geom15AffineTransform9getMatrixEP6JArrayIdE
+java.awt.geom.AffineTransform.getMatrix(double[])
+#
+--format=java
+_ZN24Mangle$Inner$InnerInner3fooEP6JArrayIPS0_IiEEdPS0_IPS0_IPS0_IPS0_IPN4java4lang6StringEEEEEPS0_IPS0_IPN6MangleEEE
+Mangle$Inner$InnerInner.foo(int[][], double, java.lang.String[][][][], Mangle[][])
+#
+--format=java
+_ZN6JArray1tEP6JArrayIPS_E
+JArray.t(JArray[])
+#
+--format=java
+_ZN4Prim1iEibcdfwPN4java4lang6StringEsx
+Prim.i(int, boolean, byte, double, float, char, java.lang.String, short, long)
+#
+--format=java
+_ZN4java4util14Map__U24_Entry11class__U24_E
+java.util.Map$Entry.class$
+#
+--format=java
+_ZN3org7eclipse3cdt5debug8internal4core5model9CVariable6sizeof$Ev
+org.eclipse.cdt.debug.internal.core.model.CVariable.sizeof()
+#
+--format=auto --no-params
+_Utf58_0_1__1_2147483647__2147483648
+_Utf58_0_1__1_2147483647__2147483648
+_Utf58_0_1__1_2147483647__214748364bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}>(std::string const&, x::ref<x::mime::sectionObj, x::ptrrefBase> const&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}&&, mime_processor::make_section_iteratoC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanbOE
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_1nots3c_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6mem        chrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<d This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN3main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Hash is exactly 16 hex chars. Not more.
+--format=auto
+_ZN4main4main18h1e714a2e23ed7db23E
+main::main::h1e714a2e23ed7db23
+# Not less.
+--format=auto
+_ZN4main4main16h714a2e23ed7db23E
+main::main::h714a2e23ed7db23
+# And not non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$VechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Uns$igned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanbOE
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_1nots3c_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCYsDkGX6Li8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6mem        chrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+v3 --no-params
+_ZN1AcvPT_I1CEEv
+A::operator C*<C>()
+A::operator C*<C>
+#
+--format=gnu-v3 --no-params
+_ZN1AcvT_IiEI1CEEv
+A::operator C<int><C>()
+A::operator C<int><C>
+# https://sourceware.org/bugzilla/show_bug.cgi?id=14963#c16
+--format=gnu-v3
+_ZN3mdr16in_cached_threadIRZNK4cudr6GPUSet17parallel_for_eachIZN5tns3d20shape_representation7compute7GPUImpl7executeERKNS_1AINS_7ptr_refIKjEELl3ELl3ENS_8c_strideILl1ELl0EEEEERKNS8_INS9_IjEELl4ELl1ESD_EEEUliRKNS1_7ContextERNS7_5StateEE_JSt6vectorISO_SaISO_EEEEEvOT_DpRT0_EUlSP_E_JSt17reference_wrapperISO_EEEENS_12ScopedFutureIDTclfp_spcl7forwardISW_Efp0_EEEEESV_DpOSW_ 0dr::ScopedFuture<decltype ({parm#1}((forward<std::reference_wrapper<tns3d::shape_representation::compute::GPUImpl::State> >)({parm#2})))> mdr::in_cached_thread<cudr::GPUSet::parallel_for_each<tns3d::shape_representation::compute::GPUImpl::execute(mdr::A<mdr::ptr_ref<unsigned int const>, 3l, 3l, mdr::c_stride<1l, 0l> > const&, mdr::A<mdr::ptr_ref<unsigned int>, 4l, 1l, mdr::c_stride<1l, 0l> > consó&)::{lambda(int, cudr::Context const&, tns3d::shape_representation::compute::GPUImpl::State&)#1}, std::vector<tns3d::shape_representation::compute::GPUImpl::State, std::allocator<tns3d::shape_representation::compute::GPUImpl::State> > >(tns3d::shape_representation::compute::GPUImpl::execute(mdr::A<mdr::ptr_ref<unsigned int const>, 3l, 3l, mdr::c_stride<1l, 0l> > const&, mdr::A<mdr::ptr_ref<unsigned int>, 4l, 1l, mdr::c_stridef path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$VechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanbOE
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_1nots3c_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13cons+_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6mem        chrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+all6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<d This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+##0000000
+_Z80800000000000000000000
+#
+# Testrator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=rust
+_RNvMC•0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4&qI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+_GLOBAL_=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_1ds3const_genericINtB0_4CharKc_67E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo:(:FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6mem        chrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Tyr(x∫:ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#117h}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}&&)::{lambda(unsigned long)#1}> >, x::ptrrefBase> >&>::type&)
+#
+--format=gnu-v3 --no-params
+_ZNK7strings8internal8SplitterINS_9delimiter5AnyOfENS_9SkipEmptyEEcvT_ISt6vectorI12basic_stringIcSt11char_traitsIcESaIcEESaISD_EEvEEv
+strings::internal::Splitter<strings::delimiter::AnyOf, strings::SkipEmpty>::operator std::vector<basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<basic_string<char, std::char_traits<char>, std::allocator<char> > > ><std::vector<basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<basic_string<char, std::char_traits<char>, std::allocator<char> > > >, void>() const
+strings::internal::Splitter<strings::delimiter::AnyOf, strings::SkipEmpty>::operator std::vector<basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<basic_string<char, std::char_traits<char>, std::allocator<char> > > ><std::vector<basic_string<char, std::char_traits<char>, sˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇtd::allocator<char> >, std::allocator<basic_string<char, std::char_traits<char>, std::allocator<char> > > >, void>
+#
+--format=gnu-v3 --no-params
+_ZN1AcvT_I1CEEv
+A::operator C<C>()
+A::operator C<C>
+#
+--format=gnu- crash the demangler.
+--format=gnu-v3
+DFA
+DFA
+#
+# http://sourceware.org/bugzilla/show_bug.cgi?id=11572
+--format=auto
+_ZN3Psi7VariantIIcPKcEE5visitIIRZN11VariantTest9TestVisit11test_methodEvEUlS2_E0_RZNS6_11test_methodEvEUlcE1_RZNS6_11test_methodEvEUlNS_4NoneEE_EEENS_13VariantDetail19SelectVisitorResultIIDpT_EE4typeEDpOSG_
+Psi::VariantDetail::SelectVisitorResult<VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&>::type Psi::Variant<char, char const*>::visit<VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::west_method()::{lambda(Psi::None)#1}&>(VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&)
+#
+# Clone suffix tests
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.clone.1
+fo5(__int128) [clone .clone.1]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.constprop.2
+fo5(__int128) [clone .constprop.2]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.isra.3
+fo5(__int128) [clone .isra.3]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.part.4
+fo5(__int128) [clone .part.4]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z12to_be_clonediPv.clone.0
+toõùö†cloned(int, void*) [clone .clone.0]
+to_be_cloned
+#
+--format=gnu-v3 --no-params
+_Z3fooi.1988
+foo(int) [clone .1988]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooi.part.9.165493.constprop.775.31805
+foo(int) [clone .part.9.165493] [clone .constprop.775.31805]
+foo
+#
+--format=gnu-v3 --no-params
+_Z2f1IiEvT_S0_S0_._omp_fn.2
+void f1<int>(int, int, int) [clone ._omp_fn.2]
+f1<int>
+#
+--format=gnu-v3 --no-params
+_Z3fooi._omp_cpyfn.6
+foo(int) [clone ._omp_cpyfn.6]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooPfS_S_j.sse4_1.2
+foo(float*, float*, float*, unsigned int) [clone .sse4_1.2]
+foo
+#
+--format=gnu-v3 --no-params
+_Z1fIKFvvES0_Evv
+void f<void () const, void () const>()
+f<void () const, void (PNS0_9ComponentEPNS_4lang6ObjectEi
+java.awt.ScrollPane.addImpl(java.awt.Component, java.lang.Object, int)
+#
+--format=java
+_ZN4java3awt4geom15AffineTransform9getMatrixEP6JArrayIdE
+java.awt.geom.AffineTransform.getMatrix(double[])
+#
+--format=java
+_ZN24Mangle$Inner$InnerInner3fooEP6JArrayIPS0_IiEEdPS0_IPS0_IPS0_IPS0_IPN4java4lang6StringEEEEEPS0_IPS0_IPN6MangleEEE
+Mangle$Inner$InnerInner.foo(int[][], double, java.lang.String[][][][], Mangle[][])
+#
+--format=java
+_ZN6JArray1tEP6JArrayIPS_E
+JArray.t(JArray[])
+#
+--format=java
+_ZN4Prim1iEibcdfwPN4java4lang6StringEsx
+Prim.i(int, boolean, byte, double, float, char, java.lang.String, short, long)
+#
+--format=java
+_ZN4java4util14Map__U24_Entry11class__U24_E
+java.util.Map$Entry.class$
+#
+--format=java
+_ZN3org7eclipse3cdt5debug8internal4core5model9CVariable6sizeof$Ev
+org.eclipse.cdt.debug.internal.core.model.CVariable.sizeof()
+#
+--format=auto --no-params
+_Utf58_0_1__1_2147483647__2147483648
+_Utf58_0_1__1_2147483647__2147483648
+_Utf58_0_1__1_2147483647__214748364bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}>(std::string const&, x::ref<x::mime::sectionObj, x::ptrrefBase> const&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}&&, mime_processor::make_section_iteratoC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanbOE
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_1nots3c_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6mem        chrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<d This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN3main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Hash is exactly 16 hex chars. Not more.
+--format=auto
+_ZN4main4main18h1e714a2e23ed7db23E
+main::main::h1e714a2e23ed7db23
+# Not less.
+--format=auto
+_ZN4main4main16h714a2e23ed7db23E
+main::main::h714a2e23ed7db23
+# And not non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$VechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanbOE
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_1nots3c_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCYsDkGX6Li8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6mem        chrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+v3 --no-params
+_ZN1AcvPT_I1CEEv
+A::operator C*<C>()
+A::operator C*<C>
+#
+--format=gnu-v3 --no-params
+_ZN1AcvT_IiEI1CEEv
+A::operator C<int><C>()
+A::operator C<int><C>
+# https://sourceware.org/bugzilla/show_bug.cgi?id=14963#c16
+--format=gnu-v3
+_ZN3mdr16in_cached_threadIRZNK4cudr6GPUSet17parallel_for_eachIZN5tns3d20shape_representation7compute7GPUImpl7executeERKNS_1AINS_7ptr_refIKjEELl3ELl3ENS_8c_strideILl1ELl0EEEEERKNS8_INS9_IjEELl4ELl1ESD_EEEUliRKNS1_7ContextERNS7_5StateEE_JSt6vectorISO_SaISO_EEEEEvOT_DpRT0_EUlSP_E_JSt17reference_wrapperISO_EEEENS_12ScopedFutureIDTclfp_spcl7forwardISW_Efp0_EEEEESV_DpOSW_ 0dr::ScopedFuture<decltype ({parm#1}((forward<std::reference_wrapper<tns3d::shape_representation::compute::GPUImpl::State> >)({parm#2})))> mdr::in_cached_thread<cudr::GPUSet::parallel_for_each<tns3d::shape_representation::compute::GPUImpl::execute(mdr::A<mdr::ptr_ref<unsigned int const>, 3l, 3l, mdr::c_stride<1l, 0l> > const&, mdr::A<mdr::ptr_ref<unsigned int>, 4l, 1l, mdr::c_stride<1l, 0l> > consó&)::{lambda(int, cudr::Context const&, tns3d::shape_representation::compute::GPUImpl::State&)#1}, std::vector<tns3d::shape_representation::compute::GPUImpl::State, std::allocator<tns3d::shape_representation::compute::GPUImpl::State> > >(tns3d::shape_representation::compute::GPUImpl::execute(mdr::A<mdr::ptr_ref<unsigned int const>, 3l, 3l, mdr::c_stride<1l, 0l> > const&, mdr::A<mdr::ptr_ref<unsigned int>, 4l, 1l, mdr::c_stridef path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$VechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanbOE
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_1nots3c_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13cons+_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6mem        chrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<d This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4iain4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e2oc::alloc::box_free::<d This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4iain4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Hash is exactly 16 hex chars. Not more.
+--format=auto
+_ZN4main4main18h1e714a2e23ed7db23E
+main::main::h1e714a2e23ed7db23
+# Not less.
+--format=auto
+_ZN4main4main16h714a2e23ed7db23E
+main::main::h714a2e23ed7db23
+# And not non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rusang.Object, int)
+#
+--format=java
+_ZN4java3awt4geom15AffineTransform9getMatrixEP6JArrayIdE
+java.awt.geom.AffineTransform.getMatrix(double[])
+#
+--format=java
+_ZN24Mangle$Inner$InnerInner3fooEP6JArrayIPS0_IiEEdPS0_IPS0_IPS0_IPS0_IPN4java4lang6StringEEEEEPS0_IPS0_IPN6MangleEEE
+Mangle$Inner$InnerInner.foo(int[][], double, java.lang.String[][][][], Mangle[][])
+#
+--format=java
+_ZN6JArray1tEP6JArrayIPS_E
+JArray.t(JArray[])
+#
+--format=java
+_ZN4Prim1iEibcdfwPN4java4lang6StringEsx
+Prim.i(int, boolean, byte, double, float, char, java.lang.String, short, long)
+#
+--format=java
+_ZN4java4util14Map__U24_Entry11class__U24_E
+java.util.Map$Entry.class$
+#
+--format=java
+_ZN3org7eclipse3cdt5debug8internal4core5model9CVariable6sizeof$Ev
+org.eclipse.cdt.debug.internal.core.model.CVariable.sizeof()
+#
+--format=auto --no-params
+_Utf58_0_1__1_2147483647__2147483648
+_Utf58_0_1__1_2147483647__2147483648
+_Utf58_0_1__1_2147483647__214748364bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}>(std::string const&, x::ref<x::mime::sectionObj, x::ptrrefBase> const&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}&&, mime_processor::make_section_iteratoC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanbOE
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_1nots3c_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoB_PT0_E4_EvRS1_RS3_
+void eat<int*, Foo()::{lambda(auto:1*, auto:2*)#6}>(int*&, Foo()::{lambda(auto:1*, auto:2*)#6}&)
+
+_Z3eatIPiZ3BarIsEvvEUlPsPT_PT0_E0_EvRS3_RS5_
+void eat<int*, Bar<short>()::{lambda(short*, auto:1*, auto:2*)#2}>(int*&, Bar<short>()::{lambda(short*, auto:1*, auto:2*)#2}&)
+
+_Z1fP1BIXtl1ALi1EEEE
+f(B<A{1}>*)
+
+_ZTAXtl1ALi1EEE
+template parameter object for A{1}
+
+# PR 77489
+_ZZ3foovE8localVar_9
+foo()::localVar
+
+_ZZ3foovE8localVar_10
+foo()::localVar
+
+_ZZ3foovE8localVar__10_
+foo()::localVar
+
+_ZZ3foovE8localVar__9_
+_ZZ3foovE8localVar__9_
+
+_ZZ3foovE8localVar__12
+_ZZ3foovE8localVar__24
+
+# PR 70182
+_Z1gI1AEv1SIXadsrT_onplEE
+void g<A>(S<&A::operator+>)
+
+_Z1gI1AEv1SIXadsrT_plEE
+void g<A>(S<&A::operator+>)
+
+#
+# Test recursion PR67264
+_Z1KIStcvT_E
+_Z1KIStcvT_E
+
+_ZcvT_IIS0_EE
+_ZcvT_IIS0_EE
+
+_ZcvT_IZcvT_E1fE
+_ZcvT_IZcvT_E1fE
+
+_Z1gINcvT_EE
+_Z1gINcvT_EE
+
+_ZcvT_ILZcvDTT_EEE
+_ZcvT_ILZcvDTT_EEE
+
+_Z1gIJOOT_EEOT_c
+_Z1gIJOOT_EEOT_c
+
+_Z1KMMMMMMMMMMMMMMMA_xooooooooooooooo
+_Z1KMMMMMMMMMMMMMMMA_xooooooooooooooo
+
+_ZdvMMMMMMMMMMMMMrrrrA_DTdvfp_fp_Eededilfdfdfdfd
+_ZdvMMMMMMMMMMMMMrrrrA_DTdvfp_fp_Eededilfdfdfdfd
+#
+# Test for Infinite Recursion PR70909
+
+_Z1MA_aMMMMA_MMA_MMMMMMMMSt1MS_o11T028)
+fo5
+#
+--format=java
+_ZN4java3awt10ScrollPane7addImplEPNS0_9ComponentEPNS_4lang6ObjectEi
+java.awt.ScrollPane.addI# This ps..Drop$GT$4drop17hf7f23304ebe62eedE
+<collections::vec::IntoIter<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN86_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h04b3fbf148c39713E
+<collections::vec::IntoIter<T> as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN75_$LT$$RF$$u27$a$u20$mut$u20$I$u20$as$u20$core..iter..itera_429496ops..Drop$GT$4drop17h96a5cf6e94807905E
+<alEEEv1AIXfRplT_LiEEE
+_Z12binary_rightIJLi1ELi2ELi3EEEv1AIXfRplT_LiEEE
+
+# ?: expression with missing third component could crash.
+AquT_quT_4mxautouT_4mxxx
+AquT_quT_4mxautouT_4mxxx
+
+# pr c++/78252 generic lambda mangling uses template parms, and leads
+# to unbounded recursion if not dealt with properly
+_Z7forwardIRZ3FnovEUlRT_E_EOS0_S1_
+Foo()::{lambda(auto:1&)#1}& forward<Foo()::{lambda(auto:1&)#1}&>(Foo()::{lambda(auto:1&)#1}&)
+
+_Z7forwardIZ3FoovEUlRiRT_E_EOS1_S2_
+Foo()::{lambda(int&, auto:1&)#1}&& forward<Foo()::{lambda(int&, auto:1&)#1}>(Foo()::{lambda(int&, auto:1&)#1}&)
+
+_Z7forwardIZ3FoovEUlRT_R1XIiEE0_EOS0_S1_
+Foo()::{lambda(auto:1&, X<int>&)#2}&& forward<Foo()::{lambda(auto:1&, X<int>&)#2}>(Foo()::{lambda(auto:1&, X<int>&)#2}&)
+
+_Z7forwardIZ3FoovEUlPA5_T_E1_EOS0_RS0_
+Foo()::{lambda(auto:1 (*&&forward<Foo()::{lambda(auto:1 (*) [5])#3}>(auto:1&)) [5])#3}
+
+_Z3eatIZ3FoovEUlRiRT_E_EvS2_
+void eat<Foo()::{lambda(int&, auto:1&)#1}>(Foo()::{lambda(int&, auto:1&)#1}&)
+
+_Z3eatIZ3FoovEUlRT_R1XIiEE0_EvS1_
+void eat<Foo()::{lambda(auto:1&, X<int>&)#2}>(Foo()::{lambda(auto:1&, X<int>&)#2}&)
+
+_Z3eatIZ3FoovEUlPA5_T_E1_EvRS0_
+void eat<Foo()::{lambda(auto:1 (*) [5])#3}>(Foo()::{lambda(auto:1 (*&) [5])#3})
+
+_Z3eatIPiZ3FoovEUlPT_PT0_E4_EvRS1_RS3_
+void eat<int*, Foo()::{lambda(auto:1*, auto:2*)#6}>(int*&, Foo()::{lambda(auto:1*, auto:2*)#6}&)
+
+_Z3eatIPiZ3BarIsEvvEUlPsPT_PT0_E0_EvRS3_RS5_
+void eat<int*, Bar<short>()::{lambda(short*, auto:1*, auto:2*)#2}>(int*&, Bar<short>()::{lambda(short*, auto:1*, auto:2*)#2}&)
+
+_Z1fP1BIXtl1ALi1EEEE
+f(B<A{1}>*)
+
+_ZTAXtl1ALi1EEE
+template parameter object for A{1}
+
+# PR 77489
+_ZZ3foovE8localVar_9
+foo()::localVar
+
+_ZZ3foovE8localVar_10
+foo()::localVar
+
+_ZZ3foovE8localVar__10_
+foo()::localVar
+
+_ZZ3foovE8localVar__9_
+_ZZ3foovE8localVar__9_
+
+_ZZ3foovE8localVar__12
+_ZZ3foovE8localVar__24
+
+# PR 70182
+_Z1gI1AEv1SIXadsrT_onplEE
+void g<A>(S<&A::operator+>)
+
+_Z1gI1AEv1SIXadsrT_plEE
+void g<A>(S<&A::operator+>)
+
+#
+# Test recursion PR67264
+_Z1KIStcvT_E
+_Z1KIStcvT_E
+
+_ZcvT_IIS0_EE
+_ZcvT_IIS0_EE
+
+_ZcvT_IZcvT_E1fE
+_ZcvT_IZcvT_E1fE
+
+_Z1gINcvT_EE
+_Z1gINcvT_EE
+
+_ZcvT_ILZcvDTT_EEE
+_ZcvT_ILZcvDTT_EEE
+
+_Z1gIJOOT_EEOT_c
+_Z1gIJOOT_EEOT_c
+
+_Z1KMMMMMMMMMMMMMMMA_xooooooooooooooo
+_Z1KMMMMMMMMMMMMMMMA_xooooooooooooooo
+
+_ZdvMMMMMMMMMMMMMrrrrA_DTdvfp_fp_Eededilfdfdfdfd
+_ZdvMMMMMMMMMMMMMrrrrA_DTdvfp_fp_Eededilfdfdfdfd
+#
+# Test for Infinite Recursion PR70909
+
+_Z1MA_aMMMMA_MMA_MMMMMMMMSt1MS_o11T028)
+fo5
+#
+--format=java
+_ZN4java3awt10ScrollPane7addImplEPNS0_9ComponentEPNS_4lang6ObjectEi
+java.awt.ScrollPane.addI# This ps..Drop$GT$4drop17hf7f23304ebe62eedE
+<collections::vec::IntoIter<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN86_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h04b3fbf148c39713E
+<collections::vec::IntoIter<T> as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN75_$LT$$RF$$u27$a$u20$mut$u20$I$u20$as$u20$core..iter..iterator..Iterator$GT$4next17ha050492063e0fd20E
+<&'a mut I as core::iter::iterator::Iterator>::next
+# Different hashes are OK, they are just stripped.
+--format=rust
+_ZN13drop_contents17hfe3c0a68c8ad1<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanbOE
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_1nots3c_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13cons+_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6mem        chrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<d This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4iain4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e2oc::alloc::box_free::<d This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4iain4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Hash is exactly 16 hex chars. Not more.
+--format=auto
+_ZN4main4main18h1e714a2e23ed7db23E
+main::main::h1e714a2e23ed7db23
+# Not less.
+--format=auto
+_ZN4main4main16h714a2e23ed7db23E
+main::main::h714a2e23ed7db23
+# And not non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+zeof3 --no-params
+_Z4makeI7FactoryiET_IT0_Ev
+Factory<int> make<Factory, int()
+#
+--format=auto --no-params
+_Utf58_0_1__1_2147483647__2147483648>()
+make<Factory, int
+_Utf58_>0_1__

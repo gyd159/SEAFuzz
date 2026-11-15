@@ -1,0 +1,515 @@
+# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZN4main4mai*17he714a2e23ed7db23E
+main::main
+# Hash is exactly 16 hex chars. Not more.
+--format=auto
+_ZN4main4main18h1e714a2e23ed7db23E
+main::main::h1e714a2e23ed7db23
+# Not less.
+--format=auto
+_ZN4main4main16h714a2e23ed7db23E
+main::main::h714a2e23ed7db23
+# And not non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$ﬁÿto "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u2«7$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter14h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9EJparse_tsan::main
+#
+--format=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::next
+#
+--formaox_free::<dyn alloc::boxed::FnBox<(), 2}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests abovpe but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu3___0_7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=auto
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_geUnericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<constBonr the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting FilterResult!(std.typecons.Tuple!(int, "a", iwt, "b",__vtblZ int, "c").Tuple.rename!([0:"c", 2:"a"]).rename().__lambda1, int[]).FilterResult.__xtoHash(ref const(std.algorithm.iteration.FilterResult!(std.typecons.Tãple!(int, "a",t.__xtoHash(rn.FilterResu©©©©©©©©©©©©©©oHash(rn.FilterResult!(std.typecons.Tuple!(int, "a", int, "b",__vtblZ int, "c").Tuple.rename!([0:"c", 2:"a"]).rename().__lambda1, int[])i.FlterResult.__xtoHash(ref const(std.algorithm.iteration.FilterResult",t.__xtoHash(rn.Filter©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©name().__lambda1, int[]).FilterResult.__xtoHash(rn.FilterResult!(std.ty©!©©©©©©©©©©©©©with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZN4main4mai*17he714a2e23ed7db23E
+main::main
+# Hash is exactly 16 hex chars. Not more.
+--format=auto
+_ZN4main4main18h1e714a2e23ed7db23E
+main::main::h1e714a2e23ed7db23
+# Not less.
+--format=auto
+_ZN4main4main16h714a2e23ed7db23E
+main::main::h714a2e23ed7db23
+# And not non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter14h8581507801fb8615E
+_GLOBAL_<I as core::iter::traits::IntoIterator>::into_iter
+#
+--forˇˇˇˇˇmat=rust
+_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9EJparse_tsan::main
+#
+--format=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::next
+#
+--formaox_free::<dyn alloc::boxed::FnBox<(), 2}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests abovpe but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object")6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB4_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=auto
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_geUnericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const©©©©©©©©©©©©©©©©©©©©©©©©©©    ©©©©©©©©©©©©©©©©©©©©©©©name().__lambda1, int[]).FilterResult.__xtoHash(rn.FilterResult!(std.typecons.Tuple!(int, "a", iwt, "b",__vtblZ int, "c").Tuple.rename!([0:"c", 2:"a"]).rename().__lambda1, int[]).FilterResult.__xtoHash(ref const(std.algorithm.iteration.FilterResult!(std.typecons.Tãple!(int, "a",t.__xtoHash(rn.FilterResult!(std.typecons.Tuple!(int, "a", int, "b",__vtblZ int, "c").Tuple.rename!([0:"c", 2:"a"]).rename().__lambda1, int[])i.FlterResult.__xtoHash(ref const(std.algorithm.iteration.FilterResult",t.__xtoHash(rn.Filter©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©name().__lambda1, int[]).FilterResult.__xtoHash(rn.FilterResult!(std.ty©!©©©©©©©©©©©©©with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::mainler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting FilterResult!(std.typecons.Tuple!(int, "a", iwt, "b",__vtblZ int, "c").Tuple.rename!([0:"c", 2:"a"]).rename().__lambda1, int[]).FilterResult.__xtoHash(ref const(std.algorithm.iteration.FilterResult!(std.typecons.Tãple!(int, "a",t.__xtoHash(rn.FilterResu©©©©©©©©©©©©©©oHash(rn.FilterResult!(std.typecons.Tuple!(int, "a", int, "b",__vtblZ int, "c").Tuple.rename!([0:"c", 2:"a"]).rename().__lambda1, int[])i.FlterResult.__xtoHash(ref const(std.algorithm.iteration.FilterResult",t.__xtoHash(rn.Filter©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©name().__lambda1, int[]).FilterResult.__xtoHash(rn.FilterResult!(std.ty©!©©©©©©©©©©©©©with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZN4main4mai*17he714a2e23ed7db23E
+main::main
+# Hash is exactly 16 hex chars. Not more.
+--format=auto
+_ZN4main4main18h1e714a2e23ed7db23E
+main::main::h1e714a2e23ed7db23
+# Not less.
+--format=auto
+_ZN4main4main16h714a2e23ed7db23E
+main::main::h714a2e23ed7db23
+# And not non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter14h8581507801fb8615E
+_GLOBAL_<I as core::iter::traits::IntoIterator>::into_iter
+#
+--forˇˇˇˇˇmat=rust
+_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9EJparse_tsan::main
+#
+--format=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::next
+#
+--formaox_free::<dyn alloc::boxed::FnBox<(), 2}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests abovpe but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object")6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=auto
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_geUnericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const©©©©©©©©©©©©©©©©©©©©©©©©©©    ©©©©©©©©©©©©©©©©©©©©©©©name().__lambda1, int[]).FilterResult.__xtoHash(rn.FilterResult!(std.typecons.Tuple!(int, "a", iwt, "b",__vtblZ int, "c").Tuple.rename!([0:"c", 2:"a"]).rename().__lambda1, int[]).FilterResult.__xtoHash(ref const(std.algorithm.iteration.FilterResult!(std.typecons.Tãple!(int, "a",t.__xtoHash(rn.FilterResult!(std.typecons.Tuple!(int, "a", int, "b",__vtblZ int, "c").Tuple.rename!([0:"c", 2:"a"]).rename(
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZN4main4mai*17he714a2e23ed7db23E
+main::main
+# Hash is exactly 16 hex chars. Not more.
+--format=auto
+_ZN4main4main18h1e714a2e23ed7db23E
+main::main::h1e714a2e23ed7db23
+# Not less.
+--format=auto
+_ZN4main4main16h714a2e23ed7db23E
+main::main::h714a2e23ed7db23
+# And not non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter14h8581507801fb8615E
+_GLOBAL_<I as core::iter::traits::IntoIterator>::into_iter
+#
+--forˇˇˇˇˇmat=rust
+_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9EJparse_tsan::main
+#
+--format=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::next
+#
+--formaox_free::<dyn alloc::boxed::FnBox<(), 2}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests abovpe but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object")6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=auto
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_geUnericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<constBonr the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+#########nt, "a", int, "b", int,8demangle31__T4Hash(rn.Filter©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©ame!([0:"c", 2:"a"]).rename().__lambda1, int[]).FilterResult.__xtoHash(ref const(std.algorithm.iteration.FilterResult!(std.typecons.Tãple!(int, "atoHash(ref const(std.algorithm.iteration.FilterResult!(std.typecons.Tãple!(int, "a",t.__xtoHash(rn.FilterResult!(std.typecons.Tuple!(int, "a", int, "b",__vtblZ int, "c").Tuple.rename!([0:m.A5310EB9@@16
+backtrace::foo
+# new style rustc llvm thinlto
+--format=rust
+_RC3foo.llvm.9D1C9369
+foo
+--format=rust
+_RC3foo.llvm.9D1C9369@@16
+foo
+--format=rust
+_RNvC9backtrace3foo.llvm.A5310EB9
+"c", 2:"a"]).rename().__lambda1, int[])i.FlterResult.__xtoHash(ref const(std.algorithm.iteration.FilterResult!(stdnt, "a", inbacktrace::fot, "bo

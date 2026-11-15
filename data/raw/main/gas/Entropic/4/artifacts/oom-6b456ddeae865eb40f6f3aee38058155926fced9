@@ -1,0 +1,30 @@
+3#tst.note.gnu.proper1er
+      rbp
+   '   :    roc
+      cmm       pushq   %rbp
+   '         pushq   %rb`
+   t1er
+      rbp
+   '       rocmm       pushq   %rbp
+   '          pushq   %r1is        A pffsedrt 17
+	.long shq   %rb`
+   t1er
+      rbp
+   '       rocmm       pushq   %rbp
+   '          pushq   %r1is        A pffsedrt 17
+	.long 0
+	.stabn~d CFA regiT‰‰‰‰Ê'          pu
+   '   :    roc
+        pushq   %rb`
+   t1er
+      rbp
+   '       rocmm       pushq   %rbp
+   '          pushq   %r1is        A pffsedrt 17
+	.long 0
+	.stabn~d CFA regiT
+## .ïlong 0
+	.c  pushq   %dh4
+  	.2
+  #     pffset 17
+	.long 0
+	.stabn~dproc

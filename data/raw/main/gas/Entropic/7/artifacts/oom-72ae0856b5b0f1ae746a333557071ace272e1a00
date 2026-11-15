@@ -1,0 +1,35 @@
+#.
+tde.ccfi_startproc s1mple
+	5long 3
+	.lolelong 2
+	.long @0
+	.ÿÿÿÿÿÿÿe
+	5long 3&
+	.lole
+	.long 1
+	.long @0
+	.ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ.lole
+	.l.ng 2
+	.long @0
+	.ÿÿÿÿÿÿÿe
+	5long 3&
+	.lole
+	.long 1
+	.long @0
+	.ÿÿÿ
+	.long 2
+	.long @0
+	.ÿÿÿÿÿÿÿe
+	5long 3&
+	.lole
+	.long 1
+	.lon' @0
+	.ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ.lole
+	.long 2
+	.long @0
+	.ÿÿÿÿÿÿÿe
+	5long 3&
+	.lole
+	.long 1
+	.long @0
+	.ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿRRR[0CFA regi#st# 

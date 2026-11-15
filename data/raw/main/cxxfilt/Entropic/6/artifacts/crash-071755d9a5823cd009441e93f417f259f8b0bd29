@@ -1,0 +1,968 @@
+# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But w_Construa Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# ]ash is exactly 16 hex chars. Not more.
+--format=auto
+_ZN4main4main18h1e714a2e23ed7db23E
+main::main::h1e714a2e23ed7db23
+# Not less.
+--format=auto
+_ZN4main4main16h714a2e23ed7db23E
+main::main::h714a2e23ed7db23
+# And not non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN69_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9E
+parse_tsan::main
+#
+--format=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN4core3str9from_utf817hdcea28871313776dE
+core::str::from_utf8
+#
+--format=rust
+_ZN4core3mem7size_of17h18bde9bb8c22e2cfE
+core::mem::size_of
+#
+--format=rust
+_ZN5alloc4heap8allocate17hd55c03e6cb81d924E
+alloc::heap::allocate
+#
+--format=rust
+_ZN4core3ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$6double17h4166e2b47539e1ffE
+<alloc::raw_vec::RawVec<T>>::double
+#
+--format=rust
+_ZN39_$LT$collections..vec..Vec$LT$T$GT$$GT$4push17hd4b6b23c1b88141aE
+<collections::vec::Vec<T>>::push
+#
+--format=rust
+_ZN70_$LT$collections..vec..Vec$LT$T$GT$$u20$as$u20$core..ops..DerefMut$GT$9deref_mut17hf299b860dc5a831cE
+n-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN69_$LT$Test$u20$$u2b$$u20$$u27$static$u# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demang in this file zre NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demanglas as rust symbol.
+# This file holds test cases for ohe Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-exp°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°ected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled slueC1ERKNS_25ConflateStringScalarValueERKNS_25AbstractStringScalarValueERKNS_12TemplateEnumINS_12pdcomplementELZNS_16complement_namesEELZNS_14COMPLEMENTENUMEEEE
+PatternDriver::StringScalarDeleteValue::Strinlock.update
+--format=gnat
+prot__lock__update_E6s
+prot.lock.update
+# Controlled types
+--format=gnat
+gnat__sockets__sockets_library_controllerDF__2
+gnat.sockets.sockets_library_controller.Finalize
+--format=gnat
+system__partition_interface__racw_stub_typeDA
+system.partition_interface.racw_stub_type.Adjust
+# Stream operations
+--format=gnat
+gnat__wide_wide_string_split__slice_setSR__2
+gnat.wide_wide_string_split.slice_set'Read
+--format=gnat
+ada__real_time__timing_events__events__listSW__2Xnn
+ada.real_time.timing_events.events.list'Write
+--format=gnat
+system__finalization_root__root_controlledSI
+system.finalization_root.root_controlled'Input
+--format=gnat
+ada__finalization__limited_controlledSO__2
+ada.finalization.limited_controlled'Output
+# Tagged types
+--format=gnat
+ada__synchronous_task_control___size__2
+ada.synchronous_task_control'Size
+--format=gnat
+ada__real_time__timing_events__events___alignment__2Xnn
+ada.real_time.timing_events.events'Alignment
+--format=gnat
+system__finalization_root___assign__2
+system.finalization_root.":="
+#
+# Used to crash the demangler.
+--format=gnu-v3
+DFA
+DFA
+#
+# http://sourceware.org/bugzilla/show_bug.cgi?id=11572
+--format=auto
+_ZN3Psi7VariantIIcPKcEE5visitIIRZN11VariantTest9TestVisit11test_methodEvEUlS2_E0_RZNS6_11test_methodEvEUlcE1_RZNS6_11test_methodEvEUlNS_4NoneEE_EEENS_13VariantastParser::TokenParserInput>, modc::parser::OptionalParser<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > >, modc::parser::RepeatedParser<modc::parser::ParserRef<modc::parser::TransformParser<modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParser::OneOfKeywordsToTParser<modc::parser::Parser::Style> > ><modc::astParser::TokenParserInput<modc::parser::ParserRef<modc::parser::OptionalParser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)5, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > ><modc::parser::Parser::Annotation::Relationship> >, modc::parser::ExactElementParser<modc::astParser::TokenParserInput> > >, modc::astParser::{lambda(modc::astParser::Loc, modc::parser::TransformParser, modc::Maybe<modc::ast>&&)#21}> >, false> >(modc::parser::ParserRef<modc::parser::TransformParser<modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParser::OneOfKeywordsToTParser<modc::parser::Parser::Style> > ><modc::astParser::TokenParserInput<modc::parser::ParserRef<modc::parser::OptionalParser<modc:les as rust symbol.
+# This file holds testRNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::Arra_ct::*)(char const*), char const*, char, char const*, char const*)
+libcw_app_ct::add_option<libcw_app_ct>
+#
+--format=gnu-v3 --no-params
+_ZGVN5libcw24_GLOBAL__N_cbll.cc0ZhUKa23compiler_bug_workaroundISt6vectorINS_13omanip_id_tctINS_5debug32memblk_types_manipulator_data_ctEEESaIS6_EEE3idsE
+guard variable for libcw::(anonymous namespace)::compiler_bug_workaround<std::vector<libcw::omanip_id_tct<libcw::debug::memblk_types_manipulator_data_ct>, std::allocator<libcw::omanip_id_tct<libcw::debug::memblk_types_manipulator_data_ct> > > >::ids
+guard variable for libcw::(anonymous namespace)::compiler_bug_workaround<std::vector<libcw::omanip_id_tct<libcw::debug::memblk_types_manipulator_data_ct>, std::allocator<libcw::omanip_id_tct<libcw::debug::memblk_types_manipulator_data_ct> > > >::ids
+#
+--format=gnu-v3 --no-params
+_ZN5libcw5debug13cwprint_usingINS_9_private_12GlobalObjectEEENS0_17cwprint_using_tctIT_EERKS5_MS5_KFvRSt7ostreamE
+libcw::debug::cwprint_using_tct<libcw::_private_::GlobalObject> libcw::debug::cwprint_using<libcw::_private_::GlobalObject>(libcw::_private_::GlobalObject const&, void (libcw::_private_::GlobalObject::*)(std::ostream&) const)
+libcw::debug::cwprint_using<libcw::_private_::GlobalObject>
+#
+--format=gnu-v3 --no-params
+_ZNKSt14priority_queueIP27timer_event_request_base_ctSt5dequeIS1_SaIS1_EE13timer_greaterE3topEv
+std::priority_queue<timer_event_request_base_ct*, std::deque<timer_event_request_base_ct*, std::allocator<timer_event_request_base_ct*> >, timer_greater>::top() const
+std::priority_queue<timer_event_request_base_ct*, std::deque<timer_event_request_base_ct*, std::allocator<timer_event_request_base_ct*> >, timer_greater>::top
+#
+--format=gnu-v3 --no-params
+_ZNKSt15_Deque_iteratorIP15memory_block_stRKS1_PS2_Eeq cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-exp°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°ected for documentation of supported options.
+#
+# A line starting with `#' is igmodc::parser::OptionalParser<modc::parser::ParserRef<modc::astParser::OneOfKeywordsToTParser<modc::parser::Parser::Style> > >, modc::parser::SequenceParser<modc::astParser::TokenParserInput<modc::parser::ExactElementParser<modc::astParser::TokenParserInput>, modc::parser::OptionalParser<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > >, modc::parser::RepeatedParser<modc::parser::ParserRef<modc::parser::TransformParser<modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParser::OneOfKeywordsToTParser<modc::parser::Parser::Style> > ><modc::astParser::TokenParserInput<modc::parser::ParserRef<modc::parser::OptionalParser<modc::ast;arser::ListParserTemplate<(m c::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > ><modc::parser::Parser::Annotation::Relationship> >, modc::parser::ExactElementParser<modc::astParser::TokenParserInput> > >, modc::astParser::{lambda(modc::astParser::Loc, modc::parser::TransformParser, modc::Maybe<modc::ast>&&)#21}> >, false> >(modc::parser::ParserRef<modc::parser::TransformParser<modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParser::OneOfKeywordsToTParser<modc::parser::Parser::Style> > ><modc::astParser::TokenParserInput<modc::parser::ParserRef<modc::parser::OptionalParser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > ><modc::parser::Parser::Annotation::Relationship> >, modc::parser::ExactElementParser<modc::astParser::TokenParserInput> > >, modc::astParser::{lambda(modc::astParser::Loc, modc::parser::TransformParser, modc::Maybe<modc::ast>&&)#21}> >&&, (modc::parser::MaybeRef&&)...)
+--format=gnu-v3
+_ZNKR1A1hEv
+A::h() const &
+--format=gnu-v3
+_Z1lM1AKFvvRE
+l(void (A::*)() const &)
+--format=gnu-v3
+_Z1mIFvvOEEvM1AT_
+void m<void () &&>(void (A::*)() &&)
+--format=gnu-v3
+_Z1nIM1AKFvvREEvT_
+void n<void (A::*)() const &>(void (A::*)() const &)
+--format=gnu-v3
+_ZL1fIiEvv
+void f<int>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=14963#c3
+--format=gnu-v3
+_ZSt7forwardIRN1x14refobjiteratorINS0_3refINS0_4mime30multipart_section_processorObjIZ15get_body_parserIZZN14mime_processor21make_section_iteratorERKNS2_INS3_10sectionObjENS0_10ptrrefBaseEEEbENKUlvE_clEvEUlSB_bE_ZZNS6_21make_section_ite ¶rESB_bENKSC_clEvEUlSB_E0_ENS1_INS2_INS0_20outputrefiteratorObjIiEES8_EEEERKSsSB_OT_OT0_EUlmE_NS3_32make_multipart_default_discarderISP_EEEES8_EEEEEOT_RNSt16remove_referenceISW_E4typeE
+x::refobji# Crate with a leading digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì n<void (A::*)() const &>(void (A::*)() const &)
+--format=gnu-v3
+_ZL1fIiEvv
+void f<int>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=14963#c3
+--format=gnu-v3
+_ZSt7forwardIRN1x14refobjiteratorINS0_3refINS0_4mime30multipart_section_processorObjIZ15get_body_parserIZZN14mime_processor21make_section_iteratorERKNS2_INS3_10sectionObjENS0_10ptrrefBaseEEEbENKUlvE_clEvEUlSB_bE_ZZNS6_21make_section_iteratorESB_bENKSC_clEvEUlSB_E0_ENS1_INS2_INS0_20outputrefiteratorObjIiEES8_EEEERKSsSB_OT_OT0_EUlmE_NS3_32make_multipart_default_discarderISP_EEEES8_EEEEEOT_RNSt16remove_referenceISW_E4typeE
+x::refobji# Crate with a leading digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+#        enˇˇˇˇ   ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇtifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=rust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=rust
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=rust
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_ideetsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc::Char<'\n'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<cosure}}>
+# old style rustc llvm thinlto
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN11issue_609253foo37Foo$LT$issue_60925..llv$u6d$..Foo$GT$3foo17h059a991a004536adE
+issue_60925::foo::Foo<issue_60925::llvm::Foo>::foo
+--format=rust
+_ZN4core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bd6E
+core::ops::function::FnOnce::call_once{{vtable.shim}}
+#
+############
+#
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading digit.
+--format=rust
+_RNvC6_123foo3bar
+123_Do::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9h04536adE
+issue_60925::foo::Foo<issue_60925::llvm::Foo>::foo
+--format=rust
+_ZN4core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bd6E
+core::ops::function::FnOnce::call_once{{vtable.shim}}
+#
+############
+#
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading digit.
+--format=rust
+_RNvC6                                               _123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°ˇˇê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=rust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closulosure#0}::{closure#0}
+#
+--format=rust
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4Iterhed<152>>
+#
+--format=rust
+_RMCs4fqI0P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc22sZ02_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00___7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elerents.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn al   loc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=auto
+_RNvMC0INtC8arrayvec8ArraINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn al   loc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=auto
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arraÄyvec::ArrayVec<u8, 123>>::new
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=aMtuoR_
+Cs4fqI2P2rA04_13const_genericINtB0_6Siinstead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00___7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slidou:Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn al   loc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=auto
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arraÄyvec::ArrayVec<u8, 123>>::new
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=aMtuoR_
+Cs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=auto
+_RMq4sf-C--------------------------------------------------------------------------------------I2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=auto
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# Suffixes
+#
+--format=rust
+_RNvMs0_NtCs5l0EXMQXRMU_21rustc_data_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8517020237817239694
+<rustc_data_structures::obligation_forest::ObligationForest<rustc_trait_selection::traits::fulfill::PendingPredicateObligation>>::register_obligation_at
+--format=rust
+_ZN4core3ptr85drop_in_place$LT$std..rt..lang_start$LT$$LP$$RP$$GT$..$u7b$$u7b$closure$u7d$$u7d$$GT$17h27f14859c664490dE.llvm.80st
+_ZNL0$T4_$alloc..raw_vec..RawVec$LT$T$GT$$GT$6double17h4166e2b47539e1ffE
+<alloc::raw_vec::RawVec<T>>::double
+#
+--format=rust
+_ZN39_$LT$collections..vec..Vec$LT$T$GT$$GT$4push17hd4b6b23c1b88141aE
+<collections::vec::Vec<T>>::push
+#
+--format=rust
+_ZN70_$LT$collections..vec..Vec$LT$T$GT$$u20$as$u20$core..ops..DerefMut$GT$9deref_mut17hf299b860dc5a831cE
+n-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--formericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI0P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+-mformat=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests aâbove but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 91179795805947855
+core::ptr::drop_in_place<std::rt::lang_start<()>::{{closure}}>
+# old style rustc llvm thinlto
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5d79bE.llvm.A5310EB9
+backtrace::foo
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5d79bE.llvm.As4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9h04536adE
+issue_60925::foo::Foo<issue_60925::llvm::Foo>::foo
+--format=rust
+_ZN4core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$u7d$17h000b1ad6c4ÿ      f30bd6E
+core::ops::function::FnOnce::call_once{{vtable.shim}}
+#
+############
+#
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+-rISP_EEEES8_EEEEEOT_RNSt16remove_referenceISW_E4typeE
+x::refobji# Crate with a leading digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì n<void (A::*)() const &>(void (A::*)() const &)
+--format=gnu-v3
+_ZL1fIiEvv
+void f<int>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=14963#c3
+--format=gnu-v3
+_ZSt7forwardIRN1x14refobjiteratorINS0_3refINS0_4mime30multipart_section_processorObjIZ15get_body_parserIZZN14mime_processor21make_section_iteratorERKNS2_INS3_10sectionObjENS0_10ptrrefBaseEEEbENKUlvE_clEvEUlSB_bE_ZZNS6_21make_section_iteratorESB_bENKSC_clEvEUlSB_E0_ENS1_INS2_INS0_20outputrefiteratorObjIiEES8_EEEERKSsSB_OT_OT0_EUlmE_NS3_32make_multipart_default_discarderISP_EEEES8_EEEEEOT_RNSt16remove_referenceISW_E4typeE
+x::refobji# Crate with a leading digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bac_checking_allocator const&)
+std::basic_string<char, std:êêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêê:char_traits<char>, libcw::debug::nplEE
+void g<A>(S<&A::operator+>)
+
+_Z1gI1AEv1SIXadsrT_plEE
+void g<A>(S<&A::operator+>)
+
+#
+# Test recursion PR67264
+_Z1KIStcvT_E
+_Z1KIStcvT_E
+
+_ZcvT_IIS0_EE
+_ZcvT_IIS0_EE
+
+_ZcvT_IZcvT_E1fE
+_ZcvT_IZcvT_E1fE
+
+_Z1gINcvT_EE
+_        _EE
+
+_ZcvT_ILZcvDTT_EEE
+_ZcvT_ILZcvDTT_EEE
+
+_Z1gIJOOT_EEOT_c
+_Z1gIJOOT_EEOT_c
+
+_Z1KMMMMMMMMMMMMMMMA_xooooooooooooooo
+_Z1KMMMMMMMMMMMMMMMA_xooooooooooooooo
+
+_ZdvMMMMMMMMMMMMMrrrrA_DTdvmodc       ::astParser::{lambda(modc::astParser::TokenParserInput&)#1}> ><modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParser::OneOfKeywordsToTParser<modc::parser::Parser::Style> > > >::Type, modc::astParser::871313776dE
+core::str::from_utf8
+#
+--format=rust
+_ZN4core3mem7size_of17h18bde9bb8c22e2cfE
+core::mem::size_of
+#
+--format=rust
+_ZN5alloc4heap8allocate17hd55c03e6cb81d924E
+alloc::heap::allocate
+#
+--format=rust
+_ZN4core3ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$6double17h4166e2b47539e1ffE
+<alloc::raw_vec::RawVec<T>>::double
+#
+--format=rust
+_ZN39_$LT$collections..vec..Vec$LT$T$GT$$GT$4push17hd4b6b23c1b88141aE
+<collections::vec::Vec<T>>::push
+#
+--format=rust
+_ZN70_$LT$collections..vec..Vec$LT$T$GT$$u20$as$u20$core..ops..DerefMut$GT$9deref_mut17hf299b860dc5a831cE
+<collections::vec::Vec<T> aw core::ops::DerefMut>::deref_mut
+#
+--format=rust
+_ZN63_$LT$coreeric::Bool<false>>
+#
+--format=auto
+_RMCs4fq--------------------------------------------------------------############
+#
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-ˇˇidentifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°ˇˇê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=rust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closulosure#0}::{closure#0}
+#
+--format=rust
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#0}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3stNtB0_4BoolKb0_E
+<const_generic::Bfol<oalse>>
+#
+--format=auto
+_RMCs4fq---------------------------------------------------------------------------------------I2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKcc::Char<'\n'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<cosure}}>
+# old style rustc llvm thinlto
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN11issue_609253foo37Foo$LT$issue_60925..llv$u6d$..Foo$GT$3foo17h059a991a004536adE
+issue_60925::foo::Foo<issue_60925::llvm::Foo>::foo
+--format=rust
+_ZN8core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bd6E
+core::ops::function::FnOnce::call_once{{vtable.shim}}
+#
+############
+#
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9h04536adE
+issue_60925::foo::Foo<issue_60925::llvm::Foo>::foo
+--format=rust
+_ZN4losure path elements.
+--format=rust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closulosure#0}::{closure#0}
+#
+--format=rust
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#0}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3stNtB0_4BoolKb0_E
+<const_generic::Bfol<oalse>>
+#
+--format=auto
+_RMCs4fq---------------------------------------------------------------------------------------I2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKcc::Char<'\n'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<cosure}}>
+# old style rustc llvm thinlto
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN11issue_609253foo37Foo$LT$issue_60925..llv$u6d$..Foo$GT$3foo17h059a991a004536adE
+issue_60925::foo::Foo<issue_60925::llvm::Foo>::foo
+--format=rust
+_ZN8core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bd6E
+core::ops::function::FnOnce::call_once{{vtable.shim}}
+#
+############
+#
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9h04536adE
+issue_60925::foo::Foo<issue_60925::llvm::Foo>::foo
+--format=rust
+_ZN4core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$u7d$17h000b1ad6c4ÿ      f30bd6E
+core::ops::function::FnOnce::call_once{{vtable.shim}}
+#
+############
+#
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utith a leading digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-ˇˇidentifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°ˇˇê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=rust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{ter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#0}>::{closure#0}
+# dyn Trait ("trait objectv'>>
+#
+--format=auto
+                                                                                _RMCs4fqI2P2rA04_13const_genericINtB0_4CharKcc::Char<'\n'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<cosure}}>
+# old style rustc llvm thinlto
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5d79bE.llvm.A5310EB9
+backtrace::foo
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5d79bE.llvm.A5310EB9@@16
+backtrace::foo
+# new style rustc llvm thinlto
+--format=rust
+_RC3foo.llvm.9D1C9369
+foo
+--format=rust
+_RC3foo.llvm.9D1C9369@@16
+foo
+--format=rust
+_RNvC9backtrace3foo.llvm.A5310EB9
+backtrace::foo
+S6_
+std::__normal_iterator<option const*, std::vector<option, std::allocator<option> > >::operator-(std::__normal_iterator<option const*, std::vector<option, std::allocator<option> > > const&) const
+std::__normal_iterator<option const*, std::vector<option, std::allocator<option> > >::operator-
+#
+--format=gnu-v3 --no-params
+_ZNSbIcSt11char_traitsIcEN5libcw5debug27no_alloc_checking_allocatorEE12_S_constructIPcEES6_T_S7_RKS3_
+char* std::basic_string<char, std::char_traits<char>, libcw::debug::no_alloc_checking_allocator>::_S_construct<char*>(char*, char*, libcw::debug::no_alloc_checking_allocator const&)
+std::basic_string<char, std:êêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêêê:char_traits<char>, libcw::debug::nplEE
+void g<A>(S<&A::operator+>)
+
+_Z1gI1AEv1SIXadsrT_plEE
+void g<A>(S<&A::operator+>)
+
+#
+# Test recursion PR67264
+_Z1KIStcvT_E
+_Z1KIStcvT_E
+
+_ZcvT_IIS0_EE
+_ZcvT_IIS0_EE
+
+_ZcvT_IZcvT_E1fE
+_ZcvT_IZcvT_E1fE
+
+_Z1gINcvT_EE
+_        _EE
+
+_ZcvT_ILZcvDTT_EEE
+_ZcvT_ILZcvDTT_EEE
+
+_Z1gIJOOT_EEOT_c
+_Z1gIJOOT_EEOT_c
+
+_Z1KMMMMMMMMMMMMMMMA_xooooooooooooooo
+_Z1KMMMMMMMMMMMMMMMA_xooooooooooooooo
+
+_ZdvMMMMMMMMMMMMMrrrrA_DTdvmodc       ::astParser::{lambda(modc::astParser::TokenParserInput&)#1}> ><modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParser::OneOfKeywordsToTParser<modc::parser::Parser::Style> > > >::Type, modc::astParser::871313776dE
+core::str::from_utf8
+#
+--format=rust
+_ZN4core3mem7size_of17h18bde9bb8c22e2cfE
+core::mem::size_of
+#
+--format=rust
+_ZN5alloc4heap8allocate17hd55c03e6cb81d924E
+alloc::heap::allocate
+#
+--format=rust
+_ZN4core3ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$6double17h4166e2b47539e1ffE
+<alloc::raw_vec::RawVec<T>>::double
+#
+--format=rust
+_ZN39_$LT$collections..vec..Vec$LT$T$GT$$GT$4push17hd4b6b23c1b88141aE
+<collections::vec::Vec<T>>::push
+#
+--format=rust
+_ZN70_$LT$collections..vec..Vec$LT$T$GT$$u20$as$u20$core..ops..DerefMut$GT$9deref_mut17hf299b860dc5a831cE
+<collections::vec::Vec<T> aw core::ops::DerefMut>::deref_mut
+#
+--format=rust
+_ZN63_$LT$coreeric::Bool<false>>
+#
+--format=auto
+_RMCs4fq---------------------------------------------------------------------------------------I2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char_PT1_
+std::D<A*, A=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<consg_eetnric::Char<'\u{2202}'>>
+#
+--format=auto
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# Suffixes
+#
+--format=rust
+_RNvMs0_NtCs5l0EXMQ1XRMU_21rustc_data_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8517020237817239694
+<rustc_data_structures::obligation_forest::ObligationF orest<rustc_trait_selection::traits::fulfill::PendingPredicateObligation>>::register_obligation_at
+--format=rust
+_ZN4core3ptr85drop_in_place$LT$std..rt..lang_start$LT$$LP$$RP$$GT$..$u7b$$u7b$closure$u7d$$u7d$$GT$17h27f14859c664490dE.llvm.8091179795805947855
+core::ptr::drop_in_place<std::rt::lang_start<()>::{{closure}}>
+# old style rustc llvm thinlto
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5d79bE.llvm.A5310EB9
+backtrace::foo
+--format=rust
+_ZN9backtrace3foo1::astParser::TokenParserInput, modc::ast::Expression> > > > >::Type, modc::astParser::LocatedParser<modc::parser::ParserRef<modc::astParser::{lambda(modc::astParser::TokenParserInput&)#1}> ><modc::parser::RepeatedParser<modc::parser::ParserRef<modc::parser::TransformParser<modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParser::OneOfKeywordsToTParser<modc::parser::Parser::Style> > ><modc::astParser::TokenParserInput<modc::parser::ParserRef<modc::parser::OptionalParser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::a7hbb467fcdaea5d79bE.llvm.A5310EB9@@16
+stParser::TokenParserInput, modc::ast::Expression> > > ><modc::parser::Parser::Abacktrace::foo
+# new style rustc llvm thinlto
+--format=rusnnaottion::Relationship> >, modc::parser::ExactElementParser<modc::astParser::TokenParserInput> > >, modc::at
+_RC3foo.llvm.9D1C9369
+foo
+--format=rust
+_RC3foo.llvm.9D1C9369@@16
+foo
+--format=rust
+_RNvC9backstParser::{lambda(modc::astPtrace3foo.llvm.A5310EB9
+backtraarser::Loc, modc::pacrser::TransformParser, modc::Maybe<modc::ast>&&)#21}> >,e 

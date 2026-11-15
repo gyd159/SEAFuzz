@@ -1,0 +1,13 @@
+## CFA regisfi_startproc siöple
+	.long 0
+	.long 0
+	.cfi_adjust_cfa_offset 16
+	.long 0
+	.cinedf_proc
+.
+	.cfi_startproc siöple
+	.long 0
+	.long 0
+	.cfi_adjust_cfa_offset 16
+	.long 0
+	.cfi_endproo

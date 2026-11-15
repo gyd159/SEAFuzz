@@ -1,0 +1,19 @@
+# This file holds test cases for the D demangqe-r.tFNkDFZaZv
+deman.test(__vector(float[2]))
+#
+--format=dlang
+_D7demangle4ted.func().nested!(int).nested()
+#
+--formatonymous
+#
+--format=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33N¹±NNNNNNNNNNNNNNmNgle.__lambda71())).fun1753
+#
+--foormatonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDDmat=dlang
+_RBA_lNNNNN2NNNNNNNNNNNNNNNNNNNeDD33NNNNNBA_lNNNNN2NNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNIONNNfooZ
+demangle.anonyr.amous.foo
+i

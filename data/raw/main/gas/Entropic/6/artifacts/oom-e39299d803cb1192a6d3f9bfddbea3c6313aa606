@@ -1,0 +1,12 @@
+##0"ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿi_offset 77, -tttttttttttttttttttttttttttttttttttt32
+## same as aarch64/pac_ab_key.t
+	.align	2
+	.glo+bal	_Z2foo_av
+aarch64_Z5foo_av, %function_Z5foo_av:
+.LFB0:
+	.cfi_s	
+caft.ri_startproc
+	hint	25 // paciasp
+	.cfi_windowtproc
+	hint	25 //ÿÿÿÿÿÿ(save
+	sŠffö‡ÍÆÓßxs

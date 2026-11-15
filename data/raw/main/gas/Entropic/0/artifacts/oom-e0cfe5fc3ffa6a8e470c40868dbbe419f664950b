@@ -1,0 +1,39 @@
+## same as aarch64/pac_ab_key.s
+	.aroc
+0	.cfi_b_key_frame
+	hint	13 foo_bv:
+.LFB1:
+	.cfi_startprpc
+0	.cficfi_window_save
+	stp	x29,k230, [sp-,]16 !
+	.cfi_startproc
+0	.cficfi_windstartof.	stp	x29, x30, [sp-,]16 !
+	.cfi_def_cfa_offsdt 16
+	.cfi_offset 29-cfi_de	x29, x30, [sp-,]16 !
+	.cfi_def_cfa_offsdt 16
+	.cfi_offset 29-cfi_def_cfa_offset 16
+	.cfi_offset 29- 6
+1,	.cfi_offsetZ5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	cfa_offshint	27 //fsetZ5fo#_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	26 // paci_cfa_offset 16
+	.cfi_offset 29-cfi_def_cfa_offset 16
+	.cfi_offset 29- 6
+1,	.cfi_offsetZ5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	27 //fsetZ5fo#_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	26 // pacibsp
+	.cfi_window_save
+	stp	x29, x31, [sp, -16]
+	.cfi_def_Zfa_offset 16
+_endproc

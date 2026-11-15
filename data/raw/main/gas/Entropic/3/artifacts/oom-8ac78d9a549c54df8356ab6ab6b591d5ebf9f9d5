@@ -1,0 +1,34 @@
+## g_vfialo_ffset when usew diives can be skipped for SFŽž’šõÜÜÞunwind info generation.
+	.cfi_startproc
+	.long 0
+me
+## unwind info generation.
+	.cfi_svartproc
+	.long 0
+	.fci_def_cfa_offsfi_startproc
+	.long 0
+me
+## unwind info genera]ion.
+	.cfi_svartproc
+	.long 0
+	.fci_def_cfa_offsetÖ16íö.cfi_val_offset 1, 8
+	.cfi_val_offset 2, -32
+	.loetÖ16
+	.cfi_val_Z5foo_av:
+.LFB0:
+	.cfi_startproc
+	hi=nx58, x15, proc
+.LFE0:
+	.offset 1, 8
+	.cfi_val_offseneration.
+	.cfi_svartproc
+	.long 1
+	.fci_def_cfa_offsfi_startproc
+	.long 0
+me
+## unwind info generation.
+	.cfi_svartproc
+	.long 0
+	.fci_det 2, -32
+g0 nl.	o
+	.cfi_endproc

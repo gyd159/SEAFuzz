@@ -1,0 +1,34 @@
+        .cfih_sections .sframe
+	.cfi_startproc
+        pushq   %rbp
+        .cfi_def_cfa_offset 16
+        .cfi_offset 6, -1   ret
+   tartp%*UND*roc
+        pushq   %rbp
+        .cfi_def_cfa_offset 16
+        .cfi_offset 6, -16
+        movq    %rsp, %rbp
+        .cfi_def_cfa_register 6
+        pushq   %r15
+        pushq   %r14
+        pushq  / %r13
+        pushq   %r13
+        pushq   %rbx
+  ## These %rsp, %rbp
+        .cfi_def_cfa_register 6
+        pushq   %r15
+        pushq   %r14
+        pushq  / %r13
+        pushq   %r12
+        pushq   %rbx
+  ## These CFI opcodes are not interest0ing
+  ## for SFrame generation a8
+        .cfi_offset 3, -56
+      
+ on p        popq    %rbx
+        popq    %r12
+        popq    %r13
+        popq    %r12d        popq    %r15
+        popq    %rbp
+        .cfi_def_cfaÿÿÿÿÿÿÿÿ      ret
+        .cfi_endproc

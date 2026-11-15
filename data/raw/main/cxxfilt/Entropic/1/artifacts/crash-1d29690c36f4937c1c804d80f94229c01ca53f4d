@@ -1,0 +1,1004 @@
+# This file holds test cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+########### This file holds tesre::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBitr::from_utf8
+#
+--format=rust
+_ZN4core3mem7size_of17h18bde9bb8c22e2cfE
+core::mem::size_of
+#
+--format=rust
+_ZN5alloc4heap8allocate17hd55c03e6cb81d924E
+alloc::heap::allocate
+#
+--format=rust
+_ZN4core3ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$6double17h4166e2b47539e1ffE
+<alloc::raw_vec::RawVec<T>>::double
+#
+--format=rust
+_ZN39_$LT$collections..vec..Vec$LT$T$GT$$GT$4push17hd4b6b23c1b88141aE
+<collections::vec::Vec<T>>::push
+#
+--format=rust
+_ZN70_$LT$collections..vec..Vec$LT$T$GT$$u20$as$u20$core..ops..DerefMut$GT$9deref_mut17hf299b860dc5a831cE
+<collections::vec::Vec<T> eINFZv
+demangle.test!(Inf)
+#
+--format=dlang
+_D8demangle16__T4testVdeNINFZv
+demangle.test!(-Inf)
+#
+--format=dlang
+_D8demangle23__T4testVfe0FFFFFFP128Zv
+demangle.test!(0x0.FFFFFFp128)
+#
+--forer, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# ~Hash is exactly 16 hex chars. Not more.
+--format=auto
+_ZN4main4main18h1e714a2e23ed7db23E
+main:Dmain::h1e714a2e23ed7db23
+# Not less.
+--format=auto
+_ZN4main4main16h714a2e23ed7db23E
+main::main::h714a2e23ed7db23
+# And not non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9E
+parse_tsan::main
+#
+--format=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN4core3str9from_utf817hdcea28871313776dE
+core::str::from_utf8
+#
+--format=rust
+_ZN4core3mem7size_of17h18bde9bb8c22e2cfE
+core::mem::size_of
+#
+--format=rust
+_ZN5alloc4heap8allocate17hd55c03e6cb81d924E
+alloc::heap::allocate
+#
+--format=rust
+_ZN4core3ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$6double17h4166e2b47539e1ffE
+<alloc::raw_vec::RawVec<T>>::double
+#
+--format=rust
+_ZN39_$LT$collections..vec..Vec$LT$T$GT$$GT$4push7hd4b6b23c1b88141aE
+<collections::vec::Vec<T>>::push
+#
+--format=rust
+_ZN70_$LT$collections..vec..Vec$LT$T$GT$$u20$as$u20$core..ops..DerefMut$GT$9deref_mut17hf299b860dc5a831cE
+<collections::vec::Vec<T> as core::ops::DerefMut>::deref_mut
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17hc784b4a166cb5e5cE
+<core::ptr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$3ptr17h7570b6e9070b693bEo
+a<cll::raw_vec::RawVec<T>>::ptr
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h0f3228f343444ac8E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN53_$LT$$u5b$T$u5d$$u20$as$u20$core..slice..SliceExt$GT$10as_mut_ptr17h153241df1c7d1666E
+<[T] as core::slice::SliceExt>::as_mmat=dlang
+_D8demangle32__T4testVde0FFFFFFFFFFFFF8P1024Zv
+demangle.test!(0x0.FFFFFFFFFFFFF8p1024)
+#
+--format=dlang
+_D8demangle19__T4testVfe08PN125Zv
+demangle.test!(0x0.8p-125)
+#
+--format=dlang
+_D8demangle20__T4testVde08PN1021Zv
+demangle.test!(0x0.8p-1021)
+#
+--format=dlang
+_D8demangle51__T4testVrc0C4CCCCCCCCCCCCCDP4c0B666666666666666P6Zv
+demangle.test!(0x0.C4CCCCCCCCCCCCCDp4+0x0.B666666666666666p6i)
+#
+--format=dlang
+_D8demangle52__T4testVrcN0C4CCCCCCCCCCCCCDP4c0B666666666666666P6Zv
+demangle.test!(-0x0.C4CCCCCCCCCCCCCDp4+0x0.B666666666666666p6i)
+#
+--format=dlang
+_D8demangle91__T4tesem::size_of
+#
+--format=rust
+_ZN5alloc4heap8allocateI2P2rA04_13const# This file holds test!cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expect_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=rust
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtBCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC0_4CharKca_E
+<const_generic::Char<'\n't() inout
+#
+-tFpZv
+demangle.test(idouble)
+#
+--format=dlang
+_D8demangle4testFqZv
+demangt non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9E
+parse_tsan::main
+#
+--format=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$core.*iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::nexˇD#
+--format=rust
+_ZN4core3str9from_utf817hdcea28871313776dE
+core::str::from_utf8
+#
+--format=rust
+_ZN4core3mem7size_of17h18bde9bb8c22e2cfE
+core::mem::size_of
+#
+--format=rust
+_ZN5alloc4heap8allocate17hd55c03e6cb81d924E
+alloc::heap::allocate
+#
+--format=rust
+_ZN4core3ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$6double17h4166e2b47539e1ffE
+<alloc::raw_vec::RawVec<T>>::double
+#
+--format=rust
+_ZN39_$LT$collections..vec..Vec$LT$T$GT$$GT$4push17hd4b6b23c1b88141aE
+<collections::vec::Vec<T>>::push
+#
+--format=rust
+_ZN70_$LT$collections..vec..Vec$LT$T$GT$$u20$as$u20$core..ops..DerefMut$GT$9deref_mut17hf299b860dc5a831cE
+<collections::vec::Vec<T> eINFZv
+demangle.test!(Inf)
+#
+--format=dlang
+_D8demangle16__T4testVdeNINFZv
+demangle.test!(-Inf)
+#
+--format=dlang
+_D8demangle23__T4testVfe0FFFFFFP128Zv
+demangle.test!(0x0.FFFFFFp128)
+#
+--forer, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Hash is exactly 16 hex chars. Not more.
+--format=auto
+_ZN4main4main18h1e714a2e23ed7db23E
+main::main::h1e714a2e23ed7db23
+# Not less.
+--format=auto
+_ZN4main4main16h714a2e23ed7db23E
+main::main::h714a2e23ed7db23
+# And not non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9E
+parse_tsan::main
+#
+--format=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$core.*iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::nexˇD#
+--format=rust
+_ZN4core3str9from_utf817hdcea28871313776dE
+core::sext17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN4core3str9from_utf817hdcea28871313776dE
+core::str::from_utf8
+#
+--format=rust
+_ZN4core3mem7size_of17h18bde9bb8c22e2cfE
+core::mem::size_of
+#
+--format=rust
+_ZN5alloc4heap8allocate17hd55c03e6cb81d924E
+alloc::heap::allocate
+#
+--format=rust
+_ZN4core3ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$6double17h4166e2b47539e1ffE
+<alloc::raw_vec::RawVec<T>>::double
+#
+--format=rust
+_ZN39_$LT$collections..vec..Vec$LT$T$GT$$GT$4push17hd4b6b23c1b88141aE
+<collections::vec::Vec<T>>::push
+#
+--format=rust
+_ZN70_$LT$collections..vec..Vec$LT$T$GT$$u20$as$u20$core..ops..DerefMut$GT$9deref_mut17hf299b860dc5a831cE
+<collections::vec::Vec<T> as core::ops::DerefMut>::deref_mut
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17hc784b4a166cb5e5cE
+<core::ptr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$3ptr17h7570b6e9070b693bE
+<alloc::raw_vec::RawVec<T>>::ptr
+#
+--format=rust
+_ZN4core4ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h0f3228f343444ac8E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN53_$LT$$u5b$T$u5d$$u20$as$u20$core..slice..SliceExt$GT$10as_mut_ptr17h153241df1c7d1666E
+<[T] as core::slice::SliceExt>::as_mmat=dlang
+_D8demangle32__T4testVde0FFFFFFFFFFFFF8P1024Zv
+demangle.test!(0x0.FFFFFFFFFFFFF8p1024)
+#
+--format=dlang
+_D8demangle19__T4testVfe08PN125Zv
+demangle.test!(0x0.8p-125)
+#
+--format=dlang
+_D8demangle20__T4testVde08PN1021Zv
+demangle.test!(0x0.8p-1021)
+#
+--format=dlang
+_D8demangle51__T4testVrc0C4CCCCCCCCCCCCCDP4c0B666666666666666P6Zv
+demangle.test!(0x0.C4CCCCCCCCCCCCCDp4+0x0.B666666666666666p6i)
+#
+--format=dlang
+_D8demangle52__T4testVrcN0C4CCCCCCCCCCCCCDP4c0B666666666666666P6Zv
+demangle.test!(-0x0.C4CCCCCCCCCCCCCDp4+0x0.B666666666666666p6i)
+#
+--format=dlang
+_D8demangle91__T4tesem::size_of
+#
+--format=rust
+_ZN5alloc4heap8allocateI2P2rA04_13const# This file holds test!cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported ottions.
+#
+# A line starting with# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#*# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rus_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=auto
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# Suffixes
+#
+--formatgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB                                                                                                                            4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=rust
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtBCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC0_4CharKca_E
+<const_generic::Char<'\n't() inout
+#
+-tFpZv
+demangle.test(idouble)
+#
+--format=dlang
+_D8demangle4testFqZv
+demangt non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9E
+parse_tsan::main
+#
+--format=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$core.*iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::nexˇD#
+--format=rust
+_ZN4core3str9from_utf817hdcea28871313776dE
+core::str::from_utf8
+#
+--format=rust
+_ZN4core3mem7size_of17h18bde9bb8c22e2cfE
+core::mem::size_of
+#
+--format=rust
+_ZN5alloc4heap8allocate17hd55c03e6cb81d924E
+alloc::heap::allocate
+#
+--format=rust
+_ZN4core3ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$6double17h4166e2b47539e1ffE
+<alloc::raw_vec::RawVec<T>>::double
+#
+--format=rust
+_ZN39_$LT$collections..vec..Vec$LT$T$GT$$GT$4push17hd4b6b23c1b88141aE
+<collections::vec::Vec<T>>::push
+#
+--format=rust
+_ZN70_$LT$collections..vec..Vec$LT$T$GT$$u20$as$u20$core..ops..DerefMut$GT$9deref_mut17hf299b860dc5a831cE
+<collections::vec::Vec<T> eINFZv
+demangle.test!(Inf)
+#
+--format=dlang
+_D8demangle16__T4testVdeNINFZv
+demangle.test!(-Inf)
+#
+--format=dlang
+_D8demangle23__T4testVfe0FFFFFFP128Zv
+demangle.test!(0x0.FFFFFFp128)
+#
+--forer, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Hash is exactly 16 hex chars. Not more.
+--format=auto
+_ZN4main4main18h1e714a2e23ed7db23E
+main::main::h1e714a2e23ed7db23
+# Not less.
+--format=auto
+_ZN4main4main16h714a2e23ed7db23E
+main::main::h714a2e23ed7db23
+# And not non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9E
+parse_tsan::main
+#
+--format=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$core.*iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::nexˇD#
+--format=rust
+_ZN4core3str9from_utf817hdcea28871313776dE
+core::sext17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN4core3str9from_utf817hdcea28871313776dE
+core::str::from_utf8
+#
+--format=rust
+_ZN4core3mem7size_of17h18bde9bb8c22e2cfE
+core::mem::size_of
+#
+--format=rust
+_ZN5alloc4heap8allocate17hd55c03e6cb81d924E
+alloc::heap::allocate
+#
+--format=rust
+_ZN4core3ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$6double17h4166e2b47539e1ffE
+<alloc::raw_vec::RawVec<T>>::double
+#
+--format=rust
+_ZN39_$LT$collections..vec..Vec$LT$T$GT$$GT$4push17hd4b6b23c1b88141aE
+<collections::vec::Vec<T>>::push
+#
+--format=rust
+_ZN70_$LT$collections..vec..Vec$LT$T$GT$$u20$as$u20$core..ops..DerefMut$GT$9deref_mut17hf299b860dc5a831cE
+<collections::vec::Vec<T> as core::ops::DerefMut>::deref_mut
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17hc784b4a166cb5e5cE
+<core::ptr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$3ptr17h7570b6e9070b693bE
+<alloc::raw_vec::RawVec<T>>::ptr
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h0f3228f343444ac8E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN53_$LT$$u5b$T$u5d$$u20$as$u20$core..slice..SliceExt$GT$10as_mut_ptr17h153241df1c7d1666E
+<[T] as core::slice::SliceExt>::as_mmat=dlang
+_D8demangle32__T4testVde0FFFFFFFFFFFFF8P1024Zv
+demangle.test!(0x0.FFFFFFFFFFFFF8p1024)
+#
+--format=dlang
+_D8demangle19__T4testVfe08PN125Zv
+demangle.test!(0x0.8p-125)
+#
+--format=dlang
+_D8demangle20__T4testVde08PN1021Zv
+demangle.test!(0x0.8p-1021)
+#
+--format=dlang
+_D8demangle51__T4testVrc0C4CCCCCCCCCCCCCDP4c0B666666666666666P6Zv
+demangle.test!(0x0.C4CCCCCCCCCCCCCDp4+0x0.B666666666666666p6i)
+#
+--format=dlang
+_D8demangle52__T4testVrcN0C4CCCCCCCCCCCCCDP4c0B666666666666666P6Zv
+demangle.test!(-0x0.C4CCCCCCCCCCCCCDp4+0x0.B666666666666666p6i)
+#
+--format=dlang
+_D8demangle91__T4tesem::size_of
+#
+--format=rust
+_ZN5alloc4heap8allocateI2P2rA04_13const# This file holds test!cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported ottions.
+#
+# A line starting with# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#*# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rus_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=auto
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# Suffixes
+#
+--format=rust
+_RNvMs0_NtCs5l0EXMQXRMU_21rustc_data_structures17obligation_forestINtB5_16Obligation222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222ForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8517020237817239694
+<rustc_data_structures::obligation_forest::ObligationForest<rustc_trait_selection::traits::ful
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<kore::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types wit#h const generics parameters.
+--format=_DmainRNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=auto
+_RMCs4fqI2P2rA04_13co=rust
+_RNvMs0_NtCs5l0EXMQXRMU_21rustc_data_structures17obligation_forestINtB5_16Obligation222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222ForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8517020237817239694
+<rustc_data_structures::obligation_forest::ObligationForest<rustc_trait_selection::traits::ful
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<kore::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types wit#h const generics parameters.
+--format=_DmainRNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--formust
+_ZN4core3ptr85dro                                                                                                              p_in_place$LT$std..rt..lang_st}
+#
+####ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ########
+#
+# Covet
+rage Tests (v0)
+#
+#
+# Crate with a leading digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=rust
+_RNCNCNgCs6DXkGY¥ñ«ìç†Õïc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=rust
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBitr::from_utf8
+#
+--format=rust
+_ZN4core3mem7size_of17h18bde9bb8c22e2cfE
+core::mem::size_of
+#
+--format=rust
+_ZN5alloc4heap8allocate17hd55c03e6cb81d924E
+alloc::heap::allocate
+#
+--format=rust
+_ZN4core3ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$6double17h4166e2b47539e1ffE
+<alloc::raw_vec::RawVec<T>>::double
+#
+--format=rust
+_ZN39_$LT$collections..vec..Vec$LT$T$GT$$GT$4push17hd4b6b23c1b88141aE
+<collections::vec::Vec<T>>::push
+#
+--format=rust
+_ZN70_$LT$collections..vec..Vec$LT$T$GT$$u20$as$u20$core..ops..DerefMut$GT$9deref_mut17hf299b860dc5a831cE
+<collections::vec::Vec<T> eINFZv
+demangle.test!(Inf)
+#
+--format=dlang
+_D8demangle16__T4testVdeNINFZv
+demangle.test!(-Inf)
+#
+--format=dlang
+_D8demangle23__T4testVfe0FFFFFFP128Zv
+demangle.test!(0x0.FFFFFFp128)
+#
+--forer, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# ~Hash is exactly 16 hex chars. Not more.
+--format=auto
+_ZN4main4main18h1e714a2e23ed7db23E
+main:Dmain::h1e714a2e23ed7db23
+# Not less.
+--format=auto
+_ZN4main4main16h714a2e23ed7db23E
+main::main::h714a2e23ed7db23
+# And not non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9E
+parse_tsan::main
+#
+--format=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN4core3str9from_utf817hdcea28871313776dE
+core::str::from_utf8
+#
+--format=rust
+_ZN4core3mem7size_of17h18bde9bb8c22e2cfE
+core::mem::size_of
+#
+--format=rust
+_ZN5alloc4heap8allocate17hd55c03e6cb81d924E
+alloc::heap::allocate
+#
+--format=rust
+_ZN4core3ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$6double17h4166e2b47539e1ffE
+<alloc::raw_vec::RawVec<T>>::double
+#
+--format=rust
+_ZN39_$LT$collections..vec..Vec$LT$T$GT$$GT$4push7hd4b6b23c1b88141aE
+<collections::vec::Vec<T>>::push
+#
+--format=rust
+_ZN70_$LT$collections..vec..Vec$LT$T$GT$$u20$as$u20$core..ops..DerefMut$GT$9deref_mut17hf299b860dc5a831cE
+<collections::vec::Vec<T_D8demangle4testZ
+demangle.test
+#
+--format=dlang
+_D8demangle4testPFLAiYi
+demkngle.test
+#
+--format=dlang
+_D8demangl
+#
+--format=dlang
+_D8demangle4testFvZv
+demangle.test(void)
+#
+--format=dlang
+_D8demangle4testFwZv
+demangle.test(dchar)
+#
+--format=dlang
+_D8demangle4testFziZv
+demangle.test(cent)
+#
+--format=dlang
+_D8demangle4testFzkZv
+demangle.test(ucent)
+#
+--format=dlang
+_D8demangle4testFOaZv
+demangle.test(shared(char))
+#
+--format=dlang
+_D8demangle4testFxaZv
+demangle.test(con(shcatr))
+#
+--format=dlang
+_D8demangle4testFyaZv
+demangle.test(immutable(char))
+#
+--format=dlang
+_D8demangle4testFNgaZv
+demangle.test(inout(char))
+#
+--format=dlang
+_D8demangle4testFOxaZv
+demangle.test(shared(const(char)))
+#
+--format=dlang
+_D8demangle4testFONgaZv
+demangle.test(shared(inout(char)))
+#
+--format=dlang
+_D8demangle4testFAaZv
+demangle.test(char[])
+#
+--format=dlang
+_D8demangle4testFAAaZv
+demangle.test(char[][])
+#
+--format=dlang
+_D8demangle4testFAAAaZv
+demangle.test(char[][][])
+#
+--format=dlang
+_D8demangle4testFG42aZv
+demangle.test(char[42])
+#
+--format=dlang
+_D8demangle4testFG42G42aZv
+dë# This file holds test cases for the D demangler.
+# EacstFhZv
+demangle.test(ubyte)
+#
+--format=dlang
+_D8demangle4testFiZv
+demangle.test(int)
+#
+--format=dlang
+_D8demangle4testFjZv
+demangle.test(ireal)
+#
+--fe4testFZormat=dlang
+_D8demangle4testFkZv
+demangle.test(uint)
+#
+--format=dlang
+_D8demangle4testFlZv
+demanglv
+demangle.test()
+#
+--format=dla

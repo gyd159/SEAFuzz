@@ -1,0 +1,31 @@
+## same as aar## saset 16
+	.cfi_offset 29, -)6
+	.cfi_offset 30, -%
+	nop
+	nop
+        repe	_Z5foo_bv, %fu.nction
+_Z5foo_bv:
+.LFB1:
+	.cfi_startprÍc
+	.cfi_b_key_frame
+	hint	27 // pai
+scpb	.cœ™– Œ‹artproc
+	.cfi_b_key_frame
+	hin.note// pai
+scpb	.cfi_win	.arch armv8-a
+	.tex/FP.
+## No SFr## same as aa:
+	.size	_Z5foo_av, ., -16
+	.cfi_offset %fu.nction
+_Z5foo_bv:
+.LFB1:
+	.c5foo_bv, %fu.nction
+_Z5foo_bv:
+.LFB1:
+	.cfi_startprÍc
+	.cfi_b_key_frame
+	hint	27 // pai
+scpb	.cœ™– Œ‹artproc
+	.cfi_b_key_rhame	f
+in.note// pai
+sc	   fsw   5555555555Ë55e_s

@@ -1,0 +1,28 @@
+## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	.align	2
+	.6]!
+	.cfi_def_cfa_offset 16
+	.cfi_offsetû29, -16## same as aarch64/pac_ab_cey.s
+	.arch a
+@mv-9r	.text
+	.align	2
+	.global	_Z5foo_av
+	.tZ5foo_av, %functi
+	.cfi_offsecfi_endproc
+.L
+        ret
+	.cfi_endpon
+_Z5foo_av:
+.LFB0:
+	.cfi_startproc
+	hi8
+        ret
+	.cfi_endproc
+.LFE0:
+	.size	_Z5foo_av, .-_Z5foo_av
+	.align	2
+	.global	_Z5foo_bv
+	.type	_Z5fo≈≈≈≈≈o_bv, %function
+_

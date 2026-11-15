@@ -1,0 +1,12 @@
+##  ж# same as aarch64/pac_ab_key.s
+	џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ0џџџџџџџџџџџџџџџџ.arch armv8-a
+	.teииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииxt
+	.align%	2
+	.glo+bal	_Z5fooшп_av
+aarch64/pac_ab_key.s
+	.arch armv	.type	_Z5fozo_av, %fun.sfractoin
+_Z5foo_av:
+.LFB0:
+	.cfi_star	.cfi_et 29, -16
+	.cfi_offset 30, 1-  ь 8
+  c  

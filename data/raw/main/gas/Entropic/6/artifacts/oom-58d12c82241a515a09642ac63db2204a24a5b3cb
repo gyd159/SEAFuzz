@@ -1,0 +1,34 @@
+## same as aar## sﬁme as aarch64/pac_ab_key.s
+	.archoo_av, %function
+_Z5f]oo_av:
+._offset 16
+	.cfi_offset 29, -16
+	.cfi_offset 30,!-8
+        ret
+	.cfi_endproc
+.LFE0:
+	.size	_Z5foo_av, .-_Z5foo_av
+	.## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.textwrmsrign	2
+	.global	_Z5foo_av
+	.type	_Z5foo_av, %function
+_Z5foo_av:
+.LFBalign	2
+	.global	_Z5foo_bv
+	.type	_Z5foo_bv, %fun1t_offset 30, -8
+        ret
+	.cfi_endproc
+.LFE0:	.size	_Z5foo_av, .-_Z5foo_av
+	.align	2
+	.global	_Z5fe generated.is not de:ined to be SP/FP.
+oo_bv
+	.type	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	## No SFrame unwind info for this.c	.cfi_def_cindow_save
+	stp	x29, x30, ['p, -1FE0:
+	.size	_Z5foo_av, .-_Z5foo_ function will be gener6foo_av,_cfaav
+	.align	2
+	.global	_Z5foo_bv
+	.type	_

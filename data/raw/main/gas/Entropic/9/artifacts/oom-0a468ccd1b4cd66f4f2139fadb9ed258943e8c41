@@ -1,0 +1,8 @@
+#
+i_def_cfa_offset 3
+2	.cTfi_val_ofþÿÿÿfset 1,or SFg 0
+	.cfi_def_cfa_offset 32
+	.cTfi_val_ofþÿÿÿfset 1, 8
+	.cfi_val_offset 2, -32
+	.long`0
+	.cf'i_endproc

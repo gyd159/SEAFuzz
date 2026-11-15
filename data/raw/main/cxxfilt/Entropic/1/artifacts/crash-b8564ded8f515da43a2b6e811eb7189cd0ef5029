@@ -1,0 +1,898 @@
+# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Hash is exactly 16 hex chabE
+<alloc::raw_vec::RawVec<T>>::ptr
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h0f3228f343444ac8E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN53_$LT$$u5b$T$u5d$$u20$as$u20$core..slice..SliceExt$GT$10as_mut_ptr17h153241df1c7d1666E
+<[T] as core::slice::SliceExt>::as_mut_ptr
+#
+--format=rust
+_ZN11collections5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$10as_mut_ptr17hf12a6d0409938c96E
+collections::slice::<impl [T]>::as_mut_ptr
+#
+--format=rust
+_ZN4core3ptr5write17h651fe53ec860e780E
+core::ptr::write
+#
+--format=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17he06cb713aae5b465E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN71_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..ops..Drop$GT$4drop17hf7f23304ebe62eedE
+<collections::vec::IntoIter<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN86_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h04b3fbf148c39713E
+<collections::vec::IntoIter<T> as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN75_$LT$$RF$$u27$a$u20$mut$u20$I$u20$as$u20$core..iter..iterator..Iterator$GT$4next17ha050492063e0fd20E
+<&'a mut I as core::iter::iterator::Iterator>::next
+# Different hashes are OK, they are just stripped.
+--format=rust
+_ZN13drop_contents17hfe3c0a68c8ad1c74E
+drop_contents
+#
+--format=rust
+_ZN13drop_contents17h48cb59bef15bb555# This file holds test cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests
+#
+--format=dlang
+_Dmain
+D main
+#
+--format=dlang
+_D8demangleZ
+demangle
+#
+--format=dlang
+_D8demangle4testZ
+demangle.test
+#
+--format=dlang
+_D8demangle4testPFLAiYi
+demangle.test
+#
+--format=dlang
+_D8demangle4testFZv
+demangle.test()
+#
+--format=dlang
+_D8demangle4testMFZ2fnMFZv
+demangle.test().fn()
+#
+--format=dlang
+_D8demangle4testFaZv
+demangle.test(char)
+#
+--format=dlang
+_D8demangle4testFbZv
+demangle.test(bool)
+#
+--format=dlang
+_D8demangle4testFcZv
+demangle.test(creal)
+#
+--format=dlang
+_D8demangle4testFdZv
+demangle.test(double)
+#
+--format=dlang
+_D8demangle4testFeZv
+demangle.test(real)
+#
+--format=dlang
+_D8demangle4testFfZv
+demangle.test(float)
+#
+--format=dlang
+_D8demangle4testFgZv
+demangle.test(byte)
+#
+--format=dlang
+_D8demangle4testFhZv
+demangle.test(ubyte)
+#
+--format=dlang
+_D8demangle4testFiZv
+demangle.test(int)
+#
+--format=dlang
+_D8demangle4testFjZv
+demangle.test(ireal)
+#
+--format=dlang
+_D8demangle4testFkZv
+demangle.test(uint)
+#
+--format=dlang
+_D8demaest()
+#
+--format=dlang
+_D8demangle4testMFZ2fnMFZv
+demangle.test().fn()
+#
+--format=dlang
+_D8demangle4testFaZv
+demangle.test(char)
+#
+--format=dlang
+_D8demangle4testFbZv
+demangle.test(bool)
+#
+--format=dlang
+_D8demangle4testFcZv
+demangle.test(creal)
+#
+--format=dlang
+_D8demangle4testFdZv
+demangle.test(double)
+#
+--format=dlang
+_D8demangle4testFeZv
+demangle.test(real)
+#
+--format=dlang
+_D8demangle4testFfZv
+demangle.test(float)
+#
+--format=dlang
+_D8demangle4testFgZv
+demangle.test(byte)
+#
+--format=dlang
+_D8demangle4testFhZv
+demangle.test(ubyte)
+#
+--format=dlang
+_D8demangle4testFiZv
+demangle.test(int)
+#
+--format=dlang
+_D8demangle4testFjZv
+demangle.test(ireal)
+#
+--format=dlang
+_D8demangle4testFkZv
+demangle.test(uint)
+#
+--format=dlang
+_D8demangle4testFlZv
+demangle.test(long)
+#
+--format=dlang
+_D8demangle4testFmZv
+demangle.test(ulong)
+#
+--format=dlang
+_D8demangle4testFnZv
+demangle.test(typeof(null))
+#
+--format=dlang
+_D8demangle4testFNnZv
+demangle.test(typeof(*null))
+#
+--format=dlang
+_D8demangle4testFoZv
+demangle.test(ifloat)
+#
+--format=dlang
+_D8demangle4testFpZv
+demangle.test(idouble)
+#
+--format=dangl
+_D8demangle4testFqZv
+demangle.test(cfloat)
+#
+--format=dlang
+_D8demangle4testFrZv
+demangle.test(cdouble)
+#
+--format=dlang
+_D8demangle4testFsZv
+demangle.test(short)
+#
+--format=dlang
+_D8demangle4testFtZv
+demangle.test(ushort)
+#
+--format=dlang
+_D8demangle4testFuZv
+demangle.test(wchar)
+#
+--format=dlang
+_D8demangle4testFvZv
+demangle.test(void)
+#
+--format=dlang
+_D8demangle4testFwZv
+demangle.test(dchar)
+#
+--format=dlang
+_D8demangle4testFziZv
+demangle.test(cent)
+#
+--format=dlang
+_D8demangle4testFzkZv
+demangle.test(ucent)
+#
+--format=dlang
+_D8demangle4testFOaZv
+demangle.test(shared(char))
+#
+--format=dlang
+_D8demangle4testFxaZv
+demangle.test(const(char))
+#
+--format=dlang
+_D8demangle4testFyaZv
+demangle.test(immutable(char))
+#
+--format=dlang
+_D8demangle4testFNgaZv
+demangle.test(inout(char))
+#
+--format=dlang
+_D8demangle4testFOxaZv
+demangle.test(shared(const(char)))
+#
+--format=dlang
+_D8demangle4testFONgaZv
+demangle.test(shared(inout(char)))
+#
+--format=dlang
+_D8demangle4testFAaZv
+demangle.test(char[])
+#
+--format=dlang
+_D8demangle4testFAAaZv
+demangle.test(char[][])
+#
+--format=dlang
+_D8demangle4t 3, 4])
+#
+--format=dlang
+_D8demangle25__T4testVAdA2e08P1eN08P1Zv
+demangle.test!([0x0.8p1, -0x0.8p1])
+#
+--format=dlang
+_D8demangle23__T4testVHiiA2i1i2i3i4Zv
+demangle.test!([1:2, 3:4])
+#
+--format=dlang
+_D8demangle39__T4testVHAxaiA2a3_616263i1a3_646566i2Zv
+demangle.test!(["abc":1, "def":2])
+#
+--format=dlang
+_D8demangle28__T4testVS8demangle1SS2i1i2Zv
+demangle.test!(demangle.S(1, 2))
+#
+--format=dlang
+_D8demangle35__T4testVS8demangle1SS2i1a3_616263Zv
+demangle.test!(demangle.S(1, "abc"))
+#
+--format=dlang
+_D8demangle13__T4testTFZaZ6mangleFZv
+demangle.test!(char() function).mangle()
+#
+--format=dlang
+_D8demangle4testMxFZv
+demangle.test() const
+#
+--format=dlang
+_D8demangle4testMyFZv
+demangle.test() immutable
+#
+--format=dlang
+_D8demangle4testMNgFZv
+demangle.test() inout
+#
+--format=dlang
+_D8demangle4testMNgxFZv
+demangle.test() inout const
+#
+--format=dlang
+_D8demangle4testMOFZv
+demangle.test() shared
+#
+--format=dlang
+_D8demangle4testMOxFZv
+demangle.test() shared const
+#
+--format=dlang
+_D8demangle4testMONgFZv
+demangetle.st() shared inout
+#
+--format=dlang
+_D8demangle4testMONgxFZv
+demangle.test() shared inout const
+#
+--format=dlang
+_D8demangle4testFDxFZaZv
+demangle.test(char() delegate const)
+#
+--format=dlang
+_D8demangle4testFDyFZaZv
+demangle.test(char() delegate immutable)
+#
+--format=dlang
+_D8demangle4testFDNgFZaZv
+demangle.test(char() delegate inout)
+#
+--format=dlang
+_D8demangle4testFDNgxFZaZv
+demangle.test(char() delegate inout const)
+#
+--format=dlang
+_D8demangle4testFDOFZaZv
+demangle.test(char() delegate shared)
+#
+--format=dlang
+_D8demangle4testFDOxFZaZv
+demangle.test(char() delegate shared const)
+#
+--format=dlang
+_D8demangle4testFDONgFZaZv
+demangle.test(char() delegate shared inout)
+#
+--format=dlang
+_D8demangle4testFDONgxFZaZv
+demangle.test(char() delegate shared inout const)
+#
+--format=dlang
+_D8demangle004testFaZv
+demangle.test(char)
+#
+--format=dlang
+_D8demangle000000004testFaZv
+demangle.test(char)
+#
+--format=dlang
+_D8demangle__T3abcS_DQt10__lambda13FNaNbNiNfZiZQBhFZi
+demangle.abc!(demangle.__lambda13()).abc()
+#
+# Unittests
+#
+--format=dlang
+printf
+printf
+#
+--format=dlang
+_foo
+_foo
+#
+--format=dlang
+_D88
+_D88
+#
+--format=dlang
+_D5__T1aZv
+_D5__T1aZv
+#
+--format=dlang
+_D00
+_D00
+#
+--format=dlang
+_D01_D
+_D01_D
+#
+--format=dlang
+_D9223372036854775817
+_D9223372036854775817
+#
+--format=dlang
+_D1az
+_D1az
+#
+--format=dlang
+_D1aN
+_D1aN
+#
+--format=dlang
+_D1aF
+_D1aF
+#
+--format=dlang
+_D1aM
+_D1aM
+#
+--format=dlang
+_D1aFZNz
+_D1aFZNz
+#
+--format=dlang
+_D1aFNzZv
+_D1aFNzZv
+#
+--format=dlang
+_D4testFDX
+_D4testFDX
+#
+--format=dlang
+_D5__T0aZv
+_D5__T0aZv
+#
+--format=dlang
+_D10__T4testYZv
+_D10__T4testYZv
+#
+--format=dlang
+_D4testFBaZv
+_D4testFBaZv
+#
+--format=dlang
+_D8__T4test
+_D8__T4test
+#
+--format=dlang
+_D10__T4testVi
+_D10__T4testVi
+#
+--format=dlang
+_D10__T4testVai
+_D10__T4testVai
+#
+--format=dlang
+_D10__T4testVbi
+_D10__T4testVbi
+#
+--format=dlang
+_D11__T4testS1a
+_D11at=dlang
+_D8demangle4testMNgFZv
+demangle.test() inout
+#
+--format=dlang
+_D8demangle4testMNgxFZv
+demangle.test() inout const
+#
+--format=dlang
+_D8demangle4testMOFZv
+demangle.test() shared
+#
+--format=dlang
+_D8demangle4testMOxFZv
+demangle.test() shared const
+#
+/-format=dlang
+_D8demangle4testMONgFZv
+demangetle.st() shared inout
+#
+--format=dlang
+_D8demangle4testMONgxFZv
+demangle.test() shared inout const
+#
+--format=dlang
+_D8demangle4testFDxFZaZv
+demangle.test(char() delegate const)
+#
+--format=dlang
+_D8demangle4testFDyFZaZv
+demangle.test(char() delegate immutable)
+#
+--format=dlang
+_D8demangle4testFDNgFZaZv
+demangle.test(char() delegate inout)
+#
+--format=dlang
+_D8demangle4testFDNgxFZaZv
+demangle.test(char() delegate inout const)
+#
+--format=dlang
+_D8demangle4testFDOFZaZv
+demangle.test(char() delegate shared)
+#
+--format=dlang
+_D8demangle4testFDOxFZaZv
+demangle.test(char() delegate shared const)
+#
+--format=dlang
+_D8demangle4testFDONgFZaZv
+demangle.test(char() delegate shared inout)
+#
+--format=dlang
+_D8demangle4testFDONgxFZaZv
+demangle.test(char() delegate shared inout const)
+#
+--format=dlang
+_D8demangle004testFaZv
+demangle.test(char)
+#
+--format=dlang
+_D8demangle000000004testFaZv
+demangle.test(char)
+#
+--format=dlang
+_D8demangle__T3abcS_DQt10__lambda13FNaNbNiNfZiZQBhFZi
+demangle.abc!(demangle.__lambda13()).abc()
+#
+# Unittests
+#
+--format=dlang
+printf
+printf
+#
+--format=dlang
+_foo
+_foo
+#
+--format=dlang
+_D88
+_D88
+#
+--format=dlang
+_D5__T1aZv
+_D5__T1aZv
+#
+--format=dlang
+_D00
+_D00
+#
+--format=dlang
+_D01_D
+_D01_D
+#
+--format=dlang
+_D9223372036854775817
+_D9223372036854775817
+#
+--format=dlang
+_D1az
+_D1az
+#
+--format=dlang
+_D1aN
+_D1aN
+#
+--format=dlang
+_D1aF
+_D1aF
+#
+--format=dlang
+_D1aM
+_D1aM
+#
+--format=dlang
+_D1aFZNz
+_D1aFZNz
+#
+--format=dlang
+_D1aFNzZv
+_D1aFNzZv
+#
+--format=dlang
+_D4testFDX
+_D4testFDX
+#
+--format=dlang
+_D5__T0aZv
+_D5__T0aZv
+#
+--format=dlang
+_D10__T4testYZv
+_D10__T4testYZv
+#
+--format=dlang
+_D4testFBaZv
+_D4testFBaZv
+#
+--format=dlang
+_D8__T4test
+_D8__T4test
+#
+--format=dlang
+_D10__T4testVi
+_D10__T4testVi
+#
+--format=dlang
+_D10__T4testVai
+_D10__T4testVai
+#
+--format=dlang
+_D10__T4testVbi
+_D10__T4testVbi
+#
+--format=dlang
+_D11__T4testS1a
+_D11__T4testS1a
+#
+--format=dlang
+_D12__T4testViiZv
+_D12__T4testViiZv
+#
+--format=dlang
+_D12__T4testViYZv
+_D12__T4testViYZv
+#
+--format=dlang
+_D12__T4testVrcZv
+_D12__T4testVrcZv
+#
+--format=dlang
+_D13__T4testVdeYZv
+_D13__T4testVdeYZv
+#
+--format=dlang
+_D13__T4testViSiZv
+_D13__T4testViSiZv
+#
+--format=dlang
+_D14__T4testVAiAiZv
+_D14__T4testVAiAiZv
+#
+--format=dlang
+_D14__T4testS123aZv
+_D14__T4testS123aZv
+#
+--format=dlang
+_D15__T4testVHiiAiZv
+_D15__T4testVHiiAiZv
+#
+--format=dlang
+_D15__T4testVfe0p1Zv
+_D15__T4teE
+drop_contents
+#
+--format=rust
+_ZN4core3mem7size_of17h900b33157bf58f26E
+core::mem::size_of
+#
+--format=rust
+_ZN67_$LT$alloc..raw_vec..RawVec$LT$T$GT$$u20$as$u20$core..ops..Drop$GT$4drop17h96a5cf6e94807905E
+<alloc::raw_vec::RawVec<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN68_$LT$core..nonzero..NonZero$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17hc49056f882aa46dbE
+<core::nonzero::NonZero<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17h19f2ad4920655e85E
+<core::ptr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+WZN11issue_609253foo37Foo$LT$issue_60925..llv$u6d$..Foo$GT$3foo17h059a991a004536adE
+issue_60925::foo::Foo<issue_60925::llvm::Foo>::foo
+--format=rust
+_ZN4core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bd6E
+core::ops::function::FnOnce::call_once{{vtable.shim}}
+#
+############
+#
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_სადილი
+# Closure path elements.
+--format=rust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=rust
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB1_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDIstVfe0p1Zv
+#
+--format=dlang
+_D15__T4testVAyaa1_
+_D15__T4testVAyaa1_
+#
+--format=dlang
+_D16__T4testVAyaa0aZv
+_D16__T4testVAyaa0aZv
+#
+--format=dlang
+_D18__T4testVAyaa1_0GZv
+_D18__T4testVAyaa1_0GZv
+#
+--format=dlang
+_D18__T4testVAyaa1_YYZv
+_D18__T4testVAyaa1_YYZv
+#
+--format=dlang
+_D4test3fooAa
+test.foo
+#
+--format=dlang
+_D8demangle8demangleFAaZAa
+demangle.demangle(char[])
+#
+--format=dlang
+_D6object6Object8opEqualsFC6ObjectZi
+object.Object.opEquals(Object)
+#
+--format=dlang
+_D6object6Object8opAssignFC6ObjectZi
+object.Object.opAssign(Object)
+#
+--format=dlang
+_D4test2dgDFiYd
+test.dg
+#
+--format=dlang
+_D1a1bi
+a.b
+#
+--format=dlang
+_D1a1bPFiZi
+a.b
+#
+--format=dlang
+_D4test34__T3barVG3uw3_616263VG3wd3_646566Z1xi
+test.bar!("abc"w, "def"d).x
+#
+--format=dlang
+_D4test21__T3funVwi4294967295Z3funFNaNbNiNfZv
+test.fun!('\Uffffffff').fun()
+#
+--format=dlang
+_D4test21__T3funVwi4294967296Z3funFNaNbNiNfZv
+_D4test21__T3funVwi4294967296Z3funFNaNbNiNfZv
+#
+--format=dlang
+_D6plugin8generateFiiZAya
+plugin.generate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAxa
+plugin.generate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAOa
+plugin.generate(int, int)
+#
+--format=dlang
+_D8demangle3fnAFZ3fnBMFZv
+demangle.fnA().fnB()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnCMFZv
+demangle.main().S.fnC()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnDMFZv
+demangle.main().S.fnD()
+#
+--format=dlang
+_D8demangle4mainFZ5localMFZi
+demangle.main().local()
+#
+--format=dlang
+_D3std5ascii9uppercaseyAa
+std.ascii.uppercase
+#
+--format=dlang
+_D3std6stream9BOMEn       3std6system6Endian
+std.stream.BOMEndian
+#
+--format=dlang
+_D3std8internal7uni_tab10unicodeNkoyS3std8internal3uni12CodepointSet
+std.internal.uni_tab.unicodeNko
+#
+--format=dlang
+_D2gc2gc2GC6addrOfMFPvZPv
+gc.gc.GC.addrOf(void*)
+#
+--format=dlang
+_D3std7process10setCLOEXECFibZv
+std.process.setCLOEXEC(int, bool)
+#
+--format=dlang
+_D3std6digest2md3MD53putMFNaNbNeMAxhXv
+std.digest.md.MD5.put(scope const(ubyte)[]...)
+#
+--format=dlang
+_D3std6mmfile6MmFile13opIndexAssignMFhmZh
+std.mmfile.MmFile.opIndexAssign(ubyte, ulong)
+#
+--format=dlang
+_D3std7process18escapeShellCommandFxAAaXAya
+std.process.escapeShellCommand(const(char[][])...)
+#
+--format=dlang
+_D4core4sync5mutex5Mutex6__ctorMFC6ObjectZC4core4sync5mutex5Mutex
+core.sync.mutex.Mutex.this(Object)
+#
+--format=dlang
+_D6object14TypeInfo_Array8argTypesMFNbNfJC8TypeInfoJC8TypeInfoZi
+object.TypeInfo_Array.argTypes(out TypeInfo, out TypeInfo)
+#
+--format=dlang
+_D2rt6dmain211_d_run_mainUiPPaPUAAaZiZ7tryExecMFMDFZvZv
+rt.dmain2._d_run_main(int, char**, extern(C) int(char[][]) function).tryExec(scope void() delegate)
+#
+--format=dlang
+_D6object9Exception6__ctorMFNaNbNfAyaAyamC6object9ThrowableZC9Exception
+object.Exception.this(immutable(char)[], immutable(char)[], ulong, object.Throwable)
+#
+--format=dlang
+_D3gcc3deh17parse_lsda_headerFPS3gcc6unwinde14__T2fnVeeNINFZ2fnFZv
+demangle.fn!(-Inf).fn()
+#
+--format=dlang
+_D8demangle13__T2fnVeeINFZ2fnFZv
+demangle.fn!(Inf).fn()
+#
+--format=dlang
+_D8demangle21__T2fnVHiiA2i1i2i3i4Z2fnFZv
+demangle.fn!([1:2, 3:4]).fn()
+#
+--format=dlang
+_D8demangle2fnFNgiZNgi
+demangle.fn(inout(int))
+#
+--format=dlang
+_D8demangle29__T2fnVa97Va9Va0Vu257Vw65537Z2fnFZv
+demangleNbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=rust
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--f.fn!('a', '\x09', '\x00', '\u0101', '\U00010001').fn()
+#
+--format=dlang
+_D8demangle32__T2fnTS3symVS3valS1a4_6e756c6cZ3fun13__T8positionZ13__T8confusesZ8demangleFDFxaZvZvorm
+demangat=rlu

@@ -1,0 +1,42 @@
+    þÿÿÿ.cfiush   ret
+        s. rname
+	.cfi_startproc
+    .   p, 80]
+	stp	d	.cftsie_ff o39,ÿÿÿ.cfiush   ret
+        s. rname
+	.cfi_startproc
+    .   p, 80]
+	stp	d	.cftsie_ff o39,q    %r14
+        popq   r %1ksino.text	.long@GOTOFF93649---t
+        s. rname
+	.cfi_tp	d	.cftsie_ff o39,q    %r14
+        p™™™™™™™™™™™™™™™™™™’™™™™™™™™™™™™™™™™™™™™™™™™opq   r %1ksino.text	.long@GOTOFF93649---------------ndproc
+q    %r14
+        popq   r %1ksino.text	.long@GOTOFF93649------------ush   ret
+        s. rname
+	.cfi_startproc
+    .   p, 80]
+	stp	d	.cftsi------------ndproc
+q    %r14
+        popq   r %1ksino.text	.long@GOTOFF93649-startproc
+    .   p, 80]
+	stp®®®®®®®®®®®	d	.cftsie_ff o39,ÿÿÿ.cfiush   ret
+        s. rname
+	.cfi_startproc
+    .   p, 80]
+	stp	d	.cftsie_ff o39,q    %r14
+        popq   r %1ksino.text	.long@GOTOFF93649---------------ndproc
+q    %r14
+        popq   r %1ksino.text	.long@GOTOFF93649------------ush   ret
+        s. rname
+	.cfi_startproc
+    .   p, 80]
+	stp	d	.cftsi------------ndproc
+q    %r14
+        popq   r %1ksino.text	.long@GOTOFF93649------------ush   ret
+        s. rname
+	.cfi_startproc
+    .   p, 80]
+	stp	d	.cftsie_ff o39,q    %r14
+        popq   r %1ksino.text	.long@GOTOFF93649-t
+        s. rndpdb---ndpdb1

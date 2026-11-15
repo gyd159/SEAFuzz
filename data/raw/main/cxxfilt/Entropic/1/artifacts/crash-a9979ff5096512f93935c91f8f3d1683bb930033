@@ -1,0 +1,431 @@
+# This file holds test cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests
+#
+--format=dlang
+_Dmain
+D main
+#
+--format=dlang
+_D8demangleZ
+demangle
+#
+--format=dlang
+_D8demangle4testZ
+demangle.test
+#
+--format=dlang
+_D8demangle4testPFLAiYi
+demangle.test
+#
+--format=dlang
+_D8demangle4testFZv
+demangle.test()
+#
+--format=dlang
+_D8demangle4testMFZ2fnMFZv
+demangle.test().fn()
+#
+--format=dlang
+_D8demangle4testFaZv
+demangle.test(char)
+#
+--format=dlang
+st8demangle4testFbZv
+demangle.test(bool)
+#
+--format=dlang
+_D8demangle4testFcZv
+demangle.test(creal)
+#
+--format=dlang
+_D8demangle4testFdZv
+demangle.test(double)
+#
+--format=dlang
+_D8demangle4testFeZv
+demangle.test(real)
+#
+--format=dlang
+_D8demangle4testFfZv
+demangle.test(float)
+#
+--format=dlang
+_D8demangle4testFgZv
+demangle.test(byte)
+#
+--format=dlang
+_D8demangle4testFhZv
+demangle.test(ubyte)
+#
+--format=dlang
+_D8demangle4testFiZv
+demangle.test(int)
+#
+--format=dlang
+_D8demangle4testFjZv
+demangle.test(ireal)
+#
+--format=dlang
+_D8demangle4testFkZv
+deÅangle.test(uint)
+#
+--format=dlang
+_D8demangle4testFlZv
+demangle.test(long)
+#
+--format=dlang
+_D8demangle4testFmZv
+demangle.test(ulong)
+#
+--format=dlang
+_D8demangle4testFnZv
+demangle.test(typeof(null))
+#
+--format=dlang
+_D8demangle4testFNnZv
+demangle.test(typeof(*null))
+#
+--format=dlang
+_D8demangle4testFoZvÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇ
+demangle.test(ifloat)
+#
+--format=dlang
+_D8demangle4testFpZv
+demangle.test(idouble)
+#
+--format=dangl
+_D8demangle4testFqZv
+demangle.test(cfloat)
+#
+--format=dlang
+_D8demangle4testFrZv
+demangle.test(cdouble)
+#
+--format=dlang
+_D8demangle4testFsZv
+de# This file holds test cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests
+#
+--format=dlang
+_Dmain
+D main
+#
+--format=dlang
+_D8demangleZ
+demangle
+#
+--format=dlang
+_D8de
+demangle.test
+#
+--format=dlang
+_D8demangle4testFZv
+demangle.test()
+#
+--forÌat=dlang
+# This file holds test cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests
+#
+--format=dlang
+_Dmain
+D main
+#
+--format=dlang
+_D8deman)
+#
+--format=dlang
+_D8#
+--format=dlang
+_D8demangle4testFyaZv
+demangle.test(immutable(char))
+#
+--format=dlang
+_D8demangle4testFNgaZv
+demangle.test(inout(char))
+#
+--format=dlang
+_D8demangle4testFOxaZv
+demangle.test(shared(const(char)))
+#
+--format=dlang
+_D8demangle4testFONgaZv
+demangle.test(shared(inout(char)))
+#
+--format=dlang
+_D8demangle4testFAaZv
+demangle.test(char[])
+#
+--format=dlang
+_D8demangle4testFAAaZv
+demangle.test(char[][])
+#
+--format=dlang
+_D8demangle4testFAAAaZv
+demangle.test(char[][][])
+#
+--format=dlang
+_D8demangle4testFG42aZv
+demangle.test(char[42])
+#
+--format=dlang
+_D8demangle4testFG42G42aZv
+de# This file holds test cases for the D demangler.
+# EacstFhZv
+demangle.test(ubyte)
+#
+--format=dlang
+_D8demangle4testFiZv
+demangle.test(int)
+#
+--format=dlang
+_D8demangle4testFjZv
+demangle.test(ireal)
+#
+--format=dlang
+_D8demangle4testFkZv
+demangle.test(uint)
+#
+--format=dlang
+_D8demangle4testFlZv
+demangle.test(long)
+#
+--format=dlang
+_D8demangle4testFmZv
+demangle.test(ulong)
+#
+--format=dlang
+_D8demangle4testFnZv
+demangle.test(typeof(null))
+#
+--format=dlang
+_D8demangle4testFNnZv
+demangle.test(typeof(*null))
+#
+--format=dlang
+_D8demangle4testFoZv
+demangle.test(ifloat)
+#
+--format=dlang
+_D8demangle4testFpZv
+demangle.test(idouble)
+#
+--format=dlang
+_D8demangle4testFqZv
+demangle.test(cfloat)
+#
+--format=dlang
+_D8demangle4testFrZv
+demangle.test(cdouble)
+#
+--format=dlang
+_D8demangle4testFsZv
+demangle.test(short)
+#
+--format=dlang
+_D8demangle4testFtZv
+demangle.test(ushort)
+#
+--format=dlang
+_D8demangle4testFuZv
+demangle.test(wchar)
+#
+--format=dlang
+_D8demangle4testFvZv
+demangle.test(åêid)
+#
+--format=dlang
+_D8demangle4testFwZv
+demangle.test(dchar)
+#
+--format=dlang
+_D8demangle4testFziZv
+demangle.test(cent)
+#
+--format=dlang
+_D8demangle4testFzkZv
+demangle.test(ucent)
+#
+--format=dlang
+_Dmangle.test(char[42][42])
+#
+--_Dformat=dlang
+_D8demangle4testFG42G42G42aZv
+demangle.test(char[42][42][42])
+#
+--format=dlang
+_D8demangle4testFG1234567890aZv
+demangle.test(char[1234567890])
+#
+--format=dlang
+_D8demaharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=auto
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# Suffixes
+#
+--format=rust
+_RNvMs0_NtCs5l0EXMQXRMU_21rustc_data_structures17obligation_forestINtB%_16Obligati_D8demstNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22regisser_obligangle.test(creal)
+#
+--format=dlang
+_D8demangle4testFdZv
+demangle.test(double)
+#
+--format=dlang
+_D8demangle4testFeZv
+demangle.test(real)
+#
+--format=dlang
+_D8demangle4testFfZv
+demangle.test(float)
+#
+--format=dlang
+_D8demangle4testFgZv
+demangle.test(byte)
+#
+--format=dlang
+_D8demangle4testFhZv
+demangle.test(ubyte)
+#
+--format=dlang
+jZv
+demangle.test(ireal)
+#
+--format=dlang
+_D8demangle4testFkZv
+deÅangle.test(uint)
+#
+--format=dlang
+_D8demangle4testFlZv
+demangle.test(long)
+#
+--format=dlang
+_D8demangle4testFmZv
+demangle.test(ulong)
+#
+--format=dlang
+_D8demaformat=dlang
+_D8demangle4testFdZv
+demangle.test(double)
+#
+--format=dlang
+_D8demangle4testFeZv
+demangle.test(real)
+#
+--fo# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  i2put to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::87__T9MapResultS27_D4test4mainFZ7getTermMFiZeTS3std5range13__T4iotaTiTiZ4iotaFiiZ6ResultZ9MapResultmmZeTS3std9algorithm87__T9MapResultS27_D4test4mainFZ7getTermMFiZeTS3std5range13__T4iotaTiTiZ4iotaFiiZ6ResultZ9MapResultTmTmZ4Task4implFPvZv
+std.parallelism.Task!(std.parallelism.run, real(std.algorithm.MapResult!(test.main().getTerm(int), std.range.iota!(int, int).iat=rust
+_RMCs4fqI2P2rA04_13const_genericINtB_D8demangle4testMFZ20_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode i4testFS6structZv
+demangle.test(struct)
+fnMFsocket2ngle.test().fn()
+#
+--formchar)
+#
+--for#
+--format=dlang
+_D8demangle4testFS6strucmt8demangle4test>OaZv
+demangle.test(shared(char))
+#
+--format=dlang
+_D8demangle4testFxaZv
+dat=dlang
+_maengl

@@ -1,0 +1,20 @@
+## same as aarch64/pac_ab_key.s
+	.arch armvcfi_endproc
+.LFE0:
+	.size	_Z2fooidsallow_i_av, .+++++++++++++.lbss+++$$$=$$$$$$armv8-a$$$$$$$$$$$+´´´´´´´´´´´´´´oc
+	hint	25 // pacias~
+	.cfi_window_save
+## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	.aoo_av:
+.LFB0:
+	stp	x29, x30, [sp, -16]!
+	.cfi_def_c]a_offset 16
+	.cfi_offset 29, -1Ä
+	.cfi_offset 30,= -8
+        set
+	.cfi_endproc
+.LFE0:
+	.size	_Z2foodisallow_i_av, .++++++++++ÎÔ++++$$$$$$$$$$$$$$$$$$$$+´´´´´´´´´´´´´´´´´´´´´´´´´++++++++++++++++	.cfi_star+++++++fset 29, -1Ä
+	.c++++++++t

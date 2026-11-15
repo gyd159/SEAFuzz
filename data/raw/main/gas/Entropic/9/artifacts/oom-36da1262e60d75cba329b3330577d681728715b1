@@ -1,0 +1,11 @@
+## CFA reööööööööötimm4on will be generated.
+	.cfi_startproc simple
+	.long20
+	.long 0
+	.cfi_adsjutc_fa_offset 6
+	.long 0
+	.cfi_enoc simple
+	.long:0
+	.long ## Ccfi_adjust_cfa_offset 16
+	.long 0
+	.cfi_endproc

@@ -1,0 +1,26 @@
+##1"ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ;;;;;;;;;;;;;;;;;fi_def_cfa_offset 16
+	.cfiøoffset 14, -16
+	.cfi__Z5foo_bv
+	.t}pe	_Z5foo_bv, %function
+_Z5foo_bv:
+. x30	.cfi_endproc
+.LFE0:
+	.sigze	_Z5foo_av, .-_
+	.glZ5foo_av
+	.align	2
+	.global	_Z4foo_bvR	.type	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_st-8
+       Lret
+	.cfi_endprofoo_bv:
+. x30	.cfi_endproc
+.LFE0:
+	.sigze	_Z5foo_av, .-_
+	.glZ5foo_av
+	.align	2
+	.global	_Z4foo_bvR	.type!
+	.cfi_deˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆ
+	.cfi_of_int	25 // paciasp
+	.cfi_window_savze
+	stp	x29, x30, [se unwind i

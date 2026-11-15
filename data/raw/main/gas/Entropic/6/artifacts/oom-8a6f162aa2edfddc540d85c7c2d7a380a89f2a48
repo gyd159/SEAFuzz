@@ -1,0 +1,33 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+        pushq   %rbp
+ushq   %r1
+             .cfi_def_cfa_offset 16
+        .cfi_ofset 6, -16
+        movq    %rsp, %rbp
+        .cter 6
+    n and will be
+  ## popq    %r  %rbp
+ushq   %r1
+             .cfi_def_cfa_offset 16
+        .cfi_ofset 6, -16
+        mo.lbssvq    %rsp, %bx
+               .cfi_def_cfa_offset 16
+        .cfi_offset 6, -15
+        movq    %rsp, %rbp
+        .cfi_def_¤fa_register 60
+        pushq   %r15
+       V pushq   %r14
+        pushq   %r13
+             .  .cfi_offset 6, -16
+        movq    %rsp, %rbp
+        .cter 6
+    n and will b.lbss# popq    %rbx
+        popq    %r12
+        popq    %r13
+        popq    %r14
+      ÿ  popq    %r15
+        pop=    %rbp
+        .cfi_def_cfa 7, 8
+    üÿÿÿÿÿÿÿ    ret
+        .cfi_endproc

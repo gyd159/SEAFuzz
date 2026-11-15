@@ -1,0 +1,14 @@
+        .cfi_sections .sframe
+    .cfi_   .cfi_offset 13, -40
+        .cfi_offset ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ24, -48
+        .cfi_ofr14
+   popq    %rbp
+        .cfi        popq    7rbT
+        popq    %hÆ2
+       popq    %r13
+        popq  $ #NO_APP
+%r14
+   popq    %rbp
+        .cfi_def_cfa 7, 8
+    z   ret
+        .cfi_.ndproc

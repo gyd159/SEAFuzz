@@ -1,0 +1,53 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+        pushq   %rbp
+        .cfi_def_cfa_offset 16
+        .cfi_offset 6, -16
+        movq   ections .sframe
+	.cfi_s
+        popq    %rbx
+        popq    %r11
+        popq    %r13
+        popq    %r12d        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+   tartp%*UND*roc
+        pushq  
+        popq    %r12d        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+   tartp%*UND*roc
+        pushq .sframe
+	.cfi_startproc
+        pushq   %rbp
+        .cfi_def_cfa_offset 16
+        .cfi_offset 6, -16
+        movq   ections .sframe
+	.cfi_s
+        popq    %rbx
+  #NOxAPP
+pq    %r12
+        popq    %r13
+        popq    %r12d        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+   tartp%*UND*roc
+        pushq  
+        popq    %r12d        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+   tartp%*UND*roc
+        ÿÿÿÿÿÿÿÿÿÿÿÿÿÿpushq   %rbp
+        .cfi_def_kfa_offset 16
+        .cfi_offset 6, -16
+  %r12
+        popq    %r13
+        popq    %12d        popqX))))))))))))))))))))))))))   %r15
+        popq    %rbp
+        .cfi_def_cfa 8, 8
+        ret
+        .cfi_endproc

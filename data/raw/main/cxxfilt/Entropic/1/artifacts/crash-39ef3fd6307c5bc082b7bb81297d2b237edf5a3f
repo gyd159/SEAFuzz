@@ -1,0 +1,483 @@
+# Th_D1aMle holds test cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Cover¤˜šß«šŒ‹s
+#
+--format=dlang
+_Dmain
+D main
+#
+--format=dlang
+_D8demangleZ
+demangle
+#
+--format=dlang
+_D8demangle4testZ
+demangle.test
+#
+--format=dlang
+_D8demangle4testPFLAiYi
+demangle.test
+#
+--format=dlang
+_D8demangle4testFZv
+demangle.test()
+#
+--format=dlang
+_D8demangle4testMFZ2fnMFZv
+demangle.test().fn()
+#
+--format=dlang
+_D8demangle4testFaZv
+demangle.test(char)
+#
+--format=dlang
+_D8demangle4testFbZv
+demangle.test(bool)
+#
+--format=dlang
+_GLOBAL__D8demangle4testFcZv
+demangle.test(creal)
+#
+--format=dlang
+_D8demangle4testFdZv
+demangle.test(double)
+#
+--format=dlang
+_D8demangle4testFeZv
+demangle.test(real)
+#
+--format=dlang
+_D8demangle4testFfZv
+demangle.test(flN0C4CCCCCCCCCCCCCDP4c0B666666666666666P6Zv
+demangle.test!(-0x0.C4CCCCCCCCCCCCCDp4+0x0.B666666666666666p6i)
+#
+--format=dlang
+_D8demangle91__T4testVde000111222333444555666777888999AAABBBCCCDDDEEEFFFP000111222333444555666777888999Zv
+demangle.test!(0x0.00111222333444555666777888999AAABBBCCCDDDEEEFFFp000111222333444555666777888999)
+#
+--format=dlang
+_D8demangle22__T4testVG3ua3_616263Zv
+demangle.test!("abc")
+#
+--format=dlang
+_D6demangle22__T4testVG3ud3_616263Zv
+demangle.test!("abc"d)
+#
+--format=dlang
+_D8demangle22__T4testVG3uw3_616263Zv
+demangle.test!("abc"w)
+#
+--form¨t=dlang
+_D8demangle16__T4testVAyaa0_Zv
+demangle.test!("")
+#
+--format=dlang
+_D8demangle32__T4testVAyaa8_20090a0d0c0b00ffZv
+demangle.test!(" \t\n\r\f\v\x00\xff")
+#
+--format=dlang
+_D8demangle22__T4testVAiA4i1i2i3i4Zv
+demangle.test!([1, 2, 3, 4])
+#
+--format=dlang
+_D8demangle25__T4testVAdA2e08P1eN08P1Zv
+demangle.test!([0x0.8p1, -0x0.8p1])
+#
+--format=dlang
+_D8demangle23__T4testVHiiA2i1i2i3i4Zv
+demangle.test!([1:2, 3:RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs3fqI2P2rA04_13const_genericINtB_GLOBAL_0_6SignedKs98_E
+<conangle1SS2i1i2Zv
+demangle.test!(demangle.S(1, 2))
+#
+--format=dlang
+_D8demangle35__T4testVS8demangle1SS2i1a3_616263Zv
+demangle.test!(demangle.S(1, "abc"))
+#
+--format=dlang
+_D8demangle13__T4testTFZaZ6mangleFZv
+demangle.test!(char() function).mangle()
+#
+--format=dlang
+_D8demangle4testMxFZv
+demangle.test() const
+#
+--format=dlang
+_D8demangle4testMyFZv
+demangle.test() immutable
+#
+--format=dlang
+_D8demangle4testMNgFZv
+demangle.test() inout
+#
+--format=dlang
+_D8demangle4testMNgxFZv
+demangle.test() inout const
+#
+--format=dlang
+_D8demangle4testMOFZv
+demangle.test() shared
+#
+--format=dlang
+_D8demangle4testMOxFZv
+demangle.test() shared const
+#
+--fOrmat=dlang
+_D8demangle4testMformat=dlang
+_D3std6getopt__TQkTAyaTDFNaNbNiNfQoZvTQtTDQsZQBnFNfKAQBiQBlQBkQBrQyZSQCpQCo12GetoptResult
+std.getopt.getopt!(immutabl+) char() function)
+#
+--format=dlang
+_D8demangle4testFPYZaZv
+demangle.test(extern(Objective-C) char() function)
+#
+--format=dlang
+_D8dema*gle4testFDFNaZaZv
+demangle.test(char() pure delegate)
+#
+--format=dlang
+_D8demangle4testFDFNbZaZv
+demangle.test(char() nothrow delegate)
+#
+--format=dlang
+_D8demangle4testFDFNcZaZv
+demangle.test(char() ref delegate)
+#
+--format=dlang
+_D8demangle4testFDFNdZaZv
+demangle.test(char() @property delegate)
+#
+--format=dlang
+_D8demangle4testFDFNeZaZv
+demangle.test(char() @trusted delegate)
+#
+--format=dlang
+_D8demangle4testFDFNfZaZv
+demangle.test(char() @safe delegate)
+#
+--format=dlang
+_D8demangle4testFDFNiZaZv
+demangle.test(char() @nogc delegate)
+#
+--format=dlang
+_D8demangle4testFDFNmZaZv
+demangle.test(char() @live delegate)
+#
+--format=dlang
+_D8demangle4testFDFNaNbZaZv
+demangle.test(char() pure nothrow delegate)
+#
+--format=dlang
+_D9demangle4testFDFNbNaZaZv
+demangle.test(char() nothrow pure delegate)
+#
+--format=dlang
+_D8demangle4testFDFNdNfNaZaZv
+demangle.test(char() @property @safe pure delegate)
+#
+--format=dlang
+_D8demangle4testFNjDFZaZv
+demangle.test(char() delegate)
+#
+--format=dlang
+_D8demangle4testFNkDFZaZv
+demangle.test(return char() delegate)
+#
+--format=dlang
+_D8demangle4testFDFNjZaZv
+demangle.test(char() return delegate)
+#
+--format=dlang
+_D8demangle4testFNjNkDFNjZaZv
+demangle.test(return char() return delegate)
+#
+--format=dlang
+_D6demangle4testFNlDFZaZv
+demangle.test(char() delegate)
+#
+--format=dlang
+_D8demangle4testFMDFZaZv
+demangle.test(scope char() delegate)
+#
+--format=dlang
+_D8demangle4testFDFNlZaZv
+demangle.test(char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFMDFNlZaZv
+demangle.test(scope char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFNlMDFNlZaZv
+demangle.test(scope char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFPFNaZaZv
+demangle.test(char() pure function)
+#
+--format=dlang
+_D8demangle4testFPFNbZaZv
+demangle.test(char() nothrow function)
+#
+--for# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Hash is exactly 16 hex chars. Not more.
+--format=auto
+_ZN4main4main18h1e714a2e23ed7db23E$4next17h04b3fbf148c39713E
+<collections::vec::IntoIter<T> as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN75_$LT$$RF$$u27$a$u20$mut$u20$I$u20$as$u20$core..iter..iterator..Iterator$GT$4next17ha050492063e0fd20E
+<&'a mut I as core::iter::iterator::Iterator>::next
+# Different hashes are OK, they are just stripped.
+--format=rust
+_ZN13drop_contents17hfe3c0a68c8ad1c74E
+drop_contents
+#
+--format=rust
+_ZN13drop_contents17h48cb59bef15bb555E
+drop_contents
+#
+--format=rust
+_ZN4core3mem7size_of17h900b33157bf58f26E
+core::mem::size_of
+#
+--format=rust
+_ZN67_$LT$alloc..raw_vec..RawVec$LT$T$GT$$u20$as$u20$core..ops..Drop$GT$4drop17h96a5cf6e94807905E
+<alloc::raw_vec::RawVec<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN68_$LT$core..nonzero..NonZero$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17hc49056f882aa46dbE
+<core::nonzero::NonZero<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17h19f2ad4920655e85E
+<core::ptr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN11issue_609253foo37Foo$LT$issue_60925..llv$u6d$..Foo$GT$3foo17h059a991a004536adE
+issue_60925::foo::Foo<issue_60925::llvm::Foo>::foo
+--format=rust
+_ZN4core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bd6E
+core::ops::function::FnOnce::call_once{{vtable.shim}}
+#
+############
+#
+# Cover.iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17he06cb713aae5b465E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN71_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..ops..Drop$GT$4drop17hf7f23304ebe62eedE
+<collections::vec::IntoIter<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN86_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h04b3fbf148c39713E
+<collections::vec::IntoIter<T> as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN75_$LT$$RF$$u27$a$u20$mut$u20$I$u20$as$u20$core..iter..iterator..Iterator$GT$4next17ha050492063e0fd20E
+<&'a mut I as core::iter::iterator::Iterator>::next
+# Different hashes are OK, they are just stripped.
+--format=rust
+_ZN13drop_contents17hfe3c0a68c8ad1c74E
+drop_contents
+#
+--format=rust
+_ZN13drop_contents17h48cb59bef15bb555E
+drop_contents
+#
+--format=rust
+_ZN4core3mem7size_of17h900b33157bf58f26E
+core::mem::size_of
+#
+--format=rust
+_ZN67_$LT$alloc..raw_vec..RawVec$LT$T$GT$$u20$as$u20$core..ops..Drop$GT$4drop17h96a5cf6e94807905E
+<alloc::raw_vec::RawVec<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN68_$LT$core..nonzero..NonZero$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17hc49056f882aa46dbE
+<core::nonzero::NonZero<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17h19f2ad4920655e85E
+<core::ptr::Ust!(0x0.FFFFFFp1%8)
+#
+--format=dlang
+_D8demangle32__T4testVde0FFFFFFFFFFFFF8P1024Zv
+demangle.test!(0x0.FFFFFFFFFFFFF8p1024)
+#
+--format=dlang
+_D8demangle19__T4testVfe08PN125Zv
+demangle.test!(0x0.8p-125)
+#
+--format=dlang
+_D8demangle20__T4testVde08PN1021Zv
+demangle.test!(0x0.8p-1021)
+#
+--format=dlang
+_D8demangle51__T4testVrc0C4CCCCCCCCCCCCCDP4c0B666666666666666P6Zv
+demangle.test!(0x0.C4CCCCCCCCCCCCCDp4+0x0.B666666666666666p6i)
+#
+--format=dlang
+_D8demangle52__T4testVrcN0C4CCCCCCCCCCCCCDP4c0B666666666666666P6Zv
+demangle.test!(-0x0.C4CCCCCCCCCCCCCDp4+0x0.B666666666666666p6i)
+#
+--format=dlang
+_D8demangle91__T4testVde000111222333444555666777888999AAABBBCCCDDDEEEFFFP000111222333444555666777888999Zv
+demangle.test!(0x0.0011122233344JvZm
+std.algorithm.iteration.FilterResult!(std.typecons.Tuple!(int, "a", int, "b", int, "c").Tuple.rename!([0:"c", 2:"a"]).rename().__lambda1, int[]).FilterResult.__xtoHash(ref const(std.algorithm.iteration.FilterResult!(std.typecons.Tuple!(int, "a", int, "b", int,8demangle31__T4testVde0F6E978D4FDF3B646P7Zv
+demangle.test!(0x0.F6E978D4FDF3B646p7)
+#
+--format=dlang
+_D8demangle15__T4testVdeNANZv
+demangle.test!(NaN)
+#
+--format=dlang
+_D8demangle15__T4testVdeINFZv
+demangle.test!(Inf)
+#
+--format=dlang
+_D8demangle16__T4testVdeN08PZv
+demangle.test!(-Inf)
+#
+--format=dlang
+_D8demangle23__T4testVfe0FFFFFFP128Zv
+demangle.test!(0x0.FFFFFFp128)
+#
+--format=dlang
+_D8demangle32__T4testVde0FFFFFFFFFFFFF8P1024Zv
+demangle.test!(0x0.FFFFFFFFFFFFF8p1024)
+#
+--format=dlang
+_D8demangle19__T4testVfe08PN125Zv
+demangle.test!(0x0.8p-125)
+#
+--format=dlang
+_D8demangle20__T4testVde08PN1021Zv
+demangle.test!(0x0.8p-1021)
+#
+--format=dlang
+_D8demangle51__T4testVrc0C4CCCCCCCCCCCCCDP4c0B666666666666666P6Zv
+demangle.test!(0x0.C4CCCCCCCCCCCCCDp4+0x0.B666666666666666p6i)
+#
+--format=dlang
+_D8demangle52__T4testVrcN0C4CCCCCCCCCCCCCDP4c0B666666666666666P6Zv
+demangle.test!(-0x0.tVrc0C4CCCCCCCCCCCCCDP4c0B666666666666666P6Zv
+demangle.test!(0x0.C4CCCCCCCCCCCCCDp4+0x0.B666666666666666p6i)
+#
+--format=dlang
+_D8demangle52__T4testVrcN0C4CCCCCCCCCCCCCDP4c0B666666666666666P6Zv
+demangle.test!(-0x0.C4CCCCCCCCCCCCCDp4+0x0.B666666666666666p6i)
+#
+--format=dlang
+_D8demangle91__T4testVde000111222333444555666777888999AAABBBCCCDDDEEEFFFP000111222333444555666777888999Zv
+demangle.test!(0x0.0011122233344JvZm
+std.algorithm.iteration.FilterResult!(std.typecons.Tuple!(int, "a", int, "b", int, "c").Tuple.rename!([0:"c", 2:"a"]).rename().__lambda1, int[]).FilterResult.__xtoHash(ref const(std.algorithm.iteration.FilterResult!(std.typecons.Tuple!(int, "a", int, "b", int,8demangle31__T4testVde0F6E978D4FDF3B646P7Zv
+demangle.test!(0x0.F6E978D4FDF3B646p7)
+#
+--format=dlang
+_D8demangle15__T4testVdeNANZv
+demangle.test!(NaN)
+#
+--format=dlang
+_D8demangle15__T4testVdeINFZv
+demangle.test!(Inf)
+#
+--format=dlang
+_D8demangle16__T4testVdeN08PZv
+demangle.test!(-Inf)
+#
+--format=dlang
+_D8demangle23__T4testVfe0FFFFFFP128Zv
+demangle.test!(0x0.FFFFFFp128)
+#
+--format=dlang
+_D8demangle32__T4testVde0FFFFFFFFFFFFF8P1024Zv
+demangle.test!(0x0.FFFFFFFFFFFFF8p1024)
+#
+--format=dlang
+_D8demangle19__T4testVfe08PN125Zv
+demangle.test!(0x0.8p-125)
+#
+--format=dlang
+_D8demangle20__T4testVde08PN1021Zv
+demangle.test!(0x0.8p-1021)
+#
+--format=dlang
+mat=dlang
+_D8demangle4testMxFZv
+demangle.test() const
+#
+--format=dlang
+_D8demangle4testMyFZv
+demangle.test() immutable
+#
+--format=dlang
+_D8demangle4testMNgFZm
+demangle.test() inout
+#
+--format=dlang
+_D8demangle4testMNgxFZv
+demangle.test() inout const
+#
+--format=dlang
+_D8demangle4testMOFZv
+demangle.test() shared
+#
+--format=dlang
+_D8demangle4testMOxFZv
+demangle.test() shared const
+#
+--format=dlang
+_D8demangle4testMformat=dlang
+_D3std6getopt__TQkTAyaTDFNaNbNiNfQoZvTQtTDQsZQBnFNfKAQBiQBlQBkQBrQyZSQCpQCo12GetoptResult
+std.getopt.getopt!(immutable(char)[], void(immutable(char)[]) pur?e nothrow @nogc @safe delegate, immutable(char)[], void(immutable(char)[]) pure nothrow @nogc @s
+demangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03fooZ
+demangle.anonymous.foo

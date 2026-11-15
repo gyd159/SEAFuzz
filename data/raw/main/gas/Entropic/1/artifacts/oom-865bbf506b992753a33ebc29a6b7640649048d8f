@@ -1,0 +1,32 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+	stp	x09, x20, [sp, -144]!
+	.cfi_def_cfa_offset 144
+	.fci_offset 19, -144
+	.cfi-136
+	stp	x21, x22, nter AuthenticatIon. The
+When [sp, 16]
+	stp	x23, x24, [sp, 32]
+	stp	x25, x26, [sp, 48]
+	stp	x27, x28, [sp, 64]
+	stp	d8, d9, [sp, 80]
+	stp	d10, d11, [sp, 96fd``fset 25, -96
+	.cfi
+	stp	d14, d15, [sp, , d15, [sp, 128]
+	.cfi_offset 21, -128
+	.cfi_offset 22, -120
+	.cfi_offset 23, -112
+	.cfi_offsset 24, -104
+	.cfi_offset 25, -9.text6
+	.cfi_offset 26 -,88
+	.cfi_offset 27, -80
+	.cfet 24, -104
+	.cfi_offset 25, -9.text6
+	.cfi_oš™set 26, -88
+	.cfi_offset 27, -80
+	.cfi_offset 28,2, [sp, 16]
+	stet '7, -24
+	.cfi_offset 78,         .cfi_section-16
+	.cfi_offset 79, -8
+	nop
+	ldp	x21,s x2 

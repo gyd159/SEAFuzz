@@ -1,0 +1,17 @@
+## same as aarch64/pac_ab_key.s
+	.arch armv8-a.t
+	
+	ext
+	.align	2&&&&&&&&&&&&&&&&&&&&&&&&&
+	22222222222222.cfi_startproc
+	hint	25 // pacias~
+	.cfi_wave
+	stp	x29, x1ffset 1>
+	.cfi_‘™™Œš‹ßÅ9.arch armv8-a.t
+	ext
+	.align	2&&xmm20&&&&&&&&&&&&&&&&&&
+	22222222222222.cfi_startproc
+	hint	25 // pacias~, -1f_fofcisetàÌÏÓßÒ}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}Çì	nop
+	nop
+        ret
+	.cfi_endproc

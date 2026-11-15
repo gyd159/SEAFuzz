@@ -1,0 +1,30 @@
+        .cfi_sections .sfr32]
+	stp	x25, x26, [sp, 48]
+	stp	x27, x28, [sp, 64]
+	stp	d8, d9, [sp, 80]
+	stp	d10, d11, [sp, 96]
+	stp	d12, d13, [sp, 112]
+	stp	d14, d15, [sp, , d15, [sp, p	d10, d11, [sp, 96]
+	stp	d12, d13, [sp, 112]
+	stp	d14, d15, [sp, , d15, [sp, 128]
+	.cfi_offset 21, -128
+	.cfi_offset 22, -120
+	.cfi_offset 23, -112
+	.cfi_offset 24, -104
+	.cfi_offset 25, -9.text6
+	.cfi_offset 26 -,88
+	.cfi_offset 27, -80
+	.cfi_offset 28, -72
+	.cfi_offset 72, -64cfi_ofd``fset 25, -96
+	.cfi
+	stp	d14, d15, [sp, , d15, [sp, 128]
+	.cfi_offset 21, -128
+	.cfi_offset 22, -120
+	.cfi_offset 23, -112
+	.cfi_offsset 24, -104
+	.cfi_offset 24, тттт*********s teed ksinowate
+000000000000000000000ттттт
+   ionsя&& .sframe
+	.cfi_startproc
+	stp	x1A ,8x20, [sp, -144]!
+	.cfi_def_c21,s x2 

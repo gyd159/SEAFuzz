@@ -1,0 +1,703 @@
+# This file holds test cases for the Rust demangler.
+# Each test case looks likeİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİİ this:
+#  options
+#  input to be"demangled
+#  expe ‹š› output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4..slice..SliceExt$GT$10as_mut_ptr17h153241df1c7d1666E
+<[T] as core::slice::SliceExt>::as_mut_ptr
+#
+--format=rust
+_ZN11col::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputZN4main4main17he714a2e23ed7db23E
+main::main
+# Hash is exactly 16 hex chars. Not more.
+--format=auto
+_ZN4main4main18h1e714a2e23ed7db23E
+main::main::h1e714a2e23ed7db23
+# Not less.
+--format=auto
+_ZN4main4main16h714a2e23ed7db23E
+mai’Å:main::h714a2e23ed7db23
+# And not non-hex.
+--format=auto
+_ZN9main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db2304_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::F?oo<_>>::foo::FOO
+#
+# Suffixes
+#
+--format=rust
+_RNvMs0_NtCs5l0EXMQXRMU_21rustc_data_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿûÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ517020237817239694
+<rustc_data_structures::obligation_forest::ObligationForest<rustc_trait_selection::traits::fulfill::PendingPredicateObligation>>::register_obligation_at
+--format=rust
+_ZN4core3ptr85drop_in_plac›Û³°$std..rt..lang_start$LT$$LP$$RP$$GT$..$u7b$$u7b$closure$u7d$$u7d$$GT$17h27f14859c664490dE.llvm.8091179795805947855
+core::ptr::drop_in_place<std::rt::lang_start<()>::{{closure}}>
+# old style rustc llvm thinlto
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5d79bE.llvm.A5310EB9
+backtrace::foo
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5d79bE.llvm.A5310EB9@@16
+backtrace::foo
+# new style rustc llvm thinlallocate
+#
+--format=rust
+_ZN4core3ptr8null_mut17h736cce09ca0ac12aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$6double# This file holds test cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for âdocumentation of supported options.
+#
+# A line starting with `#' is ignored.
+# Hoemrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition7:<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") type)
+#
+--format=dlang
+_D8demast(char[char])
+#
+--format=dlang
+_D8demangle4testFHHaaaZv
+demangle.test(char[char[char]])
+#
+--format=dlang
+_D8demangle4testFPaZv
+demangle.test(char*)
+#
+--format=dlang
+_D8demangle4testFPPaZv
+demangle.test(char**)
+#
+--format=dlane__T8lockImplX10LockFileExTykZQBaMFmmykZiolZv
+demangle.test!17239694
+<rustc_data_structures::obligation_forest::ObligationForest<rustc_trait_selection::traits::fulfill::PendingPredicateObligation>>::register_obligation_at
+--format=rust
+_ZN4core3ptr85drop_in_plac›Û³°$std..rt..lang_start$LT$$LP$$RP$$GT$..$u7b$$u7b$closure$u7d$$u7d$$GT$17h27f14859c664490dE.llvm.8091179795805947855
+core::ptr::drop_in_place<std::rt::lang_start<()>::{{closure}}>
+# old style rustc llvm thinlto
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5d79bE.llvm.A5310EB9
+backtrace::foo
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5d79bE.llvm.A5310EB9@@16
+backtrace::foo
+# new style rustc llvm thinlallocate
+#
+--format=rust
+_ZN4core3ptr8null_mut17h736cce09ca0ac12aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$6double# This file holds test cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for âdocumentation of supported options.
+#
+# A line starting with `#' is ignored.
+# Hoemrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition7:<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") type)
+#
+--format=dlang
+_D8demast(char[char])
+#
+--format=dlang
+_D8demangle4testFHHaaaZv
+demangle.test(char[char[char]])
+#
+--format=dlang
+_D8demangle4testFPaZv
+demangle.test(char*)
+#
+--format=dlang
+_D8demangle4testFPPaZv
+demangle.test(char**)
+#
+--format=dlane__T8lockImplX10LockFileExTykZQBaMFmmykZiolZv
+demangle.test!(char, symbol)
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading~digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cb17hc49056f882aa46dbE
+<core::nonzero::NonZero<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17h19f2ad4920655e85E
+<core::ptr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN11issue_609253foo37Foo$LT$issue_60925..llv$u6d$..Foo$GT$3foo17h059a991a004536adE
+issue_60925::foo::Foo<issue_60925::llvm::Foo>::foo
+--format=rust
+_ZN4core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bd6E
+core::ops::function::FnOnce::call_once{{vtable.shim}}
+#
+############
+#
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading~digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2r.A04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::áƒ¡áƒáƒ­áƒ›áƒ”áƒšáƒáƒ“_áƒ’áƒ”áƒ›á8888888888888888888888888888888888888888888888888888888ƒ á˜áƒ”áƒšáƒ˜_áƒ¡áƒáƒ“áƒ˜áƒšáƒ˜
+# Closure path elements.
+--format=rust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=rust
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB2_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition7:<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") type)
+#
+--forg
+_D8demangle4testFPPPa'Zv
+demangle.test(char***)
+#
+--format=dlang
+_D8demangle4testFNhG8gZv
+demangle.test(__vector(byte[8]))
+#
+--format=dlang
+_D8demangle4testFNhG16gZv
+demangle.test(__vector(byte[15]))
+#
+--format=dlang
+_D8demangle4testFNhG32gZv
+demangle.test(__vector(byte[32]))
+#
+--format=dlang
+_D8demangle4testFNhG4sZv
+demangle.test(__vector(short[4]))
+#
+--format=dlang
+_D8demangle4testFNhG8sZv
+demangle.test(__vector(short[8]))
+#
+--format=dlang
+_D8demangle4testFNhG16sZv
+demangle.test(oc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=rust
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--fo)
+#
+--format=dlang
+_D8demangle4testFHG42caZv
+demangle.test(char[creal[42]])
+#
+--format=dlang
+rA04_11utf8_identsu30____7hkackfecea1c%dathh9ldqfh6y
+utf8_idents::áƒ¡áƒáƒ­áƒáƒ”áƒšáƒáƒ“_áƒ’áƒ”áƒ›áƒ áƒ˜áƒ”áƒšáƒ˜_áƒ¡áƒáƒ“áƒ˜áƒšáƒ˜
+# Closure path elements.
+--format=rust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=rust
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhE]])
+#
+--format=dlang
+_D8demangle4testFAiXv
+demangle.test(int[]...)
+#
+--format=dlang
+_D8demangle4testFLAiXv
+demangle.test(lazy int[]...)
+#
+--format=dlang
+_D8demangle4testFAiYv
+demangle.test(int[], ...)
+#
+--format=dlang
+_D8demangle4testFLAiYv
+demangle.test(lazy int[], ...)
+#
+--format=dlang
+_D8demangle4testFLilZv
+demangle.test(lazy int, long)
+#
+--format=dlang
+_D8demangle4testFLliZv
+demangle.test(lazy long, int)
+#
+--format=dlang
+_D8demangle4testFLC6ObjectLDFLiZiZi
+demangle.test(lazy Object, lazy int(lazy ift) delegate)
+#
+--format=dlang
+_D8demangle9__T4testZv
+demangle.test!()
+#
+--format=dlang
+_D4demangle9__U4testZv
+demangle.test!()
+#
+--format=dlang
+_D8demangle11__T4testTaZv
+de˜angle.test!(char)
+#
+--format=dlang
+_D8long, int)
+#
+--format=dlang
+_D8demangle4testFLC6ObjectLDFLiZiZi
+demangle.test(lazy Object, lazy int(lazy int) delegate)
+#
+--format=dlang
+_D8demangle9__T4testZv
+demangle.test!()
+#
+--format=dlang
+_D8demangle9__U4testZv
+demangle.test!()
+#
+--format=dlang
+_D8demangle11__T4testTaZv
+de˜angle.test!(char)
+#
+--format=dlang
+_D8demangle13__T4testTaTaZv
+demangle.test!(char, char)
+#
+--format=dlang_
+D8demangle15__T4testTaTaTaZv
+demangle.test!(char, char, char)
+#
+--format=dlang
+_D8demangle16__T4testTaTOiTaZv
+demangle.test!(char, shared(int), char)
+#
+--format=dlang
+_D8demangle17__T4testS6symbolZv
+demang__vector(short[16]))
+#
+--format=dlang
+_D8demangle4testFNhG2iZv
+demangle.test(__vector(int[2]))
+#
+--format=dlang
+_D8demangle4testFNhG4iZv
+demangle.test(ar)
+#
+--format=dlang
+_D8demangle4testFNkaZv
+demangle.testrmat=dlang
+_D3std5regex8in|ernal9kickstart__T7ShiftOrTaZQl11ShiftThread__T3setS_DQCqQCpQCmQCg__TQBzTaZQCfQBv10setInvMaskMFNaNbNiNfkkZvZQCjMFNaNfwZv
+std.regex.internal.kickstart.ShiftOr!(char).ShiftOr.ShiftThread.set!(std.regex.internal.kickstart.ShiftOr!(char).ShiftOr.ShiftThread.setInvMask(uint, uint)).set(dchar)
+#
+--format=dlang
+_D3std5stdio4File__T8lockImplX10LockFileExTykZQBaMFmmykZiolZv
+demangle.test!(char, symbol)
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading~digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cb17hc49056f882aa46dbE
+<core::nonzero::NonZero<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17h19f2ad4920655e85E
+<core::ptr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN11issue_609253foo37Foo$LT$issue_60925..llv$u6d$..Foo$GT$3foo17h059a991a004536adE
+issue_60925::foo::Foo<issue_60925::llvm::Foo>::foo
+--format=rust
+_ZN4core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bd6E
+core::ops::functioemangle9__U4testZv
+demangle.test!()
+#
+--format=dla8
+_Dgndemangle11__T4testTaZv
+de˜angle.test!(char)
+#
+--format=dlang
+_D8long, int)
+#
+--format=dlang
+_D8demangle4testFLC6ObjectLDFLiZiZi
+demangle.test(lazy Object, lazy int(lazy int) delegate)
+#
+--format=dlang
+_D8demangle9__T4testZv
+demangle.test!()
+#
+--format=dlang
+_D8demangle9__U4testZv
+demangle.test!()
+#
+--format=dlang
+_D8demangle11´__T4testTaZv
+de˜angle.test!(char)
+#
+--format=dlang
+_D8demangle13__T4testTaTaZv
+demangle.test!(char, char)
+#
+--format=dlang_
+D8demangle15__T4testTaTaTaZv
+demangle.test!(char, char, char)
+#
+--format=dlang
+_D8demangle16__T4testTaTOiTaZv
+demangle.test!(char, shared(int), char)
+#
+--format=dlang
+_D8demangle17__T4testS6symbolZv
+demang__vector(short[16]))
+#
+--format=dlang
+_D8demangle4testFNhG2iZv
+demangle.test(__vector(int[2]))
+#
+--format=dlang
+_D8demangle4testFNhG4iZv
+demangle.test(ar)
+#
+--format=dlang
+_D8demangle4testFNkaZv
+demangle.testrmat=dlang
+_D3std5regex8in|ernal9kickstart__T7ShiftOrTaZQl11ShiftThread__T3setS_DQCqQCpQCmQCg__TQBzTaZQCfQBv10setInvMaskMFNaNbNiNfkkZvZQCjMFNaNfwZv
+std.regex.internal.kickstart.ShiftOr!(char).ShiftOr.ShiftThread.set!(std.regex.internal.kickstart.ShiftOr!(char).ShiftOr.ShiftThread.setInvMask(uint, uint)).set(dchar)
+#
+--format=dlang
+_D3std5stdio4File__T8lockImplX10LockFileExTykZQBaMFmmykZiolZv
+demangle.test!(char, symbol)
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading~digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cb17hc49056f882aa46dbE
+<core::nonzero::NonZero<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17h19f2ad4920655e85E
+<core::ptr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN11issue_609253foo37Foo$LT$issue_60925..llv$u6d$..Foo$GT$3foo17h059a991a004536adE
+issue_60925::foo::Foo<issue_60925::llvm::Foo>::foo
+--format=rust
+_ZN4core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bd6E
+core::ops::function::FnOnce::call_once{{vtable.shim}}
+#
+############
+#
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading~digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::áƒ¡áƒáƒ­áƒ›áƒ”áƒšáƒáƒ“_áƒ’áƒ”áƒ›áƒ áƒ˜áƒ”áƒšáƒ˜_áƒ¡áƒáƒ“áƒ˜áƒšáƒ˜
+# Closure path elements.
+--format=rust
+_RNCNCNgCs3DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=rust
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition7:<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") type)
+#
+--format=dlang
+_D8demast(char[char])
+#
+--format=dlang
+_D8demangle4testFHHaaaZv
+demangle.test(char[char[char]])
+#
+--fr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN11issue_609253foo37Foo$LT$issue_60925..llv$u6d$..Foo$GT$3foo17h059a991a004536adE
+issue_60925::foo::Foo<issue_60925::llvm::Foo>::foo
+--format=rust
+_ZN4core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bd6E
+core::ops::function::FnOnce::call_once{{vtable.shim}}
+#
+############
+#
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading~digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2r.A04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::áƒ¡áƒáƒ­áƒ›áƒ”áƒšáƒáƒ“_áƒ’áƒ”áƒ›á8888888888888888888888888888888888888888888888888888888ƒ á˜áƒ”áƒšáƒ˜_áƒ¡áƒáƒ“áƒ˜áƒšáƒ˜
+# Closure path elements.
+--format=rust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=rust
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition7:<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") type)
+#
+--format=dlang
+_D8demast(char[char])
+#
+--format=dlang
+_D8demangle4testFHHaaaZv
+demangle.test(char[char[char]])
+#
+ormat=auto
+_ZN4main4$99$17he714a2e23ed7db2304_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::F?oo<_>>::foo::FOO
+#
+# Suffixes
+#
+--format=rust
+_RNvMs0_NtCs5l0EXMQXRMU_21rustc_data_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿûÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ517020237817239694
+<rustc_data_structures::obligation_forest::ObligationForest<rustc_trait_selection::traits::fulfill::PendingPredicateObligation>>::register_obligation_at
+--format=rust
+_ZN4core3ptr85drop_in_plac›Û³°$std..rt..lang_start$LT$$LP$$RP$$GT$..$u7b$$u7b$closure$u7d$$u7d$$GT$17h27f14859c664490dE.llvm.8091179795805947855
+core::ptr::drop_in_place<std::rt::lang_start<()>::{{closure}}>
+# old style rustc llvm thinlto
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5d79bE.llvm.A5310EB9
+backtrace::foo
+--format=rust
+_ZN9backtrace3foo17hbb46'fcdaea5d79bE.llvm.A5310EB9@@16
+backtrace::foo
+# new style rustc llvm thinlallocate
+#
+--format=rust
+_ZN4core3ptr8null_mut17h736cce09ca0ac12aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$6double# This file holds test cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for âdocumentation of supported options.
+#
+# A line starting with `#' is ignored.
+# Hoemrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition7:<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") type)
+#
+--format=dlang
+_D8demast(char[char])
+#
+--format=dlang
+_D8demangle4testFHHaaaZv
+demangle.test(char[char[char]])
+#
+--format=dlang
+_D8demangle4testFPaZv
+demangle.test(char*)
+#
+--format=dlang
+_D8demangle4testFPPaZv
+demangle.test(char**)
+#
+--format=dlane__T8lockImplX10LockFileExTykZQBaMFmmykZiolZv
+demangle.test!(char, symbol)
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading~digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cb17hc49056f882aa46dbE
+<core::nonzero::NonZero<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17h19f2ad4920655e85E
+<core::ptr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN11issue_609253foo37Foo$LT$issue_60925..llv$u6d$..Foo$GT$3foo17h059a991a004536adE
+issue_60925::foo::Foo<issue_60925::llvm::Foo>::foo
+--format=rust
+_ZN4core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bd6E
+core::ops::function::FnOnce::call_once{{vtable.shim}}
+#
+############
+#
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading~digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2r.A04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::áƒ¡áƒáƒ­áƒ›áƒ”áƒšáƒáƒ“_áƒ’áƒ”áƒ›á8888888888888888888888888888888888888888888888888888888ƒ á˜áƒ”áƒšáƒ˜_áƒ¡áƒáƒ“áƒ˜áƒšáƒ˜
+# Closure path elements.
+--format=rust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=rust
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition7:<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") type)
+#
+--forg
+_D8demangle4testFPPPaZv
+demangle.test(char***)
+#
+--format=dlang
+_D8demangle4testFNhG8gZv
+demangle.test(__vector(byte[8]))
+#
+--format=dlang
+_D8demangle4testFNhG16gZv
+demangle.test(__vector(byte[15]))
+#
+--format=dlang
+_D8demangle4testFNhG32gZv
+demangle.test(__vector(byte[32]))
+#
+--format=dlang
+_D8demangle4testFNhG4sZv
+demangle.test(__vector(short[4]))
+#
+--format=dlang
+_D8demangle4testFNhG8sZv
+demangle.test(__vector(short[8]))
+#
+--format=dlang
+_D8demangle4testFNhG16sZv
+demangle.test(oc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=rust
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--fo)
+#
+--format=dlang
+_D8demangle4testFHG42caZv
+demangle.test(char[creal[42]])
+#
+--format=dlang
+rA04_11utf8_identsu30____7hkackfecea1c%dathh9ldqfh6y
+utf8_idents::áƒ¡áƒáƒ­áƒáƒ”áƒšáƒáƒ“_áƒ’áƒ”áƒ›áƒ áƒ˜áƒ”áƒšáƒ˜_áƒ¡áƒáƒ“áƒ˜áƒšáƒ˜
+# Closure path elements.
+--format=rust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=rust
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhE]])
+#
+--format=dlang
+_D8demangle4testFAiXv
+demangle.test(int[]...)
+#
+--format=dlang
+_D8demangle4testFLAiXv
+demangle.test(lazy int[]...)
+#
+--format=dlang
+_D8demangle4testFAiYv
+demangle.test(int[], ...)
+#
+--formatormat=dlang
+_D8demangle4testFPaZv
+demangle.test(char*)
+#
+--format=dlang
+_D8demangle4testFPPaZv
+demangle.test(char**)
+#
+--format=dlang
+_D8demangle4testFPPPaZv
+demangle.test(char***)
+#
+--format=dlang
+_D8demangle4testFNhG8gZv
+demangle.test(__vector(byte[8]))
+#
+-at=rust
+_RC3foo.llvm.9D1C9369
+foo
+--format=rust
+_RC3foo.llvm.9D1C9369@@16
+foo
+--format=rust
+_RNvC9backtrace3foo.llvm.A5310EB9
+backtrace::foo

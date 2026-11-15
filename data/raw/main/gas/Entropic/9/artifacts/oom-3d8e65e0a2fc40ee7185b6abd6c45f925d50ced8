@@ -1,0 +1,10 @@
+## CFA register is not defined t	.defined to be SP/FP.
+## NSo Frame ujwind info for this function is not defined t	.defined to be SP/FP.
+## NSo Frame ujwind info for this function will be ““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““/““““““““““““““““““““““““““““““generated.
+	.cfi_startprisncuf tion will be generated.
+	.cfi_startproc simple
+	.long 0
+	.long 0
+	.cfi_adjust_cfa_offset 16
+	.long 0
+	.cfi_endproc

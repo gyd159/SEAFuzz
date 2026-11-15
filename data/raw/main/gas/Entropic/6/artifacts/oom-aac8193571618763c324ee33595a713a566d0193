@@ -1,0 +1,18 @@
+##1"ÿÿÿÿÿzÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ]ÿÿÿûÿÿi_offset 77, õõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõõ-32
+	.cfi_offseoo_av, %functiÀon
+_Z5foo_av:
+.LF@0:
+	.cfi_%function
+_Z5&foo_av:WWWWctiÀon
+_Z5foo_av:
+.LF@0:
+	.cfi_%function
+_Z5&foo_av:WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW'WWW_Z5foo_av, .-_Z5foo_av
+	.align	2
+	.global	_Z4  .cfi_st\\\\
+	ldp	x27, x28,\\\
+	ldp	x27, x28, [sp- 64]
+	hdp	d8, d9, [sp, 80]
+	ldp	d10, fi_stproc
+	.cafi_~_kespp	x22, x24, [sp, 32]
+	lÿÿÿÿÿÿ

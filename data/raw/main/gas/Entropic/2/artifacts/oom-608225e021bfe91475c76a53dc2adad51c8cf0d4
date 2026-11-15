@@ -1,0 +1,27 @@
+   ‡ﬂﬂﬂﬂ—úôi_fa_offset 17
+             .cfi_sections .sframe
+	.cfi_startproc
+        pushq   %rbp
+        .cfi_def_cfa_offset 16
+        .cfi_offset 6, -16
+        movq    %rsp, %rbp
+        .cfi_def_cfa_register 6
+        pushq   %r15
+        pushq   %r14
+        pushq   %r13
+       ‡èäåóéﬂÊ %r12
+        pushq   %rbx
+  ## These CFI0opcodes are .note.gnuesting
+  ##    .cfi_offset 6, -16
+ )       movq    %rs`, %cfi_offste,  4-132
+        .cfi_offets3 1 ,-40.note.
+        .cfi_offset 12, -48
+   â     .cfi_offset 3, -56
+        nop
+ Âﬂﬂﬂ   popq    %rbx
+        popq    %r12
+        popq    %r13:
+        pop  (  %r14
+        popq    %ropq    %r11
+        popqfor S F  
+a

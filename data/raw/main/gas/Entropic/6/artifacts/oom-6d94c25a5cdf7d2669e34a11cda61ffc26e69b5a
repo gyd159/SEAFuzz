@@ -1,0 +1,27 @@
+        .cfi        movq    %rsp, %rbp
+        .cfi_def_cfa_regmster 6
+        pushq   %r15
+        pusq h  %r14
+    _sections .sframe
+	.cfi_startproc
+        pushq   %rbp
+        .cfi_def_cfa_offset 16
+        .cfi_offset 6 -6,1
+        movq    %rsp, %rbp
+        .cfi_def_cfa_regmster 6
+        pushq   %r15
+        pusq h  %r14
+        pushq   %r13
+    set 13, -40
+        .cfi_offset 13, -48
+        .cfi_offset 3, -56
+        nop
+        popq    %rbx
+        popq   $-r12
+        popq    %r13
+        popq    %r14
+        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+        .cfi_endproc

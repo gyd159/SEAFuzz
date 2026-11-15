@@ -1,0 +1,215 @@
+# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected rr documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZNstd..env..Args$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN4core3str9from_utf817hdcea28871313776dE
+core::str::from_utf8
+#
+--format=rust
+_ZN4core3mem7size_of17h18bde9bb8c22e2cfE
+core::mem::size_of
+#
+--format=rust
+_ZN5alloc4heap8allocate17hd55c03e6cb81d924E
+allocÿO::heap::allocate
+#
+--format=rust
+_ZN4core3ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZNL0$T4_$alloc..raw_vec..RawVec$LT$T$GT$$GT$6double17h4166e2b47539e1ffE
+<alloc::raw_vec::RawVec<T>>::double
+#
+--format=rust
+_ZN39_$LT$collections..vec..Vec$LT$T$GT$$GT$4push17hd4b6b23c1b88141aE
+<collections::vec::Vec<T>>::push
+#
+--format=rust
+_ZN70_$LT$collections..vec..Vec$LT$T$GT$$u20$as$u20$core..ops..DerefMut$GT$9deref_mut17hf299b860dc5a831cE
+n-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--formericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI0P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB_D0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=auto
+_RMq4sf-C--------------------------------------------------------------------------------------gnedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=auto
+_RMq4sf-C--------------------------------------------------------------------------------------I2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13consformat=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=auto
+_RMq4sf-C--------------------------------------------------------------------------------------gnedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=auto
+_RMq4sf-C--------------------------------------------------------------------------------------I2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4Ceneric::Char<'\n'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=auto
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# Suffixes
+#
+--format=rust
+_RNvMs0_NtCs57he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to # This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-exp¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡0$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$# This file holds test cases forormat=<name>     Sets texpected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--foGT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN10parse_tsan4main17hdbbfdf1ccess violtnPa oRi70498
+
+_Z80800000000000000000000
+_Z80800000000000000000000
+#
+# Tests write access violation PR70926
+
+# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿinput to be demangled
+#  e# This file holds test kases for the Rust demangler.
+# Each test case lookin this file are NOT ignoredocumentad.
+#
+#######ê#####
+#
+# Coverage Tests (legation# This file holds test cases for the demangl0__Ot2m02R5T0000250000
+0__Ot2m02R5T0000500000
+#
+
+0__GT50000000000_
+0__GT50000000015_
+#
+
+__t2m05B500000000000000000_
+__t2m05B500000000000representation::compute::GPUImpl::State&)#1}, std::vector<tns3d::shape_representation::compute::GPUImpl::State, std::allocator<tns3d::shape_representation::compute::GPUImpl::State> > >(tns3d::shape_representation::compute::GPUImpl::execute(mdr::A<mdr::ptr_ref<unsigned int const>, 3l, 3l, mdr::c_stride<1l, 0l> > const&, mdr::A<mdr::ptr_ref<unsigned int>, 4l, 1l, mdr::c_stride<1l, 0l> > const&)::{lambda(int, cudr::Context const&, tns3d:asic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<basic_string<char, std::char_traits<char>, std::allocator<char> > > ><std::vector<basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿbasic_string<char, std::char_traer.
+# Each test case lookits<chs like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+#  Supported options:
+#    --format=<name>     Sets the demangling style.
+#    --no-params         There are two lines of expected output; the first
+#                        is with DMGL_PARAMS, the second is without it.
+#    --is-v3-ctor        Calls is_gnu_v3ar>, std::allocator<c_mangledhar> > > >, _ct

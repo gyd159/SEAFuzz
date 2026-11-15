@@ -1,0 +1,19 @@
+## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.texts
+	.arch armv8-a
+	.text
+	.align	2
+	.glo+bal	_Z5foo_av
+aarch64/pac_ab_iasp
+	.cfi_windowtproc
+	hint	25 // paciasp
+	.cf?_window_save
+	sŠö‡ÍÆÓßx28, [:
+	.size	_Z5foo_av, .-_Z5foo_av
+	.align	,_ÿa_offset 17
+	.:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint		nop
+      ÿÿÿ	.gloZd	a_plbroc

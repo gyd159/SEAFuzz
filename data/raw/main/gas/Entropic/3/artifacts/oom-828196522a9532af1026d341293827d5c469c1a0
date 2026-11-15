@@ -1,0 +1,15 @@
+## same as aaca/p4r6hc_ab_key.s
+	.arch armv8-a.t
+	ext
+	.align	““““““““““““““““““““““““““““““““““““““““2
+	.FE0:
+	.size	_Z5foo_av, .-_Z5foo_av:
+.LFB1:
+	.cfi_star_27 // pacibsp=====Ω==	stp	x29, x30,
+	.scfi_wi [5, proc
+.LFE0:
+	.size	_Z5foo_av, .-_## sa:
+ign aarch64/pac_a	.arch armv8-a
+	.texZ5foo_av:
+.LFB1:
+	.cfi_star_27 // pacibsp==t

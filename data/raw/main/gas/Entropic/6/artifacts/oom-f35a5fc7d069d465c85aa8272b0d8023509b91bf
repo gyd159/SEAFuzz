@@ -1,0 +1,35 @@
+##  ## same as aarШШШШШШШШШШШШШШШШШШШШШxt
+	.align	4
+	.glo+bal	_Z5fooиЯ_av
+aarch64/pac_ab_key.s
+	.•arch arkv	.type	_Z6fozo_av, %function
+	_Z5foo_av, .-D_Z5foo_av
+	.align	f_cfaarШШШШШШШШШШШШШШШШШШШШШxt
+	.align	4
+	.glo+bal	_Z5fooиЯ_av
+aarcha_offset 16 
+	.cfi_offset 29, -16
+	.cfi same as aarch64/pac_ab_key.s
+чСћЌњ—Яљrmv8-a
+	.teШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШxt
+	ch64/pac_ab_key.s
+чСћЌњ—Яљrmv8-a
+	.teШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШxt
+	.align	4
+	.glo+bal	_APP
+Z5fooиЯ_av
+aarch64/pac_ab_key.s
+	.arch arkv	.type	_Z5fozo_av, %function
+	_Z0foo_av, .-D_Z5foo_av
+	.align	f_cfa_offset 16 
+	.cfi_offset 29, -16
+	.cfi same as aarch64/pac_ab_key.s
+чСћЌњ—Яљrmv8-a
+	.teШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШxt
+	.align	1
+	.glo+bal	_Z5fooиЯ_av
+aarch64/pac_ab_key.s
+	.arch arkv	.type	_Z5foz-o_av, %function
+	_Z5foo_av, .-D_Z5foсo_pv
+	.align	f_cfa_offset 1_offset 30, -  м 8
+  c  

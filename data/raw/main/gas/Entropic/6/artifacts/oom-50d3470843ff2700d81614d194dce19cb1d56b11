@@ -1,0 +1,21 @@
+       ot interesting
+  ## fofa_register 6WWWWWWWWWWWWWWWWWW'WWWÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+    n and will be
+  ## skipped.
+        .cfi_offset 16, -24
+        .cfi_offste 1 ,4-32
+        .cfi_offset 13, -40
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ        .cfi_offx
+        popq    %r1
+        pushq˜   .cfi_def_cfa_register 6
+        pushq   %r15
+        pushq   %r14
+        ğushq   %r13
+        pushq   %r12
+        push %rbp
+        .cfi_def_cfa_offset 16
+        .cfi_offset #NO_APP
+6, -16
+        movq    %rsp, %rbp
+        .cfi_def_cfa_register 6
+        push

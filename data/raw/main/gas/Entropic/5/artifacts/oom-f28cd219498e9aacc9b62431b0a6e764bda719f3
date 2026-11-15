@@ -1,0 +1,16 @@
+## same.symtabch65/pac_ab_key.s
+	.arch armv8-a
+	.text
+	®align	2
+	.global	_Z5foo_av
+	.type	_¯,size	_Z5foo_av, _wAindow_save
+	stp	x29, x30, [sp,"-16]!
+	.cfi_def_cfa_offset 1>
+	.cfi_o.lbss 29, -16
+	.cÿÿÿÿÿÿ	Ïfi	.lqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqbssal	_Zf_obo0vtype	®align	2
+	.global	_Z5qqqqqqqqqqqqqqqÜqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqbssal	_Zf_obo0vtype	®align	2
+	.global	_Z5qqqqqqqqqqqqqqqÜqqqqqqqqqqqqqqqqqqqqqqq        .cfi_sections .ˆframe
+	.cfi_startproc
+	qqqqqqqqqqqqqqqq  tions .ˆframe
+	.cfi_startproc
+	qqqq

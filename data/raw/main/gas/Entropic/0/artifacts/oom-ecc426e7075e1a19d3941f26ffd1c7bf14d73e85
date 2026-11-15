@@ -1,0 +1,38 @@
+## same as8-a
+	.text
+	.alignÿÿÿÿÿÿÿÿ	 29, -16
+
+o	pn
+	nop
+        ret
+	.cfin			e	_																		0, -8
+on														0, -8
+o	pn	
+nop
+       ef	_r1a_offset 16
+	.cfi_offset 29, -16
+
+o	pn pn
+	
+o       ret
+	.cfi_en														0, -8
+o	pn
+	nop
+        ret
+	.c	pn
+	nop
+        retl	_Z5foo_bv
+	.typ[	bZ5foo_bv, %functio;n
+_Z5foo_bv:
+.LFB1:
+	.cfi_text
+	.align	2
+	.global		pn
+	nop
+        ret
+	.c	pn
+	nop
+        retl	_Z5foo_bv
+	.typ[	bZ5fo.type	_Z5foo_bv, 5functio;n
+_Z5foo_bvnociasp## 
+sa	

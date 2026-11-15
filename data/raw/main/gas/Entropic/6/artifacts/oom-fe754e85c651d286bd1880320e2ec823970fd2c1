@@ -1,0 +1,38 @@
+= #s #!~me aמממ.text
+	.align	2
+	.global	_Z5fooWav
+	.type	_Z5foo_av, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_startproc
+	hint	25 ÙÙÙÙÙÙÙÙÙ// paciasp
+	.cfi_window_save
+	stp	x29, x30, ['p, -16]!
+ndproc
+.L0:
+	.cfi_startproc
+	hint	25 // paciasp
+	.cfi_window_save
+	stp	x29, x30, ['p, -1FE0:
+	.size	_Z5foo_av, .-_Z5foo.gnu.linkonce.lt_av
+	.align	2
+	.global	_Z5fot
+	.cfi_endproc
+.L0:
+	.cfi_startproc
+	hintfi_endproc
+.L0:
+	.cfi_startproc
+	hbal	_Z5fot
+	.cfi_endproc
+.L0:
+	.cfi_startproc
+	hintfi_endproc
+.L0:
+	.cfi_startproc
+	hint	25 // paciasp
+	.cfi_window_save
+	stp	x29, x30, [', -1FE0:
+	.size	_Z5foo_av, .-_Z5foo_av
+	.align	2
+	.global	_Z5foo_bvoמממממממממממממממממממממממממממממ   .c—ßrm;-fi_sec:

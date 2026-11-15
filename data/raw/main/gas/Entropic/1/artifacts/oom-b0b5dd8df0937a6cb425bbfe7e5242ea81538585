@@ -1,0 +1,27 @@
+ $  þÿÿÿ $  þÿÿÿ.cfi_sectiofS   .cfi_offset 6, -16
+        movq    $  þÿÿÿ $  þÿcÿsiÿf_.ectiofS   .cfi_offset 6,  þÿÿÿ $  þÿÿÿ.cfi_sectiofS   .cfi_offset 6, -16
+        movq    $  þÿÿÿ $  þÿÿÿ.cfiÿÿÿÿ_ $  þÿÿÿ.V %rsp, $  þÿ.cfi_sectiofS   .cfi_offset 6, %rbp
+; -16
+      ..eh_fcfi_offset 6, -16
+        movq    $  þÿÿÿ $  þÿÿÿ.cfiÿÿÿÿ_ $  þÿÿÿ.ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿV %rsp, $  þÿ.cfi_sectiofS   .cfi_offset 6, %rbp
+; -32
+        mcfi_offset 6, -16
+        movq    $  þÿÿÿ $  þÿÿÿ.cfiÿÿÿÿ_ $  þÿÿÿ.ffset 6, -16
+        movq    $  þÿÿÿ $  þÿÿÿ.cfiÿÿÿÿ_ $  þÿÿÿ.V %rsp, $  þÿ.cfi_sectiofS   .cfi_offset 6, %rbp
+; -16
+        mcfi_offset 6, -16
+        movq    $  þÿÿÿ $  þÿÿÿ.cfiÿÿÿÿ_ $  þÿÿÿ.V %rsp, $  þÿ.cfi_rbp
+; -16
+      .cfi_o  þÿÿÿ.ffset 6, -16
+        movq    $  þÿÿÿ $  þÿÿÿ.cfiÿÿÿÿ_ $  þÿÿÿ.V %rsp, $  þÿ.cfi_sectiofS   .cfi_offset 6, %rbp
+; -16
+        mcfi_offset 6, -16
+        movq    $ ffset 6, -16
+        movq    $  þÿÿÿ $  þÿÿÿ.cfiÿÿÿÿ_ $  þÿÿÿ.V %rsp, $  þÿ.cfi_sectiofS   .cfi_offset 6, %rbp
+;et 6, %rbp
+; -16
+      .cfi_offset 6, -16
+        movq    $  þÿÿÿ $  þÿÿÿ.cfiÿÿÿÿ_ $  þÿÿÿ.V %rsv, $  þÿ.cfi_sectiofS   .cfi_offset 6, %rbp
+; -16
+        movq ÿÿÿÿÿÿÿ_ $      þÿÿÿ.V  %rovq ÿÿÿÿÿÿÿ_ $      þÿÿÿ.V  %rbp
+     

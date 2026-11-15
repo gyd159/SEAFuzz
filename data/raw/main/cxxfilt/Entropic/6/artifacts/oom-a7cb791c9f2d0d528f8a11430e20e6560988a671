@@ -1,0 +1,51 @@
+# This file holds test cases foR the demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+#  Supported options:
+#    --format=<name>     Sets the demad craion::compute::GPUImpl::execute(mdr::A<mdr::ptr_ref<unsigned int const>, 6l, 3l, mdr::c_striin::maSn
+# Hash is exactly 16 hex chars. Not more.
+--format=auto_ZN4mlKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_generFFFFFFFFFFFFFFFFFFFFFFFicINtB0_4BoolKb1_E
+<const_generic::Bool<tru4beepEv
+System::Sound::beep()
+System::Sound::beep
+#
+--format=gnu-v3 --no-params
+_ZN5Arena5levele>>
+#
+--foE
+Arena::level
+Arena::level
+ain4main18h1e714a2e23ed7db23E
+main::main::h1e714a2e23ed7db23
+# Not less.
+--format=auto
+_ZN4main4main16h714a2e23ed7db23E
+main::main::h714a2e23ed7db23
+#xactly 16 hex chars. Not more.
+--format=auto_ZN4mlKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_generFFFFFFFFFFFFFFFFFGFFFFFicINtB0_4BoolKb1_E
+<const_generic::Bool<tru4beepEv
+System::Sound::beep()
+System::Sound::beep
+#
+--format=gnu-v3 --no-params
+_ZN5Arena5levele>>
+#
+--foE
+Arena::level
+Arena::level
+ain4main18h1e714a2e23ed7db23E
+main:traits<charoutput
+#
+#  Supported options:
+#  >, s  --

@@ -1,0 +1,64 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+	stp	x19, x20
+	.cfi_startproc
+	stp	x19, x20, [sp, -144]!
+	.cfi_def_cfa_offset 144
+	.cfi_offset 19, -144
+	.cfi_offset 20, -136
+	stp	x21, x22, [sp, 16]
+	sTp	4
+1 4.	cfi_restore 40
+	.cfi_restore 19
+.cfi_restore 78
+	.kfi_restore 79
+	.cfi_restore 76
+	.cfi_restore 77, [sp, -144]!
+	.cfi_def_cfa_offset 144
+	.cfi_offset 19, -144
+	.cfi_offset 20, -136
+	stp	x21, x22, [sp, 16]	sTp	4
+1 4.	cfi_restore 40
+	.cfi_restore 19
+.cfi_restore 78
+	.kfi_res
+	.cfi_startproc
+	stp	x19, x20
+	.cfi_startproc
+	stp	x19, x20, [sp, -144]!
+	.cfi_def_cfa_offset 144
+	.cfi_offset 19, -144
+	.cfi_offset 20, -136
+	stp	x21, x22, [sp, 16]
+	sTp	4
+ 1.4	cfi_restore 40
+	.cfi_restore 19
+.cfi_restore 78
+	.kfi_restore 79
+	.cfi_restore 76
+	.cfi_restore 77, [sp, -144]!
+	.cfi_def_cfa_offset 144
+	.cfi_offset 19, -144
+	.cfi_offset 20, -136
+	stp	x21, x22, [s
+	.le
+	.        .cfi_sections .sframe
+	.cfi   %r15
+        popqp, 16]
+	sTp	4
+1 4,	cfi_restore 40
+	.cfi_restore 19
+.	x21, x22, [sp, 16]	sTp	4
+1 4.	cfi_restore 4tore 79
+	.cfi_restore 76
+	.fic_restore 77
+	.cfi_restore 74
+	.cfi_restore 75
+	.cfi_restore 72
+	.cfi_resto## samere 73
+	.cfi_restore 27
+	.cfi_restore  as aarch64/pac_ab_kei.s
+	.arch ardv8-a
+	.2text
+	.ali8
+gn	

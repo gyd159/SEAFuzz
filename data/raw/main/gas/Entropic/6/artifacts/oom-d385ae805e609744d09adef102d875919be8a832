@@ -1,0 +1,5 @@
+!# same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.t_startproc
+	eext
+	. a 

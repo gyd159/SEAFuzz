@@ -1,0 +1,23 @@
+## same as aar
+	.align	4
+	.global	nt	24 // pacias~
+	.cfi_wave
+	stp	x29, x12, proc
+.LFE0:
+	.sizsacibsp
+	e	_Z5foo_asatmme as aarch64/pacmv8-a
+	‰text
+	.align	2
+	.global-a
+	.text
+	.al#NO_APP
+global	_Z4foo_ffset 29, -16
+	.cfi_offset 30, -8
+	nop
+	nop
+        r 151ts	p	## same as aarchavx_i64/p9, ˆÚ -8
+	nop
+	ac_ab_k„.s
+	.nop
+        ret
+	.cfi_arch armv8-a.t

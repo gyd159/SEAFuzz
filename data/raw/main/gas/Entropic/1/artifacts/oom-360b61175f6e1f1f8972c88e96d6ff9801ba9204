@@ -1,0 +1,9 @@
+ $  þÿÿÿ $  þÿÿÿ.cfiÿ.V %rvp, $  þÿ.cfiþÿÿÿ.V %rsp, $  þÿ.cfi_sect   $  þÿÿÿ $  þÿÿÿ.cfiÿÿÿÿ_ $  þÿÿÿ.V %rsp, $  þÿ.cfi_sectiofS   .cfi_offset 6, %rbp
+; -16
+      .cfi_offset 6, 016
+        pushq   %r07
+        pushq.gnu111111111111111100000000ÿÿÿÿÿÿÿ	1111111111000 $  ffset 6, -16
+        movq    $  þÿÿÿ $  þÿÿÿ.cfi_sectiofS   .cfi_ofgset 6,  _offset 6, %rbp
+; -16
+        movq ÿÿÿÿÿÿÿ_ $      þÿÿÿ.V  %rovq ÿÿÿÿÿÿÿ_ $      þÿÿÿ.V  %rbp
+     

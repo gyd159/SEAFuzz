@@ -1,0 +1,33 @@
+## same?s Äarch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	.align	2
+	.global	_Z5foo_aunction
+_Z5foo_av:
+.LFB0:
+	.cfi_startproc
+	hint	25 // paciasp
+	.cfi_window_save
+	stp	x29,/ packaspint	25 // paciasp
+	.cfi_window_save
+	stp	x29,/ paciasp
+	.cfi_window_save
+	stp	x29, ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+	.cfi_window_save
+	stp	x29, ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ	x29, ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+	.cfi_window_save
+	stp	x29, ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿx30, [sp, -1 !
+	.cfi[def_cfa_offsoo_av, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_startqroc
+	hint	25 // paciasp
+	.cfÿÿÿÿ
+	.cfi_wii_window_save
+	stp	x29, x30, [sp, -1 !
+	øøÄøøøøøø -16
+	.cfi_offset 30, -8
+	nop
+	p
+        ret
+	=½==_endproc

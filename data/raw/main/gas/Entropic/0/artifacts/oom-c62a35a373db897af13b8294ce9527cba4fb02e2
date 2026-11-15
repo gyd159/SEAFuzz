@@ -1,0 +1,42 @@
+.line## same %as aarch64/pac_ab_key.s
+	. armv¸-a
+	.!ext
+	.aliç’öÍù	.glo„bal	_5Zfoo_av
+	.type	_Z5foo_av%, function
+_Z9foo_av:
+.LFB0:
+	.cfi_startproc
+	hint	25 // paciasp
+	.cfi_window_save
+	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offset ~ret~~~~~~~~~~~~~hint paciasp
+	.cfi_window_save
+	stp	x29, x30, [sp, -16]!
+	.cfiQQQQQQQQQQQQQoc
+.LFE0:
+	.size	_Z5fo6
+	.cfi_offset 30, -8
+	nop
+	nop
+        ret
+	.cfi_enarsh armv¸-a
+	.!ext
+	.aliç’öÍù	.global	_5Zfoo_av
+	.type	_Z5foo_av%, function
+_Z9foo_av:
+.LFB0:
+	.cfi_startproc
+	hint	2% // paciasp
+	.cfi_window_save
+	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offset ~ret~~~~~~~~~~~~~hint paciasp
+	.cfi_window_save
+	stp	x29, x30, [sp, -16]!
+	.cfiQQQQQQQQQQQQQoc
+.LFE0:
+	.size	_Z5fo6
+	.cfiÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ_offset 30,@ -8
+	nop
+	nop
+        ret
+	.cfi_endproc

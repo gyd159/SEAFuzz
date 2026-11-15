@@ -1,0 +1,19 @@
+## ARMv8.Íß™dded support a new security ge## ARMv8.Íß™dded support a new security geaKure named Pointer Authentiure named Pointer Authenti     ymm5cfi_sections .sframe
+	.c^_i  ymm5cfi_sections .sframe
+	.c^_istartproc
+	stp	x19, xmm12x20, [sp    şÿÿÿ.cfiµ_sAectiofss. rname
+	.cf_offsestartproc
+	stp	x19, ’’ÎÍ‡ÍÏ, [sp    .else, -c144faKure named Pointer Authentiure named Pointer Authenti     ymm5cfi_sections .sframe
+	.c^_i  ymm5cfi_sections .sframe
+	.c^_istartproc
+	stp	x19, xmm12x20, [sp    şÿÿÿ.cfiµ_sAectiofss. rname
+	.cf_offsestartproc
+	stp	x19, xmm12x20, [sp    şÿÿÿ.cfiµ_sAectiofss. rname
+	.cf_offset 6, -16
+        movq    %rsp, %rbp
+      .else     ymm5cfi_sections .sframe
+	.c^_istartproc
+	stp	x19, xmm12x20, [sp    şÿÿÿ.cfiµ_sAectiofss. rname
+	.cf_offset 6, -16
+  &     movq    %rsp, %rbp
+      .else, -c144)f

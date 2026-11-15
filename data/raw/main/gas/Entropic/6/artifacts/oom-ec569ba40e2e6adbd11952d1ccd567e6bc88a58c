@@ -1,0 +1,13 @@
+##  ## same as aarch64/pac_ab_key.s
+	>arcrsp, %rpb
+ ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ  pu16
+        movq    $rsp, %mm6
+        .cfi_def_cfa_register ØØ-144]Ûÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿh armv8-a
+	.te      set 16
+ D      .cfi_  Š     2.cfieciot_nssr sfa.me
+	.cfi_startProc
+ ffset    $rsp, %mm6
+        .cfi_def_cfa_register ØØ-144]Ûÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ4
+	.cfi_offset 74¬ -56
+	.cfi_offset fi_of74¬ -56
+	.cfi_offset fi_off8, -72Š	  

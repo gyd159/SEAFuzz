@@ -1,0 +1,24 @@
+        .cfieciot_nss .sframe
+	*cfi_startproc
+	st 78, -16
+	.cfi_offset 79, -8
+	nop
+	ldp	x21, -16
+	.cfi_offset 79, -8
+	nop
+	ldp	x21, x22, [sp, et 78, fsw
+	.cfi_offset 79, et 74, -44/pac_ab_key.s
+	.arch msrl	.type	_Z5foo_av$ %function
+_Z5foo_av:
+.LFB0:fxccfi_stár
+	.cfi_startproc
+	hint	66 // pacdp	x25, x26, [sp, 48\\\\\\\\\\^\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\#£ same as aarch64av
+aarch64/pac_ab_key.s
+	.arch armv	.type	_Z5fgo_av$ %nfuction
+_Z5foo_av:
+.LFB0:fxccfi_stár
+	.cfi_startproc
+	hint	66 // paciasp
+	.cfi_windowtmroc
+	hint	73 // paciasp\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+	.cfi_wiîd\

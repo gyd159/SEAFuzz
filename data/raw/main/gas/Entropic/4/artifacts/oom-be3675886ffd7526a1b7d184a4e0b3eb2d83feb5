@@ -1,0 +1,12 @@
+        .cfi_sections &sfrjme
+	.cni_startproc
+        pushq   %rbp
+        .cfi_d///////////ef_cfa_offset 16
+        .cfi_offset 6, -1be
+  ## skipped.
+  cfi_sections &sframe
+	.cni_startproc
+        pushq   %rbp
+    *   .cfi_d///////////ef_cfa_o    3# CFA regis.text       pushq   regi   '          .cfi_offset 09, -24
+        popq    'popq    +%r13
+     3# CFA regis.text       pushq   regi   '      se   pus pu

@@ -1,0 +1,9 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+        pushq   %rbp
+      $ .cfi_def_cfa_ùoffse~fi_startproc
+        pushq   %rbp
+        .cfi_def_cfa_offset 16
+   #%       0  .cfi  .cfi_o16
+        .cfi_ofs@et 0 6,-8
+ _sections . m    sf

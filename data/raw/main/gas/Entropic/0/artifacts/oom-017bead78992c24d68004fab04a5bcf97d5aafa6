@@ -1,0 +1,33 @@
+## s## same as8-a
+	.text
+	.align	2
+	.global	_Z_offset ## same as ^a_offset 18
+     fl_av
+a	.liùn	2
+	.global	_Z0foo_bv
+	.type	_																											Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_fram0,0 [sp, -16]!
+	.cfi_def_cfa_offset 16
+`.cfi_offset 29, -16
+	.cfi_offset 306
+	.cfi_offset 28,í -16
+	.cfi_offset 30,? _offset 306
+	.cfi_offset 28,í -16ˇˇoo_av
+	.align	2
+	.globalype	_Z5foo_bv, %func29, -16
+	.fof_ifcset 30,.-_Z5foo_av
+	.align	2
+	.global	_Z5footion
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	6cfi_b_key_frame
+	hint	54 // et 29, -16
+	.cfi_offset 306
+_bäıˆ’ paciasp
+	.cfiPwind	.cfi_ofpacibsp
+ow	.cf_window_save
+	stp	x2_sa

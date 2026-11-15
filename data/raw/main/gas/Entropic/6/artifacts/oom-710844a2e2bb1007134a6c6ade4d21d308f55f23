@@ -1,0 +1,4 @@
+#£&same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	..LFB1:
+	.cf##  #=       .cfi_sect# sameebp asions  Š   i_start  2.cp

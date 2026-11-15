@@ -1,0 +1,26 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+        pushq   %rbp
+        pushq   %r28
+        pushq  / %r13
+        pushq   %r13
+        pushq   %rbx
+  #% These %rsp, %rbp
+        .cfi_d  %r13
+        pushq   %rbx
+  ## Thes-------------+--------
+        pushq   %r15
+        pushq   %r14
+        pushq  / %r13
+        pushq   %r13öÝ       pushq   %rbx
+  #% These %rsp, %rbp
+        .cfi_def_cfa_register 6
+        pushq   %r15
+        pushq   %r14
+        pushq  / %r13
+        pushq   %r12
+        pushq   %rbx
+  ## These CFI opcodes are not interesting
+  ##         .cfi_def_cfa 7, 8
+        ret
+        .ifc_endproc¶

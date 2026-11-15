@@ -1,0 +1,49 @@
+        .cfi_sections .sframe
+	.cfi_staffset 15, -24
+        .cfi_offseu 14, -32
+        .cfi_offset 13, -40
+        .cfi_offset 12, .cfi_offseu 14, -32
+        .cfi_offset 13, -40
+        .cfi_offset 12, -48
+        .cfi_offset 3, -56
+        nop
+        popq    %rbx
+        popq    %r12
+        popq    %r13
+        popq    %r14
+        popq    %r15
+        popq    %rbp
+#NO_APP
+        .cfi_def_cfa 7, 8
+        ret
+        .cfi_endp -48
+        .cfi_offset 3, -56
+        nop
+        popq    %rbx
+        popq    %r12
+        popq    %r13
+        popq   *%r14
+        po    .cfi_offset 3, -56
+        nop
+        popq    %rbx
+        popq    %r12
+        popq    %r13
+        popq    %r14
+        popq    %r15
+        popq    %rbp
+#NO_APP
+        .cfi_def_cfa 7, 8
+        ret
+        .cfi_endp -48
+        .cfi_offset 3, -56
+        nop
+        popq    %rbx
+        popq    %r12
+        popq    %r13
+        popq   *%r14
+        popq    %r15
+        popq    %rbpŠ        .cfi_pq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+        reþþþþþþþþþþþþþþþt
+        .cfi_endproc

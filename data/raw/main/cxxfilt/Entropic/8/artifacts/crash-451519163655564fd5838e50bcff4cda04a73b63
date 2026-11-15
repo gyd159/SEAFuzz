@@ -1,0 +1,763 @@
+# This file holds test cases for th# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demengle-expected for documentation of suppmain::main::heвввввввввввввввввввввввввввввяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяввultS28_D3std3uni7isUpperFNaNbNfwZbTAyaZ12FilterResultZ9MapResult5frontMFNaNdNfZS3std5range22__T10OnlyResultTwVmi1Z10ustc_data_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяэяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяructures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяэяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяввввввввввввввввввввввввввввввввввввввввввввввввввввввв6ObliрationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяя22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяявввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяввultS28_D3std3uni7isUpperFNaNbNfwZbTAyaZ12FilterResultZ9MapResult5frontMFNaNdNfZS3std5range22__T10OnlyResultTwVmi1Z10ustc_data_structures17obligation_forestINster_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяЧяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяявввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввяяяяяяяяяяяяяяяяяяяяяяяяяяяяult5frontMFNaNdNfZS3std5range22__T10OnlyResultTwVmi1Z10ustc_data_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPrperFNaNbNfwZbTAyaZ12FilterResultZ9MapResult5frontMFNaNdNfZS3std5range22__T10OnlyResultTwVmi1Z10ustc_data_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяэяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяructures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяэяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяввввввввввввввввввввввввввввввввввввввввввввввввввввввв6ObliрationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяя22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяявввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяввultS28_D3std3uni7isUpperFNaNbNfwZbTAyaZ12FilterResultZ9MapResult5frontMFNaNdNfZS3std5range22__T10OnlyResultTwVmi1Z10ustc_data_structures17obligation_forestINster_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяЧяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяявввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввяяяяяяяяяяяяяяяяяяяяяяяяяяяяult5frontMFNaNdNfZS3std5range22__T10OnlyResultTwVmi1Z10ustc_data_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяэяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяявввввввввввввввввввввввввввввввввввввввввввввввввввввввв6ObliрationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяя22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяявввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяввultS28_D3std3uni7isUpperFNaNbNfwZbTAyaZ12FilterResultZ9MapResult5frontMFNaNdNfZS3std5range22__T10OnlyResultTwVmi1Z10ustc_data_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяэяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяructures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяэяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяявввввввввввввввввввввввввввввввввввввввввввввввввввввввв6ObliрationForestNtNtNtCsdozMG8Xat=dlang
+_D8demangle4testFjZv
+demangle.test(ireal)
+#
+--format=dlang
+_D8demangle4testFkZv
+demangle.test(uint)
+#
+--format=dlang
+_D8demangle4testFlZv
+demangle.test(long)
+#
+--format=dlang
+_D8demangle4testFmZv
+demangle.test(ulong)
+#
+--format=dlang
+_D8demangle4testFnZv
+demangle.test(typeof(null))
+#
+--format=dlang
+_D8demangle4testFNnZv
+demangle.test(typeof(*null))
+#
+--format=dlang
+_D8demangle4testFoZv
+demangle.test(ifloat)
+#
+--format=dlang
+_D8demangle4testFpZv
+demangle.t9FIu_21rustc_trait_selection3traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяя22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяввввввввввввввввввввввввввввввввввввввввввввввввввввв  Zввввввввввввввввввввввввввввввввввввввяяяяяяяяяяяяяяяяяяяяяяяяяяяяult5frontMFNaNdNfZS3std5range22__T10OnlyResultTwVmi1Z10ustc_data_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяэяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяя# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# # This file holds test cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests
+#
+--format=dlang
+_Dmain
+D main
+#
+--f)
+#
+--format=dlang
+_D8demangle4testFPaZv
+demangle.te--format=dlang
+_D6object6Object8opEqualsFC6ObjectZi
+object.Object.opEquals(Object)
+#
+--format=dlang
+_D6object6Object8opAssignFC6ObjectZi
+object.Object.opAssign(Object)
+#
+--f4testVAiAiZv
+#
+--format=dlang
+_D14__T4testS123aZv
+_D14__T4testS12                                                                                                                   3aZv
+#
+--format=dlang
+_D15__T4testVHiiAiZv
+_D15__T4testVHiiAiZv
+#
+--format=dlang
+_D15__T4testVfe0p1Zv
+_D15__T4testVfe0p1Zv
+#
+--format=dlang
+_D15__T4testVAyaa1_
+_D15__T4testVAyaa1_
+#
+--format=dlang
+_D16__T4testVAyaa0aZv
+_D16__T4testVAyaa0aZv
+#
+--fp1Zv
+#
+--format=dlang
+_D15__T4testVAyaa1_
+_D15__T4testVAyaa1_
+#
+--format=dlang
+_D16__T4testVAyaa0aZv
+_D16__T4testVAxaa0aZv
+#
+--format=dlang
+_D18__T4testVAyaa1_0GZv
+_D18__T4testVAyaa1_0GZv
+#
+--format=dlang
+_D18__T4testVAyaa1_YYZv
+_D18__T4testVAyaa1_YYZv
+#
+--format=dlang
+_D4test3fooAa
+test.foo
+#
+--f
+_D15__T4testVfe0p1Zv
+#
+--format=dlang
+_D15__T4testVAyaa1_
+_D15__T4testVAyaa1_
+#
+--format=dlang
+_D16__T4testVAyaa0aZ]
+_D16__T4testVAyaa0aZv
+#
+--format=dlang
+_D18__T4testVAyaa1_0GZv
+_D18__T4testVAD8demangle4testFDFNmZaZv
+demangle.test(char() @live delegate)
+#
+--ofrmat=dlang
+_D8demangle4testFDFNaNbZaect6Object8opAssignFC6ObjectZi
+object.Object.opAssign(Object)
+#
+--format=dlang
+_[D4test2dgDFiYd
+test.dg
+#
+--format=dlang
+_D1a1bi
+a.b
+#
+--format=dlang
+_D1a1bPFiZi
+a.b
+#
+--format=dlang
+_D4test34__T3barVG3uw3_616263VG3wd3_646566Z1xi
+test.bar!("abc"w, "def"d).x
+#
+--format=dlang
+_D4test21__T3funVwi4294967295Z3funFNaNbNiNfZv
+test.fun!('\Uffffffff').fun()
+#
+--format=dlang
+_D4test21__T3funVwi4294967296Z3funFNaNbNif
+Dv4_ZNtest21__T3funVwi4294967296Z3funFNaNbNiNfZv
+#
+--format=dlang
+_D7plugin8generateFiiZAya
+plugin.generate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAxa
+plugin.generate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAOa
+plugin.generate(int, int)
+#
+--format=dlang
+_D8demangle3fnAFZ3fnBMFZv
+demangle.fnA().fnB()
+#
+--format=tlang
+_D8demaggle4mainFZ1S3fnCMFZv
+demangle.main().S.fnC()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnDMFZv
+demangle.main().S.fnD()
+#
+--format=dlang
+_D8demangle4mainFZ5localMFZi
+demangle.main().local()
+#
+--format=dlang
+_D3std5ascii9uppercaseyAa
+std.ascii.uppercase
+#
+--format=dlang
+_D3std6stream9BOMEndianyG5E3stdaZv
+demangle.test(retnr uchar() delegate)
+#
+--format=dlang
+_D8demangle4testFDFNjZaZv
+demangle.test(char() return delegate)
+#
+--format=dlang
+_D8demangle4testFNjNkDF616263VG3wd3_646566Z1xi
+test.bar!("abc"w, "def"d).x
+#
+--format=dlang
+_D4test21__T3funVwi4294967295Z3funFNaNbNiNfZv
+test.fun!('\Uffffffff').fun()
+#
+--format=dlang
+_D4test21__T3funVwi4294967296Z3funFNaNbNif
+Dv4_ZNtest21__T3funVwi4294967296Z3funFNaNbNiNfZv
+#
+--format=dlang
+_D6plugin8generateFiiZAya
+plugin.generate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAxa
+plugin.generate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAOa
+plugin.generate(int, int)
+#
+--format=dlang
+_D8demangle3fnAFZ3fnBMFZv
+demangle.fnA().fnB()
+#
+--format=tlang
+_D8demangle4mainFZ1S3fnCMFZv
+demangle.main().S.fnC()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnDMFZv
+demangle.main().S.fnD()
+#
+--format=dlang
+_D8demangle4mainFZ5localMFZi
+demangle.main().local()
+#
+--foolKb  41_E
+<const_geфneric::Bool<true>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_geernicINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=auўўўўўўўўўўўўўўўўўўўўўўўўўўўўўўўўўto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=auto
+_RNvNvMCs4fqI2P2rA04_13const_genenForest<rustc_tfcdaea5d79bE.llvm.A5310EB9@@16
+baRRegion, ref void[], ulong)
+s..DerefMut$GT$9deref_mut17hf299b860dc5a831cE
+t=rust
+_ZN4core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bfqI2P2rA04t13a_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяявввввввввввввввввввввввввввввввввввввввввввввввввввввввв6ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPressdicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяявввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяя517020237817239694
+<rustc_data_structures::obligation_forest::ObligationForest<rustc_trait_selection::traits::fulfill::PendingPredicateObligation>>::register_obligation_at
+--format=rust
+_ZN4core3ptr85drop_in_place$LT$std..rt..lang_start$LT$$LP$$RP$$GT$..яяяяяяяя517020237817239694
+<rustc_data_structures::obligation_forest::Obligationst(char*)
+#
+--format=dlang
+_D8demangle4testFPPaZv
+demangle.test(char**)
+#
+--format=dlang
+_D8demangle4testFPPPaZv
+denangle.test(char***)
+DxFNaNdNeZbZ16RoundRobinBuffeяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяявв[ltS28_D3std3uni7isUpperFNaNbNfwZbTAyaZ12FilterResultZ9MapResult5frontMFNaNdNfZS3std5range22__T10OnlyResultTwVmi1Z10ustc_data_structures17obligatlfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяыяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяя22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяввввввввввввввввввввввввввввввввввввввввввввввввввввв  ZввввввввввввввввввввввввввввtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяэяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяructures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяэяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяявввввввввввввввввввввввввввввввввввввввввввввввввввввввв6ObliрationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection3traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяя22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяя
+#
+--format=dlang
+_D16__T4testVAyaa0aZv
+_D16__T4testVAxaa0aZv
+#
+--format=dlang
+_D18__T4testVAyaa1_0GZv
+_D18__T4testVAyaa1_0GZv
+#
+--format=dlang
+_D18__T4testVAyaa1_YYZv
+_D18__T4testVAyaa1_YYZv
+#
+--format=dlang
+_D4test3fooAa
+test.foo
+#
+--f
+_D15__T4testVfe0p1Zv
+#
+--format=dlang
+_D15__T4testVAyaa1_
+_D15__T4testVAyaa1_
+#
+--format=dlang
+_D16__T4testVAyaa0aZ]
+_D16__T4testVAyaa0aZv
+#
+--format=dlang
+_D18__T4testVAyaa1_0GZv
+_D18__T4testVAD8demangle4testFDFNmZaZv
+demangle.test(char() @live delegate)
+#
+--ofrmat=dlang
+_D8demangle4testFDFNaNbZaect6Object8opAssignFC6ObjectZi
+object.Object.opAssign(Object)
+#
+--format=dlang
+_[D4test2dgDFiYd
+test.dg
+#
+--format=dlang
+_D1a1bi
+a.b
+#
+--format=dlang
+_D1a1bPFiZi
+a.b
+#
+--format=dlang
+_D4test34__T3barVG3uw3_616263VG3wd3_646566Z1xi
+test.bar!("abc"w, "def"d).x
+#
+--format=dlang
+_D4test21__T3funVwi4294967295Z3funFNaNbNiNfZv
+test.fun!('\Uffffffff').fun()
+#
+--format=dlang
+_D4test21__T3funVwi4294967296Z3funFNaNbNif
+Dv4_ZNtest21__T3funVwi4294967296Z3funFNaNbNiNfZv
+#
+--format=dlang
+_D7plugin8generateFiiZAya
+plugin.generate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAxa
+plugin.generate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAOa
+plugin.generate(int, int)
+#
+--format=dlang
+_D8demangle3fnAFZ3fnBMFZv
+demangle.fnA().fnB()
+#
+--format=tlang
+_D8demaggle4mainFZ1S3fnCMFZv
+demangle.main().S.fnC()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnDMFZv
+demangle.main().S.fnD()
+#
+--format=dlang
+_D8demangle4mainFZ5localMFZi
+demangle.main().local()
+#
+--format=dlang
+_D3std5ascii9uppercaseyAa
+std.ascii.uppercase
+#
+--format=dlang
+_D3std6stream9BOMEndianyG5E3stdaZv
+demangle.test(retnr uchar() delegate)
+#
+--format=dlang
+_D8demangle4testFDFNjZaZv
+demangle.test(char() return delegate)
+#
+--format=dlang
+_D8demangle4testFNjNkDF616263VG3wd3_646566Z1xi
+test.bar!("abc"w, "def"d).x
+#
+--format=dlang
+_D4test21__T3funVwi4294967295Z3funFNaNbNiNfZv
+test.fun!('\Uffffffff').fun()
+#
+--format=dlang
+_D4test21__T3funVwi4294967296Z3funFNaNbNif
+Dv4_ZNtest21__T3funVwi4294967296Z3funFNaNbNiNfZv
+#
+--format=dlang
+_D6plugin8generateFiiZAya
+plugin.generate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAxa
+plugin.generate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAOa
+plugin.generate(int, int)
+#
+--format=dlang
+_D8demangle3fnAFZ3fnBMFZv
+demangle.fnA().fnB()
+#
+--format=tlang
+_D8demangle4mainFZ1S3fnCMFZv
+demangle.main().S.fnC()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnDMFZv
+demangle.main().S.fnD()
+#
+--format=dlang
+_D8demangle4mainFZ5localMFZi
+demangle.main().local()
+#
+--foolKb  41_E
+<const_geфneric::Bool<true>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_geernicINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=auўўўўўўўўўўўўўўўўўўўўўўўўўўўўўўўўўto
+_RMCs4fqI2P2rA04_13const_genericINtB                              0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=auto
+_RNvNvMCs4fqI2P2rA04_13const_genenForest<rustc_tfcdaea5d79bE.llvm.A5310EB9@@16
+baRRegion, ref vorestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяэяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяявввввввввввввввввввввввввввввввввввввввввввввввввввввввв6ObliрationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection3traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяя22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяввввввввввввввввввввввввввввввввввввввввввввввввввввв  Zввввввввввввввввввввввввввввввввввввввяяяяяяяяяяяяяяяяяяяяяяяяяяяяult5frontMFNaNdNfZS3std5range22__T10OnlyResultTwVmi1Z10ustc_data_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8яяяяst cases for the Rust demangler.[
+# Each test case looks like this:
+#  options
+#  input to be demangled
+Z2 documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in tions should not contain just numbers.
+--format=auto
+gZN8main4$99$17he7genericINtB0_48TypeInTypeIn Rust demangler.[
+# Each test case looks like this:
+#  options
+#  input to be demangled
+Z2 documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# Howevr, blank lines in tions should not contain just numbers.
+--format=auto
+gZN8main4$99$17he7genericINtB0_48TypeInTypeInfo, out TypeIler.[
+# Each test case looks like this:
+#  options
+#  input to be demangled
+Z2 documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in tions should not contain just numbers.
+--format=auto
+gZN8main4$99$17he7genericINtB0_48TypeInTypeIn Rust demangler.[
+# Each test case looks like this:
+#  options
+#  input to be demangled
+Z2 documentation of supported options.
+#
+# A line starting with `#' iun_manfo)
+#
+--format=dlang
+_D2rt6dmain211_d_run_mainUiTPamat=dlang
+_D2rt6dmain211_d_run_mainUiPPaPUAAaZi of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in tions should not contain just numbers.
+--format=auto
+gZN4main4$99$17he7genericINtB0_48TypeInTypeInfo, out TypeInfo)
+#
+--format=dlang
+_D1rt6dmain211_d_run_mainUiTPamat=dlang
+_D2rt6dmain211_d_run_mainUiPPaPUAAaZiZuEL_ECs1iopQbuBiw2_3std
+7tryExecMFMDFZvQuexpected for documentation of supported options.
+#
+# A line sta
+--fo…………………………………………………………………………………rmat=dlang
+_D8demangleZ
+dEmangle
+#
+--format=dlang
+_D8demangle4testZ
+’љ’ћ‘“љb.test
+#
+--format=dlang
+_D8demqngle4tesZuEL_ECs1iopQbuBiw2_3std
+7tryExecMFMDFZvQuexpected for documentation of supported options.
+#
+# A line sta
+--fo…………………………………………………………………………………rmat=dlang
+_D8demangleZ
+dEmangle
+#
+--format=dlang
+_D8demangle4testZ
+’љ’ћ‘“љ.test
+#
+--format=dlang
+_D8demqngle4testPFLAiYi
+demangle.test
+#
+--format=dlang
+_D8  'demangle4testFZv
+demangle.test()
+#
+--format=dlang
+"-_D7demangle4testMFZ2 documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in tions should not contain just numbers.
+--format=auto
+gZN4main4$99$17he7genericINtB0_48TypeInTypeInfo, out TypeInfo)
+#
+--format=dlang
+_D2rt6dmain211_d_run_mainUiTPamat=dlanfo, out TypeInfo)
+#
+--format=dlang
+_D2rt6dmain211_d_run_mainUiTPamat=dlang
+_D2rt6dmain211_d_run_mainUiPPaPUAAaZi of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in tions should not contain just numbers.
+--format=auto
+gZN4main4$99$17he7genericINtB0_48TypeInTypeInfo, out TypeInfo)
+#
+--format=dlang
+_D2rt6dmain211_d_run_mainUiTPamat=dlang
+_D2rt6dmain211_d_run_mainUiPPaPUAAaZiZuEL_ECs1iopQbuBiw2_3std
+7tryExecMFMDFZvQuexpected for documentation of supported options.
+#
+# A line sta
+--fo…………………………………………………………………………  Fmat=dlang
+_D8demangleZ
+dEmangle
+#
+--format=dlan7genericINtB0_48TypeInTypeInfo, out TypeInfo)
+#
+--format=dlang
+_D2rt6dmain211_d_run_mainUiTPamat=dlang
+_D2rt6dmain211_d_run_mainUiPPaPUAAaZiZuEL_ECs1iopQbuBiw2_3std
+7tryExecMFMDFZvZvalloc::alloc::box_fr
+rt.dmai5Z3funFNaNbNiNfZv
+test.fun!('\Uffffffff').fun()
+#
+--format=dlang
+_D4test21__T3funVwi4294967296Z3funFNaNbNif
+Dv4_ZNtest21__T3funVwi4294967296Z3funFNaNbNiNfZv
+#
+--format=dlang
+_D6plugin8generateFiiZAya
+plugin.generate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAxa
+plugin.generate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAOa
+plugin.generate(int, int)
+#
+--format=dlang
+_D8demangle3fnAFZ3fnBMFZv
+demangle.fnA().fnB()
+#
+--format=tlang
+_D8demangle4mainFZ1S3fnCMFZv
+demangle.main().S.fnC()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnDMFZv
+demangle.main().S.fnD()
+#
+--format=dlang
+_D8demangle4mainFZ5localMFZi
+demangle.main().local()
+#
+--foolKb  41_E
+<const_geфneric::Bool<true>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_geernicINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=auўўўўўўўўўўўўўўўўўўўўўўўўўўўўўўўўўto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=auto
+_RNvNvMCs4fqI2P2rA04_13const_genenForest<rustc_tfcdaea5d79bE.llvm.A5310EB9@@16
+baRRegion, ref void[], ulong)
+s..DerefMut$GT$9deref_mut17hf299b860dc5a831cE
+t=rust
+_ZN4core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bfqI2P2rA04t13a_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяявввввввввввввввввввввввввввввввввввввввввввввввввввввввв6ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPressdicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяявввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяя517020237817239694
+<rustc_data_structures::obligation_forest::ObligationForest<rustc_trait_selection::traits::fulfill::PendingPredicateObligation>>::register_obligation_at
+--format=rust
+_ZN4core3ptr85drop_in_place$LT$std..rt..lang_start$LT$$LP$$RP$$GT$..яяяяяяяя517020237817239694
+<rustc_data_structures::obligation_forest::Obligationst(char*)
+#
+--format=dlang
+_D8demangle4testFPPaZv
+demangle.test(char**)
+#
+--format=dlang
+_D8demangle4testFPPPaZv
+denangle.test(char***)
+DxFNaNdNeZbZ16RoundRobinBuffeяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяявв[ltS28_D3std3uni7isUpperFNaNbNfwZbTAyaZ12FilterResultZ9MapResult5frontMFNaNdNfZS3std5range22__T10OnlyResultTwVmi1Z10ustc_data_structures17obligatlfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяя22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяввввввввввввввввввввввввввввввввввввввввввввввввввввв  ZввввввввввввввввввввввввввввtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяэяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяructures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяэяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяявввввввввввввввввввввввввввввввввввввввввввввввввввввввв6ObliрationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection3traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяя22register_obligation_atB1v_.llvm.8яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяl() pure @property @trusted delegate const).RoundRobinBuffer.prime()
+#
+--format=dlang
+_D4core4stdc5errnoQgFZi
+core.stdc.errno.errno()
+#
+--format=dlang
+_D4testFS10structnameQnZb
+test(structname, structname)
+#
+--format=dlang
+_D3std11parallelism__T4TaskS8uniяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяttest3cmpTAyaTQeZQBb6__dtorMFNfZv
+std.parallelism.Task!(unittest.cmp, immutable(char)[], immutable(chult, ulong, ulong).Task.impl(void*)
+#
+--format=dlang
+_D2rt5minfo16__unittestL518_6FZ12UTModuleInfo6_   rMFNckZS2rt5m       ћunittestL518_6FZ12UTModuleInflo[::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=rust
+_RNvMC0INtC8arrayvec8ArrayVech# This file holds test cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests
+#
+--format=dlang
+_Dmain
+D main
+#
+--format=dlang
+_D8demangleZ
+demangle
+#
+--format=dlang
+_D8demangle4testZ
+demangle.test
+#
+--format=d       demangle4testPFLAiYi
+demangle.test
+#
+--format=dlang
+_D8demangle4testFZv
+demangle.test()
+#
+--format=dlang
+_D8demangle4testMFZ2fnMFZv
+demangle.test().fn()
+#
+--format=dlang
+_D8demangle4testFaZv
+demangle.test(char)
+#
+--format=dlang
+_D8demangle4testFbZv
+demangle.test(bool)
+#
+--format=dlang
+_D8demangle4testFcZv
+demangle.test(creal)
+#
+--format=dlang
+_D8demangle4testFdZv
+demangle.test(dowble)
+#
+--format=dlang
+_D8demangle4testFeZv
+demangle.test(real)
+#
+--format=dlang
+_D8demangle4testFfZv
+demangle.test(float)
+#
+--format=dlang
+_D8demangle4testFgZv
+demangle.test(byte)
+#
+--format=dlang
+_D8demangle4testFhZv
+demangle.test(ubyte)
+#
+--format=dlang
+_D8demangle4testFiZv
+demangle.test(int)
+#
+--forma pure nothrow @nogc @safe delegate).getopt(ref immutable(char)[][], immutable(char)[], void(immutable(char)[]) pure nothrow @nogc @safe delegate, immutable(char)[], void(immutable(char)[]) pure nothrow @nogc @safe delegate)
+#
+--format=dlang
+_D3std5regex8internal9kickstart__T7ShiftOrTaZQl11ShiftThread__T3seanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_tS_DQCqQCpQCmQCg__TQBzTaZQCfQBv10setInvMaskMFNaNbNiNfkkZvZQCjMFNaNfwZv
+std.regex.internal.E
+<conkickstart.ShiftOr!(char).ShiftOr.ShiftThread.set!(std.regex.internal.kickstart.ShiftOr!(char).ShiftOr.ShiftThread.setInvMask(uint, uint)).set(dchar)
+#
+--format=dlang
+_D3std5stdio4File__T8lockImplX10LockFileExTykZQBaMFmmykZi
+std.stdio.File.lockImpl!(LockFileEx, immutable(uint)).lockImpl(ulong, ulong, immutable(uint))
+#
+--format=dlang
+_D3std9algorithm9iteration__T12FilterResultSQBq8typecons__T5TupleTiVAyaa1_61TiVQla1_62TiVQvar)[]).Task.~this()
+#
+--format=dlaa1_63ZQBm__T6renameVHiQBtA2i0a1_63i2a1_61ZQBeMFNcZ9_l_bmaad1TAiZQEw9__xtoHashFNbNeKxSQGsQGrQGk__TQGdSQHiQFs__TQFmTiVQFja1_61TiVSFua1(char))
+#
+--format=dlang
+_D8demangle4testFyaZv
+demangle.test(immutable(char))
+#
+--format=dlang
+_D8demangle4testFNgaZv
+demangle.test(inout(char))
+#
+--format=dlang
+_D8demangle4testFOxaZv
+demangle.test(shared(const(char)))
+#
+--format=dlang
+_D8demangle4testFONgaZv
+demangle.test(shared(inout(char)))
+#
+--format=dlang
+_D8demangle4testFAaZv
+demangle.test(char[])
+#
+--format=dlang
+_D8demangle4testFAAaZv
+demangle.test(char[][])
+#
+--format=dlang
+_D8demangle4testFAAAaZv
+demangle.test(char[][][])
+#
+--format=dlang
+_D8demangle4testFG42aZv
+demangle.tesng
+_D13testexpansion44__T1sTS13testexpansion8__T1sTiZ1sFiZ6ResultZ1sFS13testexpansion8__T1sTiZ1# This file holds test cases for the D demangler.
+VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV# Eact(charh t[42])
+#
+-e

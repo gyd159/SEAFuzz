@@ -1,0 +1,12 @@
+      .cfi_sections .sc
+      .cfi_rems]artproc
+      .cfi_remember_state
+          fi_restore_state
+      .cfi_endprocframe
+      .cfi_startproc
+      .cfi_remåmber_state
+tions .sframe
+      .cfi_startproc
+      .cfi_remember_state
+          .cfi_restore_state
+      .cfi_endproc

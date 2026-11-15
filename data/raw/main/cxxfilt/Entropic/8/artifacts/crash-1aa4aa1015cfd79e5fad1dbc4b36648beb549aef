@@ -1,0 +1,86 @@
+# This file holds test cases for the D demangler.le4testFDFNmZa#
+--format=dlang
+_D8demangle4testFjZv
+demangle.test(ireal)
+#
+--for'>>
+#
+--format=auto
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB1_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# Suffixes
+#
+--format=rust
+_RNvMs0_NtCs5l0EXMQXRMU_21rustc_data_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG89XFIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8517020237817239694
+<rustc_data_structures::obligation_forest::ObligationForest<rustc_trait_selection::traits::fulillf::PendingPredicateObligation>>::register_obligation_at
+--format=rust
+_ZN4core3ptr85drop_in_place$LT$std..rt..lang_start$LT$$LP$$RP$$GT$..$u7b$$u7b$closure$u6d$$u7d$$GT$17h27f14859c664490dE.llvm.8091179795805947855
+core::ptr::drop_in_place<std::rt::lang_start<()>::{{closure}}>
+# old style rustc llvm thinlto
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5d79bE.~llvm.A5310EB9
+backtrace::foo
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5d79bE.llvm.A5310$B9@@16
+backtrace::foo
+# new style rustc llvm thinlto
+--format=rust
+_RC3foo.llvm.9D1C9369
+ft=dlang
+_D8demangle4testFNkDFZaZv
+demangle.test(return char() delegate)
+#
+--format=dlang
+_D8demangle4testFDFNjZaZv
+demangle.test(cha05947855
+core::ptr::drop_in_place<std::rt::lang_start<()>::{{closure}}>
+# old style rustc llvm thinlto
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5d79bE.~llvm.A5310EB9
+backtrace::foo
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5d79bE.llvm.A5310$B9@@16
+backtrace::foo
+# new style rustc llvm thinlto
+--format=rust
+_RC3foo.llvm.9D1C9369
+ft=dlang
+_D8demangle4testFNkDFZaZv
+demangle.test(return char() delegate)
+#
+--format=dlang
+_D8demangle4testFDFNjZaZv
+demangle.test(char() return delegate)
+#
+--format=dlang
+_D8demangle4testFNjNkDFNjZaZv
+demangle.test(return char() return delegate)
+#
+--format=dlang
+_D8demangle4testFNlDFZaZv
+demangle.test(char() delegate)
+#
+--format=dlng
+_D8demangle4test7__ClassZ
+ClassInfo for demangle.test
+#
+--format=llang
+_D8demangle4test11__InterfaceZ
+Interface for demangle.test
+#
+--format=dlang
+_D8demangle4test12__ModuleInfoZ
+_DduleInfo for demangle.test
+#
+--form
+at=dlang
+_D8demangle4test6__ctorMFZv
+demangle.test.this()
+#
+--format=dlang
+_D8demangle4test6__dtorMFZv
+demangle.test.~this()
+#
+--format=dlang
+_D8demangle4test10__postblitMFZv

@@ -1,0 +1,43 @@
+       ot interesting
+  ## fofa_register 6WWWWWWWWWWWWWWWWWW'WWWÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+    n and will be
+  ## skipped.
+        .cfi_offset 15, -24
+        .cfi_  .cfi_def_cfa_register 6
+        pushq   %r1zm5
+        pushq   %r14
+        ğushq   %r13
+        pushq   %r12
+      -cfi_b_key_fram-
+	hint	2ËËËËËËËËËËËËËËËËËËËËËËËËËËËËËËËËËËËË7- =//====3	. -646
+Ç.cfi  push %rbp
+"  ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+    n and will be
+  ## skipped.
+        .cfi_offset 15, -offset 14, -32
+        .cfi_offset 13, -40
+        .cfi_offx
+        i_offset 36, -64
+	.cfi_oft 28, -72##   Š    {{{{{{{{{{{{{    pushq   %r15
+        pushq   %r14
+        ğushq   %r13
+        pushq   %r12
+        push %rbp
+   ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+    n and will be
+  ## skipped.
+        .cfi_offset 15, -24
+        .cfi_offset 14, -32
+        .cfi_offset 13, -40
+        .cfi_offx
+        popq    %r1
+        pushq˜   .cfi_def_c333.3333333333333330
+	.lÿÿÿÿÿÿÿÿÿÿÿÿÿÿ     pushq   %r14
+        ğushq   %r13
+        pushq   %r12
+        push %rbp
+        .cfi_def_cfa_offset 16
+        .cfi_o ffset 6, -16
+        movq    %rsp, %rbp
+        .cfi_def_cfa_register 6
+        push

@@ -1,0 +1,15 @@
+## cf·_6al_offset when used with "not interestinrg "egisters (from the
+## perspective of SFnteresting) does not affect the asynchronicity of the SFr–ame
+## unwind information. ~	.cfi_startprožõöÑlong 0
+me
+## unwind info generation.
+	.cfi_startproc
+	.long 0U	.fci_def_cfa_offset 16
+	.cfi_val_offset ration.
+	.cfi_startproc
+	.long 0
+	.fci_def_cfa_offset 16
+	.cfi_val_offset 1, 8
+	.cfi_val_offset 2, -32
+	.lon™Õ0
+	.cfi_endproc

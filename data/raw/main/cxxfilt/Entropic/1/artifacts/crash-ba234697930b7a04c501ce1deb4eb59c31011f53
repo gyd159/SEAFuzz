@@ -1,0 +1,1256 @@
+# This file holds test cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported optauto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceIB9N_y4IterhENuNgNoBb_4iter8iterator8Iterator9rpangle15__T4testVdeNANZv
+demangle.test!(loc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=rust
+_RvNMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+_D8demangle4t__ClassZv
+demangle.test(lazy long, int)
+#
+--format=dlang
+_D8demangle4testFLC6ObjectLDFLiZiZi
+demangle.test(lazy Object, lazy int(lazy int) delegate)
+#
+--format=dlang
+_D8demangle9__T4testZv
+demangle.test!()
+#
+--format=dlang
+_D8demangle9__U4testZv
+demangle.test!()
+#
+--format=dlang
+_D8demangl�e11__T4testTaZv
+demangle.test!(char)
+#
+--fort.UnknownAddressReference.this(core.sys.posix.sys.socket.sockaddr*, uint)
+#
+--format=dlang
+_D8demangle20__T2fnVAiA4i1i2i3i4Z2fnFZv
+demangle.fn!([1, 2, 3, 4]).fn()
+#
+--format=dlang
+_D8demmat=dlang
+_D8demangle4testFHAbaZv
+demangle.test(char[bool[]])
+#
+--format=dlang
+_D8demangle4testFHG42caZv
+demangle.test(char[creal[42]])
+#
+--format=dlang
+_D8demangle4testFAiXv
+demangle.test(int[]...)
+#
+--format=dlang
+_D8demangle4testFLAiXv
+demangle.test(lazy int[gle.test!(symbol.foo.bar())
+#
+--format=dlang
+_D8demangle19__T4testTaS6symbolZv
+demangle.test!(char, symbol)
+#
+--format=dlang
+_D8demangle19__T4testS6symbolTaZv
+demangle.test!(symbol, char)
+#
+--format=dlang
+_D8demangle12__T4testHTaZv
+demangle.test!(e..ops..Deref$GT$5deref17h19f2ad4920655e85E
+<core::ptr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN11issue_609253foo37Foo$LT$issue_60925..llv$u6d$..Foo$GT$3foo17h059a991a004536adE
+issue_60925::foo::Foo<issue_60925::llvm::Foo>::foo
+--format=rust
+_ZN4core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bd6E
+core::ops::function::FnOnce::call_ob$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bd6E
+core::ops::function::FnOnce::call_once{{vtable.shim}}
+#
+############
+#
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading dangle11__T2fnVii1Z2fnFZv
+demangle.fn!(1).fn()
+#
+--format=dlang
+_D8demangle26__T2fnVS8demangle1SS2i1i2Z2fnFZv
+demangle.fn!(demangle.S(1, 2)).fn()
+#
+--format=dlang
+_D8demangle13__T2fnVeeNANZ2fnFZv
+demangle.fn!(NaN).fn()
+#
+--format=dlang
+_D8demangle14__T2fnVeeNINFZ2fnFZv
+demangle.fn!(-Inf).fn()
+#
+--format=dlang
+_D8demangle13__T2fnVeeINFZ2fnFZv
+demangle.fn!(Inf).fn()
+#
+--format=dlang
+_D8demangle21__T2fnVHiiA2i1i2i3i4Z2fnFZv
+demangle.fn!([1:2, 3:n
+����format=rust
+_Zooooooooot_4]).fn()
+#
+--format=dlang
+_D8demangle2fnFNgiZNgi
+demangle.fn(inout(int))
+#
+--format=dlang
+_D8demangle29__T2fnVa97Va9Va0Vu257Vw65537Z2fnFZv
+demangleNbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed-format=dlang
+_D1a1bPFiZi
+a.b
+#
+--format=dlang
+_D4test34__T3barVG3uw3_616263VG3wd3_646566Z1xi
+test.bar!("abc"w, "def"d).x
+#
+--format=dlang
+_D4test21__T3funVwi42904536adE
+issue_60925::foo::Foo<issue_60925::llvm::Foo>::foo
+--format=rust
+_ZN4core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bd6E
+core::ops::function::FnOnce::call_ob$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bd6E
+core::ops::function::FnOnce::call_once{{vtable.shim}}
+#
+############
+#
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_�&��ადილი
+# Closure path elements.
+--�ormat=rust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=rust
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iteratoc4f30bd6E
+core::ops::function::FnOnce::call_once{{vtable.shim}}
+#
+############
+#
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generhiUs file hold.
+#
+############
+#
+# Coverage Tests (legacy)
+FFFFFFFFFFFFFFFFFFFFFFFFFFFVFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFYFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFYFFFFFFFFFFFFFFFFFFFFFFF3const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4Charwith `#' is ignore4967295Z3funFNaNbNiNfZv
+test.fun!('\Uffffffff').fun()
+#
+--format=dlang
+_D4test21__T3funVwi4294967296Z3funFNaNbNiNfZv
+_D4test21__T3funVwi4294967296Z3funFNaNbNiNfZv
+format=dlang
+_D8demangle4test6__dtorMFZv
+demangle.test.~this()
+#
+--format=dlang
+_D6demangle4test10__postblitMFZv
+demangle.test.this(this)
+#
+--format=dlang
+_D8demangle4testFHAbaZv
+demangle.test(char[bool[]])
+#
+--format=dlang
+_D8demangle4testFHG42caZv
+demangle.test(char[creal[42]])
+#
+--format=dlang
+_D8demangle4testFAiXv
+demangle.test(int[]...)
+#
+--format=dlang
+_D8demangle4testFLAiXv
+demangle.test(lazy int[gle.test!(symbol.foo.bar())
+#
+--format=dlang
+_D8demangle19__T4testTaS6symbolZv
+demangle.test!(char, symbol)
+#
+--format=dlang
+_D8demangle19__T4testS6symbolTaZv
+demangle.test!(symbol, char)
+#
+--format=dlang
+_D8demangle12__T4testHTaZv
+demangle.test!(e..ops..Deref$GT$5deref17h19f2ad4920655e85E
+<core::ptr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN11issue_609253foo37Foo$LT$issue_60925..llv$u6d$..Foo$GT$3foo17h059a991a004536adE
+issue_60925::foo::Foo<issue_60925::llvm::Foo>::foo
+--format=rust
+_ZN4core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bd6E
+core::ops::function::FnOnce::call_ob$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bd6E
+core::ops::function::FnOnce::call_once{{vtable.shim}}
+#
+############
+#
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_�&��ადილი
+# Closure path elements.
+--format=rust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=rust
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iteratoc4f30bd6E
+core::ops::function::FnOnce::call_once{{vtable.shim}}
+#
+############
+#
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generhiUs file hold.
+#
+############
+#
+# Coverage Tests (legacy)
+FFFFFFFFFFFFFFFFFFFFFFFFFFFVFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFYFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFYFFFFFFFFFFFFFFFFFFFFFFF3const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4Charwith `#' is ignored.
+# However, blank lines i non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT       $Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9E
+parse_tsan::main
+#
+--format=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN4core3str9from_utf817hdcea28871313776dE
+core::str::from_utf8
+#
+--format=rust
+_ZN4core3mem7size_of17h18bde9bb8c22e2cfE
+core::mem::size_of
+#
+--format=rust
+_ZN5alloc4heap8allocate17hd55c03e6cb81d924E
+alloc::heap::allocate
+#
+--format=rust
+_ZN4core3ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$RT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_7       $alloc..raw_vec..RawVec$LT$T$GT$$GT$6double17h4166e2b47539e1ffE
+<alloc::raw_vec::RawVec<T>>::double
+#
+--format=rust
+_ZN39_$LT$collections..vec..Vec$LT$T$GT$$GT$4push17hd4b6b23c1b88141aE
+<collections::vec::Vec<T>>::push
+#
+--format=rust
+_ZN70_$LT$collections..vec..Vec$LT$T$GT$$u20$as$u20$core..ops..DerefMut$GT$9deref_mut17hf299b860dc5a831cE
+<collections::vec::Vec<T> as core::ops::DerefMut>::deref_mut
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17hc784b4a166cb5e5cErs.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_სადილი
+# Closure path elements.
+--format=rust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=rust
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=rust
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+_D8demangle4t__ClassZv
+demangle.test(lazy long, int)
+#
+--format=dlang
+_D8demangle4testFLC6ObjectLDFLiZiZi
+demangle.test(lazy Object, lazy int(lazy int) delegate)
+#
+--format=dlang
+_D8demangle9__T4testZv
+demangle.test!()
+#
+--format=dlang.test!(symbol, char)
+#
+--format=dlang
+_D8demangle12__T4testHTaZv
+demangle.test!(e..ops..Deref$GT$5deref17h19f2ad4920655e85E
+<core::ptr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN11issue_609253foo37Foo$LT$issue_60925..llv$u6d$..Foo$GT$3foo17h059a991a004536adE
+issue_60925::foo::Foo<issue_60925::llvm::Foo>::foo
+--format=rust
+_ZN4core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bd6E
+core::ops::function::FnOnce::call_ob$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bd6E
+core::ops::function::FnOnce::call_once{{vtable.shim}}
+#
+############
+#
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_�&��ადილი
+# Closure path elements.
+--format=rust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=rust
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iteratoc4f30bd6E
+core::ops::function::FnOnce::call_once{{vtable.shim}}
+#
+############
+#
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generhiUs file hold.
+#
+############
+#
+# Coverage Tests (legacy)
+FFFFFFFFFFFFFFFFFFFFFFFFFFFVFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFYFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFYFFFFFFFFFFFFFFFFFFFFFFF3const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4Charwith `#' is ignored.
+# However, blank lines i non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT       $Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9E
+parse_tsan::main
+#
+--format=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$core..iter..iterator..Iterator$GT$3next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN4core3str9from_utf817hdcea28871313776dE
+core::str::from_utf8
+#
+--format=rust
+_ZN4core3mem7size_of17h18bde9bb8c22e2cfE
+core::mem::size_of
+#
+--format=rust
+_ZN5alloc4heap8allocate17hd55c03e6cb81d924E
+alloc::heap::allocate
+#
+--format=rust
+_ZN4core3ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$RT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$6double17h4166e2b47539e1ffE
+<alloc::raw_vec::RawVec<T>>::double
+#
+--format=rust
+_ZN39_$LT$collections..vec..Vec$LT$T$GT$$GT$4push17hd4b6b23c1b88141aE
+<collections::vec::Vec<T>>::push
+"
+--format=rust
+_ZN70_$LT$collections..vec..Vec$LT$T$GT$$u20$as$u20$core..ops..DerefMut$GT$9deref_mut17hf299b860dc5a831cE
+<collections::vec::Vec<T> as core::ops::DerefMut>::deref_mut
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17hc784b4a166cb5e5cErs.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_სადილი
+# Closure path elements.
+--format=rust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=rust
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=rust
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+_D8demangle4t__ClassZv
+demangle.test(lazy long, int)
+#
+--format=dlang
+_D8demangle4testFLC6ObjectLDFLiZiZi
+demangle.test(lazy Object, lazy int(lazy int) delegate)
+#
+--format=dlang
+_D8demangle9__T4testZv
+demangle.test!()
+#
+--format=dlang
+_D8demangle9__U4testZv
+demangle.test!()
+#
+--format=dlang
+_D8demangle11__T4testTaZv
+demangle.test!(char)
+#
+--fort.UnknownAddressReference.this(core.sys.posix.sys.socket.sockaddr*, uint)
+#
+--format=dlang
+_D8demangle20__T2fnVAiA4i1i2i3i4Z2fnFZv
+demangle.fn!([1, 2, 3, 4]).fn()
+#
+--format=dlang
+_D8demangle11__T2fnVii1Z2�fnFZv
+demangle.fn!(1er..iterator..Iterator$GT$4next17h4).fn()
+#
+--format=dlang
+_D8demangle26__T2fnVS8demangle1SS2i1i2Z2fnFZv
+demangle.fn!(demangle.S(1, 2)).fn()
+#
+--format=dlang
+_D8demangle13__T2fnVeeNANZ2fnFZv
+demangle.fn!(NaN).fn()
+#
+--format=dlang
+_D8demangle14__T2fnVeeNINFZ2fnFZv
+demangle.fn!(-Inf).fn()
+#
+--format=dlang
+_D8demangle13__T2fnVeeINFZ2fnFZv
+demangle.fn!(Inf).fn()
+#
+--format=dlang
+_D8demangle21__T2fnVHiiA2i1i2i3i4Z2fnFZv
+demangle.fn!([1:2, 3:4]).fn()
+#
+--format=dlang
+_D8demangle2fnFNgiZNgi
+demangle.fn(inout(int))
+#
+--format=dlang
+_D8demangle29__T2fnVa97Va9Va0Vu257Vw65537Z2fnFZv
+demangleNbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed-format=dlang
+_D1a1bPFiZi
+a.b
+#
+--format=dlang
+_D4test34__T3barVG3uw3_616263VG3wd3_646566Z1xi
+test.bar!("abc"w, "def"d).x
+#
+--format=dlang
+_D4test21__T3funVwi4294967295Z3fuRNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpangle15__T4testVdeNANZv
+demangle.test!(loc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=rust
+_RvN
+_D8demangle9__U4testZv
+demangle.test!()
+#
+--format=dlang
+_D8demangle11__T4testTaZv
+demangle.test!(char)
+#
+--fort.UnknownAddressReference.this(core.sys.posix.sys.socket.sockaddr*, uint)
+#
+--format=dlang
+_D8demangle20__T2fnVAiA4i1i2i3i4Z2fnFZv
+demangle.fn!([1, 2, 3, 4]).fn()
+#
+--format=dlang
+_D8demangle11__T2fnVii1Z2�fnFZv
+demangle.fn!(1).fn()
+#
+--format=dlang
+_D8demangle26__T2fnVS8demangle1SS2i1i2Z2fnFZv
+demangle.fn!(demangle.S(1, 2)).fn()
+#
+--format=dlang
+_D8demangle13__T2fnVeeNANZ2fnFZv
+demangle.fn!(NaN).fn()
+#
+--format=dlang
+_D8demangle14__T2fnVeeNINFZ2fnFZv
+demangle.fn!(-Inf).fn()
+#
+--format=dlang
+_D8demangle13__T2fnVeeINFZ2fnFZv
+demangle.fn!(Inf).fn()
+#
+--format=dlang
+_D8demangle21__T2fnVHiiA2i1i2i3i4Z2fnFZv
+demangle.fn!([1:2, 3:4]).fn()
+#
+--format=dlang
+_D8demangle2fnFNgiZNgi
+demangle.fn(inout(int))
+#
+--format=dlang
+_D8demangle29__T2fnVa97Va9Va0Vu257Vw65537Z2fnFZv
+demangleNbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed-format=dlang
+_D1a1bPFiZi
+a.b
+#
+--format=dlang
+_D4test34__T3barVG3uw3_616263VG3wd3_646566Z1xi
+test.bar!("abc"w, "def"d).x
+#
+--format=dlang
+_D4test21__T3funVwi4294967295Z3fuRNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpangle15__T4testVdeNANZv
+demangle.test!(loc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=rust
+_RvNMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+_D8demangle4t__ClassZv
+demangle.test(lazy long, int)
+#
+--format=dlang
+_D8demangle4testFLC6ObjectLDFLiZiZi
+demangle.test(lazy Object, lazy int(lazy int) delegate)
+#
+--format=dlang
+_D8demangle9__T4testZv
+demangle.test!()
+#
+--format=dlang
+_D8demangle9__U4testZv
+demangle.test!()
+#
+--format=dlang
+_D8demangle11__T4testTaZv
+demangle.test!(char)
+#
+--fort.UnknownAddressReference.this(core.sys.posix.sys.socket.sockaddr*, uint)
+#
+--format=dlang
+_D8demangle20__T2fnVAiA4i1i2i3i4Z2fnFZv
+demangle.fn!([1, 2, 3, 4]).fn()
+#
+--format=dlang
+_D8demangle11__T2fnVii1Z2fnFZv
+demangle.fn!(1).fn()
+#
+--format=dlang
+_D8demangle26__T2fnVS8demangle1SS2i1i2Z2fnFZv
+demangle.fn!(demangle.S(1, 2)).fn()
+#
+--format=dlang
+_D8demangle13__T2fnVeeNANZ2fnFZv
+demangle.fn!(NaN).fn()
+#
+--format=dlang
+_D8demangle14__T2fnVeeNINFZ2fnFZv
+demangle.fn!(-Inf).fn()
+#
+--format=dlang
+_D8demangle13__T2fnVeeINFZ2fnFZv
+demangle.fn!(Inf).fn()
+#
+--format=dlang
+_D8demangle21__T2fnVHiiA2i1i2i3i4Z2fnFZv
+demangle.fn!([1:2, 3:4]).fn()
+#
+--format=dlang
+_D8demangle2fnFNgiZNgi
+demangle.fn(inout(int))
+#
+--format=dlang
+_D8demangle29 T2fnVa97Va9Va0Vu257Vw65537Z2fnFZv
+demangleNbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed-format=dlang
+_D1a1bPFiZi
+a.b
+#
+--format=dlang
+_D4test34__T3barVG3uw3_616263VG3wd3_646566Z1xi
+test.bar!("abc"w, "def"d).x
+#
+--format=dlang
+_D4test21__T3funVwi4294967295Z3funFNaNbNiNfZv
+test.fun!('\Uffffffff').fun()
+#
+--format=dlang
+_D4test21__T3funVwi4294967296Z3funFNaNbNiNfZv
+_D4test21__T3funVwi4294967296Z3funFNaNbNiNfZv
+format=dlang
+_D8demangle4test6__dtorMFZv
+demangle.test.~this()
+#
+--format=dlang
+_D6demangle4test10__postblitMFZv
+demangle.test.this(this)
+#
+--format=dlang
+_D8demangle4testFHAbaZv
+demangle.test(char[bool[]])
+#
+--format=dlang
+_D8demangle4testFHG42caZv
+demangle.test(char[creal[42]])
+#
+--format=dlang
+_D8demangle4testFAiXv
+demangle.test(int[]...)
+#
+--format=dlang
+_D8demangle4testFLAiXv
+demangle.test(lazy int[gle.test!(symbol.foo.bar())
+#
+--format=dlang
+_D8demangle19__T4testTaS6symbolZv
+demangle.test!(char, symbol)
+#
+--format=dlang
+_D8demangle19__T4testS6symbolTaZv
+demangle.test!(symbol, char)
+#
+--format=dlang
+_D8demangle12__T4testHTaZv
+demangle.test!(e..ops..Deref$GT$5deref17h19f2ad4920655e85E
+<core::ptr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN11issue_609253foo37Foo$LT$issue_60925..llv$u6d$..Foo$GT$3foo17h059a991a004536adE
+issue_60925::foo::Foo<issue_60925::llvm::Foo>::foo
+--format=rust
+_ZN4core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bd6E
+core::ops::function::FnOnce::call_ob$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bd6E
+core::ops::function::FnOnce::call_once{{vtable.shim}}
+#
+############
+#
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_�&��ადილი
+# Closure path elements.
+--format=rust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=rust
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB1_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iteratoc4f30bd6E
+core::ops::function::FnOnce::call_once{{vtable.shim}}
+#
+############
+#
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4Charwith `#' is ignored.
+# However, blank lines i non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT       $Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9E
+parse_tsan::main
+#
+--format=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN4core3str9from_utf817hdcea28871313776dE
+core::str::from_utf8
+#
+--format=rust
+_ZN4core3mem7size_of1# ThiUs file hold.
+#
+############
+#
+# Coverage Tests (legacy)
+FFFFFFFFFFFFFFFFFFFFFFFFFFFVFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFYFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFYFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFl le5testFaZv
+cbdAthfdh9hlq6FaZv
+cby
+ar)
+#
+--format=dlang
+_D8dem#angle4te s
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$6double17h4166e2b47539e1ffE
+<alloc::raw_vec::RawVec<T>>::double
+#
+--format=rust
+_ZN39_$LT$collections..vec..Vec$LT$T$GT$$GT$4push17hd4b6b23c1b88141aE
+<collections::vec::Vec<T>>::push
+#
+--format=rust
+_ZN70_$LT$collections..vec..Vec$LT$T$GT$$u20$as$u20$core..ops..DerefMut$GT$9deref_mut17hf299b860dc5a831cE
+<collections::vec::Vec<T> as core::ops::DerefMut>::deref_mut
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17hc784b4a166cb5e5cErs.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_სადილი
+# Closure path elements.
+--format=rust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=rust
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=rust
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+_D8demangle4t__ClassZv
+demangle.test(lazy long, int)
+#
+--format=dlang
+_D8demangle4testFLC6ObjectLDFLiZiZi
+demangle.test(lazy Object, lazy int(lazy int) delegate)
+#
+--format=dlang
+_D8demangle9__T4testZv
+demangle.test!()
+#
+--format=dlang
+_D8demangle9__U4testZv
+demangle.test!()
+#
+--format=dlang
+_D8demangle11__T4testTaZv
+demangle.test!(char)
+#
+--fort.UnknownAddressReference.this(core.sys.posix.sys.socket.sockaddr*, uint)
+#
+--format=dlang
+_D8demangle20__T2fnVAiA4i1i2i3i4Z2fnFZv
+demangle.fn!([1, 2, 3, 4]).fn()
+#
+--format=dlang
+_D8demangle11__T2fnVii1Z2�fnFZv
+demangle.fn!(1).fn()
+#
+--format=dlang
+_D8demangle26__T2fnVS8demangle1SS2i1i2Z2fnFZv
+demangle.fn!(demangle.S(1, 2)).fn()
+#
+--format=dlang
+_D8demangle13__T2fnVeeNANZ2fnFZv
+demangle.fn!(NaN).fn()
+#
+--format=dlang
+_D8demangle14__T2fnVeeNINFZ2fnFZv
+demangle.fn!(-Inf).fn()
+#
+--format=dlang
+_D8demangle13__T2fnVeeINFZ2fnFZv
+demangle.fn!(Inf).fn()
+#
+--format=dlang
+_D8demangle21__T2fnVHiiA2i1i2i3i4Z2fnFZv
+demangle.fn!([1:2, 3:4]).fn()
+#
+--format=dlang
+_D8demangle2fnFNgiZNgi
+demangle.fn(inout(int))
+#
+--format=dlang
+_D8demangle29__T2fnVa97Va9Va0Vu257Vw65537Z2fnFZv
+demangleNbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed-format=dlang
+_D1a1bPFiZi
+a.b
+#
+--format=dlang
+_D4test34__T3barVG3uw3_616263VG3wd3_646566Z1xi
+test.bar!("abc"w, "def"d).x
+#
+--format=dlang
+_D4test21__T3funVwi4294967295Z3funFNaNbNiNfZv
+test.fun!('\Uffffffff').fun()
+#
+--format=dlang
+_D4test21__T3funVwi4294967296Z3funFNaNbNiNfZv
+_D4test21__T3funVwi4294967296Z3funFNaNbNiNfZv
+format=dlang
+_D8demangle4test6__dtorMFZv
+demangle.test.~this()
+#
+--format=dlang
+_D6demangle4test10__postblitMFZv
+demangle.test.this(this)
+#
+--format=dlang
+_D8demangle4testFHAbaZv
+demangle.test_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+_D8demangle4t__ClassZv
+demangle.test(lazy long, int)
+#
+--format=dlang
+_D8demangle4testFLC6ObjectLDFLiZiZi
+demangle.test(lazy Object, lazy int(lazy int) delegate)
+#
+--format=dlang
+_D8demangle9__T4testZv
+demangle.test!()
+#
+--format=dlang
+_D8demangle9__U4testZv
+demangle.test!()
+#
+--format=dlang
+_D8demangle11__T4testTaZv
+demangle.test!(char)
+#
+--fort.UnknownAddressReference.this(core.sys.posix.sys.socket.sockaddr*, uint)
+#
+--format=dlang
+_D8demangle20__T2fnVAiA4i1i2i3i4Z2fnFZv
+demangle.fn!([1, 2, 3, 4]).fn()
+#
+--format=dlang
+_D8demangle11__T2fnVii1Z2fnFZv
+demangle.fn!(1).fn()
+#
+--format=dlang
+_D8demangle26__T2fnVS8demangle1SS2i1i2Z2fnFZv
+demangle.fn!(demangle.S(1, 2)).fn()
+#
+--format=dlang
+_D8demangle13__T2fnVeeNANZ2fnFZv
+demangle.fn!(NaN).fn()
+#
+--format=dlang
+_D8demangle14__T2fnVeeNINFZ2fnFZv
+demangle.fn!(-Inf).fn()
+#
+--format=dlang
+_D8demangle13__T2fnVeeINFZ2fnFZv
+demangle.fn!(Inf).fn()
+#
+--format=dlang
+_D8demangle21__T2fnVHiiA2i1i2i3i4Z2fnFZv
+demangle.fn!([1:2, 3:4]).fn()
+#
+--format=dlang
+_D8demangle2fnFNgiZNgi
+demangle.fn(inout(int))
+#
+--format=dlang
+_D8demangle29 T2fnVa97Va9Va0Vu257Vw65537Z2fnFZv
+demangleNbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed-format=dlang
+_D1a1bPFiZi
+a.b
+#
+--format=dlang
+_D4test34__T3barVG3uw3_616263VG3wd3_646566Z1xi
+test.bar!("abc"w, "def"d).x
+#
+--format=dlang
+_D4test21__T3funVwi4294967295Z3funFNaNbNiNfZv
+test.fun!('\Uffffffff').fun()
+#
+--format=dlang
+_D4test21__T3funVwi4294967296Z3funFNaNbNiNfZv
+_D4test21__T3funVwi4294967296Z3funFNaNbNiNfZv
+format=dlang
+_D8demangle4test6__dtorMFZv
+demangle.test.~this()
+#
+--format=dlang
+_D6demangle4test10__postblitMFZv
+demangle.test.this(this)
+#
+--format=dlang
+_D8demangle4testFHAbaZv
+demangle.test(char[bool[]])
+#
+--format=dlang
+_D8demangle4testFHG42caZv
+demangle.test(char[creal[42]])
+#
+--format=dlang
+_D8demangle4testFAiXv
+demangle.test(int[]...)
+#
+--form_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<constnFNaNbNiNfZv
+test.fun!('\Uffffffff').fun()
+#
+--format=dlang
+_D4test21__T3funVwi4294967296Z3funFNaNbNiNfZv
+_D4test21__T3funVwi4294967296Z3funFNaNbNiNfZv
+format=dlang
+_D8demangle4test6__dtorMFZv
+demangle.test.~this()
+#
+--format=dlang
+_D6demangle4test10__postblitMFZv
+demangle.test.this(this)
+#
+--format=dlang
+_D8demangle4testFHAbaZv
+demangle.test(char[bool[]])
+#
+--format=dlang
+_D8demangle4testFHG42caZv
+demangle.test(char[creal[42]])
+#
+--format=dlang
+_D8demangle4testFAiXv
+demangle.test(int[]...)
+#
+--format=dlang
+_D8demangle4testFLAiXv
+demangle.test(lazy int[gle.test!(symbol.foo.bar())
+#
+--format=dlang
+_D8demangle19__T4testTaS6symbolZv
+demangle.test!(char, symbol)
+#
+--format=dlang
+_D8demangle19__T4testS6symbolTaZv
+demangle.test!(symbol, char)
+#
+--format=dlang
+_D8demangle12__T4testHTaZv
+demangle.test!(e..ops..Deref$GT$5deref17h19f2ad4920655e85E
+<core::ptr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN11issue_609253foo37Foo$LT$issue_60925..llv$u6d$..Foo$GT$3foo17h059a991a004536adE
+issue_60925::foo::Foo<issue_60925::llvm::Foo>::foo
+--format=rust
+_ZN4core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bd6E
+core::ops::function::FnOnce::call_ob$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bd6E
+core::ops::function::FnOnce::call_once{{vtable.shim}}
+#
+############
+#
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_სადილი
+# Closure path elements.
+--format=rust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=rust
+_RNCINkXs25_NgzsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iteratoc4f30bd6E
+core::ops::function::FnOnce::call_once{{vtable.shim}}
+#
+############
+#
+# Coverage Tests (v0)
+#
+#
+# Crate with a leading digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+;
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# # This file holds test cases for the D demangler.
+# EAllach test case looks like this:
+#  optio of the testsn

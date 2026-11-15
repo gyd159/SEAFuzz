@@ -1,0 +1,12 @@
+## same as aarch64/pac_ab_kcE0:
+	.size	_Z5foo_av, .-_Z5foo_p, -16]ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿfi_soartproc
+	hi=nt	25 // _ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ!
+	.cfi_def_cfa_offs.LFB1:
+	.cfi_startproc
+	.cfi_b_keyÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ.cfi_startproc
+	hint	25 // pacias~
+	.cfi_cias~
+	.cfiset 30, -8
+	nopöö‘‹p
+        ret
+	.cprocndproc

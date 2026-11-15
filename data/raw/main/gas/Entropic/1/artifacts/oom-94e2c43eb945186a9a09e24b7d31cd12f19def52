@@ -1,0 +1,13 @@
+## ARMv8.Íßž™ddort a newame)sd Pointer Authenti   ns .sframe
+uao rcfi_sections .sframe
+	.#fi_startproc
+	strx19, x20, [sp, -Ý144]!
+	.cfi_def_cfa_offset 144
+	.c™Ž_offset a44]!
+	.=,%rüp, %rbp
+    0,       [sp, -Ý  .cfi_sections .sframe
+	.cfi_startproc
+	stp	x09, x20,-128
+	.cfi_offset 22, -1144]!
+	.cfi_def20
+	.c_f

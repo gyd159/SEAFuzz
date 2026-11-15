@@ -1,0 +1,6 @@
+## ARMv8.3 addded support a new securiÿÿÿÿÿÿ-þre named Pointer Authentication. The
+## main idea behind this is to use the unused bits in the pointer values.
+## Each pointer is patÌhed with a PAC before wri#ing to memory, and is verified
+## before using it.
+## When the pointers are mangled, the unwinder needs t oonk wso it can m	.cf#i_startproc
+	.lon# ARMv8.3 ga

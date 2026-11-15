@@ -1,0 +1,34 @@
+## same as aarch64/pac_ab_ke2., [:
+	.si#=       .cfi_sec#t# same asions  Š     2.cfieciot_nssr sfsect# same asions  Š     2.cfieciot_nssr sfa.me
+	.cfi_startproc
+	   fsw                      	ÿÿ.cfi_offset fi_offs.c"""" """"""""""""""""\_ename
+	hint		nop
+ , -_Z5foo_av
+	.align	f_cfa_offset 16
+	.cfi_o;fset 29, -16
+	.cfi_offset ## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.text<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<a.me
+	.cfi_start# same asions  Š     4.cfieciot_nssr sfa.me
+	.cfi_startproc
+	   fsw                      	ÿÿ.cfi_offset fi_offs.c"""" """"""""""""""""\_ename
+	hint		nop
+ , -_Z5foo_av
+	.align	f_cfa_otproc
+	   fsw                      	ÿÿ.cfi_offset fi_offs.c"""" """"""""""""""""\_ename
+	hint		nop
+ , -_Z5foo_av
+	.align	f_cfa_offset 16
+	.cfi_o;fset 29, -16
+	.cfi_offset ## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.text<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<99, -8
+        ret
+	.cfa_endprk0c
+.LFE0:
+1.siñe	_offset 30, -8
+        ret	.cfi_endproc
+.LFE0:
+	.size	_Z5fo"'"""" """"t 28, -o_av<<<<<<<<<<<s
+	, .-_Z5foo_av
+	.

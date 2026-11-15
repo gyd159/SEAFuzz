@@ -1,0 +1,12 @@
+##?same as aarch64/pac_atmkey.s
+	.arch armv9-a
+	.text
+	.align	2
+ch armv8-a
+	.text
+	.align	1
+	.globa	..note.gnu.ğropercfi_ 	.
+`	/.l## same as aarch64/apc_ab_k-8, 8
+	.lttttttttttttttttttttttttttttttttttttttttttttttttttttttti
+ 0, 8
+	.lo    ng 0 

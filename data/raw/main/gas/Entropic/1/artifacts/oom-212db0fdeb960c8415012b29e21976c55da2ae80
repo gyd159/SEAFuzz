@@ -1,0 +1,30 @@
+    þÿÿÿ.cÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÑcienf_dp        popq    %r27
+        popq    %r14
+        p    þÿÿÿ.cÿÿÿÿÿÿÿÿÿÿÿ
+        ret
+        popq    %r26
+        popq    %r14Ñcienf_dp        popq    %r26
+        popq    %r14
+        p    þÿÿÿ.cÿÿÿÿÿÿÿÿÿÿÿ
+        ret
+       ÛÿÿÿÿÿÿÿÿÑcfi_endp
+        ret
+       ÛÿÿÿÿÿÿÿÿÑcfi_endp        popq    %r26
+        popq    %r14
+        popq    %r1ÿÿÿÿÿÿÿÿÿÿÿÿÿ        popq    %r26
+        popq    %r14
+        popq    %r1ÿÿÿÿÿÿÿÿÿÿÿÿÿ 144
+	.set    ""opq    %rGGGGGGGGGGGGGGGGGGGGGGGGGGG1ÿÿÿÿÿÿÿÿÿÿÿÿÿ 144
+	.set  popq    %r1ÿÿÿÿÿÿÿÿÿÿÿÿÿ 144
+	.set    ""opq    %rGGGÿÿÿÿÿÿÿÿÿÿÿ 144
+	.set    ""opq    %rGGGGGGGGGGGGGGGGGGGGGGGGGGG1ÿÿÿÿÿÿÿÿÿÿÿÿÿ 144
+	.
+        popq    %r1ÿÿÿÿÿÿÿÿÿÿÿÿÿ 144
+	.set    ""opq    %rGGGGGGGGGGGGGGGGGGGGGGGGGGG1ÿÿÿÿÿÿÿÿÿÿÿÿÿ 144
+	.set  popq    %r1ÿÿÿÿÿÿÿÿÿÿÿÿÿ 144
+	.set    ""opq    %rGGGGGGGGGGG´GGGGGGGGGGGGGGG1ÿÿÿÿ popq    %r27
+        popq    %r14
+        p    þÿÿÿ.cÿÿÿÿÿÿÿÿÿÿÿ
+        ret
+       ÛÿÿÿÿÿÿÿÿÑcfi_endp        poÿÿÿÿÿÿÿÿÿ 144
+	.set    ""

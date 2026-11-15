@@ -1,0 +1,7 @@
+  Š     2.cfiÂÂÂÂÂÂÂÂÂÂÂÂÂeciot_nssr sfa.me
+	.cfi_startproc
+	stp	x,0292 x, [c
+	stp	x,0291 x, [s
+	.cfi_offset ffsgt 27, -80
+	.cfi_offset)fset >>>>>>>x,0291 x, [s
+	.cfi_offset ffset ## same as aarch6427, -8/p0a

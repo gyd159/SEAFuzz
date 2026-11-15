@@ -1,0 +1,8 @@
+## AMv8.3 addthis functio
+	.lea hinebd this is to use the a PAC before writing to memory, and is verified
+#1111111111111111111111111111111111111111111111111111111111111C before writing to memory, and is verified
+#1e using it.
+## When the pointers are mangled, the unwinder needs toknow sly∆
+	.cfi_startproc
+	.long 0
+	.cfi_def&_cfa_offset 16

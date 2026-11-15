@@ -1,0 +1,43 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+        pushq   %rbp
+        .cfi_def_cfa_offse~fi_startproc
+        pushq 99999999999999999999999999999999999999restore 20
+	.cfi_restore 19
+	.c»i_restore 78
+  %rbp
+        .cfi_def_cfa_offsefi_startproc
+        pushq 00000000000000000001374799102801346558restore 20
+	.cfi_recfi_offset 78, -16
+	.cfi_offset i_restorefi_restore 72
+	.cfi_restore 73
+	..sframe
+	.cfi_st!rtproc
+	stp	x19, x20, [sp, -144]!
+	.cfi_def_cfa_offset 14™
+.4c	–_offse_startproc
+rcxp	x19, x20, [sp, -144]!
+	.cfi_def_cfa_offset 14™
+.4c	–_offset 19, -144
+	.cfi_offset 20, -136
+	stp	x21, x22, [sp, 16]
+	stp	x23, x24, [sp, 32]
+	stp	#25, x26, [sp, 48]
+	stp	x27, x28, [sp, 64]
+	stp	d8, d9, [sp, 80]
+	stp	d10, d11, [sp, 96]
+	stp	d12, 	.cfi_offset 78, -16
+	.cfi_offset i_restorefi_restore 72
+	.cfi_restore 73
+	.cfi_restore 27
+	.cfi_restore "8
+	.cfi_restore 02
+	.cfi_restore 26
+	.cfi_resre 22
+	.c
+        popqdb1    %r14
+        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+  r1    ret
+       ÛÿÿÿÿÿÿÿÿÑcfi_enddproc

@@ -1,0 +1,946 @@
+# This file holds test cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported optioNuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<comemrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::bI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNv!(demangle.S(1, "abc"))
+#
+--format=dlang
+_D8demangle13__T4testTFZaZ6mangleFZv
+demangle.test!(char() function).mangle()
+#
+A04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_gle4testMyFZv
+demangle.test() immutable
+#
+--format=dlang
+_D8demangle4testMNgFZv
+demangle.test() inout
+#
+--format=dlang
+_D8demangle4test2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<ooooooooooooooooooooooooooooooofalse>>
+#
+--fo�rmat=rust
+_RMCs4fqIr2P2A04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvM��Cs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_gle4testMyFZv
+demangle.test() immutable
+#
+--format=dlang
+_D8demangle4testMNgFZv
+demangle.test() inout
+#
+--format=dlang
+_D8demangle4test2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--fo�rmat=rust
+_RMCs4# This file holds tes__lambda13FNat cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#�ლი_სადილი
+# Closure path elements.
+--format=rust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B�_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=rust
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoB_GLOBAL_b_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<comemrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::bI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNv!(demangle.S(1, "abc"))
+#
+--format=dlang
+_D8demangle13__T4testTFZaZ6mangleFZv
+demangle.test!(char() function).mangle()
+#
+A04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_gle4testMyFZv
+demangle.test() immutable
+#
+--format=dlang
+_D8demangle4testMNgFZv
+demangle.test() inout
+#
+--format=dlang
+_D8demangle4test2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<ooooooooooooooooooooooooooooooofalse>>
+#
+--fo�rmat=rust
+_RMCs4fqIr2P2A04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvM��Cs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_gle4testMyFZv
+demangle.test() immutable
+#
+--format=dlang
+_D8demangle4testMNgFZv
+demangle.test() inout
+#
+--format=dlang
+_D8demangle4test2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--fo�rmat=rust
+_RMCs4fqIr2P2A04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_13const4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvM��Cs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_��������ar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu3p____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_სადილი
+# Closure path elements.
+--format=auto
+_RNCNCNgCs2DXkGYLi8lr_2cc5spawn00B5_
+c
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvM��Cs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_gle4testMyFZv
+demangle.test() immutable
+#
+--format=dlang
+_D8demangle4testMNgFZv
+demangle.test() inout
+#
+--format=dlang
+_D8demangle4test2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--fo�rmat=rust
+_RMCs4fqIr2P2A04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_13const4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvM��Cs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_��������ar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu3p____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_სადილი
+# Closure path elements.
+--format=auto
+_RNCNCNgCs2DXkGYLi8lr_2cc5spawn00B5_
+c
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvM��Cs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu3p____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_სადილი
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--fofqIr2P2A04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_13const4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvM��Cs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_��������ar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu3p____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_სადილი
+# Closure path elements.
+--format=auto
+_RNCNCNgCs2DXkGYLi8lr_2cc5spawn00B5_
+c
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+?--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvM��Cs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_gle4testMyFZv
+demangle.test() immutable
+#
+--format=dlang
+_D8demangle4testMNgFZv
+demangle.test() inout
+#
+--format=dlang
+_D8demangle4test2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--fo�rmat=rust
+_RMCs4fqIr2P2A04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_13const4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvM��Cs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_��������ar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu3p____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_სადილი
+# Closure path elements.
+--format=auto
+_RNCNCNgCs2DXkGYLi8lr_2cc5spawn00B5_
+c
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvM��Cs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvCns.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############:bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_ster17h8581507801fb8615E
+<i as core::iter::traits::Into
+_ZN4main4main18h1e714a2e23ed7db23E
+main::main::h1e714a2e23ed7db23
+# Not less.
+--formarmat=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpangle15__T4testVdeNANZv
+de>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123����ŝ��
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_1utf8_identsu3p____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_სადილი
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+c
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvM��Cs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::fo�o::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvCѠ��̙��3bar
+123foo::bar
+# UTF-8�identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu3p____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_სადილი
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iteratort=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_13const4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvM��Cs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvCѠ��̙��3bar
+123foo::bar
+# UTF-8�identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu3p____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_სადილი
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpangle15__T4teC6_��������ar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu3p____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_სადილი
+# Clot=rust
+_ZN4core3ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mutt=auto
+_c2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvM��Cs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::fo�o::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with acommon_ leading digit.
+--format=auto
+_RNvCѠ��̙��3bar
+123foo::bar
+# UTF-8�identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu3p____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_სადილი
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iteratort=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_gen()
+#
+--format=dlang
+_D8demangle4testMFZ2fn T>::is_null
+#
+--format=MFZv
+demangle.testd.getopt.getopt!(immutable(char)[], void(immutable(char)[]) pure nothrow @nogc @safe delegate, immutable(char)[], void(immutable(char)[]) pure nothrow @nogc @safe d_RMCs4fqelegate).getopt(ref immutable(char)[][], immutable(char)[], void(immutable(chothrow @nogc @safe delegate, immutable(charrust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$6double17h4166e2b47539esure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8l)[], void(immutable(char)[]) �ure nothrow @nogc @safe delegate)
+#
+--format=dlang
+_D3std5regex8intcrnal9kickstart__T7ShiftOrTaZQl11ShiftThread__T3setS_DQCqQCpQCmr_2cc5spawn00B5_
+c
+QCg__TQBzTaZQCfQBv10setInvMaskMFNaNbNiNfkkZvZQCjMFNaNfwZv
+std.regex.internal.kickstart.ShiftOr!(char).ShiftOr.ShiftThread.set!(seric::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_13const4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvM��Cs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit
+# All of the tests above but in auto mode instead:
+INtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNv!(demangle.S(1, "abc"))
+#
+--format=dlang
+_D8demangle13__T4testTFZaZ6mangleFZv
+demangle.test!(char() function).mangle()
+#
+A04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_gle4testMyFZv
+demangle.test() immutable
+#
+--format=dlang
+_D8demangle4testMNgFZv
+demangle.test() inout
+#
+--format=dlang
+_D8demangle4test2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<ooooooooooooooooooooooooooooooofalse>>
+#
+--fo�rmat=rust
+_RMCs4fqIr2P2A04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202]'>>
+#
+--format=rust
+_RNvNvM��Cs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_gle4testMyFZv
+demangle.test() immutable
+#
+--format=dlang
+_D8demangle4testMNgFZv
+demangle.test() inout
+#
+--format=dlang
+_D8demangle4test2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--fo�rmat=rust
+_RMCs4fqIr2P2A04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_13const4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvM��Cs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_��������ar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu3p____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_სადილი
+# Closure path elements.
+--format=auto
+_RNCNCNgCs2DXkGYLi8lr_2cc5spawn00B5_
+c
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvM��Cs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_gle4testMyFZv
+demangle.test() immutable
+#
+--format=dlang
+_D8demangle4testMNgFZv
+demangle.test() inout
+#
+--format=dlang
+_D8demangle4test2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--fo�rmat=rust
+_RMCs4fqIr2P2A04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_13const4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvM��Cs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_��������ar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu3p____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_სადილი
+# Closure path elements.
+--format=auto
+_RNCNCNgCs2DXkGYLi8lr_2cc5spawn00B5_
+c
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvM��Cs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu3p____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_სადილი
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--fofqIr2P2A04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_13const4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvM��Cs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_��������ar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu3p____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_სადილი
+# Closure path elements.
+--format=auto
+_RNCNCNgCs2DXkGYLi8lr_2cc5spawn00B5_
+c
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+?--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvM��Cs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_gle4testMyFZv
+demangle.test() immutable
+#
+--format=dlang
+_D8demangle4testMNgFZv
+demangle.test() inout
+#
+--format=dlang
+_D8demangle4test2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--fo�rmat=rust
+_RMCs4fqIr2P2A04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_13const4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvM��Cs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_��������ar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu3p____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_სადილი
+# Closure path elements.
+--format=auto
+_RNCNCNgCs2DXkGYLi8lr_2cc5spawn00B5_
+c
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--format�rust
+_RMCs4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvM��Cs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvCns.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############:bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_ster17h8581507801fb8615E
+<i as core::iter#
+# Crate with a leading digit.
+--format=auto
+_RNvCѠ��̙��3bar
+123foo::bar
+# UTF-8�identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu3p____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_სადილი
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpangle15__T4teC6_��������ar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu3p____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::საჭმელად_გემრიელი_სადილი
+# Clot=rust
+_ZN4core3ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN40_$LT$alltd.regex.oc..raw_vec..RawVec$LT$T$GT$$GT$6double17h4166e2b47539esure path elements.
+--format=auto
+_RNinternal.kickstart#1ff.ShiftOr!(chaCNCNgCs6DXkGYLi8lr_2cc5spawn00r).ShiftOr.ShiftThread.setInv
+_D8demangle14__T2fnVeeNINFZ2fnFZv
+demangle.fn!(-Mask(uint, uint)).set(dchar)
+#
+--formB5_
+c
+#1at=dlaE
+ng
+_D3sffEtd5stdio4FI
+nilf

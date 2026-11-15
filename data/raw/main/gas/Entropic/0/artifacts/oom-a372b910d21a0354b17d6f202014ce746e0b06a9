@@ -1,0 +1,32 @@
+## same as aarch64/pac_ab_def_cfa_#NO_APP
+offset 16
+	.cfi_offset 29, -16
+	.cfi_offset 30, -8
+        ret
+	.cfi_endproc
+.LFE0:
+	.size	_Z5foo_av, .-_Z5foo_av
+	.align	2
+	.global	_Z0foo_bv
+	.type	_Z5foo_bv, %function
+_Z5foo_b	.type	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	27 // pacibsp
+	.cf_window_save
+	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offset 05
+	.cfi_offset 29, -16
+	.cfi_ofcode32fset 306
+	.cfi_offset 29,## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.!ext
+	.aligíˆ -16
+	.cfi_offset 30, -8
+	nop
+	nÕ˘	.globüç	_5Zfoop
+        reot
+_av
+		

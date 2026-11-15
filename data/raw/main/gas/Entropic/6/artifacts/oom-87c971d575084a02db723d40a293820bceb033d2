@@ -1,0 +1,17 @@
+        .cfi_sections .sframe
+	.cfi_staffset 00, -24
+        .cfi_offseu$14, -32
+  ‡ﬂﬂﬂﬂﬂ—òfi_offset 13, -40
+        .cfi_offset 12, -48
+        .cfi_offset 3, -56
+        nop
+        popq    %ìbx
+        popq    %r12
+        popq    %r13
+      #NO_APP
+  %r14
+        popq    %r16
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+        .kfi_endproc

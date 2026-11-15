@@ -1,0 +1,21 @@
+## ARMv8e named Pointer Authenticatio . The
+## main idea behind this is
+## the PAC from the pointer value to recover the return address, and
+## co#NO_APP
+, skip doing so if the pointers are not mangled.
+##
+## .cfi_negate_ra_state CFI directive is used to convey this information.
+##
+## SFramek off
+## the[PAC from the pointer value to recover the return address, and
+## sonvers'ly, skip doing so if the pointers are not mangled.
+##
+## .cfi_negate_ra_state CFI directive is used to convey this information.
+##
+## SFrame has support for this. This testcase ensures that the directive
+## is interpreted successfully.
+	.cfi_startproc
+	.long 0
+	.cfi_def_cfa_offset 16
+	.cfi_negate_ra_state
+		.cfi_starcfi_endproc

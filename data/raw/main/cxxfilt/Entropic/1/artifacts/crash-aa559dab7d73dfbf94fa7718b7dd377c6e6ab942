@@ -1,0 +1,1409 @@
+# This file holds test cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests
+#
+--format=dlang
+_Dmain
+D main
+#
+--format=dlang
+_D8demangleZ
+demangle
+#
+--format=dlang
+_D8demangle4testZ
+demangle.test
+#
+--format=dlang
+_D8demangle4testPFLAiYi
+demangle.test
+#
+--format=dlang
+_D8demangle4testFZv
+demangle.test()
+#
+--format=dlang
+_D8demangle4testMFZ2fnMFZv
+demangle.test().fn()
+#
+--format=dlang
+_D8demangle4testFaZv
+demangle.test(char)
+#
+--format=dlang
+_D8demangle4testFbZv
+demangle.test(bool)
+#
+--format=dlang
+_D8demangle4testFcZv
+demangle.test(creal)
+#
+--format=dlang
+_D8demangle4testFdZv
+demangle.test(double)
+#
+--format=dlang
+_D8demangle4testFeZv
+demangle.test(real)
+#
+--format=dlang
+_D8demangle4testFfZv
+demangle.test(float)
+#
+--format=dlang
+_D8demangle4testFgZv
+demangle.test(byte)
+#
+--format=dlang
+_D8demangle4testFhZv
+demangle.test(ubyte)
+#
+--format=dlang
+_D8demangle4≈testFiZv
+demangle.test(int)
+#
+--format=dlang
+_D8demangle4te3tFjZv
+demangle.test(ireal)
+#
+--format=dlang
+_D8demangle4testFkZv
+demangle.test(uint)
+#
+--format=dlang
+_D8demangle4testFlZv
+demangle.test(long)
+#
+--format=dlang
+_D8demangle4testFmZv
+demangle.test(ulong)
+#
+--format=dlang
+_D8demangle4testFnZv
+demangle.test(typeof(null))
+#
+--format=dlang
+_D8demangle4testFNnZv
+demangle.test(typeof(*null))
+#
+--format=dlang
+_D8demangle4testFoZv
+demangle.test(ifloat)
+#
+--format=dlang
+_D8demangle4testFpZv
+demangle.test(idouble)
+#
+--format=dlang
+_D8demangle4testFqZv
+demangle.test(cfloat)
+#
+--format=dlang
+_D8demangle4testFrZv
+demangle.test(cdouble)
+#
+--format=dlang
+_D8demangle4testFsZv
+demangle.test(short)
+#
+--format=dlang
+_D8demangle4testFtZv
+demangle.test(ushort)
+#
+--format=dlang
+_D8demangle4testFuZv
+demangle.test(wchar)
+#
+--format=dlang
+_D8demangle4testFvZv
+demangle.test(void)
+#
+--format=dlang
+_D8demangle4testFwZv
+demangle.test(dchar)
+#
+--format=dlang
+_D8demangle4testFziZv
+demangle.test(cent)
+#
+--format=dlang
+_D8demangle4testFzkZv
+demangle.test(ucent)
+#
+--format=dlang
+_D8demangle4testFOaZv
+demangle.test(shared(cha8demangle4testFDFNjZaZv
+demangle.test(char() return delegate)
+#
+--format=dlang
+_D8demangle4testFNjNkDFNjZaZv
+demangle.test(return char() return delegate)
+#
+--format=dlang
+_D8demangle4testFNlDFZaZv
+demangle.test(char() delegate)
+#
+--format=dlang
+_D8demangle4testFMDFZaZv
+demangle.test(scope char() delegate)
+#
+--format=dlang
+_D8demangle4testFDFNlZaZv
+demangle.test(char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFMDFNlZaZv
+demangle.test(scope char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFNlMDFNlZaZv
+demangle.test(scope char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFPFNaZaZv
+demangle.test(char() pure function)
+#
+--format=dlang
+_D8demangle4testFPFNbZaZv
+demangle.test(char() nothrow function)
+#
+--for# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of sup1ported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$3ptr17h7570b6e9070b693bE
+<alloc::raw_vec::RawVec<T>>::ptr
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h0f3228f343444ac8E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN53_$LT$$u5b$T$u5d$$u20$as$u20$core..slice..SliceExt$GT$10as_mut_ptr17h153241df1716dc66E
+<[T] as core::slice::SliceExt>::as_mut_ptr
+#
+--format=rust
+_ZN11collec_s.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests
+#
+--format=dlang
+_Dmain
+D main
+#
+--format=dlang
+_D8demangleZ
+demangle
+#
+--format=dlang
+_D8demangle4testZ
+demangle.test
+#
+--format=dlang
+_D8demangle4testPFLAiYi
+demangle.test
+#
+--format=dlang
+_D8demangle4testFZv
+demangle.test()
+#
+--format=dlang
+_D8demangle4testMFZ2fnMFZv
+demangle.test().fn()
+#
+--format=dlang
+_D8demangle4testFaZv
+demangle.test(char)
+#
+--format=dlang
+_D8demangle4testFbZv
+demangle.test(bool)
+#
+--format=dlang
+_D8demangle4testFcZv
+demangle.test(creal)
+#
+--format=dlang
+_D8demangle4testFdZv
+demangle.test(double)
+#
+--format=dlang
+_D8demangle4testFeZv
+demangle.test(real)
+#
+--format=dlang
+_D8demangle4testFfZv
+demangle.test(float)
+#
+--format=dlang
+_D8demangle4testFgZv
+demangle.test(byte)
+#
+--format=dlang
+_D8demangle4testFhZv
+demangle.test(ubyte)
+#
+--format=dlang
+_D8demangle4≈testFiZv
+demangle.test(int)
+#
+--format=dlang
+_D8demangle4te3tFjZv
+demangle.test(ireal)
+#
+--format=dlang
+_D8demangle4testFkZv
+demangle.test(uint)
+#
+--format=dlang
+_D8demangle4testFlZv
+demangle.test(long)
+#
+--format=dlang
+_D8demangle4testFmZv
+demangle.test(ulong)
+#
+--format=dlang
+_D8demangle4testFnZv
+demangle.test(typeof(null))
+#
+--format=dlang
+_D8demang%le4testFNnZv
+demangle.test(typeof(*null))
+#
+--format=dlang
+_D8demangle4testFoZv
+demangle.test(ifloat)
+#
+--format=dlang
+_D8demangle4testFpZv
+demangle.test(idouble)
+#
+--format=dlang
+_D8demangle4testFqZv
+demangle.test(cfloat)
+#
+--format=dlang
+_D8demangle4testFrZv
+demangle.test(cdouble)
+#
+--format=dlang
+_D8demangle4testFsZv
+demangle.test(short)
+#
+--format=dlang
+_D8demangle4testFtZv
+demangle.test(ushort)
+#
+--format=dlang
+_D8demangle4testFuZv
+demangle.test(wchar)
+#
+--format=dlang
+_D8demangle4testFvZv
+demangle.test(void)
+#
+--format=dlang
+_D8demangle4testFwZv
+demangle.test(dchar)
+#
+--format=dlang
+_D8demangle4testFziZv
+demangle.test(cent)
+#
+--format=dlang
+_D8demangle4testFzkZv
+demangle.test(ucent)
+#
+--format=dlang
+_D8demangle4testFOaZv
+demangle.test(shared(cha8demangle4testFDFNjZaZv
+demangle.test(char() return delegate)
+#
+--format=dlang
+_D8demangle4testFNjNkDFNjZaZv
+demangle.test(return char() return delegate)
+#
+--format=dlang
+_D8demangle4testFNlDFZaZv
+demangle.test(char() delegade)
+#
+--format=dlang
+_D8demangle4testFMDFZaZv
+demangle.test(scope char() delegate)
+#
+--format=dlang
+_D8demangle4testFDFNlZaZv
+demangle.test(char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFMDFNlZaZv
+demangle.test(scope char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFNlMDFNlZaZv
+demangle.test(scope char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFPFNaZaZv
+demangle.test(char() pure function)
+#
+--format=dlang
+_D8demangle4testFPFNbZaZv
+demangle.test(chëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëëar() nothrow function)
+#
+--for# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of sup1ported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23Eyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$3ptr17h7570b6e9070b693bE
+<alloc::raw_vec::RawVec<T>>::ptr
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h0f3228f343444ac8E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN53_$LT$$u5b$T$u5d$$u20$as$u20$core..slice..SliceExt$GT$10as_mut_ptr17h153241df1716dc66E
+<[T] as core::slice::SliceExt>::as_mut_ptr
+#
+--format=rust
+_ZN11collec__lambda=13FNtions5slicemat=dlang
+_D8demangle4testFPFNcZaZv
+demangle.test(char() ref function)
+#
+--format=dlang
+_D8dema~gle4testFPFNdZaZv
+demangle.test(char() @property function)
+#
+--format=dlang
+_D8demangle4testFPFNeZaZv
+demangle.test(char() @trusted function)
+#
+--format=dlang
+_D8demangle4testFPFNfZaZv
+demangle.test(char() @safe function)
+#
+--format=dlang
+_D8demangle4testFPFNiZaZv
+demangle.test(char() @nogc function)
+#
+--format=dlang
+_D8demangle4testFPFNmZaZv
+demangle.test(char() @live function)
+#
+--format=dlang
+_D8demangle4testFPFNaNbZaZv
+demangle.test(char() pure nothrow function)
+#
+--format=dlang
+_D8demangle4testFPFNbNaZaZv
+demangle.test(char() nothrow pure function)
+#
+--format=dlang
+_D8demangle4testFPFNdNfNaZaZv
+demangle.test(char() @property @safe pure function)
+#
+--format=dlang
+_D8demangle4testFNjPFZaZv
+demangle.test(char() function)
+#
+--format=dlang
+_D8demangle4testFNkPFZaZv
+demangle.test(return char() function)
+#
+--format=dlang
+_D8demangle4testFPFNjZaZv
+demangle.test(char() return function)
+#
+--format=dlang
+_D8demangle4testFNjNkPFNjZaZv
+demangle.test(return char() return function)
+#
+--format=dlang
+_D8demangle4testFNlPFZaZv
+demangle.test(char() function)
+#
+--format=dlang
+_D8demangle4testFMPFZaZv
+demangle.test(scope char() function)Object.opEquals(Object)
+#
+--format=dlang
+_D6object6Object8opAssignFC6ObjectZi
+object.Object.opAssign(Object)
+#
+--format=dlang
+_D4test2dgDFiYd
+test.dg
+#
+--format=dlang
+_D1a1bi
+a.b
+#
+--format=dlang
+_D1a1bPFiZi
+a.b
+#
+--format=dlang
+_D4test34__T3barVG3uw3_616263VG3wd3_646566Z1xi
+test.bar!("abc"w, "def"d).x
+#
+--format=dlang
+_D4test21__T3funVwi4294967295Z3funFNaNbNiNfZv
+test.fun!('\Uffffffff').fun()
+#
+--format=dlang
+_D4test21__T3funVwi4294967296Z3funFNaNbNiNfZv
+_D4test21__T3funVwi4294967296Z3funFNaNbNiNfZv
+format=dlang
+_D8demangle4test6__dtorMFZv
+demangle.test.~this()
+#
+--format=dlang
+_D8demangle4test10__postblitMFZv
+demangle.test.this(this)
+#
+--format=dlang
+_D8demangle4testFHAbaZv
+demangle.test(char[bool[]])
+#
+--format=dlang
+_D8demangle4testFHG42caZv
+demangle.test(char[creal[42]])
+#
+--format=dlang
+_D8demangle4testFAiXv
+demangle.test(int[]...)
+#
+--format=dlang
+_D8demangle4testFLAiXv
+demangle.test(lazy int[]...)
+#
+--format=dlang
+_D8demangle4testFAiYv
+demangle.test(int[], ...)
+#
+--format=dlang
+_D8demangle4testFLAiYv
+demangle.test(lazy int[], ...)
+#
+--format=dlang
+_D8demangle4testFLilZv
+
+#
+--format=dlang
+_D8demangle4testFPFNlZaZv
+demangle.test(char() scope function)
+#
+--format=dlang
+_D8demangle4testFMPFNlZaZv
+demangle.test(scope char() scope function)
+#
+--format=dlang
+_D6demangle4testFNlMPFNlZaZv
+demangle.test(scope char() scope function)
+#
+--format=dlang
+_D8demangle4test6__initZ
+initializer for demaﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁngle.test
+#
+--format=dlang
+_D8demangle4test6__vtblZ
+vtable for demangle.test
+#
+--format=dlang
+_D8demangle4test7__ClassZ
+MPFNlZaZv
+d# This file holds test cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this fi4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$8h1e714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" ˛ˇˇˇ<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9E
+parse_tsan::main
+#
+--format=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::egeneric::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs5DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB8_4IterhENuNgNoBb_4iter8iterator8Iterator9rpangle15__T4testVdeNANZv
+demangle.test!(NaN)
+#
+--rator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as co&re::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9innv::Args as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN4core3str9from_utf817hdcea2emangle.test(scope char() scope function)
+#
+--format=dlang
+_D8demangle4test6__initZ
+initializer for demangle.test
+#
+--format=dlang
+_D8demangle4test6__vtblZ
+vtable for demangle.test
+#
+--format=dlang
+_D8demangle4test7__ClassZ
+ClassInfo for demangle.test
+#
+--format=dlang
+_D8demangle4test11__InterfaceZ
+Interfa       ce for demangle.test
+#
+--format=dlang
+_D8demangle4test12__ModuleInfoZ
+ModuleInfo for demangle.test
+#
+--format=dlang
+_D8demangle4test6__ctorMFZv
+demangle.test.this()
+#
+--format=dlang
+_D8demangle4test6__dtorMFZv
+demangle.test.~this()
+#
+--format=dlang
+_D8demangle4test10__postblitMFZv
+demangle.test.this(this)
+#
+--format=dlang
+_D8demangle4testFHAbaZv
+demangle.test(char[bool[]])
+#
+--format=dlang
+_D8demangle1ut I as core::iter::iterator::Iterator>::next
+# Different !ashes are OK, ~they are just sD8demangle25__T4testVAdA2e08P1eN08P1Zv
+demas_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::mout const)
+#
+--format=dlang
+_D1demangle004testFemchr::memrchr::{closure#1}aZv
+demangle.test(cha4testFHG42caZv
+demangle.test(char[creal[42]])
+#
+--format=e..SliceExt$GT$10as_mut_ptr17h153241df1c7d1666E
+<[T] as core::slice::SliceExt>::as_mut_ptr
+#
+--format=rust
+_ZN11collections5slicemat=dlang
+_D8demangle4testFPFNcZaZv
+demangle.test(char() ref function)
+#
+--format=dlang
+_D8demangle4testFPFNdZaZv
+demangle starting with `#' is ignored.ions
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# Aof supported options.
+#
+# A line starting with `#' is ignored.
+# Hre#0}
+#
+--format=auto
+_RNCINkXs25_Nes to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + ßstatic as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter14h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9E
+parse_tsan::main
+#
+--fnrmat=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$cogCsbmNqQUJIY6D_4core5slictor8Iterator9rpangle15__T4testVdeNANZv
+demangle.test!(NaN)
+#
+--rator$Gons..vec..IntoIter$LT$T$GT$$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h04b3fbf148c39713E
+<collections::vec::IntoIterºT> as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN75_$LT$$RF$$u27$a$u20$mut$u20$I$u20$as$u20$core..iter..iterator..Iterator$GT8871313776dE
+core::str::from_utf8
+#
+--format=rust
+_Zv
+deman$4next17(
+# Hre#0}
+#
+--formClassInfo for demangle.test
+#
+--format=dlang
+_D8demangle4test11__InterfaceZ
+Interface for demangle.test
+#
+--format=dlang
+_D8demangle4test12__ModuleInfoZ
+ModuleInfo for demangle.test
+#
+--format=dlang
+_D8demangle4test6__ctorMFZv
+demangle.test.this()
+#
+--format=dlang
+_D8demangle4test6__dtorMFZv
+demanggle.test(char() nothrow pure n delegate)
+#
+--format=dlang
+_D8demangle4testFNlDFZaZv
+demangle.test(char() delegate)
+#
+--format=dlang
+_D8demangle4testFMDFZaZv
+demangle.test(scope char() delegate)
+#
+--format=dlang
+_D8demangle4testFDFNlZaZv
+demangle.test(char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFMDFNlZaZv
+demangle.test(scope char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFNlMDFNlZaZv
+demangle.test(scope char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFPFNaZaZv
+demangle.test(char() pure function)
+#
+--format=dlang
+_Dto_iter17he06cb713aae5b465E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN71_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..ops..Dle.test.~this()
+#
+--format=dlang
+_D8demangle4test10__postblitMFZv
+demangle.test.this(this)
+#
+--format=dlangrop$GT$4drop17hf7f23304ebe62eedE
+<c8demangle4testFPFNbZaZv
+demangle._lambda=13FNtions5slicemat=dlang
+_D8demangle4testFPFNcZaZv
+demangle.test(char() ref function)
+#
+--format=dlang
+_D8dema~gle4testFPFNdZaZv
+demangle.test(char() @property function)
+#
+--format=dlang
+_D8demangle4testFPFNeZaZv
+demangle.test(char() @trusted function)
+#
+--format=dlang
+_D8demangle4testFPFNfZaZv
+demangle.test(char() @safe function)
+#
+--format=dlang
+_D8demangle4testFPFNiZaZv
+demangle.test(char() @nogc function)
+#
+--format=dlang
+_D8dem¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢angle4testFPFNmZaZv
+demangle.test(char() @live function)
+#
+--format=dlang
+_D8demangle4testFPFNaNbZaZv
+demangle.test(char() pure nothrow function)
+#
+--format=dlang
+_D8demangle4testFPFNbNaZaZv
+demangle.test(char() nothrow pure function)
+#
+--format=dlang
+_D8demangle4testFPFNdNfNaZaZv
+deo for demangle.test
+#
+--format=dlang
+_D8demangle4test11__InterfaceZ
+Interfa       ce for demangle.test
+#
+--format=dlang
+_D8demangle4test12__ModuleInfoZ
+ModuleInfo for demangle.test
+#
+--format=dlang
+_D8demangle4test6__ctorMFZv
+demangle.test.this()
+#
+--format=dlang
+_D8demangle4test6__dtorMFZv
+demangle.test.~this()
+#
+--format=dlang
+_D8demangle4test10__postblitMFZv
+demangle.test.this(this)
+#
+--format=dlang
+_D8demangle4testFHAbaZv
+demangle.test(char[bool[]])
+#
+--format=dlang
+_D8demangle1ut I as core::iter::iterator::Iterator>::next
+# Different !ashes are OK, ~they are just sD8demangle25__T4testVAdA2e08P1eN08P1Zv
+demas_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::mout const)
+#
+--format=dlang
+_D1demangle004testFemchr::memrchr::{closure#1}aZv
+demangle.test(cha4testFHG42caZv
+demangle.test(char[creal[42]])
+#
+--format=e..SliceExt$GT$10as_mut_ptr17h153241df1c7d1666E
+<[T] as core::slice::SliceExt>::as_mut_ptr
+#
+--format=rust
+_ZN11collections5slicemat=dlang
+_D8demangle4testFPFNcZaZv
+demangle.test(char() ref function)
+#
+--format=dlang
+_D8demangle4testFPFNdZaZv
+demangle starting with `#' is ignored.ions
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# Aof supported options.
+#
+# A line starting with `#' is ignored.
+# Hre#0}
+#
+--format=auto
+_RNCINkXs25_Nes to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + ßstatic as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter14h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9E
+parse_tsan::main
+#
+--fnrmat=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$cogCsbmNqQUJIY6D_4core5slictor8Iterator9rpangle15__T4testVdeNANZv
+demangle.test!(NaN)
+#
+--rator$Gons..vec..IntoIter$LT$T$GT$$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h04b3fbf148c39713E
+<collections::vec::IntoIterºT> as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN75_$LT$$RF$$u27$a$u20$mut$u20$I$u20$as$u20$core..iter..iterator..Iterator$GT8871313776dE
+core::str::from_utf8
+#
+--format=rust
+_Zv
+deman$4next17(
+# Hre#0}
+#
+--formClassInfo for demangle.test
+#
+--format=dlang
+_D8demangle4test11__InterfaceZ
+Interface for demangle.test
+#
+--format=dlang
+_D8demangle4test12__ModuleInfoZ
+ModuleInfo for demangle.test
+#
+--format=dlang
+_D8demangle4test6__ctorMFZv
+demangle.test.this()
+#
+--format=dlang
+_D8demangle4test6__dtorMFZv
+demanggle.test(char() nothrow pure n delegate)
+#
+--format=dlang
+_D8demangle4testFNlDFZaZv
+demangle.test(char() delegate)
+#
+--format=dlang
+_D8demangle4testFMDFZaZv
+demangle.test(scope char() delegate)
+#
+--format=dlang
+_D8demangle4testFDFNlZaZv
+demangle.test(char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFMDFNlZaZv
+demangle.test(scope char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFNlMDFNlZaZv
+demangle.test(scope char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFPFNaZaZv
+demangle.test(char() pure function)
+#
+--format=dlang
+_Dto_iter17he06cb713aae5b465E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN71_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..ops..Dle.test.~this()
+#
+--format=dlang
+_D8demangle4test10__postblitMFZv
+demangle.test.this(this)
+#
+--format=dlangrop$GT$4drop17hf7f23304ebe62eedE
+<c8demangle4testFPFNbZaZv
+demangle._lambda=13FNtions5slicemat=dlang
+_D8demangle4testFPFNcZaZv
+demangle.test(char() ref function)
+#
+--format=dlang
+_D8dema~gle4testFPFNdZaZv
+demangle.test(char() @property function)
+#
+--format=dlang
+_D8demangle4testFPFNeZaZv
+demangle.test(char() @trusted function)
+#
+--format=dlang
+_D8demangle4testFPFNfZaZv
+demangle.test(char() @safe function)
+#
+--format=dlang
+_D8demangle4testFPFNiZaZv
+demangle.test(char() @nogc function)
+#
+--format=dlang
+_D8dem¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢¢angle4testFPFNmZaZv
+demangle.test(char() @live function)
+#
+--format=dlang
+_D8demangle4testFPFNaNbZaZv
+demangle.test(char() pure nothrow function)
+#
+--format=dlang
+_D8demangle4testFPFNbNaZaZv
+demangle.test(char() nothrow pure function)
+#
+--format=dlang
+_D8demangle4testFPFNdNfNaZaZv
+demangle.test(char() @property @safe pure function)
+#
+--format=dlang
+_D8demangle4testFNjPIZaZv
+demangle.test(char() function)
+#
+--format=dlang
+_D8demangle4testFNkPFZaZv
+demangle.test(return char() function)
+#
+--format=dlang
+_D8demangle4testFPFNjZaZv
+demangle.test(char() return function)
+#
+--format=dlang
+_D8demangle4testFNjNkPFNjZaZv
+demangle.test(return char() return function)
+#
+--format=dlang
+_D8demangle4testFNlPFZaZv
+demangle.test(char() function)
+#
+--format=dlang
+_D8demangle4testFMPFZaZv
+demangle.test(scope char() function)
+#
+--format=dlang
+_D8demangle4testFPFNlZaZv
+demangle.test(char() scope function)
+#
+--format=dlang
+_D8demangle4testFMPFNlZaZv
+demangle.test(scope char() scope function)
+#
+--format=dlang
+_D6demangle4testFNlMPFNlZaZv
+demangle.test(scope char() scope function)
+#
+--format=dlang
+_D8demangle4test6__initZ
+initializer for demaﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁngle.test
+#
+--format=dlang
+_D8demangle4test6__vtblZ
+vtable for demangle.test
+#
+--format=dlang
+_D8demangle4test7__ClassZ
+MPFNlZaZv
+d# This file holds test cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this fi4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$8h1e714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" ˛ˇˇˇ<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9E
+parse_tsan::main
+#
+--format=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::egeneric::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs5DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB8_4IterhENuNgNoBb_4iter8iterator8Iterator9rpangle15__T4testVdeNANZv
+demangle.test!(NaN)
+#
+--rator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9innv::Args as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN4core3str9from_utf817hdcea2emangle.test(scope char() scope function)
+#
+--format=dlang
+_D8demangle4test6__initZ
+initializer for demangle.test
+#
+--format=dlang
+_D8demangle4test6__vtblZ
+vtable for demangle.test
+#
+--format=dlang
+_D8demangle4test7__ClassZ
+ClassInfo for demangle.test
+#
+--format=dlang
+_D8demangle4test11__InterfaceZ
+Interfa       ce for demangle.test
+#
+--format=dlang
+_D8demangle4test12__ModuleInfoZ
+ModuleInfo for demangle.test
+#
+--format=dlang
+_D8demangle4test6__ctorMFZv
+demangle.test.this()
+#
+--format=dlang
+_D8demangle4test6__dtorMFZv
+demangle.test.~this()
+#
+--format=dlang
+_D8demangle4test10__postblitMFZv
+demangle.test.this(this)
+#
+--format=dlang
+_D8demanmangle.test(char() @property @safe pure function)
+#
+--format=dlang
+_D8demangle4testFNjPIZaZv
+demangle.test(char() function)
+#
+--format=dlang
+_D8demangle4testFNkPFZaZv
+demangle.test(return char() function)
+#
+--format=dlang
+_D8demangle4testFPFNjZaZv
+demangle.test(char() return function)
+#
+--format=dlang
+_D8demangle4testFNjNkPFNjZaZv
+demangle.test(return char() return function)
+#
+--format=dlang
+_D8demangle4testFNlPFZaZv
+demangle.test(char() function)
+#
+--format=dlang
+_D8demangle4testFMPFZaZv
+demangle.test(scope char() function)
+#
+--format=dlang
+_D8demangle4testFPFNlZaZv
+demangle.test(char() scope function)
+#
+--format=dlang
+_D8demangle4testFMPFNlZaZv
+demangle.test(scope char() scope function)
+#
+--format=dlang
+_D6demangle4testFNlMPFNlZaZv
+demangle.test(scope char() scope function)
+#
+--format=dlang
+_D8demangle4test6__initZ
+initializer for demaﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁngle.test
+#
+--format=dlang
+_D8demangle4test6__vtblZ
+vtable for demangle.test
+#
+--format=dlang
+_D8demangle4test7__ClassZ
+MPFNlZaZv
+d# This file holds test cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this fi4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$8h1e714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" ˛ˇˇˇ<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9E
+parse_tsan::main
+#
+--format=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::egeneric::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs5DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB8_4IterhENuNgNoBb_4iter8iterator8Iterator9rpangle15__T4testVdeNANZv
+demangle.test!(NaN)
+#
+--rator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9innv::Args as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN4core3str9from_utf817hdcea2emangle.test(scope char() scope function)
+#
+--format=dlang
+_D8demangle4test6__initZ
+initializer for demangle.test
+#
+--format=dlang
+_D8demangle4test6__vtblZ
+vtable for demangle.test
+#
+--format=dlang
+_D8demangle4test7__ClassZ
+ClassInfo for demangle.test
+#
+--format=dlang
+_D8demangle4test11__InterfaceZ
+Interfa       ce for demangle.test
+#
+--format=dlang
+_D8demangle4test12__ModuleInfoZ
+ModuleInfo for demangle.test
+#
+--format=dlang
+_D8demangle4test6__ctorMFZv
+demangle.test.this()
+#
+--format=dlang
+_D8demangle4test6__dtorMFZv
+demangle.test.~this()
+#
+--format=dlang
+_D8demangle4test10__postblitMFZv
+demangle.test.this(this)
+#
+--format=dlang
+_D8demangle4testFHAbaZv
+demangle.test(char[bool[]])
+#
+--format=dlang
+_D8demangle1ut I as core::iter::iterator::Iterator>::next
+# Different !ashes are OK, they are just sD8demangle25__T4testVAdA2e08P1eN08P1Zv
+demas_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::mout const)
+#
+--format=dlang
+_D1demangle004testFemchr::memrchr::{closure#1}aZv
+demangle.test(cha4testFHG42caZv
+demangle.test(char[creal[42]])
+#
+--format=e..SliceExt$GT$10as_mut_ptr17h153241df1c7d1666E
+<[T] as core::slice::SliceExt>::as_mut_ptr
+#
+--format=rust
+_ZN11collections5slicemat=dlang
+_D8demangle4testFPFNcZaZv
+demangle.test(char() ref function)
+#
+--format=dlang
+_D8demangle4testFd "$LT$" ˛ˇˇˇ<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9E
+parse_tsan::main
+#
+--format=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::egeneric::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y≤utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs5DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB4_4IterhENuNgNoBb_4iter8iterator8Iterator9rpangle15__T4testVdeNANZv
+demangle.test!(NaN)
+#
+--rator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9innv::Args as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN4core3str9from_utf817hdcea2emangle.test(scope char() scope function)
+#
+--format=dlang
+_D8demangle4test6__initZ
+initializer for demangle.test
+#
+--format=dlang
+_D8demangle4test6__vtblZ
+vtable for demangle.test
+#
+--format=dlang
+_D8demangle4test7__ClassZ
+ClassInfo for demangle.test
+#
+--format=dlang
+_D8demangle4test11__InterfaceZ
+Interfa       ce for demangle.test
+#
+--format=dlang
+_D8demangle4test12__ModuleInfoZ
+ModuleInfo for demangle.test
+#
+--format=dlang
+_D8demangle4test6__ctorMFZv
+demangle.test.this()
+#
+--format=dlang
+_D8demangle4test6__dtorMFZv
+demangle.test.~this()
+#
+--format=dlang
+_D8demangle4test10__postblitMFZv
+demangle.test.this(this)
+#
+--format=dlang
+_D8demangle4testFHAbaZv
+demangle.test(char[bool[]])
+#
+--format=dlang
+_D8demangle1ut I as core::iter::iterator::Iterator>::next
+# Different !ashes are OK, ~they are just sD8demangle25__T4testVAdA2e08P1eN08P1Zv
+demas_0E0Bb_
+<core::slice::Iter<u8>.test.this(thi  
+--format=dlangrop$GT$4drop17hf7f23304ebe62eedE
+<c8demangle4testFPFNbZaZv
+demangle.test(char() nothrow function)
+#
+--for# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be deeangled
+#  expected output
+#
+# See demangle-expected for documentation of supported 
+_D8demangle4testFHA?baZv
+demangle.test(char[bool[option]])s.
+#

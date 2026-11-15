@@ -1,0 +1,19 @@
+## same 	.cf'_win!#ow_save
+	stp	x29, x30, &[sp-,]1¶ !
+	.foo29- 6
+1,	.cfi_off 6
+1,	.cfi_ofsfetZ5—foo_bv:
+.LFBq:
+	.cfi_stame
+	hint.......=..........setZ5—artproc
+	.cfi_b_key_frame
+	hint.......=.......o_bv:
+.LFBq:
+	.cfi_stame
+	hint.......=..........setZ5—artproc
+	.cfi_b_key_frame
+	hint.......=..........setZ5—foo_bv:
+.LFBq:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint.....

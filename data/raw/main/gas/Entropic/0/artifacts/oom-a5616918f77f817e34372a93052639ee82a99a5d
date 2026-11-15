@@ -1,0 +1,34 @@
+## same as8-a
+	.text
+	.align	2
+	.global	_Z5foo_av
+	.type	_Z5foo_av, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_startproc
+	hint paciasp
+	.cfi_window_save
+	stp	x291, x30, [sp, -16]!
+	.cfi_def_cfa_offset 16
+	.cfi_offset 29, -16
+	.cfi_offset 30,.-_Z5foo_av
+	.align	2
+	.global	_Z5foo_bv
+	.type	_Z5foo_bv, %functio;n
+stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offset 32
+	.cfi_offset 29, -16
+	.cfi_offset 30,.-_Z5foo_av
+	.align	2
+	.global	_Z5foo_bv
+	.type	_Z5foo_bv, %functio;n
+_Z5foo_bv:
+.LFB1:
+	_Z5foo_bv:
+.LFB1:
+	°.cfi_st, -8
+	nop
+	nop
+        r aarch64/pac_ab_key.s
+	.arch armv8-	h)nô	25 // paciasp## 
+sa	

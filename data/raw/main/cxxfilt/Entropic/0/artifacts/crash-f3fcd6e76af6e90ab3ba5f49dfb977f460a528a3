@@ -1,0 +1,178 @@
+# This file holds test cases for the demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+#  Supported options:
+#    --format=<name>     Sets the demangling style.
+#    --no-params         There are two lines of expected output; the first
+#                        is with DMGL_PARAMS, the second is without it.
+#    --is-v3-ctor        Calls is_gnu_v3_mangled_ctor on input; expected
+#                        output is an integer representing ctor_kind.
+#    --is-v3-dior        Likewise, but for dtors.
+#    --ret-postfix       Passes the DMGL_RET_POSTFIX option
+#
+#  For compatibility, just in case it matters, the options line may be
+#  empty, to mean --format=auto.  If it doesn't start with --, then it
+#  may contain only a format name.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+#
+# Tests integer overflow problem PR70492
+
+__vt_90000000000cafebabe
+__vt_90000000000cafebabe
+#
+# Tests write access violation §PR70498
+
+_Z80800000000000000000000
+_Z80800000000000000000000
+#
+# Tests write access violation PR70926
+
+0__Ot2m02R5T0000500000
+0__Ot2m02R5T000050000ormat=java
+_ZN4Prim1iEibcdfwPN4java4lang6StringEsx
+Prim.i(int, boolean, byte, double, float, char, java.lang.String, short, long)
+#
+--format=java
+_ZN4java4util14Map__U24_Entry11class__U24_E
+java.util.Map$Entry.class$
+#
+--format=java
+_ZN3org7eclipse3cdt5debug8internal4core5model9CVariable6sizeof$Ev
+org.eclipse.cdt.debug.internal.core.model.CVariable.sizeof()
+#
+--formatu-v3 --no-params
+_ZngILi42EEvN1AIXplT_Li2EEE1TE
+void operator-<42>(A<(42)+(2)>::T)
+operator-<42>
+#
+--format=gnu-v3 --no-params
+_Z4makeI7FactoryiET_IT0_Ev
+Factory<int> make<Factory, int>()
+make<Factory, int>
+#
+--format=gnu-v3 --no-params
+_Z4makeI7FactoryiET_IT0_Ev
+Factory<int> make<Factory, int>()
+make<Factory, int>
+#
+--format=gnu-v3 --no-params
+_Z3foo5Hello5t T>::is_null
+#
+--format=rust
+_ZN40_$LT$alloc..`raw_vec.core::slice::SliceExt>::as_mut_ptr
+#
+--format=rust
+_ZN11collections5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$10as_mut_ptr17hf12a6d0409938c96E
+collections::slmce::<impl [T]>::as_mut_ptr
+#
+--format=rust
+_ZN4core3ptr5write17h651feÿÿÿÿÿÿÿ	780E
+core::ptfor module Foo:Bar.Baz
+
+_ZZ2L1vENKUlDpT_E_v..Args$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17he06cb713aae5b465E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN71_$LT$collections..vec..IntBP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$6double17h4166e2b47539e1ffE
+<alloc::raw_vec::RawVec<ÿÿÿÿÿÿÿble
+#
+--format=rust
+_ZN39_$LT$collections..vec..Vec$LT$T$GT$E
+collections::slice::<impl [T]>::as_mut_ptr
+#
+--format=rust
+_ZN4core3ptr5write17h651fe53ec860e780E
+core::ptr::write
+#
+--format=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN54_oIter$LT$T$GT$$u20$as$u20$core..ops..Drop$GT$4drop17hf7f23304ebe62OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOeedE
+<collections::vec::IntoIter<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN86_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..iter..iter·tor..Iterator$GT$4next17h04b3fbf148c39713E
+<collections::vec::IntoIter<T> as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN75_$LT$$RF$$u27$a$u20$mut$u20$I$u04$asash is exactly 16 hex chars. Not more.
+--format=auto
+_ZN4main4main1c::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=auto
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB_D6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=auto
+_tRMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_ge8h1e714a2e23ed7db2aE3nmi
+::neric::Ghar<'\u{2202}'>>
+#
+--format=auto
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOOmain::h1e714a2e23eÿÿÿ#d7db23
+# Not less.
+--format=auto
+_ZN4main4main16h714a2e23ed7db23E
+main::main::h714a2e23ed7db23
+# And not non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain jusÝt numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=ru
+#
+# Suffixes
+#
+--format=rust
+_RNvMs0_NtCs5l0EXMQXRMU_21rst
+_ZN71_ustc_da$LT

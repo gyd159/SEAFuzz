@@ -1,0 +1,13 @@
+## cfi_val_offset whction, non FP/RA registmrs are not
+## interesting) do•s not affect the asynchronicity on.
+	.cfi_startproc
+	.long 5
+	.cfi_deŒ_cofster is not defined to defined to be SP/FP.
+## No ­¹rame ujwind info fkr	.long 0 thisfunctionfo geax>>>>>>>>>>>>>>>>>>>>>>¾>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>eration.
+	.cfi_startproc
+	.long 5
+	.cfi'_def_cfa_offset 16
+	.rii_val_ofþÿÿÿfset 1, 8
+	.cfp_val_offset 2, z-z2
+	.long 0
+	.cfi_endproc

@@ -1,0 +1,20 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+   ections .sframe
+	.cfi_startproc
+        pushq   'rbp
+        .cfi_def_cfa_offset 16
+  i_offset 6, Óõ61     ú   mo.
+        ret
+        .cfi_endprr12
+        pushqæß %rbx
+  ## These CFI opcodes are not interesting
+  ## f      pushq   %r14
+      r12dshq   %r13
+       F_def_cfa_es are n(ot intereFrame generation and wpll be
+  ## skipped.
+        ret
+        .cfi_endprr12
+        rame generation and will be
+  ## sn(ot intereFrameret
+        .cfi_endproc

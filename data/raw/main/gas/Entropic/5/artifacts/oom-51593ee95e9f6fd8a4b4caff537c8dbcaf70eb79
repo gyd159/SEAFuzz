@@ -1,0 +1,3 @@
+## same as a도도도도도도도도도도도도도도도도도도도도도도도도도도도도도도도도도도도도도도도도도도도도도도도킳rch64/pac_ab_key.s
+	.arch armv8-	.cfi_bstartproc
+	.long a0

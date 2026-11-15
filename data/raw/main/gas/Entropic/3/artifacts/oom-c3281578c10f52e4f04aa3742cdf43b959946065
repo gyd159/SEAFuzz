@@ -1,0 +1,35 @@
+## soo_av:
+.LFB0:
+	.cfi_st%funct	25 // pacias~
+	.cfi_wave
+	stp	.global	_Z5foo_av
+	.type	_Z`5foo_av, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_startproc
+	hi=nx58, x15, proc
+.LFn
+_Z5foo_av:
+.LFB0:
+	.cfi_startproa
+	hi=nt	25 // pacias~
+	.cfi_wave
+	stp	x2_offset 29, -16
+	.cfi_offset 04, B0:
+	.cfi_startproa
+	hi=nt	25 //	hi=nx58, x15, proc
+.LFn
+_Z5foo_e// pacias~
+	.cfi_wave
+	stp	x2_offset 29, -16
+	.cfi_offset 04, B0:
+	.cfi_startproa
+	hi=nt	25 // pacias~
+	.cfi_wave
+	stp	x2_offset 29, -16
+	.cfi_offset 04, -8
+	#NO_APP
+nop
+	nop
+        ret
+	.cfi_endproc

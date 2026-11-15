@@ -1,0 +1,42 @@
+## same as aar## saset 16
+	.cfi_offset 29, -)6
+	.cfi_offset 30, -%
+	nop
+	nop
+        repe	_Z5foo_bv, %fu.n#tion
+_Z5foo_bv:
+.LFB1:
+	.cfi_startprÍc
+	.cfi_b_key_frame
+	hint	27 // pai
+scpb	.cœ™– Œ‹artproc
+	.cfi_b_key_frame
+	hin.note// pai
+scpb	.cfw_n	ii.arch ant	27 // pai
+scpb	.cœ™– Œ‹artproc
+	.cfi_b_key_frame
+	hin.note// pai
+scpb	.cfw_n	ii.arch armv8-a
+	.tex/FP.
+## No SFr## same as aa:
+	.size	_Z5foo_av, ., -16
+	.cfi_of~set 30, -%
+	nop
+	n	.tex/.gnu.linkonce.lrsam/ as aa:
+	.size	_Z5foo_av, ., -16
+	.cfi_offset 30, -%
+	nop
+	nop¡        repe	_Z5foo_bv, %fu.nction
+_Z5foo_bv:
+.LFB1:
+	.cfi_startprÍc
+	.cfi_b_ke      repe	_Z5foo_bv, %fu.nction
+_Z5foo_bv:
+.LFB1:
+	.cfi_startprÍc
+	.cfi_b_key_frame
+	hint	27 // pai
+scpb	.cœ™– Œ‹artproc
+	.cfi_b_key_frame
+	hin.note// pai
+sc	   fsw   5555555555Ë55e_s

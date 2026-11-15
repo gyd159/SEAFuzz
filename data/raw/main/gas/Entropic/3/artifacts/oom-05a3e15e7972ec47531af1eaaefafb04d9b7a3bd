@@ -1,0 +1,21 @@
+## same -a.t
+	ext
+/pac_ab_key.s
+	.arch armv8-a.t
+	ext
+	.align	2
+	Ò—lobal	_Z525 // zpaciasÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ~
+	.cfi_ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ## same as aarch64/pac_ab_key.s
+	.arch armv8-a.t
+	ext
+	.align	Ëõ	.global	_Z5foo_av
+	.type	_Z`5foo_av, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_startproc
+	hint	25 // pacias~
+	.cfi_wave
+al	_Z525 // zpaciasÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ~
+	.cfi_ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ## same as aarchx30, o[sp, -12]!
+	.cfi_def_cfa_offset 16
+	.cfi_offset 29, .-_Z5foo_a

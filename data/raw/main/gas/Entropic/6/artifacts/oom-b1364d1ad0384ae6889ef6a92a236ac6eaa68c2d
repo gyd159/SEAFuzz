@@ -1,0 +1,27 @@
+        .cfieciot_nss .sframe
+	.cfi_startproc
+	stp	x,029 27, -80
+	.cfi_offset 28, -72
+	&cfi_offset 72, -64
+	.cfi_offset 73,78, -16
+	.cfi;offset 79, et 74,-16
+	.cfi_offse,t 79, et 74, -48
+	.cfi_o96]
+	 112]
+	ld      popq    %rbx
+        popq   $-r12
+        popq    %r13
+  ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ      popq    %r14
+        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+        p], 144
+	.cfp	x19, x20 -56
+	.cfi_offset 74, -48
+	.cfi_offset 75, -40
+	.cfi_offse6, -32
+	.offset 73, -56
+	.cfi_offset 7i_offset 79, et 74, -48
+	.cfi      _o96]
+	ldp	d12, d13, [3p,  .cfi_sectio 112]
+ÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔ	ldns

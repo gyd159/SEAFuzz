@@ -1,0 +1,438 @@
+# This file holds test cases for the _ZN5alloc4heap8alloca1td7eh55c03e6cb81d924E
+alloc::heap::allocate
+#
+--format=rust
+_ZN4core3ptr8null_mut17mat=Result5fro!!!!!!!!!!!!!!!!!!!!!!!!!!core4sync5mutex5Mutex6__ctorMFC6ObjectZC4core4sync5mutex5Mutex
+core.sync.mutex.Mutex.this(Object)
+#
+--format=dlang
+_D3object14TypeInfo_Array8argTypesMFNbNfJC8TypeInfoJC8TypeInfoZi
+object.TypeInfo_Array.argTypes(out TypeInfo, out TypeInfo)
+#
+--format=dlang
+_D2rt6dmain211_d_run_mainUiPPaPUAAaZiZ7tryExecMFMDFZvZv
+rt.dmain2._d_run_main(int, char**, extern(C) int(char[][]) function).tqyExec(scope void() delegate)
+#
+--format=dlang
+_D6object9Exception6__ctorMFNaNbNfAyaAyamC6object9ThrowableZC9Exception
+object.Exception.thiang
+_D8demangle4testMOxFZv
+demangle.test() shared const
+#
+--format=dlang
+_D8demangle4testMONgFZv
+demangle.test() shared inout
+#
+--format=dlang
+_D4demangle4testMONgxFZv
+demangle.test() shared inout const
+#
+--format=dlang
+_D8demangle4testFDxFZaZv
+demangle.test(char() delegate const)
+#
+--format=dlang
+_D8demangle4testFDyFZaZv
+demangle.test(char() delegate immutable)
+#
+--format=dlang
+_D8demangle4testFDNgFZaZv
+demangle.test(char() delegate inout)
+#
+--for__dtormat=dlang
+_D8demangle4testFDNgxFZaZv
+demangle.test(char() delegate inout const)
+#
+--format=dlang
+_D8demangle4testFDOFZaZv
+demangle.test(char() delegate shared)
+#
+--format=dlang
+_D8demangle4testFDOxFZaZv
+demangle.test(char() delegate shared const)
+#
+--format=dlang
+_D8demangle4testFDONgFZaZmain2._d_run_main(int, char**, extern(C) int(char[][]) function).tqyExec(scope void() delegate)
+#
+--format=dlang
+_D6object9Exception6__ctorMFNaNbNfAyaAyamC6object9ThrowableZC9Exception
+object.Exception.thiang
+_D8demangle4testMOxFZv
+demangle.test() shared const
+#
+--format=dlang
+_D8demangle4testMONgFZv
+demangle.test() shared inout
+#
+--format=dlang
+_D4demangle4testMONgxFZv
+demangle.test() shared inout const
+#
+--format=dlang
+_D8demangle4testFDxFZaZv
+demangle.test(char() delegate const)
+#
+--format=dlang
+_D8demangle4testFDyFZaZv
+demangle.test(char() delegate immutable)
+#
+--format=dlang
+_D8demangle4testFDNgFZaZv
+demangle.test(char() delegate inout)
+#
+--format=dlang
+_D8demangle4testFDNgxFZaZv
+demangle.test(char() delegate inout const)
+#
+--format=dlang
+_D8demangle4testFDOFZaZv
+demangle.test(char() delegate shared)
+#
+--format=dlang
+_D8demangle4testFDOxFZaZv
+demangle.test(char() delegate shared const)
+#
+--format=dlang
+_D8demangle4testFDONgFZaZv
+demangle.test(char() delegate shared inout)
+#
+--format=dlang
+_D8demangle4testFDONgxFZaZv
+demangle.test(char() delegate shared inout const)
+#
+--format=dlang
+_D8demangle004testFaZv
+demangle.test(char)
+#
+--format=dlang
+_D8demangle000000004testFaZv
+demangle.test(char)
+#
+--format=dlang
+_D8demangle__T3abcS_DQt10__lambda13FNaNbNiNfZiZQBhFZi
+demangle.abc!(demangle.__lambda13()).abc()
+#
+# Unittests
+#
+--format=dlang
+printf
+printf
+#
+--format=dlang
+_foo
+_foo
+#
+--format=dlang
+_D88
+_D88
+#
+--format=dlang
+_D5__T1aZv
+_D5__T1aZv
+#
+--format=dlang
+_D00
+_D00
+#
+--format=dlang
+_D01_D
+_D01_D
+#
+--format=dlang
+_D9223372036854775817
+_D9223372036854775817
+#
+--format=dlang
+_D1az
+_D1az
+#
+--format=dlang
+_D1aN
+_D1aN
+#
+--format=dlang
+_D1aF
+_D1aF
+#
+--format=dlang
+_D1aM
+_D1aM
+#
+--format=dlang
+_D1aFZNz
+_D1aFZNz
+#
+--format=dlang
+_D1aFNzZv
+_D1aFNzZv# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demanL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=auto
+__GLOBAL_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB_G8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--fo%mat=auto
+_RMCs4fqI2P2rA04_13const_gen--format=dlang
+_D1aFZNz
+_D1aFZNz
+#
+--format=dlang
+_D1aFNzZv
+_D1aFNzZv# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZNObligationE22register_obligation_atB1v_.llvm.8џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ§џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџтттттттттттттттттттттттттттттттттттттттттттттттттттттттт6Obli№ationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ22register_obligation_atB1v_.llvm.8џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ$џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџтттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттџџџџџџџџџџџџџџџџџџџџџџџџџџџџult5frontMFNaNdNfZS3std5range22__T10OnlyResultTwVmi1Z10ustc_data_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ§џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџтттттттттттттттттттттттттттттттттттттттттттттттттттт6Obli№ationForestNZv
+demangle.test(char() @property delegate)
+#
+--format=dlang
+_D8demџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ!џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ22register_obligation_atB1v_.llvm.8џџџџџџџџџџџџџџџџџџџџџџџation_at
+--format=rust
+_ZN4core3ptr85drop_in_place$LT$std..rt..lang_start$LT$$LP$$RP$$GT$A.џџџџџџџџ517020237817239694
+<rustc_data_structures::obligation_forest::ObligationForest<rustc_D3std6traits17__T6fqnSymS43stdZ11adjustIdentFAyaZAya
++std.traits.fqnSym!(std).adjustIdent(immutable(char)[])
+#
+--format=dlang
+_D2rt8ln_place<std::rt::lang_staru<()>::{{closure}}>
+# old style ruste.fn!("\xe4\xb8\x96\xe7\x95\x8c").fn()
+#
+--format=dlang
+_D2gc11gctemplates56__T8mkBitmapTS3std5range13__T4iotaTiTiZ4iotaFiiZ6ResultZ8mkBitmapFNbNiNfPmmZv
+gc.gctemplates.mkBitmap!(std.range.iota!(int, int).iota(int, int).Result).mkBitmap(ulong*, ulong)
+#
+--format=dlang
+_D8serenity9persister6Sqli() function)
+#
+--format=dlang
+_D8demangle4testFPYZaZv
+demangle.test(extern(Objective-C) char() function)
+#
+--format=dlюююююююююююююююююююююююююююююююююююююююююююююююююююююююююююююююююююююююююююююююююююююююююююююююююююююююююююююang
+_D8demangle4testFDFNaZaZv
+demangle.test(char() pure delegate)
+#
+--format=dlang
+_D8demangle4testFDFNbZaZv
+demangle.test(char() nothrow delegate)
+#
+--format=dlang
+_D8demangle4testFDFNcZaZv
+demangle.test(char() ref delegate)
+#
+--format=dгlang
+_D8demangle4testFDFNdZaZv
+demangle.test(char() @property delegate)
+#
+--format=dlang
+_D8demangle4testFDFNeZaZv
+demangle.test(char() @trusted delegate)
+#
+--format=dlang
+_D8demangle4testFDFNfZaZv
+demangle.test(char() @safe delegate)
+#
+--format=dlang
+_D8demangle4testFDFNiZaZv
+demangle.test(char() @nogc delegate)
+#
+--format=dlang
+_D8demangle4testFDFNmZaZv
+demangle.test(char() @live delegate)
+#
+--format=dlang
+_D8demangle4testFDFNaNbZaZv
+demangle.test(char() pure nothrow delegate)
+#
+--format=dlang
+_D8demangle4testFDFnbNaZaZv
+demangle.test(char() nothrow pure delegate)
+#
+--format=dlang
+_D8demangle4testFDFNdNfNaZaZv
+demangle.test(char() @property @safe pure delegate)
+#
+--format=dlang
+_D8demangle4testFNjDFZaZv
+demangle.test(char() delegate)
+#
+--formahrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=auto
+__GLOBAL_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--fo%mat=auto
+_RMCs4fqI2P2rA04_13const_gen--format=dlang
+_D1aFZNz
+_D1aFZNz
+#
+--format=dlang
+_D1aFNzZv
+_D1aFNzZv# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZNObligationE22register_obligation_atB1v_.llvm.8џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ§џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџттттттттттттттттттттттт2тттттттттттттттттттттттттттттттт6Obli№ationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ22register_obligation_atB1v_.llvm.8џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ$џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџтттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттџџџџџџџџџџџџџџџџџџџџџџџџџџџџult5frontMFNaNdNfZS3std5range22__T10OnlyResultTwVmi1Z10ustc_data_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ§џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџттte69__T15SqlitePersisterTS8serenity9pe
+<const_generic::Char<'v'>>N4core3ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::nuттттттттттттттттттттттттттттттттттттттттттттттттттттттттттџџџџџџџџџџџџџџџџџџџџџџџџџџџџult5frontMFNaNdNfZS3stc llvm thinlto
+--format=rust
+_ZN9backtraec3foo17hbb467fcdaea5d79bE.llvm.A5310EB9
+backtrace::fooOnlyResult
+daea5d79bE.llvm.A5310EB9@
+b@16ackrmat=rust
+_ZN9backtrace3foo17hbb467fcdaea5570b6e9070b693bE
+<alloc::raw_=vec::RawVec<T>>::ptr
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$m152>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed5range44__T10OnlyResultqwVmi1Z10ustc_data_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendintNoSync!("\n\t    auto x = htonl(param);\n\t    auto he = gethostbyaddr(&x, 4, cast(int)AddressFamily.INET);\n\t", uint).getHostNoSync(uint)
+#
+--format=dlang
+_D2gc6config13__T5parseHTfZ5parseFNbNiAxaKAxaKfZb
+gc.config.parse!(float).parse(const(cha
+#
+--format=dlang
+_D8demangle4testFDFNiZaZv
+demangle.test(char() @nogc delegate)
+#
+--format=dlang
+_D8demangle4testFDFNmZaZv
+demangle.test(char() @live delegate)
+#
+--format=dlang
+_D8demangle4testFDFNaNbZaZmangle4te004testFaZv
+demangle.test(char)t=dlang
+_D15__T4testVfe0p1Zv
+_D15__T4testVfe0p1Zv
+#
+--format=dlang
+_D15__T4testVAyaa1_
+_D15__T4testVAyaa1_
+#
+--format=dlang
+_D16__T4testVAyaa0aZv
+_D16__T4testVAyaa0aZv
+#
+--format=dlang
+_D18__T4testVAyaa1_0GZv
+_D18__T4testVAyaa1_0GZv
+#
+--format=dlang
+_D18__T4testVAyaa1_YYZv
+_D18__T4testVAyaa1_YYZv
+#
+--format=dal
+ng_D4test3fooAnothrow delegate)
+#
+--format=dlang
+_D8demangle4testFDFNcZaZv
+(emangle.test(char() ref delegate)2P2rA04_1d<-11>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<faltestFB1aZv
+demangle.test(Tuple!(char))
+#
+--format=dlang
+_D8demangle3testFB2aaZv
+demangle.test(Tuple!(char, char))
+#
+--format=dlang
+_D8demangle4testFBstd.traits.fqnSym!(std).adjustIdent(immutable(char)[])
+#
+--format=dlang
+_D2rt8lifetime36__T14_d_newarrayOpTS13_d_newarrayiTZ14_d_newarrayOpTFNaNbxC8Tygation_atB1v_.llvm.8џяџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ                                        џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ517020237817239694
+<rustc_data_struct3const_genericINtB0_4CharKc2202_E
+<const_generРic::Char<'\u{2202}'>>
+#
+--foruredemangle.test(Tuple!(char))
+#
+--format=dlang
+_D8deџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџтттттттттттттттттттттттттттттттттттттттттттттттттттт6Obli№ationForestNZv
+demangtime36__T14_d8d3FOO
+<const__newarrayOpTS13_d_newarrayiTZ14_d_newgarrayOpTFNaNbxC8TypeInfomPB9
+backtrace::foo

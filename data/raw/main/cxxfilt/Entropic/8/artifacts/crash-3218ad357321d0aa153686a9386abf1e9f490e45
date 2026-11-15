@@ -1,0 +1,339 @@
+# This file holds test cases for the D demangler.
+=# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for ‚documentation of supported options.
+#
+# A line starting with `#' is ignored.oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+#Coverage Tests
+#
+--format=dlang
+_Dmain
+D main
+#_GLOBAL_
+--format=dlane2cfE
+core::mem::size_of
+#
+--format=rust
+_ZN5alloc4heap8allocate17hd55c03e6cb81d924E
+alloc::heap::allocate
+#
+--format=rust
+_ZN4core3ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN40_$LT$alloc..raw_ˇˇˇˇˇˇˇˇVec$LT$T$GT$$GT$6double17h4166e2b47539e1ffERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+<alloc::raw_vec::RawVec<T>>::double
+#
+--format=rust
+_ZN39_$LT$collections..vec..Vec$LT$T$GT$$GT$4push17hd4b6b23c1b88141aE
+<collections::vec::Vec<T>>::push
+#
+--format=rust
+_ZN70_$LT$§êllections..vec..Vec$LT$T$GT$$u20$as$u20$core..ops..DerefMut$GT$9deref_mut13uni__T6toCaseS!DQvQt12toLowerIn# This file holds test cases for the D demangler.
+=# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for ‚documentation of supported options.
+#
+# A line starting with `#' is ignored.oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+#Coverage Tests
+#
+--format=dlang
+_Dmain
+D main
+#_GLOBAL_
+--format=dlane2cfE
+core::mem::size_of
+#
+--format=rust
+_ZN5alloc4heap8allocate17hd55c03e6cb81d924E
+alloc::heap::allocate
+#
+--format=rust
+_ZN4core3ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN40_$LT$alloc..raw_ˇˇˇˇˇˇˇˇVec$LT$T$GT$$GT$6double17h4166e2b47539e1ffERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+<alloc::raw_vec::RawVec<T>>::double
+#
+--format=rust
+_ZN39_$LT$collections..vec..Vec$LT$T$GT$$GT$4push17hd4b6b23c1b88141aE
+<collections::vec::Vec<T>>::push
+#
+--format=rust
+_ZN70_$LT$§êllections..vec..Vec$LT$T$GT$$u20$as$u20$core..ops..DerefMut$GT$9deref_mut13uni__T6toCaseS!DQvQt12toLowerIndexFNaNbNiNewZtVii1043S_DQCjQCi10t4testFaYv
+7hf299b860dc5a831cE
+<collections::vec::Vec<T> as core::ops::DerefMut>::deref_mut
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$u20$core..ops..format=rust
+_ZN70_$LT$§êllections..vec..Vec$LT$T$GT$$u20$as$u20$core..ops..DerefMut$GT$9deref_mut13uni__T6toCaseS_DQvQt12toLowerIndexFNaNbNiNewZtVii1043S_DQCjQCi10t4testFaYv
+7hf299b860dc5a831cE
+<collections::vec::Vec<T> as core::ops::DerefMut>::deref_mut
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17hc784b4a166cb5e5cE
+<core::ptr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$3ptr17h7570brKc76_E
+<const_generic::Char<'v'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_ge·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=rust
+_RNCNCN:Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9E
+parse_tsan::main
+#
+--format=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$core..iter..iterator..Iterator$GT$4# This file holds test cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expec2ed for documentation of supported options.
+#
+# A line starting with `#' is
+demangle.test(char[])
+#
+--format=dlang
+_D__ClassZ8demangle4testFAAaZv
+d%emangle.test(char[][])
+#
+--format=dlang
+_D8demangle4testFAAAaZv
+demangle.test(char[][][])
+#
+--format=dlang
+_D8demangle4testFG42aZv
+demangle.test(char[42])
+#
+--format=dlang
+_D8demangle4testFG42G42aZv
+demangle.test(char[42][42])
+#
+--format=dlang
+_D8demangle4testFG42G42G42aZv
+demangle.test(char[42][42][42])
+#
+--format=dlang
+_D8demangle4testFG1234567890aZv
+demangle.test(char[1234567890])
+#
+--forma ignored.
+# However, blank lines in this file arechar, char))
+#
+--format=dlang
+_D8demangle4testFB2OaaZv
+demangle.test(Tuple!(shared(char), char))
+#
+--format=dlang
+_D8demannt).s(int).Result).s(testexpansion.s!(int).s(int).Result).Result.foo()
+#
+--format=dlang
+_D12testexpansion__T1sTSQw__TQjTiZQoFiZ6ResultZQBbFQBcZQq3fooMFNaNfZv
+testexpansion.s!(testexpansion.s!(int).s(int).ResultTSQw__TQjTiZQoFiZ6ResultZQBbFQBcZQq3fooMFNaNfZv
+testexpansion.s!(testexpansion.s!(int).s(int).Result).s(testexpansion.s!(int).s(int).Result).Result.foo()
+#
+--format=dlang
+_D3std4conv__T7enumRepTyAaTEQBa12experimental9allocator15building_blocks15stats_collector7OptionsVQCti64ZQDnyQDh
+std.conv.enumRep!(immutable(char[]), std.experimental.allocator.building_blocks.stats_collector.Optionsding_blocks17kernighan_ritchie__T8KRRegionTSQEhQEgQDvQCh14null_allocator13NullAllocatorZQCdZQErFNaNbNiKQEpKAvmZb
+std.experimental.allocator.common.reallocate!(std.experimental.allocator.building_blocks.kernighanathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=rust
+_RNCNCN:Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9E
+parse_tsan::main
+#
+--format=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$core..iter..iterator..Iterator$GT$4# This file holds test cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expec2ed for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file arechar, char))
+#
+--format=dlang
+_D8demangle4testFB2OaaZv
+demangle.test(Tuple!(shared(char), char))
+#
+--format=dlang
+_D8demannt).s(int).Result).s(testexpansion.s!(int).s(int).Result).Result.foo()
+#
+--format=dlang
+_D12testexpansion__T1sTSQw__TQjTiZQoFiZ6ResultZQBbFQBcZQq3fooMFNaNfZv
+testexpansion.s!(testexpansion.s!(int).s(int).Result).s(testexpansion.s!(int).s(int).Result).Result.foo()
+#
+--format=dlang
+_D3std4conv__T7enumRepTyAaTEQBa12experimental9allocator15building_blocks15stats_collector7OptionsVQCti64ZQDnyQDh
+std.conv.enu# This file holds test caor ‚documentation of supported options.
+#
+# A line starting with `#' is ignored.oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+#Coverage Tests
+#
+--format=dlang
+_Dmain
+D main
+#_GLOBAL_
+--format=dlane2cfE
+core::mem::size_of
+#
+--format=rust
+_ZN5alloc4heap8allocate17hd55c03e6cb81d924E
+alloc::heap::allocate
+#
+--format=rust
+_ZN4core3ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN40_$LT$alloc..raw_ˇˇˇˇˇˇˇˇVec$LT$T$GT$$GT$6double17h4166e2b47539e1ffERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+<alloc::raw_vec::RawVec<T>>::double
+#
+--format=rust
+_ZN39_$LT$collections..vec..Vec$LT$T$GT$$GT$4push17hd4b6b23c1b88141aE
+<collections::vec::Vec<T>>::push
+#
+--format=rust
+_ZN70_$LT$§êllections..vec..Vec$LT$T$GT$$u20$as$u20$core..ops..DerefMut$GT$9deref_mut13uni__T6toCaseS!DQvQt12toLowerIn# This file holds test cases for the D demangler.
+=# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for ‚documentation of supported options.
+#
+# A line starting with `#' is ignored.oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+#Coverage Tests
+#
+--format=dlang
+_Dmain
+D main
+#_GLOBAL_
+--format=dlane2cfE
+core::mem::size_of
+#
+--format=rust
+_ZN5alloc4heap8allocate17hd55c03e6cb81d924E
+alloc::heap::allocate
+#
+--format=rust
+_ZN4core3ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN40_$LT$alloc..raw_ˇˇˇˇˇˇˇˇVec$LT$T$GT$$GT$6double17h4166e2b47539e1ffERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+<alloc::raw_vec::RawVec<T>>::double
+#
+--format=rust
+_ZN39_$LT$collections..vec..Vec$LT$T$GT$$GT$4push17hd4b6b23c1b88141aE
+<collections::vec::Vec<T>>::push
+#
+--format=rust
+_ZN70_$LT$§êllections..vec..Vec$LT$T$GT$$u20$as$u20$core..ops..DerefMut$GT$9deref_mut13uni__T6toCaseS!DQvQt12toLowerIndexFNaNbNiNewZtVii1043S_DQCjQCi10t4testFaYv
+7hf299b860dc5a831cE
+<collections::vec::Vec<T> as core::ops::DerefMut>::deref_mut
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$1MFNaNbNiNfZvZQCbQp
+mangle.fun21753!_Gangle.S21753(mangle.__lambda71<impl *mut T>::is_null
+#
+--format=rust
+_ZN53_$LT$$u5b$T$u5d$$u20$as$u20$core..slice..SliceExt$GT$10as_mut_ptr£      1df1c7d1666E
+<[T] as ˇˇˇûcore::slsure#1}>::{closureˇ0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5nKxBoFup6OutputZN4main4main17he714a2e23ed7db23E
+ice::SliceExt>::as_mut_ptr
+#
+--format=rust
+_ZN11col::memrchr::{closure#1}>::{closure#0}
+# dyn Tra=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolBK0}
+# dyn Trait ("trait object") types.
+--format=# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  optionc
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line generic::Bool<false>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB    0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_tFAAAaZv
+demangle.test(char[][][])
+#
+--formatu20$core..iter..tra=dlang

@@ -1,0 +1,11 @@
+## same as aarch64/pac_ab_key.s
+	NNNNNNNk2NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN## sameðas aarNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN.arch armv8-a
+	.text
+	.aligc
+	.cfi_b_key_frame
+	hfch64/pac__ab_key.s
+	.arch armv8-a
+	.text<<<<<<<<<<<<<<<<<<<<i_startproc
+	hints
+8-a
+	25 // 	.paciastext

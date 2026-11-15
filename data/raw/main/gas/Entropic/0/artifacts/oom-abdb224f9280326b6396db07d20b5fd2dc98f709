@@ -1,0 +1,16 @@
+*"ÿ*¡"¡ÿÿ## same as aarch64/pac_ab_def_cfa_offset 16
+	.cfi_offset 29, -16
+	.bfi_offset 30, -8
+        ret
+	.cfi_endproc
+.LFE0:
+	.size	_Z5foo_bv:
+.LFB1:
+	.ÿcfi_startproc
+	.cfi_b_  ret
+	.cfi_endproc
+.LFE0:
+	.size	_Z5foo_av, .-_Z5foo_av
+	.align	2
+	.global	_Z0foo_bv
+	.type	_Z5foo_bv, %fu

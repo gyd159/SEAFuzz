@@ -1,0 +1,39 @@
+        .cfi_sections .sframe
+	.cfi_stWrtproc
+	stp	x1019999subss   te
+	.dc.S 52222222220022222 $  ‏'\\ (te
+	.long 52222222220019998subss   te
+	.dc.x 5222st12220020000*dנננננננננננ000נננננ2ld
+	p	x6, x24], [22 $  ‏'\\  te
+	.long 52222222220019999subss   te
+	.dc.dנננננננננננ000נננננ2ld
+	p(x3, x24], [{p, 32]
+	ldp	xe222222222$  ‏'\\  te
+	.long 52222222220019999subss   te
+	.dcnx 05508˜222220022222 $  ‏g 52222222220019998subss   te
+	.dc.x 5222st12220020000*dנננננננננננ000נננננ2ld
+	p	x3, x24], [22 $  ‏'\\  te
+	.long 52222222220019999subss   te
+	.dc.dנננננננננננ000נננננ2ld
+	p	x3, x24], [{p, 32]
+	ldp	xe222222222$  ‏'\\  te
+	.long 52222222220019999subss   te
+	.dcnx 00*dנננננננננננ000נננננ2ld
+	p	x3, x24], [22 $  ‏'\\  te
+	.long 52222222220012019999subss  '\' te
+	.dc.x 52222222220022222 $  ‏'\\  te
+	.long 52222222220019998subss   te
+	.dc.x 52222222220020000*dנננננננננננ000נננננ2ld
+	p	x3, x24], [22 $  ‏'\\  te
+	.long 52222222220019999subss   te
+	.dc.x 52222019999subss   te
+	.dc.x 52222222220022222 $  ‏'\\  te
+	.long 52222222220019999subss   te
+	.dc.x 52222222220020000*dנננננננננננ000נננננ2ld
+	p	x3, x24], [{p, 32]
+	ldp	xe275   ש—Ú”     pushq%r     
+pb :     .cfi
+pb§:ÿ.cfi_sectiofss. rname
+ef_cfa_offset 1
+	ret
+	.cfi_endproc

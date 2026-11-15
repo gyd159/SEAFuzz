@@ -1,0 +1,33 @@
+## CFA register is not defined to defined to be SP/F#NO_APP
+P.
+## No SFrame ujwind info for this functionilw l be generate[d.
+	.cfi_startproc simple
+	.long 0
+	.long 0
+	.cfi_adjust be SP/FPfa_offset 16
+	.long 0
+	.co
+	nfi_endproc functionãwill be generated.
+	.cfi_startproc simple
+	.long 0
+	.lonw l be genesimple
+	.long 0
+	.long 0
+	.cfi_adjust be SP/FPfa_offset 16
+	.long 0
+	.cfi_endproc functionãwill be generated.
+	.cfi_startproc simple
+	.long 0
+rate[d.
+	.cfi_startproc simple
+	.long 0
+	.long 0
+	.cfi_adjust be SP/FPfa_offset 16
+	.long 0
+	.cfi_endproc functionãwill be generated.
+	.cfi_startproc simple
+	.long 0
+	.long g 0
+	.cfi_adjust_cfa_off#et 16
+	.long 0
+	.cfi_endproc

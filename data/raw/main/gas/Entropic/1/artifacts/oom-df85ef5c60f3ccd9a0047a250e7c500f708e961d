@@ -1,0 +1,40 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+	stp	x09, x20,-128
+	.cfi_offset 22, -120
+	.cfi_offset 23, -112
+	.cfi_offset 24, -104
+	.cfi_offset 25, -9.text6
+	.cfi_offset 26 -,88
+	.cfÒ_offset 27, -80
+	.cfi_offset 28,72 -
+	.cfi_offset 72 [sp, -144]!
+	.cfi_def_cfa_offset 144
+	.fci_ossssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssffset 19, -144
+	ffset 24, -104
+	.cfi_offset 25, -9.text6
+	.cfi_offset 26 -,88
+	.cfi_offset 27, -80
+	.cfi_offset 28, -72
+	.cfi_offset 72, -64cfi_ofd``fset 25, -96
+	.cfi
+	stp	d14, d15, [sp, , d15, [sp,tp	d12, d13, [sp, 112]
+	stp	d14, d15, [sp, , d15, [sp, 128]
+	.cfi_offset 21, -128
+	.cfi_128
+	.cfi_of¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿fset 22, -120
+	.cfi_offset 23, -112
+	.cfi_offsset 24, -104
+	.cfi_offset 25, -9.text6
+	.cfi_offset 26 -,88
+	.cfi_offset 27, -80
+	.cfet 24, -104
+	.cfi_offset 25, -9.text6
+	nder nos teed ksi222222
+	.cfi_ E‚‚‚‚startof.cfi_offset 26, -88
+	.cfi_offset 27, -80
+	.cfi_offset 28,2, [sp, 16]
+	stet 77, -24
+	.cfi_offset 78,         .cfi_section-16
+	.cfi_offse4 79, -8 	nop
+	ldp	x21,s x2 

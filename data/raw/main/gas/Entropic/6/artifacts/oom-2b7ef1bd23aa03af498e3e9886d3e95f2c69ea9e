@@ -1,0 +1,14 @@
+ me as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	.align	2
+	.glo+bal	_Z5foo_av
+	.type	_Z5foo_av, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_startproc
+## s	hint	25 // paciasp
+	.cfi_window_ÿsave
+	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offset 16ame as aa
+	r.cf

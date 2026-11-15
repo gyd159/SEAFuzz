@@ -1,0 +1,41 @@
+        .cfi_se rname
+	.cfi_st, -16
+        movq   !%rfi_offset 79, -8
+	nop
+	lvrsqrt28ss        movq    %rsp,    þÿÿÿ-cfi_sectiofss. rname
+	.icf_startproc
+  .sframe
+	.cfi_startproc   movq    %rsiofss. rname
+	.icf_startproc
+  .sfr-2, -16
+        movq   !%rfi_offset 79, -8
+	nop
+	ldp 6, -16
+        mectiofss. rname
+	.icf_sta#_sectiofss. rname
+	.icf_stiofss. rname
+	.icf_startproc
+  .sfr-2%rfi_offset 79, -8
+	nop
+	ldp 6, -16
+        movq    %rsp,    þÿÿÿ-cfi_sectiofs-. rname
+	.icf_startproc
+  .sc&i#.gnu.linkonce.lte
+	.icf_stiofss. rname
+	.icf_startproc
+  .sfr-2, -16
+        movq   !%rfi_offset 79, *8
+	nop
+	ldp 6, -16
+  , -16
+        movq   !%rfi_offset 79, -8
+	nop
+	ldp 6, -16
+        mectiofss. rname
+	.-2, -16
+        movq   !%rfi_offset 79, *8
+	nop
+	ldp 6, -16
+  , -,6
+        movq   !%rfi_offset 7de1  r t
+   0, d     s.11

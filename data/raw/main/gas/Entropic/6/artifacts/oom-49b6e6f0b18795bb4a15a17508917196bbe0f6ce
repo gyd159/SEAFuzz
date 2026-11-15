@@ -1,0 +1,63 @@
+## 16
+	.cfi__Z5foo_bv
+	.t}pe	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cf뱺뙅artproc
+	.cfi_b_key_frame
+	hint	27 // pai
+scpb	.cfi_window_save
+	stp	x29, x30	.cfi_endproon
+_Z5foo_av:
+.LFB0:
+	.cfi_startproc
+	h_b_key_frame
+	hint	27 // pai
+scpb	.cfi_window_save
+	stp	x29, x30	.cfi_endproc
+.LFE0:
+	.siB0:
+	.cfi_startproc
+	hint	
+	.align	2
+	.global	_Z4foo_bv
+	.type	_Z5foo_tp	x29, x30	.cfi_eint	;5 // paciasp
+	.cfi_wi뮎릦젋옄e
+	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offset 16
+	.cfi_offset 29, -16
+	.cfi__Z5foo_bv
+	.t}pe	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cf뱺뙅artproc
+	.cfi_b_key_frame
+	hint	27 // pai
+scpb	.cfi_window_save
+	stp	x29, x30	.cfi_endproc
+.LFE0:
+	.siB0:
+	.cfi_startproc
+	hint	
+	.align	2
+	.global	_Z4foo_bv
+	.type	_Z5foo_tp	x29, x30	.cfi_endproc
+.LFE0:
+	.siB0:
+	.cfi_startproc
+	hint	
+	.align	2
+	.global	_Z4foo_bv
+	.type	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	27 // pai
+scpb	.cfi_indow;;;;;;;;;;;;;;;1;;;;;;;;;;;식컴컴컴;;;;;
+	.size	_Z5foo_av, .-_Z5foo_av
+	.align	2
+	.global	_Z4foo_bv
+	.type	_Z5죓o_bv, %func30, [sp, -16]!
+	.cfi_det
+	.cfi_endproc

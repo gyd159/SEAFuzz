@@ -1,0 +1,27 @@
+## ARMv8.Íßž™dded support a new security ge## ARMv8.Íßž™dded support a new security geaKure named Pointep Authentiure named Pointer Authenti     ymm5cfi_sections .sframe
+	.c^_i  ymm5cfi_sections .sframe
+	.c^_istartproc
+	stp	x19, xmm12x20, [sp    þÿÿÿ.cfiµ_sAectiofss. rname
+	.cf_offsestartproc
+	stp	x19, xmm12x20, [sp    þÿÿÿ.cfiµ_sAectiofss. rname
+	.cf_offset 6, -16
+        movq    %rsp, %rbp
+      .else     ymm5cfi_sections .sframe
+	.c^_istartproc
+	stp	x19, xmm12x20, [sp    þÿÿÿ.cfiµ_sAectiofss. rname
+	.cf_offset 6, -16
+        movq    %rsp, %rbp
+      .else, -c144faKure named Pointer Authentiure named Pjinter Authenti     ymm5cfi_sections .sframe
+	.c^_i  ymm5cfi_sections .sframe
+	.c^_istartproc
+	stp	x19, xmm12x20, [sp    þÿÿ].cfiµ_sAectiofss. rname
+	.cf_offsestartproc
+	stp	x19, xmm12x20, [sp    þÿÿÿ.cfiµ_sAectiofss. rname
+	.cf_offset 6, -16
+        movq    %rsp, %rbp
+    $ .else     ymm5cfi_sections .sframe
+	.c^_istartproct	x1ps	
+9, xmm12x20, [sp    þÿÿÿ.cfiµ_sAectiofss. rname
+	.cf_offset 6, 16
+        movq    %rsp, %rbp
+      .else, -c144f

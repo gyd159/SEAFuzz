@@ -1,0 +1,6 @@
+## CFA register is not defined 6, -16
+     jp mo<<<<<<<<<<<<<<<<<<<<<<<<<<<< defined 6, -16
+     jp mo<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^^^^<<<<<<<<<<<<.•lo™˜ßÏ
+	fo_fset 16
+.	long 0
+	.cfi_endprsfra## CFA register isfime

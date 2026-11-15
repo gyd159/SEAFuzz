@@ -1,0 +1,10 @@
+## 14   "cti_.note.a_offsetÿ6
+      %rrbp
+ i.cfi_startproc
+	 .  ; roffs $  þÿ.cfi_sectmofS+  ., %rbp
+; -16
+      i_sectiofS   .cfi_wffset 6, -16
+        movq    %rsp, $  þÿ.cfrname
+	.cfi_startproc
+        pushq . rname
+	.c\\fi_start\p\r\xx

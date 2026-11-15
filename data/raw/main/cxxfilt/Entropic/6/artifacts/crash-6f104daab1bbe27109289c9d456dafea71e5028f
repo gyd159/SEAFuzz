@@ -1,0 +1,1245 @@
+# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#)::{lambda(auto:1)#1}::operator()<int~(int) const::{lambda()#1}&&)
+Capture<Foo()::{lambda(auto:1)#1}::operator()<int>(int) const::{lambda()#1}>
+--no-params
+_Z4FrobIZZ3FoovENKUlT_E_clIiEEvS0_EUlvE_Evv
+void Frob<Foo()::{lambda(auto:1)#1}::operator()<int>(int) const::{lambda()#1}>()
+Frob<Foo()::{lambda(auto:1)#1}::operator()<int>(int) const::{lambda()#1}>
+# A lambda {local-class::member-fn}
+--no-params
+_ZZ3FoovENKUlT_E_clIiEEfS_
+float Foo()::{lambda(auto:1)#1}::operator()<int>(int) const
+Foo()::{lambda(auto:1)#1}::operator()<int>
+# template-fn {local-class::member-fn}
+--no-params
+_ZZ3FooIiEfvEN1X2fnEv
+Foo<int>()::X::fn()
+Fo?o<int>()::X::fn
+# template-fn generic-lambda local-class::member-fn
+--no-params
+_ZZZ3FooIiEfvENKUlT_E_clIcEEDaS0_EN1X2fnEv
+Foo<int>()::{lambda(auto:1)#1}::operator()<char>(char) const::X::fn()
+Foo<int>()::{lambda(auto:1)#1}::operator()<char>(char) const::X::fn
+#PR91979 demangling nullptr expression
+
+_Z3fooILPv0EEvPN9enable_ifIXeqT_LDnEEvE4typeE
+void foo<(void*)0>(enable_if<((void*)0)==(decltype(nullptr)), void>::type*)
+
+_ZNK5coro15emptyawEv
+coro1::empty::operator co_await() const
+
+_ZNK3FoossERKS_
+Foo::operator<=>(Foo const&) const
+
+_Z1f1AIXtl1Udi1iLi0EEEEllvm.8517020237817239694
+<rustc_data_structures::obligec::ArrayVec<u8, 123>>::new
+#
+--format=auparser::ParserRef<modc::parser::OptionalParser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > ><modc::parser::Parser::Annotation::Relationship> >, modc::parser::ExactElementParser<modc::astParser::TokenParserInput> > >, modc::astParser::{lambda(modc::astParser::Loc, modc::parser::TransformParser, modc::Maybe<modc::ast>&&)#21}> > >::Type, modc::astParser::LocatedParser<modc::parser::ParserRef<modc::astParser::{lambda(modc::astParser::TokenParserInput&)#1}> ><modc::parser::OptionalParser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > > >::Type, modc::astParser::LocatedParser<modc::parser::ParserRef<modc::astParser::{lambda(modc::astParser::TokenParserInput&)#1}> ><modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParser::OneOfKeywordsToTParser<modc::parser::Parser::Style> > > >::Type, modc::astParser::LocatedParser<modc::parser::ParserRef<modc::astParser::{lambda(modc::astParson<void ()> >(std::function<void ()>&&)::{lambda()#1}*& std::_Any_data::_M_access<post<std::function<void ()> >(post<std::function<void ()> >(std::function<void ()>&&)::{lambda()#1}*&&)::{lambda()#1}*>()
+#
+--format=auto --no-params
+_Z3xxxDF16_DF32_DF64_DF128_CDF16_Vb
+xxx(_Float16, _Float32, _Float64, _Float128, _Float16 _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF32xDF64xDF128xCDF32xVb
+xxx(_Float32x, _Float64x, _Float128x, _Float32x _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF16b
+xxx(std::bfloat16_t)
+xxx
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16817
+--format=auto --no-params
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+--format=gnu-v3
+_Z1fSsB3fooS_
+f(std::string[abi:foo], std::string[abi:foo])
+--format=gnu-v3
+_Z18IndirectExternCallIPU7stdcallU7regparmILi3EEFviiEiEvT_T0_S3_
+void IndirectExternCall<void ( regparm<3> stdcall*)(int, int), int>(void ( regparm<3> stdcall*)(int, int), int, void ( regparm<3> stdcall*)(int, int))
+# 
+# ABI tags used to confuse the constructor name calculation.
+--format=gnu-v3 --no-params
+_ZNSt8ios_base7failureB5cxx11C1EPKcRKSt10error_code
+std::ios_base::failure[abi:cxx11]::failure(char const*, std::error_code const&)
+std::ios_base::failure[abi:cxx11]::failure
+--format=gnu-v3
+_Z1fPDxFvvES0_
+f(void (*)() transaction_safe, void (*)() transaction_safe)
+#
+# These two are from gcc PR61321, and gcc PR61233 / gdb PR16957
+#
+--format=gnu-v3
+_Z13function_tempIiEv1AIXszcvT_Li999EEE
+void function_temp<int>(A<sizeof ((int)(999))>)
+#
+--format=gnu-v3
+_Z7ZipWithI7QStringS0_5QListZN4oral6detail16AdaptCreateTableI7AccountEES0_RKNS3_16CachedFieldsDataEEUlRKS0_SA_E_ET1_IDTclfp1_cvT__EcvT0__EEEERKT1_ISC_ERKT1_ISD_ET2_
+QList<decltype ({parm#3}((QStroing)(), (QString)()))> ZipWith<QString, QString, QList, oral::detail::AdaptCreateTable<Account>(oral::detail::CachedFieldsData const&)::{lambda(QString const&, QString const&)#1}>(QList<QList> const&, QList<QString> const&, oral::detail::AdaptCreateTable<Account>(oral::detail::CachedFieldsData const&)::{lambda(QString const&, QString const&)#1})
+#
+# These three are symbols generated by g++'s testsuite, which triggered the same bug as above.
+--format=gnu-v3
+_Z14int_if_addableI1YERiP1AIXszpldecvPT_Li0EdecvS4_Li0EEE
+int& int_if_addable<Y>(A<sizeof ((*((Y*)(0)))+(*((Y*)(0))))>*)
+#
+--format=gnu-v3
+_Z3bazIiEvP1AIXszcl#foocvT__ELCf00000000_00000000EEEE
+void baz<int>(A<sizeof (foo((int)(), (float _Complex)00000000_00000000))>*)
+#
+--format=gnu-v3
+_Z3fooI1FEN1XIXszdtcl1PclcvT__EEE5arrayEE4TypeEv
+X<sizeof ((P(((F)())())).array)>::Type foo<F>()
+
+_Z1fIJidEEv1AIXsZT_EE
+void f<int, double>(A<2>)
+
+_ZN1A1fIJiiEiJiiiEEEvRAsPDpT_T0_DpT1_E_iS3_S5_
+void A::f<int, int, int, int, int, int>(int (&) [6], int, int, int, int)
+
+_Z10unary_leftIJLi1, _Float32, _Float64, _Float128, _Float16 _Complex, bool volatile)
+xxx
+GGGGGGGGGGGGGGGGGGGGGGGGG--format=auto --no-params
+_Z3xxxDF32xDF64xDF128xCDF32xVb
+xxx(_Float32x, _Float64x, _Float128x, _Float32x _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF16b
+xxx(std::bfloat16_t)
+xxx
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16817
+--format=auto --no-params
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPique_ptr<void, cereal::detail::EmptyDeleter<void> >&)#2}*>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16845#c2
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZ4postISt8functionIFvvEEEvOT_EUlvE_EERS5_v
+post<std::function<void ()> >(std::function<void ()>&&)::{lambda()#1}*& std::_Any_data::_M_access<post<std::function<void ()> >(post<std::function<void ()> >(std::function<void ()>&&)::{lambda()#1}*&&)::{lambda()#1}*>()
+#
+--format=auto --no-params
+_Z3xxxDF16_DF32_DF64_DF128_CDF16_Vb
+xxx(_Float16, _Float32, _Float64, _Float128, _Float16 _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF32xDF64xDF128xCDF32xVb
+xxx(_Float32x, _Float64x, _Float128x, _Float32x _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF16b
+xxx(std::bfloat16_t)
+xxx
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16817
+--format=auto --no-params
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+--format=gnu-v3
+_Z1fSsB3fooS_
+f(std::string[abi:foo], std::string[abi:foo])
+--format=gnu-v3
+_Z18IndirectExternCallIPU7stdcallU7regparmILi3EEFviiEiEvT_T0_S3_
+void IndirectExternCall<void ( regparm<3> stdcall*)(int, int), int>(void ( reda(QString const&, QString const&)#1}>(QList<QList> const&, QList<QString> const&, oral::detail::AdaptCreateTable<Account>(oral::detail::CachedFieldsData const&)::{lambda(QString const&, QString const&)#1})
+#
+# These three are symbols generated by g++'s testsuite, which triggered the same bug as above.
+--format=gnu-v3
+_Z14int_if_addableI1YERiP1AIXszpldecvPT_Li0EdecvS4_Li0EEE
+int& int_if_addable<Y>(A<sizeof ((*((Y*)(0)))+(*((Y*)(0))))>*)
+#
+--format=gnu-v3
+_Z3bazIiEvP1AIXszcl3foocvT__ELCf00000000_00000000EEEE
+void baz<int>(A<sizeof (foo((int)(), (float _Complex)00000000_00000000))>*)
+#
+--format=gnu-v3
+_Z3fooI1FEN1XIXszdtcl1PclcvT__EEE5arrayEE4TypeEv
+X<sizeof ((P(((F)())())).array)>::Type foo<F>()
+
+_Z1fIJidEEv1AIXsZT_EE
+void f<int, double>(A<2>)
+
+_ZN1A1fIJiiEiJiiiEEEvRAsPDpT_T0_DpT1_E_iS3_S5_
+void A::f<int, int, int, int, int, int>(int (&) [6], int, int, int, int)
+
+_Z10unary_leftIJLi1ELi2ELi3EEEv1AIXflplT_EE
+void unary_left<1, 2, 3>(A<(...+(1, 2, 3))>)
+
+_    nary_rightIJLi1ELi2ELi3EEEv1AIXfrplT_EE
+void unary_right<1, 2, 3>(A<((1, 2, 3)+...)>)
+
+_Z11binary_leftIJLi1ELi2ELi3EEEv1AIXfLplLi42ET_EE
+void binary_left<1, 2, 3>(A<((42)+...+(1, 2, 3))>)
+
+_Z12binary_rightIJLi1ELi2ELi3EEEv1AIXfRplT_Li42EEE
+void binary_right<1, 2, 3>(A<((1, 2, 3)+...+(42))>)
+# Inheriting constructor
+
+_ZN1DCI11BEi
+D::B(int)
+# exception-specification (C++17)
+
+_Z1fIvJiELb0EEvPDOT1_EFT_DpT0_E
+void f<void, int, false>(void (*)(int) noexcept(false))
+
+_Z1fIvJiELb0EEvPDoFT_DpT0_E
+void f<void, int, false>(void (*)(int) noexcept)
+
+_Z1fIvJiELb0EEvPDwiEFT_DpT0_E
+void f<void, int, false>(void (*)(int) throw(int))
+
+# fold-expression with missing third component could crash.
+_Z12binary_rightIJLi1ELi2ELi3EEEv1AIXfRplT_LiEEE
+_Z12binary_rightIJLi1ELi2ELi3EEEv1AIXfRplT_LiEEE
+
+# ?: expression with missing third component could crash.
+AquT_quT_4mxautouT_4mxxx
+AquT_quT_4mxautouT_4mxxx
+
+# pr c++/78252 generic lambda mangling uses template parms, and leads
+# to unbounded recursion if not dealt with properly
+_Z7forwardIRZ3FoovEUlRT_E_EOS0_S1_
+Foo()::{lambda(auto:1&)#1}& forward<Foo()::{lambda(auto:1&)#1}&>(Foo()::{lambda(auto:1&)#1}&)
+
+_Z7forwardIZ3FoovEUlRiRT_E_EOS1_S2_
+Foo()::{lambda(int&, auto:1&)#1}&& forward<Foo()::{lambda(int&, auto:1&)#1}>(Foo()::{lambda(int&, auto:1&)#1}&)
+
+_Z7forwardIZ3FoovEUlRT_R1XIiEE0_EOS0_S1_
+Foo()::{lambda(auto:1&, X<int>&)#2}&& forward<Foo()::{lambda(auto:1&, XCall<void ( regparm<3> stdcall*)(int, int), int>(void ( regparm<3> stdcall*)(int, int), int, void ( regparm<3> stdcall*)(int, int))
+# 
+# ABI tags used to confuse the constructor name calculation.
+--format=gnu-v3 --no-params
+_ZNSt8ios_base7failureB5cxx11C1EPKcRKSt10error_code
+std::ios_base::failure[abi:cxx11]::failure(char const*, std::error_code const&)
+std::ios_base::failure[abi:cxx11]::failure
+--format=gnu-v3
+_Z1fPDxFvvES0_
+f(void (*)() transaction_safe, void (*)() transaction_safe)
+#
+# These two are from gcc PR61321, and gcc PR61233 / gdb PR16957
+#
+--format=gnu-v3
+_Z13function_tempIiEv1AIXszcvT_Li999EEE
+void function_temp<int>(A<sizeof ((int)(999))>)
+#
+--format=gnu-v3
+_Z7ZipWithI7QStringS0_5QListZN4oral6detail16AdaptCreateTableI7AccountEES0_RKNS3_16CachedFieldsDataEEUlRKS0_SA_E_ET1_IDTclfp1_cvT__EcvT0__EEEERKT1_ISC_ERKT1_ISD_ET2_
+QList<decltype ({parm#3}((QStroing)(), (QString)()))> ZipWith<QString, QString, QList, oral::detail::AdaptCreateTable<Account>(oral::detail::CachedFieldsData const&)::{lambda(QString const&, QString const&)#1}>(QList<QList> const&, QList<QString> const&, oral::detail::AdaptCreateTable<Account>(oral::detail::CachedFieldsData const&k__setP
+prot.lock.set
+# Protected type entries
+--format=gnat
+prot__lock__update_B7s
+prot.lock.update
+--format=gnat
+prot__lock__update_E6s
+prot.lock.update
+# Controlled types
+--format=gnat
+gnat__sockets__sockets_library_controllerDF__2
+gnat.sockets.sockets_library_controller.Finalize
+--format=gnat
+system__partition_interface__racw_stub_typeDA
+system.partition_interface.racw_stub_type.Adjust
+# Stream operations
+--format=gnat
+gnat__wide_wide_string_split__slice_setSR__2
+gnat.wide_wide_string_split.slice_set'Read
+--format=gnpolymorphic_detail::getInputBinding<cereal::JSONInputArchive>(cereal::JSONInputArchive&, unsigned int)::{lambda(void*, std::unique_ptr<void, cereal::detail::EmptyDeleter<void> >&)#2}*&, unsigned int)::{lambda(void*, std::unique_ptr<void, cereal::detail::EmptyDeleter<void> >&)#2}*>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16845#c2
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZ4postISt8functionIFvvEEEvOT_EUlvE_EERS5_v
+post<std::function<void ()> >(std::function<void ()>&&)::{lambda()#1}*& std::_Any_data::_M_access<post<std::function<void ()> >(post<std::function<void ()> >(std::function<void ()>&&)::{lambda()#1}*&&)::{lambda()#1}*>()
+#
+--format=auto --no-params
+_Z3xxxDF16_DF32_DF64_DF128_CDF16_Vb
+xxx(_Float16, _Float32, _Float64, _Float128, _Float16 _Complex, bool volatile)
+xxÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿx
+--format=auto --no-params
+_Z3xxxDF32xDF64xDF128xCDF32xVb
+xxx(_Float32x, _Float64x, _Float128x, _Float32x _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF16b
+xxx(std::bfloat16_t)
+xxx
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16817
+--format=auto --no-params
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+--format=gnu-v3
+_Z1fSsB3fooS_
+f(std::string[abi:foo], std::string[abi:foo])
+--format=gnu-v3
+_Z18IndirectExternCallIPU7stdcallU7regparmILi3EEFviiEiEvT_T0_S3_
+void IndirectExternCall<void ( regparm<3> stdcall*)(int, int), int>(void ( regparm<3> stdcall*)(int, int), int, void ( regparm<3> stdcall*)(int, int))
+# 
+# ABI tags used to confuse the constructor name calculation.
+--format=gnu-v1 --no-params
+_ZNSt8ios_base7failureB5cxx11C1EPKcRKSt10error_code
+std::ios_base::failure[abi:cxx11]::failure(char const*, std::error_code const&)
+std::ios_base::failure[abi:cxx11]::failure
+--format=gnu-v3
+_Z1fPDxFvvES0_
+f(void (*)() transaction_safe, void (*)() transaction_safe)
+#
+# These two are from gcc PR61321, and gcc PR61233 / gdb PR16957
+#
+--format=gnu-v3
+_Z13function_tempIiEv1AIXszcvT_Li999EEE
+void function_temp<int>(A<sizeof ((int)(999))>)
+#
+--format=gnu-v3
+_Z7ZipWithI7QStringS0_5QListZN4oral6detail16AdaptCreateTableI7AccountEES0_RKNS3_16CachedFieldsDataEEUlRKS0_SA_E_ET1_IDTclfp1_cvT__EcvT0__EEEERKT1_ISC_ERKT1_ISD_ET2_
+_DQList<decltype ({parm#3}((QStroing)(), (QString)()))> ZipWith<QString, QString, QList, oral::detail::AdaptCreateTable<Account>(oral::detail::CachedFieldsData const&)::{lambda(QString const&, QString const&)#1}>(QList<QList> const&, QList<QString> const&, oral::detail::AdaptCreateTable<Account>(oral::detail::CachedFieldsData const&)::{lambda(QString const&, QString const&)#1})
+#
+# These three are symbols generated by g++'s testsuite, which triggered the same bug as above.
+--format=gnu-v3
+_Z14int_if_addableI1YERiP1AIXszpldecvPT_Li0EdecvS4_Li0EEE
+int& int_if_addable<Y>(A<sizeof ((*((Y*)(0)))+(*((Y*)(0))))>*)
+#
+--format=gnu-v3
+_Z3bazIiEvP1AIXszcl3foocvT__ELCf00000000_00000000EEEE
+void baz<int>(A<sizeof (foo((int)(), (float _Complex)00000000_00000000))>*)
+#
+--format=gnu-v3
+_Z3fooI1FEN1XIXszdtcl1PclcvT__EEE5arrayEE4TypeEv
+X<sizeof ((P(((F)())())).array)>::Type foo<F>()
+
+_Z1fIJidEEv1AIXsZT_EE
+void f<int, double>(A<2>)
+
+_ZN1A1fIJiiEiJiiiEEEvRAsPDpT_T0_DpT1_E_iS3_S5_
+void A::f<int, int, int, int, int, int>(int (&) [6], int, int, int, int)
+
+_Z10unary_leftIJLi1, _Float32, _Float64, _Float128, _Float16 _Complex, bool volatile)
+xxx
+GGGGGGGGGGGGGGGGGGGGGGGGG--format=auto --no-params
+_Z3xxxDF32xDF64xDF128xCDF32xVb
+xxx(_Float32x, _Float64x, _Float128x, _Float32x _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF16b
+xxx(std::bfloat16_t)
+xxx
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16817
+--format=auto --no-params
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPique_ptr<void, cereal::detail::EmptyDeleter<void> >&)#2}*>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16845#c2
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZ4postISt8functionIFvvEEEvOT_EUlvE_EERS5_v
+post<std::function<void ()> >(std::function<void ()>&&)::{lambda()#1}*& std::_Any_data::_M_access<post<std::function<void ()> >(post<std::function<void ()> >(std::function<void ()>&&)::{lambda()#1}*&&)::{lambda()#1}*>()
+#
+--format=auto --no-params
+_Z3xxxDF16_DF32_DF64_DF128_CDF16_Vb
+xxx(_Float16, _Float32, _Float64, _Float128, _Float16 _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF32xDF64xDF128xCDF32xVb
+xxx(_Float32x, _Float64x, _Float128x, _Float32x _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF16b
+xxx(std::bfloat16_t)
+xxx
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16817
+--format=auto --no-params
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+--format=gnu-v3
+_Z1fSsB3fooS_
+f(std::string[abi:foo], std::string[abi:foo])
+--format=gnu-v3
+_Z18IndirectExternCallIPU7stdcallU7regparmILi3EEFviiEiEvT_T0_S3_
+void IndirectExternCall<void ( regparm<3> stdcall*)(int, int), int>(void ( reda(QString const&, QString const&)#1}>(QList<QList> const&, QList<QString> const&, oral::detail::AdaptCreateTable<Account>(oral::detail::CachedFieldsData const&)::{lambda(QString const&, QString const&)#1})
+#
+# These three are symbols generated by g++'s testsuite, which triggered the same bug as above.
+--format=gnu-v3
+_Z14int_if_addableI1YERiP1AIXszpldecvPT_Li0EdecvS4_Li0EEE
+int& int_if_addable<Y>(A<sizeof ((*((Y*)(0)))+(*((Y*)(0))))>*)
+#
+--format=gnu-v3
+_Z3bazIiEvP1AIXszcl3foocvT__ELCf00000000_00000000EEEE
+void baz<int>(A<sizeof (foo((int)(), (float _Complex)00000000_00000000))>*)
+#
+--format=gnu-v3
+_Z3fooI1FEN1XIXszdtcl1PclcvT__EEE5arrayEE4TypeEv
+X<sizeof ((P(((F)())())).array)>::Type foo<F>()
+
+_Z1fIJidEEv1AIXsZT_EE
+void f<int, double>(A<2>)
+
+_ZN1A1fIJiiEiJiiiEEEvRAsPDpT_T0_DpT1_E_iS3_S5_
+void A::f<int, int, int, int, int, int>(int (&) [6], int, int, int, int)
+
+_Z10unary_leftIJLi1ELi2ELi3EEEv1AIXflplT_EE
+void unary_left<1, 2, 3>(A<(...+(1, 2, 3))>)
+
+_    nary_rightIJLi1ELi2ELi3EEEv1AIXfrplT_EE
+void unary_right<1, 2, 3>(A<((1, 2, 3)+...)>)
+
+_Z11binary_leftIJLi1ELi2ELi3EEEv1AIXfLplLi42ET_EE
+void binary_left<1, 2, 3>(A<((42)+...+(1, 2, 3))>)
+
+_Z12binary_rightIJLi1ELi2ELi3EEEv1AIXfRplT_Li42EEE
+void binary_right<1, 2, 3>(A<((1, 2, 3)+...+(42))>)
+# Inheriting constructor
+
+_ZN1DCI11BEi
+D::B(int)
+# exception-specification (C++17)
+
+_Z1fIvJiELb0EEvPDOT1_EFT_DpT0_E
+void f<void, int, false>(void (*)(int) noexcept(false))
+
+_Z1fIvJiELb0EEvPDoFT_DpT0_E
+void f<void, int, false>(void (*)(int) noexcept)
+
+_Z1fIvJiELb0EEvPDwiEFT_DpT0_E
+void f<void, int, false>(void (*)(int) throw(int))
+
+# fold-expression with missing third component could crash.
+_Z12binary_rightIJLi1ELi2ELi3EEEv1AIXfRplT_LiEEE
+_Z12binary_rightIJLi1ELi2ELi3EEEv1AIXfRplT_LiEEE
+
+# ?: expression with missing third component could crash.
+AquT_quT_4mxautouT_4mxxx
+AquT_quT_4mxautouT_4mxxx
+
+# pr c++/78252 generic lambda mangling uses template parms, and leads
+# to unbounded recursion if not dealt with properly
+_Z7forwardIRZ3FoovEUlRT_E_EOS0_S1_
+Foo()::{lambda(auto:1&)#1}& forward<Foo()::{lambda(auto:1&)#1}&>(Foo()::{lambda(auto:1&)#1}&)
+
+_Z7forwardIZ3FoovEUlRiRT_E_EOS1_S2_
+Foo()::{lambda(int&, auto:1&)#1}&& forward<Foo()::{lambda(int&, auto:1&)#1}>(Foo()::{lambda(int&, auto:1&=gnat
+x__y__j
+x.y.j
+# Library level
+--format=gnat
+_ada_x__m3
+x.m3
+# Package body elaborator
+--format=gnat
+p___elabb
+p'Elab_Body
+# Package spec elaborator
+--format=gnat
+p___elabs
+p'Elab_Spec
+# Task body
+--format=gnat
+p__taskobjTKB
+p.taskobj
+# Task subprogram
+--format=gnat
+p__taskobjTK__f1.2330
+p.taskobj.f1
+# Protected types subprograms
+--format=gnat
+prot__lock__getN
+prot.lock.get
+--format=gnat
+prot__lock__getP
+prot.lock.get
+--format=gnat
+prot__lock__get__sub.2590
+prot.lock.get.sub
+--format=gnat
+prot__lock__setN
+prot.lock.set
+--format=gnat
+prot__lock__setP
+prot.lock.set
+# Protected type entries
+--format=gnat
+prot__lock__update_B7s
+prot.lock.update
+--format=gnat
+prot__lock__update_E6s
+prot.lock.update
+# Controlled types
+--format=gnat
+gnat__sockets__sockets_library_controllerDF__2
+gnat.sockets.sockets_library_controller.Finalize
+--format=gnat
+system__partition_interface__racw_stub_typeDA
+system.partition_interface.racw_stub_type.Adjust
+# Stream operations
+--format=gnat
+gnat__wide_wide_string_split__slice_setSR__2
+gnat.wide_wide_string_split.slice_set'Read
+--format=gnpolymorphic_detail::getInputBinding<cereal::JSONInputArchive>(cereal::JSONInputArchive&, unsigned int)::{lambda(void*, std::unique_ptr<void, cereal::detail::EmptyDeleter<void> >&)#2}*&, unsigned int)::{lambda(void*, std::unique_ptr<void, cereal::detail::EmptyDeleter<void> >&)#2}*>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16845#c2
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZ4postISt8functionIFvvEEEvOT_EUlvE_EERS5_v
+post<std::function<void ()> >(std::function<void ()>&&)::{lambda()#1}*& std::_Any_data::_M_access<post<std::function<void ()> >(post<std::function<void ()> >(std::function<void ()>&&)::{lambda()#1}*&&)::{lambda()#1}*>()
+#
+--format=auto --no-params
+_Z3xxxDF16_DF32_DF64_DF128_CDF16_Vb
+xxx(_Float16, _Float32, _Float64, _Float128, _Float16 _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF32xDF64xDF128xCDF32xVb
+xxx(_Float32x, _Float64x, _Float128x, _Float32x _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF16b
+xxx(std::bfloat16_t)
+xxx
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16817
+--format=auto --no-params
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+--format=gnu-v3
+_Z1fSsB3fooS_
+f(std::string[abi:foo], std::string[abi:foo])
+--format=gnu-v3
+_Z18IndirectExternCallIPU7stdcallU7regparmILi3EEFviiEiEvT_T0_S3_
+void IndirectExtern__2_2.1670
+yz.qrs.tuv
+--format=gnat
+yz__qrs__tuv__2_3.1674
+yz.qrs.tuv
+# Elaborated flag (not demangled)
+--format=gnat
+x_E
+<x_E>
+# Nested package
+--fo‰mat=gnat
+x__m1
+x.m1
+--format=gnat
+x__m3
+x.m3
+--format=gnat
+x__y__m2X
+x.y.m2
+--format=gnat
+x__y__z__rXb
+x.y.z.r
+#  >(std::function<void ()>&&)::{lambda()#1}*&&)::{lambda()#1}*>()
+#
+--format=auto --no-params
+_Z3xxxDF16_DF32_DF64_DF128_CDF16_Vb
+xxx(_Float16, _Float32, _Float64, _Float128, _Float16 _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF32xDF64xDF128xCDF32xVb
+xxx(_Float32x, _Float64x, _Float128x, _Float32x _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF16b
+xxx(std::bfloat16_t)
+xxx
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16817
+--format=auto --no-params
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+--format=gnu-v3
+_Z1fSsB3fooS_
+f(std::string[abi:foo], std::string[abi:foo])
+--format=gnu-v3
+_Z18IndirectExternCallIPU7stdcallU7regparmILi3EEFviiEiEvT_T0_S3_
+void IndirectExternCall<void ( regparm<3> stdcall*)(int, int), int>(void ( reda(QString const&, QString const&)#1}>(QList<QList> const&, QList<QString> const&, oral::detail::AdaptCreateTable<Account>(oral::detail::CachedFieldsData const&)::{lambda(QString const&, QString const&)#1})
+#
+# These three are symbols generated by g++'s testsuite, which triggered the same bug as above.
+--format=gnu-v3
+_Z14int_if_addableI1YERiP1AIXszpldecvPT_Li0EdecvS4_Li0EEE
+int& int_if_addable<Y>(A<sizeof ((*((Y*)(0)))+(*((Y*)(0))))>*)
+#
+--format=gnu-v3
+_Z3bazIiEvP1AIXszcl3foocvT__ELCf00000000_00000000EEEE
+void baz<int>(A<sizeof (foo((int)(), (float _Complex)00000000_00000000))>*)
+#
+--format=gnu-v3
+_Z3fooI1FEN1XIXszdtcl1PclcvT__EEE5arrayEE4TypeEv
+X<sizeof ((P(((F)())())).array)>::Type foo<F>()
+
+_Z1fIJidEEv1AIXsZT_EE
+void f<int, double>(A<2>)
+
+_ZN1A1fIJiiEiJiiiEEEvRAsPDpT_T0_DpT1_E_iS3_S5_
+void A::f<int, int, int, int, int, int>(int (&) [6], int, int, int, int)
+
+_Z10unary_leftIJLi1ELi2ELi3EEEv1AIXflplT_EE
+void unary_left<1, 2, 3>(A<(...+(1, 2, 3))>)
+
+_    nary_rightIJLi1ELi2ELi3EEEv1AIXfrplT_EE
+void unary_right<1, 2, 3>(A<((1, 2, 3)+...)>)
+
+_Z11binary_leftIJLi1ELi2ELi3EEEv1AIXfLplLi42ET_EE
+void binary_left<1, 2, 3>(A<((42)+...+(1, 2, 3))>)
+
+_Z12binary_rightIJLi1ELi2ELi3EEEv1AIXfRplT_Li42EEE
+void binary_right<1, 2, 3>(A<((1, 2, 3)+...+(42))>)
+# Inheriting constructor
+
+_ZN1DCI11BEi
+D::B(int)
+# exception-specification (C++17)
+
+_Z1fIvJiELb0EEvPDOT1_EFT_DpT0_E
+void f<void, int, false>(void (*)(int) noexcept(false))
+
+_Z1fIvJiELb0EEvPDoFT_DpT0_E
+void f<void, int, false>(void (*)(int) noexcept)
+
+_Z1fIvJiELb0EEvPDwiEFT_DpT0_E
+void f<void, int, false>(void (*)(int) throw(int))
+
+# fold-expression with missing third component could crash.
+_Z12binary_rightIJLi1ELi2ELi3EEEv1AIXfRplT_LiEEE
+_Z12binary_rightIJLi1ELi2ELi3EEEv1AIXfRplT_LiEEE
+
+# ?: expression with missing third component could crash.
+AquT_quT_4mxautouT_4mxxx
+AquT_quT_4mxautouT_4mxxx
+
+# pr c++/78252 generic lambda mangling uses template parms, and leads
+# to unbounded recursion if not dealt with properly
+_Z7forwardIRZ3FoovEUlRT_E_EOS0_S1_
+Foo()::{lambda(auto:1&)#1}& forward<Foo()::{lambda(auto:1&)#1}&>(Foo()::{lambda(auto:1&)#1}&)
+
+_Z7forwardIZ3FoovEUlRiRT_E_EOS1_S2_
+Foo()::{lambda(int&, auto:1&)#1}&& forward<Foo()::{lambda(int&, auto:1&)#1}>(Foo()::{lambda(int&, auto:1&=gnat
+x__y__j
+x.y.j
+# Library level
+--format=gnat
+_ada_x__m3
+x.m3
+# Package body elaborator
+--format=gnat
+p___elabb
+p'Elab_Body
+# Package spec elaborator
+--format=gnat
+p___elabs
+p'Elab_Spec
+# Task body
+--format=gnat
+p__taskobjTKB
+p.taskobj
+# Task subprogram
+--format=gnat
+p__taskobjTK__f1.2330
+p.taskobj.f1
+# Protected types subprograms
+--format=gnat
+prot__lock__getN
+prot.lock.get
+--format=gnat
+prot__lock__getP
+prot.lock.get
+--format=gnat
+prot__lock__get__sub.2590
+prot.lock.get.sub
+--format=gnat
+prot__lock__setN
+prot.lock.set
+--format=gnat
+prot__lock__setP
+prot.lock.set
+# Protected type entries
+--format=gnat
+prot__lock__update_B7s
+prot.lock.update
+--format=gnat
+prot__lock__update_E6s
+prot.lock.update
+# Controlled types
+--format=gnat
+gnat__sockets__sockets_library_controllerDF__2
+gnat.sockets.sockets_library_controller.Finalize
+--format=gnat
+system__partition_interface__racw_stub_typeDA
+system.partition_interface.racw_stub_type.Adjust
+# Stream operations
+--format=gnat
+gnat__wide_wide_string_split__slice_setSR__2
+gnat.wide_wide_string_split.slice_set'Read
+--format=gnpolymorphic_detail::getInputBinding<cereal::JSONInputArchive>(cereal::JSONInputArchive&, unsigned int)::{lambda(void*, std::unique_ptr<void, cereal::detail::EmptyDeleter<void> >&)#2}*&, unsigned int)::{lambda(void*, std::unique_ptr<void, cereal::detail::EmptyDeleter<void> >&)#2}*>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16845#c2
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZ4postISt8functionIFvvEEEvOT_EUlvE_EERS5_v
+post<std::function<void ()> >(std::function<void ()>&&)::{lambda()#1}*& std::_Any_data::_M_access<post<std::function<void ()> >(post<std::function<void ()> >(std::function<void ()>&&)::{lambda()#1}*&&)::{lambda()#1}*>()
+#
+--format=auto --no-params
+_Z3xxxDF16_DF32_DF64_DF128_CDF16_Vb
+xxx(_Float16, _Float32, _Float64, _Float128, _Float16 _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF32xDF64xDF128xCDF32xVb
+xxx(_Float32x, _Float64x, _Float128x, _Float32x _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF16b
+xxx(std::bfloat16_t)
+xxx
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16817
+--format=auto --no-params
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+--format=gnu-v3
+_Z1fSsB3fooS_
+f(std::string[abi:foo], std::string[abi:foo])
+--format=gnu-v3
+_Z18IndirectExternCallIPU7stdcallU7regparmILi3EEFviiEiEvT_T0_S3_
+void IndirectExtern__2_2.1670
+yz.qrs.tuv
+--format=gnat
+yz__qrs__tuv__2_3.1674
+yz.qrs.tuv
+# Elaborated flag (not demangled)
+--format=gnat
+x_E
+<x_E>
+# Nested package
+--fo‰mat=gnat
+x__m1
+x.m1
+--format=gnat
+x__m3
+x.m3
+--format=gnat
+x__y__m2X
+x.y.m2
+--format=gnat
+x__y__z__rXb
+x.y.z.r
+# Child package
+--format=gnat
+x__y__j
+x.y.j
+# Library level
+--format=gnat
+_ada_x__m3
+x.m3
+# Package body elaborator
+--format=gnat
+p___elabb
+p'Elab_Body
+# Package spec elaborator
+--format=gnat
+p___elabs
+p'Elab_Spec
+# Task body
+--format=gnat
+p__taskobjTKB
+p.taskobj
+# Task subprogram
+--format=gnat
+p__taskobjTK__f1.2330
+p.taskobj.f1
+# Protected types subprograms
+--format=gnat
+prot__lock__getN
+prot.lock.get
+--format=gnat
+prot__lock__getP
+prot.lock.get
+--format=gnat
+prot__lock__get__sub.2590
+prot.lock.get.sub
+--format=gnat
+prot__lock__setN
+prot.lock.set
+--format=gnat
+prot__lock__setP
+prot.lock.set
+# Protected type entries
+--format=gnat
+prot__lock__update_B7s
+prot.lock.update
+--format=gnat
+prot__lock__update_E6s
+prot.lock.update
+# Controlled typLCf00000000_00000000EEEE
+void baz<int>(A<sizeof (foo((int)(), (float _Complex)00000000_00000000))>*)
+#
+--format=gnu-v3
+_Z3fooI1FEN1XIXszdtcl1PclcvT__EEE5arrayEE4TypeEv
+X<sizeof ((P(((F)())())).array)>::Type foo<F>()
+
+_Z1fIJidEEv1AIXsZT_EE
+void f<int, double>(A<2>)
+
+_ZN1A1fIJiiEiJiiiEEEvRAsPDpT_T0_DpT1_E_iS3_S5_
+void A::f<int, int, int, int, int, int>(int (&) [6], int, int, int, int)
+
+_Z10unary_leftIJLi1ELi2ELi3EEEv1AIXflplT_EE
+void unary_left<1, 2, 3>(A<(...+(1, 2, 3))>)
+
+_    nary_rightIJLi1ELi2ELi3EEEv1AIXfrplT_EE
+void unary_right<1, 2, 3>(A<((1, 2, 3)+...)>)
+
+_Z11binary_leftIJLi1ELi2ELi3EEEv1AIXfLplLi42ET_EE
+void binary_left<1, 2, 3>(A<((42)+...+(1, 2, 3))>)
+
+_Z12binary_rightIJLi1ELi2ELi3EEEv1AIXfRplT_Li42EEE
+void binary_right<1, 2, 3>(A<((1, 2, 3)+...+(42))>)
+# Inheriting constructor
+
+_ZN1DCI11BEi
+D::B(int)
+# exception-specification (C++17)
+
+_Z1fIvJiELb0EEvPDOT1_EFT_DpT0_E
+void f<void, int, false>(void (*)(int) noexcept(false))
+
+_Z1fIvJiELb0EEvPDoFT_DpT0_E
+void f<void, int, false>(void (*)(int) noexcept)
+
+_Z1fIvJiELb0EEvPDwiEFT_DpT0_E
+void f<void, int, false>(void (*)(int) throw(int))
+
+# fold-expression with missing third component could crash.
+_Z12binary_rightIJLi1ELi2ELi3EEEv1AIXfRplT_LiEEE
+_Z12binary_rightIJLi1ELi2ELi3EEEv1AIXfRplT_LiEEE
+
+# ?: expression with missing third component could crash.
+AquT_quT_4mxautouT_4mxxx
+AquT_quT_4mxautouT_4mxxx
+
+# pr c++/78252 generic lambda mangling uses template parms, and leads
+# to unbounded recursion if not dealt with properly
+_Z7forwardIRZ3FoovEUlRT_E_EOS0_S1_
+Foo()::{lambda(auto:1&)#1}& forward<Foo()::{lambda(auto:1&)#1}&>(Foo()::{lambda(auto:1&)#1}&)
+
+_Z7forwardIZ3FoovEUlRiRT_E_EOS1_S2_
+Foo()::{lambda(int&, auto:1&)#1}&& forward<Foo()::{lambda(int&, auto:1&)#1}>(Foo()::{lambda(int&, auto:1&=gnat
+x__y__j
+x.y.j
+# Library level
+--format=gnat
+_ada_x__m3
+x.m3
+# Package body elaborator
+--format=gnat
+p___elabb
+p'Elab_Body
+# Package spec elaborator
+--format=gnat
+p___elabs
+p'Elab_Spec
+# Task body
+--format=gnat
+p__taskobjTKB
+p.taskobj
+# Task subprogram
+--format=gnat
+p__taskobjTK__f1.2330
+p.taskobj.f1
+# Protected types subprograms
+--format=gnat
+prot__lock__getN
+prot.lock.get
+--format=gnat
+prot__lock__getP
+prot.lock.get
+--format=gnat
+prot__lock__get__sub.2590
+prot.lock.get.sub
+--format=gnat
+prot__lock__setN
+prot.lock.set
+--format=gnat
+prot__lock__setP
+prot.lock.set
+# Protected type entries
+--format=gnat
+prot__lock__update_B7s
+prot.lock.update
+--format=gnat
+prot__lock__update_E6s
+prot.lock.update
+# Controlled types
+--format=gnat
+gnat__sockets__sockets_library_controllerDF__2
+gnat.sockets.sockets_library_controller.Finalize
+--format=gnat
+system__partition_interface__racw_stub_typeDA
+system.partition_interface.racw_stub_type.Adjust
+# Stream operations
+--format=gnat
+gnat__wide_wide_string_split__slice_setSR__2
+gnat.wide_wide_string_split.slice_set'Read
+--format=gnpolymorphic_detail::getInputBinding<cereal::JSONInputArchive>(cereal::JSONInputArchive&, unsigned int)::{lambda(void*, std::unique_ptr<void, cereal::detail::EmptyDeleter<void> >&)#2}*&, unsigned int)::{lambda(void*, std::unique_ptr<void, cereal::detail::EmptyDeleter<void> >&)#2}*>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16845#c2
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZ4postISt8functionIFvvEEEvOT_EUlvE_EERS5_v
+post<std::function<void ()> >(std::function<void ()>&&)::{lambda()#1}*& std::_Any_data::_M_access<post<std::function<void ()> >(post<std::function<void ()> >(std::function<void ()>&&)::{lambda()#1}*&&)::{lambda()#1}*>()
+#
+--format=auto --no-params
+_Z3xxxDF16_DF32_DF64_DF128_CDF16_Vb
+xxx(_Float16, _Float32, _Float64, _Float128, _Float16 _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF32xDF64xDF128xCDF32xVb
+xxx(_Float32x, _Float64x, _Float128x, _Float32x _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF16b
+xxx(std::bfloat16_t)
+xxx
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16817
+--format=auto --no-params
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+--format=gnu-v3
+_Z1fSsB3fooS_
+f(std::string[abi:foo], std::string[abi:foo])
+--format=gnu-v3
+_Z18IndirectExternCallIPU7stdcallU7regparmILi3EEFviiEiEvT_T0_S3_
+void IndirectExternCall<void ( regparm<3> stdcall*)(int, int), int)::{lambda(QString const&, QString const&)#1})
+#
+# These three are symbols generated by g++'s testsuite, which triggered the same bug as above.
+--format=gnu-v3
+_Z14int_if_addableI1YERiP1AIXszpldecvPT_Li0EdecvS4_Li0EEE
+int& int_if_addable<Y>(A<sizeof ((*((Y*)(0)))+(*((Y*)(0))))>*)
+#
+--format=gnu-v3
+_Z3bazIiEvP1AIXszcl#foocvT__ELCf00000000_00000000EEEE
+void baz<int>(A<sizeof (foo((int)(), (float _Complex)00000000_00000000))>*)
+#
+--format=gnu-v3
+_Z3fooI1FEN1XIXszdtcl1PclcvT__EEE5arrayEE4TypeEv
+X<sizeof ((P(((F)())())).array)>::Type foo<F>()
+
+_Z1fIJidEEv1AIXsZT_EE
+void f<int, double>(A<2>)
+
+_ZN1A1fIJiiEiJiiiEEEvRAsPDpT_T0_DpT1_E_iS3_S5_
+void A::f<int, int, int, int, int, int>(int (&) [6], int, int, int, int)
+
+_Z10unary_leftIJLi1, _Float32, _Float64, _Float128, _Float16 _Complex, bool volatile)
+xxx
+GGGGGGGGGGGGGGGGGGGGGGGGG--format=auto --no-params
+_Z3xxxDF32xDF64xDF128xCDF32xVb
+xxx(_Float32x, _Float64x, _Float128x, _Float32x _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF16b
+xxx(std::bfloat16_t)
+xxx
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16817
+--format=auto --no-params
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPique_ptr<void, cereal::detail::EmptyDeleter<void> >&)#2}*>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16845#c2
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZ4postISt8functionIFvvEEEvOT_EUlvE_EERS5_v
+post<std::function<void ()> >(std::function<void ()>&&)::{lambda()#1}*& std::_Any_data::_M_access<post<std::function<void ()> >(post<std::function<void ()> >(std::function<void ()>&&)::{lambda()#1}*&&)::{lambda()#1}*>()
+#
+--format=auto --no-params
+_Z3xxxDF16_DF32_DF64_DF128_CDF16_Vb
+xxx(_Float16, _Float32, _Float64, _Float128, _Float16 _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF32xDF64xDF128xCDF32xVb
+xxx(_Float32x, _Float64x, _Float128x, _Float32x _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF16b
+xxx(std::bfloat16_t)
+xxx
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16817
+--format=auto --no-params
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueControll¶r__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+--format=gnu-v3
+_Z1fSsB3fooS_
+f(std::string[abi:foo], std::string[abi:foo])
+--format=gnu-v3
+_Z18IndirectExternCallIPU7stdcallU7regparmILi3EEFviiEiEvT_T0_S3_
+void IndirectExternCall<void ( regparm<3> stdcall*)(int, int), int>(void ( reda(QString const&, QString const&)#1}>(QList<QList> const&, QList<QString> const&, oral::detail::AdaptCreateTable<Account>(oral::detail::CachedFieldsData const&)::{lambda(QString const&, QString const&)#1})
+#
+# These three are symbols generated by g++'s testsuite, which triggered the same bug as above.
+--format=gnu-v3
+_Z14int_if_addableI1YERiP1AIXszpldecvPT_Li0EdecvS4_Li0EEE
+int& int_if_addable<Y>(A<sizeof ((*((Y*)(0)))+(*((Y*)(0))))>*)
+#
+--format=gnu-v3
+_Z3bazIiEvP1AIXszcl3foocvT__ELCf00000000_00000000EEEE
+void baz<int>(A<sizeof (foo((int)(), (float _Complex)00000000_00000000))>*)
+#
+--format=gnu-v3
+_Z3fooI1FEN1XIXszdtcl1PclcvT__EEE5arrayEE4TypeEv
+X<sizeof ((P(((F)())())).array)>::Type foo<F>()
+
+_Z1fIJidEEv1AIXsZT_EE
+void f<int, double>(A<2>)
+
+_ZN1A1fIJiiEiJiiiEEEvRAsPDpT_T0_DpT1_E_iS3_S5_
+void A::f<int, int, int, int, int, int>(int (&) [6], int, int, int, int)
+
+_Z10unary_leftIJLi1ELi2ELi3EEEv1AIXflplT_EE
+void unary_la/show_bug.cgi?id=16817
+--format=auto --no-params
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+ 1ueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+--format=gnu-v3
+_Z1fSsB3fooS_
+f(std::string[abi:foo], std::string[abi:foo])
+--format=gnu-v3
+_Z18IndirectExternCallIPU7stdcallU7regparmILi3EEFviiEiEvT_T0_S3_
+void IndirectExternCall<void ( regparm<3> stdcall*)(int, int), int>(void ( regparm<3> stdcall*)(int, int), int, void ( regparm<3> stdcall*)(int, int))
+# 
+# ABI tags used to confuse the constructor name calculation.
+--format=gnu-v3 --no-params
+_ZNSt8ios_base7failureB5cxx11C1EPKcRKSt10error_code
+std::ios_base::failure[abi:cxx11]::failure(char const*, std::error_code"const&)
+std::ios_base::failure[abi:cxxÿÿÿÿÿÿÿlure
+--format=gnu-v3
+_Z1fPDxFvvES0_
+f(void (*)() transaction_safe, void (*)() transaction_safe)
+#
+# These two are from gcc PR61321, and gcc PR61233 / gdb PR16957
+#
+--format=gnu-v3
+_Z13function_tempIiEv1AIXszcvT_Li999EEE
+void function_temp<int>(A<sizeof ((int)(999))>)
+#
+--format=gnu-v3
+_Z7ZipWithI7QStringS0_5QListZN4oral6detail16AdaptCreateTableI7AccountEES0_RKNS3_16CachedFieldsDataEEUlRKS0_SA_E_ET1_IDTclfp1_cvT__EcvT0__EEEERKT1_ISC_ERKT1_ISD_ET2_
+QList<decltype ({parm#3}((QString)(), (QString)()))> ZipWith<QString, QString, QList, oral::detail::AdaptCreateTable<Account>(oral::detail::CachedFieldsData const&)::{lambda(QString const&, QString const&)#1}>(QList<QList> const&, QList<QString> const&, oral::detail::AdaptCreateTable<Account>(oral::detail::CachedFieldsData const&)::{lambda(QString const&, QString const&)#1})
+#
+# These three are symbols generated by g++'s testsuite, which triggered the same bug as above.
+--format=gnu-v3
+_Z14int_if_addableI1YERiP1AIXszpldecvPT_Li0EdecvS4_Li0EEE
+int& int_if_addable<Y>(A<sizeof ((*((Y*)(0)))+(*((Y*)(0))))>*)
+#
+--format=gnu-v3
+_Z3bazIiEvP1AIXszcl3foocvT__ELCf00000000_00000000EEE3NMSW3FOO3TPLINS_S0_3OneEE1MEPS2_
+NMS::TPL@FOO<NMS::One@FOO>::M(NMS::One@FOO*)aybe<modc::ast>&&)#21}> > >::Type, modc::astParser::LocatedParser<modc::parser::ParserRef<modc::astParser::{lambda(modc::astParser::TokenParserInput&)#1}> ><modc::parser::OptionalParser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > > >::Type, modc::astParser::LocatedParser<modc::parser::ParserRef<modc::astParser::{lambda(modc::astParser::TokenParserInput&)#1}> ><modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParser::OneOfKeywordsToTParser<modc::parser::Parser::Style> > > >::Type, modc::astParser::LocatedParser<modc::parser::ParserRef<modc::astParser::{lambda(modc::astParser::TokenParserInput&)#1}> ><modc::parser::SequenceParser<modc::astParser::TokenParserInput<modc::parser::ExactElementParser<modc::astParser::TokenParserInput>, modc::parser::OptionalParser<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > > >::Type, modc::astParser::LocatedParser<modc::parser::ParserRef<modc::astParser::{lambda(modc::astParser::TokenParserInput&)#1}> ><modc::parser::RepeatedParser<modc::parser::ParserRef<modc::parser::TransformParser<modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParser::OneOfKeywordsToTParser<modc::parser::Parser::Style> > ><modc::astParser::TokenParserInput<modc::parser::ParserRef<modc::parser::OptionalParser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > ><modc::parser::Parser::Annotation::Relationship> >, modc::parser::ExactElementParser<modc::astParser::TokenParserInput> > >, modc::astParser::{lambda(modc:-no-params
+_ZZZ3FoovENKUlT_E_clIiEEfS_EN5Locadocumentation of supported options.
+#
+# A line starting with +#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db (Y::*)(int) const)(char*)) [2])(long) const) [3])
+hairyfunc
+#
+# Check that negative numbers are handled correctly.
+--format=gnu-v3 --no-params
+_Z1fILin1EEvv
+void f<-1>()
+f<-1>
+#
+# Check a destructor of a standard substitution.
+--format=gnu-v3 --no-params
+_ZNSdD0Ev
+std::bas<int>()::{lambda(auto:1)#1}::operator()<char>(char) const::X::fn()
+Foo<int>()::{lambda(auto:1)#1}::operator()<char>(char) const::X::fn
+#PR91979 demangling nullptr expression
+
+_Z3fooILPv0EEvPN9enable_ifIXeqT_LDnEEvE4typeE
+void foo<(void*)0>(enable_if<((void*)0)==(decltype(nullptr)), void>::type*)
+
+_ZNK5coro15emptyawEv
+coro1::empty::operator co_await() const
+
+_ZNK3FoossERKS_
+Foo::operator<=>(Foo const&) const
+
+_Z1f1AIXtl1Udi1iLi0EEEEllvm.8517020237817239694
+<rustc_data_structures::obligec::ArrayVec<u8, 123>>::new
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=auto
+_RMCs4fq---------------------------------------------------------------------------------------I2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB_04CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=auto
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# Suffixes
+#
+--format=rust
+_R---------------------------------------------------------------------------------------------------------NvMs0_NtCs5l0EXMQXRMU_21rustc_data_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8517020237817239694
+<rustc_data_structures::obligation_forest::ObligationForest<rustc_trait_selection::traits::fulfill::PendingPredicateObligation>>::register_obligation_at
+--format=rust
+_ZN4core3ptr85drop_in_place$LT$std..rt..lang_start$LT$$LP$$RP$$GT$..$u7b$$u7b$closure$u7d$$u7d$$GT$17h27f14859c664490dE.llvm.8091179795805947855
+core::ptr::drop_in_place<std::rt::lang_start<()>::{{closure}}>
+# old style rustc llvm thinlto
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5d79bE.llvm.A5310EB9
+backtrace::foo
+blank lines in this file are NOT ignored.
+#
+#####à######
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-exp¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ected for documentation of supported options.
+#
+# A line starting with +#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db (Y::*)(int) const)(char*)) [2])(long) const) [3])
+hairyfunc
+#
+# Check that negative numbers are handled correctly.
+--format=gnu-v3 --no-params
+_Z1fILin1EEvv
+void f<-1>()
+f<-1>
+#
+# Check a destructor of a standard substitution.
+--format=gnu-v3 --no-params
+_ZNSdD0Ev
+std::basic_iostream<char, sttry.class$
+#
+--format=java
+_ZN3org7eclipse3cdt5debug8internal4core5model9CVariable6sizeof$Ev
+org.eclipse.cdt.debugerflow PR71696
+#
+#__10%0__S4_0T0T0
+#%0<>::%0(%0<>)
+# Could crash
+
+_
+_
+# Could crash
+
+_vt
+_vt
+# Could crash
+
+_$_1Acitz
+_$_1Acitz
+# Could crash
+
+_$_H1R
+_$_H1R
+# Could crash
+--format=rust
+_ZN9backtrace3fo
+_Q8ccQ4M2e.
+_Q_áƒ’áƒ”áƒ›áƒ áƒ˜áƒ”áƒšáƒ˜_ > >, modc::astP8ccQ4M2e.
+# C.internal.core.mo17hbb467fcdaea5d79bE.llvm.A5310EB9@@16
+backtrace::foo
+# new style rustc llvm thinlto
+--format=rust
+_RC3foo.llvm.9D1C9369
+foo
+--format=rust
+_RC3foo.llvm.9D1C9369@@16
+foo
+--format=rust
+_GLOBAL_.CVariable.sizeof()
+#
+--formould crash
+
+_ZmmAtat=auto --no-params
+_Utf58_0_1_ic_iostream<char, sttry.class$
+#
+--format=java
+_ZN3org7eclipse3cdt5debug8internal4core5model9CVariable6sizeof$Ev
+org.eclipse.cdt.debugerflow PR71696
+#
+#__10%0__S4_0T0T0
+#%0<>::%0(%0<>)
+# Could crash
+
+_
+_
+# Could crash
+
+_vt
+_vt
+# Could crash
+
+_$_1Acitz
+_$_1Acitz
+# Could crash
+
+_$_H1R
+_$_H1R
+# Could crash
+--format=rust
+_ZN9backtrace3fo
+_Q8ccQ4M2e.
+_Q_áƒ’áƒ”áƒ›áƒ áƒ˜áƒ”áƒšáƒ˜_ > >, modc::astP8ccQ4M2e.
+# C.internal.core.mo17hbb467fcdaea5d79bE.llvm.A5310EB9@@16
+backtrace::foo
+# new style rustc llvm thinlto
+--format=rust
+_RC3foo.llvm.9D1C9369
+foo
+--format=rust
+_RC3foo.llvm.9D1C9369@@16
+foo
+--format=rust
+_GLOBAL_.CVariable.sizeof()
+#
+--formould crash
+
+_ZmmAta_1_2147483647__2147483C9backtr648
+_Utf51_0_ace3foo.llvm.A5310EB9l1_
+__1_
+bact=auto --no-params
+_Utf58_0_1__1_214ktrac21e7483647__2147483C9backtr648
+_Utf51_0_ace3fo::f4oo.llvm.A5310EB9l1_
+__1_
+backto
+rac21e::f4oo

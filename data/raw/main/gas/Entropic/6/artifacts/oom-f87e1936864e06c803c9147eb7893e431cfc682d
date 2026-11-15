@@ -1,0 +1,12 @@
+      н        .cfi_sections .sframe
+	.cfi_startproc
+	stp	x19, x20, [sнннннннннннннннннннн	stfioe, 16]
+	stp	x23,ннн  .cfi_sections .sframe
+	~.p, -144]!
+	.cfi_def_cfa_offset 144
+	.cfi_offset 19, -144
+	.ccfp_trtisaroc
+	st0	 -fq_offset 20l -136
+	stp	x21, x22, [sp136
+	stfioe, 16]
+	stp	x23, x24, [spt_, 32

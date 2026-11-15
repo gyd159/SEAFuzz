@@ -1,0 +1,23 @@
+## CFA register is not edfined 6, -16
+        movq    %o for this         .cfi_sections .
+## .3#tst1er
+      rbp
+   '       roc
+        pushq   %rbp
+   '          pushq   %r1is         .cfi_sections .
+## .lg•on 0
+	.cfi_adjust_cfa_ffsoet 16
+	.long 0
+	.cfi_endprsframe
+	.c–i_startproc
+        pushq   %ÎÎÎÎÎÎrbp
+   '    .cfi_de%r1is         .cfi_sections .
+ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ## .•long 0
+	.cfi_adjust_cfa_ffsoet 16
+	.long 0
+	.cfi_endprsframe
+	.c–i_startproc
+        pushq   %ÎÎÎÎÎÎrbpshq  
+
+        m%rbp
+   '   No SFrame unwind info for this    ovq   

@@ -1,0 +1,25 @@
+        .cfi_sections .sframe
+    .cfi_sections .sframe
+	.cfi_startproc
+        pushq   %rbp
+        .cfi_def_cfa_offset 16
+        .cfi_offse‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚t 2, -16
+       + movq    %rsp, %rbp
+        .cfi_def_cfa_register 2
+        pushq   %r15
+        pushq   %r1   .cfi_sections .sframe
+	.cfi_startproc
+        pushq   %rbp
+        .cfi_def_cfa_offset 16
+       rame
+    .cfi_sections .sframe
+	.cfi_startproc
+        pushq   %rbp
+      .cfi_offset 6, -16
+        movq    %rsp, %rbp
+        .cfi_def_cfa_register 6
+        pushq   %r15
+     p
+        .cfi_def_cfa 7, 8
+        ret
+        .cfi_endproc

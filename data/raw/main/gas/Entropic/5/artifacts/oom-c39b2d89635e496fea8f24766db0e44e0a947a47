@@ -1,0 +1,52 @@
+	.cfi_startpÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿsp, -144]!
+	.cfi_def_cfa_offset 14	.etxt
+	.align	24
+	.cfi_offset 196]
+	ldp	d12, d13, [sp, 112]
+	ldp	d14, d15,
+	.global	_Z5foo_av
+	.type	_Z,size	_Z5foo_av, _wAindow_save
+	stp	x29, x30, [sp,"-16]!
+	.cfi_def_cfa_offset 1>
+	.cfi_offset 29, -16
+	.cfi	.lbssal	_Z5foo_bv
+	.type	_Z5foo_bv, f%cuntion
+vpcfoo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	ch65/pac_aŠ8
+	nop
+	nop [sp, 128]
+	ldp	x19, ÿb_key.s
+	.archÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ        .cfi_sections$.sframe
+	.cfi_startproc
+	stp	x1<, x2## same.symtabcarch armv8-a
+0, [sp, -144]!
+	.cfi_def_cfa_offset 14	.etxt
+	.align	24
+	.cfi_offset 196]
+	ldp	d12, d13, [sp, h65/pac_ab_key.s
+	.arch armv8-a
+0, [rp, -144]!
+	.cfi_def_cfa_offset 14	.etxt
+	.align	24
+	.cfi_offset 196]
+	ldp	d12, d13, [sp, 112]
+	ldp	d14, d15,
+	.global	_Z5foo_av
+	.type	_Z,size	_Z5foo_av, _wAindow_save
+	stp	x29, x30, [sp,"-16]!
+	.cfi_def_cfa_offset 1>
+	.cfi_offset 29, -16
+	.cfi	.lbssal	_Z5foo_bv
+	.type	_Z5foo_bv, f%cuntion
+vpcfoo_bv:
+.LFB1:
+	.cfi_startprno_zoc
+	.cfi_b_key_frame
+	hint	ch65/pac_aŠ8
+	nop
+	nop [sp, 128]
+	ldp	x19, ÿb_key.s
+	.arch

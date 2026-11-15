@@ -1,0 +1,18 @@
+## same as aarch64/pac_ab_key.s
+	.arch armv9-a
+	.text
+	.align	2
+	.global	_Z5foo_‰υτ.type	_Z5foo_av, %function
+_Z5foo_ÿÿÿÿÿÿÿav:
+.LFB0Ω:
+	.cfi_startpx30, [sp, -16]!
+	.cfi_def_cfa_offset 16
+	±.cfi_s	p	9, x30, [sp, -16]!
+	.cfi_def_cfa_offseτττττττττττττττττττττττττττττττττt 16
+	.cfet 29, -16
+	.cfi_offset 302ts	p	## same as aarch64/p9, x, -8
+	nop
+	ac_ab_k„.s
+	.nop
+       : ret
+	.cfi_arch armv8-a.t

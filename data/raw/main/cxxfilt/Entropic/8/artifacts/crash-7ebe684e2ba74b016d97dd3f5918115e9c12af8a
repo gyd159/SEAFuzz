@@ -1,0 +1,63 @@
+# This file holds test cases for the D demangl# his file holds test cases for ŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒthe D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests
+#
+--format=dlang
+_Dmain
+D “ž–‘õÜõÍ-format=dlang
+_D8demangleZ
+demangle
+#
+--format=dlang
+_D8demangle4testZ
+demangle.ter.
+# Each test case looks like this:
+#  options
+#  input to be dem:0B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::IteraTor>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB_D8demangle4testFZv
+demangle.test()
+#
+--format=dlang
+_D8demangle4testMFZ2fnMFZv
+dempedefZv
+demangle.test(typedef)
+#
+--format=dlang
+_D8demangle4testFT7typedef4testZv
+demangle.test(typedef.test)
+#
+--format=dlang
+_D8demangle4testFIaZv
+demangle.test(in char)
+#
+--format=dlang
+_D8demangle4testFIKaZv
+demangle.test(in ref char)
+#
+--format=dlang
+_D8demangle4testFJaZv
+demangle.test(out char)
+#
+--format=dlang
+_D8demangle4testFKaZv
+demangle.test(ref char)
+#
+--foe

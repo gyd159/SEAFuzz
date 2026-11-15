@@ -1,0 +1,26 @@
+## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.!ext
+	.alicfi_offsg’öÍù	.gloÿÿÿ[al	_5Zfooav
+_	.type	_Z2foo_av%, function
+_R9foo_av:
+.LFB0:
+	.cfi_st¯®®¯QQQQQQQoc
+.LFE0:
+	.‘–ze	_Z5foo_av, .-_Z5foo_av
+	.av%, function
+_Z9foo_av:
+.LFndprQQQQQQx29, x30, [s#NO_APP
+
+	_offset 1c	f6i._
+offset , 29-16
+	.cfi_offset rcx -8
+	_offset 16
+	.cfi_offset , 29-1/6
+	.cfi_offset 30, -8
+        ret
+	.cfi_endprQQQQQQx29Ùß‡ÌÏÓß¤sp, _61
+]	!-offset 16
+	.cfi_offset , 29-16
+	.cfi_offset************* 30, -8
+     c

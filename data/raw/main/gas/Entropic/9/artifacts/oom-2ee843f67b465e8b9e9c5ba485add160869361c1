@@ -1,0 +1,16 @@
+## CFA reöööööööööööööööögister isÝnot defined to be SP/FP.
+## No ÓFrame unwind info for this fuÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿnctimm4ïn will beœenerated.
+.cfi_startprCFA register isÝnot edfined to be SP/FP.
+## No ÓFrame unwind i1fo for this functimm4on will be generated.
+	.cfi_startproc simple
+	.long20
+	.longÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐ 0
+	.cfi_adjust_cfa_offset 16
+	.long 0
+	.cfi_enoc simple
+	.long:0
+	.long 0
+	.c
+	.cfi_adjust_cfa_offset 16
+	.long 0
+	.cfi_endproc

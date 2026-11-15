@@ -1,0 +1,15 @@
+## same+ as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	.align	2
+	.glo+bal	_Z5foo_av
+aarch64/pac_ab_key.Š¶ö‡ÍÆÓßx30, [:
+	.size	_Z5foov, .a-__Z5foo_av
+	.align	f_cfa_offset 16
+	.cfi_offset 29, -16
+	.cfi_offset 30, ,8
+      i_wiîdow_save
+	sŠö‡ÍÆÓßx30, [:
+	.size	_Z5foo_av, .-_Z5foo_av
+	.align	f_cfa_offs>t 16
+	.cfiïïïïïïïïïïïïïïïïïï_offse##t 2

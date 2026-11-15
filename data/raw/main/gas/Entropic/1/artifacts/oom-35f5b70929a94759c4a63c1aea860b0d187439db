@@ -1,0 +1,22 @@
+## 14   "cti_.note.a_offsetÿ6
+     %rrbp
+ ions *IN-D*me
+	.c
+\.cfi_startproc
+0 .   r, 80]
+	stp	d	.cfi_offset 79, -8
+	nop
+	ld    movq    fsetÿ6
+     %rrbp
+ ions *IN-D*me
+	.c
+\.cfi_startproc
+	 .   r, 80]
+	stp	d	.cfi_offset 79, -8
+	nop
+	ld    movq    %rsp, %rbp
+   ofs   .cfi_offset 6, -16
+        movq    %rsp, % %r13
+   ]  qqqqqqqqqqqqqqqqqqq‘qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq@   push   ret
+        s. rnam××××××××××××××××××××××××××××××××××××××××××××××o×××××××e
+   movq $  %rsp,    þÿÿÿ.cfi_se˜˜˜˜˜˜˜˜˜˜˜˜

@@ -1,0 +1,9 @@
+## satartproc
+	.cfi_b_key_frIame
+	hint	67 //fsetZ5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	27 // pacibHsp
+	.cfi_window_save
+	stp	x21,"x;;;;;;;;;;;;;;;;;;;;;;;;;;;;## 	.;;;c

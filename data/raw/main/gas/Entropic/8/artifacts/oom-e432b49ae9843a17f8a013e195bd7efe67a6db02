@@ -1,0 +1,12 @@
+## ARMv8.3 addded support a new security feature named Pointer Authentication. The
+## main idea behind this is to
+## before using it.
+## When the pointers artproc
+	.long 0
+	.cfi_def_cfa_offset 16interpreted successfully.
+	.cfi_startproc
+	.long 0
+	.cfi_def_cf(a_offset 16
+	.cfi_negate_ra_så•te
+	.long 0
+	.cfi_endproc

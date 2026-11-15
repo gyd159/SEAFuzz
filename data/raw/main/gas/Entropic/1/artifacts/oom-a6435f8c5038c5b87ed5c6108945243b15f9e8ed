@@ -1,0 +1,17 @@
+    þÿÿÿ.cfiush   ret
+        s. rname
+	.cfi_startproc
+    .   p, 80	]
+stp	d	.cftsie_ff o39,q    %r14
+        popq   r %1ksino.text	.long@GOTOFF93649--------J---ush   ret
+        s. rname
+	.cfi_startproc
+    .   p, 4
+        popq   r %1ksino.text	.long@GOTOFF93649--------J---ush   ret
+        s. rname
+	.cfi_startproc
+    .   p, 8xmm80]
+	stp	d	.cftsie_ff o39,q    %r14
+        popq   r ë1ksino.text	.long@GOTOFF93649--MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-------------ndp80]
+	stp	d	.cftsie_ff o39,q    %r14
+        popq   r ë1ksino.text	.l.gnu.linkonce.lt--------------ndpdb---ndpdb1

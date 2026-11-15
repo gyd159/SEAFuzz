@@ -1,0 +1,432 @@
+# This file holds test cases for the D demangler.
+# Each test case looks like this:
+# options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported optioNuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<comemrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::bI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNv!(demangle.S(1, "abc"))
+#
+--format=dlang
+_D8demangle13__T4testTFZaZ6mangleFZv
+demangle.test!(char() function).mangle()
+#
+A04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_gle4testMyFZv
+demangle.test() immutable
+#
+--format=dlang
+_D8demangle4testMNgFZv
+demangle.test() inout
+#
+--format=dlang
+_D8demangle4test2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<ooooooooooooooooooooooooooooooofalse>>
+#
+--fo˛rmat=rust
+_RMCs4fqIr2P2A04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_gene{ic::Char<'\n'>>
+#
+--formatπrust
+_RMCs4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMˇˇCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_gle4testMyFZv
+demangle.test() immutable
+#
+--format=dlang
+_D8demangle4testMNgFZv
+demangle.test() inout
+#
+--format=dlang
+_D8demangle4test2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--fo˛rmat=rust
+_RMCs4# This file holds tes__lambda13FNat cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input tÿo be demangled
+#î·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=rust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00BÀ_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=rust
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<comemrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::bI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNv!(demangle.S(1, "abc"))
+#
+--format=dlang
+_D8demangle13__T4testTFZaZ6mangleFZv
+demangle.test!(char() function).mangle()
+#
+A04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_gle4testMyFZv
+demangle.test() immutable
+#
+--format=dlang
+_D8demangle4testMNgFZv
+demangle.test() inout
+#
+--format=dlang
+_D8demangle4test2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<ooooooooooooooooooooooooooooooofalse>>
+#
+--fo˛rmat=rust
+_RMCs4fqIr2P2A04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--formatπrust
+_RMCs4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMˇˇCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_gle4testMyFZv
+demangle.test() immutable
+#
+--format=dlang
+_D8demneric::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMˇˇCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_gle4testMyFZv
+demangle.test() immutable
+#
+--format=dlang
+_D8demangle4testMNgFZv
+demangle.test() inout
+#
+--format=dlang
+_D8demangle4test2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--fo˛rmat=rust
+_RMCs4fqIr2P2A04_13const_genericINtB_4B0oolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--formatπrust
+_RMCs4fqI2P2rA04_13const4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMˇˇCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_ˇˇˇˇˇˇˇˇar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu3p____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs2DXkGYLi8lr_2cc5spawn00B5_
+c
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--formatπrust
+_RMCs4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMˇˇCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu3p____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--fofqIr2P2A04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--formatπrust
+_RMCs4fqI2P2rA04_13const4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMˇˇCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_ˇˇˇˇˇˇˇˇar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu3p____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs2DXkGYLi8lr_2cc5spawn00B5_
+c
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--formatπrust
+_RMCs4fqI2P2rA04_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+?--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--formatπrust
+_RMCs4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMˇˇCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<consÙ_generic::Foo<_gle4testMyFZv
+demangle.test() immutable
+#
+--format=dlang
+_D8demangle4testMNgFZv
+demangle.test() inout
+#
+--format=dlang
+_D8demangle4test2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--fo˛rmat=rust
+_RMCs4fqIr2P2A04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for cdu=motrust
+_ZN5alloc4heap8allocate17hd55c03e6cb81d924E
+alloc::heap-format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB
+       0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=autosult!(std.typecons.Tãple!(int, "a", int, "b", int, "c").edicateObliga", 2:"a"]).rename().__lambda1, int[]).FilterResult.__xtoHash(ref const(std.algorithm.iteration.FilterResult!(std.typecons.Tãple!(int, "a",t.__xtoHash(rn.Filter©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©t[]).Filte¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡rResult.__xtoHash(ref const(std.algorithm.iteration.FilterResult!(std.typecons.Tãple!(int, "a",t.__xtoHash(rn.Filter©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©name().__lambda1, int[]).FilterResult.__xtoHash(rn.FilterResult!(std.ty©!©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©name().__lambda1, int[]).FilterResult.__xtoHash(rn.FilterResult!(std.typeconsX9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8517020237817239694
+<rustc_data_structures::obligation_forest::Obligati>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKˇˇˇˇˇˇ  ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇb0_E
+<const_generic::Bool<false>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_scn31ot_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=auto
+_RNvNvMCs4fqI2P2rA04_13const_genericINngle4testFMPFZaZv
+demang       le.test(scope char() function)
+#
+--format=dlang
+_D8demangle4testFPFNlZaZv
+demangle.test(cÇar() scope functisWhiteF-format=dlang
+_D8demangle4testFMPFNlZaZv
+demangle.test(scope char() scope function)
+#
+--format=dlang
+_D8demangle4testFNlMPFNlZaZv
+demangle.test(scope char() scope function)
+#
+--format=dlang
+_D8demangle4test6__initZ
+initializer for demangle.trmat=dlang
+_D8demangle4testFMPFNlZaZv
+demangle.test(scope char() scope function)
+#
+--format=dlang
+_D8demangle4testFNlMPFNlZaZv
+demangle.test(scope char() scope function)
+#
+--format=dlang
+_D8demangle4test6__initZ
+initializer for de[mangle.test
+#
+--format7he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--ftestVAyaa1_ expYYZv
+_Z1ect8ed outpustMONgxFZv
+d
+<collectit
+#
+# See__Tormat=dlang
+_D8demangle21__T2fnVHiiA2i1i2i3i4Z2fnFZv
+demangle.fn!([1:2, 3:4]).fn()
+#
+--format=dlang
+_D8demangle2fnFNgiZNgi
+demangle.fn(inout(int))
+#
+--format=dlang
+_D8demangle29ulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8517020237817239694
+<rustc_data_structures::obligation_forest::ObligationForest<rustc_trait_selection::traits::fulfill::PendingPredicateObligation>>::register_obligation_at
+--format=rust
+_ZN4core3ptr85drop_in_place$LT$std..rt..lang_start$LT$$LP$$RP$$GT$..$u8b$$u7b$closure$u7d$$u7d$$GT$17h27f14859c664480dE.llvm.8ut!(std.typeconsX9FIu_21rustc_trait_selection6traits7fulfill26Pena2e23ed7db2gE
+main:_mmat=dlang
+_D8demangle32__T4testVde0FFFFFFFFFFFFF8P1024Zv
+demangGT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::itera[4]))
+#
+--format=dlang
+_D8demangle4testFNhG2fZv
+demangle.test(__vector(float[2]))
+#
+--format=dlang
+_D8demangle4testFNhG4fZv
+demangle.test(__vector(float[T$9into_iter17he06cb713aae5b465E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN71_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..ops..Drop$GT$4drop17hf7f23304ebe62eedE
+<collections::vec::IntoIter<T> as core::ops::Drop>format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--formatπrust
+_RMCs4fqI2P2rA04_13const4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMˇˇCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_ˇˇˇˇˇˇˇˇar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu3p____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs2DXkGYLi8lr_2cc5spawn00B5_
+c
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+::drop
+#
+--format=rust
+_ZN86_$LT$collections..va_E
+<const_generic::Char<'\n'>>
+#
+--fec..Int

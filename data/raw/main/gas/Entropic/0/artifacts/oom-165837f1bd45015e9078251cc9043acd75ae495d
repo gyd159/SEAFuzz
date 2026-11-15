@@ -1,0 +1,15 @@
+## same as aarch64/pac_ab_kinô	25 // pscapia
+	.cfi_window_save
+	stp	x29, x38888888888888888888888888888888888888888888888U8888888888888888888888888888880:
+	.size	_Z5fofoo_bv, %functio9n
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfiey.s	¤hi888888888888888888888(88888888888888888888888888888888888888888888888880:
+	.size	_Z5fofoo_bv, %functio9n
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	27 // pcaibsp
+	.cfi_w_endprocò

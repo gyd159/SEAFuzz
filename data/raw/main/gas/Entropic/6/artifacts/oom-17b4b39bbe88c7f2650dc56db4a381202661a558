@@ -1,0 +1,17 @@
+        .cfis_ections .sframe
+	.cfi_startproc
+	stp	x38, x20, [sp, -144]!
+10, -136
+	stfioets_rre 22
+	.cfi_def_cfa_ox23,## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	.align	2
+	.glo+bal	_Z5foo_av
+aarch64/pac_ab_key.s
+	.arch armv	.type	_Z5foo_avÔè%funp, 64]
+	stp	7 // pai
+scp[:
+	.size	_Z5fÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿoo_av, .-_Z5foo_av
+	.b	._av
+	.b	.cfi_window_sav7ali,

@@ -1,0 +1,23 @@
+   (    Òœ™‘c
+        qhp u  s%rbp
+       ## ARMÿ8.3 addds de“ut a n.l_deš œa_oangl
+	.long 0f
+	.cfong 0
+	.cfi_eƒndproc
+f the p@ointer‘ßare not m .cfi_deš œa_oangl
+	.long 1f
+	.cfi_d›fset 16
+œ_cfa_of  
+	.cfi_eƒndproc
+f c
+        qhp u  s%rbp
+       ## ARMÿ8.3 addds de“ut a n.long 0
+	.cfi_eƒndproc
+f the p@ointer‘ßare not m .cfi_def_cfa_oangl
+	.long 0f
+	.cfi_d›fset 16
+œ_cthe p@ointer‘ßagl
+	.long 0fi_def_cfa_oangl
+	.long 0f
+	.cfi_d›fset 16
+œ_cfa_of       if.c 

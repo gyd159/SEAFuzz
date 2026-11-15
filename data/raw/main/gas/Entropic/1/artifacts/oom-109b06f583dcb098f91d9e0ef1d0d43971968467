@@ -1,0 +1,7 @@
+        .cfi_  .cfi_offofS   .cfi_offset 6, -06
+       xmm20    %ri_def_cfa 7, 8Š        ret
+       ÛÑcfi_ensp, ÿ.cfi_sectiorocfS   .cfi_offset 6, %rbp
+; -16
+
+        movq ÿÿÿÿÿÿÿ_ $      þÿÿÿ.V  %rbp
+     

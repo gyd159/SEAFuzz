@@ -1,0 +1,1410 @@
+# This file holds test casesng
+_D8demangle4testFG1234567890aZv
+demangle.test(char[1234567890])
+#
+--format=dlang
+_D8demangle4testFHaaZv
+demangle.test(char[char])
+#
+--format=dlang
+_D8demangle4tetr17h153241df1c7d1666E
+<[T] as core::slice::SliceExt>::as_mut_ptr
+#
+--format=rust
+_ZN11collections5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$10as_mut_ptr17hf12a6d0409938c96E
+collections::slice::<impl [T]>::as_mut_ptr
+#
+--format=rust
+_ZN4core3ptr5write17h651fe53ec860e780E
+core::ptr::write
+#
+--format=rust
+_ZN65_$LT$std..œ‘‰Ñ.Args$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterato1fe53ec860e780E
+core::ptr::write
+#
+--format=rust
+_ZN65_$LT$std..œ‘‰Ñ.Args$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::i)terator::Iterator>::next
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17he06cb713aae5b465E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN71_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..ops..Drop$GT$4drop17hf7f23304ebe62eedE
+<collections::vec::IntoIter<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN86_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..itet.ShiftOr!(char).ShiftOr.St$GT$10as_mut_ptr17h153241df1c7d1666E
+<[T] as core::slice::SliceExt>::as_mut_ptr
+#
+--format=rust
+_ZN11collections5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$10as_mut_ptr17hf12a6d0409938c96E
+collections::slice::<impl [T]>::as_mut_ptr
+#
+--format=rust
+_ZN4core3ptr5write17h651fe53ec860e780E
+core::ptr::write
+#
+--format=rust
+_ZN65_$LT$std..œ‘‰Ñ.Args$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17he06cb713aae5b465E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN71_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..ops..Drop$GT$4drop17hf7f23304ebe62eedE
+<collections::vec::IntoIter<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN86_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..itet.ShiftOr!(char).ShiftOr.ShiftThread.setInvMask(uint, uint)).set(dchar)
+#
+--format=dlang
+_D3std5stdio4File__T8lockImplX10LockFileExTykZQBaMFmmykZi
+std.stdio.File.lockImpl!(LockFileEx, immutable(uint)).lockImpl(ulong, ulong, immutable(uint))
+#
+--format=dlang
+_D3std9algorithm9iteration__T12FilterResultSQBq8typecons__T5TupleTiVAyaa1_61TiVQla1_62TiVQva1_63ZQBm__T6renameVHiQBtA2i0a1_63i2a1_61ZQBeMFNcZ9__lambda1TAiZQEw9__xtoHashFNbNeKxSQGsQGrQGk__TQGdSQHiQFs__TQFmTiVQFja1_61TiVQFua1_62TiVQGfa1_63ZQGx__TQFlVQFhA2i0a1_623ia1_61ZQGjMFNcZQFfTQEyZQJvZm
+std.algorithm.itert
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17he06cb713aae5b465E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN71_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..ops..Drop$GT$4drop17hf7f23304ebe62eedE
+<collections::vec::IntoIterr::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN71_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..ops..Drop$GT$4drop17hf7f23304ebe62eedE
+<collections::vec::IntoIter<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN86_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..itet.ShiftOr!(char).ShiftOr.ShiftThread.setInvMask(uint, uint)).set(dchar)
+#
+--format=dlang
+_D3std5stdio4File__T8lockImplX10LockFileE# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²ike this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, ^blank lines in this file are NOT ignor13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13constest(__vector(short[16]))
+#
+--format=dlang
+_D8demangle4testFNhG2iZv
+demangle.test(__vector(int[2]))
+#
+--format=dlang
+_D8demangle4testFNhG4iZv
+demangle.test(__vector(int[4]))
+#
+--format=dlang
+_D8demangle4testFNhG8iZv
+demangle.test(__vector(int[8]))
+#
+--format=dlang
+_D8demangle4testFNhG1lZv
+demangle.test(__vector(long[1]))
+#
+--format=dlang
+_D8demangle4testFNhG2lZv
+demangle.test(__vector(long[2]))
+#
+--format=dlang
+_D8demangle4testFNhG4lZv
+demangle.test(__vector(long[4]))
+#
+--!(shared(char), char))
+#
+--format=dlang
+_D8demangle4testFB3aDFZaaZv
+demangle.test(Tuple!(char, char() delegag
+_D1aM
+_D1aM
+#
+--format=dlang
+_D1aFZNz
+_D1aFZNz
+#
+--format=dlang
+_D1aFNzZv
+_D1aFNzZv
+#
+--format=dlang
+_D4testFDX
+_D4testFDx
+#
+--format=dlang
+_D5__T0aZv
+_D5__T0aZv
+#
+--format=dlang
+_D10__T4testYZv
+_D10__T4testYZv
+#
+--format=dlang
+_D4testFBaZv
+_D4testFBaZv
+#
+--format=dlang
+_D8__T4test
+_D8__T4test
+#
+--format=dlang
+_D10__T4testVi
+_D10__T4testVi
+#
+--format=dlang
+_D10__T4testVai
+_D10__T4testVai
+#
+--format=dlang
+_D10__T4testVbi
+_D10__T4testVbi
+#
+--format=dlang
+_
+_D8__T4test
+_D8__T4test
+#
+--format=dlang
+_D10__Tt=dlang
+_D18__T4testVa5gf6e948079:ops::Drop>::drop
+#
+--format=rust
+_ZN68_$LT$core..nonzero..NonZero$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17hc4r<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iion!(std.experimental.allocator.building_blocks.null_allocator.NullAllocator).KRRegin,o ref void[], ulong)
+#
+--format=dlang
+_D3std9exception__T11doesPointToTASQBh5regex8internal2ir10NamedGroupTQBkTvZQCeFNaNbNiNeKxASQDlQCeQCbQBvQBvKxdttQbs
+Z.exception.doesPointTo!(std.regex.internal.xTykZQBaMFmmykZi
+std.stdio.File.lockImpl!(LockFileEx, immutable(uint)).lockImpl(ulong, ulong, immutable(uint))
+#
+--format=dlang
+_D3std9algorithm9iteration__T12FilterResultSQBq8typecons__T5TupleTiVAyaa1_61TiVQla1_62TiVQva1_63ZQBm__T6renameVHiQBtA2i0a1_63i2a1_61ZQBeMFNcZ9__lambda1TAiZQEw9__xtoHashFNbNeKxSQGsQGrQGk__TQGdSQHiQFs__TQFmTiVQFja1_61TiVQFua1_62TiVQGfa1_63ZQGx__TQFlVQFhA2i0a1_623ia1_61ZQGjMFNcZQFfTQEyZQJvZm
+std.algorithm.itert
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17he06cb713aae5b465E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN71_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..ops..Drop$GT$4drop17hf7f23304ebe62eedE
+<collections7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_g
+_D8demangle4testFNjaZv
+demangle.test(char)
+#
+--format=dlang
+_D8demangle4testFNkaZv
+demangle.test(return char)
+#
+--format=dlang
+_D8demangle4testFNlaZv
+demangle.test(char)
+#
+JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ--format=dlang
+_D8demangle4testFaXv
+demangle.test(char...)
+#
+--format=dlang
+_D8demangle4testFaYv
+d[], voidemangle.test(char, ...)
+#
+--format=dlang
+_D8demangle4testFaaYv
+demangle.test(char, char, ...)
+#
+--format=dlang
+_D8demangRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!RRRRRRRRr>::next
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17he06cb713aae5b465E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN71_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..ops..Drop$GT$4drop17hf7f23304ebe62eedE
+<collections::vec::IntoIter<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN86_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..itet.ShiftOr!(char).ShiftOr.St$GT$10as_mut_ptr17h153241df1c7d1666E
+<[T] as core::slice::SliceExt>::as_mut_ptr
+#
+--format=rust
+_ZN11collections5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$10as_mut_ptr17hf12a6d0409938c96E
+collections::slice::<impl [T]>::as_mut_ptr
+#
+--format=rust
+_ZN4core3ptr5write17h651fe53ec860e780E
+core::ptr::write
+#
+--format=rust
+_ZN65_$LT$std..œ‘‰Ñ.Args$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17he06cb713aae5b465E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN71_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..ops..Drop$GT$4drop17hf7f23304ebe62eedE
+<collections::vec::IntoIter<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN86_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..itet.ShiftOr!(char).ShiftOr.ShiftThread.setInvMask(uint, uint)).set(dchar)
+#
+--format=dlang
+_D3std5stdio4File__T8lockImplX10LockFileExTykZQBaMFmmykZi
+std.stdio.File.lockImpl!(LockFileEx, immutable(uint)).lockImpl(ulong, ulong, immutable(uint))
+#
+--format=dlang
+_D3std9algorithm9iteration__T12FilterResultSQBq8typecons__T5TupleTiVAyaa1_61TiVQla1_62TiVQva1_63ZQBm__T6renameVHiQBtA2i0a1_63i2a1_61ZQBeMFNcZ9__lambda1TAiZQEw9__xtoHashFNbNeKxSQGsQGrQGk__TQGdSQHiQFs__TQFmTiVQFja1_61TiVQFua1_62TiVQGfa1_63ZQGx__TQFlVQFhA2i0a1_623ia1_61ZQGjMFNcZQFfTQEyZQJvZm
+std.algorithm.itert
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17he06cb713aae5b465E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN71_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..ops..Drop$GT$4drop17hf7f23304ebe62eedE
+<collections::vec::IntoIter<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN86_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..itet.ShiftOr!(char).ShiftOr.ShiftThread.setInvMask(uint, uin9deref_mut17hf299b860dc5a831cE
+c<ollections::vec::Vec<T> as core::ops::DerefMut>::deref_mut
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17hc784b4a166cb5e5cE
+<core::ptr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$3ptr17h7570b6e9070b693bE
+<alloc::raw_vec::RawVec<T>>::ptr
+#
+--format=rust
+_ZN4core2ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h0f3228f343444ac8E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN53_$LT$$u5b$T$u5d$$u20$as$u20$core..slice..SliceExt$GT$10as_mut_ptr17h153241df1c7d1666E
+<[T] as core::slice::SliceExt>::as_mut_ptr
+#
+--forma "b", int,8demangle31__T4testVde0F6E978D4FDF3B646P7Zv
+demangle.test!(0x0.F6E978D4FDF3B646p7)
+#
+--format=dlang
+_D8]emangle15__T4testVdeNANZv
+demangle.test!(NaN)
+#
+--format=dlang
+_D8demangle15__T4testVdeINFZv
+demangle.test!(Inf)
+#
+--format=dlang
+_D8demangle16__T4testVdeNINFZv
+demangle.test!(-Inf)
+#
+--format=dlang
+_D8demangle23__T4testVfe0FFFFFFP128Zv
+demangle.test!(0x0.FFFFFFp128)
+#
+--format=dlang
+_D8demangle32__T4testVde0FFFFFFFFFFFFF8P1024Zv
+demangle.test!(0x0.FFFFFFFFFFFFF8p1024)
+#
+--format=dlang
+_D8demangle19__T4testVfe08PN125Zv
+demangle.test!(0x0.8p-125)
+#
+--format=dlang
+_D8demangle20__T4testVde08PN1021Zv
+demangle.test!(0x0.8p-1021)
+#
+--format=dlang
+_D8demangle51__T4testVrc0C4CCCCCCCCCCCCCDP4c0B666666666666666P6Zv
+demangle.test!(0x0.C4CCCCCCCCCCCCCDp4+0x0.B666666666666666p6i)
+#
+--format=dlang
+_D8demangle52__T4testVrcN0C4CCCCCCCCCCCCCDP4c0B666666666666666P6Zv
+demangle.test!(-0x0.C4CCCCCCCCCCCCCDp4+0x0.B666666666666666p6i)
+#
+--format=dlang
+_D8demangle91__T4testVde000111222333444555666777888999AAABBBCCCDDDEEEFFFP000111222333444555666777888999Zv
+demangle.test!(0x0.00111222333444555666777888999AAABBBCCCDDDEEEFFFp000111222333444555666777888999)
+#
+--format=dlang
+_D8demangle22__T4testVG3ua3_616263Zv
+demanbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=rust
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_g
+_D8demangle4testFNjaZv
+demangle.test(char)
+#
+--format=dlang
+_D8demangle4testFNkaZv
+demangle.test(return char)
+#
+--format=dlang
+_D8demangle4testFNlaZv
+demangle.test(char)::vec::IntoIter<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN86_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..itet.ShiftOr!(char).ShiftOr.ShiftThread.setInvMask(uint, uin9deref_mut17hf299b860dc5a831cE
+c<ollections::vec::Vec<T> as core::ops::DerefMut>::deref_mut
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17hc784b4a166cb5e5cE
+<core::ptr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$3ptr17h7570b6e9070b693bE
+<alloc::raw_vec::RawVec<T>>::ptr
+#
+--format=rust
+_ZN4core2ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h0f3228f343444ac8E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN53_$LT$$u5b$T$u5d$$u20$as$u20$core..slice..SedE
+<collections::vec::IntoIter<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN86_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..itet.ShiftOr!(char).ShiftOr.ShiftThread.setInvMask(uint, uint)).set(dchar)
+#
+--format=dlang
+_D3std5stdio4File__T8lockImplX10LockFileExTykZQBaMFmmykZi
+std.stdio.File.lockImpl!(LockFileEx, immuta# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²ike this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, ^blank lines in this file are NOT ignor13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13constest(__vector(short[16]))
+#
+--format=dlang
+_D8demangle4testFNhG2iZv
+demangle.test(__vector(int[2]))
+#
+--format=dlang
+_D8demangle4testFNhG4iZv
+demangle.test(__vector(int[4]))
+#
+--format=dlang
+_D8demangle4testFNhG8iZv
+demangle.test(__vector(int[8]))
+#
+--format=dlang
+_D8demangle4testFNhG1lZv
+demangle.test(__vector(long[1]))
+#
+--format=dlang
+_D8demangle4testFNhG2lZv
+demangle.test(__vector(long[2]))
+#
+--format=dlang
+_D8demangle4testFNhG4lZv
+demangle.test(__vector(long[4]))
+#
+--!(shared(char), char))
+#
+--format=dlang
+_D8demangle4testFB3aDFZaaZv
+demangle.test(Tuple!(char, char() delegag
+_D1aM
+_D1aM
+#
+--format=dlang
+_D1aFZNz
+_D1aFZNz
+#
+--format=dlang
+_D1aFNzZv
+_D1aFNzZv
+#
+--format=dlang
+_D4testFDX
+_D4testFDx
+#
+--format=dlang
+_D5__T0aZv
+_D5__T0aZv
+#
+--format=dlang
+_D10__T4testYZv
+_D10__T4testYZv
+#
+--format=dlang
+_D4testFBaZv
+_D4testFBaZv
+#
+--format=dlang
+_D8__T4test
+_D8__T4test
+#
+--format=dlang
+_D10__T4testVi
+_D10__T4testVi
+#
+--format=dlang
+_D10__T4testVai
+_D10__T4testVai
+#
+--format=dlang
+_D10__T4testVbi
+_D10__T4testVbi
+#
+--format=dlang
+_
+_D8__T4test
+_D8__T4test
+#
+--format=dlang
+_D10__Tt=dlang
+_D18__T4testVa5gf6e948079:ops::Drop>::drop
+#
+--format=rust
+_ZN68_$LT$core..nonzero..NonZero$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17hc4r<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iion!(std.experimental.allocator.building_blocks.null_allocator.NullAllocator).KRRegin,o ref void[], ulong)
+#
+--format=dlang
+_D3std9exception__T11doesPointToTASQBh5regex8internal2ir10NamedGroupTQBkTvZQCeFNaNbNiNeKxASQDlQCeQCbQBvQBvKxdttQbs
+Z.exception.doesPointTo!(std.regex.internal.ir.NamedGter..t4testVi
+_D10__T4testVi
+#
+--format=dlang
+_D10__T4testVai
+_D10__T4testVai
+#
+--format=dlang
+_D10__T4testVbi
+_D10__T4testVbi
+#
+--format=dlang
+_D11__T4testS1a
+_D11__T4testS1a
+#
+--format=dlang
+_D11__T4testViiZv
+_D12__T4testViiZv
+#
+--format=dlang
+_D12__T4testViYZv
+_D12__T4testViYZv
+#
+--format=dlang
+_D12__T4testVrcZv
+?D12__T4testVrcZv
+#
+--format=dlang
+_D13__T4testVdeYZv
+_D13__T4testVdeYZv
+#
+--format=dlang
+_D13__T4testViSiZv
+_D13__T4testViSiZv
+#
+--format=dlang
+_D14__T4testVAiAiZv
+_D14__T4testVAiAiZv
+#
+--format=dlang
+_D14__T4testS123aZv
+_D14__T4testS123aZv
+#
+--format=dlang
+_D15__T4testVHiiAiZv
+_D15__T4testVHiiAiZv
+#
+--format=dlang
+_D15__T4testVfe0p1Zv
+_D15__T4testVfe0p1Zv
+#
+--format=dlang
+_D15__T4testVAyaa1_
+_D15__T4testVAyaa1_
+#
+-+format=dlang
+_D16__T4testVAyaa0aZv
+_D16__T4testVAyaa0aZv
+#
+--format=dlang
+_D18__T4testVa5cf6e94807905E
+<alloc::raw_vec::RawVec<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN68_$LT$core..nonzero..NonZero$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17hc49056f882aa46dbE
+<core::nonzero::NonZero<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17h19f2ad4920655e85E
+<core::ptr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN11issue_609253foo37Foo$LT$issue_60925..llv$u6d$..Foo$GT$3foo17h059a991a004536adE
+issue_60925::foo::Foo<issue_60925::llvm::Foo>::foo
+--format=rust
+_ZN4core
+--format=dlang
+_D14__T4testS123aZv
+_D14__T4testS123aZv
+#
+--format=dlang
+_D15__T4testVHiiAiZv
+_D15__T4testVHiiAiZv
+#
+--format=dlang
+_D15__T4testVfe0p1Zv
+_D15__T4testVfe0p1Zv
+#
+--format=dlang
+_D15__T4testVAyaa1_
+_D15__T4testVAyaa1_
+#
+-+format=dlang
+_D16__T4testVAyaa0aZv
+_D16__T4testVAyaa0aZv
+#
+--format=dlang
+_D18__T4testVa5cf6e94807905E
+<alloc::raw_vec::RawVec<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN68_$LT$core..nonzero..NonZero$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17hc49056f882aa46dbE
+<core::nonzero::NonZero<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17h19f2ad4920655e85E
+<core::ptr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN11issue_609253foo37Foo$LT$issue_60925..llv$u6d$..Foo$GT$3foo17h059a991air.NamedGter..t4testVi
+_D10__T4testVi
+#
+--format=dlang
+_D10__T4testVai
+_D10__T4testVai
+#
+--format=dlang
+_D10__T4testVbi
+_D10__T4testVbi
+#
+--format=dlang
+_D11__T4testS1a
+_D11__T4testS1a
+#
+--format=dlang
+_D11__T4testViiZv
+_D12__T4testViiZv
+#
+--format=dlang
+_D12__T4testViYZv
+_D12__T4testViYZv
+#
+--format=dlang
+_D12__T4testVrcZv
+?D12__T4testVrcZv
+#
+--format=dlang
+_D13__T4testVdeYZv
+_D13__T4testVdeYZv
+#
+--format=dlang
+_D13__T4testViSiZv
+_D13__T4testViSiZv
+#
+--format=dlang
+_D14__T4testVAiAiZv
+_D14__T4testVAiAiZv
+#
+--format=dlang
+_D14__T4testS123aZv
+_D14__T4testS123aZv
+#
+--format=dlang
+_D15__T4testVHiiAiZv
+_D15__T4testVHiiAiZv
+#
+--format=dlang
+_D15__T4testVfe0p1Zv
+_D15__T4testVfe0p1Zv
+#
+--format=dlang
+_D15__T4testVAyaa1_
+_D15__T4testVAyaa1_
+#
+-+format=dlang
+_D16__T4testVAyaa0aZv
+_D16__T4testVAyaa0aZv
+#
+--format=dlang
+_D18__T4testVa5cf6e94807905E
+<alloc::raw_vec::RawVec<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN68_$LT$core..nonzero..NonZero$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17hc49056f882aa46dbE
+<core::nonzero::NonZero<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17h19f2ad4920655e85E
+<core::ptr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN11issue_609253foo37Foo$LT$issue_60925..llv$u6d$..Foo$GT$3foo17h059a991a004536adE
+issue_60925::foo::Foo<issue_60925::llvm::Foo>::foo
+--format=rust
+_ZN4core
+--format=dlang
+_D14__T4testS123aZv
+_D14__T4testS123aZv
+#
+--format=dlang
+_D15__T4testVHiiAiZv
+_D15__T4testVHiiAiZv
+#
+--format=dlang
+_D15__T4testVfe0p1Zv
+_D15__T4testVfe0p1Zv
+#
+--format=dlang
+_D15__T4testVAyaa1_
+_D15__T4testVAyaa1_
+#
+-+format=dlang
+_D16__T4testVAyaa0aZv
+_D16__T4testVAyaa0aZv
+#
+--format=dlang
+_D18__T4testVa5cf6e94807905E
+<alloc::raw_vec::RawVec<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN68_$LT$core..nonzero..NonZero$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17hc49056f882aa46dbE
+<core::nonzero::NonZero<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17h19f2ad4920655e85E
+<core::ptr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN11issue_609253foo37Foo$LT$issue_60925..llv$u6d$..Foo$GT$3foo17h059a991a004536adE
+issue_60925::foo::Foo<issue_60925::llvm::Foo>::foo
+--format=rust
+_ZN4core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$uestFIKaZv
+demangle.test(in ref char)
+#
+--format=dlang
+_D8demangle4testFJaZv
+demangle.test(out char)
+#
+--format=dlang
+_D8demangle4testFKaZv
+demangle.test(ref chformat=dl­­­­­­­­­­­ang
+_, char))
+#
+--format=dlang
+_D8demangle4testFB3aaaZv
+demamat=dlang
+_D13__T4testViSiZv
+_D13__T4testViSiZv
+#
+--format=dlang
+_D14__T4testVAiAiZv
+_D14__T4testVAiAiZv
+#
+--format=dlang
+_D14__T4testS123aZv
+_D14__T4testS123aZv
+#
+--format=dlang
+_D15__T4testVHZivAi
+i_D15__T4testVHiiAiZv
+#
+--format=dlang
+_D15__T4testVfe0p1Zv
+_D15__mat=dlang
+_D1aFZNz
+_D1aFZNz
+#
+--format=dlang
+_D1aFNzZv
+_D1aFNzZv
+#
+--format=dlang
+_D4testFDX
+_D4testFDx
+#
+--format=dlang
+_D5__T0aZv
+_D5__T0aZv
+#
+--format=dlang
+_D10__T4testYZv
+_D10__T4testYZv
+#
+--format=dlang
+_D4testFBaZv
+_D4testFBaZv
+#
+--format=dlang
+_D8__T4test
+_D8__T4test
+#
+--format=dlang
+_D10__T4testVi
+_D10__T4testVi
+#
+--format=dlang
+_D10__T4testVai
+_D10__T4testVai
+#
+--format=dlang
+_D10__T4testVbi
+_D10__T4testVbi
+#
+--format=dlang
+_
+_D8__T4test
+_D8__T4test
+#
+--format=dlang
+_D10__Tt=dlang
+_D18__T4testVa5cf6e94807905E
+<alloc::raw_vec::RawVec<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN68_$LT$core..nonzero..NonZero$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17hc4r<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iion!(std.experimental.allocator.building_blocks.null_allocator.NullAllocator).KRRegin,o ref void[], ulong)
+#
+--format=dlang
+_D3std9exception__T11doesPointToTASQBh5regex8internal2ir10NamedGroupTQBkTvZQCeFNaNbNiNeKxASQDlQCeQCbQBvQBvKxdttQbs
+Z.exception.doesPointTo!(std.regex.internal.ir.NamedGter..t4testVi
+_D10__T4testVi
+#
+--format=dlang
+_D10__T4testVai
+_D10__T4testVai
+#
+--format=dlang
+_D10__T4testVbi
+_D10__T4testVbi
+#
+--format=dlang
+_D11__T4testS1a
+_D11__T4testS1a
+#
+--format=dlang
+_D11__T4testViiZv
+_D12__T4testViiZv
+#
+--format=dlang
+_D12__T4testViYZv
+_D12__T4testViYZv
+#
+--format=dlang
+_D12__T4testVrcZv
+_D12__T4testVrcZv
+#
+--format=dlang
+_D13__T4testVdeYZv
+_D13__T4testVdeYZv
+#
+--format=dlang
+_D13__T4testViSiZv
+_D13__T4testViSiZv
+#
+--format=dlang
+_D14__T4testVAiAiZv
+_D14__T4testVAiAiZv
+#
+--format=dlang
+_D14__T4tele4testFB2aaZv
+demangle.test(Tuple!(char, char))
+#
+--format=dlang
+_D8demangle4testFB3aaaZv
+demangle.test(Tuple!(char, char, char))
+#
+--format=dlang
+_D8demangle4testFB2OaaZv
+demangle.test(Tuple!(shared(char), char))
+#
+--format=dlang
+_D8demangle4testFB3aDFZaaZv
+demangle.test(Tuple!(char, char() delegag
+_D1aM
+_D1aM
+#
+--format=dlang
+_D1aFZNz
+_D1aFZNz
+#
+--format=dlang
+_D1aFNzZv
+_D1aFNzZv
+#
+--format=dlang
+_D4testFDX
+_D4testFDx
+#
+--format=dlang
+_D5__T0aZv
+_D5__T0aZv
+#
+--format=dlang
+_D10__T4testYZv
+_D10__T4testYZv
+#
+--format=dlang
+_D4testFBaZv
+_D4testFBaZv
+#
+--format=dlang
+_D8__T4test
+_D8__T4test
+#
+--format=dlang
+_D10__T4testVi
+_D10__T4testVi
+#
+--format=dlang
+_D10__T4testVai
+_D10__T4testVai
+#
+--format=dlang
+_D10__T4testVbi
+_D10__T4testVbi
+#
+--format=dlang
+_
+_D8__T4test
+_D8__T4test
+#
+--format=dlang
+g
+_D8demangle4testMOxFZv
+demangle.test() shared const
+#
+--format=dlang
+_D8dD8__T2fnVa8888888888888_
+# Could crash
+--fv
+std.parallelism.RoundRobinBuffer!(void(ref char[]) delegate, bool() pure @property @trusted delegate const).RoundRobinBuffer.prime()
+#
+--format=dlang
+_D4core4stdc5errnoQgFZi
+core.stdc.errno.errno()
+#
+-    -format=dlang
+_D4testFS10aZv
+demangle.test(out char)
+#
+--formatstructnameQnZb
+test(structname, structnamermat=dlang
+_D13__T4testVdeYZv
+_D13__T4testVdeYZv
+_D10__Tt=dlang
+_D18__T4testVa5cf6e94807905E
+<alloc::raw_vec::RawVec<T> as core::ops::Drop>::drop
+#
+--004536adE
+issue_60925::foo::Foo<issue_60925::llvm::Foo>::foo
+--format=rust
+_ZN4core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$uestFIKaZv
+demangle.test(in ref char)
+#
+--format=dlang
+_D8demangle4testFJaZv
+demangle.test(out char)
+#
+--format=dlang
+_D8demangle4testFKaZv
+demangle.test(ref chformat=dl­­­­­­­­­­­ang
+_, char))
+#
+--format=dlang
+_D8demangle4testFB3aaaZv
+demamat=dlang
+_D13__T4testViSiZv
+_D13__T4testViSiZv
+#
+--format=dlang
+_D14__T4testVAiAiZv
+_D14__T4testVAiAiZv
+#
+--format=dlang
+_D14__T4testS123aZv
+_D14__T4testS123aZv
+#
+--format=dlang
+_D15__T4testVHZivAi
+i_D15__T4testVHiiAiZv
+#
+--format=dlang
+_D15__T4testVfe0p1Zv
+_D15__mat=dlang
+_D1aFZNz
+_D1aFZNz
+#
+--format=dlang
+_D1aFNzZv
+_D1aFNzZv
+#
+--format=dlang
+_D4testFDX
+_D4testFDx
+#
+--format=dlang
+_D5__T0aZv
+_D5__T0aZv
+#
+--format=dlang
+_D10__T4testYZv
+_D10__T4testYZv
+#
+--format=dlang
+_D4testFBaZv
+_D4testFBaZv
+#
+--format=dlang
+_D8__T4test
+_D8__T4test
+#
+--format=dlang
+_D10__T4testVi
+_D10__T4testVi
+#
+--format=dlang
+_D10__T4testVai
+_D10__T4testVai
+#
+--format=dlang
+_D10__T4testVbi
+_D10__T4testVbi
+#
+--format=dlang
+_
+_D8__T4test
+_D8__T4test
+#
+--format=dlang
+_D10__Tt=dlang
+_D18__T4testVa5cf6e94807905E
+<alloc::raw_vec::RawVec<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN68_$LT$core..nonzero..NonZero$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17hc4r<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iion!(std.experimental.allocator.building_blocks.null_allocator.NullAllocator).KRRegin,o ref void[], ulong)
+#
+--format=dlang
+_D3std9exception__T11doesPointToTASQBh5regex8internal2ir10NamedGroupTQBkTvZQCeFNaNbNiNeKxASQDlQCeQCbQBvQBvKxdttQbs
+Z.exception.doesPointTo!(std.regex.internal.ir.NamedGter..t4testVi
+_D10__T4testVi
+#
+--format=dlang
+_D10__T4testVai
+_D10__T4testVai
+#
+--format=dlang
+_D10__T4testVbi
+_D10__T4testVbi
+#
+--format=dlang
+_D11__T4testS1a
+_D11__T4testS1a
+#
+--format=dlang
+_D11__T4testViiZv
+_D12__T4testViiZv
+#
+--format=dlang
+_D12__T4testViYZv
+_D12__T4testViYZv
+#
+--format=dlang
+_D12__T4testVrcZv
+_D12__T4testVrcZv
+#
+--format=dlang
+_D13__T4testVdeYZv
+_D13__T4testVdeYZv
+#
+--format=dlang
+_D13__T4testViSiZv
+_D13__T4testViSiZv
+#
+--format=dlang
+_D14__T4testVAiAiZv
+_D14__T4testVAiAiZv
+#
+--format=dlang
+_D14__T4tele4testFB2aaZv
+demangle.test(Tuple!(char, char))
+#
+--format=dlang
+_D8demangle4testFB3aaaZv
+demangle.test(Tuple!(char, char, char))
+#
+--format=dlang
+_D8demangle4testFB2OaaZv
+demangle.test(Tuple!(shared(char), char))
+#
+--format=dlang
+_D8demangle4testFB3aDFZaaZv
+demangle.test(Tuple!(char, char() delegag
+_D1aM
+_D1aM
+#
+--format=dlang
+_D1aFZNz
+_D1aFZNz
+#
+--format=dlang
+_D1aFNzZv
+_D1aFNzZv
+#
+--format=dlang
+_D4testFDX
+_D4testFDx
+#
+--format=dlang
+_D5__T0aZv
+_D5__T0aZv
+#
+--format=dlang
+_D10__T4testYZv
+_D10__T4testYZv
+#
+--format=dlang
+_D4testFBaZv
+_D4testFBaZv
+#
+--format=dlang
+_D8__T4test
+_D8__T4test
+#
+--format=dlang
+_D10__T4testVi
+_D10__T4testVi
+#
+--format=dlang
+_D10__T4testVai
+_D10__T4testVai
+#
+--format=dlang
+_D10__T4testVbi
+_D10__T4testVbi
+#
+--format=dlang
+_
+_D8__T4test
+_D8__T4test
+#
+--format=dlang
+g
+_D8demangle4testMOxFZv
+demangle.test() shared const
+#
+--format=dlang
+_D8dD8__T2fnVa8888888888888_
+# Could crash
+--fv
+std.parallelism.RoundRobinBuffer!(void(ref char[]) delegate, bool() pure @property @trusted delegate const).RoundRobinBuffer.prime()
+#
+--format=dlang
+_D4core4stdc5errnoQgFZi
+core.stdc.errno.errno()
+#
+-    -format=dlang
+_D4testFS10aZv
+demangle.test(out char)
+#
+--formatstructnameQnZb
+test(structname, structnamermat=dlang
+_D13__T4testVdeYZv
+_D13__T4testVdeYZv
+_D10__Tt=dlang
+_D18__T4testVa5cf6e94807905E
+<alloc::raw_vec::RawVec<T> as core::ops::Drop>::drop
+#
+-format=rust
+_ZN68_$LT$core..nonzero..Non#
+--format=dlang
+_D26__T9testViSiZv
+_D13-format=rust
+_ZN68_$LT$core..nonzero..Non#
+--format=dlang
+_D26__T9testViSiZv
+_D13__T4testViSiZv
+#
+--forZerm1222333444555666777888999Zv
+demangle.test!(0x0.00111222333444555666777888999AAABBBCCCDDDEEEFFFp000111222333444555666777888999)
+#
+--format=dlang
+_D8demangle22__T4testVG3ua3_616263Zv
+demanbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=rust
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_g
+_D8demangle4testFNjaZv
+demangle.test(char)
+#
+--format=dlang
+_D8demangle4testFNkaZv
+demangle.test(return char)
+#
+--format=dlang
+_D8demangle4testFNlaZv
+demangle.test(char)
+#
+JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ--format=dlang
+_D8demangle4testFaXv
+demangle.test(char...)
+#
+--format=dlang
+_D8demangle4testFaYv
+d[], voidemangle.test(char, ...)
+#
+--format=dlang
+_D8demangle4testFaaYv
+demangle.test(char, char, ...)
+#
+--format=dlang
+_D8demangRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRle4testFYv
+demangle.test(...)
+#
+--format=dlang
+_D8demangle4testFaaZv
+demangle.test(char, char)
+#.IntoIter$LT$T$GT$$u20$as$u2testFB0Zv
+demangle.test(Tuple!())
+#
+--format=dlang
+_D8demangle4testFB1aZv
+demangle.test(Tuple!(char))
+#
+--format=dlang
+_Das_mut_ptr
+#
+--format=rust
+_ZN4core3ptr5write17h651fe53ec860e780E
+core::ptr::write
+#
+--format=rust
+_ZN65_$LT$std..œ‘‰Ñ.Args$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17he06cb713aae5b465E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN71_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..ops..Drop$GT$4drop17hf7f23304ebe62eedE
+<collections::vec::IntoIter<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN86_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..itet.ShiftOr!(char).ShiftOr.ShiftThread.setInvMask(uint, uint)).set(dchar)
+#
+--format=dlang
+_D3std5stdio4File__T8lockImplX10LockFileExTykZQBaMFmmykZi
+std.stdio.File.lockImpl!(LockFileEx, immutable(uint)).lockImpl(ulong, ulong, immutable(uint))
+#
+--format=dlang
+_D3std9algorithm9iteration__T12FilterResultSQBq8typecons__T5TupleTiVAyaa1_61TiVQla1_62TiVQva1_63ZQBm__T6renameVHiQBtA2i0a1_63i2a1_61ZQBeMFNcZ9__lambda1TAiZQEw9__xtoHashFNbNeKxSQGsQGrQGk__TQGdSQHiQFs__TQFmTiVQFja1_61TiVQFua1_62TiVQGfa1_63ZQGx__TQFlVQFhA2i0a1_623ia1_61ZQGjMFNcZQFfTQEyZQJvZm
+std.algorithm.itert
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17he06cb713aae5b465E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN71_$LT$collections..vec.<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN86_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..itet.ShiftOr!(char).ShiftOr.ShiftThread.setInvMask(uint, uin9deref_mut17hf299b860dc5a831cE
+c<ollections::vec::Vec<T> as core::ops::DerefMut>::deref_mut
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17hc784b4a166cb5e5cE
+<core::ptr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$3ptr17h70b576e9070b693bE
+<alloc::raw_vec::RawVec<T>>::ptr
+#
+--format=rust
+_ZN4core2ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h0f3228f343444ac8E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN53_$LT$$u5b$T$u5d$$u20$as$u20$core..slice..SliceExt$GT$10as_mut_ptr17h153241df1c7d1666E
+<[T] as core::slice::SliceExt>::as_mut_ptr
+#
+--forma "b", int,8demangle31__T4testVde0F6E978D4FDF3B646P7Zv
+demangle.test!(0x0.F6E978D4FDF3B646p7)
+#
+--format=dlang
+_D8]emangle15__T4testVdeNANZv
+demangle.test!(NaN)
+#
+--format=dlang
+_D8demangle15__T4testVdeINFZv
+demangle.test!(Inf)
+#
+--format=dlang
+_D8demangle16__T4testVdeNINFZv
+demangle.test!(-Inf)
+#
+--format=dlang
+_D8demangle23__T4testVfe0FFFFFFP128Zv
+demangle.test!(0x0.FFFFFFp128)
+#
+--format=dlang
+_D8demangle32__T4testVde0FFFFFFFFFFFFF8P1024Zv
+demangle.test!(0x0.FFFFFFFFFFFFF8p1024)
+#
+--format=dlang
+_D8demangle19__T4testVfe08PN125Zv
+demangle.test!(0x0.8p-125)
+#
+--format=dlang
+_D8demangle20__T4testVde08PN1021Zv
+demangle.test!(0x0.8p-1021)
+#
+--format=dlang
+_D8demangle51__T4testVrc0C4CCCCCCCCCCCCCDP4c0B66666666doesPointToTASQBh5regex8internal2ir10NamedGroupTQBkTvZQCeFNaNbNiNeKxASQDlQCeQCbQBvQBvKxdttQbs
+Z.exception.doesPointTo!(std.regex.internal.ir.NamedGter..t4testVi
+_D10__T4testVi
+#
+--format=dlang
+_D10__T4testVai
+_D10__T4testVai
+#
+--format=dlang
+_D10__T4testVbi
+_D10__T4testVbi
+#
+--format=dlang
+_D11__T4testS1a
+_D11__T4testS1a
+#
+--format=dlang
+_D11__T4testViiZv
+_D12__T4testViiZv
+#
+--format=dlang
+_D12__T4testViYZv
+_D12__T4testViYZv
+#
+--format=dlang
+_D12__T4testVrcZv
+_D12__T4testVrcZv
+#
+--format=dlang
+_D13__T4testVdeYZv
+_D13__T4testVdeYZv
+#
+--format=dlang
+_D13__T4testViSiZv
+_D13__T4testViSiZv
+#
+--format=dlang
+_D14__T4testVAiAiZv
+_D14__T4testVAiAiZC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB__T4testViSiZv
+#
+--fo0_8UnsignedKhb_g
+rZe_D8demangle4testFNjaZv
+demangle.test(char)
+#
+--format=dlang
+_D8demangle4testFNkaZv
+demangle.test(return char)
+#
+--format=dlang
+_D8demangle4testFNlaZv
+demangle.test(char)
+#
+JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ--format=dlang
+_D8demangle4testFaXv
+demangle.test(char...)
+#
+--format=dlang
+_D8demangle4testFaYv
+d[], voidemangle.test(char, ...)
+#
+--format=dlang
+_D8demangle4testFaaYv
+demangle.test(char, char, ...)
+#
+--format=dlang
+_D8demangRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!RRRRRRRRr>::next
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17he06cb713aae5b465E
+<I as core::iter::traits::IntoIterrmator>::into_iter
+#
+--format=rust
+_ZN71_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..ops..Drop$GT$4drop17hf7f23304ebe62eedE
+<collections::vec::IntoIter<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN86_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..itet.ShiftOr!(char).ShiftOr.St$GT$10as_mut_ptr17h153241df1c7d1666E
+<[T] as core::slice::SliceExt>::as_mut_ptr
+#
+--format=rust
+_ZN11collections5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$10as_mut_ptr17hf12a6d0409938c96E
+collections::slice::<impl [T]>::as_mut_ptr
+#
+--format=rust
+_ZN4core3ptr5write17h651fe53ec860e780E
+core::ptr::write
+#
+--format=rust
+_ZN65_$LT$std..œ‘‰Ñ.Args$u20$as$u20$core..ite

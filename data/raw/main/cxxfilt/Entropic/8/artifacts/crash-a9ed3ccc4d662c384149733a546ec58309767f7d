@@ -1,0 +1,129 @@
+# This file holds test cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for docu# Toc5alloc8box_freeDINbNiB4_5boxed5FnBoxuKp6OutputZN4main4main17he714a2e23ed7db23E
+ice::Slis.
+--format=auto
+_RINbNbCskIICzLVDPPb_5a5555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555lloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+#555555555555555555555555555555555555555555555555555555555losure#1}>::{closure#0}
+# dyn Tra=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolBKb0_E
+<const_genericice::SliceExt>::as_mut_ptr
+#
+--format=rust
+_ZN11col::memrchr::{closure#1}>::{cl D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for docu# Toc5alloc8box_freeDINbNiB4_5boxed5FnBoxuKp6OutputZN4main4main17he714a2e23ed7db23E
+ice::Slis.
+--format=auto
+_RINbNbCskIICzLVDPPb_5a5555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555lloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+#555555555555555555555555555555555555555555555555555555555losure#1}>::{closure#0}
+# dyn Tra=rust
+_RMCs4fqI2P2rA04_13const_genericIB_t40NBoolBKb0_E
+<const_genericice::SliceExt>::as_mut_ptr
+#
+--format=rust
+_ZN11col::memrchr::{closure#1}>::{closure#0}
+# dyn Tra=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolBKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqH2P2rA04_13const_genericINtB0_4BoolKb1_E
+<coaZiZ7trymentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests
+#
+--format=dlang
+_Dmain
+D main
+#
+--format=dlang
+_D8demangleZ
+demangle
+#
+--format=dlang
+_D8demangle4testZ
+demangle.test
+#
+--format=dlang
+_D8demangle4testPFLAiYi
+demangle.test
+#
+--format=dlang
+_D8demangleссссссссссссссссссссссссссссссссссс4testFZv
+demangle.test()
+#
+--format=dlang
+_D8demangle4testMFZ2fnMFZv
+demangle.test().fn()
+#
+--format=dlang
+_D8demangle4testFaZv
+demangle.test(chosure#0}
+# dyn Tra=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolBKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqH2P2rA04_13const_genericINtB0_4BoolKb1_E
+<coaZiZ7trymentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests
+#
+--format=dlang
+_Dmain
+D main
+#
+--format=dlang
+_D8demangleZ
+demangle
+#
+--format=dlang
+_D8demangle4testZ
+demangle.test
+#
+--format=dlang
+_D8demangle4testPFLAiYi
+demangle.test
+#
+--format=dlang
+_D8demangleссссссссссссссссссссссссссссссссссс4testFZv
+demangle.test()
+#
+--format=dlang
+_D8demangle4testMFZ2fnMFZv
+demangle.test().fn()
+#
+--format=dlang
+_D8demangle4testFaZv
+demangle.test(char)
+#
+--format=dlang
+_D8demangle4teNhG2iZv
+demangle.test(__vehar)
+#
+--format=dlang
+_D8deExe#
+--format=dlang
+_D8demangle4t(estMONgFZv
+demangmle

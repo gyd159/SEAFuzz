@@ -1,0 +1,1283 @@
+# This file holds test cases for the demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+#  Supported options:
+#    --format=<name>     Sets the demangling style.
+#    --no-params         There are two lines of expected output; the first
+#                        is with DMGL_PARAMS, the second is without it.
+#    --is-v3-ctor        Calls is_gnu_v3_mangled_ctor on input; expected
+#                        output is an integer representing ctor_kind.
+#    --is-v3-dtor        Likewise, but for dtors.
+#    --ret-postfix       Passes the DMGL_RET_POSTFIX option
+#
+#  For compatibility, just in case it matters, the options line may be
+#  empty, to mean --format=auto.  If it doesn't start with --, then it
+#  may contain only a format name.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+#
+# Tests integer overflow problem PR70492
+
+__vt_90000000000cafebabe
+__vt_90000000000cafebabe
+#
+# Tests write access violation PR70498
+
+_Z8080000000000000constprop.775.31805]
+foo
+#
+--format=gnu-v3 --no-params
+_Z2f1IiEvT_S0_S0_._omp_fn.2
+void f1<int>(int, int, int) [clone ._omp_fn.2]
+f1<int>
+#
+--format=gnu-v3 --no-params
+_Z3fooi._omp_cpyfn.6
+foo(int) [clone ._omp_cpyfn.6]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooPfS_S_j.sse4_1.2
+foo(float*, float*, float*, unsigned int) [clone .sse4_1.2]
+foo
+#
+--format=gnu-v3 --no-params
+_Z1fIKFvvES0_Evv
+void f<void () const, void () const>()
+f<void () const, void () const>
+#
+--format=gnu-v3
+_ZN4modc6parser8sequenceINS_9astParser13LocatedParserINS0_9ParserRefINS2_UlRNS2_16TokenParserInputEE_EEEEEINS0_14OptionalParserINS2_18ListParserTemplateILNS_6tokens5Token4TypeE4EXadL_ZNSD_Ut_13parenthesizedEEEE6ParserINS4_INS0_6ParserIS5_NS_3ast10ExpressionEEEEEEEEENSA_INS4_INS2_22OneOfKeywordsToTParserINSJ_5#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > > >::Type, modc::astParser::LocatedParser<modc::parser::ParserRef<modc::astParser::{lambda(modc::astParser::TokenParserInput&)#1}> ><modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParser::OneOfKeywordsToTParser<modc::parser::Parser::Style> > > >::Type, modc::astParser::LocatedParser<modc::parser::ParserRef<modc::astParser::{lambda(modc::astParser::TokenParserInput&)#1}> ><modc::parser::SequenceParser<modc::astParser::TokenParserInput<modc::parser::ExactElementParser<modc::astParser::TokenParserInput>, modc::parser::OptionalParser<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > > >::Type, modc::astParser::LocatedParser<modc::parser::ParserRef<modc::astParser::{lambda(mo+dc::astParser::TokenParserInput&)#1}> ><modc::parser::RepeatedParser<modc::parser::ParserRef<modc::parser::TransformParser<modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParser::OneOfKeywordsToTParser<modc::parser::Parser::Style> > ><modc::astParser::TokenParserInput<modc::parser::ParserRef<modc::parser::OptionalParser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > ><modc::parser::Parser::Annotation::Relationship> >, modc::parser::ExactElementParser<modc::astParser::TokenParserInput> > >, modc::astParser::{lambda(modc::astParser::Loc, modc::parser::TransformParser, modc::Maybe<modc::ast>&&)#21}> >, false> >::Type> modc::parser::sequence<modc::astParser::LocatedParser<modc::parser::ParserRef<modc::astParser::{lambda(modc::astParser::TokenParserInput&)#1}> >, modc::parser::OptionalParser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > >, modc::parser:OneOfKeywordsToTParser<modc::parser::Parser::Style> > >, modc::parser::SequenceParser<modc::astParser::TokenParserInput<modc::parser::ExactElementParser<modc::astParser::TokenParserInput>, modc::parser::OptionalParser<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > >, modc::parser::RepeatedParser<modc::parser::ParserRef<modc::parser::TransformParser<modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParwer::OneOfKeywordsToTParser<modc::parser::Parser::Style> > ><modc::astParser::TokenParserInput<modc::parser::ParserRef<modc::parser::OptionalParser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > ><modc::parser::Parser::Annotation::Relationship> >, modc::parser::ExactElementParser<modc::astParser::TokenParserInput> > >, modc::astParser::{lambda(modc::astParser::Loc, modc::parser::TransformParser, modc::Maybe<modc::ast>&&)#21}> >, false> >(modc::parser::ParserRef<modc::parser::TransformParser<modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParser::OneOfKeywordsToTParser<modc::parser::Parser::Style> > ><modc::astParser::TokenParserInput<modc::parser::ParserRef<modc::parser::OptionalPa2ser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > ><modc::parser::Parser::Annotation::Relationship> >, modc::parser::ExactElementParser<modc::astParser::TokenParserInput> > >, modc::astParser::{lambda(modc::astParser::Loc, modc::parser::TransformParser, modc::Maybe<modc::ast>&&)#21}> >&&, (modc::parser::MaybeRef&&)...)
+--format=gnu-v3
+_ZNKR1A1hEv
+A::h() const &
+--format=gnu-v3
+_Z1lM1AKFvvRE
+l(void (A::*)() const &)
+--format=gnu-v3
+_Z1mIFvvOEEvM1AT_
+void m<void () &&>(void (A::*)() &&)
+--format=gnu-v3
+_Z1nIM1AKFvvREEvT_
+void n<void (A::*)() const &>(void (A::*)() const &)
+--format=gnu-v3
+_ZL1fIiEvv
+void f<int>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=14963#c3
+--format=gnu-v3
+_ZSt7forwardIRN1x14refobjiteratorINS0_3refINS0_4mime30multipart_section_processorObjIZ15get_body_parserIZZN14mime_processor21make_section_iteratorERKNS2_INS3_10sectionObjENS0_10ptrrefBaseEEEbENKUlvE_clEvEUlSB_bE_ZZNS6_21make_section_iteratorESB_bENKSC_clEvEUlSB_E0_ENS1_INS2_INS0_20outputrefiteratorObjIiEES8_EEEERKSsSB_OT_OT0_EUlmE_NS3_32make_multipart_default_discarderISP_EEEES8_EEEEEOT_RNSt16remove_referenceISW_E4typeE
+x::refobjiterator<x::ref<x::mime::multipart_sermParser<modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParser::OneOfKeywordsToTParser<modc::parser::Parser::Style> > ><modc::astParser::TokenParserInput<modc::parser::ParserRef<modc::parser::OptionalPa2ser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > ><modc::parser::Parser::Annotation::Relationship> >, modc::parser::ExactElementParser<modc::astParser::TokenParserInput> > >, modc::astParser::{lambda(modc::astParser::Loc, modc::parser::TransformParser, modc::Maybe<modc::ast>&&)#21}> >&&, (modc::parser::MaybeRef&&)...)
+--format=gnu-v3
+_ZNKR1A1hEv
+A::h() const &
+--format=gnu-v3
+_Z1lM1AKFvvRE
+l(void (A::*)() const &)
+--format=gnu-v3
+_Z1mIFvvOEEvM1AT_
+void m<void () &&>(void (A::*)() &&)
+--format=gnu-v3
+_Z1nIM1AKFvvREEvT_
+void n<void (A::*)() const &>(void (A::*)() const &)
+--format=gnu-v3
+_ZL1fIiEvv
+void f<int>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=14963#c3
+--format=gnu-v3
+_ZSt7forwardIRN1x14refobjiteratorINS0_3refINS0_4mime30multipart_section_processorObjIZ15get_body_parserIZZN14mime_processor21make_section_iteratorERKNS2_INS3_10sectionObjENS0_10ptrrefBaseEEEbENKUlvE_clEvEUlSB_bE_ZZNS6_21make_section_iteratorESB_bENKSC_clEvEUlSB_E0_ENS1_INS2_INS0_20outputrefiteratorObjIiEES8_EEEERKSsSB_OT_OT0_EUlmE_NS3_32make_multipart_default_discarderISP_EEEES8_EEEEEOT_RNSt16remove_referenceISW_E4typeE
+x::refobjiterator<x::ref<x::mime::multipart_section_processorObj<get_body_parser<mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}>(std::string const&, x::ref<x::mime::sectionObj, x::ptrrefBase> const&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mimetyle> > ><modc::astParser::TokenParserInput<modc:¶parser::ParserRef<modc::parser::OptionalParser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > ><modc::parser::Parser::Annotation::Relationship> >, modc::parser::ExactElementParser<modc::astParser::TokelParserInput> > >, modc::astParser::{lambda(modc::astParser::Loc, modc::parser::TransformParser, modc::Maybe<modc::ast>&&)#21}> >, false> >(modc::parser::ParserRef<modc::parser::TransformParser<modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParser::OneOfKeywordsToTParser<modc::parser::Parser::Style> > ><modc::astParser::TokenParserInput<modc::parser::ParserRef<modc::parser::OptionalParser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expressiop> > > ><modc::parser::Parser::Annotation::Relationship> >, modc::parser::ExactElementParser<modc::astParser::TokenParserInput> > >, modc::astParser::{lambda(modc::astParser::Loc, modc::parser::TransformParser, modc::Maybe<modc::ast>&&)#21}> >&&, (modc::parser::MaybeRef&&)...)
+--format=gnu-v3
+_ZNKR1A1hEv
+A::h() const &
+--format=gnu-v3
+_Z1lM1AKFvvRE
+l(void (A::*)() const &)
+--format=gnu-v3
+_Z1mIFvvOEEvM1AT_
+void m<void () &&>(woid (A::*)() &&)
+--format=gnu-v3
+_Z1nIM1AKFvvREEvT_
+void n<void (A::*)() const &>(void (A::*)(# This file holds test cases for the demangler.
+:sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mimetyle> > ><modc::astParser::TokenParserInput<modc::parser::ParserRef<modc::parser::OptionalParser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > ><modc::parser::Parser::Annotation::Relationship> >, modc::parser::ExactElementParser<modc::astParser::TokenParserInput> > >, modc::astParser::{lambda(modc::astParser::Loc, modc::parser::TransformParser, modc::Maybe<modc::ast>&&)#21}> >, false> >(modc::parser::ParserRef<modc::parser::TransformParser<modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParser::OneOfKeywordsToTParser<modc::parser::Parser::Style> > ><modc::astParser::TokenParserInput<modc::parser::ParserRef<modc::parser::OptionalParser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expressiop> > > ><modc::parser::Parser::Annotation::Relationship> >, modc::parser::ExactElementParser<modc::astParser::TokenParserInput> > >, modc::astParser::{lambda(mo                                              dc::astParser::Loc, modc::parser::TransformParser, modc::Maybe<modc::ast>&&)#21}> >&&, (modc::parser::MaybeRef&&)...)
+--format=gnu-v3
+_ZNKR1A1hEv
+A::h() const &
+--format=gnu-v3
+_Z1lM1AKFvvRE
+l(void (A::*)() const &)
+--format=gnu-v3
+_Z1mIFvvOEEvM1AT_
+void m<void () &&>(woid (A::*)() &&)
+--format=gnu-v3
+_Z1nIM1AKFvvREEvT_
+void n<void (A::*)() const &>(void (A::*)(# This file holds test cases for the demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+#  Supported options:
+#  Áﬂ““format=<name>     Sets the demangling style.
+#    --no-params         There are two lines of expected output; the first
+#                        is with DMGL_PARAMS, the second is without it.
+#    --is-v3-ctor        Calls is_gnu_v3_mangled_ctor on input; expected
+#                        output is an integer representing ctor_kind.
+#    --is-v3-dtor        Likewise, but for dtors.
+#    --ret-postfix       Passes the DMGL_RET_POSTFIX option
+#
+#  For compatibility, just in case it matters, the options line may be
+#  empty, to mean --format=auto.  If it doesn't start with --, then it
+#  may contain only a format name.
+#
+# A line starti                                                                                                            ng with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+#
+# Tests integer overflow problem PR70492
+
+__vt_90000000000cafebabe
+__vt_90000000000cafebabe
+#
+# Tests write access violation PR70498
+
+_Z80800000000000000000000
+_Z80800000000000000000000
+#
+# Tests write access violation PR70926
+
+0__Ot2m02R5T0et_body_parser<mime_processor::make_ssectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBake> const&)#2}&&)::{lambda(unsigned long)#1},or_kinds in demangle.h.
+--is-v3-ctor
+_GLOBAL__I__Z2fnv
+0
+#
+--is-v3-dtor
+_GLOBAL__I__Z2fnv
+0
+#
+--is-v3-ctor
+_ZNSdC1Ev
+1
+#
+--is-v3-dtor
+_ZNSdC1Ev
+0
+#
+--is-v3-ctor
+_ZNSdD0Ev
+0
+#
+--is-v3-dtor
+_ZNSdD0Ev
+1
+#
+--is-v3-ctor
+_ZNSdC2Ev
+2
+#
+--is-v3-dtor
+_ZNSdC2Ev
+0
+#
+--is-v3-ctor
+_ZNSdD1Ev
+0
+#
+--is-v3-dtor
+_ZNSdD1Ev
+2
+#
+# This used to cause a crash. It doesn't follow the C++ encoding so
+# thˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇe demangled name should be identical to the original symbol name.
+--format=auto --no-params
+_test_array__L_1__B23b___clean.6
+_test_array__L_1__B23b___clean.6
+_test_array__L_1__B23b___clean.6
+#
+--format=java
+_ZGAN4java4lang5Class7forNameEPNS0_6StringE
+hidden alias for java.lang.Class.forName(java.lang.String)
+#
+# Test cases to verify encoding that determines if a return type is present
+# Related to PR9861
+--format=java
+_ZN4java4lang4MathaoEs4cJdd
+java.lang.Math.acos(double)double
+#
+--format=auto
+_ZN4java4lang4Math4acosEJdd
+double java::lang::Math::acos(double)
+#
+--format=auto
+_ZN4java4lang4Math4acosEJvd
+void java::lang::Math::acos(double)
+#
+--format=auto --ret-postfix
+_ZN4java4lang4Math4acosEJdd
+java::lang::Math::acos(double)double
+#
+--format=gnu-v3 --no-params --ret-postfix
+_Z4makeI7FactoryiET_IT0_Ev
+make<Factory, int>()Factory<int>
+make<Factory, int>
+#
+# From PR 28797
+--format=auto --no-params
+_Z1fM1AKiPKS1_
+f(int const A::*, int const A::* const*)
+f
+# This used to cause a core dump in the demangler -- PR 29176
+--format=auto --no-params
+SASDASDFASDF_sdfsdf
+SASDASDFASDF_sdfsdf
+SASDASDFASDF_sdfsdf
+# These are all cases of invalid manglings where the demangler would read
+# past the end of the string.
+# d_name wasn't honouring a NULL from d_substitution
+--format=gnu-v3
+_ZSA
+_ZSA
+# d_expr_primary wasn't honouring NULL from cplus_demangle_mangled_name
+--format=gnu-v3
+_ZN1fIL_
+_ZN1fIL_
+# d_operator_name was takin  Bg two characters in a row
+--format=gnu-v3
+_Za
+_Za
+# d_prefix wasn't honouring NULL from d_substitution
+--format=gnu-v3
+_ZNSA
+_ZNSA
+# d_prefix wasn't honouring NULL from d_template_param
+--format=gnu-v3
+_ZNT
+_ZNT
+# Dereferencing NULL in d_pointer_to_member_type
+--format=gnu-v3
+_Z1aMark
+_Z1aMark
+# <local-source-name> test 1
+--format=gnu-v3
+_ZL3foo_2
+foo
+# <local-source-name> test 2
+--format=gnu-v3
+_ZZL3foo_2vE4var1
+foo()::var1
+# <local-source-name> test 3
+--format=gnu-v3
+_ZZLˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ3foo_2vE4var1_0
+foo()::var1
+# <local-source-name> test 4
+--format=gnu-v3
+_ZZN7myspaceL3foo_1EvEN11localstruct1fEZNS_3fooEvE16otherlocalstruct
+myspace::foo()::localstruct::f(myspace::foo()::otherlocalstruct)
+# Java resource name
+--format=gnu-v3
+_ZGr32_java$Sutil$Siso4217$_properties
+java resource java/util/iso4217.properties
+# decltype/param placeholder test
+--format=gnu-v3
+_Z3addIidEDTplfp_fp0_ET_T0_
+decltype ({parm#1}+{parm#2}) add<int, double>(int, double)
+# decltype scope test
+--format=gnu-v3
+_Z1fI1SENDtfp_E4typeET_
+decltype ({parm#1})::type f<S>(S)
+# decltype/fn call test
+--format=gnu-v3
+_Z4add3IidEDTclL_Z1gEfp_fp0_EET_T0_
+decltype (g({parm#1}, {parm#2})) add3<int, double>(int, double)
+# 'this' test
+--format=gnu-v3
+_ZN1A1fIiEEDTcldtdtdefpT1b1fIV_EEEv
+decltype ((((*this).b).(f<int>))()) A::f<int>()
+# new (2008) built in types test
+--format=gnu-v3
+_Z1fDfDdDeDhDsDi
+f(decimal32, decima float*, double*>(int*, float*, double*)
+# '.' test
+--format=gnu-v3
+_Z1hI1AIiEdEDTcldtfp_1gIT0_EEET_S2_
+decltype (({parm#1}.(g<double>))()) h<A<int>, double>(A<int>, double)
+# test for typed function in decltype
+--format=gnu-v3
+_ZN1AIiE1jIiEEDTplfp_clL_Z1xvEEET_
+decltype ({parm#1}+(x())) A<int>::j<int>(int)
+# typed function in decltype with an argument list
+--format=gnu-v3
+_Z1tIlEDTplcvT_Li5EclL_Z1qsELi6EEEv
+decltype (((long)(5))+(q(6))) t<long>()
+# test for expansion of functionPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP parameter pack
+--format=gnu-v3
+_Z1gIJidEEDTclL_Z1fEspplfp_Li1EEEDpT_
+decltype (f(({parm#1}+(1))...)) g<int, double>(int, double)
+# lambda tests
+--format=gnu-v3
+_ZZ1giENKUlvE_clEv
+g(int)::{lambda()#1}::operator()() const
+--format=gnu-v3
+_Z4algoIZ1giEUlvE0_EiT_
+int algo<g(int)::{lambda()#2}>(g(int)::{lambda()#2})
+--format=gnu-v3
+_ZZN1S1fEiiEd0_NKUlvE0_clEv
+S::f(int, int)::{default arg#2}::{lambda()#2}::operator()() const
+--format=gnu-v3
+_ZNK1SIiE1xMUlvE1_clEv
+S<int>::x::{lambda()#3}::operator()() const
+--format=gnu-v3
+_ZN8functionC1IZN1CIiE4testES_Ed_UliE_EET_
+function::function<C<int>::test(function)::{default arg#1}::{lambda(int)#1}>(C<int>::test(function)::{default arg#1}::{lambda(int)#1})
+--format=gnu-v3
+_Z1fN1SUt_E
+f(S::{unnamed type#1})
+--format=gnu-v3
+_Z1fDv32_f
+f(float __vector(32))
+--format=gnu-v3
+_Z1fIfLi4EEvDv_T0__T_
+void f<float, 4>(float __vector(4))
+--format=gnu-v3
+_Z1fI1AEDTclonplfp_fp_EET_
+decltype ((operator+)({parm#1}, {parm#1})) f<A>(A)
+--format=gnu-v3
+_Z1hI1AEDTcldtfp_miEET_
+decltype (({parm#1}.(operator-))()) h<A>(A)
+--format=gnu-v3
+_Z1fDn
+f(decltype(nullptr))
+--format=gnu-v3
+_Z1fIRiEvOT_b
+void f<int&>(int&, bool)
+--format=gnu-v3
+_ZN5aaaaa6bbbbbb5cccccIN23ddddddddddddddddddddddd3eeeENS2_4ffff16ggggggggggggggggENS0_9hhhhhhhhhES6_S6_S6_S6_S6_S6_S6_EE
+aaaaa::bbbbbb::ccccc<ddddddddddddddddddddddd::eee, ddddddddddddddddddddddd::ffff::gggggggggggggggg, aaaaa::bbbbbb::hhhhhhhhh, aaaaa::bbbbbb::hhhhhhhhh, aaaaa::bbbbbb::hhhhhhhhh, aaaaa::bbbbbb::hhhhhhhhh, aaaaa::bbbbbb::hhhhhhhhh, aaaaa::bbbbbb::hhhhhhhhh, aaaaa::bbbbbb::hhhhhhhhh, aaaaa::bbbbbb::hhhhhhhhh>
+--format=gnu-v3
+_Z5outerIsEcPFilE
+char outer<short>(in| (*)(long))
+--format=gnu-v3
+_Z5outerPFsiEl
+outer(short (*)(int), long)
+--format=gnu-v3
+_Z6outer2IsEPFilES1_
+int (*outer2<short>(int (*)(long)))(long)
+--format=gnu-v3 --ret-postfix
+_Z5outerIsEcPFilE
+outer<sh0ort>(int (*)(long))char
+--format=gnu-v3 --ret-postfix
+_Z5outerPFsiEl
+outer(short (*)(int), long)
+--format=gnu-v3 --ret-postfix
+_Z6outer2IsEPFilES1_
+outew2<short>(int (*)(long))int (*)(long)
+--format=gnu-v3 --ret-drop
+_Z5outerIsEcPFilE
+outer<short>(int (*)(long))
+--format=gnu-v3 --ret-drop
+_Z5outerPFsiEl
+outer(short (*)(int), long)
+--format=gnu-v3 --ret-drop
+_Z6outer2IsEPFilES1_
+outer2<short>(int (*)(long))
+#
+--format=gnu-v3 --no-params
+_ZN1KIXadL_ZN1S1mEiEEE1fEv
+K<&S::m>::f()
+K<&S::m>::f
+--format=gnu-v3
+_ZN1KILi1EXadL_ZN1S1mEiEEE1fEv
+K<1, &S::m>::f()
+# Here the `(int)' argument list of `S::m' is already removed.
+--format=gnu-v3
+_ZN1KILi1EXadL_ZN1S1mEEEE1fEv
+K<1, &S::m>::f()
+#
+# Used to crash -- binutils PR 13030.
+--format=gnu-v3
+_ZSt10_ConstructI10CellBorderIS0_EEvPT_DpOT0_
+_ZSt10_ConstructI10CellBorderIS0_EEvPT_DpOT0_
+# A pack expansion is substitutable.
+--format=gnu-v3
+_Z1fIJiEiEv1AIJDpT_EET0_S4_
+void f<int, int>(A<int>, int, int)
+# So is decltype.
+--format=gnu-v3
+_Z1fIiiEDTcvT__EET0_S2_
+decltype ((int)()) f<int, int>(int, int) dA
+v#n ector.
+--format=gnu-v3
+_Z1fDv4_iS_
+f(int __vector(4), int __vector(4))
+--format=gnu-v3
+_Z2f1Ii1AEDTdsfp_fp0_ET0_MS2_T_
+decltype ({parm#1}.*{parm#2}) f1<int, A>(A, int A::*)
+--format=gnu-v3
+_Z2f2IiEDTquL_Z1bEfp_trET_
+decltype (b?{parm#1} : (throw)) f2<int>(int)
+--format=gnu-v3
+_Z6checûŒ∂ñEvP6helperIXsznw_T_EEE
+void check1<int>(helpt to be demangled
+#  expected output
+#
+#  Supported options:
+#    --format=<name>     Sets the demangling style.
+#    --no-params         There are two lines of expected output; the first
+#                        is with DMGL_PARAMS, the second is without it.
+#    --is-v3-ctor        Calls is_gnu_v3_mangled_ctor on input; expected
+#                        output is an integer representing ctor_kind.
+#    --is-v3-dtor        Likewise, but for dtors.
+#    --ret-postfix       Passes the DMGL_RET_POSTFIX option
+#
+#  For compatibility, just in case it matters, the options line may be
+#  empty, to mean --format=auto.  If it doesn't start with --, then it
+#  may contain only a format name.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+#
+# Tests integer overflow problem PR70492
+
+__vt_90000000000cafebabe
+__vt_90000000000cafebabe
+#
+# Tests write access violation PR70498
+
+_Z8080000000000000constprop.775.31805]
+foo
+#
+--format=gnu-v3 --no-params
+_Z2f1IiEvT_S0_S0_._omp_fn.2
+void f1<int>(int, int, int) [clone ._omp_fn.2]
+f1<int>
+#
+--format=gnu-v3 --no-params
+_Z3fooi._omp_cpyfn.6
+foo(int) [clone ._omp_cpyfn.6]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooPfS_S_j.sse4_1.2
+foo(float*, float*, float*, unsigned int) [clone .sse4_1.2]
+foo
+#
+--format=gnu-v3 --no-params
+_Z1fIKFvvES0_Evv
+void f<void () const, void () const>()
+f<void () const, void () const>
+#
+--format=gnu-v3
+_ZN4modc6parser8sequenceINS_9astParser13LocatedParserINS0_9ParserRefINS2_UlRNS2_16TokenParserInputEE_EEEEEINS0_14OptionalParserINS2_18ListParserTemplateILNS_6tokens5Token4TypeE4EXadL_ZNSD_Ut_13parenthesizedEEEE6ParserINS4_INS0_6ParserIS5_NS_3ast10ExpressionEEEEEEEEENSA_INS4_INS2_22OneOfKeywordsToTParserINSJ_5#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > > >::Type, modc::astParser::LocatedParser<modc::parser::ParserRef<modc::astParser::{lambda(modc::astParser::TokenParserInput&)#1}> ><modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParser::OneOfKeywordsToTParser<modc::parser::Parser::Style> > > >::Type, modc::astParser::LocatedParser<modc::parser::ParserRef<modc::astParser::{lambda(modc::astParser::TokenParserInput&)#1}> ><modc::parser::SequenceParser<modc::astParser::TokenParserInput<modc::parser::ExactElementParser<modc::astParser::TokenParserInput>, modc::parser::OptionalParser<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > > >::Type, modc::astParser::LocatedParser<modc::parser::ParserRef<modc::astParser::{lambda(mo+dc::astParser::TokenParserInput&)#1}> ><modc::parser::RepeatedParser<modc::parser::ParserRef<modc::parser::TransformParser<modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParser::OneOfKeywordsToTParser<modc::parser::Parser::Style> > ><modc::astParser::TokenParserInput<modc::parser::ParserRef<modc::parser::OptionalParser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > ><modc::parser::Parser::Annotation::Relationship> >, modc::parser::ExactElementParser<modc::astParser::TokenParserInput> > >, modc::astParser::{lambda(modc::astParser::Loc, modc::parser::TransformParser, modc::Maybe<modc::ast>&&)#21}> >, false> >::Type> modc::parser::sequence<modc::astParser::LocatedParser<modc::parser::ParserRef<modc::astParser::{lambda(modc::astParser::TokenParserInput&)#1}> >, modc::parser::OptionalParser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > >, modc::parser:OneOfKeywordsToTParser<modc::parser::Parser::Style> > >, modc::parser::SequenceParser<modc::astParser::TokenParserInput<modc::parser::ExactElementParser<modc::astParser::TokenParserInput>, modc::parser::OptionalParser<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > >, modc::parser::RepeatedParser<modc::parser::ParserRef<modc::parser::TransformParser<modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParwer::OneOfKeywordsToTParser<modc::parser::Parser::Style> > ><modc::astParser::TokenParserInput<modc::parser::ParserRef<modc::parser::OptionalParser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > ><modc::parser::Parser::Annotation::Relationship> >, modc::parser::ExactElementParser<modc::astParser::TokenParserInput> > >, modc::astParser::{lambda(modc::astParser::Loc, modc::parser::TransformParser, modc::Maybe<modc::ast>&&)#21}> >, false> >(modc::parser::ParserRef<modc::parser::TransformParser<modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParser::OneOfKeywordsToTParser<modc::parser::Parser::Style> > ><modc::astParser::TokenParserInput<modc::parser::ParserRef<modc::parser::OptionalPa2ser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > ><modc::parser::Parser::Annotation::Relationship> >, modc::parser::ExactElementParser<modc::astParser::TokenParserInput> > >, modc::astParser::{lambda(modc::astParser::Loc, modc::parser::TransformParser, modc::Maybe<modc::ast>&&)#21}> >&&, (modc::parser::MaybeRef&&)...)
+--format=gnu-v3
+_ZNKR1A1hEv
+A::h() const &
+--format=gnu-v3
+_Z1lM1AKFvvRE
+l(void (A::*)() const &)
+--format=gnu-v3
+_Z1mIFvvOEEvM1AT_
+void m<void () &&>(void (A::*)() &&)
+--format=gnu-v3
+_Z1nIM1AKFvvREEvT_
+void n<void (A::*)() const &>(void (A::*)() const &)
+--format=gnu-v3
+_ZL1fIiEvv
+void f<int>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=14963#c3
+--format=gnu-v3
+_ZSt7forwardIRN1x14refobjiteratorINS0_3refINS0_4mime30multipart_section_processorObjIZ15get_body_parserIZZN14mime_processor21make_section_iteratorERKNS2_INS3_10sectionObjENS0_10ptrrefBaseEEEbENKUlvE_clEvEUlSB_bE_ZZNS6_21make_section_iteratorESB_bENKS# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demffE
+<alloc::raw_vec::RawVec<T>>::double
+#
+--format=rust
+_ZN39_$LT$collections..vec..Vec$LT$T$GT$$GT$4push17hd4b6b23c1b        88141aE
+<collections::vec::Vec<T>>::push
+#
+--format=rust
+_ZN70_$LT$collections..vec..Vec$LT$T$GT$$u20$as$u20$core..ops..DerefMut$GT$9deref_mut17hf299b860dc5a831cE
+<collections::vec::Vec<T> as core::ops::DerefMut>::deref_mut
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17hc784b4a166cb5e5cE
+<core::ptr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$3ptr17h7570b6e9070b693bE
+<alloc::raw_vec::RawVec<T>>::ptr
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h0f3228f343444ac8E
+core::ptr::<impl *mut T>::is_nuêìı‹ı““ôormat=rust
+_ZN53_$LT$$u5b$T$u5d$$u20$as$u20$core..slice..SliceExt$GT$10as_mut_ptr17h153241df1c7d1666E
+<[T] as core::slice::SliceExt>::as_mut_ptr
+#
+--format=rust
+_ZN11collections5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$10as_mut_ptr17hf12a6d0409938c96E
+collections::slice::<impl [T]>::as_mut_ptr
+#
+--format=rust
+_ZN4core3ptr5write17h651fe53ec860e780E
+core::ptr::write
+#
+--format=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<rust
+_RNvMs0_NtCs5l0EXMQXRMU_21rustc_data_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_C_clEvEUlSB_E0_ENS1_INS2_INS0_20outputrefiteratorObjIiEES8_EEEERKSsSB_OT_OT0_EUlmE_NS3_32make_multipart_default_discarderISP_EEEES8_EEEEEOT_RNSt16remove_referenceISW_E4typeE
+x::refobjiterator<x::ref<x::mime::multipart_section_processorObj<get_body_parser<mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}>(std::string const&, x::ref<x::mime::sectionObj, x::ptrrefBase> const&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mimetyle> > ><modc::astParser::TokenParserInput<modc::parser::ParserRef<modc::parser::OptionalParser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > ><modc::parser::Parser::Annotation::Relationship> >, modc::parser::ExactElementParser<modc::astParser::TokelParserInput> > >, modc::astParser::{lambda(modc::astParser::Loc, modc::parser::TransformParser, modc::Maybe<modc::ast>&&)#21}> >, false> >(modc::parser::ParserRef<modc::parser::TransformParser<modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParser::OneOfKeywordsToTParser<modc::parser::Parser::Style> > ><modc::astParser::TokenParserInput<modc::parser::ParserRef<modc::parser::OptionalParser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expressiop> > > ><modc::parser::Parser::Annotation::Relationship> >, modc::parser::ExactElementParser<modc::astParser::TokenParserInput> > >, modc::astParser::{lambda(modc::astParser::Loc, modc::parser::TransformParser, modc::Maybe<modc::ast>&&)#21}> >&&, (modc::parser::MaybeRef&&)...)
+--format=gnu-v3
+_ZNKR1A1hEv
+A::h() const &
+--format=gnu-v3
+_Z1lM1AKFvvRE
+l(void (A::*)() const &)
+--format=gnu-v3
+_Z1mIFvvOEEvM1AT_
+void m<void () &&>(woid (A::*)() &&)
+--format=gnu-v3
+_Z1nIM1AKFvvREEvT_
+void n<void (A::*)() const &>(void (A::*)(# This file holds test cases for the demangler.
+:sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mimetyle> > ><modc::astParser::TokenParserInput<modc::parser::ParserRef<modc::parser::OptionalParser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > ><modc::parser::Parser::Annotation::Relationship> >, modc::parser::ExactElementParser<modc::astParser::TokenParserInput> > >, modc::astParser::{lambda(modc::astParser::Loc, modc::parser::TransformParser, modc::Maybe<modc::ast>&&)#21}> >, false> >(modc::parser::ParserRef<modc::parser::TransformParser<modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParser::OneOfKeywordsToTParser<modc::parser::Parser::Style> > ><modc::astParser::TokenParserInput<modc::parser::ParserRef<modc::parser::OptionalParser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expressiop> > > ><modc::parser::Parser::Annotation::Relationship> >, modc::parser::ExactElementParser<modc::astParser::TokenParserInput> > >, modc::astParser::{lambda(mo                                              dc::astParser::Loc, modc::parser::TransformParser, modc::Maybe<modc::ast>&&)#21}> >&&, (modc::parser::MaybeRef&&)...)
+--format=gnu-v3
+_ZNKR1A1hEv
+A::h() const &
+--format=gnu-v3
+_Z1lM1AKFvvRE
+l(void (A::*)() const &)
+--format=gnu-v3
+_Z1mIFvvOEEvM1AT_
+void m<void () &&>(woid (A::*)() &&)
+--format=gnu-v3
+_Z1nIM1AKFvvREEvT_
+void n<void (A::*)() const &>(void (A::*)(# This file holds test cases for the demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+#  Supported options:
+#  Áﬂ““format=<name>     Sets the demangling style.
+#    --no-params         There are two lines of expected output; the first
+#                        is with DMGL_PARAMS, the second is without it.
+#    --is-v3-ctor        Calls is_gnu_v3_mangled_ctor on input; expected
+#                        output is an integer representing ctor_kind.
+#    --is-v3-dtor        Likewise, but for dtors.
+#    --ret-postfix       Passes the DMGL_RET_POSTFIX option
+#
+#  For compatibility, just in case it matters, the options line may be
+#  empty, to mean --format=auto.  If it doesn't start with --, then it
+#  may contain only a format name.
+#
+# A line starti                                                                                                            ng with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+#
+# Tests integer overflow problem PR70492
+
+__vt_90000000000cafebabe
+__vt_90000000000cafebabe
+#
+# Tests write access violation PR70498
+
+_Z80800000000000000000000
+_Z80800000000000000000000
+#
+# Tests write access violation PR70926
+
+0__Ot2m02R5T0et_body_parser<mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase>         bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}, mime_processor::maºººººººººº<ºººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººke_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x:*:ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}>(std::string const&, x::ref<x::mime::sectionObj, x::ptrrefBase> const&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}&&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lam bda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}&&)::{lambda(unsigned long)#1}> >, x::ptrrefBase> >& std::forward<x::refobjiterator<x::ref<x::mime::multipart_section_processorObj<get_body_parser<mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(xaaa::bbbbbb::hhhhhhhhh>
+--format=gnu-v3
+_Z5outerIsEbPFilE
+char outer<short>(int (*)(long))
+--format=gnu-v3
+_Z5outerPFsiEl
+outer(s) const &)
+--format=gnu-v3
+_ZL1fIiEvv
+void f<int>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=14963#c3(--format=g_GLOBAL_St7forwar::sectionObj, x::ptrrefBase> const&, bool)#1}&&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBake> const&)#2}&&)::{lambda(unsigned long)#1},or_kinds in demangle.h.
+--is-v3-ctor
+_GLOBAL__I__Z2fnv
+0
+#
+--is-v3-dtor
+_GLOBAL__I__Z2fnv
+0
+#
+--is-v3-ctor
+_ZNSdC1Ev
+1
+#
+--is-v3-dtor
+_ZNSdC1Ev
+0
+#
+--is-v3-ctor
+_ZNSdD0Ev
+0
+#
+--is-v3-dtor
+_ZNSdD0Ev
+1
+#
+--is-v3-ctor
+_ZNSdC2Ev
+2
+#
+--is-v3-dtor
+_ZNSdC2Ev
+0
+#
+--is-v3-ctor
+_ZNSdD1Ev
+0
+#
+--is-v3-dtor
+_ZNSdD1Ev
+2
+#
+# This used to cause a crash. It doesn't follow the C++ encoding so
+# thˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇe demangled name should be identical to the original symbol name.
+--format=auto --no-params
+_test_array__L_1__B23b___clean.6
+_test_array__L_1__B23b___clean.6
+_test_array__L_1__B23b___clean.6
+#
+--format=java
+_ZGAN4java4lang5Class7forNameEPNS0_6StringE
+hidden alias for java.lang.Class.forName(java.lang.String)
+#
+# Test cases to verify encoding that determines if a return type is present
+# Related to PR9861
+--format=java
+_ZN4java4lang4MathaoEs4cJdd
+java.lang.Math.acos(double)double
+#
+--format=auto
+_ZN4java4lang4Math4acosEJdd
+double java::lang::Math::acos(double)
+#
+--format=auto
+_ZN4java4lang4Math4acosEJvd
+void java::lang::Math::acos(double)
+#
+--format=auto --ret-postfix
+_ZN4java4lang4Math4acosEJdd
+java::lang::Math::acos(double)double
+#
+--format=gnu-v3 --no-params --ret-postfix
+_Z4makeI7FactoryiET_IT0_Ev
+make<Factory, int>()Factory<int>
+make<Factory, int>
+#
+# From PR 28797
+--format=auto --no-params
+_Z1fM1AKiPKS1_
+f(int const A::*, int const A::* const*)
+f
+# This used to cause a core dump in the demangler -- PR 29176
+--format=auto --no-params
+SASDASDFASDF_sdfsdf
+SASDASDFASDF_sdfsdf
+SASDASDFASDF_sdfsdf
+# These are all cases of invalid manglings where the demangler would read
+# past the end of the string.
+# d_name wasn't honouring a NULL from d_substitution
+--format=gnu-v3
+_ZSA
+_ZSA
+# d_expr_primary wasn't honouring NULL from cplus_demangle_mangled_name
+--format=gnu-v3
+_ZN1fIL_
+_ZN1fIL_
+# d_operator_name was takin  Bg two characters in a row
+--format=gnu‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚-v3
+_Za
+_Za
+# d_prefix wasn't honouring NULL from d_substitution
+--format=gnu-v3
+_ZNSA
+_ZNSA
+# d_prefix wasn't honouring NULL from d_template_param
+--format=gnu-v3
+_ZNT
+_ZNT
+# Dereferencing NULL in d_pointer_to_member_type
+--format=gnu-v3
+_Z1aMark
+_Z1aMark
+# <local-source-name> test 1
+--format=gnu-v3
+_ZL3foo_2
+foo
+# <local-source-name> test 2
+--format=gnu-v3
+_ZZL3foo_2vE4var1
+foo()::var1
+# <local-source-name> test 3
+--format=gnu-v3
+_ZZLˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ3foo_2vE4var1_0
+foo()::var1
+# <local-source-name> test 4
+--format=gnu-v3
+_ZZN7myspaceL3foo_1EvEN11localstruct1fEZNS_3fooEvE16otherlocalstruct
+myspace::foo()::localstruct::f(myspace::foo()::otherlocalstruct)
+# Java resource name
+--format=gnu-v3
+_ZGr32_java$Sutil$Siso4217$_properties
+java resource java/util/iso4217.properties
+# decltype/param placeholder test
+--format=gnu-v3
+_Z3addIidEDTplfp_fp0_ET_T0_
+decltype ({parm#1}+{parm#2}) add<int, double>(int, double)
+# decltype scope test
+--format=gnu-v3
+_Z1fI1SENDtfp_E4typeET_
+decltype ({parm#1})::type f<S>(S)
+# decltype/fn call test
+--format=gnu-v3
+_Z4add3IidEDTclL_Z1gEfp_fp0_EET_T0_
+decltype (g({parm#1}, {parm#2})) add3<int, double>(int, double)
+# 'this' test
+--format=gnu-v3
+_ZN1A1fIiEEDTcldtdtdefpT1b1fIV_EEEv
+decltype ((((*this).b).(f<int>))()) A::f<int>()
+# new (2008) built in types test
+--format=gnu-v3
+_Z1fDfDdDeDhDsDi
+f(decimal32, decima float*, double*>(int*, float*, double*)
+# '.' test
+--format=gnu-v3
+_Z1hI1AIiEdEDTcldtfp_1gIT0_EEET_S2_
+decltype (({parm#1}.(g<double>))()) h<A<int>, double>(A<int>, double)
+# test for typed function in decltype
+--format=gnu-v3
+_ZN1AIiE1jIiEEDTplfp_clL_Z1xvEEET_
+decltype ({parm#1}+(x())) A<int>::j<int>(int)
+# typed function in decltype with an argument list
+--format=gnu-v3
+_Z1tIlEDTplcvT_Li5EclL_Z1qsELi6EEEv
+decltype (((long)(5))+(q(6))) t<long>()
+# test for expansion of functionPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP parameter pack
+--format=gnu-v3
+_Z1gIJidEEDTclL_Z1fEspplfp_Li1EEEDpT_
+decltype (f(({parm#1}+(1))...)) g<int, double>(int, double)
+# lambda tests
+--format=gnu-v3
+_ZZ1giENKUlvE_clEv
+g(int)::{lambda()#1}::operator()() const
+--format=gnu-v3
+_Z4algoIZ1giEUlvE0_EiT_
+int algo<g(int)::{lambda()#2}>(g(int)::{lambda()#2})
+--format=gnu-v3
+_ZZN1S1fEiiEd0_NKUlvE0_clEv
+S::f(int, int)::{default arg#2}::{lambda()#2}::operator()() const
+--format=gnu-v3
+_ZNK1SIiE1xMUlvE1_clEv
+S<int>::x::{lambda()#3}::operator()() const
+--format=gnu-v3
+_ZN8functionC1IZN1CIiE4testES_Ed_UliE_EET_
+function::function<C<int>::test(function)::{default arg#1}::{lambda(int)#1}>(C<int>::test(function)::{default arg#1}::{lambda(int)#1})
+--format=gnu-v3
+_Z1fN1SUt_E
+f(S::{unnamed type#1})
+--format=gnu-v3
+_Z1fDv32_f
+f(float __vector(32))
+--format=gnu-v3
+_Z1fIfLi4EEvDv_T0__T_
+void f<float, 4>(float __vector(4))
+--format=gnu-v3
+_Z1fI1AEDTclonplfp_fp_EET_
+decltype ((operator+)({parm#1}, {parm#1})) f<A>(A)
+--format=gnu-v3
+_Z1hI1AEDTcldtfp_miEET_
+decltype (({parm#1}.(operator-))()) h<A>(A)
+--format=gnu-v3
+_Z1fDn
+f(decltype(nullptr))
+--format=gnu-v3
+_Z1er<sizeof (new int)>*)
+--format=gnu-v3
+_Z6check2IiEvP6helperIXszgsnw_T_piEEE
+void check2<int>(helper<sizeof (::new int())>*)
+--format=gnu-v3
+_Z6check3IiEvP6helperIXsznwadL_Z1iE_T_piLi1EEEE
+void check3<int>(helper<sizeof (new (&i) int(1))>*)
+--format=gnu-v3
+_Z6check4IiEvP6helperIXszna_hort (*)(int), long)
+--format=gnu-v3
+_Z6outer2IsEPFilES1_
+int (*outer2<short>(int (*)(long)))(long)
+--format=gnu-v3 --ret-postfix
+_Z5outerIsEcPFilE
+outer<short>(int (*)(long))char
+--format=gnu-v3 --ret-postfix
+_Z5outerPFsiEl
+outer(short (*)(int), long)
+--format=gnu-v3 --ret-postfix
+_Z6outer2IsEPFilES1_
+outer2<short>(int (*)(long))int (*)(long)
+--format=gnu-v3 --ret-drop
+_Z5outerIsEcPFilE
+outer<short>(int (*)(long))
+--format=gnu-v3 --ret-drop
+_Z5outeA1_T_EEE
+void check4<int>(helper<sizeof (new int [1])>*)
+--format=gnu-v3
+_Z6check5IiEvP6helperIXszna_A1_T_piEEE
+void check5<int>(helper<sizeof (new int [1]Context const&, tns3d::shape_representation::compute::GPUImpl::State&)#1}&&, std::vector<tns3d::shape_representation::compute::GPUImpl::State, std::allocator<tns3d::shape_representation::compute::GPUImpl::State> >&) const::{lambda(tns3d::shape_representation::compute::GPUImpl::State&)#1}&, std::reference_wrapper<tns3d::shape_representation::compute::GPUImpl::State> >(tns3d::shape_representation::compute::GPUImpl::execute(mdr::A<mdr::ptr_ref<unsigned int const>, 3l, 3l, mdr::c_stride<1l, 0l> > const&, mdr::A<mdr::ptr_ref<unsigned int>, 4l, 1l, mdr::c_stride<1l, 0l> > const&)::{lambda(int, cudr::Context const&, tns3d::shape_representation::compute::GPUImpl::State&)#1}&&, std::vector<tns3d::shape_representation::compute::GPUImpl::State, std::allocator<tns3d::shape_representation::compute::GPUImpl::State> >&&)
+# https://sourceware.org/bugzilla/show_bug.cgi?id=12481#c18
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZN13ThreadManager10futureTaskrPFsiEl
+outer(short (*)(int), long)
+--format=gnu-v3 --ret-drop
+_Z6outer2IsEPFilES1_
+outer2<short>(int (*)(long))
+#
+--format=gnu-v3 --no-params
+_ZN1KIXadL_ZN1S1mEiEEE1fEv
+K<&S::m>::f()
+K<&S::m>::f
+--format=gnu-v3
+_ZN1KILi1EXadL_ZN1S1mEiEEE1fEv
+K<1, &S::m>::f()
+# Here the `(int)' argument list of `S::m' is already removed.
+--format=gnu-v3
+_ZN1KILi1EXadL_ZN1S1mEEEE1fEv
+K<1, &S::m>::f()
+#
+# Used to crash -- binutils PR 13030.
+21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8517020237817239694
+<rustc_data_structures::obligation_forest::ObligationForest<rustc_trait_selection::traits::fulfill::PendingPredicateObligation>>::register_obligation_at
+--format=rust
+_
+r
+#
+# This is from the gdb testsuite gdb.cp/cplusfuncs.exp.
+--format=gnu-v3 --no-params
+_Z10hairyfunc5PFPFilEPcE
+hairyfunc5(int (*(*)(char*))(long))
+hairyfunc5
+#
+# This is from gcc PR 8861
+--format=gnu-v3 --no-params
+_Z1fILi1ELc120EEv1AIXplT_cviLd810000000000000000703DAD7A370C5EEE
+void f<1, (char)120>(A<(1)+((int)((double)[810000000000000000703DAD7A370C5]))>)
+f<1, (char)120>
+#
+# This is also from gcc PR 8861
+--format=gnu-v3 --no-params
+_Z1fILi1EEv1AIXplT_cvingLf3f800000EEE
+void f<1>(A<(1)+((int)(-((float)[3f800000])))>)
+f<1>
+#
+# This is from a libstdc++ debug mode patch.
+--format=gnu-v3 --no-params
+_ZNK11__gnu_debug16_Error_formatter14_M_format_wordImEEvPciPKcT_
+void __gnu_debug::_Error_formatter::_M_format_word<unsigned long>(char*, int, char const*, unsigned long) const
+__gnu_debug::_Error_formatter::_M_format_word<unsigned long>
+#
+# The new demangler used to core dump on this.
+--format=gnu-v3 --no-params4heap8allocate17hd55c03e6cb81d924E
+alloc::heap::allocate
+#
+--format=rust
+_ZN4core3ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--futo:1)...)#1}::operator()<int, int*>(int, int*) const
+
+_ZZ2L1vENKUlDpT_E_clIJiPiEEEDaS0_
+auto L1()::{lambda((auto:1)...)#1}::operator()<int, int*>(int, int*) const
+
+_Z7captureIN4gvarMUlvE_EE7WrapperIT_EOS3_
+Wrapper<gvar::{lambda()#1}> capture<gvar::{lambda()#1}>(gvar::{lambda()#1}&&)
+
+_ZNK2L2MUlT_T0_E_clIifEEvS_Se_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}&&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}&&)::{lambda(unsigned long)#1}> >, x::ptrrefBase> >& std::forward<x::refobjiterator<x::ref<x::mime::multipart_section_processorObj<get_body_parser<mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(xaaa::bbbbbb::hhhhhhhhh>
+--format=gnu-v3
+_Z5outerIsEbPFilE
+char outer<short>(int (*)(long))
+--format=gnu-v3
+_Z5outerPFsiEl
+outer(short (*)(int), long)
+--format=gnu-v3
+_Z6outer2IsEPFilES1_
+int (*outer2<short>(int (*)(long)))(long)
+--format=gnu-v3 --ret-postfix
+_Z5outerIsEcPFilE
+oacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Hash is exactly 16 hex chars. Not more.
+--format=auto
+_ZN4main4main18h1e714a2e23ed7db2aE3nmi
+::main::h1e714a2e23ed7db23
+# Not less.
+--format=auto
+_ZN4main4main16h714a2e23ed7db23E
+main::main::h714a2e23ed7db23
+# And not non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930û»Àœûû∆œf1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LTçççççççççççççççççççççççççççççççççççççççççççççççççççççççççççççççççççççççççççççççç$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9E
+parse_tsan::main
+#
+--format=rust
+_ZN65_$LT$std..env..Ar)#1}::operaec<T> as core::ops::DerefMut>::deref_mut
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17hc784b4a166cb5e5cE
+<core::ptr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$3ptr17h7570b6e9070b693bE
+<alloc::raw_vec::RawVec<T>>::ptr
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mus_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$6double17h4166e2b47539e1ffE
+<alloc::raw_vec::RawVec<T>>::double
+#
+--format=rust
+_ZN39_$LT$collections..vec..Vec$LT$T$GT$$GT$40as_mut_ptr17h153241df1c7d1666E
+<[T] as core::slice::SliceExt>::as_mut_ptr
+#
+--format=rust
+_ZN11collections5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$10as_mut_ptr17hf12a6d0409938c96E
+collections::slice::<impl [T]>::as_mut_ptr
+#
+--format=rust
+_ZN4core3ptr5write17h651fe53ec860e780E
+core::ptr::wrte
+#
+--format=ru# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line st&) const
+
+_ZNK6l_var4MUlTpTtTyTnjER1YIJDpT_EEE_clIJ1US7_EEEDaS4_
+auto l_var4::{lambda<template<typename, unsigned int> class... $TT0>(Y<($TT0)...>&)#1}::operator()<U, U>(Y<U, U>&) const
+
+_ZZ2FnILi1EEvvENKUlTyT_E_clIiEEDaS0_
+auto Fn<1>()::{lambda<typename $T0>($T0)#1}::operator()<int>(int) const
+
+_ZZ1fvENKUlTyP1XIT_EPS_IiEE_clIcEEDaS2_S4_
+auto f()::{lambda<typename $T0>(X<$T-v3 --no-params
+_ZN5StackIiiE5levelE
+Stack<int, int>::level
+Stack<int, int>::level
+#
+--format=gnu-v3 --no-params
+_Z1fI1XEvPVN1AIT_E1TE
+void f<X>(A<X>::T volatile*)
+f<X>
+#
+--format=gnu-v3 --no-params
+_ZngILi42EEvN1AIXplT_Li2EEE1TE
+void operator-<42>(I<(42)+(2)>::T)
+operator!-<42>
+#
+--formaterator<<
+#
+--format=gnu-v3 --no-params
+_ZTI7a_class
+typeinfo for a_class
+typeinfo for a_class
+#
+--format=gnu-v3 --no-params
+U4_farrVKPi
+inLi2EEvRAplT_Li1E_i
+void foo<2>(int (&) [(2)+(1)])
+foo<2>
+#
+--format=gnu-v3 --no-params
+_Z3fooILi2EEvOAplT_Li1E_i
+void foo<2>(int (&&) [(2)+(1)])
+foo<2>
+# 
+--format=gnu-v3 --no-params
+_Z1fM1AKFvvE
+f(void (A::*)() const)
+f
+#
+--format=gnu-v3 --no-params
+_Z3fooc
+foo(char)
+foo
+#
+--format=gnu-v3 --no-params
+_Z2f0u8char16_t
+f0(char16_t)
+f0
+#
+--format=gnu-v3 --no-params
+_Z2f0Pu828)
+fo5
+#
+--format=java
+_ZN4java3awt10ScrollPane7addImplEPNS0_9ComponentEP*))(long))
+hairyfunc5
+#
+# This is from gcc PR 8861
+--format=gnu-v3 --no-params
+_Z1fILi1ELc120EEv1AIXplT_cviLd810000000000000000703DAD7A370C5EEE
+void f<1, (char)120>(A<(1)+((int)((double)[810000000000000000703DAD7A370C5]))>)
+f<1, (char)120>
+#
+# This is also from gcc PR 8861
+--format=gnu-v3 --no-params
+_Z1fILi1EEv1AIXplT_cvingLf3f800000EEE
+void f<1>(A<(1)+((int)(-((float)[3f800000])))>)
+f<1>
+#
+# This is from a libstdc++ debug mode patch.
+--format=gnu-v3 --no-params
+_ZNK11__gnu_debug16_Error_formatter14_M_format_wordImEEvPciPKcT_
+void __gnu_debug::_Error_formatter::_M_format_word<unsigned long>(char*, int, char const*, unsigned long) const
+__gnu_debug::_Error_formatter::_M_format_word<unsigned long>
+#
+# The new demangler used to core dump on this.
+--format=gnu-v3 --no-params4heap8allocate17hd55c03e6cb81d924E
+alloc::heap::allocate
+#
+--format=rust
+_ZN4core3ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--futo:1)...)#1}::operator()<int, int*>(int, int*) const
+
+_ZZ2L1vENKUlDpT_E_clIJiPiEEEDaS0_
+auto L1()::{lambda((auto:1)...)#1}::operator()<int, int*>(int, int*) const
+
+_Z7captureIN4gvarMUlvE_EE7WrapperIT_EOS3_
+Wrapper<gvar::{lambda()#1}> capture<gvar::{lambda()#1}>(gvar::{lambda()#1}&&)
+
+_ZNK2L2MUlT_T0_E_clIifEEvS_Se_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}&&, mime_processor::ma--format=gnu-v3
+_ZSt10_ConstructI10CellBorderIS0_EEvPT_DpOT0_
+_ZSt10_ConstructIISt5_BindIFSt7_Memke_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}&&)::{lambda(unsigned long)#1}> >, x::ptrrefBase> >& std::forward<x::refobjiterator<x::ref<x::mime::multipart_section_processorObj<get_body_parser<mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(xaaa::bbbbbb::hhhhhhhhh>
+--format=gnu-v3
+_Z5outerIsEbPFilE
+char outer<short>(int (*)(long))
+--format=gnu-v3
+_Z5outerPFsiEl
+outer(short (*)(int), long)
+--format=gnu-v3
+_Z6outer2IsEPFilES1_
+int (*outer2<short>(int (*)(long)))(long)
+--format=gnu-v3 --ret-postfix
+_Z5outerIsEcPFilE
+oacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Hash is exactly 16 hex chars. Not more.
+--format=auto
+_ZN4main4main18h1e714a2e23ed7db2aE3nmi
+::main::h1e714a2e23ed7db23
+# Not less.
+--format=auto
+_ZN4main4main16h714a2e23ed7db23E
+main::main::h714a2e23ed7db23
+# And not non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930û»Àœûû∆œf1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LTçççççççççççççççççççççççççççççççççççççççççççççççççççççççççççççççççççççççççççççççç$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9E
+parse_tsan::main
+#
+--format=rust
+_ZN65_$LT$std..env..Ar)#1}::operaec<T> as core::ops::DerefMut>::deref_mut
+#
+--format=rust
+_ZN63_$LT$core..ptr..Unique$LT$T$GT$$u20$as$u20$core..ops..Deref$GT$5deref17hc784b4a166cb5e5cE
+<core::ptr::Unique<T> as core::ops::Deref>::deref
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$3ptr17h7570b6e9070b693bE
+<alloc::raw_vec::RawVec<T>>::ptr
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mus_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut T>::is_null
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$6double17h4166e2b47539e1ffE
+<alloc::raw_vec::RawVec<T>>::double
+#
+--format=rust
+_ZN39_$LT$collections..vec..Vec$LT$T$GT$$GT$40as_mut_ptr17h153241df1c7d1666E
+<[T] as core::slice::SliceExt>::as_mut_ptr
+#
+--format=rust
+_ZN11collNS_4lang6Objbda<typename $T0>($T0)#1}::operator()<int>(int) const
+
+_ZZN1XIfLj1EE2FnEvENKUlTyfT_E_clIiEEDafS1_
+auto X<float, 1u>::Fn()::{lambda<typename $T0>(float, $T0)#1}::operator()<int>(float, int) const
+
+_ZZN1XIfLj1EE2FnEvENKUlTyT_E_clIiEEDaS1_
+auto X<float, 1u>::Fn()::{lambda<typename $T0>($T0)#1}::operator()<int>(int) const
+
+_ZZN1XIiLj0EE2FnEvENKUlTyiT_E_clIiEEDaiS1_
+auto X<int, 0u>::Fn()::{lambda<typename $T0>(int, $T0)#1}::operator()<int>(int, int) const
+
+_ZZN1XIiLj0EE2FnEvENKUlTyT_E_clIiEEDaS1_
+auto X<int, 0u>::Fn()::{lambda<typename $T0>($T0)#1}::operator()<int>(int) const
+
+_ZNK10l_tpl_autoMUlTyT_T0_E_clIiiEEDaS0_S1_
+auto l_tpl_auto::{lambda<typename $T0>($T0, auto:2)#1}::operator,()<int, int>(int, int) const
+
+_ZNK12l_tpl_nt_aryMUlTniRAT__iE_clILi2EEEDaS1_
+auto l_tpl_nt_ary::{lambda<int $N0>(int (&) [$N0])#1}::operator()<2>(int (&) [2]) const
+
+_ZNK13l_tpl_nt_autoMUlTnDavE_clILi0EEEDav
+auto l_tpl_nt_auto::{lambda<auto $N0>()#1}::operator()<0>() const
+
+_ZNK9l_tpl_tplMUlTtTyTnjER3TPLIT_EE_clI1UEEDaS3_
+auto l_tpl_tpl::{lambda<template<typename, unsignetile restrict _far
+# 
+--format=gnu-v3 --no-palims
+_Z3fooILi2EEvRAplT_Li1E_i
+void foo<2>(int (&) [(2)+(1)])
+foo<2>
+#
+--format=gnu-v3 --no-params
+_Z3fooILi2EEvOAplT_Li1E_i
+void foo<2>(int (&&) [(2)+(1)])
+foo<2>
+# 
+--format=gnu-v3 --no-params
+_Z1fM1AKFvvE
+f(void (A::*)() const)
+f
+#
+--format=gnu-v3 --no-params
+_Z3fooc
+foo(char)
+foo
+#
+--format=gnu-v3 --no-params
+_Z2f0u8chater8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::∆core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc»:box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=auto
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB_fnIM6Runn10CellBorderIS0_EEvPT_DpOT0_
+# A pack expansion is substituerFvvEEPS5_EEEEtable.
+--0_4Boformat=gnolKb0_E
+<const_generic::Bool<false>>
+#
+--format=auto
+_RMCs4fqI2A4_iE3barE
+Foo<int [4]>::bap
+Foo<int [4]>::bar
+#
+--format=gnu-v3 --no-params
+_Z1fIiEvi
+void f<int>(int)
+f<int>
+#
+--format=gnu-v3 --no-params
+_Z5firstI3DuoEvS0_
+voidoKpE3foo3FOO
+<const_genericu-v3
+_Z1fIJiEivOT_EEv1AIJU::Foo<_>>::foo::FOO
+#
+# Suffixes
+#
+--format=rust
+_RNvMs0_NtCs5l0EXMQXRMU_21rustc_data_structures17obligation_forestINtB5_16ObligationForeslvtNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fDpEulfill26Pendin

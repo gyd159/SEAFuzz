@@ -1,0 +1,5 @@
+        .i_r1%        .cfi_sections ллллллллллллллллллллллллллллллллллл.sfr#NO_APP
+ame
+	.cfi_startproc
+	stpns ллллллллллллллллллллллллллллллллллл.sframe
+	.cfi_star%4%

@@ -1,0 +1,170 @@
+# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But au																																																								to should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZN4mainfoo::Foo<issue_60925::llvm::Foo>::foo
+--format=rust
+_ZN4core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$u7d$17h000b1ad6c4f30bd6E
+core::ops::function::FnOnce::call_once{{vtable.shim}}
+#
+############
+#
+# Coverage Tests (v0)
+#
+#
+ÀÃÃate with a leading digit.
+--format=rust
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=rust
+_RNqCs4fqI2P2rA04_11utf8_identsu30____ck7kaefhcea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Out´´´´´´´´´´´´´´´´´´pnt = ()>>
+# Types with const generics parameters.
+--format=rust
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB_D0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_2BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4Booln this file are NOT ignored.
+#
+#
+# Tests integer overflow problem PR70492
+
+__vt_90000000000cafebabe
+__vt_90000000000cafebabe
+#
+# Tests write access violation PR70498
+
+_Z80800000000000000000000
+_Z80800000000000000000000
+#
+# Tests write access violation PR70926
+0__Ot2m02R5T0000500000
+0__Ot2m02R5T0000500000arams
+_ZTI7a_class
+typeinfo for a_class
+typeinfo for a_class
+#
+--format=gnu-v3 --no-params
+U4_farrVKPi
+int* const volatileile restrict _far
+# 
+--format=gnu-v3 --no-params
+_Z3fooILi2EEvRAplT_Li1E_i
+void foo<2>(int (&) [(2)+(1)])
+foo<2>
+#
+--format=gnu-v3 --no-params
+_Z3fooILi2EEvOAplT_Li1E_i
+void foo<2>(int (&&) [(2)+(1)])
+foo<2>
+# 
+--format=gnu-v3 --no-params
+_Z1fM1AKFvvE
+f(void (A::*)() const)
+f
+#
+--format=gnu-v3 --no-params
+_Z3fooc
+foo(char)
+foo
+#
+--format=gnu-v3 --no-params
+_Z2f0u8char16_t
+f0(char16_t)
+f0
+#
+--format=gnu-v3 --no-params
+_Z2f0Pu8char16_t
+f0(char16_t*)
+f0
+#
+--format=gnu-v3 --no-params
+_Z2f0u8char32_t
+f0(char32_t)
+f0
+#
+--format=gnu-v3 --no-params
+_Z2f0Pu8charƒÕ†ãôêçíat=gnu-v3 --no-params
+_Z3fo5o
+fo5(unsigned __int128)
+fo5
+#
+--format=java
+_ZN4java3awt10ScrollPane7addImplEPNS0_9ComponentEPNS_4lang6ObjectEi
+java.awt.ScrollPane.addImpl(java.awt.Component, jctory, int>()
+make<Factory, int>
+#
+--format=gnu-vava.lang.Object, ored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_2BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4Booln this file are NOT ignored.
+#
+#
+# Tests integer overflow problem PR70492
+
+__vt_90000000000cafebabe
+__vt_90000000000cafebabe
+#
+# Tests write access violation PR70498
+
+_Z80800000000000000000000
+_Z80800000000000000000000
+#
+# Tests wriUtf58_>0_1__

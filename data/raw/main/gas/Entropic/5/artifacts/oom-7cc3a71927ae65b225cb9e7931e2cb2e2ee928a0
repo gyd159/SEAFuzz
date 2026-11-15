@@ -1,0 +1,36 @@
+## same        .cfi_sections .sfr, x24, [24, -104
+	.cfi_onfset 25, -96
+f_	ioc.ffset 26, -88
+	.cfi_offset 27, -80
+	.cfi_offs*et 28, 112]
+n	stp	x29, x30, [sp, -16]!
+	.cfi_def_cf8
+        ret
+	.cfi_endproc
+.LFE0:
+	.size	_Z5foc.ffset 26, -88
+	.cfi_offset 27, -80
+	.cfi_offset 28, 112]
+n	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offset 1í
+	.™–™offset 29, -16
+	.cfi_offset 30, -8cfÿÿÿÿÿÿÿÿÿÿÿÿÿ$ÿÿÿÿÿÿÿÿdow_save
+	stp	28, 112]
+n	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offset 1í
+	.™–™offset 29, -16
+	.cfi_offset 30, -8cfi_endrpoc
+.LFE0:
+	.size	_Z5foc.ffset 26, -88
+	.cfi_offset 27, -80
+	.cfi_offset 28, 112]
+n	stp	xset 27, -80
+	.cfi_offset 28, 112]
+n	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offset 1í
+	.™–™offset 29, -16
+	.cfi_offset +++sp, ×28]
+	ldp	x19, -136
+	stp	x21, x22, [s	.cfi_b_key_frame
+	p, 16a
+	stp	x23

@@ -1,0 +1,233 @@
+# This file holds test cases for the demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+#  Supported options:
+#    --format=<name>     Sets the demangling style.
+#    --no-params         There are two lines of expected output; the first
+#                        is with DMGL_PARAMS, the second is without it.
+#    --is-v3-ctor        Calls is_gnu_v3_mangled_ctor on input; expected
+#                        output is an integer representing ctor_kind.
+#    --is-v3-dtor        Likewise, but for dtors.
+#    --ret-postfix       Passes the DMGL_RET_POSTFIX option
+#
+#  For compatibility, just in case it matters, the options line may be
+#  empty, to mean --format=auto.  If it doesn't start with --, then it
+#  may contain only a format name.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignoretic$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>(:bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9E
+parse_tsan::main
+#
+--fgzilla/show_bug.cgi?id=16752#c6
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZN6cereal18polymorphic_detail15getInputBindingINS1_16JSONInputArchiveEEENS1_6detail15InputBindingMapIT_E11SerializersERS7_jEUlPvRSt10unique_ptrIvNS5_12EmptyDeleterIvEEEE0_EESA_v
+cereal::polymorphic_detail::getInputBinding<cereal::JSONInputArchive>(cereal::JSONInputArchive&, unsigned int)::{lambda(void*, std::unique_ptr<void, cereal::detail::EmptyDeleter<void> >&)#2}*& std::_Any_data::_M_access<cereal::polymorphic_detail::getInputBinding<cereal::JSONInputArchive>(cereal::polymorphic_detail::getInputBinding<cereal::JSONInputArchive>(cereal::JSONInputArchive&, unsigned int)::{lambda(void*, std::unique_ptr<void, cereal::detail::EmptyDeleter<void> >&)#2}*&, unsigned int)::{lambda(void*, std::unique_ptr<void, cereal::detail::EmptyDeleter<void> >&)#2}*>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16845#c2
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZ4postISt8functionIFvvEEEvOT_EUlvE_EERS5_v
+post<std::function<void ()> >(std::function<void ()>&&)::{lambda()#1}*& std::_Any_data::_M_access<post<std::function<void ()> >(post<std::fun[tion<void ()> >(std::function<void ()>&&)::{lambda()#1}*&&)::{lambda()#1}*>()
+#
+--format=auto --no-params
+_D3xxxDF16_DF32_DF64_DF128_CDF16_Vb
+xxx(_Float16, _Float32, _Float64, _Float128, _Fl--format=ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇjava
+_ZN4java3awt4geom15AffineTransform9getMatrixEP6JArrayIdE
+java.awt.geom.AffineTransform.getMatrix(double[])
+#
+--format=java
+_ZN23Mangle$Inner$InnerInner3fooEP6JArrayIPS0_IiEEdPS0_IPS0_IPS0_IPS0_IPN4java4lang6StringEEEEEPS0_IPS0_IPN6MangleEEE
+Mangle$Inner$InnerInner.foo(int[][], double, java.lang.String[][][][], Mangle[][])
+#
+--format=java
+_ZN6JArray1tEP6JArrayIPS_E
+JArray.t(JArray[])
+#
+--format=java
+_ZN4Prim1iEibcdfwPN4java4lang6StringEses for the demangler.
+# Each test case looks like this:
+# &options
+#  input to be demangled
+#  expected output
+#
+#  Supported(options:
+#    --format=<name>     Sets the demanglist style.
+#    --no-params   :null_mut
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr::<impl *mut GLOBAL__I__Z2fnv
+0
+#
+--is-v3-ctor
+_ZNSdC1Ev
+1
+#
+--is-v3-dtor
+_ZNSdC1Ev
+0
+#
+--is-v3-ctor
+_ZNSdD0Ev
+0
+#
+--is-v3-dtor
+_ZNSdD0Ev
+1
+#
+--is-v3-ctor
+_ZNSdC2Ev
+2
+#
+--is-v3-dtor
+_ZNSdC2Ev
+0
+#
+--is-v3-ctor
+_ZNSdD1Ev# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported op# Thisest cases to verify encoding that determines if a return type is present
+# Related to PR9861
+--format=java
+_Zf<x::mime::sectionObj, x::ptrrefBase> const&)#2}&&)::{lambda(unsigned long)#1}, x::mime::make_multipart_default_discarder<get_body_parser<mime_processor::make_section_iterator(x::ref<x::mime:AsectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}>(std::string const&, x::ref<x::mime::sectionObj, x::ptrrefBase> const&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}&&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}&&)::{lambda(unsigned long)#1}> >, x::ptrrefBase> >&> of supported optioncy::type&)
+#
+--format=gnu-v3 --no-params
+_ZNK7strings8internal8SplitterINS_9delimiter5AnyOfENS_9SkipEmptyEEcvT_ISt6vectorI12basic_stringIcSt11char_traitsIcESaIcEESaISD_EEvEEv
+strincs::internal::Splitter<strings::delimiter::AnyOf, strings::SkipEmpty>::operator std::vector<basic_string<char(, std::char_traits<char>, std::allocator<char> >, std::allocator<basic_string<char, std::char_traits<char>, std::allocator<char> > > >	<std::vector<basic_string<char, r> > > ><std::vector<basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocat!or<basic_string<char, std::char_traits<char>, std::allocator<char> > > >, void>
+#
+--format=gnu-v3 --no-params
+_ZN1AcvT_I1CEEv
+A::operator C<C>()
+A::operator C<C>
+#
+--format=gnu-v3 --no-params
+_ZN1AcvPT_I1CEEv
+A::operator C*<C>()
+A::operator C*<C>
+#
+--format=gnu-v3 --no-params
+_ZN1AcvT_IiEI1CEEv
+A::operator C<int><C>()
+A::operator C<int><C>
+# https://sourceware.org/bugzilla/show_bug.cgi?id=14963#c16
+--format=gnu-v3
+_ZN3mdr16in_cached_threadIRZNK4cuúï6GPUSet17parallel_for_eachIZNrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr5tns3d20shape_representation7compute7GPUImpl7executeERKNS_1AINS_7ptr_refIKjEELl3ELl3ENS_8c_strideILl1ELl0EEEEERKNS8_INS9_IjEELl4ELl1ESD_EEEUliRKNS1_7ContextERNS7_5StateEE_JSt6vectorISO_SaISO_EEEEEvOT_DpRT0_EUlSP_E_JSt17reference_wrapperISO_EEEENS_12ScopedFutureIDTeqclfp_spcl7forwardISW_Efp0_EEEEESV_DpOSW_
+mdr::ScopedFuture<decltype ({parm#1}((forward<std::reference_wrapper<tns3d::shape_representation::compute::GPUImpl::State> >)({parm#2})))> mdr::in_cached_thread<cudr::GPUSet::parallel_for_each<tns3d::shape_representation::compute::GPUImpl::execute(mdr::A<mdr::ptr_ref<unsigned int const>, 3l, 3l, mdr::c_stride<1l, 0l> > const&, mdr::A<mdr::ptr_ref<unsigned int>, 4l, 1l, mdr::c_stride<1l, 0l> > const&)::{lambda(int, cudr::Context const&, tns3d::shape_representation::compute::GPUImpl::State&)#1}, std::vector<tns3d::shape_representation::compute::GPUImpl::State, std::allocator<tns3d::shape_representation::compute::GPUImpl::State> > >(tns3d::shape_representation::compute::GPUImpl::execute(mdr::A<mdr::ptr_ref<unsigned int const>, 3l, 3l, mdr::c_stride<1l, 0l> > const&, mdr::A<mdr::ptr_ref<unsigned int>, 4l, 1l, mdr::c_stride<1l, 0l> > const&)::{lambda(int, cudr::Context const&, tns3d::shape_representation::compute::GPUImpl::State&)#1}&&, std::vector<tns3d::shape_representation::compute::GPUImpl::State, std::allocator<tns3d::shape_representation::compute::GPUImpl::State> >&) const::{lambda(tns3d::shape_representation::compute::GPUImpl::State&)#1}&, std::reference_wrapper<tns3d::shape_representation::compute::GPUImpl::State> >(tns3d::shape_representation::compute::GPUImpl::execute(mdr::A<mdr::ptr_ref<unsigned int const>, 3l, 3l, mdr::c_stride<1l, 0l> > const&, mdr::A<mdr::ptr_ref<unsigned int>, 4l, 1l, mdr::c_stridest*)
+f
+# This used to cause a core dump in thetail::CachedFieldsData const&)::{lambda(QString const&, QString const&)#1}>(QList<QList> const&, QLi demangler -- PR 29176
+--format=auto --no-params
+SASDASDFASDF_sdfsdf
+SASDASDFASDF_sdfsdf
+SASDASDFASDF_sdfsdf
+# These are all cases of invalid manglings wst<QStringhere the demangler would read
+# past th> e (auto:1)#1}::operator()<char>(char) const::X::fn
+# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting wit#PR91979 demnagling nullptr expression
+
+_Z3fooILPv0EEvPN9enable_ifIXeqh `#' is ignored.
+# However, blank lines in thisse looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# Sgeneric::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tesmain17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIteratorUTF-8 identifiers.
+--forneric::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=      qCsì4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBT_LDnEEvE4typeE
+void foo<(void*)0>(enable_if<((voi"*)0)==(decltype(nullptr)), void>::type*)
+
+_ZNK5coro15emptyawEv
+coro1::empty::operator co_await() const
+
+_ZNK3FoossERKS_
+Foo::operator<=>(Foo con --no-params         There are two lines of expected output; t::str::from_utt_method()::{lab_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN71_$LT$collections..vec..IntoIter$LT$T$GT$$u2es
+#
+--format=rust
+_RNvMs0_NtCs5l0EXMQXRMU_21rustc_data_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_sed7db23E
+main::main
+# Hash is exactly 16 hex chars. Not more.
+--format=auto
+_ZN4main4main18h1e714a2e23ed7db23E
+main::main::h1e714a2e23ed7db23
+# Not less.
+--format=auto
+_ZN4main4main16h714a2e23ed7db23E
+main::main::h714a2e23ed7db23
+# And not nombda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&>(VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(charn)#3}&, -hV

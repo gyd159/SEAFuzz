@@ -1,0 +1,19 @@
+tartproc
+	.lo 0
+	.cfi_endÿÿÿfi_def_cfa_offset 1ํ
+	.cfi_offseioc.ffset 2ญญญ=ญญญญญญญญญ!ญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญํญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญ6, -88
+	.cfi_offset 27, -80
+	.cfi_offset"28, 112]
+ndow_savetartproc
+	.long, [:4, -104
+	.cfi_offset 25
+	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offset 1ํ
+	.cfi_offset 29, -16
+	.fi_offset 0,08
+	.loncoffset 28, 112]
+ndow_save
+	stp	x29, x30, [s์, -16]!
+	.cng 0
+	.cfi_endÿÿÿfi_def_cfa_offset 1ํ
+	.cfi_offset 2ÿ

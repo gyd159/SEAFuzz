@@ -1,0 +1,37 @@
+    [b)A& 8
+	ffset 6
+	ong 0
+	._en-proc
+fn   [b)&& 8
+	ffset 8
+	ong 0
+	._endproc
+fnop
+      #NO_APP
+_sections .sfra1cfi)mffset 14 3, 8)&& 8
+	ffse 6
+	ffset 8
+	ong 0
+	._endproc
+fn   [b)&& 8
+	ffset 8
+	ong 0
+	._endproc
+fnop
+      #NO_APP
+_sections .sfra1cfi)mffset 14 3, 8)&& 8
+	ffset 8
+	oîg 0
+	 .=  & ..c¯i=op
+      p   .cf+_sect#NO_APP
+ions .sfra1cfixmffset 14 3, 8)&& 8
+	ffset 8
+	oîg 0
+	 .=    ..t 8
+	oîg 0
+	 .=    ..c¯i=op
+      p   .cf+_sect#NO_APP
+ions .sfra1cfixmffset 14 3, 8)&& 8
+	ffset 8
+	oîg 0
+	 .=    ..c¯i=

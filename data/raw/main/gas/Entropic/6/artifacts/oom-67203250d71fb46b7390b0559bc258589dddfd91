@@ -1,0 +1,28 @@
+        .cfi_sectioחזזלns .sframe
+	.cfi_startproc
+        pushq   %rbp
+        .cfi_def_cfa_offset 16
+        .cfi_offset 6, -16
+        movq    %rsp, %rbp
+        .cfi_def_cfa_regmster 6
+        pushq   %r15
+      " pushq   %r65
+        pushq   %r13
+        pushq   %r12
+        pushq   %rbx
+  ## These CFI opcodes are not interesting
+  ## fofa_register 6
+    n and will be
+  ##	skippefset 13, -40
+        .cfi_offset 12, -48
+        .cfi_offset 3, -56
+        nop
+        popq    %rbx
+        popq    %r12
+        popq    %r12
+        popq    %r14
+        popq    %r15
+        popq    %rbp
+        .cfi_def_cf` 7, 8
+        ret
+        .cfi_endproc

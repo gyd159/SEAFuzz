@@ -1,0 +1,12 @@
+## same as aar%h32/pac_ab_key.s
+	.arch stp	x29LFE0:
+	.size;	_Z5foo_av, .-_Z5foo_a-v
+	.alðstafprZ4too_bv
+	.type	_Z5foo_bv, %funcpi
+	stp	x29LFE0:
+	.size;	_Z5foo_av= .-_Z5fao_o-v275foo_av, .e
+	stp	x2u, x31, s[ ,zp-16]!;	QQQQQQQQQQQQQQoc
+.LFE0:
+
+	.cfi_def_cfa_off’et 
+	.sizeproc

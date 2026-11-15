@@ -1,0 +1,51 @@
+## same.)ymtabch65/pac_ab_key.s
+	.arch armv8-a
+	.text
+	Æalign	2
+	.global	_Z5foo_av
+	.tyêöˆ†•”åèze&&&&&&&&&&&&&&&&&&.&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&	.cfi_restore 78
+	.cfi_restore 80
+	.cfi_restore 76
+	.cfi_restore 77
+	.cfi_restore &&&&&&:&&&&bv:
+.LFB1:
+	.cfi_startproc
+0, [+++++++++++++++++++++++++++++++++sp, 128 -15
+	.cfi_offset 34
+	.cfi_restore 75
+		.cfi.cfi_restore 72
+	.bfi_restore 73
+	.cfi_restore _startproc
+	         -17]!
+	.cfi_fi_def_cf27
+	.cfi_restore 8
+	2.cfi_&&&&&&&&7restore 77
+	.cfi_restore &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&74
+	.cfi_restore 7Ãı	.cfi_restore 72
+	.bfi_restore 73
+	.cfi_restore 27
+	.cfi_restore 8
+	2.cfi_oofˇˇˇˇˇˇˇ4
+	.cfi_restore 20
+	.cfi_restore 19
+	.cfi_restore 78
+	.cfi_restore 80
+	.cfi_restore 76
+	.cfi_restore 77
+	.cfi_restore &&&&&&:&&&&bv:
+.LFB1:
+	.cfi_startproc
+0, [+++++++++++++++++++++++++++++++al	_Z5foo_av
+	.tyêöˆ†•”åèze34
+	.cfi_restore 75
+		.cfi.cfi_restore 72
+	.bfi_restore 73
+	.cfi_restore _startproc
+	         -17]!
+	.cfi_fi_def_cf27
+	.cfi_restore 8
+	2.cfi_oofbv:
+.LFB1:
+	.cfi_startproc
+0, [++++++a_offset 1!
+	s

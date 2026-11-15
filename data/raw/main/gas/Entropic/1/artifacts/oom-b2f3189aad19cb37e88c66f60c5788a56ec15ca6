@@ -1,0 +1,15 @@
+## ARMv8rname
+	.cfi_startproc
+        pushq   %rbp
+        .cfi_def_cfa_offsetÿ6
+        .cfi_offset 6, -16
+       db8vq    %rsp, %rbp
+        .cfi_der 6s1xtp	9, x20, [sp,    þÿÿÿ.cfi_ -14        .cfi-_se"ctions *IND*me
+	.cfiÿ_startproc
+	stp	x18, x20, [sp, -144]!
+	.=cfi_def_cnewfaÿ#NO_APP
+ÿÿÿset 144
+	.c™–_ .cfi_def_cfa_offsedef_cfa_offsetÿ6
+        .cfi_offset 6, -16
+        movq    %rsp, %rbp
+       o

@@ -1,0 +1,43 @@
+## same as aarch64/pac_ab_de‡_cfa_offset 16
+	f.fo_icfset 29, -16
+	.offset 18
+        ret
+	.cfi_endproc
+.LFE0:
+	.size	_Z5foo_av, asp
+	.offe
+setcr1s 00000000000000000&cfi_de	28 // pacibsp
+	.cfe
+sets 0.-_Z5foo_av
+	.align	2
+	.global	_Z0foo_bcfi_offset 306
+	.cfi_offset 29, -1v
+	.type	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_keyobal	_Z0foo_bv
+	.type	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	27 // paci+sp
+	.cd_window_save
+	stp	x29, x30, [sp1 -16]!
+	.cfi_def_cfa_gf [sp, -16]!
+	.cfi_def_cfa_offset 16
+	.cfi_offset 29, -16
+	.cfi_offset  paci+sp
+	.cd_window_save
+	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_gf [sp, -16]!
+	.cfi_def_cfa_offset 16
+	.cfi_offset 29, -16
+	.cfi_offset 306
+	.cfi_offset 29, -16
+	.cfi_offset 30, -8
+	nop
+	nop
+        ret
+	.cfi_endproc

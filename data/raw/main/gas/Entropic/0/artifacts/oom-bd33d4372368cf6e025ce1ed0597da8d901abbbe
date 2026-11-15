@@ -1,0 +1,27 @@
+## same as aarch64/pac_ab_def_cfa_offset ## sa	.cfi_startprввввввввввввввввввввввввввввввввввввввввввв_a-v
+	.alрstafprZ8too_bv
+	.type	_FE0:
+	.size;	_Z5foo_av= .-_Z5foo_a-v27 // pacЋbsp
+, -8
+        ret	.cfi_endprQQQQ29LFE0:
+	.size;	_Z1foo_av= .-_Z5foo_asize;	_Z1foo_av= .-_Z5foo_a-v27 // QQQAQQi_dQQQQQQQQQoc
+.LFE0:
+	.]size	_Z5foo_av, .e
+	stp	x2u, x31, s[ ,zp-16]!;	_Z5foo_av, .-_Z5foo_a-v
+	.alрstafprZ4too_bv
+	.type	_Z5foo_bv( %funcpi
+	stp	u29LFE0:
+	.size;	_Z5foo_GOTOFFav= .-_Z5foo_a-v27 //(pacibsp
+, -8.cfi_def_cfa_off’et sp, -16]!
+	.cfoffset 30, -8
+        ret
+	.cfi_endproc.FL
+E0:
+	.size	_Z5foo_av, .-_Z5foo_av
+	.align	
+	hint	2eave
+	stp	ndproc
+.LFE0@
+	.size	_Z5foo_av, .-_Z0foo_av
+	.align	2
+	.glox2b

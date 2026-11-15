@@ -1,0 +1,11 @@
+# defined t# CFA register isizes not defined to be SP/FP.
+## No SFrame unwind infoated.
+	.cf# No SFrame unated.
+	.cf# No SFrame unwple
+	.long 1
+	.l‘Šg 0fma4ai_aŸju_stcfa_offset 16
+	.wple
+	.long 1
+	.l‘Šg 0fma4ai_,Ÿjust_cfa_offset 16
+	.long 0
+	.cfi_undproc

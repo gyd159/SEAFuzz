@@ -1,0 +1,6 @@
+3# CFA register
+        pushq   register is n
+ ÿÿÿÿÿÿÿÿÿÿÿÿÿ 	.2
+        pffset 17
+	.lÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿong 0
+	.stabn~dproc

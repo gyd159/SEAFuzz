@@ -1,0 +1,1694 @@
+# This file holds test cases for the demangler.
+# Each test case looks like this:
+#  options
+#  i_
+Foo()::{lambda(auto:1&, X<int>&)#2}&& forward<Foo()::{lambda(auto:1&, X<int>&)#2}>(Foo()::{lambda(auto:1&, X<int>&)#2}&)
+
+_Z7forwardIZ3FoovEUlPA5_T_E1_EOS0_RS0_
+Foo()::{lambda(auto:1 (*&&forward<Foo()::{lambda(auto:1 (*) [5])#3}>(auto:1&)) [5])#3}
+
+_Z3eatIZ3FoovEUlRiRT_E_EvS2_
+void eat<Foo()::{lambda(int&, auto:1&)#1}>(Foo()::{lambda(int&, auto:1&)#1}&)
+
+_Z3eatIZ3FoovEUlRT_R1XIiEE0_EvS1_
+void eat<Foo()::{lambda(auto:1&, X<int>&)#2}>(Foo()::{lambda(auto:ŸŸ”ﬂß√ñët>&)#2}&)
+
+_Z3eatIZ3FoovEUlPA5_T_E1_EvRS0_
+void eat<Foo()::{lambda(auto:1 (*) [5])#3}>(Foo()::{lambda(auto:1 (*&) [5])#3})
+
+_Z3eatIPiZ3FoovEUlPT_PT0_E4_EvRS1_RS3_
+void eat<int*, Foo()::{lambda(auto:1*, auto:2*)#6}>(int*&, Foo()::{lambda(auto:1*, auto:2*)#6}&)
+
+_Z3eatIPiZ3BarIsEvvEUlPsPT_PT0_E0_EvRS3_RS5_
+void eat<int*, Bar<short>()::{lambda(short*, auto:1*, auto:2*)#2}>(int*&, Bar<short>()::{lambda(short*, auto:1*, auto:2*)#2}&)
+
+_Z1fP1BIXtl1ALi1EEEE
+f(B<A{1}>*)
+
+_ZTAXtl1ALi1EEE
+template parameter object for A{1}
+
+# PR 77489
+_ZZ3foovE8localVar_9
+foo()::localVar
+
+_ZZ3foovE8localVar_10
+foo()::localVar
+
+_ZZ3foovE8localVar__10_
+foo()::localVar
+
+_ZZ3foovE8localVar__9_
+_ZZ3foovE8localVar__9_
+
+_ZZ3foovE8localVar__12
+_ZZ3foovE8localVar__12
+
+# PR 70182
+_Z1gI1AEv1SIXadsrT_onplEE
+void g<A>(S<&A2:operator+>)
+
+_Z1gI1AEv1SIXadsrT_plEE
+void g<A>(S<&A::operator+>)
+
+#
+# Test recursion PR67264
+_Z1KIStcvT_E
+_Z1KIStcvT_E
+
+_ZcvT_IIS0_EE
+_ZcvT_IIS0_EE
+
+_ZcvT_IZcvT_E1fE
+_ZcvT_IZcvT_E1fE
+
+_Z1gINcvT_EE
+_Z1gINcvT_EE
+
+_ZcvT_ILZcvDTT_EEE
+_ZcvT_ILZcvDTT_EEE
+
+_Z1gIJOOT_EEOT_c
+_Z1gI::TokenParserInput&)#1}> ><modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParser::OneOfKeywordsToTParser<modc::parser::Parser::Style> > > >::Type, modc::astParser::LocatedParser<modc::parser::ParserRef<modc::astParser::{lambda(modc::astParser::TokenParserInput&)#1}> ><modc::parser::SequenceParser<modc::astParser::TokenParserInput<modc::parser::ExactElementParser<modc::astParser::TokenParserInput>, modc::parser::OptionalParser<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > > >::Type, modc::astParser::LocngILi42EEvN1AIXplT_Li2EEE1TE
+void operator-<42>(A<(42)+(2)>::T)
+operator-<42>
+#
+--format=gnu-v3 --no-params
+_Z4makeI7FactoryiET_IT0_Ev
+Factory<int> make<Factory, int>()
+make<Factory, int>
+#
+--format=gnu-v3 --no-params
+_Z4makeI7FactoryiET_IT0_Ev
+Factory<int> make<Factory, int>()
+make<Factory, int>
+#
+--format=gnu-v3 --no-params
+_Z3foo5Hello5WorldS0_S_
+foo(Hello, World, World, Hello)
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooPM2ABi
+foo(int AB::**)
+foo
+#
+--format=gnu-v3 --no-params
+_ZlsRSoRKSs
+operator<<(std::ostream&, std::string const&)
+operator<<
+#
+--format=gnu-v3 --no-params
+_ZTI7a_class
+typeinfo for a_class
+typeinfo for a_class
+#
+--format=gnu-v3 --no-params
+U4_farrVKPi
+int* const volatile restrict _far
+int* const voçatile restrict _far
+# 
+--format=gnu-v3 --no-params
+_Z3fooILi2EEvRAplT_Li1E_i
+void foo<2>(int (&) [(2)+(1)])
+foo<2>
+#
+--format=gnu-v3 --no-params
+_Z3fooILi2EEvOAplT_Li1E_i
+void foo<2>(int (&&) [(2)+(1)])
+foo<2>
+# 
+--format=gnu-v3 --no-params
+_Z1fM1AKFvvE
+f(void (A::*)() const)
+f
+#
+--format=gnu-v3 --no-params
+_Z3fooc
+foo(char)
+foo
+#
+--format=gnu-v3 --no-params
+_Z2f0u8char16_t
+f0(char16_t)
+f0
+#
+--format=gnu-v3 --no-params
+_Z2f0Pu8char16_t
+f0(char16_t*)
+f0
+#
+--format=gnu-v3 --no-params
+_Z2f0u8char32_t
+f0(char32_t)
+f0
+#
+--format=gnu-v3 --no-params
+_Z2f0Pu8char32_t
+f0(char32_t*)
+f0
+#
+--format=gnu-v3 --no-params
+2CBIL_Z3foocEE
+CB<foo(char)>
+CB<foo(char)>
+#
+--format=gnu-v3 --no-params
+2CBIL_Z7IsEmptyEE
+CB<IsEmpty>
+CB<IsEmpty>
+#
+--format=gnu-v3 --no-params
+_ZZN1N1fEiE1p
+N::f(int)::p
+N::f(int)::p
+#
+--format=gnu-v3 --no-params
+_ZZN1N1fEiEs
+N::f(int)::string literal
+N::f(int)::string literal
+# 
+<get_body_pa# This file holds test cases for the demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled,
+#  expected output
+#
+#  Supported options:
+#    --format=<name>     Sets the demangling style.
+#    --no-params         There are two lines of expected output; the first
+#                        is with DMGL_PARAMS, the second is without it.
+#    --is-v3-ctor        Calls is_gnu_v3_mangled_ctor on input; expected
+#                        output is an integer representing ctor_kind.
+#    --is-v3-dtor        Likewise, blt for dtors.
+#    --ret-postfix       Passes the DMGL_RET_POSTFIX option4l, 1l, mdr::c_strile<1l, 0l> > const&)::{lambda(int, cudr::Context const&, tns3d::shape_representation::compute::GPUImpl::State&)#1}&&, std::vector<tns3d::shape_representation::compute::GPUImpl::State, std::allocator<tns3d::shape_representation::compute::GPUImpl::State> >&&)
+# https://sourceware.org/bugzilla/show_bug.cgi?id=14963#c18
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZN13ThreadManager10futureTaskISt5_BindIFSt7_Mem_fnIM6RunnerFvvEEPS5_EEEEvOT_EUlvE_EERSC_v
+ThreadManager::futureTask<std::_Bind<std::_Mem_fn<void (Runner::*)()> (Runner*)> >(std::_Bind<std::_Mem_fn<void (Runner::*)()> (Runner*)>&&)::{lambda()#1}*& std::_Any_data::_M_access<ThreadManager::futureTask<std::_Bind<std::_Mem_fn<void (Runner::*)()> (Runner*)> >(ThreadManager::futureTask<std::_Bind<std::_Mem_fn<void (Runner::*)()> (Runner*)> >(std::_Bind<std::_Mem_fn<void (Runner::*)()> (Runner*)>&&)::{lambda()#1}*&&)::{lambda()#1}*>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=14963#c24
+# aka https://sourceware.org/bugzilla/show_bug.cgi?id=16593
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZN3sel8Selector6SetObjI3FooJPKcMS4_FviEEEEvRT_DpT0_EUlvE_EESA_v
+sel::Selector::SetObj<Foo, char const*, void (Foo::*)(int)>(Foo&, char const*, void (Foo::*)(int))::{lambda()#1}*& std::_Any_data::_M_access<sel::Selector::SetObj<Foo, char const*, void (Foo::*)(int)>(sel::Selector::SetO£ï<Foo, char const*, void (Foo::*)(int)>(Foo&, char const*, void (Foo::*)(int))::{lambda()#1}*&, char const*, void (Foo::*)(int))::{lambda()#1}*>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16752#c1
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZN13ThreadManager7newTaskIRSt5_BindIFSt7_Mem_fnIM5DiaryFivEEPS5_EEIEEESt6futureINSt9result_ofIFT_DpT0_EE4typeEEOSF_DpOSG_EUlvE_EERSF_v
+ThreadManager::newTask<std::_Bind<std::_Mem_fn<int (Diary::*)()> (Diary*)>&>(std::_Bind<std::_Mem_fn<int (Diary::*)()> (Diary*)>&)::{lambda()#1}*& std::_Any_data::_M_access<ThreadManager::newTask<std::_Bind<std::_Mem_fn<int (Diary::*)()> (Diary*)>&>(ThreadManager::newTask<std::_Bind<std::_Mem_fn<int (Diary::*)()> (Diary*)>&>(std::_Bind<std::_Mem_fn<int (Diary::*)()> (Diary*)>&)::{lambda()#1}*&&)::{lambda()#1}*>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16752#c6
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZN6cereal18polymorphic_detail15getInputBindingINS1_16JSONInputArchiveEEENS1_6detail15InputBindingMapIT_E11SerializersERS7_jEUlPvRSt10unique_ptrIvNS5_12EmptyDeleterIvEEEE0_EESA_v
+cereal::polymorphic_detail::getInputBinding<cereal::JSONInputArchive>(cereal::JSONInputArchive&, unsigned int)::{lambda(void*, std::unique_ptr<void, cereal::detail::EmptyDeleter<void> >&)#2}*& std::_Any_data::_M_access<cereal::polymorphic_detail::getInputBinding<cereal::JSONInputArchive>(cereal::polymorphic_detail::getInputBinding<cereal::JSONInputArchive>(cereal::JSONInputArchive&, unsigned int)::{lambda(void*, std::unique_ptr<void, cereal::detail::EmptyDeleter<void> >&)#2}*&, unsigned int)::{lambda(void*, std::unique_ptr<void, cereal::detail::EmptyDeleter<void> >&)#2}*>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16845#c2
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZ4postISt8functionIFvvEEEvOT_EUlvE_EERS5_v
+post<std::function<void ()> >(std::function<void ()>&&)::{lambda()#1}*& std::_Any_data::_M_access<post<std::function<void ()> >(post<std::function<void ()> >(std::function<void ()>&&)::{lambda()#1}*&&)::{lambda()#1}*>()
+#
+--format=auto --no-params
+_Z3xxxDF16_ZF32_DF64_DF128_CDF16_Vb
+xxx(_Float16, _Float32, _Float64, _Float128, _Float16 _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF32xDF64xDF128xCDF32xVb
+xxx(_Float32x, _Float64x, _Float128x, _Float32x _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF16b
+xxx(std::bfloat16_t)
+xxx
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16817
+--format=auto --no-params
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_Queu# This file holds test cases for the demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+#  Supported options:
+#    --format=<name>     Sets the demangling style.
+#    --no-params         There are two lines of expected output; the first
+#                        is with DMGL_PARAMS, the second is without it.
+#    --is-v3-ctor        Calls is_gnu_v3_mangled_ctor on input; expected
+#                        output is an integer representing ctor_kind.
+#    --is-v3-dtor        Likewise, but for dtors.
+#    --ret-postfix       Passes the DMGL_RET_POSTFIX option
+#
+#  For compatibility, just in case it matters, the options line may be
+#  empty, to mean --format=auto.  If it doesn't start with --, then it
+#  may contain only a format name.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+#
+# Tests integer overflow problem PR70492
+
+__vt_90000000000cafebabe
+__vt_90000000000cafebabe
+#
+# Tests write access violation PR70498
+
+_Z80800000000000000000000
+_Z80800000000000000000000
+#
+# Tests write access violation PR70926
+
+0__Ot2m02R5T0000500000
+0__Ot2m02R5T0000500000
+#
+
+0__GT50000000000_
+0__GT50000000000_
+#
+
+__t2m05B500000000t-       _Z5outerPFsiEl
+outer(short (*)(int), long)
+--format=gnu-v3 --ret-postfix
+_Z6outer2IsEPFilES1_
+outer2<short>(int (*)(long))int (*)(long)
+--format=gnu-v3 --ret-drop
+_Z5outerIsEcPFilE
+outer<short>(int (*)(long))
+--format=gnu-v3 --ret-drop
+_Z5outerPFsiEl
+outer(short (*)(int), long)
+--format=gnu-v3 --ret-drop
+_Z6outer2IsEPFilES1_
+outer2<short>(int (*)(long))
+#
+--format=gnu-v3 --no-params
+_ZN1KIXadL_ZN1S1mEiEEE1fEv
+K<&S::m>::f()
+K<&S::m>::f
+--format=gnu-v3
+_ZN1KILi1EXadL_ZN1S1mEiEEE1fEv
+K<1, &S::m>::f()
+# Here the `(int)' argument list of `S::m' is already removed.
+--format=gnu-v3
+_ZN1KILi1EXadL_ZN1S1mEEEE1fEv
+K<1, &S::m>::f()
+#
+# Used to crash -- binutils PR 13030.
+--format=gnu-v3
+_ZSt10_ConstructI10CellBorderIS0_EEvPT_DpOT0_
+_ZSt10_ConstructI10CellBorderIS0_EEvPT_DpOT0_
+# A pack expansion is substitutable.
+--format=gnu-v3
+_Z1fIJiEiEv1AIJDpT_EET0_S4_
+void f<int, int>(A<int>, int, int)
+# So is decltype.
+--format=gnu-v3
+_Z1fIiiEDTcvT__EET0_S2_
+decltype ((int)()) f<int, int>(int, int)
+# And vector.
+--format=gnu-v3
+_Z1fDv4_iS_
+f(int __vector(4), int __vector(4))
+--format=gnu-v3
+_Z2f1Ii1AEDTdsfp_fp0_ET0_MS2_T_
+decltype ({parm#1}.*{parm#2}) f1<int, A>(A, int A::*)
+--format=gnu-v3
+_Z2f2IiEDTquL_Z1bEfp_trET_
+decltype (b?{parm#1} : (throw)) f2<int>(int)
+--format=gnu-v3
+_Z6check1IiEvP6helperIXsznw_T_EEE
+void check1<int>(helper<sizeof (new int)>*)
+--format=gnu-v3
+_Z6check2IiEvP6helperIXszgsnw_T_piEEE
+void check2<int>(helper<sizeof (::new int())>*)
+--format=gnu-v3
+_Z6check3IiEvP6helperIXsznwadL_Z1iE_T_piLi1EEEE
+void check3<int>(helper<sizeof (new (&i) int(1))>*)
+--format=gnu-v3
+_Z6check4IiEvP6helperIXszna_A1_T_EEE
+void check4<int>(helper<sizeof (new int [1])>*# This file holds test cases for the demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+#  Supported options:
+#    --format=<name>     Sets the demangling style.
+#    --no-params         There are two lines of expected output; the first
+#                        is with DMGL_PARAMS, the second is without it.
+#    --is-v3-ctor        Calls is_gnu_v3_mangled_ctor on input; expected
+#                        output is an integer representing ctor_kind.
+#    --is-v3-dtor        Likewise, but for dtors.
+#    --ret-postfix       Passes the DMGL_RET_POSTFIX option
+#
+#  For compatibility, just in case it matters, the options line may be
+#  empty, to mean --format=auto.  If it doesn't start with --, then it
+#  may contain only a format name.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+#
+# Tests integer overflow problem PR70492
+
+__vt_90000000000cafebabe
+__vt_90000000000cafebabe
+#
+# Tests write access violation PR70498
+
+_Z80800000000000000000000
+_Z80800000000000000000000
+#
+# Tests write access violation PR70926
+
+0__Ot2m02R5T0000500000
+0__Ot2m02R5T0000500000
+#
+
+0__GT50000000000_
+0__GT50000000000_
+#
+
+__t2m05B500000000000000000_
+__t2m05B500000000000000000_
+##
+## Tests stack overflow PR71696
+#
+#__10%0ˇˇˇˇˇˇˇ&__S4_0T0T0
+#%0<>::%0(%0<>)
+# Could crash
+
+_
+_
+# Could crash
+
+_vt
+_vt
+# Could crash
+
+_$_1Acitz
+_$_1Acitz
+# Could crash
+
+_$_H1R
+_$_H1R
+# Could crash
+
+_Q8ccQ4M2e.
+_Q8ccQ4M2e.
+# Could crash
+
+_ZmmAtl
+_ZmmAtl
+# Could crash
+--no-params
+_ZZaSFvOEES_
+_ZZaSFvOEES_
+_ZZaSFvOEES_
+# Could crash
+
+_ZZeqFvOEES_z
+_ZZeqFvOEES_z
+#
+# demangler/80513 Test for bogus characters after __thunk_
+
+__thunk_16a_$_1x
+__thunk_16a_$_1x
+#
+# demangler/80513 Test for overflow in consume_count
+
+__thunk_4294967297__$_1x
+__thunk_4294967297__$_1x
+#
+--format=gnu-v3 --no-params
+_Z3fo5n
+fo5(__int128)
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5o
+fo5(unsigned __int128)
+fo5
+#
+--format=java
+_ZN4java3awt10ScrollPane7addImplEPNS0_9ComponentEPNS_4lang6ObjectEi
+java.awt.ScrollPane.addImpl(java.awt.Component, java.lang.Object, int)
+#
+--format=java
+_ZN4java3awt4geom15AffineTransform9getMatrixEP6JArrayIdE
+java.awt.geom.AffineTransform.getMatrix(double[])
+#
+--format=java
+_ZN23Mangle$Inner$InnerInner3fooEP6JArrayIPS0_IiEEdPS0_IPS0_IPS0_IPS0_IPN4java4lang6StringEEEEEPS0_IPS0_IPN6MangleEEE
+Mangle$Inner$InnerInner.foo(int[][], double, java.lang.String[][][][], Mangle[][])
+#
+--format=java
+_ZN6JArray1tEP6JArrayIPS_E
+JArray.t(JArray[])
+#
+--format=java
+_ZN4Prim1iEibcdfwPN4java4lang6StringEsx
+Prim.i(int, boolean, byte, double, float, char, java.lang.String, short, long)
+#
+--format=java
+_ZN4java4util14Map__U24_Entry11class__U24_E
+java.util.Map$Entry.class$
+#
+--format=java
+_ZN3org7eclipse3cdt5debug8internal4core5model9CVariable6sizeof$Ev
+org.eclipse.cdt.debug.internal.core.model.CVariable.sizeof()
+#
+--format=auto --no-params
+_Utf58_0_1__1_2147483647__2147483648
+_Utf58_0_1__1_2147483647__2147483648
+_Utf58_0_1__1_2147483647__2147483648
+#
+--format=gnu-v3 --no-params
+St9bad_alloc
+std::bad_alloc
+std::bad_alloc
+#
+--format=gnu-v3 --no-params
+_ZN1f1fE
+f::f
+f::f
+#
+--format=gnu-v3 --no-params
+_Z1fv
+f()
+f
+#
+--format=gnu-v3 --no-params
+_Z1fi
+f(int)
+f
+#
+--format=gnu-v3 --no-params
+_Z3foo3bar
+foo(bar)
+foo
+#
+--format=gnu-v3 --no-params
+_Zrm1XS_
+operator%(X, X)
+operator%
+#
+--format=gnu-v3 --no-params
+_ZplR1XS0_
+operator+(X&, X&)
+operator+
+#
+--format=gnu-v3 --no-params
+_ZlsRK1XS1_
+operator<<(X const&, X const&)
+operator<<
+#
+--format=gnu-v3 --no-params
+_ZN3FooIA4_iE3barE
+Foo<int [4]>::bar
+Foo<int [4]>::bar
+#
+--format=gnu-v3 --no-params
+_Z1fIiEvi
+void f<int>(int)
+f<int>
+#
+--format=gnu-v3 --no-params
+_Z5firstI3DuoEvS0_
+void first<Duo>(Duo)
+first<Duo>
+#
+--format=gnu-v3 --no-params
+_Z5firstI3DuoEvT_
+void first<Duo>(Duo)
+first<Duo>
+#
+--format=gnu-v3 --no-params
+_Z3fooIiFvdEiEvv
+void foo<int, void (double), int>()
+foo<int, void (double), int>
+#
+--format=gnu-v3 --no-params
+_Z1fIFvvEEvTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT_GLOBAL_TTTTTTTTTTTTTTTTTTTTTTTTTTv
+void f<void ()>()
+f<void ()>
+#
+--format=gnu-v3 --no-params
+_ZN1N1fE
+N::f
+N::f
+#
+--format=gnu-v3 --no-params
+_ZN6System5Sound4beepEv
+System::Sound::beep()
+System::Sound::beep
+#
+--format=gnu-v3 --no-params
+_ZN5Arena5levelE
+Arena::level
+Arena::level
+#
+--format=gnu-v3 --no-params
+_ZN5StackIiiE5levelE
+Stack<int, int>::level
+Stack<int, int>::level
+#
+--format=gnu-v3 --no-params
+_Z1fI1XEvPVN1AIT_E1TE
+void f<X>(A<X>::T volatile*)
+f<X>
+#
+--format=gnu-v3 --no-params
+_ZngILi42EEvN1AIXplT_Li2EEE1TE
+void operator-<42>(A<(42)+(2)>::T)
+operator-<42>
+#
+--format=gnu-v3 --no-params
+_Z4makeI7FactoryiET_IT0st&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> cons, x::ref<x::mime::sectionObj, x::ptrrefBase> const&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}&&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionO3const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Cra  with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6mem        chrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiwÆ_3std
+alloc::alloc::box_free::<d This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4maim4main17he714a2e23ed7db23E
+main::maOuter::Inner@FOO::X&)
+
+_ZN4Quux4TotoW3FooW3Bar3BazEPNS0_S2_5PlughE
+Quux::Toto::Baz@Foo.Bar(Quux::Toto::Plugh@Foo.Bar*)
+
+_ZW6Module1fNS_1a1bENS0_1cE
+f@Module(a@Module::b, a@Module::c)
+
+_ZN3BobW3FOOW3BAR3BarEPS1_1APNS_S1_1BE
+Bob::Bar@FOO.BAR(A@FOO.BAR*, Bob::B@FOO.BAR*)
+
+_ZW3FOOW3BAR3FooPS0_1APN3BobS0_1BE
+Foo@FOO.BAR(A@FOO.BAR*, Bob::B@FOO.BAR*)
+
+_ZN3BobW3FOOW3BAZ3FooEPS0_W3BAR1APNS_S2_1BE
+Bob::Foo@FOO.BAZ(A@FOO.BAR*, Bob::B@FOO.BAR*)
+
+_ZW3FOOW3BAZ3BarPS_W3BAR1APN3BobS1_1BE
+Bar@FOO.BAZ(A@FOO.BAR*, Bob::B@FOO.BAR*)
+
+_ZNW3FOO3TPLIS_3OneE1MEPS1_
+TPL@FOO<One@FOO>::M(One@FOO*)
+
+_ZNW3FOO3TPLIS_3OneE1NIS_3TwoEEvPS1_PT_
+void TPL@FOO<One@FOO>::N<Two@FOO>(One@FOO*, Two@FOO*)
+
+_ZN3NMSW3FOO3TPLINS_S0_3OneEE1MEPS2_
+NMS::TPL@FOO<NMS::One@FOO>::M(NMS::One@FOO*)ê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=rust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::_iterator<std::pair<std::string, bool (*)(sqlite*, char**)>*, std::vector<std::pair<std::string, bool (*)(sqlite*, char**)>, std:T_T0_E_clIifEEvS0_S1_
+void L2::{lambda(auto:1, auto:2)#1}::operator()<int, float>(int, float) const
+
+_ZNK1B2L3MUlT_T0_E_clIjdEEvS1_S2_
+void B::L3::{lambda(auto:1, auto:2)#1}::operator()<unsigned int, double>(unsigned int, double) const
+
+_Z3fooIN1qMUlvE_ENS0_UlvE0_EEiOT_OT0_
+int foo<q::{lambda()#1}, q::{lambda()#2}>(q::{lambda()#1}&&, q::{lambda()#2}&&)
+
+_ZNK2L1MUlDpT_E_clIJiPiEEEvS1_
+void L1::{lambda((auto:1)...)#1}::operator()<int, int*>(int, int*) const
+
+_ZZN1XIfLj0EE2FnEvEUKNlTyfT_E_clIiEEDafS1_
+auto X<float, 0u>::Fn()::{lambda<typename $T0>(float, $T0)#1}::operator()<int>(float, int) const
+
+_ZZN1XIfLj0EE2FnEvENKUlTyT_E_clIiEEDaS1_
+auto X<float, 0u>::Fn()::{lambda<typename $T0>($T0)#1}::operator()<int>(int) const
+
+_ZZN1XIfLj1EE2FnEvENKUlTyfT_E_clIiEEDafS1_
+auto X<float, 1u>::Fn()::{lambda<typename $T0>(float, $T0)#1}::operator()<intë>(float, int) const
+
+_ZZN1XIfLj1EE2FnEvENKUlTyT_E_clIiEEDaS1_
+auto X<float, 1u>::Fn()::{lambda<typename $T0>($T0)#1}::operator()<int>(int) const
+
+_ZZN1XIiLj0EE2FnEvENKUlTyiT_E_clIiEEDaiS1_
+auto X<int, 0u>::Fn()!:{lambda<typename $T0>(int, $T0)#1}::operator()<int>(int, int) const
+
+_ZZN1XIiLj0EE2FnEvENKUlTyT_E_clIiEEDaS1_
+auto X<int, 0u>::Fn()::{lambda<typename $T0>($T0)#1}::operator(A<int>(int) const
+
+_ZNK10l_tpl_autoMUlTyT_T0_E_clIiiEEDaS0_S1_
+auto l_tpl_auto::{lambda<typename $T0>($T0, auto:2)#1}::operator()<int, int>(int, int) const
+
+_ZNK12l_tpl_nt_aryMUlTniRAT__iE_clILi2EEEDaSc::astParser::TokenParserInput, modc::ast::Expression> > > ><modc::parser::Parser::Annotation::Relationship> >, modc::parser::ExactElementParser<modc::astParser::TokenParserInput> > >, modc::astParser::{lambda(modc::astParser::Loc, modc::parser::TÚansformParser, modc::Maybe<modc::ast>&&)#21}> >, false> >::Type> modc::parser::sequence<modc::astParser::LocatedParser<modc::parser::ParserRef<modc::astParser::{lambda(modc::astParser::TokenParserInput&)#1}> >, modc::parser::OptionalParser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > >, modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParser::OneOfKeywordsToTParser<modc::parser::Parser::Style> > >, modc::parser::SequenceParser<modc::astPayser::TokenParserInput<modc::parser::ExactElementParser<modc::astPbj, x::ptrrefBase> const&)#2}&&)::{lambda(unsigned long)#1}> >, x::ptrrefBase> >&>(std::remove_reference<x::refobjiterator<x::ref<x::mime::multipart_section_processorObj<get_body_parser<mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}>(std::string const&, x::ref<x::mime::sectionObj, x::ptrrefBase> const&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}&&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}&&)::{lambda(unsigned long)#1}, x::mime::make_multipart_default_discarder<get_body_parser<mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}:¿operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}>(std::string const&, x::ref<x::mime::sectionObj, x::ptrrefBase> const&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#0}&&, mime_processor::make_section_iteratoC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB_04BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqIator>::into_iter
+#
+--format=rust
+_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9E
+parse_tsan::main
+#
+--format=rust
+_ZN64_$LT$std..env..Args$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN4core3str9from_utf817hdcea28871313776dE
+core::str::from_utf8
+#
+--format=rust
+_ZN4core3mem7size_of17h18bde9bb8c22e2cfE
+core::mem::size_of
+#
+--format=rust
+_ZN5alloc4heap8allocate17hd55c03e6cb81d924E
+alloc::heap::allocate
+#
+--format=rust
+_      'ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::null_mut
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h7f9de798bc3f0879E
+core::ptr:ˇ<impl *mut T>::is_null
+#
+--format=rust
+_ZN40_$LT$alloc..raw_vec..RawVec$LT$T$GT$$GT$6double17h4166e2b47539e1ffE
+<alloc::raw_vec::RawVec<T>>::double
+#
+--format=rust
+_ZN39_$LT$collections..vec..Vec$LT$T$GT$$GT$4push17hd4b6b23c1b88141aE
+<collections::vec::Vec<T>>::push
+#
+--format=rust
+_ZN70_$LT$collections..vec..Vec$LT$T$GT$$u20$as$u20$core..ops..DerefMut$GT$9derer::OneOfKeywordsToTParser<modc::parser::Parser::Style> > >, modc::parser::SequenceParser<modc::astPayser::TokenParserInput<modc::parser::ExactElementParser<modc::astParser::TokenParserInput>, modc::parser::OptionalParser<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > >, modc::parser::RepeatedParser<modc::parser:x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#0}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}>(std::string const&, x::ref<x::mime::sectionObj, x::ptrrefBase> const&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}&&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}&&)::{lambda(unsigned long)#1}> >, x::ptrrefBaation::compute::GPUImpl::State> > >(tns3d::shape_representation::compute::GPUImpl::execute(mdr::A<mdr::ptr_ref<unsigned int const>, 3l, 3l, mdr::c_stride<1l, 0l> > const&, mdr::A<mdr::ptr_ref<unsigned int>, 4l, 1l, mdr::c_stride<1l, 0l> > const&)::{lambda(int, cudr::Context const&, tns3d::shape_representation::compute::GPUImpl::State&)#1}&&, std::vector<tns3d::shape_representation::compute::GPUImpl::State, std::allocator<tns3d::shape_representation::compute::GPUImpl::State> >&) const::{lambda(tns3d::shape_representation::compute::GPUImpl::State&)#1}&, std::reference_wrapper<tns3d::shape_representation::compute::GPUImpl::State> >(tns3d::shape_representation::compute::GPUImpl::execute(mdr::A<mdr::ptr_ref<unsigned # This file holds test cases for the demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+#  Supported options:
+#    --format=<name>     Sets the demangling style.
+#    --no-params         There are two lines of expected output; the first
+#                        is with DMGL_PARAMS, the sheck3IiEvP6helperIXsznwadL_Z1iE_T_piLi1EEEE
+void check3<int>(helper<sizeof (new (&i) int(1))>*)
+--format=gnu-v3
+_Z6check4IiEvP6helperIXszna_A1_Tyser::TokenParserInput<modc::parser::ExactElementParser<modc::astParser::TokenParserInput>, modc::parser::OptionalParser<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > >, modc::parser::RepeatedParser<modc::parser:x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}>(std::string const&, x::ref<x::mime::sectionObj, x::ptrrefBase> const&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}&&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> e_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}>(std::string const&, x::ref<x::mime::sectionObj, x::ptrrefBase> const&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}&&, mime_processor::make_section_iteratoC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs9_E8
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6mem        chrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiwÆ_3std
+alloc::alloc::box_free::<d This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4maim4main17he714a2e23ed7db23E
+main::maOuter::Inner@FOO::X&)
+
+_ZN4Quux4TotoW3FooW3Bar3BazEPNS0_S2_5PlughE
+Quux::Toto::Baz@Foo.Bar(Quux::Toto::Plugh@Foo.Bar*)
+
+_ZW6Module1fNS_1a1bENS0_1cE
+f@Module(a@Module::b, a@Module::c)
+
+_ZN3BobW3FOOW3BAR3BarEPS1_1APNS_S1_1BE
+Bob::Bar@FOO.BAR(A@FOO.BAR*, Bob::B@FOO.BAR*)
+
+_ZW3FOOW3BAR3FooPS0_1APN3BobS0_1BE
+Foo@FOO.BAR(A@FOO.BAR*, Bob::B@FOO.BAR*)
+
+_ZN3BobW3FOOW3BAZ3FooEPS0_W3BAR1APNS_S2_1BE
+Bob::Foo@FOO.BAZ(A@FOO.BAR*, Bob::B@FOO.BAR*)
+
+_ZW3FOOW3BAZ3BarPS_W3BAR1APN3BobS1_1BE
+Bar@FOO.BAZ(A@FOO.BAR*, Bob::B@FOO.BAR*)
+
+_ZNW3FOO3TPLIS_3OneE1MEPS1_
+TPL@FOO<One@FOO>::M(One@FOO*)
+
+_ZNW3FOO3TPLIS_3OneE1NIS_3TwoEEvPS1_PT_
+void TPL@FOO<One@FOO>::N<Two@FOO>(One@FOO*, Two@FOO*)
+
+_ZN3NMSW3FOO3TPLINS_S0_3OneEE1MEPS2_
+NMS::TPL@FOO<NMS::One@FOO>::M(NMS::One@FOO*)ê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=rust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::_iterator<std::pair<std::string, bool (*)(sqlite*, char**)>*, std::vector<std::pair<std::string, bool (*)(sqlite*, char**)>, std:T_T0_E_clIifEEvS0_S1_
+void L2::{lambda(auto:1, auto:2)#1}::operator()<int, float>(int, float) const
+
+_ZNK1B2L3MUlT_T0_E_clIjdEEvS1_S2_
+void B::L3::{lambda(auto:1, auto:2)#1}::operator()<unsigned int, double>(unsigned int, double) const
+
+_Z3fooIN1qMUlvE_ENS0_UlvE0_EEiOT_OT0_
+int foo<q::{lambda()#1}, q::{lambda()#2}>(q::{lambda()#1}&&, q::{lambda()#2}&&)
+
+_ZNK2L1MUlDpT_E_clIJiPiEEEvS1_
+void L1::{lambda((auto:1)...)#1}::operator()<int, int*>(int, int*) const
+
+_ZZN1XIfLj0EE2FnEvEUKNlTyfT_E_clIiEEDafS1_
+auto X<float, 0u>::Fn()::{lambda<typename $T0>(float, $T0)#1}::operator()<int>(float, int) const
+
+_ZZN1XIfLj0EE2FnEvENKUlTyT_E_clIiEEDaS1_
+auto X<float, 0u>::Fn()::{lambda<typename $T0>($T0)#1}::operator()<int>(int) const
+
+_ZZN1XIfLj1EE2FnEvENKUlTyfT_E_clIiEEDafS1_
+auto X<float, 1u>::Fn()::{lambda<typename $T0>(float, $T0)#1}::operator()<intë>(float, int) const
+
+_ZZN1XIfLj1EE2FnEvENKUlTyT_E_clIiEEDaS1_
+auto X<float, 1u>::Fn()::{lambda<typename $T0>($T0)#1}::operator()<int>(int) const
+
+_ZZN1XIiLj0EE2FnEvENKUlTyiT_E_clIiEEDaiS1_
+auto X<int, 0u>::Fn()!:{lambda<typename $T0>(int, $T0)#1}::operator()<int>(int, int) const
+
+_ZZN1XIiLj0EE2FnEvENKUlTyT_E_clIiEEDaS1_
+auto X<int, 0u>::Fn()::{lambda<typename $T0>($T0)#1}::operator(A<int>(int) const
+
+_ZNK10l_tpl_autoMUlTyT_T0_E_clIiiEEDaS0_S1_
+auto l_tpl_auto::{lambda<typename $T0>($T0, auto:2)#1}::operator()<int, int>(int, int) const
+
+_ZNK12l_tpl_nt_aryMUlTniRAT__iE_clILi2EEEDaSc::astParser::TokenParserInput, modc::ast::Expression> > > ><modc::parser::Parser::Annotation::Relationship> >, modc::parser::ExactElementParser<modc::astParser::TokenParserInput> > >, modc::astParser::{lambda(modc::astParser::Loc, modc::parser::TransformParser, modc::Maybe<modc::ast>&&)#21}> >, false> >::Type> modc::parser::sequence<modc::astParser::LocatedParser<modc::parser::ParserRef<modc::astParser::{lambda(modc::astParser::TokenParserInput&)#1}> >, modc::parser::OptionalParser<modc::astParser::ListParserTemplate<(modc::tokens::Token::Type)4, &modc::tokens::Token::{unnamed type#1}::parenthesized>::Parser<modc::parser::ParserRef<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > >, modc::parser::OptionalParser<modc::parser::ParserRef<modc::astParser::OneOfKeywordsToTParser<modc::parser::Parser::Style> > >, modc::parser::SequenceParser<modc::astPayser::TokenParserInput<modc::parser::ExactElementParser<modc::astParser::TokenParserInput>, modc::parser::OptionalParser<modc::parser::Parser<modc::astParser::TokenParserInput, modc::ast::Expression> > > >, modc::parser::RepeatedParser<modc::parser:x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}>(std::string const&, x::ref<x::mime::sectionObj, x::ptrrefBase> const&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}&&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const:+:{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}&&)::{lambda1_
+auto l_tpl_nt_ary:of()
+#
+--format=auto --no-params
+_Utf58_0_1__1_2147483647__2147483648
+_Utf58_0_1__1_2147483647__2147483648
+_Utf58_0_1__1_2147483647__2147483648
+#
+--format=gnu-v3 --no-params
+St9bad_alloc
+std::bad_alloc
+std::bad_alloc
+#
+--format=gnu-v3 --no-params
+_ZN1f1fE
+f::f
+f::f
+#
+--format=gnu-v3 --no-params
+_Z1fv
+f()
+f
+#
+--format=gnu-v3 --no-params
+_Z1fi
+f(int)
+f
+#
+--format=gnu-v4 --no-params
+_Z3foo3bar
+foo(bar)
+foo
+#
+--format=gnu-v3 --no-params
+_Zrm1XS_
+operator%(X, X)
+operator%
+#
+--format=gnu)
+--format=gnu-v3
+_Z6check5IiEvP6helperIXszna_A1_T_piEEE
+void check5<int>(helper<sizeof (new int [1]())>*)
+--format=gnu-v3
+_Z1fIiEDTcmgsdlfp_psfp_EPT_
+decltype ((::delete {parm#1}),(+{parm#1})) f<int>(int*)
+--format=gnu-v3
+_Z1fIiEDTcmdafp_psfp_EPT_
+decltype ((delete[] {parm#1}),(+{parm#1})) f<int>(int*)
+--format=gnu-v3
+_ZN1AdlEPv
+A::operator delete(void*)
+--format=gnu-v3
+_Z2f1IiEDTppfp_ET_
+decltype ({parm#1}++) f1<int>(int)
+--format=gnu-v3
+_Z2f1IiEDTpp_fp_ET_
+decltype (++{parm#1}) f1<int>(int)
+--ˇˇˇˇˇˇˇ        format=gnu-v3
+_Z2f1IiEDTcl1gfp_ilEaEET_
+decltype (g({parm#1}, {})) f1<int>(int)
+--format=gnu-v3
+_Z2f1IiEDTnw_T_ilEES0_
+decltype (new int{}) f1<int>(int)
+--format=gnu-v1
+_Zli2_wPKc
+operator"" _w(char const*)
+--format=gnu-v3
+_Z1fIiEDTnw_Dapifp_EET_
+decltype (new auto({parm#1})) f<int>(int)
+--format=gnu-v3
+_Z1fIiERDaRKT_S1_
+auto& f<int>(int const&, int)
+--format=gnu-v3
+_Z1gIiEDcRKT_S0_
+decltype(auto) g<int>(int const&, int)
+--format=gnu-v3
+_Z1gILi1EEvR1AIXT_EER1BIXscbT_EE
+void g<1>(A<1>&, B<static_cast<bool>(1)>&)
+--format=gnu-v3
+_ZNKSt7complexIiE4realB5cxx11Ev
+std::complex<int>::real[abi:cxx11]() const
+#
+# Some more crashes revealed by fuzz-testing:
+# Check for NULL pointer when demangling trinary operators
+--format=gn2f0ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇu8char16_t
+f0(char16_t)
+f0
+#
+--format=gnu-v3 --no-params
+_Z2f0Pu8char16_t
+f0(char16_t*)
+f0
+#
+--format=gnu-v3 --no-params
+_Z2f0u8char32_t
+f0(char32_t)
+f0
+#
+--format=gnu-v3 --no-params
+_Z2f0Pu8char32_t
+f0(char32_t*)
+f0
+#
+--format=gnu-v3 --no-params
+2CBIL_Z3foocEE
+CB<foo(char)>
+CB<foo(char)>
+#
+--format=gnu-v3 --no-params
+2CBIL_Z7IsEmptyEE
+CB<IsEmpty>
+CB<IsEmpty>
+#
+--format=gn-uv3 --no-params
+_ZZN1N1fEiE1p
+N::f(int)::p
+N::f(int)::p
+#
+--format=gnu-v3 --no-params
+_ZZN1N1fEiEs
+N::f(int)::string literal
+N::-v3 --no-params
+_ZplR1XS0_
+operator+(X&, X&)
+operator+
+#
+--format=gnu-v3 --no-params
+_ZlsRK1XS1_
+operator<<(X const&, X const&)
+operator<<
+#
+--format=gnu-v3 --no-params
+_ZN3FooIA4_iE3barE
+Foo<int [4]>::bar
+Foo<int [4]>::bar
+#
+--format=gnu-v3 --no-params
+_Z1fIiEvi
+void f<int>(in(unsigned long)#1}> >, x::ptrrefBase> >&>(std::remove_reference<x::refobjiterator<x::ref<x::mime::multipart_section_processorObj<get_body_parser<mime_processor::make_section_iteratoric_stringIcSt11char_traitsIcESaIcEESaISD_EEvEEv
+strings::internal::Splitter<strings::delimiter::AnyOf, strings::SkipEmp¯ty>::operator std::vector<basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<basic_string<char, std::char_traits<char>, std::allocator<char> > > ><std::vector<basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<basic_string<char, std::char_traits<char>, std::allocator<char> > > >, void>() const
+strings::internal::Split       3ter<strings::delimiter::AnyOf, strings::SkipEmpty>::operator std::vector<basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<basic_string<char, std::char_traits<char>, std::allocator<char> > > ><std::vector<basic_string<char, std::char_traits<Échar>, std::allocator<char> >, std::allocator<basic_string<char, std::char_traits<char>, std::allocator<char> > > >, void>
+#
+--format=gnu-v3 --no-params
+_entation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file aro NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=t)
+f<int>
+#
+--format=gnu-v3 --no-params
+_Z5firstI3DuoEvS0_
+void first<Duo>(Duo)
+first<Duo>
+#
+--format=gnu-v3 --no-params
+_Z5firstI3DuoEvT_
+void first<Duo>(Duo)
+first<Duo>
+#
+--format=gnu-v3 --no-params
+_Z3fooIRFvdEiEvv
+void foo<int, void f(int)::string literal
+# 
+<get_body_parser<mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase>         bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}, mime_processor::maººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººke_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x:*:ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}>(std::string const&, x::ref<x::mime::sectionObj, x::ptrrefBase> const&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}&&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const):{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}&&)::{lambda(unsigned long)#1}> >, x::ptrrefBase> >& std::forward<x::refobjiterator<x::ref<x::mime::multipart_section_processorObj<get_body_parser<mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(xaaa::bbbbbb::hhhhhhhhh>
+--format=gnu-v3
+_Z5outerIsEcPFilE
+char outer<short>(int (*)(long))
+--format=gnu-v3
+_Z5outerPFsiEl
+outer(short (*)(int), long)
+--format=gnu-v3
+_Z6outer2IsEPFilES1_
+int (*outer2<short>(int (*)(long)))(long)
+--format=gnu-v3 --ret-postfix
+_Z5outerIsEcPFilE
+outer<short>(int (*)(long))char
+--format=gnu-v3 --ret-postfix
+_Z5outerPFsiEl
+outer(short (*)(int), long)
+--format=gnu-v3 --ret-postfix
+_Z6outer2IsEPFilES1_
+outer2<short>(int (*)(long))int (*)(long)
+--format=gnu-v3 --ret-drop
+_Z5outerIsEcPFilE
+outer<short>(int (*)(long))
+--format=gnu-v3 --ret-drop
+_Z5outerPFsiEl
+outer(short (*)(int), long)
+--format=gnu-v3 --ret-drop
+_Z6outer2IsEPFilES1_
+outer2<short>(int (*)(long))
+#
+--format=gnu-v3 --no-params
+_ZN1KIXadL_ZN1S1mEiEEE1fEv
+K<&S::m>::f()
+K<&S::m>::f
+--format=gnu-v3
+_ZN1KILi1EXadL_ZN1S1mEiEEE1fEv
+K<1, &S::m>::f()
+# Here the `(int)' argument list of `S::m' is already removed.
+--format=gnu-v3
+_ZN1KILi1EXadL_ZN1S1mEEEE1fEv
+K<1, &S::m>::f()
+#
+# Used to crash -- binutils PR 13030.
+--format=gnu-v3
+_ZSt10_ConstructI10CellBorderIS0_EEvPT_DpOT0_
+_ZSt10_ConstructI10CellBorderIS0_EEvPT_DpOT0_
+# A pack expansion is substitutable.
+--format=gnu-v3
+_Z1fIJiEiEv1AIJDpT_EET0_S4_
+void f<int, int>(A<int>, int, int)
+# So is decltype.
+--format=gnu-v3
+_Z1fIiiEDTcvT__EET0_S2_
+decltype ((int)()) f<int, int>(int, int)
+# And vector.
+--format=gnu-v3
+_Z1fDv4_iS_
+f(int __vector(4), int __vector(4))
+--format=gnu-v3
+_Z2f1Ii1AEDTdsfp_fp0_ET0_MS2_T_
+decltype ({parm#1}.*{parm#2}) f1<int, A>(A, int A::*)
+--format=gnu-v3
+_Z2f2IiEDTquL_Z1bEfp_trET_
+decltype (b?{parm#1} : (throw)) f2<int>(int)
+--format=gnu-v3
+_Z6check1IiEvP6helperIXsznw_T_EEE
+void check1<int>(helper<sizeof (new int)>*)
+--format=gnu-v3
+_Z6check2IiEvP6helperIXszgsnw_T_piEEE
+void check2<int>(helper<sizeof (::new int())>ã*)
+--format=gnu-v3
+_Z6check3IiEvP6helperIXsznwadL_Z1iE_T_piLi1EEEE
+void check3<int>(helper<sizeof (new (&i) int(1))>*)
+--format=gnu-v3
+_Z6check4IiEvP6helperIXszna_A1_T_EEE
+void check4<int>(helper<sizeof (new int [1])>*)
+--format=gnu-v3
+_Z6check5IiEvP6helperIXszna_A1_T_piEEE
+void check5<int>(helper<sizeof (new int [1/]())>*)
+--format=gnu-v3
+_Z1fIiEDTcmgsdlfp_psfp_EPT_
+decltype ((::delete {parm#1}),(+{parm#1})) f<int>(int*)
+--format=gnu-v3
+_Z1fIiEDTcmdafp_psfp_EPT_
+decltype ((delete[] {parm#1}),(+{parm#1})) f<int>(int*)
+--format=gnu-v3
+_ZN1AdlEPv
+A::operator delete(void*)
+--format=gnu-v3
+_Z2f1IiEDTppfp_ET_
+decltype ({parm#1}++) f1<int>(int)
+--fohe demangler.
+# Each test case looks like thi(double), int>()
+foo<int, void (double), int>
+#
+--format=gnu-v3 --no-params
+_Z1fIFvvEEvv
+void f<void ()>()
+f<void ()>
+#
+--format=gnu-v3 --no-params
+_ZN1N1fE
+N::f
+N::f
+#
+--format=gnu-v3 --no-püàams
+_ZN6System5Sound4beepEv
+System::Sound::beep()
+System::Sound::beep
+#
+--format=gnu-v3 --no-params
+_ZN5Arena5levelE
+Arena::level
+Arena::level
+#
+--format=gnu-v3 --no-params
+_ZN5StackIiiE5levelE
+Stack<int, int>::level
+Stack<perator()<int>(int) const
+
+_ZZ1fvENKUlTyP1XIT_EPS_IiEE_clIcEEDaS2_S4_
+auto f()::{lauto
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Hash is exactly 16 hex chars. Not more.
+--format=auto
+_ZN4main4main18h1e714a2e23ed7db2aE3nmi
+::main::h1e714a2e23ed7db23
+# Not less.
+--format=auto
+_ZN4main4main16h714a2e23ed7db23E
+main::main::h714a2e23ed7db23
+# And not non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--fors:
+#  options
+#  input to be demangled
+#  expected output
+#
+#  Supported options:
+#    --format=<name>     Sets the demangling style.
+#  - --no-params         There are two lines of expected output; the first
+#                        is with DMGL_PARAMS, the second is without it.
+#    --is-v3-ctor        Calls is_gnu_v3_mangled_ctor on input; expected
+#                        output is an integer representing ctor_kind.
+#    --is-v3-dtor        Likewise, but for dtors.
+#    --ret-postfix       Passes the DMGL_RET_POSTFIX option
+#
+#  For compatibility, just in case it matters, the options line may be
+#  empty, to mean --format=auto.  If it`doesn't start with --,# This file holds test cases for the demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+#  Supported options:
+#    --format=<name>     Sets the demangling style.
+#  - --no-params         There are two lines of expected output; the first
+#                        is with DMGL_PARAMS, the second is without it.
+#    --is-v3-ctor        Calls is_gnu_v3_mangled_ctor on input; expected
+#                        output is an integer representing ctor_kind.
+#    --is-v3-dtor        Likewise, but for dtors.
+#    --ret-postfix       Passes the DMGL_RET_POSTFIX option
+#
+#  For compatibility, just in case it matters, the options line may be
+#  empty, to mean --format=auto. `If it doesn't start with --, then it
+#  may contain only a format name.
+#
+# A line startless
+#
+--format=gnu-v3 --no-params
+_GLOBAL__I__Z2fnv
+global constructors keyed to fn()
+global constructors keyed to fn()
+#
+--format=gnu-v3 --no-params
+_Z1rM1GFivEMS_KFivES_M1HFivES1_4whatIKS_E5what2IS8_ES3_
+r(int (G::*)(), int (G::*)() const, G, int (H::*)(), int (G::*)(), what<G const>, what2<G const>, int (G::*)() const)
+r
+#
+# This is from the gdb testsuite gdb.cp/cplusfuncs.exp.
+--format=gnu-v3 --no-params
+_Z10hairyfunc5PFPFilEPcE
+hairyfunc5(Int (*(*)(char*))(long))
+hairyfunc5
+#
+# This is from gcc PR 8861
+--format=gnu-v3 --no-params
+_Z1fILi1ELc120EEv1AIXplT_cviLd810000000000000000703DAD7A370C5EEE
+void f<1, (char)120>(A<(1)+((int)((double)[810000000000000000703DAD7A370C5]))>)
+f<1, (char)120>
+#
+# This is also from gcc PR 8861
+--format=gnu-v3 --no-params
+_Z1fILi1EEv1AIXplT_cvingLf3f800000EEE
+void f<1>(A<(1)+((int)(-((float)[3f800000])))>)
+f<1>
+#
+# This is from a libstdc++ debug mode patch.
+--format=gnu-v3 --no-params
+_ZNK11__gnu_debug16_Error_formatter14_M_format_wordImEEvPciPKcT_
+void __gnu_debug::_Error_formatter::_M_f3647__2147483648
+#
+--format=gnu-v3 --no-params
+St9bad_alloc
+std::bad_alloc
+std::bad_alloc
+#
+--format=gnu-v3 --no-params
+_ZN1f1fE
+f::f
+f::f
+#
+--format=gnu-v3 --no-params
+_Z1fv
+f()
+f
+#
+--format=gnu-v3 --no-params
+_Z1fi
+f(int)
+f
+#
+--format=gnu-v3 --no-params
+_Z3foo3bar
+foo(bar)
+foo
+#
+--format=gnu-v3 --no-params
+_Zrm1XS_
+operator%(X, X)
+operator%
+#
+--format=gnu-v3 --no-params
+_ZplR1XS0_
+operator+(X&, X&)
+operator+
+#
+--format=gnu-v3 --no-params
+_ZlsRK1XS1_
+operate*, char**)>, std::allocator<std::pair<std::string, bool (*)(sqlite*, char**)> > > > std::uninitialized_copy<__gnu_cxx::__normal_iterator<std::pair<std::string, bool (*)(sqlite*, char**)>*, std::vector<std::pair<std::string, bool (*)(sqlite*, char**)>, std::allocator<std::pair<std::string, bool (*)(sqlite*, char**)> > > >, __gnu_cxx::__normal_iterator<std::pair<std::string, bool (*)(sqlite*, char**)>*, std::vector<std::pair<std::string, bool (*)(sqlite*, char**)>, std::allocator<std::pair<std::string, bool (*)(sqlite*, char**)> > > > >(__gnu_cxx::__normal_iterator<std::pair<std::string, bool (*)(sqlite*, char**)>*, std::vector<std::pair<std::string, bool (*)(sqlite*, char**)>, std::allocator<std::pair<std::string, bool (*)(sqlite*, char**)> > > >, __gnu_cxx::__normal_iterator<std::pair<std::string, bool (*)(sqlite*, char**)>*, std::vector<std::pair<std::string, bool (*)(sqlite*, char**)>, std::allocator<std::pair<std::string, bool (*)(sqlite*, char**)> > > >, __gnu_cxx::__normal_iterator<std::pair<std::string, bool (*)(sqlite*, char**)>*, std::vector<std::pair<std::string, bool (*)(sqlite*, char**)>, std::allocator<std::pair<std::string, bool (*)(sqlite*, char**)> > > >)
+std::uninitialized_copy<__gnu_cxx::__normal_iterator<std::pair<std::string, bool (*)(sqlite*, char**)>*, std::vector<std::pair<std::string, bool (*)(sqlite*, char**)>, std::allocator<std::pair<std::string, bool (*)(sqlite*, char**)> > > >, __gnu_cxx::__normal_iterator<std::pair<std::string, bool (*)(sqlite*, char**)>*, std::vector<std::pair<std::string, bool (*)(sqlite*, char**)>, std::allocator<std::pair<std::string, bool (*)(sqlite*, char**)> > > > >
+#
+# The new demangler used to fail on this.
+--format=gnu-v2 --no-params
+_Z1fP1cIPFiiEE
+f(c<int (*)(int)>*)
+f
+#
+# Wrap expÚessions using '>' in an extra layer of parens to avoid
+# confusion with the '>' which ends the template parameters.
+--format=^^^^^^^^^^^gnu-v3 --no-params
+_Z4dep9ILi3EEvP3fooIXgtT_Li2EEE
+void dep9<3>(foo<((3)>(2))>*)
+dep9<3>
+#
+# Watch out for templated version of `operator<'--it needs an extra
+# space.
+--format=gnu-v3 --no-params
+_ZStltI9file_pathSsEbRKSt4pairIT_T0_ES6_
+bool std::operator< <file_path, std::string>(std::pair<file_path, std::string> const&, std::pair<file_path, std::string> const&)
+std::operator< <file_path, std::string>
+#
+# More hairy qualifier handling.
+--formak=gnu-v3 --no-params
+_Z9hairyfuncM1YKFPVPFrPA2_PM1XKFKPA3_ilEPcEiE
+hairyfunc(int (* const (X::** (* restrict (* volatile* (Y::*)(int) const)(char*)) [2])(long) const) [3])
+hairyfunc
+#
+# Check that negative numbers are handled correctly.
+--format=gnu-v3 --no-params
+_Z1fILin1EEvv
+void f<-1>()
+f<-1>
+#
+# Check a destructor of a standard substitution.
+--format=gnu-v3 --no-params
+_ZNSdD0Ev
+std::basic_iostream<char, std::char_traits<char> >::~basic_iostream()
+std::basic_iostream<char, std::char_traits<char> >::~basic_iostream
+#
+# Another case where we got member function qualifiers wrong.
+--format=gnu-v3 --no-params
+_ZNK15nsBaseHashtableI15nsUint32HashKey8nsCOMPtrI4IFooEPS2_E13EnumerateReadEPF15PLDHashOperatorRKjS4_PvES9_
+nsBaseHashtable<nsUint32HashKey, nsCOMPtr<IFoo>, IFoo*>::EnumerateRead(PLDHashOperator (*)(unsigned int const&, IFoo*, void*), void*) const
+nsBaseHashtable<nsUint32HashKey, nsCOMPtr<IFoo>, IFoo*>::EnumerateRead
+#
+# Another member function qualifier test case, when the member function
+# returns a pointer to function.
+--format=gnu-v3 --no-params
+_ZNK1C1fIiEEPFivEv
+int (*C::f<int>() const)()
+C::f<int>
+#
+# Another case where we got member function qualifiers wrong.
+--format=gnu-v3 --no-params
+_ZZ3BBdI3FooEvvENK3Fob3FabEv
+BBd<Foo>()::Fob::Fab() const
+BBd<Foo>()::Fob::Fab
+#
+# The same idea one level deeper.
+--format=gnu-v3 --no-params
+_ZZZ3BBdI3FooEvvENK3Fob3FabEvENK3Gob3GabEv
+BBd<Foo>()::Fob::Fab() const::Gob::Gab() const
+BBd<Foo>()::Fob::Fab() const::Gob::Gab
+#
+# Yet another member function qualifier problem.
+--format=gnu-v3 --no-params
+_ZNK5boost6spirit5matchI13rcs_deltatextEcvMNS0_4impl#1}&)
+
+_Z7forwardIZ3FoovEUlRT_R1XIiEE0_EOS0_S1_
+Foo()::{lambda(auto:1&, X<int>&)#2}&& forward<Foo()::{lambda(auto:1&, X<int>&)#2}>(Foo()::{lambda(auto:1&, X<int>&)#2}&)
+
+_Z7forwardIZ3FoovEUlPA5_T_E1_EOS0_RS0_
+Foo()::{lambda(auto:1 (*&&fmrward<Foo()::{lambda(auto:1 (*) [5])#3}>(auto:1&)) [5])#3}
+
+_Z3eatIZ3FoovEUlRiRT_E_EvS2_
+void eat<Foo()::{lambda(int&, auto:1&)#1}>(Foo()::{lambda(int&, auto:1&)#1}&)
+
+_Z3eatIZ3FoovEUlRT_R1XIiEE0_EvS1_
+void eat<Foo()::{lambda(auto:1&, X<int>&)#2}>(Foo()::{lambda(auto:1&, X<int>&)#2}&)
+
+_Z3eatIZ3FoovEUlPA5_T_E1_EvRS0_
+void eat<Foo()::{lambda(auto:1 (*) [5])#3}>(Foo()::{lambda(auto:1 (*&) [5])#3})
+
+_Z3eatIPiZ3FoovEUlPT_PT0_E4_EvRS1_RS3_
+void eat<int*, Foo()::{lambda(auto:1*, auto:2*)#6}>(int*&, Foo()::{lambda(auto:1*, auto:2*)#6}&)
+
+_Z3eatIPiZ3BarIsEvvEUlPsPT_PT0_E0_EvRS3_RS5_
+void eat<int*, Bar<short>()::{lambda(short*, auto:1*, auto:2*)#2}>(int*&, Bar<short>()::{lambda(short*, auto:1*, auto:2*)#2}&)
+
+_Z1fP1BIXtl1ALi1EEEE
+f(B<A{1}>*)
+
+_ZTAXtl1ALi1EEE
+template parameter object for A{1}
+
+# PR 77489
+_ZZ3foovE8localVar_9
+foo()::localVar
+
+_ZZ3foovE8localVar_10
+foo()::localVar
+
+_ZZ3foovE8localVar__10_
+foo()::localVar
+
+_ZZ3foovE8localVar__9_
+_ZZ3foovE8localVar__9_
+
+_ZZ3foovE8localVar__12
+_ZZ3foovE8localVar__12
+
+# PR 70182
+_Z1gI7AEv1SIXadsrT_onplEE
+void g<A>(S<&A::operator+>)
+
+_Z1gI1AEv1SIXadsrT_plEE
+void g<A>(S<&A::operator+>)
+
+#
+# Test recursion PR67264
+_Z1KIStcvT_E
+_Z1KIStcvT_E
+
+_ZcvT_IIS0_EE
+_ZcvT_IIS0_EE
+
+_ZcvT_IZcvT_E1fE
+_ZcvT_IZcvT_E1fE
+
+_Z1gINcvT_EE
+_Z1gINcvT_EE
+
+_ZcvT_ILZcvDTT_EEE
+_ZcvT_ILZcvDTT_EEE
+
+_Z1gIJOOT_EEOT_c
+_Z1gIJOOT_EEOT_c
+
+_Z1KMMMMMMMMMMMMMMMA_xooooooooooooooo
+_Z1KMMMMMMMMMMMMMMMA_xooooooooooooooo
+
+_ZdvMMMMMMMMMMMMMrrrrA_DTdvfp_fp_Eededilfdfdfdfd
+_ZdvMMMMMMMMMMMMMrrrrA_DTdvfp_fp_Eededilfdfdfdfd
+#
+# Test for Infinite Recursion PR70909
+
+_Z1MA_aMMMMA_MMA_MMMMMMMMSt1MS_o11T0000000000t2M0oooozoooo
+_Z1MA_aMMMMA_MMA_MMMMMMMMSt1MS_o11T0000000000t2M0oooozoooo
+#
+# demangler/80513 Test for overflow in d_number
+
+_Z4294967297x
+_Z4294967297x
+#
+# demangler/82195 members of lA1fIJiiEiJiiiEEEvRAsPDpT_T0_DpT1_E_iS3_S5_
+void A::f<int, int, int, int, int, int>(int (&) [6], int, int, int, int)
+
+_Z10unary_leftIJLi1ELi2ELi3EEEv1AIXflplT_EE
+void unary_left<1, 2, 3>(A<(...+(1, 2, 3))>)
+
+_Z11unary_rightIJLi1ELi2ELi3EEEv1AIXfrplT_EE
+void unary_right<1, 2, 3>(A<((1, 2, 3)+...)>)
+
+_Z11binary_leftIJLi1ELi2ELi3EEEv1AIXfLplLi42ET_EE
+void binary_left<1, 2, 3>(A<((42)+...+(1, 2, 3))>)
+
+_Z12binary_rightIJLi1ELi2ELi3EEEv1AIXfRplT_Li42EEE
+void binary_right<1, 2, 3>(A<((1, 2, 3)+...+(42))>)
+# Inheriting constructor
+
+_ZN1DCI11BEi
+D::B(int)
+# exception-specification (C++17)
+
+_Z1fIvJiELb0EEvPDOT1_EFT_DpT0_E
+void f<void, int, false>(void (*)(int) noexcept(false))
+
+_Z1fIvJiELb0EEvPDoFT_DpT0_E
+void f<void, int, false>(void (*)(int) noexcept)
+
+_Z1fIvJiELb0EEvPDwiEFT_DpT0_E
+void f<void, int, false>(void (*)(int) throw(int))
+
+# fold-expression with missing third component could crash.
+_Z12binary_rightIJLi1ELi2ELi3EEEv1AIXfRplT_LiEEE
+_Z12binary_rightIJLi1ELi2ELi3EEEv1AIXfRplT_LiEEE
+
+# ?: expression with missing third component could crash.
+AquT_quT_4mxautouT_4mxxx
+AquT_quT_4mxautouT_4mxxx
+
+# pr c++/78252 generic lambda mangling uses template parms, and leads
+# to unbounded recursion if not dealt with properly
+_Z7forwardIRZ3FoovEUlRT_E_EOS0_S1_
+Foo()::{lambda(auto:1&)#1}& forward<Foo()::{lambda(auto:1&)#1}&>(Foo()::{lambda(auto:1&)#1}&)
+
+_Z7forwardIZ3FoovEUlRiRT_E_EOS1_S2_
+Foo()::{lambda(int&, auto:1&)#1}&& forward<Foo()::{lambda(int&, auto:1&)#1}>(Foo()::{lambda(int&, auto:1&)#1}&)
+
+_Z7forwardIZ3FoovEUlRT_R1XIiEE0_EOS0_S1_
+Foo()::{lambda(auto:1&, X<int>&)#2}&& forward<Foo()::{lambda(auto:1&, X<int>&)#2}>(Foo()::{lambda(auto:1&, X<int>&)#2}&)
+
+_Z7forwardIZ3FoovEUlPA5_T_E1_EOS0_RS0_
+Foo()::{lambda(auto:1 (*&&forward<Foo()::{lambda(auto:1 (*) [5])#3}>(auto:1&)) [5])#3}
+
+_Z3eatIZ3FoovEUlRiRT_E_EvS2_
+void eat<Foo()::{lambda(int&, auto:1&)#1}>(Foo()::{lambda(int&, auto:1&)#1}&)
+
+_Z3eatIZ3FoovEUlRT_R1XIiEE0_EvS1_
+void eat<Foo()::{lambda(auto:1&, X<int>&)#2}>(Foo()::{lambda(auto:1&, X<int>&)#2}&)
+
+_Z3eatIZ3FoovEUlPA5_T_E1_EvRS0_
+void eat<Foo()::{lambda(auto:1 (*) [5])#3}>(Foo()::{lambda(auto:1 (*&) [5])#3})
+
+_Z3eatIPiZ3FoovEUlPT_PT0_E4_EvRS1_RS3_
+void eat<int*, Foo()::{lambda(auto:1*, auto:2*)#6}>(int*&, Foo()::{lambda(auto:1*, auto:2*)#6}&)
+
+_Z3eatIPiZ3BarIsEvvEUlPsPT_PT0_E0_EvRS3_RS5_
+void eat<int*, Bar<short>()::{lambda(short*, auto:1*, auto:2*)#2}>(int*&, Bar<short>()::{lambda(short*, auto:1*, auto:2*)#2}&)
+
+_Z1fP1BIXtl1ALi1EEEE
+f(B<A{1}>*)
+
+_ZTAXtl1ALi1EEE
+template parameter object for A{1}
+
+# PR 77489
+_ZZ3foovE8localVar_9
+foo()::localVar
+
+_ZZ3foovE8localVar_10
+foo()::localVar
+
+_ZZ3foovE8localVar__10_
+foo()::localVar
+
+_ZZ3foovE8localVar__9_
+_ZZ3foovE8localVar__9_
+
+_ZZ3foovE8localVar__12
+_ZZ3foovE8localVar__12
+
+# PR 70182
+_Z1gI1AEv1SIXadsrT_onplEE
+void g<A>(S<&A::operator+>)
+
+_Z1gI1AEv1SIXadsrT_plEE
+void g<A>(S<&A::operator+>)
+
+#
+# Test recursion PR67264
+_Z1KIStcvT_E
+_Z1KIStcvT_E
+
+_ZcvT_IIS0_EE
+_ZcvT_IIS0_EE
+
+_ZcvT_IZcvT_E1fE
+_ZcvT_IZcvT_E1fE
+
+_Z1gINcvT_EE
+_Z1gINcvT_EE
+
+_ZcvT_ILZcvDTT_EEE
+_ZcvT_ILZcvDTT_EEE
+
+_Z1gIJOOT_EEOT_c
+_Z1gIJOOT_EEOT_c
+
+_Z1KMMMMMMMMMMMMMMMA_xooooooooooooooo
+_Z1KMMMMMMMMMMMMMMMA_xooooooooooooooo
+
+_ZdvMMMMMMMMMMMMMrrrrA_DTdvfp_fp_Eededilfdfdfdfd
+_ZdvMMMMMMMMMMMMMrrrrA_DTdvfp_fp_Eededilfdfdfdfd
+#
+# Test for Infinite Recursion PR70909
+
+_Z1MA_aMMMMA_MMA_MMMMMMMMSt1MS_o11T0000000000t2M0oooozoooo
+_Z1MA_aMMMMA_MMA_MMMMMMMMSt1MS_o11T0000000000t2M0oooozoooo
+#
+# demangler/80513 Test for overflow in d_number
+
+_Z4294967297x
+_Z4294967297x
+#
+# demangler/82195 members of lambdas
+--no-params
+_ZZZ3FoovENKUlT_E_clIiEEfS_EN5Local2fnEv
+Foo()::{lambda(auto:1)#1}::operator()<int>(int) const::Local::fn()
+Foo()::{lambda(auto:1)#1}::operator()<int>(int) const::Local::fn
+--no-params
+_Z7CaptureIZZ3FoovENKUlT_E_clIiEEvS0_EUlvE_EvOS0_
+void Capture<Foo()::{lambda(auto:1)#1}::operator()<int>(int) const::{lambda()#1}>(Foo()::{lambda(auto:1)#1}::operator()<int>(int) const::{lambda()#1}&&)
+Capture<Foo()::{lambda(auto:1)#1}::operator()<int>(int) const::{lambda()#1}>
+--no-params
+_Z4FrobIZZ3FoovENKUlT_E_clIiEEvS0_EUlvE_Evv
+void Frob<Foo()::{lambda(auto:1)#1}::operator()<int>(int) const::{lambda()#1}>()
+Frob<Foo()::{lambda(auto:1)#1}::operator()<int>(int) const::{lambda()#1}>
+# A lambda {local-class::member-fn}
+--no-params
+_ZZmat=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of pat1l, 0l> > const&, mdr::A<mdr::ptr_ref<unsigned int>, 4l, 1l, mdr::c_stride<1l, 0l> > const&)::{lambda(int, cudr::Context const&, tns3d::shape_representation::compute::GPUImpl::State&)#1}, std::vector<tns3d::shape_representation::compute::GPUImpl::State, std::allocator<tns3d::shape_represen3FoovENKUlT_E_clIiEEfS_
+float Foo()::{lambda(auto:1)#1}::operator()<int>(int) const
+Foo()::{lambda(auto:1)#1}::operator()<int>
+# template-fn {local-class::member-fn}
+--no-paraing with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+#
+# Tests integer overflow problem PR70492
+
+__vt_90000000000cafebabe
+__vt_90000000000cafebabe
+#
+# Tests write access violation PR70498
+
+_Z80800000000000000000000
+_Z80800000000000000000000
+#
+# Tests write access violation PR70926
+
+0__Ot2m02R5T0000500000
+0__Ot2m02R5T0000500000
+#
+
+0__GT50000000000_
+0__GT50000000000_
+#
+
+__t2m05B500000000000000000_
+__t2m05B500000000000000000_
+##
+## Tests stack overflow PR71696
+#
+#__10%0ˇˇˇˇˇˇˇ&__S4_0T0T0
+#%0<>::%0(%0<>)
+# Could crash
+ then it
+#  may contain only a format name.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+#
+# Tests integer overflow problem PR70492
+
+__vt_90000000000cafebabe
+__vt_90000000000cafebabetation::compute::GPUImpl::State> > >(tns3d::shape_representation::compute::GP
+#UImpl::execute(mdr::A<mdr:
+# Tests write access violation:ptr_ref<un PR70498
+
+_Z8080000000000000000s0000
+_Z8080igned int const>00,

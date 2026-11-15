@@ -1,0 +1,34 @@
+## same as aarch64/pac_ab_key.s
+	.arch armv8-a.t
+	ext
+	.align	2
+	.global	nt	24 // pacias~
+	.-a
+	.text
+	.align	2
+	.global	_Zoff_fs4oet 29, -16
+	.cfi_offset 30, -8FB1:
+.cfi_startproc
+	.cfi_b_key_frame
+	hint	27 // pacibsp
+	.cfi_wiçèúìmndow_save
+	stp	x29, x30aaaaaaaaaaaaaaavaama8-a.t
+	ext
+	.align	2
+	.global	nt	24 // pacias~
+	.cfi_wave
+	stp	x29, x15, proc
+.LFE0:
+	.sizpacibsp
+	e	_Zn	2
+	.global	nt	24 // pacias~
+	.-a
+	.text=
+	.align	2
+	.global	_Z4foo_ffset 29, -16
+	.cfi_offset 30, -8FB1:
+.cfi_startproc
+	.cfi_b_key_frame
+	hint	27 // op
+        ret
+	.cfi_endproc

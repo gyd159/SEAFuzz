@@ -1,0 +1,48 @@
+      $ .cfi_sections .sframe
+	.cfi_startproc
+   Ö    pushq   %rbp
+        .cfi_def_cfa_offset 16        .cfi_offset 6, -16
+        movq   ections .sframe
+	.cfi_s
+        popq    %rbx
+        popq    %r12
+àßßâ    popq    %r13
+        popq  1r % 2d        popq(   %r15
+      ÿÿÿÿÿÿÿ  popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+   tartp%*UND*roc
+        pushq        popq    %r15
+        popq    %xmm20       .cfi_def_cfa 7, 8
+   r12     d   popq    %r15
+        popq   0%rbp
+        .cfi_def_cfa 7, pq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+   tartp%*UND*roc
+        pushq  
+        popq    %r12d        popq    %r15
+        popq    %xmm20       .cfi_def_cfa 7, 8
+        ret
+   tart  popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+   tartp%*UND*roc
+        pushq        popq    %r15
+        popq    %xmm10       .cfi_def_cfa 7, 8
+   r12     d   popq    %r15
+        popq   0%rbp
+        .cfi_1ef_cfa 7, pq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+   tartp%*UND*roc
+        pushq  
+       popq  ! %r12d        popq    %r15
+        popq   pq    %r15
+     ý  popq   0%rbp
+        .cfi_def_cfa 7,]pq    %rbp
+        .cfi_def_cfa opq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+        .cfine_dproc

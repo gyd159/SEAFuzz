@@ -1,0 +1,11 @@
+ $  şÿÿÿ.cfi_sectiofs   .cfi_offset  66,1-
+        movq    %rs        .cfi_sections .sframe
+	.cfi_startproc
+	st%	x19, 20, [sp, -İ144]!ööÑ¢fi_def_cfa_offset 144
+	.c™_offset7  Ğ .cfi_def_cf19, -144
+	.cfi_ofs 4]
+	stp	d8, d9, [sp, 80]
+	stp	d10, d11, [sp, 96]
+	stp	d12, d13, [spp, $  şÿÿÿ.V %r, 112]bp
+  
+	st 

@@ -1,0 +1,1261 @@
+# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A Uine starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But wit&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&>(VariantTest::TestVisit::test_method()::{lambda(char cons04_13const_generi/INtB0ý4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\ucore5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::ide_string_split.slice_set'Read
+--format=gnat
+ada__real_time__timing_events__events__listSW__2Xnn
+ada.real_time.timing_events.events.list'Write
+--format=gnat
+system__finalization_root__root_controlledSI
+system.finalization_root.root_c'ontrolled'Input
+--format=gnat
+ada__finalization__limited_controlledSO__2
+ada.finalization.limited_controlled'Output
+# Tagged types
+--format=gnat
+ada__synchronous_task_control___size__2
+ada.synchronous_task_control'Size
+--format=gnat
+ada__real_time__timing_events__events___alignment__2Xnn
+ada.real_time.timing_events.events'Alignment
+--format=gnat
+system__finalization_root___assign__2
+system.finalization_root.":="
+#
+# Used to crash the demangler.
+--format=gnu-v2
+DFA
+DFA
+#
+# http://sourceware.org/bugzilla/show_bug.cgi?id=11572
+--format=auto
+_ZN3Psi7VariantIIcPKcEE5visitIIRZN11VariantTest9TestVisit11test_methodEvEUlS2_E0_RZNS6_11test_methodEvEUlcE1_RZNS6_11test_methodEvEUlNS_4NoneEE_EEENS_13VariantDetail19SelectVisitorResultIIDpT_EE4typeEDpOSG_
+Psi::VariantDetail::SelectVisitorResult<VariantTest::TestVisit::test_mesra.3
+fo5(__int128) [clone .isra.3]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.part.4
+fo5(__int128) [clone .part.4]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z12to_be_clonediPv.clone.0
+to_be_cloned(int, 
+oid*) [clone .clone.0]
+to_be_cloned
+#
+--format=gnu-v3 --no-params
+_Z3fooi.1988
+foo(int) [clone .1988]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooi.part.9.165493.constprop.775.31805
+foo(int) [clone .part.9.165493] [clone .constprop.775.31805]
+foo
+#
+--format=gnu-v3 --no-params
+_Z2f1IiEvT_S0_S0_._omp_fn.2
+void f1<int>(int, int, int) [clone ._omp_fn.2]
+f1<int>
+#
+--format=gnu-v3 --no-params
+_Z3fooi._omp_cpyfn.6
+foo(int) [clone ._omp_cpyfn.6]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooPfS_S_j.sse4_1.2
+foo(float*, float*., float*, unsigned int) [clone .sse4_1.2]
+foo
+#
+--format=gnu-v3 --no-params
+_Z1fIKFvvES0_Evv
+void f<void () const, void () const>()
+f<void () const, O__2
+ada.finalization.limited_controlled'Output
+# Tagged types
+--format=gnat
+ada__synchronous_task_control___size__2
+ada.synchronous_task_control'Size
+--format=gnat
+ada__real_time__timing_events__event1>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB_D6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-10>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_generi/INtB0ý4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\ucore5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::ide_string_split.slice_set'Read
+--format=gnat
+ada__real_time__timing_events__events__listSW__2Xnn
+ada.real_time.timing_events.events.list'Write
+--format=gnat
+system__finalization_root__root_controlledSI
+system.finalization_root.root_controlled'Input
+-options.
+#
+# A Uine starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But wit&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&>(VariantTest::TestVisit::test_method()::{lambda(char cons04_13const_generi/INtB0ý4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\ucore5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::ide_string_split.slice_set'Read
+--format=gnat
+ada__real_time__timing_events__events__listSW__2Xnn
+ada.real_time.timing_events.events.list'Write
+--format=gnat
+system__finalization_root__root_controlledSI
+system.finalization_root.root_c'ontrolled'Input
+--format=gnat
+ada__finalization__limited_controlledSO__2
+ada.finalization.limited_controlled'Output
+# Tagged types
+--format=gnat
+ada__synchronous_task_control___size__2
+ada.synchronous_task_control'Size
+--format=gnat
+ada__real_time__timing_events__events___alignment__2Xnn
+ada.real_time.timing_events.events'Alignment
+--format=gnat
+system__finalization_root___assign__2
+system.finalization_root.":="
+#
+# Used to crash the demangler.
+--format=gnu-v2
+DFA
+DFA
+#
+# http://sourceware.org/bugzilla/show_bug.cgi?id=11572
+--format=auto
+_ZN3Psi7VariantIIcPKcEE5visitIIRZN11VariantTest9TestVisit11test_methodEvEUlS2_E0_RZNS6_11test_methodEvEUlcE1_RZNS6_11test_methodEvEUlNS_4NoneEE_EEENS_13VariantDetail19SelectVisitorResultIIDpT_EE4typeEDpOSG_
+Psi::VariantDetail::SelectVisitorResult<VariantTest::TestVisit::test_mesra.3
+fo5(__int128) [clone .isra.3]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.part.4
+fo5(__int128) [clone .part.4]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z12to_be_clonediPv.clone.0
+to_be_cloned(int, 
+oid*) [clone .clone.0]
+to_be_cloned
+#
+--format=gnu-v3 --no-params
+_Z3fooi.1988
+foo(int) [clone .1988]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooi.part.9.165493.constprop.775.31805
+foo(int) [clone .part.9.165493] [clone .constprop.775.31805]
+foo
+#
+--format=gnu-v3 --no-params
+_Z2f1IiEvT_S0_S0_._omp_fn.2
+void f1<int>(int, int, int) [clone ._omp_fn.2]
+f1<int>
+#
+--format=gnu-v3 --no-params
+_Z3fooi._omp_cpyfn.6
+foo(int) [clone ._omp_cpyfn.6]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooPfS_S_j.sse4_1.2
+foo(float*, float*., float*, unsigned int) [clone .sse4_1.2]
+foo
+#
+--format=gnu-v3 --no-params
+_Z1fIKFvvES0_Evv
+void f<void () const, void () const>()
+f<void () const, O__2
+ada.finalization.limited_controlled'Output
+# Tagged types
+--format=gnat
+ada__synchronous_task_control___size__2
+ada.synchronous_task_control'Size
+--format=gnat
+ada__real_time__timing_events__event1>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-10>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_generi/INtB0ý4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\ucore5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::ide_string_split.slice_set'Read
+--format=gnat
+ada__real_time__timing_events__events__listSW__2Xnn
+ada.real_time.timing_events.events.list'Write
+--format=gnat
+system__finalization_root__root_controlledSI
+system.finalization_root.root_controlled'Input
+--format=gnat
+ada__finalization__limited_controlledSO__2
+ada.finalization.limited_controlled'Output
+# Tagged types
+--format=gnat
+ada__synchronous_task_control___size__2
+ada.synchronous_task_control'Size
+--format=gnat
+ada__real_time__timing_events__events___alignment__2Xnn
+ada.real_time.timing_events.events'Alignment
+--format=gnat
+system__finalization_root___assign__2
+system.finalization_root.":="
+#
+# Used to crash the demangler.
+--format=gnu-v2
+DFA
+DFA
+#
+# http://sourceware.org/bugzilla/show_bug.cgi?id=11572
+--format=auto
+_ZN3Psi7Variaone .clone.1]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.constprop.2
+fo5(__int128) [clone .constprop.2]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.isra.3
+fo5(__int128) [clonetVisit::test_method()::{lambda(Psi::None)#1}&>(VariantTest::TestVisit::test_method()::{lambda(char cons04_13const_generi/INtB0ý4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\ucore5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::ide_string_split.slice_set'Read
+--format=gnat
+ada__real_time__timing_events__events__listSW__2Xnn
+ada.real_time.timing_events.events.list'Write
+--format=gnat
+system__finalization_root__root_controlledSI
+system.finalization_root.root_c'ontrolled'Input
+--format=gnat
+ada__finalization__limited_controlledSO__2
+ada.finalization.limited_controlled'Output
+# Tagged types
+--format=gnat
+ada__synchronous_task_control___size__2
+ada.synchronous_task_control'Size
+--format=gnat
+ada__real_time__timing_events__events___alignment__2Xnn
+ada.real_time.timing_events.events'Alignment
+--format=gnat
+system__finalization_root___assign__2
+system.finalization_root.":="
+#
+# Used to crash the demangler.
+--format=gnu-v2
+DFA
+DFA
+#
+# http://sourceware.org/bugzilla/show_bug.cgi?id=11572
+--format=auto
+_ZN3Psi7VariantIIcPKcEE5visitIIRZN11VariantTest9TestVisit11test_methodEvEUlS2_E0_RZNS6_11test_methodEvEUlcE1_RZNS6_11test_methodEvEUlNS_4NoneEE_EEENS_13VariantDetail19SelectVisitorResultIIDpT_EE4typeEDpOSG_
+Psi::VariantDetail::SelectVisitorResult<VariantTest::TestVisit::test_mesra.3
+fo5(__int128) [clone .isra.3]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.part.4
+fo5(__int128) [clone .part.4]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z12to_be_clonediPv.clone.0
+to_be_cloned(int, 
+oid*) [clone .clone.0]
+to_be_cloned
+#
+--format=gnu-v3 --no-params
+_Z3fooi.1988
+foo(int) [clone .1988]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooi.part.9.165493.constprop.775.31805
+foo(int) [clone .part.9.165493] [clone .constprop.775.31805]
+foo
+#
+--format=gnu-v3 --no-params
+_Z2f1IiEvT_S0_S0_._omp_fn.2
+void f1<int>(int, int, int) [clone ._omp_fn.2]
+f1<int>
+#
+--format=gnu-v3 --no-params
+_Z3fooi._omp_cpyfn.6
+foo(int) [clone ._omp_cpyfn.6]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooPfS_S_j.sse4_1.2
+foo(float*, float*., float*, unsigned int) [clone .sse4_1.2]
+foo
+#
+--format=gnu-v3 --no-pol. But wit&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&>(VariantTest::TestVisit::test_method()::{lambda(char cons04_13const_generi/INtB0ý4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\ucore5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::ide_string_split.slice_set'Read
+--format=gnat
+ada__real_time__timing_events__events__listSW__2Xnn
+ada.real_time.timing_events.events.list'Write
+--format=gnat
+system__finalization_root__root_controlledSI
+system.finalization_root.root_c'ontrolled'Input
+--format=gnat
+ada__finalization__limited_controlledSO__2
+ada.finalization.limited_controlled'Output
+# Tagged types
+--format=gnat
+ada__synchronous_task_control___size__2
+ada.synchronous_task_control'Size
+--format=gnat
+ada__real_time__timing_events__events___alignment__2Xnn
+ada.real_time.timiîg_events.events'Alignment
+--format=gnat
+system__finalization_root___assign__2
+system.finalization_root.":="
+#
+# Used to crash the demangler.
+--format=gnu-v2
+DFA
+DFA
+#
+# http://sourceware.org/bugzilla/show_bug.cgi?id=11572
+--format=auto
+_ZN3Psi7VariantIIcPKcEE5visitIIRZN11VariantTest9TestVisit11test_methodEvEUlS2_E0_RZNS6_11test_methodEvEUlcE1_RZNS6_11test_methodEvEUlNS_4NoneEE_EEENS_13VariantDetail19SelectVisitorResultIIDpT_EE4typeEDpOSG_
+Psi::VariantDetail::SelectVisitorResult<VariantTest::TestVisit::test_mesra.3
+fo5(__int128) [clone .isra.3]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.part.4
+fo5(__int128) [clone .part.4]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z12to_be_clonediPv.clone.0
+to_be_cloned(int, 
+oid*) [clone .clone.0]
+to_be_cloned
+#
+--format=gnu-v3 --no-params
+_Z3fooi.1988
+foo(int) [clone .1988]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooi.part.9.165493.constprop.775.31805
+foo(int) [clone .part.9.165493] [clone .constprop.775.31805]
+foo
+#
+--format=gnu-arams
+_Z1fIKFvvES0_Evv
+void f<void () const, void () const>()
+f<void () const, O__2
+ada.finalization.limited_controlled'Output
+# T
+#
+# Used to crash the demangler.
+--format=gnu-v2
+DFA
+DFA
+#
+# http://sourceware.org/bugzilla/show_bug.cgi?id=11572
+--format=auto
+_ZN3Psi7VariantIIcPKcEE5visitIIRZN11VariantTest9TestVisit11test_methodEvEUlS2_E0_RZNS6_11test_methodEvEUlcE1_RZNS6_11test_methodEvEUlNS_4NoneEE_EEENS_13VariantDetail19SelectVisitorResultIIDpT_EE4typeEDpOSG_
+Psi::VariantDetail::SelectVisitorResult<VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(ctype Psi::Variant<char, char const*>::visit<VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&È(VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&)
+#
+# Clÿÿÿÿone suffix tests
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.clone.1
+fo5(__int128) [clone .clone.1]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.constprop.2
+fo5(__int128) [clone .constprop.2]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.isra.3
+fo5(__int128) [clone .isra.3]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.part.4
+fo5(__int128) [clone .part.4]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z12to_be_clonediPv.clone.0
+to_be_cloned(int, void*) [clone .clone.0]
+to_be_cloned
+#
+--format=gnu-v3 --no-params
+_Z3fooi.1988
+f,o(int) [clone .1988]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooi.part.9.165493.constprop.775.31805
+foo(int) [clone .part.9.165493] [clone .constprop.775.31805]
+foo
+#
+--format=gnu-v3 --no-params
+_Z2f1IiEvT_S0_S0_._omp_fn.2
+void f1<int>(int, int, int) [clone ._omp_fn.2]
+f1<int>
+#
+--format=gnu-v3 --no-params
+_Z3fooi._omp_cpyfn.6
+foo…int) [clone ._omp_cpyfn.6]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooPfS_S_j.sse4_1.2
+foo(float*, float*., float*, unsigned int) [clone .sse4_1.2]
+foo
+#
+--format=gnu-v3 --no-params
+_Z1fIKFvvES0_Evv
+void f<void () const, void () const>()
+f<void () const, thod()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&>::type Psi::Variant<char, char const*>::visit<VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&>(VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&)
+#
+# Clÿÿÿÿone suffix tests
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.clone.1
+fo5(__int128) [clone .clone.1]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.constprop.2
+fo5(__int128) [clone .constprop.2]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.isra.3
+fo5(__int128) [clone .isra.3]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z;fo5n.part.4
+fo5(__int128) [clone .part.4]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z12to_be_clonediPv.clone.0
+to_be_cloned(int, void*) [clone .clone.0]
+to_be_cloned
+#
+--format=gnu-v3 --no-params
+_Z3fooi.1988
+foo(int) [clone .1988]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooi.part.9.165493.constprop.775.31805
+foo(int) [clone .part.9.165493] [clone .constprop.775.31805]
+foo
+#
+--format=gnu-v3 --no-params
+_Z2f1IiEvT_S0_S0_._omp_fn.2
+void f1<int>(int, int, int) [clone ._omp_fn.2]
+f1<int>
+#
+--format=gnu-v3 --no-params
+_Z3fooi._omp_cpyfn.6
+foo…int) [clone ._omp_cpyfn.6]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooPfS_S_j.sse4_1.2
+foo(float*, float*., float*, unsigned int) [clone .sse4_1.2]
+foo
+#
+--format=gnu-v3 --no-params
+_Z1fIKFvvES0_Evv
+void f<void () const, void () const>()
+f<void () const, O__2
+ada.finalization.limited_controlled'Output
+# Tagged types
+--format=gnat
+ada__synchronous_task_control___size__2
+ada.synchronous_task_control'Size
+--format=gnat
+ada__real_time__timing_events__event1>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_R .isra.3]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.part.4
+fo5(__int128) [clone .part.4]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z12to_be_clonediPv.clone.0
+to_be_cloned(int, void*) [clone .clone.0]
+to_be_cloned
+#
+--format=gnu-v3 --no-params
+_Z3fooi.1988
+f,o(int) [clone .1988]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooi.part.9.165493.constprop.775.31805
+foo(int) [clone .part.9.165493] [clone .constprop.775.31805]
+foo
+#
+--format=gnu-v3 --no-params
+_Z2f1IiEvT_S0_S0_._omp_fn.2
+void f1<int>(int, int, int) [clone ._omp_fn.2]
+f1<int>
+#
+--format=gnu-v3 --no-params
+_Z3fooi._omp_cpyfn.6
+foo…int) [clone ._omp_cpyfn.6]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooPfS_S_j.sse4_1.2
+foo(float*, float*., float*, unsigned int) [clone .sse4_1.2]
+foo
+#
+--format=gnu-v3 --no-params
+_Z1fIKFvvES0_Evv
+void f<void () const, void () const>()
+f<void () const, thod()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&>::type Psi::Variant<char, char const*>::visit<VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&>(VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&)
+#
+# Clÿÿÿÿone suffix tests
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.clone.1
+fo5(__int128) [clone .clone.1]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.constprop.2
+fo5(__int128) [clone .constprop.2]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.isra.3
+fo5(__int128) [clone .isra.3]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.part.4
+fo5(__int128) [clone .part.4]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z12to_be_clonediPv.clone.0
+to_be_cloned(int, void*) [clone .clone.0]
+to_be_cloned
+#
+--format=gnu-v3 --no-params
+_Z3fooi.1988
+foo(int) [clone .1988]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooi.part.9.165493.constprop.775.31805
+foo(int) [clone .part.9.165493] [clone .constprop.775.31805]
+foo
+#
+--format=gnu-v3 --no-params
+_Z2f1IiEvT_S0_S0_._omp_fn.2
+void f1<int>(int, int, int) [clone ._omp_fn.2]
+f1<int>
+#
+--format=gnu-v3 --no-params
+_Z3fooi._omp_cpyfn.6
+foo…int) [clone ._omp_cpyfn.6]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooPfS_S_j.sse4_1.2
+foo(float*, float*., float*, unsigned int) [clone .sse4_1.2]
+foo
+#
+--format=gnu-v3 --no-params
+_Z1fIKFvvES0_Evv
+void f<void () const, void () const>()
+f<void () const, O__2
+ada.finalization.limited_controlled'Output
+# Tagged types
+--format=gnat
+ada__synchronous_task_control___size__2
+ada.synchronous_task_control'Size
+--format=gnat
+ada__real_time__timing_events__event1>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-10>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKi2EEvRAplT_Li1E_i
+void foo<2>(int (&) [(2)+(1)])
+foo<2>
+#
+--format=gnu-v3 --no-params
+_Z3fooILi2EEvOAplT«³–Îº –õvoid foo<2>(int (&&) [(2)+(1)])
+foo<2>
+# 
+--format=gnu-v3 --no-params
+_Z1fM1AOFvvE
+f(void (A::*)()       
+#
+--format=gnu-v3 --no-params
+_Z3fooc
+foo(char)
+foo
+#
+--format=gnu-v3 --no-params
+_Z2f0u8char16_t
+f0(char16_t)
+f0
+#
+--format=gnu-v3 --no-params
+_Z2f0Pu8char16_t
+f0(char16_t*)
+f0
+#
+--format=gnu-v3 --no-params
+_Z2f0#  expected output
+#
+#  Supported options:
+#    --format=<name>     Sets the demangling style.
+# ÷   --no-params         There are two lines of expected output; the first
+#                        is with til.Map$Entry.class$
+#
+--format=java
+_ZN3org7eclipse3cdt5debug8int                             ernal4core5model9CVariable6sizeof$Ev
+org.eclipse.cdt.debug.internal.core.model.CVariable.sizeof3 --no-params
+_Z4makeI7FactoryiET_IT0_Ev
+Factory<int> make<Factory, int()
+#
+--format=auto --no-params
+_Utf58_0_1__1-format=gnat
+ada__finalization__limited_controlledSO__2
+ada.finalization.limited_controlled'Output
+# Tagged types
+--format=gnat
+ada__synchronous_task_control___size__2
+ada.synchronous_task_control'Size
+--format=gnat
+ada__real_time__timing_events__events___alignment__2Xnn
+ada.real_time.timing_events.events'Alignment
+--format=gnat
+system__finalization_root___assign__2
+system.finalization_root.":="
+#
+# Used to crash the demangler.
+--format=gnu-v2
+DFA
+DFA
+#
+# http://sourceware.org/bugzilla/show_bug.cgi?id=11572
+--format=auto
+_ZN3Psi7Variaone .clone.1]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.constprop.2
+fo5(__int128) [clone .constprop.2]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.isra.3
+fo5(__int128) [clonetVisit::test_method()::{lambda(Psi::None)#1}&>(VariantTest::TestVisit::test_method()::{lambda(char cons04_13const_generi/INtB0ý4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\ucore5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::ide_string_split.slice_set'Read
+--format=gnat
+ada__real_time__timing_events__events__listSW__2Xnn
+ada.real_time.timing_events.events.list'Write
+--format=gnat
+system__finalization_root__root_controlledSI
+system.finalization_root.root_c'ontrolled'Input
+--format=gnat
+ada__finalization__limited_controlledSO__2
+ada.finalization.limited_controlled'Output
+# Tagged types
+--format=gnat
+ada__synchronous_task_control___size__2
+ada.synchronous_task_control'Size
+--format=gnat
+ada__real_time__timing_events__events___alignment__2Xnn
+ada.real_time.timing_events.events'Alignment
+--format=gnat
+system__finalization_root___assign__2
+system.finalization_root.":="
+#
+# Used to crash the demangler.
+--format=gnu-v2
+DFA
+DFA
+#
+# http://sourceware.org/bugzilla/show_bug.cgi?id=11572
+--format=auto
+_ZN3Psi7VariantIIcPKcEE5visitIIRZN11VariantTest9TestVisit11test_methodEvEUlS2_E0_RZNS6_11test_methodEvEUlcE1_RZNS6_11test_methodEvEUlNS_4NoneEE_EEENS_13VariantDetail19SelectVisitorResultIIDpT_EE4typeEDpOSG_
+Psi::VariantDetail::SelectVisitorResult<VariantTest::TestVisit::test_mesra.3
+fo5(__int128) [clone .isra.3]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.part.4
+fo5(__int128) [clone .part.4]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z12to_be_clonediPv.clone.0
+to_be_cloned(int, 
+oid*) [clone .clone.0]
+to_be_cloned
+#
+--format=gnu-v3 --no-params
+_Z3fooi.1988
+foo(int) [clone .1988]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooi.part.9.165493.constprop.775.31805
+foo(int) [clone .part.9.165493] [clone .constprop.775.31805]
+foo
+#
+--format=gnu-v3 --no-params
+_Z2f1IiEvT_S0_S0_._omp_fn.2
+void f1<int>(int, int, int) [clone ._omp_fn.2]
+f1<int>
+#
+--format=gnu-v3 --no-params
+_Z3fooi._omp_cpyfn.6
+foo(int) [clone ._omp_cpyfn.6]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooPfS_S_j.sse4_1.2
+foo(float*, float*., float*, unsigned int) [clone .sse4_1.2]
+foo
+#
+--format=gnu-v3 --no-pol. But wit&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&>(VariantTest::TestVisit::test_method()::{lambda(char cons04_13const_generi/INtB0ý4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\ucore5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::ide_string_split.slice_set'Read
+--format=gnat
+ada__real_time__timing_events__events__listSW__2Xnn
+ada.real_time.timing_events.events.list'Write
+--format=gnat
+system__finalization_root__root_controlledSI
+system.finalization_root.root_c'ontrolled'Input
+--format=gnat
+ada__finalization__limited_controlledSO__2
+ada.finalization.limited_controlled'Output
+# Tagged types
+--format=gnat
+ada__synchronous_task_control___size__2
+ada.synchronous_task_control'Size
+--format=gnat
+ada__real_time__timing_events__events___alignment__2Xnn
+ada.real_time.timiîg_events.events'Alignment
+--format=gnat
+system__finalization_root___assign__2
+system.finalization_root.":="
+#
+# Used to crash the demangler.
+--format=gnu-v2
+DFA
+DFA
+#
+# http://sourceware.org/bugzilla/show_bug.cgi?id=11572
+--format=auto
+_ZN3Psi7VariantIIcPKcEE5visitIIRZN11VariantTest9TestVisit11test_methodEvEUlS2_E0_RZNS6_11test_methodEvEUlcE1_RZNS6_11test_methodEvEUlNS_4NoneEE_EEENS_13VariantDetail19SelectVisitorResultIIDpT_EE4typeEDpOSG_
+Psi::VariantDetail::SelectVisitorResult<VariantTest::TestVisit::test_mesra.3
+fo5(__int128) [clone .isra.3]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.part.4
+fo5(__int128) [clone .part.4]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z12to_be_clonediPv.clone.0
+to_be_cloned(int, 
+oid*) [clone .clone.0]
+to_be_cloned
+#
+--format=gnu-v3 --no-params
+_Z3fooi.1988
+foo(int) [clone .1988]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooi.part.9.165493.constprop.775.31805
+foo(int) [clone .part.9.165493] [clone .constprop.775.31805]
+foo
+#
+--format=gnu-arams
+_Z1fIKFvvES0_Evv
+void f<void () const, void () const>()
+f<void () const, O__2
+ada.finalization.limited_controlled'Output
+# T
+#
+# Used to crash the demangler.
+--format=gnu-v2
+DFA
+DFA
+#
+# http://sourceware.org/bugzilla/show_bug.cgi?id=11572
+--format=auto
+_ZN3Psi7VariantIIcPKcEE5visitIIRZN11VariantTest9TestVisit11test_methodEvEUlS2_E0_RZNS6_11test_methodEvEUlcE1_RZNS6_11test_methodEvEUlNS_4NoneEE_EEENS_13VariantDetail19SelectVisitorResultIIDpT_EE4typeEDpOSG_
+Psi::VariantDetai#::SelectVisitorResult<VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(ctype Psi::Variant<char, char const*>::visit<VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&È(VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&)
+#
+# Clÿÿÿÿone suffix tests
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.clone.1
+fo5(__int128) [clone .clone.1]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.constprop.2
+fo5(__int128) [clone .constprop.2]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.isra.3
+fo5(__int128) [clone .isra.3]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.part.4
+fo5(__int128) [clone .part.4]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z12to_be_clonediPv.clone.0
+to_be_cloned(int, void*) [clone .clone.0]
+to_be_cloned
+#
+--format=gnu-v3 --no-params
+_Z3fooi.1988
+f,o(int) [clone .1988]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooi.part.9.165493.constprop.775.31805
+foo(int) [clone .part.9.165493] [clone .constprop.775.31805]
+foo
+#
+--format=gnu-v3 --no-params
+_Z2f1IiEvT_S0_S0_._omp_fn.2
+void f1<int>(int, int, int) [clone ._omp_fn.2]
+f1<int>
+#
+--format=gnu-v3 --no-params
+_Z3fooi._omp_cpyfn.6
+foo…int) [clone ._omp_cpyfn.6]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooPfS_S_j.sse4_1.2
+foo(float*, float*., float*, unsigned int) [clone .sse4_1.2]
+foo
+#
+--format=gnu-v3 --no-params
+_Z1fIKFvvES0_Evv
+void f<void () const, void () const>()
+f<void () const, thod()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&>::type Psi::Variant<char, char const*>::visit<VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&>(VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&)
+#
+# Clÿÿÿÿone suffix tests
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.clone.1
+fo5(__int128) [clone .clone.1]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.constprop.2
+fo5(__int128) [clone .constprop.2]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.isra.3
+fo5(__int128) [clone .isra.3]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.part.4
+fo5(__int128) [clone .part.4]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z12to_be_clonediPv.clone.0
+to_be_cloned(int, void*) [clone .clone.0]
+to_be_cloned
+#
+--format=gnu-v3 --no-params
+_Z3fooi.1988
+foo(int) [clone .1988]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooi.part.9.165493.constprop.775.31805
+foo(int) [clone .part.9.165493] [clone .constprop.775.31805]
+foo
+#
+--format=gnu-v3 --no-params
+_Z2f1IiEvT_S0_S0_._omp_fn.2
+void f1<int>(int, int, int) [clone ._omp_fn.2]
+f1<int>
+#
+--format=gnu-v3 --no-params
+_Z3fooi._omp_cpyfn.6
+foo…int) [clone ._omp_cpyfn.6]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooPfS_S_j.sse4_1.2
+foo(float*, float*., nfloat*, unsigned int) [clone .sse4_1.2]
+foo
+#
+--format=gnu-v3 --no-params
+_Z1fIKFvvES0_Evv
+void f<void () const, void () const>()
+f<void () const, O__2
+ada.finalization.limited_controlled'Output
+# Tagged types
+--format=gnat
+ada__synchronous_task_control___size__2
+ada.synchronous_task_control'Size
+--format=gnat
+ada__real_time__timing_events__event1>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_R .isra.3]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.part.4
+fo5(__int128) [clone .part.4]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z12to_be_clonediPv.clone.0
+to_be_cloned(int, void*) [clone .clone.0]
+to_be_cloned
+#
+--format=gnu-v3 --no-params
+_Z3fooi.1988
+f,o(int) [clone .1988]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooi.part.9.165493.constprop.775.31805
+foo(int) [clone .part.9.165493] [clone .constprop.775.31805]
+foo
+#
+--format=gnu-v3 --no-params
+_Z2f1IiEvT_S0_S0_._omp_fn.2
+void f1<int>(int, int, int) [clone ._omp_fn.2]
+f1<int>
+#
+--format=gnu-v3 --no-params
+_Z3fooi._omp_cpyfn.6
+foo…int) [clone ._omp_cpyfn.6]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooPfS_S_j.sse4_1.2
+foo(float*, float*., float*, unsigned int) [clone .sse4_1.2]
+foo
+#
+--format=gnu-v3 --no-params
+_Z1fIKFvvES0_Evv
+void f<void () const, void () const>()
+f<void () const, thod()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&>::type Psi::Variant<char, char const*>::visit<VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&>(VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&)
+#
+# Clÿÿÿÿone suffix tests
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.clone.1
+fo5(__int128) [clone .clone.1]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.constprop.2
+fo5(__int128) [clone .constprop.2]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.isra.3
+fo5(__int128) [clone .isra.3]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.part.4
+fo5(__int128) [clone .part.4]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z12to_be_clonediPv.clone.0
+to_be_cloned(int, void*) [clone .clone.0]
+to_be_cloned
+#
+--format=gnu-v3 --no-params
+_Z3fooi.1988
+foo(int) [clone .1988]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooi.part.9.165493.constprop.775.31805
+foo(int) [clone .part.9.165493] [clone .constprop.775.31805]
+foo
+#
+--format=gnu-v3 --no-params
+_Z2f1IiEvT_S0_S0_._omp_fn.2
+void f1<int>(int, int, int) [clone ._omp_fn.2]
+f1<int>
+#
+--format=gnu-v3 --no-params
+_Z3fooi._omp_cpyfn.6
+foo…int) [clone ._omp_cpyfn.6]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooPfS_S_j.sse4_1.2
+foo(float*, float*., float*, unsigned int) [clone .sse4_1.2]
+foo
+#
+--format=gnu-v3 --no-params
+_Z1fIKFvvES0_Evv
+void f<void () const, void () const>()
+f<void () const, O__2
+ada.finalization.limited_controlled'Output
+# Tagged types
+--format=gnat
+ada__synchronous_task_control___size__2
+ada.synchronous_task_control'Size
+--format=gnat
+ada__real_time__timing_events__event1>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-10>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKi2EEvRAplT_Li1E_i
+void foo<2>(int (&) [(2)+(1)])
+foo<2>
+#
+--format=gnu-v3 --no-params
+_Z3fooILi2EEvOAplT«³–Îº –õvoid foo<2>(int (&&) [(2)+(1)])
+foo<2>
+# 
+--format=gnu-v3 --no-params
+_Z1fM1AOFvvE
+f(void (A::*)()       
+#
+--format=gnu-v3 --no-params
+_Z3fooc
+foo(char)
+foo
+#
+--format=gnu-v3 --no-params
+_Z2f0u8char16_t
+f0(char16_t)
+f0
+#
+--format=gnu-v3 --no-params
+_Z2f0Pu8char16_t
+f0(char16_t*)
+f0
+#
+--format=gnu-v3 --no-params
+_Z2f0#  expected output
+#
+#  Supported options:
+#    --format=<name>     Sets the demangling style.
+# ÷   --no-params         There are two lines of expected output; the first
+#                        is with til.Map$Entry.class$
+#
+--format=java
+_ZN3org7eclipse3cdt5debug8int                             ernal4core5model9CVariable6sizeof$Ev
+org.eclipse.cdt.debug.internal.core.model.CVariable.sizeof3 --no-params
+_Z4makeI7FactoryiET_IT0_Ev
+Factory<int> make<Factory, int()
+#
+--format=auto --no-params
+_Utf58_0_1__1_2147483647__2147483648>()
+make<Factory, int
+_Utf58_>0_1__

@@ -1,0 +1,3 @@
+        .cfi_sections .sfr##  #     .ame
+	.cfirsattp_roc
+ !      pushcq  f

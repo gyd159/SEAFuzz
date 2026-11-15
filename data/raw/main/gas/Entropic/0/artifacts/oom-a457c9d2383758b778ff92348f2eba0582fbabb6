@@ -1,0 +1,47 @@
+## same as aarch64/pac_ab_k
+	.																																			
+																									
+   6     ret
+	.cfi_en		õö										0, -8
+o	pn
+	nop
+   '    ef_r1a_offset 16
+	.cfi_offset 29, -16
+
+o	pn
+	nop
+        ret
+	.cfi_en																						0+ -8
+on														0, -8
+o	pn
+	nop
+       ef_r1a_ofo
+	.																														\\\## same																														0, -8
+o	pn
+	nop
+        ret
+	.c	pn
+	nop
+        ret
+	.cfi_en			pac_ab_key.s
+	.arch armv8-0, -8
+on														0, -8
+o	pn
+	nop
+       ef_r1a_offset 16
+	.cfi_offset 29, -16
+
+o	pn
+	nop
+        ret
+	.cfi_en														0, -8
+o	pn
+	nop
+        ret
+	.c	pn
+	nop
+        ret
+	.cfi_en			pac_ab_key.s
+	.arch armv8-a
+	"""""type	_Z5fo
+	.																														\\\## same																																d		proc

@@ -1,0 +1,116 @@
+# This file holds test cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignorame!([0:"c", 2:"a"]).rename().__lambda1,©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©name().__lambda1,"int[]).FilterResult.__xtoHash(rn.FilterResult!(std.typecons.Tuple!(inestFZv
+demangle.test()
+#
+--format=dlang
+_D8demangle4testMFZ2fnMFZv
+demangle.test().fn()
+#
+--format=dlang
+_D8demangle4testFaZv
+--format=dlang
+_D8demangle4testFNhG2fZv
+demangle.test(__vector(float[2]))
+#
+--format=dlang
+_D8demangle4testFNhG4fZv
+demangl]))
+#
+--format=dlang
+_Dgned<152>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=auto
+_RMCs_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=auto
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB_GLOBALgnedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=auto# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demang”š›õÜßß“xpected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as r output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZNVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6Output©©©©©©©©©©©©©©©©©©©©t[]).FilteÁÁÁÁÁÁÁÁÁÁ
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_:
+#  options
+#  input to be demang”š›õÜßß“xpected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as r output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZNVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6Output©©©©©©©©©©©©©©©©©©©©t[]).FilteÁÁÁÁÁÁÁÁÁÁ
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--for@mat=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁrResult.__xtoHash(ref const(std.algorithm.iteration.FilterResult!(std.typecons.T‹ple!(int, "a",t.__xtoHash(rn.Filter©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©name().__lambda0, int[]).FilterResult.__xtoHash(rn.FilterResult!(std(ty©!©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©name().__lambda1, int[]).FilterResult.__xtoHash(rn.FilterResult!(std.typecons.Tuple!(int, "a", int,n.FilterResult!(stdnt, "a", int, "b",__vtblZ iÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=auto
+_ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿnt, "c").T-uple.rename!([0:"cRMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<c", 2ons:

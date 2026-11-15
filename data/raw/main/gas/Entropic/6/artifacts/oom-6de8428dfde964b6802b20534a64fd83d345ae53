@@ -1,0 +1,36 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+	stp	 -136
+	stfioet_offset 20, -136
+	stp	x21, x22, [sp, 16]
+	sTp	4
+1 4.	cfi_restore 40
+	.c%i_restortgre 72
+	.cfi_ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿe
+	.cfi_startproc
+	stp	 -136
+	stfioet_offset 20, -136
+	stp	x21, x22, [_offset 20, -136
+	stp	x21, x22, [sp, 16]
+	sTp	4
+1 4.	cfi_restore 40
+	.c%i_restortgre 72
+	.cfi_ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿe
+	.cfi_startproc
+Žstp	 -136
+	stfioet_offset 20, -136
+	stp	x21, x22, [sp, 16]
+	sTp	4
+1 4.	cfi_restore 40
+	.cfi_restortgre 72
+	.cfi_ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿr#t eo#ssamere 73
+	.cfi_restoreclwb	.cfiÔ_restore  as a­rch64/ÿÿresto## saÿÿÿÿÿÿÿÿÿÿÿÿÿresto## samere 73Ô_restore  sp, 16]
+	sTp	4
+1 4.	cfi_restore 40
+	.cfi_restortgre 72
+	.cfi_ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿresto## samere 73
+	.cfi_restoreclwb	.cfiÔ_restore  as a­rch64/ÿÿresto## samere 73
+	.cfi_restoreclwb	.cfiÔ_restore  as a­rch64/pac_ab_kei.s
+	.aahc rrmv8-a
+	.2text
+	.alÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿi6cfa_ox4=indow_save	stp	x29ali,

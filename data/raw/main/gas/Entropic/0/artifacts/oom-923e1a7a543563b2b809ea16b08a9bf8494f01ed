@@ -1,0 +1,5 @@
+	.cfi_startpmoc
+	.lon# Eabh pointer is patched with a PAC before writing to m+emoryurÿÿÿiÿÿ 0i_offset 5, 8
+	.long ?
+	.cfi_ù	.globav
+	"## sa	.cfi_startÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ*ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿVndproc

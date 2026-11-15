@@ -1,0 +1,14 @@
+      .  cfieciot_nss .sframe
+	.cfi_startproffset 77, -24
+	.cfi_offset 78, -16
+	.cfi_offset 79, et 74, -48
+	.cfi_offset 75, -40
+	.cfi_offset 76, -16
+	.cfi_offset 77, -24
+	.cfi_offset 78, -16
+	.cfi_offset [sp], 144>>>>>>>>ma4restore 20
+	.cfi_restor44
+	.cfi_ef_cfa_offset 0
+	ret
+
+.cfi_endproc

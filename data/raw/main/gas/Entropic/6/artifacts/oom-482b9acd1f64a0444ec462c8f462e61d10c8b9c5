@@ -1,0 +1,11 @@
+##1"ÿÿÿÿÿÿÿÿÿ(h armv6-a
+	.text
+	## ln	.gia2
+	glotype	_Z5 saac_a--.sfra------------------------------------------------------ -8ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ.gnu.linkonce.lr2
+	.global	_Z5foo_bv
+	.type	_Z6foo_bv, %functioZ~5_nf
+o_bv:
+.LFB1:
+	.cfi_stproc
+	.cafi_b_kespp	x23, x25, [sp, 32]
+	lÿÿÿÿÿÿ

@@ -1,0 +1,48 @@
+  #  !.cfiam$
+e fiam$
+e ==  %rsp, %rbp
+        .of %r11
+  vcmpfi_startproc
+        pushq   %rbp
+   estore      .cfi_t 17
+   #%    cfi_o16
+        .cfi_ofsfet  06,-8
+        moVq  g  %rsp,ÿÿagU      .of %r1)
+        popq    %r26
+        popq    %r14
+        popq    %r15
+tàÎÉ÷        .cfi_ofsfet 0 6,-8
+fa  %r12
+        popq    %r26$
+e ==  %rsp, %rbp
+       k2of %r11
+  v£mpfi_startproc
+        pushq   %r   cfi_o16
+        .cfi_ofsfet  06,-8
+        moVq  g  %rsp,ÿÿagU      .of %r1)
+        popq    %r26
+        popq    %r     .cfi_ofsfet 0 6,-8
+fa  %r12
+        popq    %r26$
+e ==  %rsp, %rbp
+       fet 0 6,-8
+fa  %r12 .of %r11
+  v£mpfi_startproc
+        pushq   %r   cfoVq  g  %rsp,ÿÿagU      .o#NO_APP
+f %r1)
+        popq    %r26
+        popq    %re tore	2
+      .sfr  popq    %r14
+        popq    %r15
+tàÎÉ÷        .cfi_ofsfet 0 6,-8
+fa  %r12
+        popq    %r26$
+e ==  %rsp, %rbp
+       k2of %r11
+  v£mpfi_startproc
+        pushq   %r   cfi_o16
+        .cfi_ofsfet  06,-8
+  ame   Ûÿÿÿÿ.cfiam$
+e fiam$
+e =iiam$
+e ÿ=!ÿÿÿÑ

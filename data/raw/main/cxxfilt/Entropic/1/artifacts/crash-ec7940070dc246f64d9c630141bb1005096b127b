@@ -1,0 +1,281 @@
+# This file holds test cases for the Rˇˇˇˇˇˇˇ0ust dealloc::box_free::<d.n alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=auto
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=auto
+©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©angle.test!(123)
+#
+--format=dlang
+_D8demangle15__T4testVii123Zv
+demangle.test!(123)
+#
+-t=auto
+_RMCs4fqrmat=rust
+_ZGI2P2rA04_13const_genericINtB0_4Cha_GLOBArKc2202_E
+<const_generic::CharTN4c$o<'\u{22012}'>>
+#
+--format=auto
+_RNvNvMCs4fqI2P2rA04_143const_genericINtB4_3FiopQbuBiw2_3std
+alloc::alloc::box_free::<d.n alloc:>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>:.:foo::FOO
+#
+# All of the tests above but in auto mode instead:
+:boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=auto
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=auto
+©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©angle.test!(123)
+#
+--format=dlang
+_D8demangle15__T4testVii123Zv
+demangle.test!(123)
+#
+-t=auto
+_RMCs4fqrmat=rust
+_ZGI2P2rA04_13const_genericINtB0_4CtputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<d.n alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=auto
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=auto
+©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©angle.test!(123)
+#
+--format=dlang
+_D8demangle15__T4testVii123Zv
+demangle.test!(1B0_4BoolK6b1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>:.:foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5slicuINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp3Oue this:
+#  options
+#  input to be demangled
+#utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5slicuINyB9_4IterhENuNgNoBb_4itetrre8iator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp3OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<d.n alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=auto
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=auto
+©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©angle.test!(123)
+#
+--format=dlang
+_D8demangle15__T4testVii123Zv
+demangle.test!(123)
+#
+-t=auto
+_RMCs4fqrmat=rust
+_ZGI2P2rA04_13const_genericINtB0_}4CtputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<d.n alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=auto
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=auto
+©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©angle.test!(123)
+#
+--format=dlang
+_D8demangle15__T4testVii123Zv
+demangle.test!(123)
+#
+-t=auto
+_RMCs4fqrmat=rust
+_Z23)
+#
+-t=auto
+_RMCs4fqrmat=rust
+_ZGI2P2rA04_13const_genericINtB0_4Cha_GLOBArKc2202_E
+<const_generic::CharTN4c$o<'\u{22012}'>>
+#
+--format=auto
+_RNvNvMCs4fqI2P2rA04_143const_genericINtB4_3FooKpE3foo3FOO
+<const::CharTN4c$o<'\u{22012}'>>
+#
+--format=auto
+_RNvNvMCs4fqI2P2rA04_143const_genericINtB4_3FiopQbuBiw2_3std
+alloc::alloc::box_free::<d.n alloc:>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>:.:foo::FOO
+#
+# All of the tests above but in auto mode instead:
+:boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=auto
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=auto
+©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©angle.test!(123)
+#
+--format=dlang
+_D8demangle15__T4testVii123Zv
+demangle.test!(123)
+#
+-t=auto
+_RMCs4fqrmat=rust
+_ZGI2P2rA04_13const_genericINtB0_4CtputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<d.n alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=auto
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=auto
+©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©angle.test!(123)
+#
+--format=dlang
+_D8demangle15__T4testVii123Zv
+demangle.test!(1B0_4BoolK6b1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>:.:foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5slicuINyB4_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp3Oue this:
+#  options
+#  input to be demangled
+#utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5slicuINyB9_4IterhENuNgNoBb_4itetrre8iator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp3OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<d.n alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--forma˛t=auto
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=auto
+©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©angle.test!(123)
+#
+--format=dlang
+_D8demangle15__T4testVii123Zv
+demangle.test!(123)
+#
+-t=auto
+_RMCs4fqrmat=rust
+_ZGI2P2rA04_13const_genericINtB0_4CtputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<d.n alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=auto
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=auto
+©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©angle.test!(123)
+#
+--format=dlang
+_D8demangle15__T4testVii123Zv
+demangle.test!(123)
+#
+-t=auto
+_RMCs4fqrmat=rust
+_Z23)
+#
+-t=auto
+_RMCs4fqrmat=rust
+_ZGI2P2rA04_13const_genericINtB0_4Cha_GLOBArKc2202_E
+<const_generic::CharTN4c$o<'\u{22012}'>>
+#
+--format=auto
+_RNvNvMCs4fqI2P2rA04_143const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo

@@ -1,0 +1,15 @@
+      ions .sframe
+	.cfi_staffset 155, -24
+        .cfi_offseu 14, -32
+   (    .cfi_offset 13, -40ssr sfa.me
+	.cfi_3tartproc
+	   fsw                                         $                    33333333333333333333333fi_3tartproc
+	   fsw                                         $                    3333333333333333333.$$$$$$$$$$$5, -24
+        .cfi_offseu 14, -32
+        .cfi_offset 13, -40ssr sfa.me
+	.cfi_3ta:rtproc
+	   fsw                                         $                    333333333333333333333333   ùùùffset 72, -64
+	.$$$$$$$$$$$$$$$$$$$Á$$$$$$$$$$$cfi_def_cfa 7, 8
+        ret
+        .cfc
+endproc

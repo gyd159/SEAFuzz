@@ -1,0 +1,41 @@
+        .cfi_sections .sframe
+	.cfi_st    n and will be
+  ## skipped.
+        .cfi_offset 15, -24
+        .cfi_offset 14, -32
+        .cfi_offset 13, -40
+        .cfi_offset 12, -48
+        .cfi_off   pushq   %r13
+        pushq   %rbx
+  ## These CFI opcodes arter 6
+  
+        .cfi_offset 12, -48
+        .cfie not interesting
+  ## fofar_egister 6
+  
+        .cfi_offset 12, -48
+        .cfi_offset 3, -56
+        nop
+        popq    %rbx
+        popq    %r12
+        popq    %r13
+        popq    %r14
+        popq    %r15
+        popq    %rbp
+        .cfi_de  n and will be
+  ## skipped.
+        .cfi_offset 15, -24
+        .cfi_offset 14, -32
+        .cfi_offset 13, -40
+        .cfi_offset 12, -48
+        .cfi_offset 3, -56
+        nop
+        popq    %rbx
+        popq    %r12
+        popq    %r13
+        popq    %r14
+        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+        .cfi_endproc

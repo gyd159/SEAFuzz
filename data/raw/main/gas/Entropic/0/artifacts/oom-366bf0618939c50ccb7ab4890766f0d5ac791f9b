@@ -1,0 +1,40 @@
+## same as aarch64/pac_a	.size	=_Z5foo_av, .-_Z5foo_av
+	.align	2
+	.global	_Z5foo_bv
+	.type	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	27 // 9, -16
+	.cfi_ofen.LFE0:
+	.size	_Z5foo_av.cfi_en.LFE0:
+	.size	_Z5foo_av, .LFE0:
+	.size	ype	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	27 // 9,ÿÿÿÿ ÿÿÿÿÿÿ-16
+	.cfi_ofen.LFE0:
+	.size	_Z5foo_av.cfi_en.LFE0:
+	.size	_Z5foo_av, .LFE0:
+	.size	_Z5foo_av&, .-_Z5foo_av
+	.align	2
+	.global	_Z5foo_bv
+	.type	_Z5foo_bv, %funccfi_startproc
+	.cfi_b_key_frameE0:
+	.size	=_Z5foo_av, .-_Z5foo_av
+	.align	2
+	.global	_Z5foo_bv
+	.type	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_bi_window_save
+	stp	x28, x30, [sp, -16]!
+	.lign	2
+	
+	.size	=_Z5foo_a.global	_Z5foo_bv
+	.type	_Z5foo_bv, %func  ret
+	.cfi_endproc

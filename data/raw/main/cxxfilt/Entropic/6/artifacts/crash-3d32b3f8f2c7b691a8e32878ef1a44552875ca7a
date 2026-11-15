@@ -1,0 +1,30 @@
+# This file holds test cases for the demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+#  Supported options:
+#    --format=<name>     Sets the demangling style.
+#    --no-params         There are two lines of expected ouar const*, void (Foo::*)(int)>(sel::Selector::SetObj<Foo, char const*, void (Foo::*)(int)>(Foo&, char const*, void (Foo::*)(int))::{lambda()#1}*&, char const*, void (Foo::*)(inŒÖÖÆ:{lambda()#1}*>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16752#c1
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZN13ThreadManager7newTaskIRSt5_BindIFSt7_Mem_fnIM5DiaryFivEEPS5_EEIEEESt6futureINSt9res}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}>(std::string const&, x::ref<x::mime::sectionObj, x::ptrrefBase> const&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}&&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}&&)::{lambda(unsigned long)#1}, x::mime::make_multipart_default_discarder<get_body_parser<mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const8:{lambda(x::ref<x::mime::sectionObjneric::Char<'v'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB_DmmAt0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--for#########
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--formamat=auto
+_RNvNvMCs4fqI2P2rA04_13const_gt=rust
+_ZenericINtB4_3NFooKp

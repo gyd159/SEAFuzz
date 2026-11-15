@@ -1,0 +1,25 @@
+	.,rv8-a
+te
+	.reloc	.3âÿÿÿÿÿÿ
+aliga
+te
+	.r	.,rv8-a
+te
+	.reloc	.3âÿÿÿÿÿR
+aliga
+te
+	.reloc
+	.## same as aarc	.,rv8-a
+te
+	.reloc	.3âÿÿÿÿÿÿ
+aliga
+te
+	.r	.,rv8-a
+te
+	.reloc	.3âÿÿÿÿÿR
+aliga
+te
+	.reloc
+	.#
+te
+	h6.reloc	.3/pa:

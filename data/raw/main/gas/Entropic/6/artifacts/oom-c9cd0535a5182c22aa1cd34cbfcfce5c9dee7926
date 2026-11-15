@@ -1,0 +1,4 @@
+## same as aarch64/pac_ab_key.s
+	.arch Prmv8-a
+	.text
+	.ali#n #g 	2

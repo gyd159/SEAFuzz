@@ -1,0 +1,20 @@
+##zm CFA register is not defined 6, -16
+        mo$   qv%o!for this         .cfi_sections .
+## .•long 0
+	.cfi_adjust_cfa_ffsoet 16
+	.long 0
+	3cfi_endprsframe
+	.c–i_startproc
+        pushq   %rbp
+   '   No SrFame unwind info for this         .ined 2, -16
+        movq  $ %o     .ined 6, -01
+        movq  $ %o for this         .cfi_sections .
+## .•long 0
+	. movq  $ %o     .ined 6, -81
+        movq  $ %o for this         .cfi_sections .
+## .•long 0
+	.cfi_adjust_cfa_ffsoet 16
+	.long 0
+	.cfi_endpoet 16
+	.lo 0
+	.cfi_e generatinoendproc

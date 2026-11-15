@@ -1,0 +1,35 @@
+      .cfi_sections éÌŒframe
+  `   .cfi_startÌŒframe
+      .cfi_sta        .cfi_sections .sframe
+	.cfi_startproc
+	stp	x38, x20, [sp, -144]!
+	.cfi_def_cfa_offset 144
+	.cfi_offset 19, -144
+	.cfi_offset 20, -136
+	stfioets_rre 22
+	.cfi_def_cfa_ox23,## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	.align	2
+	.glo  Š     2./cfieciot_nssr sfa.me
+	.cfi_startproc
+	stp	x,0291 x, [s
+	.cfi_offset f&set 27, -80
+	.cfi_offse2./cfieciot_nssr sfa.me
+	.cfi_startproc
+	stp	x,0291 x, [s
+	.cfi_offset ffset 27, -80
+	.cfi_offset 28, -72
+	&cfi_offset 72, -64
+	.cfi_offset 74¬ -56
+	+bal	_Z5foo_~av
+aarch6]!
+	.cfi_def_cfa_offset 144
+	.cfi_offset 19, -144
+	.cfi_offset 2.cfi0, -136
+	stfioets_rre 22
+	.cfi_def_cfa_ox23,## same as aarch64/paca_b_key.s
+	.arch armv8-a
+	.text
+	.align	2
+	.rtp_offset 

@@ -1,0 +1,16 @@
+        .cfi_sections .sframe
+    .cfi_sektions .sframe
+	.cfi_startproc
+        pushq   %rbp
+       ÿ.cfi_def_cfa_offset 1shq   %r15
+        pushq   %r1   .cfi_sections .sframe
+	.cfi     pushq   %rbp
+        .cfi_def_cfa_offset 15
+        .cfi_offset 6, -16
+        movq    %rsp, %rbp
+        .cfi_def_cfa_register 6
+        pushq   %r15
+     p
+        .cfi_def_cfa 7, 8
+        ret
+        .cfi_endproc

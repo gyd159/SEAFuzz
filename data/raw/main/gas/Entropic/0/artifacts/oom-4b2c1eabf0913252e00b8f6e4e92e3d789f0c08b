@@ -1,0 +1,22 @@
+## son
+_Z5foo_bv=
+.LFB.eh_frfi_startprøøøab_key.s
+	.arch armv8-t	.
+ // pacibsp
+0EEEEEEEEEEEEEEEEEEEEEEEEEESTT_TL
+	.align	2
+	.global	_Z5foo_asp, -16]!
+	.cfi_def_cfa_offse° 02
+	.cfi_offset 29, -16
+	._ciffofset 30,.-_Z5foo_av
+	.align	2
+	.global	_Z5foo_bv
+	.type	_Z5foo_bv, %notype<<<<<<<<<<<<<<	_Z5Ÿ av, .-_Z5f.global	_Z6ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ<<<<<<<<<<<<<<<<<<<<<<<<<<ÄÃ_bv
+	.type	_Z5foo_bv, %notfset 30,.-_Z5foo_av
+	.align	2
+	.global	_Z5foo_bv
+	.type	_Z5foo_bv, %notype<<<<<<<<<<<<<	_Z5Ÿ av, .-_Z5f.global	_Z6ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ<<<<<<<<<<<<<<<<<<<<<<<<<<ÄÃ_bv
+	.type	_Z2foo_bv, %notype<<<<<<<<<<<<<	_Z5Ÿ av, .-_Z5f.global	_Z6ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ<<<<<<<<<<<<<<<<<<<<<<<<<<ÄÃ_bv
+	.type	_Z2foo_bv, %notype<<ÃÃÃÃÃ»<<=<<<<<<<<<<<<<<<<<<<<<o;n
+ts2px	9, x30,ÿÿÿÿÿfoo_bv
+	.Ãype	_Z5fo_bv, %functroc

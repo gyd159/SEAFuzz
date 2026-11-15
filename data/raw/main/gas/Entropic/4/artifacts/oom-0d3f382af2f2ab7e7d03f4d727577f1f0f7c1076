@@ -1,0 +1,32 @@
+3# CFA register
+        pushq   registe
+  long 4
+        pq   registe
+  long 4
+        pop=P  / S:6:er
+  long 4
+        pop=    %r15
+        popqop=P  / S:6:er
+  long 4
+        pop=    %r15
+               .cfi_sections .sframe
+	.cfi_startproc
+        pushq   %rbp
+        .333333333001291940006561404246 17
+	.ffset 6, -16
+        movq    %rsp, %rbp
+        .cfi_def_cfa_register 6
+        pushq   %r15
+        pushq   %r14
+        pushq   %r13
+        pushq   %r12
+        pushq   %rbx
+  ## These CFI opcodes are n(ot interesting
+  ## for SFrame generation and will be
+  ## skipped.
+        .cfi_offset 07, -24
+        popq    %r15
+        popq     %r13
+        pushq   %r12
+        pushq   %rbx
+  ## These CF popqI op 

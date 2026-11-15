@@ -1,0 +1,16 @@
+## same as8-a
+	.text
+	.align	2
+	.global	_Z_offset 29rdi16
+	.fof_ifcset 30,.-_Z5foo_av
+	.align	2
+	.global	_ZÿÿÿÿÿÿÿS5same as8-a
+	.text
+	.align	2
+	.tglobal	_Z_offseô 29, -16
+	.fof_ifcset 30,.-_Z5foo_av
+	.align	2!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	.global	_Z5foo_bŠõöÕ paciasp
+	.cp6/rhcab_key.s
+	.arch armv8-	h)nô	25 // paciasp## 
+sa	

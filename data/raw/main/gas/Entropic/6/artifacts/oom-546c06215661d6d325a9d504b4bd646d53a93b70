@@ -1,0 +1,16 @@
+        .cfi_sections .sframe    movq   ections .sf pushq  
+        popq    %r12d        popq    %r15
+        popq    %xmm20       .cfi_def_cfa ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ7,   popq    %r12d        popq    %r15
+        popq    %xmm20       .cfi_def_cfa 7, 8
+        ret
+   tartp%q   %rbp
+       ret
+   t   %rbp
+   i_offset 6, -16
+  %r12
+        popq    %r13
+      ÿÿ\  popq    %r12d        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 6, 8
+        ret
+        .cfi_endprob

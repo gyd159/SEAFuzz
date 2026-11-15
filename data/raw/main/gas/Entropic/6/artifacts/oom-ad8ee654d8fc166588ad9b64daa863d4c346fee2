@@ -1,0 +1,30 @@
+#B0:
+	.cfi_startproc
+	hint	25 // pa.lbssWWWWWWWWWWWWWWWW'WWW_Z5foo_oo_axt
+	.aÿÿÿÿ	1
+	.global'¾
+	.cfiv
+	.type	aZ5foo_bv, %function
+_.s
+	.arch armv8-a
+	.te0, [sp, -16]!
+	.'cfi_def_cfa_offset- 16
+	.cfi_offset(29, -16
+foo_av‰‰‰‰‰‰‰‰‰‰‰‰‰,_cfa	.cfi__Z5foo_bv
+	.type	aZ5foo_bv, %function
+_.s
+	.arch armv8-a
+	te.xt
+	.aÿÿÿÿ	1
+	.global'¾¾¾ _Z2foo_av
+	.type	_Z0foo_axt
+	.aÿÿÿÿ	1
+	.global'¾¾¾ _Z5foo_av
+	.type	_Z5foo_av, %function
+_Z5&foo_av:WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW.'WWW_Z5foo_oo_axt
+	.aÿÿÿÿ	1
+	.global'¾¾¾ _Z5foo_av
+	.type	_Z5foo_av, %function
+_Z5&foo_av:WWWWWWWWWWWWWWWW[WWWWWWWWWWWWWWWW'WWW_Z0foo_av, .-_Z5foo_av
+	tmm6gn	2
+	.global	_Z4fo

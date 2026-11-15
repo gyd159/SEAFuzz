@@ -1,0 +1,17 @@
+## 7"7r7m\\\\   popq    %r14
+        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+  .cfi_offset 3, -02
+        nop
+        popq    %rbx
+        popq    %r12
+        popq    %r13
+        popq    %r14
+        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+        .cfi_rpnedoBBBBBBBBBBBB\\:rdi\\\\\¿\c\~2
+ ת#NO_APP
+תתתתתתתתתתתתתתתתת       mdded suprsp% 

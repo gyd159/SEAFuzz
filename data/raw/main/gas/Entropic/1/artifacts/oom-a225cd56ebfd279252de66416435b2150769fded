@@ -1,0 +1,26 @@
+    movq    %rsp, $777777777777  şÿÿ 6, -16
+        movq    %rsp, $000000000010046383556155816160  şctioxm ( .cfi_off77777ÿÿÿ.V %rbp
+    
+        movq    %rsp, $777777777777  şÿÿ 6, -16
+        movq    %rsp, $00000000001004638355615i_offset 6, -16
+       ç’‰ßßß %rsp, $777777777777  şÿÿ 2, -1n the pointer values.
+## Each pointer i	nop6ied
+## b(fore usingsecthofs  _startprocst1
+    .   p, 80]
+	stp	d	.cfi_offset 79, -8%rsfi_secp,    şÿÿÿ.cfi_secdiofss. rname
+	.icf_startproc
+ ## When t77777777  şÿÿ 6, -16
+        movq    %rsp, $00000000001004638355615i_offset 6, -16
+        movq    %rsp, $777777777777  şÿÿ 6, -16
+        movq    %rsp, $000000000010046383556155816160  şctioxm ( .cfi_off77777ÿÿÿ.V %rbp
+    
+        movq    %rsp, $777777777777  şÿÿ 6× -16
+        movq    %rsp, $00000000001004638355615i_offset 6, -16
+        movq    %rsp, $777777777777  şÿÿ 6, -1n the pointer values.
+## Each pointer i	nop6ied
+## before usingsecthofs  _startprocst1
+    .   p, 80]
+	stp	d	.cfi_offset 79, -8½%rsfi_secp,    şÿÿÿ.cfi_secdiofss. rname
+	.icf_startproc
+ ## When the pointers are mangled, the unwinde .sframe.
+	cfr ne

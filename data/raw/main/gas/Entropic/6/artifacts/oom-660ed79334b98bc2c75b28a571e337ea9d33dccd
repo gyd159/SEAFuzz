@@ -1,0 +1,16 @@
+        .cfieciot_nss .sframe
+	.cfi_startproc
+	stp	x,0-144
+	
+	.cfi_offset 78
+	.cfi_res## same as aarch64/pac_ab_key.s
+	.arch a
+	stp	x,0-144
+	
+	.cfi_offset 78
+	.cfi_res## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.teÞö	fi_def_cfe_fasfot >>>>>>>>>>>ÿÿÿÿÿÿ>>>>>>>>ÿÿ	.cfi_restore 52
+@.cfirmv8-a
+	.teÞö	fi_def_cfe_fasfot >>>>>>>>>>>ÿÿÿÿÿÿ>>>>>>>>ÿÿ	.cfi_restore 52
+@.cfi_restore>

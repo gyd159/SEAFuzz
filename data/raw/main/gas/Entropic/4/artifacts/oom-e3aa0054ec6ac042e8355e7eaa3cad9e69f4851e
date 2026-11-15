@@ -1,0 +1,14 @@
+## CFA rs not defined`to be SP/FP.
+#mm# No SFramedh unwind`info for this functio SFrameto be SP/FP.
+#mm# No SFramedh unwind`infn will be generated.
+	.cfi_startproc simple
+	.longÚÏefined1 to be SP/FP.
+#mm# No SFrameto be SP/FP.
+#mm# No SFramedh unwind`info for this funcfi_startproc tmsimple
+	.longÚÏõö.long 0
+	.cfi_adjust_cfa_offset 16
+	.long 0
+	.cfi_endproõö.long 0
+	.cfi_Ÿjust_cfa_offset 16
+	.long 0
+	.cfi_endproc

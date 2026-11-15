@@ -1,0 +1,9 @@
+    þÿÿÿ.cÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÑcienf_dp        popq    %r26
+        popq    %r14
+        p    þÿÿÿ.cÿÿÿÿÿÿÿÿÿÿÿ
+        ret
+       ÛÿÿÿÿÿÿÿÿÑcfi_endp        popq    %r26
+        pop144
+	.set  popq    %r1ÿÿÿÿÿÿÿÿÿÿÿÿÿ 144
+	.set    ""opq    %rGGGGGGGGGGGGGGGGGGGGGGGGGGG0ÿÿÿÿÿÿÿÿÿÿÿÿÿ 144
+	.set    ""

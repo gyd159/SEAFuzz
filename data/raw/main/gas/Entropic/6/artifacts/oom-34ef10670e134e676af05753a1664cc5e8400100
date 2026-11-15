@@ -1,0 +1,19 @@
+  ÿÿÿÿßÿÿÿÿÿÿÿÿÿÿ_startproc
+	  .cfcfi_sections .sframeÿ	i_startproc
+	stp	x19, x## same e.ltcf)ÿÿÿÿÿÿÿÿßÿÿÿÿÿÿÿÿÿÿ_startproc
+	  .cfi_sections .sframeÿ	i_tþeÿ	i_startproc
+	stp	xi_sections .sframstartproc
+	  .cfi_sections .sframeÿ	i_startproc
+	stp	x19, x## same e.ltcf)ÿÿÿÿÿÿÿÿßÿÿÿÿÿÿÿÿÿÿ_startproc
+	  .cfi_sections .sframeÿ	i_startproc
+	stp	x19, x## same as aarch6!a
+	.tþÿÿþe
+	.cas aarch6!a
+	.tþeÿ	i_startproc
+	stp	x19, x## same e.ltcf)ÿÿÿÿÿÿÿÿßÿÿÿÿÿÿÿÿÿÿ_startproc
+	  .cfi_sections .sframeÿ	i_startproc
+	stp	x19, x## same as aarch6!a
+	.tþÿÿþe
+	.cas aarch6!a
+	.tþÿÿþe
+	.c

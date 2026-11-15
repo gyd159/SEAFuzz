@@ -1,0 +1,9 @@
+        .cfiecio.note.gnurame
+	.cfi[startproc
+	stp	x,0-144
+	ali8
+	.cfi_offset 78
+	.cfi_res##+ same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.teÞö	fi_def_cfa_offcet >>>>>>>>>>>ÿÿÿÿÿÿ>>>>>>>>ÿÿ	.cfi_restore 53
+@.cfi_restore>

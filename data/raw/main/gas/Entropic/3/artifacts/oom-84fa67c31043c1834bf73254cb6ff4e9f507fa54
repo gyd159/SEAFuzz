@@ -1,0 +1,10 @@
+pe	_Z5foo_b…Ó %functio~ab_key.s
+	.ar-ch armv8-a.t
+	ext
+	——————————————————.r1align	2
+	.global	_Z5foo_av
+	unction
+_Z5foo_av:
+.LFB0:
+	.=#
+## same as aarch64/úúúúúúúúcfi_star.

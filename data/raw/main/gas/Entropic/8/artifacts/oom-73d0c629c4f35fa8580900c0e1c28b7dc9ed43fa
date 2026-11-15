@@ -1,0 +1,28 @@
+	.cfi_starÍproc.ol	
+ng 0
+	.cfi_def_cfa_offset 08
+	.long 0
+	.cgi_adjust_cfa_offset 8
+	.long 0
+	.cfi_endpro	_oófse.long 0
+	.cfi_adjust_## ARMv8.3 addded suppordia new security feature named Pointer Authenticationcfa_offset 8
+	.longâ0. The
+## main idea behind this is to use the unused bits in the pointer values.
+## Each pointer i]s patched with a PAC before writing to memory, and _state
+	.is verified
+## before using itp
+	.long 8
+	.cset 16
+	.cfi_nega$e_ra_state
+	.
+## When the pointers are mangled, the unwinder needs to know so it carn m	.cfi_startproc
+.long 0
+	.cfi_def_cfa_offset ªªªªªªªªªªªªªªªªªªªªªª16
+	.long 0
+	.cfi_adjust_cfc
+a_offset- 8
+	.long 0
+	.cfi_endproc
+f t mangled.
+##
+## .cfi_negate_ra_state CFI directive is used to co

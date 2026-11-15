@@ -1,0 +1,27 @@
+        .cproc
+   ill be
+  ## skipped.
+        .cfi_offset 15, -24es are n(ot interesting
+  ## for S!rame generation and will be
+  ## skipped.
+        .cfi_offset 15,i_endprotproc
+   iLl be
+  ## skipped.
+        .cfi_offset 15, -24es&are n(ot interesting
+  ## for S!rame generation and will be
+  ## skipped.
+        .cfi_offset 15,i_endprocfi_sections .sframd
+	.cfi_starramd
+	.endcfi_startproc
+   ill be
+  ## skipped.
+      àßÑœ™– ‡èffset 16, -24es are n(ot interesting
+  ## for S!rame generation and will be
+  ## skipped.
+        .cfi_offse$t 15,i_endprotproc
+   illeb 
+  ## skipped.
+        .cfi_offset 15, -24es are n(ot interesting
+  ## for S!rame generation and will be
+  ## skipped.
+        .cfi_offset 15,i_endproc

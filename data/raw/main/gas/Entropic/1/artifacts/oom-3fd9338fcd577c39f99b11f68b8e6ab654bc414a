@@ -1,0 +1,14 @@
+## 14   "cti_.note.a_offsetÿ6
+     %rrbp
+ i.cfi_startproc
+	stp	d	.cfi_offset 79, -8
+
+	.c
+\_offset 79, -8
+
+	.c
+\.c ,   movq  )  ons79, -8
+
+I
+.c.\c    movq  )  fsetÿ6
+     %rrb

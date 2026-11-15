@@ -1,0 +1,1782 @@
+# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Hash is exactly 16 hex chars. Not more.
+--format=auto
+_ZN4main4main18h1e714a2e23ed7db23E
+main::main::h1e714a2e23ed7db23
+# Not less.
+--format=auto
+_ZN4main4main16h714a2e23ed7db23E
+main::main::h714a2e23ed7db23
+# And not non-hex.
+--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." translates to "::" "$GT$" to ">" and "$LT$" to "<".
+--format=rust
+_ZN71_$LT$Test$u20$$u2b$$u20$$u27$static$u20$as$u20$foo..Bar$LT$Test$GT$$GT$3bar17h930b740aa94f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--formaNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=rust
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB_D4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=rust
+_RMCs4êqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu30____7hkackfecea1cbdathfdh9hlq6y
+utf8_idents::·É°·Éê·É≠·Éõ·Éî·Éö·Éê·Éì_·Éí·Éî·Éõ·É†·Éò·Éî·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=auto
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=auto
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=auto
+_::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN71_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..ops..Drop$GT$4drop17hf7f23304ebe62eedE
+<collections::vec::IntoIter<T> as core::ops::Drop>::drop
+#
+--format=rust
+_ZN86_$LT$collections..vec..IntoIter$LT$T$GT$$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h04b3fbf148c39713E
+<collections::vec::IntoIter<T> as core::iter::iterator::Iteratorust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#in4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hash.
+--format=gnu-v3
+_ZN4main4main17he714a2e23ed7db23E
+main::main::he714a2e23ed7db23
+# But auto should demangle fully gnu-v3 -> rust -> demangled, not partially.
+--format=auto
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Hash is exactly 16 hex chars. Not more.
+--format=auto
+_ZN4main4main18h1e714a2e23ed7db23E
+main::main::h1e714a2e23ed7db23
+# Not less.
+--format=auto
+_ZN4main4main16h714a2e23ed7db23E
+main::main::h714a2e23ed7db23
+# And not non-hex.
+--format=auto
+_ZN4main# This file holds test cases for the demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+#  Supported options:
+#    --format=<name>     Sets the demangling style.
+#    --no-params         There are two lines of expected output; the first
+#                        is with DMGL_PARAMS, the second is without it.
+#    --is-v3-ctor        Calls is_gnu_v3_mangled_ctor on input; expected
+#                        output is an integer r# This file holds test cases for the demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+#  Supported options:
+#    --format=<name>     Sets the demangling style.
+#    --no-params         There are two lines of expected output; the first
+#                        is with DMGL_PARAMS, the second is without it.
+#    --is-v3-ctor        Calls is_gnu_v3_mangled_ctor on input; expected
+#                        output is an integer representing ctor_kind.
+#    --is-v3-dtor        Likewise, but for dtors.
+#    --ret-postfix       Passes the DMGL_RET_POSTFIX option
+#
+#  For compatibility, just in case it matters, the options line may be
+#  empty, to mean --format=auto.  If it doesn't start with --, then it
+#  may contain only a format name.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+#
+# Tests integer overflow problem PR70492
+
+__vt_90000000000cafebabe
+__vt_90000000000cafebabe
+#
+# Tests write access violation PR70498
+
+_Z80800000000000000000000
+_Z80800000000000000000000
+#
+# Tests write access violation PR70926
+
+0__Ot2m02R5T0000500000
+0__Ot2m02R5T0000500000
+#
+
+0__GT50000000000_
+0__GT50000000000_
+#
+
+__t2m05B500000000000000000_
+__t2m05B500000000000000000_
+##
+## Tests stack overflow PR71696
+#
+#__10%0__S4_0T0T0
+#%0<>::%0(%0<>)
+# Could crash
+
+_
+_
+# Could crash
+
+_vt
+_vt
+# Could crash
+
+_$_1Acitz
+_$_1Acitz
+# Could crash
+
+_$_H1R
+_$_H1R
+# Could crash
+
+_Q8ccQ4M2e.
+_Q8ccQ4M2e.
+# Could crash
+
+_ZmmAtl
+_ZmmAtl
+# Could crash
+--no-params
+_ZZaSFvOEES_
+_ZZaSFvOEES_
+_ZZaSFvOEES_
+# Could crash
+
+_ZZeqFvOEES_z
+_ZZeqFvOEES_z
+#
+# demangler/80513 Test for bogus characters after __thunk_
+
+__thunk_16a_$_1x
+__thunk_16a_$_1x
+#
+# demangler/80513 Test for overflow in consume_count
+
+__thunk_4294967297__$_1x
+__thunk_4294967297__$_1x
+#
+--format=gnu-v3 --no-params
+_Z3fo5n
+fo5(__int128)
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5o
+fo5(unsigned __int128)
+fo5
+#
+--format=java
+_ZN4java3awt10ScrollPane7addImplEPNS0_9ComponentEPNS_4lang6ObjectEi
+java.awt.ScrollPane.addImpl(java.awt.Component, java.lang.Object, int)
+#
+--format=java
+_ZN4java3awt4geom15AffineTransform9getMatrixEP6JArrayIdE
+java.awt.geom.AffineTransform.getMatrix(double[])
+#
+--format=java
+_ZN23Mangle$Inner$InnerInner3fooEP6JArrayIPS0_IiEEdPS0_IPS0_IPS0_IPS0_IPN4java4lang6StringEEEEEPS0_IPS0_IPN6MangleEEE
+Mangle$Inner$InnerInner.foo(int[][], double, java.lang.String[][][][], Mangle[][])
+#
+--format=java
+_ZN6JArray1tEP6JArrayIPS_E
+JArray.t(JArray[])
+#
+--format=java
+_ZN4Prim1iEibcdfwPN4java4lang6StringEsx
+Prim.i(int, boolean, byte, double, float, char, java.lang.String, short, long)
+#
+--format=java
+_ZN4java4util14Map__U24_Entry11class__U24_E
+java.util.Map$Entry.class$
+#
+--format=java
+_ZN3org7eclipse3cdt5debug8internal4core5model9CVariable6sizeof$Ev
+org.eclipse.cdt.debug.internal.core.model.CVariable.sizeof()
+#
+--format=auto --no-params
+_Utf58_0_1__1_2147483647__2147483648
+_Utf58_0_1__1_2147483647__2147483648
+_Utf58_0_1__1_2147483647__2147483648
+#
+--format=gnu-v3 --no-params
+St9bad_alloc
+std::bad_alloc
+std::bad_alloc
+#
+--format=gnu-v3 --no-params
+_ZN1f1fE
+f::f
+f::f
+#
+--format=gnu-v3 --no-params
+_Z1fv
+f()
+f
+#
+--format=gnu-v3 --no-params
+_Z1fi
+f(int)
+f
+#
+--format=gnu-v3 --no-params
+_Z3foo3bar
+foo(bar)
+foo
+#
+--format=gnu-v3 --no-params
+_Zrm1XS_
+operator%(X, X)
+operator%
+#
+--format=gnu-v3 --no-params
+_ZplR1XS0_
+operator+(X&, X&)
+operator+
+#
+--format=gnu-v3 --no-params
+_ZlsRK1XS1_
+operator<<(X const&, X const&)
+operator<<
+#
+--format=gnu-v3 --no-params
+_ZN3FooIA4_iE3barE
+Foo<int [4]>::bar
+Foo<int [4]>::bar
+#
+--format=gnu-v3 --no-params
+_Z1fIiEvi
+void f<int>(int)
+f<int>
+#
+--format=gnu-v3 --no-params
+_Z5firstI3DuoEvS0_
+void first<Duo>(Duo)
+first<Duo>
+#
+--format=gnu-v3 --no-params
+_Z5firstI3DuoEvT_
+void first<Duo>(Duo)
+first<Duo>
+#
+--format=gnu-v3 --no-params
+_Z3fooIiFvdEiEvv
+void foo<int, void (double), int>()
+foo<int, void (double), int>
+#
+--format=gnu-v3 --no-params
+_Z1fIFvvEEvv
+void f<void ()>()
+f<void ()>
+#
+--format=gnu-v3 --no-params
+_ZN1N1fE
+N::f
+N::f
+#
+--format=gnu-v3 --no-params
+_ZN6System5Sound4beepEv
+System::Sound::beep()
+System::Sound::beep
+#
+--format=gnu-v3 --no-params
+_ZN5Arena5levelE
+Arena::level
+Arena::level
+#
+--format=gnu-v3 --no-params
+_ZN5StackIiiE5levelE
+Stack<int, int>::level
+Stack<int, int>::level
+#
+--format=gnu-v3 --no-params
+_Z1fI1XEvPVN1AIT_E1TE
+void f<X>(A<X>::T volatile*)
+f<X>
+#
+--format=gnu-v3 --no-params
+_ZngILi42EEvN1AIXplT_Li2EEE1TE
+void operator-<42>(A<(42)+(2)>::T)
+operator-<42>
+#
+--format=gnu-v3 --no-params
+_Z4makeI7FactoryiET_IT0_Ev
+Factory<int> make<Factory, int>()
+make<Factory, int>
+#
+--format=gnu-v3 --no-params
+_Z4makeI7FactoryiET_IT0_Ev
+Factory<int> make<Factory, int>()
+make<Factory, int>
+#
+--format=gnu-v3 --no-params
+_Z3foo5Hello5WorldS0_S_
+foo(Hello, World, World, Hello)
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooPM2ABi
+foo(int AB::**)
+foo
+#
+--format=gnu-v3 --no-params
+_ZlsRSoRKSs
+operator<<(std::ostream&, std::string const&)
+operator<<
+#
+--format=gnu-v3 --no-params
+_ZTI7a_class
+typeinfo for a_class
+typeinfo for a_class
+#
+--format=gnu-v3 --no-params
+U4_farrVKPi
+int* const volatile restrict _far
+int* const volatile restrict _far
+# 
+--format=gnu-v3 --no-params
+_Z3fooILi2EEvRAplT_Li1E_i
+void foo<2>(int (&) [(2)+(1)])
+foo<2>
+#
+--format=gnu-v3 --no-params
+_Z3fooILi2EEvOAplT_Li1E_i
+void foo<2>(int (&&) [(2)+(1)])
+foo<2>
+# 
+--format=gnu-v3 --no-params
+_Z1fM1AKFvvE
+f(void (A::*)() const)
+f
+#
+--format=gnu-v3 --no-params
+_Z3fooc
+foo(char)
+foo
+#
+--format=gnu-v3 --no-params
+_Z2f0u8char16_t
+f0(char16_t)
+f0
+#
+--format=gnu-v3 --no-params
+_Z2f0Pu8char16_t
+f0(char16_t*)
+f0
+#
+--format=gnu-v3 --no-params
+_Z2f0u8char32_t
+f0(char32_t)
+f0
+#
+--format=gnu-v3 --no-params
+_Z2f0Pu8char32_t
+f0(char32_t*)
+f0
+#
+--format=gnu-v3 --no-params
+2CBIL_Z3foocEE
+CB<foo(char)>
+CB<foo(char)>
+#
+--format=gnu-v3 --no-params
+2CBIL_Z7IsEmptyEE
+CB<IsEmpty>
+CB<IsEmpty>
+#
+--format=gnu-v3 --no-params
+_ZZN1N1fEiE1p
+N::f(int)::p
+N::f(int)::p
+#
+--format=gnu-v3 --no-params
+_ZZN1N1fEiEs
+N::f(int)::string literal
+N::f(int)::string literal
+# 
+--format=gnu-v3 --no-params
+_Z1fPFvvEM1SFvvE
+f(void (*)(), void (S::*)())
+f
+#
+--format=gnu-v3 --no-params
+_ZN1N1TIiiE2mfES0_IddE
+N::T<int, int>::mf(N::T<double, double>)
+N::T<int, int>::mf
+# 
+--format=gnu-v3 --no-params
+_ZSt5state
+std::state
+std::state
+# 
+--format=gnu-v3 --no-params
+_ZNSt3_In4wardE
+std::_In::ward
+std::_In::ward
+#
+--format=gnu-v3 --no-params
+_Z1fKPFiiE
+f(int (* const)(int))
+f
+#
+--format=gnu-v3 --no-params
+_Z1fAszL_ZZNK1N1A1fEvE3foo_0E_i
+f(int [sizeof (N::A::f() const::foo)])
+f
+#
+--format=gnu-v3 --no-params
+_Z1fA37_iPS_
+f(int [37], int (*) [37])
+f
+#
+--format=gnu-v3 --no-params
+_Z1fM1AFivEPS0_
+f(int (A::*)(), int (*)())
+f
+#
+--format=gnu-v3 --no-params
+_Z1fPFPA1_ivE
+f(int (*(*)()) [1])
+f
+#
+--format=gnu-v3 --no-params
+_Z1fPKM1AFivE
+f(int (A::* const*)())
+f
+#
+--format=gnu-v3 --no-params
+_Z1jM1AFivEPS1_
+j(int (A::*)(), int (A::**)())
+j
+#
+--format=gnu-v3 --no-params
+_Z1sPA37_iPS0_
+s(int (*) [37], int (**) [37])
+s
+#
+--format=gnu-v3 --no-params
+_Z3fooA30_A_i
+foo(int [30cdfwPN4java4lang6StringEsx
+Prim.i(int, boolean, byte, double, float, char, java.lang.String, short, long)
+#
+--format=java
+_ZN4java4util14Map__U24_Entry11class__U24_E
+java.util.Map$Entry.class$
+#
+--format=java
+_ZN3org7eclipse3cdt5debug8internal4core5model9CVariable6sizeof$Ev
+org.eclipse.cdt.debug.internal.core.model.CVariable.sizeof()
+#
+--format=auto --no-params
+_Utf58_0_1__1_2147483647__2147483648
+_Utf58_0_1__1_2147483647__2147483648
+_Utf58_0_1__1_2147483647__2147483648
+#
+--format=gnu-v3 --no-params
+St9bad_alloc
+std::bad_alloc
+std::bad_alloc
+#
+--format=gnu-v3 --no-params
+_ZN1f1fE
+f::f
+f::f
+#
+--format=gnu-v3 --no-params
+_Z1fv
+f()
+f
+#
+--format=gnu-v3 --no-params
+_Z1fi
+f(int)
+f
+#
+--format=gnu-v3 --no-params
+_Z3foo3bar
+foo(bar)
+foo
+#
+--format=gnu-v3 --no-params
+_Zrm1XS_
+operator%(X, X)
+operator%
+#
+--format=gnu-v3 --no-params
+_ZplR1XS0_
+operator+(X&, X&)
+operator+
+#
+--format=gnu-v3 --no-params
+_ZlsRK1XS1_
+operator<<(X const&, X const&)
+operator<<
+#
+--format=gnu-v3 --no-params
+_ZN3FooIA4_iE3barE
+Foo<int [4]>::bar
+Foo<int [4]>::bar
+#
+--format=gnu-v3 --no-params
+_Z1fIiEvi
+void f<int>(int)
+f<int>
+#
+--format=gnu-v3 --no-params
+_Z5firstI3DuoEvS0_
+void first<Duo>(Duo)
+first<Duo>
+#
+--format=gnu-v3 --no-params
+_Z5firstI3DuoEvT_
+void first<Duo>(Duo)
+first<Duo>
+#
+--format=gnu-v3 --no-params
+_Z3fooIiFvdEiEvv
+void foo<int, void (double), int>()
+foo<int, void (double), int>
+#
+--format=gnu-v3 --no-params
+_Z1fIFvvEEvv
+void f<void ()>()
+f<void ()>
+#
+--format=gnu-v3 --no-params
+_ZN1N1fE
+N::f
+N::f
+#
+--format=gnu-v3 --no-params
+_ZN6System5Sound4beepEv
+System::Sound::beep()
+System::Sound::beep
+#
+--format=gnu-v3 --no-params
+_ZN5Arena5levelE
+Arena::level
+Arena::level
+#
+--format=gnu-v3 --no-params
+_ZN5StackIiiE5levelE
+Stack<int, int>::level
+Stack<int, int>::level
+#
+--format=gnu-v3 --no-params
+_Z1fI1XEvPVN1AIT_E1TE
+void f<X>(A<X>::T volatile*)
+f<X>
+#
+--format=gnu-v3 --no-params
+_ZngILi42EEvN1AIXplT_Li2EEE1TE
+void operator-<42>(A<(42)+(2)>::T)
+operator-<42>
+#
+--format=gnu-v3 --no-params
+_Z4makeI7FactoryiET_IT0_Ev
+Factory<int> make<Factory, int>()
+make<Factory, int>
+#
+--format=gnu-v3 --no-params
+_Z4makeI7FactoryiET_IT0_Ev
+Factory<int> make<Factory, int>()
+make<Factory, int>
+#
+--format=gnu-v3 --no-params
+_Z3foo5Hello5WorldS0_S_
+foo(Hello, World, World, Hello)
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooPM2ABi
+foo(int AB::**)
+foo
+#
+--format=gnu-v3 --no-params
+_ZlsRSoRKSs
+operator<<(std::ostream&, std::string const&)
+operator<<
+#
+--format=gnu-v3 --no-params
+_ZTI7a_class
+typeinfo for a_class
+typeinfo for a_class
+#
+--format=gnu-v3 --no-params
+U4_farrVKPi
+int* const volatile restrict _far
+int* const volatile restrict _far
+# 
+--format=gnu-v3 --no-params
+_Z3fooILi2EEvRAplT_Li1E_i
+void foo<2>(int (&) [(2)+(1)])
+foo<2>
+#
+--format=gnu-v3 --no-params
+_Z3fooILi2EEvOAplT_Li1E_i
+void foo<2>(int (&&) [(2)+(1)])
+foo<2>
+# 
+--format=gnu-v3 --no-params
+_Z1fM1AKFvvE
+f(void (A::*)() const)
+f
+#
+--format=gnu-v3 --no-params
+_Z3fooc
+foo(char)
+foo
+#
+--format=gnu-v3 --no-params
+_Z2f0u8char16_t
+f0(char16_t)
+f0
+#
+--format=gnu-v3 --no-params
+_Z2f0Pu8char16_t
+f0(char16_t*)
+f0
+#
+--format=gnu-v3 --no-params
+_Z2f0u8char32_t
+f0(char32_t)
+f0
+#
+--format=gnu-v3 --no-params
+_Z2f0Pu8char32_t
+f0(char32_t*)
+f0
+#
+--format=gnu-v3 --no-params
+2CBIL_Z3foocEE
+CB<foo(char)>
+CB<foo(char)>
+#
+--format=gnu-v3 --no-params
+2CBIL_Z7IsEmptyEE
+CB<IsEmpty>
+CB<IsEmpty>
+#
+--format=gnu-v3 --no-params
+_ZZN1N1fEiE1p
+N::f(int)::p
+N::f(int)::p
+#
+--format=gnu-v3 --no-params
+_ZZN1N1fEiEs
+N::f(int)::string literal
+N::f(int)::string literal
+# 
+--format=gnu-v3 --no-params
+_Z1fPFvvEM1SFvvE
+f(void (*)(), void (S::*)())
+f
+#
+--format=gnu-v3 --no-params
+_ZN1N1TIiiE2mfES0_IddE
+N::T<int, int>::mf(N::T<double, double>)
+N::T<int, int>::mf
+# 
+--format=gnu-v3 --no-params
+_ZSt5state
+std::state
+std::state
+# 
+--format=gnu-v3 --no-params
+_ZNSt3_ n4wardE
+std::_In::ward
+std::_In::ward
+#
+--format=gnu-v3 --no-params
+_Z1fKPFiiE
+f(int (* const)(int))
+f
+#
+--format=gnu-v3 --no-params
+_Z1fAszL_ZZNK1N1A1fEvE3foo_0E_i
+f(int [sizeof (N::A::f() const::foo)])
+f
+#
+--format=gnu-v3 --no-params
+_Z1fA37_iPS_
+f(int [37], int (*) [37])
+f
+#
+--format=gnu-v3 --no-params
+_Z1fM1AFivEPS0_
+f(int (A::*)(), int (*)())
+f
+#
+--format=gnu-v3 --no-params
+_Z1fPFPA1_ivE
+f(int (*(*)()) [1])
+f
+#
+--format=gnu-v3 --no-params
+_Z1fPKM1AFivE
+f(int (A::* const*)())
+f
+#
+--format=gnu-v3 --no-params
+_Z1jM1AFivEPS1_
+j(int (A::*)(), int (A::**)())
+j
+#
+--format=gnu-v3 --no-params
+_Z1sPA37_iPS0_
+s(int (*) [37], int (**) [37])
+s
+#
+--format=gnu-v3 --no-params
+_Z3fooA30_A_i
+foo(int [30][])
+foo
+#
+--format=gnu-v3 --no-params
+_Z3kooPA28_A30_i
+koo(int (*) [28][30])
+koo
+#
+--format=gnu-v3 --no-params
+_ZlsRKU3fooU4bart1XS0_
+operator<<(X bart foo const&, X bart)
+operator<<
+#
+--format=gnu-v3 --no-params
+_ZlsRKU3fooU4bart1XS2_
+operator<<(X bart foo const&, X bart foo const)
+operator<<
+#
+--format=gnu-v3 --no-params
+_Z1fM1AKFivE
+f(int (A::*)() const)
+f
+#
+--format=gnu-v3 --no-params
+_Z3absILi11EEvv
+void abs<11>()
+abs<11>
+#
+--format=gnu-v3 --no-params
+_ZN1AIfEcvT_IiEEv
+A<float>::operator int<int>()
+A<float>::operator int<int>
+#
+--format=gnu-v3 --no-params
+_ZN12libcw_app_ct10add_optionIS_EEvMT_FvPKcES3_cS3_S3_
+void libcw_app_ct::add_option<libcw_app_ct>(void (libcw_app_ct::*)(char const*), char const*, char, char const*, char const*)
+libcw_app_ct::add_option<libcw_app_ct>
+#
+--format=gnu-v3 --no-params
+_ZGVN5libcw24_GLOBAL__N_cbll.cc0ZhUKa23compiler_bug_workaroundISt6vectorINS_13omanip_id_tctINS_5debug32memblk_types_manipulator_data_ctEEESaIS6_EEE3idsE
+guard variable for libcw::(anonymous namespace)::compiler_bug_workaround<std::vector<libcw::omanip_id_tct<libcw::debug::memblk_types_manipulator_data_ct>, std::allocator<libcw::omanip_id_tct<libcw::debug::memblk_types_manipulator_data_ct> > > >::ids
+guard variable for libcw::(anonymous namespace)::compiler_bug_workaround<std::vector<libcw::omanip_id_tct<libcw::debug::memblk_types_manipulator_data_ct>, std::allocator<libcw::omanip_id_tct<libcw::debug::memblk_types_manipulator_data_ct> > > >::ids
+#
+--format=gnu-v3 --no-params
+_ZN5libcw5debug13cwprint_usingINS_9_private_12GlobalObjectEEENS0_17cwprint_using_tctIT_EERKS5_MS5_KFvRSt7ostreamE
+libcw::debug::cwprint_using_tct<libcw::_private_::GlobalObject> libcw::debug::cwprint_using<libcw::_private_::GlobalObject>(libcw::_private_::GlobalObject const&, void (libcw::_private_::GlobalObject::*)(std::ostream&) const)
+libcw::debug::cwprint_using<libcw::_private_::GlobalObject>
+#
+--format=gnu-v3 --no-params
+_ZNKSt14priority_queueIP27timer_event_request_base_ctSt5dequeIS1_SaIS1_EE13timer_greaterE3topEv
+std::priority_queue<timer_event_request_base_ct*, std::deque<timer_event_request_base_ct*, std::allocator<timer_event_request_base_ct*> >, timer_greater>::top() const
+std::priority_queue<timer_event_request_base_ct*, std::deque<timer_event_request_base_ct*, std::allocator<timer_event_request_base_ct*> >, timer_greater>::t3 
+#
+--format=gnu-v3 --no-params
+_ZNKSt15_Deque_iteratorIP15memory_block_stRKS1_PS2_EeqERKS5_
+std::_Deque_iterator<memory_block_st*, memory_block_st* const&, memory_block_st* const*>::operator==(std::_Deque_iterator<memory_block_st*, memory_block_st* const&, memory_block_st* const*> const&) const
+std::_Deque_iterator<memory_block_st*, memory_block_st* const&, memory_block_st* const*>::operator==
+#
+--format=gnu-v3 --no-params
+_ZNKSt17__normal_iteratorIPK6optionSt6vectorIS0_SaIS0_EEEmiERKS6_
+std::__normal_iterator<option const*, std::vector<option, std::allocator<option> > >::operator-(std::__normal_iterator<option const*, std::vector<option, std::allocator<option> > > const&) const
+std::__normal_iterator<option const*, std::vector<option, std::allocator<option> > >::operator-
+#
+--format=gnu-v3 --no-params
+_ZNSbIcSt11char_traitsIcEN5libcw5debug27no_alloc_checking_allocatorEE12_S_constructIPcEES6_T_S7_RKS3_
+char* std::basic_string<char, std::char_traits<char>, libcw::debug::no_alloc_checking_allocator>::_S_construct<char*>(char*, char*, libcw::debug::no_alloc_checking_allocator const&)
+std::basic_string<char, std::char_traits<char>, libcw::debug::no_alloc_checking_allocator>::_S_construct<char*>
+#
+--format=gnu-v3 --no-params
+_Z1fI1APS0_PKS0_EvT_T0_T1_PA4_S3_M1CS8_
+void f<A, A*, A const*>(A, A*, A const*, A const* (*) [4], A const* (* C::*) [4])
+f<A, A*, A const*>
+#
+--format=gnu-v3 --no-params
+_Z3fooiPiPS_PS0_PS1_PS2_PS3_PS4_PS5_PS6_PS7_PS8_PS9_PSA_PSB_PSC_
+foo(int, int*, int**, int***, int****, int*****, int******, int*******, int********, int*********, int**********, int***********, int************, int*************, int**************, int***************)
+foo
+#
+--format=gnu-v3 --no-params
+_ZSt1BISt1DIP1ARKS2_PS3_ES0_IS2_RS2_PS2_ES2_ET0_T_SB_SA_PT1_
+std::D<A*, A*&, A**> std::B<std::D<A*, A* const&, A* const*>, std::D<A*, A*&, A**>, A*>(std::D<A*, A* const&, A* const*>, std::D<A*, A* const&, A* const*>, std::D<A*, A*&, A**>, A**)
+std::B<std::D<A*, A* const&, A* const*>, std::D<A*, A*&, A**>, A*>
+#
+--format=gnu-v3 --no-params
+_X11TransParseAddress
+_X11TransParseAddress
+_X11TransParseAddress
+#
+--format=gnu-v3 --no-params
+_ZNSt13_Alloc_traitsISbIcSt18string_char_traitsIcEN5libcw5debug9_private_17allocator_adaptorIcSt24__default_alloc_templateILb0ELi327664EELb1EEEENS5_IS9_S7_Lb1EEEE15_S_instancelessE
+std::_Alloc_traits<std::basic_string<char, std::string_char_traits<char>, libcw::debug::_private_::allocator_adaptor<char, std::__default_alloc_template<false, 327664>, true> >, libcw::debug::_private_::allocator_adaptor<std::basic_string<char, std::string_char_traits<char>, libcw::debug::_private_::allocator_adaptor<char, std::__default_alloc_template<false, 327664>, true> >, std::__default_alloc_template<false, 327664>, true> >::_S_instanceless
+std::_Alloc_traits<std::basic_string<char, std::string_char_traits<char>, libcw::debug::_private_::allocator_adaptor<char, std::__default_alloc_template<false, 327664>, true> >, libcw::debug::_private_::allocator_adaptor<ser::AnyOf, strings::SkipEmpty>::operator std::vector<basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<basic_string<char, std::char_traits<char>, std::allocator<char> > > ><std::vector<basic_string<char, std::char_traits<char>, std::allocator<char> >, std::arlocator<basic_string<char, std::char_traits<char>, std::allocator<char> > > >, void>() const
+strings::internal::Splitter<strings::delimiter::AnyOf, strings::SkipEmpty>::operator std::vector<basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<basic_string<char, std::char_traits<char>, std::allocator<char> > > ><std::vector<basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<basic_string<char, std::char_traits<char>, std::allocator<char> > > >, void>
+#
+--format=gnu-v3 --no-params
+_ZN1AcvT_I1CEEv
+A::operator C<C>()
+A::operator C<C>
+#
+--format=gnu-v3 --no-params
+_ZN1AcvPT_I1CEEv
+A::operator C*<C>()
+A::operator C*<C>
+#
+--format=gnu-v3 --no-params
+_ZN1AcvT_IiEI1CEEv
+A::operator C<int><C>()
+A::operator C<int><C>
+# https://sourceware.org/bugzilla/show_bug.cgi?id=14963#c16
+--format=gnu-v3
+_ZN3mdr16in_cached_threadIRZNK4cudr6GPUSet17parallel_for_eachIZN5tns3d20shape_representation7compute7GPUImpl7executeERKNS_1AINS_7ptr_refIKjEELl3ELl3ENS_8c_strideILl1ELl0EEEEERKNS8_INS9_IjEELl4ELl1ESD_EEEUliRKNS1_7ContextERNS7_5StateEE_JSt6vectorISO_SaISO_EEEEEvOT_DpRT0_EUlSP_E_JSt17reference_wrapperISO_EEEENS_12ScopedFutureIDTclfp_spcl7forwardISW_Efp0_EEEEESV_DpOSW_
+mdr::ScopedFuture<decltype ({parm#1}((forward<std::reference_wrapper<tns3d::shape_representation::compute::GPUImpl::State> >)({parm#2})))> mdr::in_cached_thread<cudr::GPUSet::paralõöì†ôêç†each<tns3d::shape_representation::compute::GPUImpl::execute(mdr::A<mdr::ptr_ref<unsigned int const>, 3l, 3l, mdr::c_stride<1l, 0l> > const&, mdr::A<mdr::ptr_ref<unsigned int>, 4l, 1l, mdr::c_stride<1l, 0l> > const&)::{lambda(int, cudr::Context const&, tns3d::shape_representation::compute::GPUImpl::State&)#1}, std::vector<tns3d::shape_representation::compute::GPUImpl::State, std::allocator<tns3d::shape_representation::compute::GPUImpl::State> > >(tns3d::shape_representation::compute::GPUImpl::execute(mdr::A<mdr::ptr_ref<unsigned int const>, 3l, 3l, mdr::c_stride<1l, 0l> > const&, mdr::A<mdr::ptr_ref<unsigned int>, 4l, 1l, mdr::c_stride<1l, 0l> > const&)::{lambda(int, cudr::Context const&, tns3d::shape_representation::compute::GPUImpl::State&)#1}&&, std::vector<tns3d::shape_representation::compute::GPUImpl::State, std::allocator<tns3d::shape_representation::compute::GPUImpl::State> >&) const::{lambda(tns3d::shape_representation::compute::GPUImpl::State&)#1}&, std::reference_wrapper<tns3d::shape_representation::compute::GPUImpl::State> >(tns3d::shape_representation::compute::GPUImpl::execute(mdr::A<mdr::ptr_ref<unsigned int const>, 3l, 3l, mdr::c_stride<1l, 0l> > const&, mdr::A<mdr::ptr_ref<unsigned int>, 4l, 1l, mdr::c_stride<1l, 0l> > const&)::{lambda(int, cudr::Context const&, tns3d::shape_representation::compute::GPUImpl::State&)#1}&&, std::vector<tns3d::shape_representation::compute::GPUImpl::State, std::allocator<tns3d::shape_representation::compute::GPUImpl::State> >&&)
+# https://sourceware.org/bugzilla/show_bug.cgi?id=14963#c18
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZN13ThreadManager10futureTaskISt5_BindIFSt7_Mem_fnIM6RunnerFvvEEPS5_EEEEvOT_EUlvE_EERSC_v
+ThreadManager::futureTask<std::_Bind<std::_Mem_fn<void (Runner::*)()> (Runner*)> >(std::_Bind<std::_Mem_fn<void (Runner::*)()> (Runner*)>&&)::{lambda()#1}*& std::_Any_data::_M_access<ThreadManager::futureTask<std::_Bind<std::_Mem_fn<void (Runner::*)()> (Runner*)> >(ThreadManager::futureTask<std::_Bind<std::_Mem_fn<void (Runner::*)()> (Runner*)> >(std::_Bind<std::_Mem_fn<void (Runner::*)()> (Runner*)>&&)::{lambda()#1}*&&)::{lambda()#1}*>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=14963#c24
+# aka https://sourceware.org/bugzilla/show_bug.cgi?id=16593
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZN3sel8Selector6SetObjI3FooJPKcMS4_FviEEEEvRT_DpT0_EUlvE_EESA_v
+sel::Selector::SetObj<Foo, char const*, void (Foo::*)(int)>(Foo&, char const*, void (Foo::*)(int))::{lambda()#1}*& std::_Any_data::_M_access<sel::Selector::SetObj<Foo, char const*, vëñõﬂ◊πêï::*)(int)>(sel::Selector::SetObj<Foo, char const*, void (Foo::*)(int)>(Foo&, char const*, void (Foo::*)(int))::{lambda()#1}*&, char const*, void (Foo::*)(int))::{lambda()#1}*>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16752#c1
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZN13ThreadManager7newTaskIRSt5_BindIFSt7_Mem_fnIM5DiaryFivEEPS5_EEIEEESt6futureINSt9result_ofIFT_DpT0_EE4typeEEOSF_DpOSG_EUlvE_EERSF_v
+ThreadManager::newTask<std::_Bind<std::_Mem_fn<int (Diary::*)()> (Diary*)>&>(std::_Bind<std::_Mem_fn<int (Diary::*)()> (Diary*)>&)::{lambda()#1}*& std::_Any_data::_M_access<ThreadManager::newTask<std::_Bind<std::_Mem_fn<int (Diary::*)()> (Diary*)>&>(ThreadManager::newTask<std::_Bind<std::_Mem_fn<int (Diary::*)()> (Diary*)>&>(std::_Bind<std::_Mem_fn<int (Diary::*)()> (Diary*)>&)::{lambda()#1}*&&)::{lambda()#1}*>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16752#c6
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZN6cereal18polymorphic_detail15getInputBindingINS1_16JSONInputArchiveEEENS1_6detail15InputBindingMapIT_E11SerializersERS7_jEUlPvRSt10unique_ptrIvNS5_12EmptyDeleterIvEEEE0_EESA_v
+cereal::polymorphic_detail::getInputBinding<cereal::JSONInputArchive>(cereal::JSONInputArchive&, unsigned int)::{lambda(void*, std::unique_ptr<void, cereal::detail::EmptyDeleter<void> >&)#2}*& std::_Any_data::_M_access<cereal::polymorphic_detail::getInputBinding<cereal::JSONInputArchive>(cereal::polymorphic_detail::getInputBinding<cereal::JSONInputArchive>(cereal::JSONInputArchive&, unsigned int)::{lambda(void*, std::unique_ptr<void, cereal::detail::EmptyDeleter<void> >&)#2}*&, unsigned int)::{lambda(void*, std::unique_ptr<void, cereal::detail::EmptyDeleter<void> >&)#2}*>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16845#c2
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZ4postISt8functionIFvvEEEvOT_EUlvE_EERS5_v
+post<std::function<void ()> >(std::function<void ()>&&)::{lambda()#1}*& std::_Any_data::_M_access<post<std::function<void ()> >(post<std::function<void ()> >(std::function<void ()>&&)::{lambda()#1}*&&)::{lambda()#1}*>()
+#
+--format=auto --no-params
+_Z3xxxDF16_DF32_DF64_DF128_CDF16_Vb
+xxx(_Float16, _Float32, _Float64, _Float128, _Float16 _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF32xDF64xDF128xCDF32xVb
+xxx(_Float32x, _Float64x, _Float128x, _Float32x _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF16b
+xxx(std::bfloat16_t)
+xxx
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16817
+--format=auto --no-params
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+--format=gnu-v3
+_Z1fSsB3fooS_
+f(std::string[abi:foo], std::string[abi:foo])
+--format=gnu-v3
+_Z18IndirectExternCallIPU7stdcallU7regparmILi3EEFviiEiEvT_T0_S3_
+void IndirectExternCall<void ( regparm<3> stdcall*)(int, int), int>(void ( regparm<3> stdcall*)(int, int), int, void ( regparm<3> stdcall*)(int, int))
+# 
+# ABI tags used to confuse the constructor name calculation.
+--format=gnu-v3 --no-params
+_ZNSt8ios_base7failureB5cxx11C1EPKcRKSt10error_code
+std::ios_base::failure[abi:cxx11]::failure(char const*, std::error_code const&)
+std::ios_base::failure[abi:cxx11]::failure
+--format=gnu-v3
+_Z1fPDxFvvES0_
+f(void (*)() transaction_safe, void (*)() transaction_safe)
+#
+# These two are from gcc PR61321, and gcc PR61233 / gdb PR16957
+#
+--format=gnu-v3
+_Z13function_tempIiEv1AIXszcvT_Li999EEE
+void function_temp<int>(A<sizeof ((int)(999))>)
+#
+--format=gnu-v3
+_Z7ZipWithI7QStringS0_5QListZN4oral6detail16AdaptCreateTableI7AccountEES0_RKNS3_16CachedFieldsDataEEUlRKS0_SA_E_ET1_IDTclfp1_cvT__EcvT0__EEEERKT1_ISC_ERKT1_ISD_ET2_
+QList<decltype ({parm#3}((QString)(), (QString)()))> ZipWith<QString, QString, QList, oral::detail::AdaptCreateTable<Account>(oral::detail::CachedFieldsData const&)::{lambda(QString const&, QString const&)#1}>(QList<QList> const&, QList<QString> const&, oral::detail::AdaptCreateTable<Account>(oral::detail::CachedFieldsData const&)::{lambda(QString const&, QString const&)#1})
+#
+# These three are symbols generated by g++'s testsuite, which triggered the same bug as above.
+--format=gnu-v3
+_Z14int_if_addableI1YERiP1AIXszpldecvPT_Li0EdecvS4_Li0EEE
+int& int_if_addable<Y>(A<sizeof ((*((Y*)(0)))+(*((Y*)(0))))>*)
+#
+--format=gnu-v3
+_Z3bazIiEvP1AIXszcl3foocvT__ELCf00000000_00000000EEEE
+void baz<int>(A<sizeof (foo((int)(), (float _Complex)00000000_00000000))>*)
+#
+--format=gnu-v3
+_Z3fooI1FEN1XIXszdtcl1PclcvT__EEE5arrayEE4TypeEv
+X<sizeof ((P(((F)())())).array)>::Type foo<F>()
+
+_Z1fIJidEEv1AIXsZT_EE
+void f<int, double>(A<2>)
+
+_ZN1A1fIJiiEiJiiiEEEvRAsPDpT_T0_DpT1_E_iS3_S5_
+void A::f<int, int, int, int, int, int>(int (&) [6], int, int, int, int)
+
+_Z10unary_leftIJLi1ELi2ELi3EEEv1AIXflplT_EE
+void unary_left<1, 2, 3>(A<(...+(1, 2, 3))>)
+
+_Z11unary_rightIJLi1ELi2EL__sockets__sockets_library_controllerDF__2
+gnat.sockets.sockets_library_controller.Finalize
+--format=gnat
+system__partition_interface__racw_stub_typeDA
+system.partition_interface.racw_stub_type.Adjust
+# Stream operations
+--format=gnat
+gnat__wide_wide_string_split__slice_setSR__2
+gnat.wide_wide_string_split.slice_set'Read
+--format=gnat
+ada__real_time__timing_events__events__listSW__2Xnn
+ada.real_time.timing_events.events.list'Write
+--format=gnat
+system__finalization_root__root_controlledSI
+system.finalization_root.root_controlled'Input
+--format=gnat
+ada__finalization__limited_controlledSO__2
+ada.finalization.limited_controlled'Output
+# Tagged types
+--format=gnat
+ada__synchronous_task_control___size__2
+ada.synchronous_task_control'Size
+--format=gnat
+ada__real_time__timing_events__events___alignment__2Xnn
+ada.real_time.timing_events.events'Alignment
+--format=gnat
+system__finalization_root___assign__2
+system.finalization_Öoot.":="
+#
+# Used to crash the demangler.
+--format=gnu-v3
+DFA
+DFA
+#
+# http://sourceware.org/bugzilla/show_bug.cgi?id=11572
+--format=auto
+_ZN3Psi7VariantIIcPKcEE5visitIIRZN11VariantTest9TestVisit11test_methodEvEUlS2_E0_RZNS6_11test_methodEvEUlcE1_RZNS6_11test_methodEvEUlNS_4NoneEE_EEENS_13VariantDetail19SelectVisitorResultIIDpT_EE4typeEDpOSG_
+Psi::VariantDetail::SelectVisitorResult<VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&>::type Psi::Variant<char, char const*>::visit<VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&>(VariantTest::TestVisit::test_method()::{lambda(char const*)#2}&, VariantTest::TestVisit::test_method()::{lambda(char)#3}&, VariantTest::TestVisit::test_method()::{lambda(Psi::None)#1}&)
+#
+# Clone suffix tests
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.clone.1
+fo5(__int128) [clone .clone.1]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.constprop.2
+fo5(__int128) [clone .constprop.2]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.isra.3
+fo5(__int128) [clone .isra.3]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5n.part.4
+fo5(__int128) [clone .part.4]
+fo5
+#
+--format=gnu-v3 --no-params
+_Z12to_be_clonediPv.clone.0
+to_be_cloned(int, void*) [clone .clone.0]
+to_be_cloned
+#
+--format=gnu-v3 --no-params
+_Z3fooi.1988
+foo(int) [clone .1988]
+foo
+#
+--format=gnu-v3 --no-params
+_Z3fooi.part.9.165493.constprop.775.31805
+foo(int) [clone .part.9.165493] [clone .constprop.775.318*)()> (Runner*)>&&)::{lambda()#1}*&&)::{lambda()#1}*>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=14963#c24
+# aka https://sourceware.org/bugzilla/show_bug.cgi?id=16593
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZN3sel8Selector6SetObjI3FooJPKcMS4_FviEEEEvRT_DpT0_EUlvE_EESA_v
+sel::Selector::SetObj<Foo, char const*, void (Foo::*)(int)>(Foo&, char const*, void (Foo::*)(int))::{lambda()#1}*& std::_Any_data::_M_access<sel::Selector::SetObj<Foo, char const*, vëñõﬂ◊πêï::*)(int)>(sel::Selector::SetObj<Foo, char const*, void (Foo::*)(int)>(Foo&, char const*, void (Foo::*)(int))::{lambda()#1}*&, char const*, void (Foo::*)(int))::{lambda()#1}*>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16752#c1
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZN13ThreadManager7newTaskIRSt5_BindIFSt7_Mem_fnIM5DiaryFivEEPS5_EEIEEESt6futureINSt9result_ofIFT_DpT0_EE4typeEEOSF_DpOSG_EUlvE_EERSF_v
+ThreadManager::newTask<std::_Bind<std::_Mem_fn<int (Diary::*)()> (Diary*)>&>(std::_Bind<std::_Mem_fn<int (Diary::*)()> (Diary*)>&)::{lambda()#1}*& std::_Any_data::_M_access<ThreadManager::newTask<std::_Bind<std::_Mem_fn<int (Diary::*)()> (Diary*)>&>(ThreadManager::newTask<std::_Bind<std::_Mem_fn<int (Diary::*)()> (Diary*)>&>(std::_Bind<std::_Mem_fn<int (Diary::*)()> (Diary*)>&)::{lambda()#1}*&&)::{lambda()#1}*>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16752#c6
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZN6cereal18polymorphic_detail15getInputBindingINS1_16JSONInputArchiveEEMNS1_6detail15InputBindingMapIT_E11SerializersERS7_jEUlPvRSt10unique_ptrIvNS5_12EmptyDeleterIvEEEE0_EESA_v
+cereal::polymorphic_detail::getInputBinding<cereal::JSONInputArchive>(cereal::JSONInputArchive&, unsigned int)::{lambda(void*, std::unique_ptr<void, cereal::detail::EmptyDeleter<void> >&)#2}*& std::_Any_data::_M_access<cereal::polymorphic_detail::getInputBinding<cereal::JSONInputArchive>(cereal::polymorphic_detail::getInputBinding<cereal::JSONInputArchive>(cereal::JSONInputArchive&, unsigned int)::{lambda(void*, std::unique_ptr<void, cereal::detail::EmptyDeleter<void> >&)#2}*&, unsigned int)::{lambda(void*, std::unique_ptr<void, cereal::detail::EmptyDeleter<void> >&)#2}*>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16845#c2
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZ4postISt8functionIFvvEEEvOT_EUlvE_EERS5_v
+post<std::function<void ()> >(std::function<void ()>&&)::{lambda()#1}*& std::_Any_data::_M_access<post<std::function<void ()> >(post<std::function<void ()> >(std::function<void ()>&&)::{lambda()#1}*&&)::{lambda()#1}*>()
+#
+--format=auto --no-params
+_Z3xxxDF16_DF32_DF64_DF128_CDF16_Vb
+xxx(_Float16, _Float32, _Float64, _Float128, _Float16 _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF32xDF64xDF128xCDF32xVb
+xxx(_Float32x, _Float64x, _Float128x, _Float32x _Complex, bool volatile)
+xxx
+--format=auto --no-params
+_Z3xxxDF16b
+xxx(std::bfloat16_t)
+xxx
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16817
+--format=auto --no-params
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+_QueueNotification_QueueController__$4PPPPPPPM_A_INotice___Z
+--format=gnu-v3
+_Z1fSsB3fooS_
+f(std::string[abi:foo], std::string[abi:foo])
+--format=gnu-v3
+_Z18IndirectExternCallIPU7stdcallU7regparmILi3EEFviiEiEvT_T0_S3_
+void IndirectExternCall<void ( regparm<3> stdcall*)(int, int), int>(void ( regparm<3> stdcall*)(int, int), int, void ( regparm<3> stdcall*)(int, int))
+# 
+# ABI tags used to confuse the constructor name calculation.
+--format=gnu-v3 --no-params
+_ZNSt8ios_base7failureB5cxx11C1EPKcRKSt10error_code
+std::ios_base::failure[abi:cxx11]::failure(char const*, std::error_code const&)
+std::ios_base::failure[abi:cxx11]::failure
+--format=gnu-v3
+_Z1fPDxFvvES0_
+f(void (*)() transaction_safe, void (*)() transaction_safe)
+#
+# These two are from gcc PR61321, and gcc PR61233 / gdb PR16957
+#
+--format=gnu-v3
+_Z13function_tempIiEv1AIXszcvT_Li999EEE
+void function_temp<int>(A<sizeof ((int)(999))>)
+#
+--format=gnu-v3
+_Z7ZipWithI7QStringS0_5QListZN4oral6detail16AdaptCreateTableI7AccountEES0_RKNS3_16CachedFieldsDataEEUlRKS0_SA_E_ET1_IDTclfp1_cvT__EcvT0__EEEERKT1_ISC_ERKT1_ISD_ET2_
+QList<decltype ({parm#3}((QString)(), (QString)()))> ZipWith<QString, QString, QList, oral::detail::AdaptCreateTable<Account>(oral::detail::CachedFieldsData const&)::{lambda(QString const&, QString const&)#1}>(QList<QList> const&, QList<QString> const&, oral::detail::AdaptCreateTable<Account>(oral::detail::CachedFieldsData const&)::{lambda(QString const&, QString const&)#1})
+#
+# These three are symbols generated by g++'s testsuite, which triggered the same bug as above.
+--format=gnu-v3
+_Z14int_if_addableI1YERiP1AIXszpldecvPT_Li0EdecvS4_Li0EEE
+int& int_if_addable<Y>(A<sizeof ((*((Y*)(0)))+(*((Y*)(0))))>*)
+#
+--format=gnu-v3
+_Z3bazIiEvP1AIXszcl3foocvT__ELCf00000000_00000000EEEE
+void baz<int>(A<sizeof (foo((int)(), (float _Complex)00000000_00000000))>*)
+#
+--format=gnu-v3
+_Z3fooI1FEN1XIXszdtcl1PclcvT__EEE5arrayEE4TypeEv
+X<sizeof ((P(((F)())())).array)>::Type foo<F>()
+
+_Z1fIJidEEv1AIXsZT_EE
+void f<int, double>(A<2>)
+
+_ZN1A1fIJiiEiJiiiEEEvRAsPDpT_T0_DpT1_E_iS3_S5_
+void A::f<int, int, int, int, int, int>(int (&) [6], int, int, int, int)
+
+_Z10unary_leftIJLi1ELi2ELi3EEEv1AIXflplT_EE
+void unary_left<1, 2, 3>(A<(...+(1, 2, 3))>)
+
+_Z11unary_rightIJLi1ELi2EL__sockets__sockets_library_controllerDF__2
+gnat.sockets.sockets_library_Any_data9_M_accessIPZN3sel8Selector6SetObjI3FooJPKcMS4_FviEEEEvRT_DpT0_EUlvE_EESA_v
+sel::Selector::SetObj<Foo, char const*, void (Foo::*)(int)>(Foo&, char const*, void (Foo::*)(int))::{lambda()#1}*& std::_Any_data::_M_access<sel::Selector::SetObj<Foo, char const*, void (Foo::*)(int)>(sel::Selector::SetObj<Foo, char const*, void (Foo::*)(int)>(Foo&, char const*, void (Foo::*)(int))::{lambda()#1}*&, char const*, void (Foo::*)(inå÷÷∆:{lambda()#1}*>()
+# https://sourceware.org/bugzilla/show_bug.cgi?id=16752#c1
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZN13ThreadManager7newTaskIRSt5_BindIFSt7_Mem_fnIM5DiaryFivEEPS5_EEIEEESt6futureINSt9res}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}>(std::string const&, x::ref<x::mime::sectionObj, x::ptrrefBase> const&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}&&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}&&)::{lambda(unsigned long)#1}, x::mime::make_multipart_default_discarder<get_body_parser<mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}>(std::string const&, x::ref<x::mime::sectionObj, x::ptrrefBase> const&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)#1}&&, mime_processor::make_section_iterator(x::ref<x::mime::sectionObj, x::ptrrefBase> const&, bool)::{lambda()#1}::operator()() const::{lambda(x::ref<x::mime::sectionObj, x::ptrrefBase> const&)#2}&&)::{lambda(unsigned long)#1}> >, x::ptrrefBase> >&>::type&)
+#
+--format=gnu-v3 --no-params
+_ZNK7strings8internal8SplitterINS_9delimiter5AnyOfENS_9SkipEmptyEEcvT_ISt6vectorI12basic_stringIcSt11char_traitsIcESaIcEESaISD_EEvEEv
+strings::internal::Splitter<strings::delimiter::AnyOf, strings::SkipEmpty>::operator std::vector<basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<basic_string<char, std::char_traits<char>, std::allocator<char> > > ><std::vector<basic_string<char, std::char_traits<char>, std::allocator<char> >, std::arlocator<basic_string<char, std::char_traits<char>, std::allocator<char> > > >, void>() const
+strings::internal::Splitter<strings::delimiter::AnyOf, strings::SkipEmpty>::operator std::vector<basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<basic_string<chaó”ﬂåtd::char_traits<char>, std::allocator<char> > > ><std::vector<basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<basic_string<char, std::char_traits<char>, std::allocator<char> > > >, void>
+#
+--format=gnu-v3 --no-params
+_ZN1AcvT_I1CEEv
+A::operator C<C>()
+A::operator C<C>
+#
+--format=gnu-v3 --no-params
+_ZN1AcvPT_I1CEEv
+A::operator C*<C>()
+A::operator C*<C>
+#
+--format=gnu-v3 --no-params
+_ZN1AcvT_IiEI1CEEv
+A::operator C<int><C>()
+A::operator C<int><C>
+# https://sourceware.org/bugzilla/show_bug.cgi?id=14963#c16
+--format=gnu-v3
+_ZN3mdr16in_cached_threadIRZNK4cudr6GPUSet17parallel_for_eachIZN5tns3d20shape_representation7compute7GPUImpl7executeERKNS_1AINS_7ptr_refIKjEELl3ELl3ENS_8c_strideILl1ELl0EEEEERKNS8_INS9_IjEELl4ELl1ESD_EEEUliRKNS1_7ContextERNS7_5StateEE_JSt6vectorISO_SaISO_EEEEEvOT_DpRT0_EUlSP_E_JSt17reference_wrapperISO_EEEENS_12ScopedFutureIDTclfp_spcl7forwardISW_Efp0_EEEEESV_DpOSW_
+mdr::ScopedFuture<decltype ({parm#1}((forward<std::reference_wrapper<tns3d::shape_representation::compute::GPUImpl::State> >)({parm#2})))> mdr::in_cached_thread<cudr::GPUSet::parallel_for_each<tns3d::shape_representation::compute::GPUImpl::execute(mdr::A<mdr::ptr_ref<unsigned int const>, 3l, 3l, mdr::c_stride<1l, 0l> > const&, mdr::A<mdr::ptr_ref<unsigned int>, 4l, 1l, mdr::c_stride<1l, 0l> > const&)::{lambda(int, cudr::Context const&, tns3d::shape_representation::compute::GPUImpl::State&)#1}, std::vector<tns3d::shape_representation::compute::GPUImpl::State, std::allocator<tns3d::shape_representation::compute::GPUImpl::State> > >(tns3d::shape_representation::compute::GPUImpl::execute(mdr::A<mdr::ptr_ref<unsigned int const>, 3l, 3l, mdr::c_stride<1l, 0l> > const&, mdr::A<mdr::ptr_ref<unsigned int>, 4l, 1l, mdr::c_stride<1l, 0l> > const&)::{lambda(int, cudr::Context const&, tns3d::shape_representation::compute::GPUImpl::State&)#1}&&, std::vector<tns3d::shape_representation::compute::GPUImpl::State, std::allocator<tns3d::shape_representation::compute::GPUImpl::State> >&) const::{lambda(tns3d::shape_representation::compute::GPUImpl::State&)#1}&, std::reference_wrapper<tns3d::shape_representation::compute::GPUImpl::State> >(tns3d::shape_representation::compute::GPUImpl::execute(mdr::A<mdr::ptr_ref<unsigned int const>, 3l, 3l, mdr::c_stride<1l, 0l> > const&, mdr::A<mdr::ptr_ref<unsigned int>, 4l, 1l, mdr::c_stride<1l, 0l> > const&)::{lambda(int, cudr::Context const&, tns3d::shape_representation::compute::GPUImpl::State&)#1}&&, std::vector<tns3d::shape_representation::compute::GPUImpl::State, std::allocator<tns3d::shape_representation::compute::GPUImpl::State> >&&)
+# https://sourceware.org/bugzilla/show_bug.cgi?id=14963#c18
+--format=gnu-v3
+_ZNSt9_Any_data9_M_accessIPZN13ThreadManager10futureTaskISt5_BindIFSt7_Mem_fnIM6RunnerFvvEEPS5_EEEEvOT_EUlvE_EERSC_v
+ThreadManager::futureTask<std::_Bind<std::_Mem_fn<void (Runner::*)()> (Runner*)> >(std::_Bind<std::_Mem_fn<void (Runner::*)()> (Runner*)>&&)::{lambda()#1}*& std::_Any_data::_M_access<ThreadManager::futureTask<std::_Bind<std::_Mem_fn<void (Runner::*)()> (Runner*)> >(ThreadManager::futureTask<s28x, _Float32x<&A::operator int>)
+
+_Z1jI1AEDTcldtfp_oncvPT_EES1_
+decltype (({parm#1}.(operator A*))()) j<A>(A)
+
+_Z1fI1AEDtdtfp_srT_1xES1_
+decltype ({parm#1}.A::x) f<A>(A)
+
+_Z2f6IP1AEDtptfp_gssr1A1BE1xET_
+decltype ({parm#1}->(::A::B::x)) f6<A*>(A*)
+
+# Structured Bindings
+_ZDC1a1bE
+[a, b]
+
+_ZNStDC1aEE
+std::[a]
+
+_ZN3NMSDC1aEE
+NMS::[a]
+
+# Modules
+_ZN2Outer5InnerW3FOO2FnERNS0_1XE
+Outer::Inner::Fn@FOO(Outer::Inner::X&)
+
+_ZN5OuterW3FOO5Inner2FnERNS1_1XE
+Outer::Inner@FOO::Fn(Outer::Inner@FOO::X&)
+
+_ZN4Quux4TotoW3FooW3Bar3BazEPNS0_S2_5PlughEQuux::Toto::Baz@Foo.Bar(Quux::Toto::Plugh@Foo.Bar*)
+
+_ZW6Module1fNS_1a1bENS0_1cE
+f@Module(a@Module::b, a@Module::c)
+
+_ZN3BobW3FOOW3BAR3BarEPS1_1APNS_S1_1BE
+Bob::Bar@FOO.BAR(A@FOO.BAR*, Bob::B@FOO.BAR*)
+
+_ZW3FOOW3BAR3FooPS0_1APN3BobS0_1BE
+Foo@FOO.BAR(A@FOO.BAR*, Bob::B@FOO.BAR*)
+
+_ZN3BobW3FOOW3BAZ3FooEPS0_W3BAR1APNS_S2_1BE
+Bob::Foo@FOO.BAZ(A@FOO.BAR*, Bob::B@FOO.BAR*)
+
+_ZW3FOOW3BAZ3BarPS_W3BAR1APN3BobS1_1BE
+Bar@FOO.BAZ(A@FOO.BARau Bob::B@FOO.BAR*)
+
+_ZNW3FOO3TPLIS_3OneE1MEPS1_
+TPL@FOO<One@FOO>::M(One@FOO*)
+
+_ZNW3FOO3TPLIS_3OneE1NIS_3TwoEEvPS1_PT_
+void TPL@FOO<One@FOO>::N<Two@FOO>(One@FOO*, Two@FOO*)
+
+_ZN3NMSW3FOO3TPLINS_S0_3OneEE1MEPS2_
+NMS::TPL@FOO<NMS::One@FOO>::M(NMS::One@FOO*)
+
+_ZN3NMSW3FOO3TPLINS_S0_3OneEE1NINS_S0_3TwoEEEvPS2_PT_
+void NMS::TPL@FOO<NMS::One@FOO>::N<NMS::Two@FOO>(NMS::One@FOO*, NMS::Two@FOO*)
+
+_ZNStW3STD9allocatorIiE1MEPi
+std::allocator@STD<int>::M(int*)
+
+_ZNStW3STD9allocatorIiE1NIfEEPT_Pi
+float* std::allocator@STD<int>::N<float>(int*)
+
+_ZNStW3STD9allocatorI4PoohE1MEPS1_
+std::allocator@STD<Pooh>::M(Pooh*)
+
+_ZNStW3STD9allocatorI4PoohE1NI6PigletEEPT_PS1_
+Piglet* std::allocator@STepresenting ctor_kind.
+#    --is-v3-dtor        Likewise, but for dtors.
+#    --ret-postfix       Passes the DM      GL_RET_POSTFIX option
+#
+#  For compatibility, just in case it matters, the options line may be
+#  empty, to mean --format=auto.  If it doesn't start with --, then it
+#  may contain only a format name.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+#
+# Tests integer overflow problem PR70492
+
+__vt_90000000000cafebabe
+__vt_90000000000cafebabe
+#
+# Tests write access violation PR70498
+
+_Z80800000000000000000000
+_Z80800000000000000000000
+#
+# Tests write access violation PR70926
+
+0__Ot2m02R5T0000500000
+0__Ot2m02R5T0000500000
+#
+
+0__GT50000000000_
+0__GT50000000000_
+#
+
+__t2m05B500000000000000000_
+__t2m05B500000000000000000_
+##
+## Tests stack overflow PR71696
+#
+#__10%0__S4_0T0T0
+#%0<>::%0(%0<>)
+# Could crash
+
+_
+_
+# Could crash
+
+_vt
+_vt
+# Could crash
+
+_$_1Acitz
+_$_1Acitz
+# Could crash
+
+_$_H1R
+_$_H1R
+# Could crash
+
+_Q8ccQ4M2e.
+_Q8ccQ4M2e.
+# Could crash
+
+_ZmmAtl
+_ZmmAtl
+# Could crash
+--no-params
+_ZZaSFvOEES_
+_ZZaSFvOEES_
+_ZZaSFvOEES_
+# Could crash
+
+_ZZeqFvOEES_z
+_ZZeqFvOEES_z
+#
+# demangler/80513 Test for bogus characters after __thunk_
+
+__thunk_16a_$_1x
+__thunk_16a_$_1x
+#
+# demangler/80513 Test for overflow in consume_count
+
+__thunk_4294967297__$_1x
+__thunk_4294967297__$_1x
+#
+--format=gnu-v3 --no-params
+_Z3fo5n
+fo5(__int128)
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5o
+fo5(unsigned __int128)
+fo5
+#
+--format=java
+_ZN4java3awt10ScrollPane7addImplEPNS0_9ComponentEPNS_4lang6ObjectEi
+java.awt.ScrollPane.addImpl(java.awt.Component, java.lang.Object, int)mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+#
+--format=java
+_ZN4java3awt4geom15AffineTransform9getMatrixEP6JArrayIdE
+java.awt.geom.AffineTransform.getMatrix(double[])
+#
+--format=java
+_ZN23Mangle$Inner$InnerInner3fooEP6JArrayIPS0_IiEEdPS0_IPS0_IPS0_IPS0_IPN4java4lang6StringEEEEEPS0_IPS0_IPN6MangleEEE
+Mangle$Inner$InnerInner.foo(int[][], double, java.lang.String[][][][], Mangle[][])
+#
+--format=java
+_ZN6JArray1tEP6JArrayIPS_E
+JArray.t(JArray[])
+#
+--format=java
+_ZN4Prim1iEibcdfwPN4java4lang6StringEsx
+Prim.i(int, boolean, byte, double, float, char, java.lang.String, short, long)
+#
+--format=java
+_ZN4java4util14Map__U24_Entry11class__U24_E
+java.util.Map$Entry.class$
+#
+--format=java
+_ZN3org7eclipse3cdt5debug8internal4core5model9CVariable6sizeof$Ev
+org.eclipse.cdt.debug.internal.core.model.CVariable.sizeof()
+#
+--format=auto --no-params
+_Utf58_0_1__1_2147483647__2147483648
+_Utf58_0_1__1_2147483647__2147483648
+_Utf58_0_1__1_2147483647__2147483648
+#
+--format=gnu-v3 --no-params
+St9bad_alloc
+std::bad_alloc
+std::bad_alloc
+#
+--format=gnu-v3 --no-params
+_ZN1f1fE
+f::f
+f::f
+#
+--format=gnu-v3 --no-params
+_Z1fv
+f()
+f
+#
+--format=gnu-v3 --no-params
+_Z1fi
+f(int)
+f
+#
+--format=gnu-v3 --no-params
+_Z3foo3bar
+foo(bar)
+foo
+#
+--format=gnu-v3 --no-params
+_Zrm1XS_
+operator%(X, X)
+operator%
+#
+--format=gnu-v3 --no-params
+_ZplR1XS0_
+operator+(X&, X&)
+operator+
+#
+--format=gnu-v3 --no-params
+_ZlsRK1XS1_
+operator<<(X const&, X const&)
+operator<<
+#
+--format=gnu-v3 --no-params
+_ZN3FooIA4_iE3barE
+Foo<int [4]>::bar
+Foo<int [4]>::bar
+#
+--format=gnu-v3 --no-params
+_Z1fIiEvi
+void f<int>(int)
+f<int>
+#
+--format=gnu-v3 --no-params
+_Z5firstI3DuoEvD<Pooh>::N<Piglet>(Pooh*)
+
+_ZW3FooDC1a1bE
+[a, b]@Foo
+
+_ZN1NW3FooDC1a1bEE
+N::[a, b]@Foo
+
+_ZN3NMSW3MOD3FooB3ABIEv
+NMS::Foo@MOD[abi:ABI]()
+
+_ZGIW3Foo
+initializer for module Foo
+
+_ZGIW3FooW3Bar
+initializer for module Foo.Bar
+
+_ZGIW3FooWP3BarW3Baz
+initializer for module Foo:Bar.Baz
+
+_ZZ2L1vENKUlDpT_E_clIJiPiEEEvS0_
+void L1()::{lambda((auto:1)...)#1}::operator()<int, int*>(int, int*) const
+
+_ZZ2L1vENKUlDpT_E_clIJiPiEEEDaS0_
+auto L1()::{lambda((auto:1)...)#1}::operator()<int, int*>(int, int*) const
+
+_Z7captureIN4gvarMUlvE_EE7WrapperIT_EOS3_
+Wrapper<gvar::{lambda()#1}> capture<gvar::{lambda()#1}>(gvar::{lambda()#1}&&)
+
+_ZNK2L2MUlT_T0_E_clIifEEvS_S0_
+void L2::{lambda(auto:1, auto:2)#1}::operator()<int, float>(L2, int) const
+
+_ZNK1C1fMUlT_E_clIMS_iEEDaS1_
+auto C::f::{lambda(auto:1)#1}::operator()<int C::*>(int C::*) const
+
+_ZNK2L2MUlT_T0_E_clIifEEvS0_S1_
+void L2::{lambda(auto:1, auto:2S0_
+void first<Duo>(Duo)
+first<Duo>
+#
+--format=gnu-v3 --no-params
+_Z5firstI3DuoEvT_
+void first<Duo>(Duo)
+first<Duo>
+#
+--format=gnu-v3 --no-params
+_Z3fooIiFvdEiEvv
+void foo<int, void (double), int>()
+foo<int, void (double), int>
+#
+--format=gnu-v3 --no-params
+_Z1fIFvvEEvv
+void f<void ()>()
+f<void ()>
+#
+--format=gnu-v3 --no-params
+_ZN1N1fE
+N::f
+N::f
+#
+--format=gnu-v3 --no-params
+_ZN6System5Sound4beepEv
+System::Sound::beep()
+System::Sound::beep
+#
+--format=gnu-v3 --no-params
+_ZN5Arena5levelE
+Arlation PR70498
+
+_Z80800000000000000000000
+_Z80800000000000000000000
+#
+# Tests write access violation PR70926
+
+0__Ot2m02R5T0000500000
+0__Ot2m02R5T0000500000
+#
+
+0__GT50000000000_
+0__GT50000000000_
+#
+
+__t2m05B500000000000000000_
+__t2m05B500000000000000000_
+##
+## Tests stack overflow PR71696
+#
+#__10%0__S4_0T0T0
+#%0<>::%0(%0<>)
+# Could crash
+
+_
+_
+# Could crash
+
+_vt
+_vt
+# Could crash
+
+_$_1Acitz
+_$_1Acitz
+# Could crash
+
+_$_H1R
+_$_H1R
+# Could crash
+
+_Q8ccQ4M2e.
+_Q8ccQ4M2e.
+# Could crash
+
+_ZmmAtl
+_ZmmAtl
+# Could crash
+--no-params
+_ZZaSFvOEES_
+_ZZaSFvOEES_
+_ZZaSFvOEES_
+# Could crash
+
+_ZZeqFvOEES_z
+_ZZeqFvOEES_z
+#
+# demangler/80513 Test for bogus characters after __thunk_
+
+__thunk_16a_$_1x
+__thunk_16a_$_1x
+#
+# demangler/80513 Test for overflow in consume_count
+
+__thunk_4294967297__$_1x
+__thunk_4294967297__$_1x
+#
+--format=gnu-v3 --no-params
+_Z3fo5n
+fo5(__int128)
+fo5
+#
+--format=gnu-v3 --no-params
+_Z3fo5o
+fo5(unsigned __int128)
+fo5
+#
+--format=java
+_ZN4java3awt10ScrollPane7addImplEPNS0_9ComponentEPNS_4lang6ObjectEi
+java.awt.ScrollPane.addImpl(java.awt.Component, java.lang.Object, int)mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+#
+--format=java
+_ZN4java3awt4geom15AffineTransform9getMatrixEP6JArrayIdE
+java.awt.geom.AffineTransform.getMatrix(double[])
+#
+--format=java
+_ZN23Mangle$Inner$InnerInner3fooEP6JArrayIPS0_IiEEdPS0_IPS0_IPS0_IPS0_IPN4java4lang6StringEEEEEPS0_IPS0_IPN6MangleEEE
+Mangle$Inner$InnerInner.foo(int[][], double, java.lang.String[][][][], Mangle[][])
+#
+--format=java
+_ZN6JArray1tEP6JArrayIPS_E
+JArray.t(JArray[])
+#
+--format=java
+_ZN4Prim1iEibcdfwPN4java4lang6StringEsx
+Prim.i(int, boolean, byte, double, float, char, java.lang.String, short, long)
+#
+--format=java
+_ZN4java4util14Map__U24_Entry11class__U24_E
+java.util.Map$Entry.class$
+#
+--format=java
+_ZN3org7eclipse3cdt5debug8internal4core5model9CVariable6sizeof$Ev
+org.eclipse.cdt.debug.internal.core.model.CVariable.sizeof()
+#
+--format=auto --no-params
+_Utf58_0_1__1_2147483647__2147483648
+_Utf58_0_1__1_2147483647__2147483648
+_Utf58_0_1__1_2147483647__2147483648
+#
+--format=gnu-v3 --no-params
+St9bad_alloc
+std::bad_alloc
+std::bad_alloc
+#
+--format=gnu-v3 --no-params
+_ZN1f1fE
+f::f
+f::f
+#
+--format=gnu-v3 --no-params
+_Z1fv
+f()
+f
+#
+--format=gnu-v3 --no-params
+_Z1fi
+f(int)
+f
+#
+--format=gnu-v3 --no-params
+_Z3foo3bar
+foo(bar)
+foo
+#
+--format=gnu-v3 --no-params
+_Zrm1XS_
+operator%(X, X)
+operator%
+#
+--format=gnu-v3 --no-params
+_ZplR1XS0_
+operator+(X&, X&)
+operator+
+#
+--format=gnu-v3 --no-params
+_ZlsRK1XS1_
+operator<<(X const&, X const&)
+operator<<
+#
+--format=gnu-v3 --no-params
+_ZN3FooIA4_iE3barE
+Foo<int [4]>::bar
+Foo<int [4]>::bar
+#
+--format=gnu-v3 --no-params
+_Z1fIiEvi
+void f<int>(int)
+f<int>
+#
+--format=gnu-v3 --no-params
+_Z5firstI3DuoEvD<Pooh>::N<Piglet>(Pooh*)
+
+_ZW3FooDC1a1bE
+[a, b]@Foo
+
+_ZN1NW3FooDC1a1bEE
+N::[a, b]@Foo
+
+_ZN3NMSW3MOD3FooB3ABIEv
+NMS::Foo@MOD[abi:ABI]()
+
+_ZGIW3Foo
+initializer for module Foo
+
+_ZGIW3FooW3Bar
+initializer for module Foo.Bar
+
+_ZGIW3FooWP3BarW3Baz
+initializer for module Foo:Bar.Baz
+
+_ZZ2L1vENKUlDpT_E_clIJiPiEEEvS0_
+void L1()::{lambda((auto:1)...)#1}::operator()<int, int*>(int, int*) const
+
+_ZZ2L1vENKUlDpT_E_clIJiPiEEEDaS0_
+auto L1()::{lambda((auto:1)...)#1}::operator()<int, int*>(int, int*) const
+
+_Z7captureIN4gvarMUlvE_EE7WrapperIT_EOS3_
+Wrapper<gvar::{lambda()#1}> capture<gvar::{lambda()#1}>(gvar::{lambda()#1}&&)
+
+_ZNK2L2MUlT_T0_E_clIifEEvS_S0_
+void L2::{lambda(auto:1, auto:2)#1}::operator()<int, float>(L2, int) const
+
+_ZNK1C1fMUlT_E_clIMS_iEEDaS1_
+auto C::f::{lambda(auto:1)#1}::operator()<int C::*>(int C::*) const
+
+_ZNK2L2MUlT_T0_E_clIifEEvS0_S1_
+void L2::{lambda(auto:1, auto:2S0_
+void first<Duo>(Duo)
+first<Duo>
+#
+--format=gnu-v3 --no-params
+_Z5firstI3DuoEvT_
+void first<Duo>(Duo)
+first<Duo>
+#
+--format=gnu-v3 --no-params
+_Z3fooIiFvdEiEvv
+void foo<int, void (double), int>()
+foo<int, void (double), int>
+#
+--format=gnu-v3 --no-params
+_Z1fIFvvEEvv
+void f<void ()>()
+f<void ()>
+#
+--format=gnu-v3 --no-params
+_ZN1N1fE
+N::f
+N::f
+#
+--format=gnu-v3 --no-params
+_ZN6System5Sound4beepEv
+System::Sound::beep()
+System::Sound::beep
+#
+--format=gnu-v3 --no-params
+_ZN5Arena5levelE
+Arena::level
+Arena::level
+#
+--format=gnu-v3 --no-params
+_ZN5StackIiiE5levelE
+Stack<int, int>::level
+Stack<int, int>::level
+#
+--format=gnu-v3 --no-params
+_Z1fI1XEvPVN1AIT_E1TE
+void f<X>(A<X>::T volatile*)
+f)#1}::operator()<int, float>(int, float) const
+
+_ZNK1B2L3MUlT_T0_E_clIjdEEvS1_S2_
+void B::L3::{lambda(auto:1, auto:2)#1}::operator()<unsigned int, double>(unsigned int, double) const
+
+_Z3fooIN1qMUlvE_ENS0_UlvE0_EEiOT_OT0_
+int foo<q::{lambda()#1}, q::{lambda()#2}>(q::{lambda()#1}&&, q::{lambda()#2}&&)
+
+_ZNK2L1MUlDpT_E_clIJiPiEEEvS1_
+void L1::{lambda((auto:1)...)#1}::operator()<int, int*>(int, int*) const
+
+_ZZN1XIfLj0EE2FnEvENKUlTyfT_E_clIiEEDafS1_
+auto X<float, 0u>::Fn()::{lambda<typ<X>
+#
+--format=gnu-v3 --no-en

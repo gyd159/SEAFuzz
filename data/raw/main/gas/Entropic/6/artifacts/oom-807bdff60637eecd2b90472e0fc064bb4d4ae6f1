@@ -1,0 +1,33 @@
+=        .cf     ÿÿÿ;ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿcf       .cfi_sectÿÿÿÿÿÿter 60
+        pushq   %r15
+       V pushq   %r14
+        pusÿÿÿhq   %r13
+             .cfi_def_cfa_ofÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ    .cfi_offset 6,.cfi_def_cfa_offset 16
+  sr sfa/me
+_offset 6, -16
+        movq    %rsp, %rbp
+   .cfi_sectÿÿÿÿÿÿter 60
+        pushq   %r15
+         pushq   %r15
+       V pushq   %r14     
+   pusÿÿÿhq   %r13
+             .cfi_def_cfa_ofÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ    .cfi_offset 6, -16
+       vmovq    %rsp, %rbp
+        .cfi_def_cfa_register 60
+        pushq   %r15
+       V pushq   %r14
+        pushq   #NO_APP
+          .cfi_def_cfa_offset 16
+  sr sfa/me
+_offset 6, -16
+        mo  Š     2.cfieciot_nssr sfa.me
+	.cfi_startProc
+ ffset 27, -80
+	.cfi_offset i_offset 74¬ -56
+	.cfi_offsetf7 i_4of¬ -56
+	.cfi_offset fi_off8, -72
+	&gfi_offset 72, -64
+	.cfi_oft 28, -72
+	&cfi_offset 72,vq    %rsp, %rbp
+   .kf        a_of -64
+	.cfifs_offset 74¬

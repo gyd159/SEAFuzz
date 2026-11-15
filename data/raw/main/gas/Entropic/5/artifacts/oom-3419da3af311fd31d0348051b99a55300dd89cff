@@ -1,0 +1,101 @@
+	.cfi_startpÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ        .cfi	.long, [)4, -104
+	.
+
+
+
+8
+	nop
+	nop 8
+	.
+
+
+
+8
+	nop
+	nop 8
+	nop
+	nop [sp, 12rdi8]
+	ldp	x19, ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿsp
+	.×fi_window_save
+	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offset 16
+	.cfi_odb1ffset 29, -16
+	.cfi_offset 30, -רררררררררררררררררררר8
+	nop
+	nop 28, 1ÿÿÿÿÿÿÿ
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ndow_save	stp	x14, x30, [sל, -16]!
+	.offset"28, 112ץ‘›ˆ avetartproc
+	.long, [)4, -104
+	.
+
+
+
+8
+	nop
+	nop 8
+	nop
+	nop [sp, 128(
+	ldp	x19, ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿsp
+	.×fi_window_save
+	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offset 16
+	.cfi_odb1ffset 29, -16
+	.cfi_offset 30, -רררררררררררררררררררר8
+	nop
+	nop 28, 112ץ‘›ˆ avetartproc
+	.long, [)4, -104
+	.
+
+
+
+8
+	nop
+	nop 8
+	nop
+	nop [sp, 128]
+	ldp	x19, ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿsp
+	.×fi_window_save
+	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offset 16
+	.cfi_odb1ffset 29, -16
+	.cfi_offset 30, -רררררררררררררררררררר8
+	nop
+	nop 8
+	nop
+	nop [sp, 128]
+	ldp	x19, ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+     	.cfi_startproc
+&	.long 0
+	.cfi_de,_cfa_offset 8
+	.lrestore 	7c6   ret
+	.cfÿ.
+iÿÿÿÿÿ„„„„„„„cc
+fi

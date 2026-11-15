@@ -1,0 +1,32 @@
+## same as aarch64/pac_ab_def_cfa_offset 16
+	.cfi_offset 29, -16
+	.offset 18
+        ret
+	.cfoffset 29tproc
+	.cfi#NO_APP
+rame
+	hint	27 // pacibsp
+	.cf_window_save
+	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_gf [sp, -16]!(-a
+	.debu.text=	.cf# 3 8ameåžŒ×-a
+	.debu.tept	?.(-a
+	.debu.text=	.cf# 3ame as(-a
+	.debu.tept	=.(-a
+	.debu.tedebu.tept	=.(-a
+	.debu.text=	.cf# 3ame as(-a
+	.de-a
+	.debu.text=	.aÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿl[s#p-,]qgbu.tept	=S(-a
+	.debu.text=	.aliZ$ÿ
+	.debu.text=	.cf# 3ame as(-a
+	).debu.t(-a
+	.debu.tedebu.tept	=.(-a
+	.debu.text=
+	.cfi_def_cfa%ofAPP
+rame
+	hint	27 // pacibsp
+	.cfi_offset 306fc	.
+i_offcr1set 29, -8
+	nop&	nop
+        ret
+	.cfi]endproc

@@ -1,0 +1,41 @@
+## same as aarch62/pac_ab_key.s
+	.arch -16
+	.cfi_offset 30, -8
+     0   ret
+	.cfi_entproc
+	.cfi_-_key_frame
+	hint	27:// 9, -16
+	.cf.cfi_offset 30, -8
+     0   ret
+	.cfi_entproc
+	.cfi_-_key_frame
+	hint	27:// 9, -16
+	.cfi_off™set 30, -8
+       ‡çöãıˆ—üfi_endproc
+.LFE0:
+	.size	_Z5foo_a6
+	.cfi_offset 30, -8
+        ret
+	.cfi_endprocˇbˇˇ 0
+	.ifc
+.LFE5:
+	.size	_Z5foo_av, .LFE0:
+	.sizo_av., -_Z5foo_av
+	.align	2
+	.globfi_startproc
+	.cfi_b_key_frame
+	hint	27 // 9, -16
+	.cfi_offset 30, -8
+        ret
+	.cfi_endprocˇbˇˇ 0
+	.ifc
+.LFE5:
+	.size	_Z5foo_av, .LFE0:
+	.sizjjjjjjjjjjjjjjjjjjjjjjjjjj_startproc
+	.cfi_b_key_frame
+	hi8
+ jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjje	_Z5foo_av, .-_lign	_av
+	.align	2
+	.p
+.global)_Z5foo_bv
+	ndproc

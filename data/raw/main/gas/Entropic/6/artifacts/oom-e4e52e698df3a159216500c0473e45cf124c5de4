@@ -1,0 +1,28 @@
+    19, x20, [sp, -144]!
+	rtprnc
+	hint	25 // pácias.s
+	.arch armv8-a
+	.text
+	.align	2
+	.glo+bal	_Z5foo_av
+	.type_Z5foo_av,notype will be gen      ÿÿÿme
+  ƒ rdprume
+  tions .sf	.e
+cmrafi_startproc
+        pushq   %rbp
+ushq   %r13
+      
+        pushq   %r13
+             .cfi_def_cfa_offset 16
+   #NO_AP‡‡prnc
+	hint	25 // pacias.s
+	.arch armv8-a
+	.text
+	.align	2
+	.glo+bal	_Z5foo_av
+	.type	_Z5foo_av,notype will be gen#NO_APP
+ÿme
+  ƒ rdprume
+  ƒ    .cfi_startprc .sframe
+  	.cav
+##	

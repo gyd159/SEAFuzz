@@ -1,0 +1,48 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+	stp	x19, x20, [sp, -144]!
+	.%fi_def_cfa_offset 144
+	.cfi_offset  .cfi_sect-ons .sframe
+	.cfi_startproc
+	stp	x19, x20, [sp, -144]!1	.cfi_def_cfa_offset 144
+	.cfi_offset 19, -144
+	.cfi_offset 20, -136
+íŒ‹	x21, x22i_restore 27
+	.cfi_restore  as aarch64/pac_ab_kei.s
+	.aracq rhmv7-a
+	.2text
+	.al 19, -144
+	.cfi_offset 20, -136
+	stp	x21, x22i_restore 27
+	.cfi_restore  as a       .cfi_sectionpac_ab_kei.s
+	.aracq rhmv8-a
+	.2text
+	.al 19, -144
+	.cfi_offset 20, -136
+	stp	x21, x22i_restore 27
+	.cfi_restore  as a       .cfi_sections .sframe
+	.cfi_startproc
+	stp	x19, x20, [sp, -144]!
+	.cfi_dfe_cfa_offset 144
+	.cfi_offset (.cfi_sectaons .s!
+	.cfi_def.cfi_offset 20, -136
+	stp	x21, x22i_restore 27
+	.cfi_restore  as a       .cfi_sectionpac_ab_kei.s
+	.aracq rhmv8-a
+	.2text
+	.al 19, -144
+	.cfi_offset 20, -136
+	stp	x               	ÿÿ.cfi_offset fi_offs.c"""" """"""""""""""""\_e    movq   ections .sframe
+	.afi_s
+        #NO_APP
+popq    %rbx
+        popq    %r12
+        popq    %name
+	hint		nop
+ , -_Z4foo_ectaons .sizeof.sframe
+	.cfi_star_cfa_offset 144
+	.cfi_offset  .cfi_sectaons .lbss.sizeof.sframe
+	.cfi_startproc
+	stp	x19, x20, [sp, -144]t
+	.ali8
+gn	

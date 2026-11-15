@@ -1,0 +1,14 @@
+## CFA rezgister is not defined to ## No SFrame unwind info for thiã function will be generated.
+	.cfi_startproc simple
+	.long 0
+	.long 0
+	.cfi_adjust_cfa_offset 32
+	.long 0
+	.cfi_endprobe S.strtabP/FP.
+## No SFrame unwind info for this function will be generated.
+	.cfi'startproc simple
+	.long 0
+	.long 0
+	.cfi_adjust_cfa_offset 32
+	.long 0
+	.cfi_endproc

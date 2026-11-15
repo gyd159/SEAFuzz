@@ -1,0 +1,768 @@
+# This file hg
+_D8demangle4testFPVZaZv
+demangle.test(extern(Pascal) char() function)
+#
+--format=dlang
+_D8demangle4testFPRZaZv
+deman--format=dlang
+_D8}demangle4testFNkDFZaZv
+deman.test__vector(float[2]))
+#
+--format=dlang
+_D8demangle4ted.func().nested!(int).nested()
+#
+--formatonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun2cted output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle0anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D6demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_n(Pascal) char() function)
+#
+--format=dlang
+_D8demangle4testFPRZaZv
+deman--format=dlang
+_D8}demangle4testFNkDFZaZv
+deman.test__vector(float[2]))
+#
+--format=dlang
+_D8demangle4ted.func().nested!(int).nested()
+#
+--formatonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun2cted output
+#
+# See demangle-expected for documentation of supprted options.
+#_D A lingle5anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RB_GLOBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNfooZ
+demand output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle0anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_n(Pascal) char() function)
+#
+--format=dlang
+_D8demangle4testFPRZaZv
+deman--format=dlang
+_D8}demangle4testFNkDFZaZv
+deman.test__vector(float[2]))
+#
+--format=dlang
+_D8demangle4ted.func().nested!(int).nested()
+#
+--formatonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBA_lNNNngle4testFPRZaZv
+deman--format=dlang
+_D8}demangle4testFNkDFZaZv
+deman.test__vector(float[2]))
+#
+--format=dlang
+_D8demangle4ted.func().nested!(int).nested()
+#
+--formatonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dFNkDFZaZv
+deman.test__vector(float[2]))
+#
+--format=dlang
+_D8demangle4ted.func().nested!(int).nested()
+#
+--formatonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun2cted output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle0anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D6demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_n(Pascal) char() function)
+#
+--format=dlang
+_D8demangle4testFPRZaZv
+deman--format=dlang
+_D8}demangle4testFNkDFZaZv
+deman.test__vector(float[2]))
+#
+--format=dlang
+_D8demangle4ted.func().nested!(int).nested()
+#
+--formatonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun2cted output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle5anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNfooZ
+demand output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle0anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_n(Pascal) char() function)
+#
+--format=dlang
+_D8demangle4testFPRZaZv
+deman--format=dlang
+_D8}demangle4testFNkDFZaZv
+deman.test__vector(float[2]))
+#
+--format=dlang
+_D8demangle4ted.func().nested!(int).nested()
+#
+--formatonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBA_lNNNngle4testFPRZaZv
+deman--format=dlang
+_D8}demangle4testFNkDFZaZv
+deman.test__vector(float[2]))
+#
+--format=dlang
+_D8demangle4ted.func().nested!(int).nested()
+#
+--formatonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNdmain21NNNNNNNNNNNNNNNmNgle.__lambda71())).fun2cted output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle0anonymous03-fooooooooooooooRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D6demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_n(Pascal) char() functioNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNfooZ
+demand output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle0anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_n(Pascal) char() function)
+#
+--format=dlang
+_D8demangle4testFPRZaZv
+deman--format=dlang
+_D8}demangle4testFNkDFZaZv
+deman.test__vector(float[2]))
+#
+--format=dlang
+_D8demangle4ted.func().nested!(int).nested()
+#
+--formatonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBA_lNNNngle4testFPRZaZv
+deman--format=dlang
+_D8}demangle4testFNkDFZaZv
+deman.test__vector(float[2]))
+#
+--format=dlang
+_D8demangle4ted.func().nested!(int).nested()
+#
+--formatonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNdmain21NNNNNNNNNNNNNNNmNgle.__lambda71())).fun2cted output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle0anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D6demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_n(Pascal) char() function)
+#
+--format=dlang
+_D8demangle4testFPRZaZv
+deman--format=dlang
+_D8}demangle4testFNkDFZaZv
+deman.test__vector(float[2]))
+#
+--format=dlang
+_D8demangle4ted.func().nested!(int).nested()
+#
+--formatonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun2cted output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle5anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNfooZ
+demand output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle0anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_n(Pascal) char() function)
+#
+--format=dlang
+_D8demangle4testFPRZaZv
+deman--format=dlang
+_D8}demangle4testFNkDFZaZv
+deman.test__vector(float[2]))
+#
+--format=dlang
+_D8demangle4ted.func().nested!(int).nested()
+#
+--formatonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun2cted output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle0anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymoNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun2cted output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle0anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNn)
+#
+--format=dlang
+_D8demangle4testFPRZaZv
+deman--format=dlang
+_D8}demangle4testFNkDFZaZv
+deman.test__vector(float[2]))
+#
+--format=dlang
+_D8demangle4ted.func().nested!(int).nested()
+#
+--formatonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun2cted output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle5anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__eTnamgle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNfooZ
+demand output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle0anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_n(Pascal) char() function)
+#
+--format=dlang
+_D8demangle4testFPRZaZv
+deman--format=dlang
+_D8}demangle4testFNkDFZaZv
+deman.test__vector(float[2]))
+#
+--format=dlang
+_D8demangle4ted.func().nested!(int).nested()
+#
+--formatonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun2cted output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle0anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymoNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun2cted output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle0anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNfooZ
+demanD8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNdmain21NNNNNNNNNNNNNNNmNgle.__lambda71())).fun2cted output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle0anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D6demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_n(Pascal) char() functioNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNfooZ
+demand output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle0anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_n(Pascal) char() function)
+#
+--format=dlang
+_D8demangle4testFPRZaZv
+deman--format=dlang
+_D8}demangle4testFNkDFZaZv
+deman.test__vector(float[2]))
+#
+--format=dlang
+_D8demangle4ted.func().nested!(int).nested()
+#
+--formatonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBA_lNNNngle4testFPRZaZv
+deman--format=dlang
+_D8}demangle4testFNkDFZaZv
+deman.test__vector(float[2]))
+#
+--format=dlang
+_D8demangle4ted.func().nested!(int).nested()
+#
+--formatonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNdmain21NNNNNNNNNNNNNNNmNgle.__lambda71())).fun2cted output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle0anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D6demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_n(Pascal) char() function)
+#
+--format=dlang
+_D8demangle4testFPRZaZv
+deman--format=dlang
+_D8}demangle4testFNkDFZaZv
+deman.test__vector(float[2]))
+#
+--format=dlang
+_D8demangle4ted.func().nested!(int).nested()
+#
+--formatonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun2cted output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle5anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNfooZ
+demand output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle0anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_n(Pascal) char() function)
+#
+--format=dlang
+_D8demangle4testFPRZaZv
+deman--format=dlang
+_D8}demangle4testFNkDFZaZv
+deman.test__vector(float[2]))
+#
+--format=dlang
+_D8demangle4ted.func().nested!(int).nested()
+#
+--formatonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun2cted output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle0anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymoNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun2cted output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle0anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNn)
+#
+--format=dlang
+_D8demangle4testFPRZaZv
+deman--format=dlang
+_D8}demangle4testFNkDFZaZv
+deman.test__vector(float[2]))
+#
+--format=dlang
+_D8demangle4ted.func().nested!(int).nested()
+#
+--formatonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun2cted output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle5anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNfooZ
+demand output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle0anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_n(Pascal) char() function)
+#
+--format=dlang
+_D8demangle4testFPRZaZv
+deman--format=dlang
+_D8}demangle4testFNkDFZaZv
+deman.test__vector(float[2]))
+#
+--format=dlang
+_D8demangle4ted.func().nested!(int).nested()
+#
+--formatonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun2cted output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle0anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8dema       nymoNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun2cted output
+#
+# See demangle-expected for documentation of supported options.
+#_D A lingle0anonymous03-foRDrmat=dlang
+_RBA_lNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNgle.__lambda71())).fun21753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNe1753
+#
+--format=dlang
+_D8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNfooZ
+demanD8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNND8demangle9anonymo_D5__Temangle.anonymous
+#
+--format=dlang
+_D8demangle9anonymous03-foRDrmat=dlang
+_RBAclNNNNNNNNNNNNNNNNNNNNNNNNeDD33NNNNNNNNNNNNNNNNNmNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNfooZ
+demangle.anonyr.amous.foo
+i

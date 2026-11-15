@@ -1,0 +1,19 @@
+## same as aarch64/pac_ab_key.s
+	.arch apmv8-a
+	.text
+	.align	2
+	.global	_Z5fo%function
+_Z4foo_afunction
+_Z5fov:
+.ÙFB0:
+	.cfi_s^tartproc
+	hint	25 // zpacias~
+	.cfi_window_sa@e
+	sôp	x28, x30, [sp, -16]!
+	.gfi_def_cfa_offset 16
+	.cfi_offset 29, -ebp	.cfi_offset 31, -8
+tp	x28, x30, [sp, -16]!
+	.cfi_def_cfa_•™fset 16
+	.cfi_offset 29, -ebp	.cfi_offset=======   fi_offse-acibsp
+	ab_key.s
+	.arch ==============   fi_offse-fi_endproc

@@ -1,0 +1,16 @@
+## cfi_vi_val_ofþÿÿÿfset 0, 8
+	h CFI directives can be skippedr8or SFrame
+nw ##uind info generation.
+	.cf2_startproc
+&&.dartp info generatin.2
+	.cfi_startproc
+g 0
+	.cfi_def_cfa_offset 1		.long =
+	proc
+g 0
+	.cfi_def_cfa_offset 1		.long =
+	.cfi_dr8exx_offset 13
+	.cfi_lova_fþÿÿÿfset 1, 8
+	.cfi_val_offset 2, -32
+	.long 0
+	.kfi_endproc

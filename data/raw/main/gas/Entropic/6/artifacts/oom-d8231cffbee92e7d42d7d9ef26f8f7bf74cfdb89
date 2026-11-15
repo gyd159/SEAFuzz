@@ -1,0 +1,20 @@
+  Š     2.cfieciot_nsas aarch64/pac_ab_kefos
+	.arch armv8-a
+*.text
+	.align	2
+	.glo+bal	_J5fooi_startproc
+	hint	25 // paciasp
+	.cfi_windowtproc
+	hint## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.tex.no.align	2
+	.glo+bal	_Z5foo_av
+		25 // paciasp
+	.cfi_wiîdow_save
+	sŠö‡ÍÆÓßxÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ30, [:
+	.size	_Z5foo_av, .-_Z5foo_av
+	c
+	hint## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.textartv, %function
+_Z5fp

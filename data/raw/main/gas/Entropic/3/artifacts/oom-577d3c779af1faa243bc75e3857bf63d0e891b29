@@ -1,0 +1,33 @@
+## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.t      / pacias~
+	.cfi_wave
+	stp	x29, 	.size	_Z5foo_av, #-_Z5foo_av
+Z`5foo_av, %function
+_Z4foo_av:
+.LFB0:
+	.cfi_startproc
+	hi=ntÿÿÿÿÿÿÿÿ	25 // -16]!
+	.cfi_def_cf x30, [sp, -16]!
+	.cfi_def_cfa_offset 16
+	.cfi_ofSTT_COMfset ô29, -16
+	.cfi_offset 	.cfi_offset 31!
+	.cfi_def_cfa_offset 16
+	.cfi_offset 29, -ÏÉõöÑœ™–_offset 30, -8
+	nop
+	nop
+      fi_offsecfi_endp31!
+	.cfi_def_cfa_offset 16
+	.cfi_offset 29, -ÏÉõöÑœ™–i_def_cfa_o~fset 16
+	.cfi_offset 29, -16
+	.cfi_offset 	.cfi_offset 31!
+	.cfi_def_cfağ_offset 16
+	.cfi_offset 29, -ÏÉõöÑœ™–_offset 30, -8
+	nop
+	nop
+      fi_offsecfi_endp31!
+	.cfi_edf_cfa_offset 16
+	.cfi_offset 29, -ÏÉõöÑœ™–_offset 30, -8
+	nop
+	nop
+      fi_offsecfi_endproc

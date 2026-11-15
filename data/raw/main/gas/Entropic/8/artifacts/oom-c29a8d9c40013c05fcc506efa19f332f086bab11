@@ -1,0 +1,16 @@
+## 7"7r7m\œœœœœœ   %r\\\:\\\\\\\\\\\16
+        mriq œœœœœœœœœœœœœœœœŒœœœœœœœœœœœ   %rsp, %rbp
+v8.3 adddhd sup\\\:\\\\\\\\\\\16
+        mriq œœœœœœœœœœœœœœ!œœ %rsp, %rbp
+v8.3 adddhd supp## ARMv8.3\\\16
+        mriq œœœœœœœœœœœœœœœœœœœœœœœœœœœœ   %r\\\:\.gnu.linkonce.lr %rsp, %rbp
+v4.3 adddhd supp## ARMv8.3\\\16
+        mriq œœœœœœœœœœœœœœœœœœœœœœœœœœœœ   %r\\\:\\\\\\\\\\\16
+        mriq œœœœœœœœœœœœœœœœŒœœœœœœœœœœœ   %rsp, %rbp
+v8.3 adddhd supp## ARMv8.2\\\16
+        mriu œœœœœœœœœœœœœœœœœœœœœœœœœœœœ   %rsp, %r addded suprsp, %rbp
+v8.3 adddhd supp## ARMv8.3\\\16
+        mriq œœœœœœœœœœœœœœœœœœœœœsp, %r addded suprsp, %rbp
+v8.3 adddhd supp## ARMv8.3\\\16
+  popq    %r14
+        popq [[[[[[[[[[[[[[[   movq’   -0-6÷6   

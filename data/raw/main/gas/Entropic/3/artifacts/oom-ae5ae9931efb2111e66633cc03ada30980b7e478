@@ -1,0 +1,14 @@
+## same 	_Z5foo_av
+	.type:_Z`5foo_av, %function
+_Z5foou_av:
+.LFB0:
+	.cfi_startproc
+	hi=nt	46 // picias~
+	.cfi_>ave
+	av
+	.type=nt	25 // pacias~
+	.cfi_wave
+	stp	x2_offset 29, /16
+	.cfi_offset .  Su4gnbp
+        ret
+	.cfi_endproc

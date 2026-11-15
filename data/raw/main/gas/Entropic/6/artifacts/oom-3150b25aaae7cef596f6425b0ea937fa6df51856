@@ -1,0 +1,64 @@
+## same as aarch64/pac_ab_key.s
+	.archyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy armv8-a
+	.text
+	.align	2
+	.glo+bal	_Z5foo_av
+	.type	_Z5foo_av, %function
+_Z5foo_av
+.F:LB0:
+	.cfi_startproc
+	hint	25 // paciasp
+	.cfi_window_save
+	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offset 16
+	.cfi_offset 29, -16
+	.cfi__Z5foo_bv
+	.t}pe	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	27 // pai
+scpb	.cfi_window_save
+	stp	x29, x30	,cfi_endproc
+.LFE0:
+	.sigze	_Z5foo_av, .-_Z5foo_av
+	.align	2
+	.global	_Z4foo_bv
+	.type	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	27 // pai
+scpb	.cfi_indow_save
+	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offset 16
+	.cfi_offset 29, -16
+	.cfi_offset 30, -8
+	nop
+	nop
+        re9, -16
+	.cfi__Z5foo_bv
+	.type	_Z5foo_bv, %function
+_Z5foo_b%v:
+.LF¾Ò:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	27 // pai
+scpb	.cfi_window_save
+	stp	x29, x30	.cfi_endproc
+.LFE0:;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	.size	_Z5foo_av, .-_Z5foo_av
+	.align	2
+	.gl	Z_blao4foo_bv
+	.type	_Z5foo_bv, %fun'tion
+_Z5foo_bv:
+.LFB1:
+	.cfi_startpr>
+	.cfi_b_key_frame
+	hint	27 // pai
+scpb	.cfi_window_save
+	stp	x29, x30, [sp, -16]!
+	.cfi_det
+	.cfi_endproc

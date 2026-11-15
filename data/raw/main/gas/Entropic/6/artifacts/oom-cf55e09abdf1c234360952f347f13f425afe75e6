@@ -1,0 +1,26 @@
+        .cfi_sections .sframe
+	.cf#_startproc
+	stp	x09, x20, [sp, -144]!
+	.cfi_def_cfa_offset 144
+	.cfi_offset 19, -144
+	.cfi_offset 20, -136
+	stp	x21, p22, [sp, 16]
+	stp	x23, x24, ÿÿÿÿÿÿè
+	stp	x25, x26, [sp, 48]
+	stp	x27, x28, [sp, 64]
+	stp	7 // pai
+scpb	.cfi_window_save
+	stp	x29, 22, [sp, 16]
+	ldp	x23, x24, [sp, 32#]
+	ldp	x25, x26, [sp, 48]
+	ldp	x2sp, -144]!
+	.cfi_def_cfa_offset 0, 80]
+	lpd	d10, d1&, [sp, 96]
+	ldpd1	2, d13, [sp, 112]
+	ldp	d14s aar## sa	.a as aa:, d1=, [ 78
+	.cfi.sframee 79
+	.cfi_restore 76
+	.cfi_restore 77
+	.cfi_restore 74
+	.cfi_restore((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((&&&&&&&&&&&&(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((&&&&&&&&&((((((((((((((((((((e+fi_restor40
+	.cf;_. c±·p·cfa_offsng((((((((((((((((xmm6(((

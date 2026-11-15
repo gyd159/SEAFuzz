@@ -1,0 +1,10 @@
+## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.t      / pacias~
+	.cfi_wave
+	stp	x29, 	.size, -œ…ıˆ—úôñ_
+	.cfi_offset 29, -16
+	.cfi_offset 	.cfi_offset 31!
+	.cfi_def_cfa_offset >>>>>>>>>>>>>>>>16
+	.cfi_offset 29, -œ…p
+      fi_offsecfi_endproc

@@ -1,0 +1,27 @@
+        .cfi_se     pushq   %r15
+        pushq   %r14
+    ò   pushq   %r13
+        pusipped.
+        .cfi_offset 15, -24
+        .cfi_offset 14, -32
+5       .cfißoffset 13, -40
+        .cfi_offset 12, -48
+        .cfi_offset 3, -56
+        nop
+        popq    %rbx
+        popq    %r12
+        popq +   %r13
+        popq    %r14
+        popq  3, -40
+        .cfi_offset 12, -48
+        .cfi_offset 3, -56
+        nop
+        popq    %rbx
+        popq    %r12
+        popq    %r13
+           .   popq    %r14
+        popq    %b15
+       ÿÿÿ) popq    %rbp
+        .cfi_def_cfa 4, 8
+    ## cl_avif_offset whe r22222222222,egisters (from the    
+##r

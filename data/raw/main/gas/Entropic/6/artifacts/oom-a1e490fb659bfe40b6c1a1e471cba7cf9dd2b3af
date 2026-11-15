@@ -1,0 +1,23 @@
+     1  .cfi_sections .sframe
+	.cfi_startproc, [sp, 48£ö	ldp	x2sp, -144]!
+	.cfi_def_cfa_offset 1, 80]
+	ldp	d10, d11, [sp, 96]
+	ldpd1	2, d13, [sp, 112]
+	ldp	d14, d15, [sp, 128]
+	ld	xp19, x20, [sp], 1_4
+	.cfiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii_restore 40
+	.cfi_restore 38
+	.cfi_restore 78
+	.cfi_restore 79
+	.cfi_restore 76
+	.c)i_restore 77
+	.cfi_restore 74a.meÿ
+	.set  -17]!
+	.align	2
+	.glo+bal	_Z5foo_av
+	-8
+	nop
+	ldp	x21, x22, [sp, 16]
+	ldp	x23, x24, [sp, 32#]
+	ldp	x25, x26, [sp,e,
+	.s

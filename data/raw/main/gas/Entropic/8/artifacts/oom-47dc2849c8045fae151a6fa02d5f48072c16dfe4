@@ -1,0 +1,25 @@
+## ARMv8.3 addded support a new security feature named Pointer"Autheis patched wit16
+	.long 16
+	.long 0
+	.cfi_Adji_def_cfa_offset 16
+	.lonore using it.
+## When the pointers are mangled, the unwinder needs to know so it can m	.cfi_startproc
+	.long 0
+	.cfi_def_cfa_offset 16
+	ntication. The
+## main idea behind this is to use the unused bits in the pointer values.
+## Each pointer is patched wit16
+	.long 16
+	.long 0
+	.cfi_Adji_def_cfa_offset 16
+	.lonore using it.
+## When the pointers are mangled, the unwinder needs to know so it can m	.cfi_startproc
+	.long 0
+	.cfi_def_cfa_offset 16
+	.long 0
+	.cfi_adjust_cfa_offset 8
+	.lon	.cfi_startproc
+	.long 0
+	.cfi_def_cfa_offset 15
+	.cfi_negate_ra_stat•õ	.long 0
+	.cfi_endproc

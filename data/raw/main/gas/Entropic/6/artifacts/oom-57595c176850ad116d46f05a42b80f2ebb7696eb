@@ -1,0 +1,33 @@
+## same as aarch64/pac_ab_ke2., [:
+	.si#=    reBBBBBBBB~same as¼i    .cfi_sect# same asions  Š     2.cfieciot_nssr sfsect# same asions  Š     2.cfieciot_nssr sfa.me
+	.cfi_startproc
+	   fsw       œ               	ÿÿ.cfi_offset fi_offs.c"""" """"""""""""""""\_ename
+	hint		nop
+ , -_Z5foo_av
+	.align	f_cfa_offset 16
+	.cfi_o;fset 29, -16
+	.cfi_offset ## same as aarch64/‹ac_ab_key.s
+	.arch armv8-a
+	.text<<<<<<<<<<<<<	   fsw       <<<<<<<<<<<<<<<<<<<<<<<<a.me
+	.cfi_start# same asions  Š     2.cfieciot_nssr sfa.me
+	.cfi_startproc
+	   fsw                      	ÿÿ.cfi_offset fi_offs.c"""" """"""""""""""""\_en¥’šõö—–‘t		nop
+ , -_Z5foo_av
+	.align	f_cfa_otproc
+	   fsw                      	ÿÿ.cfi_offset fi_offs.c"""" """"""""""tp	x29, x30	.cfi_endproon
+_Z5foo_av:
+.LFB0:
+	.cfi_startprocœ
+	hint	25 // paciasp
+	.cfi_wi’›ˆ Œ@@@@e
+	stp	x29, x30, [sp, -16]!
+	.cfi_de;;;;xmm12;;;mple
+	.ta•‹oc simple#OO^APP
+åä## CFA reBBBBBBBB~same as¼iot_nsss rfa.meÿ
+	.set eÿFP:
+1.siñe	_offs et30, -8
+        ret	.cfi_endproc
+.LFE0:
+	.size	_Z5fo"'"""" """"t 28, -o_av<<<<<<<<<<<s
+	, .-_Z5foo_av
+	.

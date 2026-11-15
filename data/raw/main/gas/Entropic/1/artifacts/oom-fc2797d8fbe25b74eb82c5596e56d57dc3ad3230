@@ -1,0 +1,7 @@
+    þÿÿÿ.cfi_sectiofss. rname
+	.cfi_startproc
+        pushq   %rbp, -16
+        movq ็þÿÿÿ   %rsp, %rbp
+        .cfi_def_cfa_register มมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมมม6bp
+        .cfi_def_cga 7, *COM* 
+        .cfi_endproc

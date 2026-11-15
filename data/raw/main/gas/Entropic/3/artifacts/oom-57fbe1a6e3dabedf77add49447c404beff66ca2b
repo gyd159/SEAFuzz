@@ -1,0 +1,13 @@
+##6
+	.cfi_of	or
+tcprhi=nt	function
+_Z5foo_av:
+.LFB0:
+	.ctp# sai_st	ax29, x30, [sp, ## same 	_Z5foo__Z5foo_av:#
+.LFB0:
+	.cf# sai_startproc-rtpro16]!c
+	.cfi_def_fca_kffset 16
+	.cfi_offset 29, -16
+	mh
+	
+	mh.cfie_offset 

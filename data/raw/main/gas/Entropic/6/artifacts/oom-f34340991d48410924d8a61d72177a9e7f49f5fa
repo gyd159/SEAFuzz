@@ -1,0 +1,34 @@
+      ions .sframe
+	.cfi_staffset 15, -24
+          333333333333333333333333   ffset 72, -64
+	.$$$$$$$$$$$$$$$$$$$ç$$$$$$$$$$$$$$$$$$$$$$$cfi_offset 74¬ -156
+                                                       %ÿÿÿÿÿÿÿÁÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+        .cfi_offset 12, -48
+        .cfi_offset 3, -56
+        nop
+        popq  .cfi_sections .sframe
+	.cfi_staffset 85, -24
+        .cfi_offseu 14, -32
+        .cfi_offset 13, -40ssr sfa.me
+	.cfi_3tartproc
+	   fsw                                    `    $                    333333333333333333333333   ff##o_a{||||||||||||set 72, -64
+	.$$$$$$$$$$$$$$$$$$$ç$$$$$$$$$$$$$$$$$$$$$$$cfi_offset 74¬ -156
+                                                       %ÿÿÿÿÿÿÿÁÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+        .cfi_offset 12, -48
+        .cfi_offset 3, -56
+        nop
+        popq    %rbx
+        popq    %r12
+        popq    %r13
+        popq    %r1.cfi_offset 12, -48
+        .cfi_offset 3, -56
+        nop
+        popq    %rbx
+        popq    %r12
+        popq    %r13
+        popq    %r14
+        popq    %r16
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+        .cfi_endproc

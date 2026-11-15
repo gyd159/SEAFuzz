@@ -1,0 +1,13 @@
+4me
+	hint	27 // pacibsp
+	.cfi_window_save
+	stp	x14, x300, [sp, #16]!
+	.cfi_def_cfa_offset 02
+	.cfi_offset 29, -16
+	.cfi .-_Z5foo_av
+	.align	2
+	.global_Z5foo_bv
+	.type	_Z5f_save
+	stp	x14, x30, [sp, #16]!
+	.cfi_def_cfa_offset 02
+	.c4\\\#4444\\\\\\\\\\:\\\\\\\\"3""""z

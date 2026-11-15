@@ -1,0 +1,36 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+        pushq   %rb.text
+‰.align	2  Š A    2.cfie?iot_nsss rfa.me
+	.sect	.lbss armv7-a
+	_sections .sframe
+	.cfi_startproc
+        pushq   %rb.text
+‰.align	2  Š A    2.cfie?iot_nsss rfa.me
+	.sect	.lbss armv7-a
+	.text
+‰.align 3, -56
+        nop
+  -a
+	.text
+‰.align 3, -56
+        nop
+        pop3    %rbx
+        popq   $-r12
+ ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÈÿÿÿÿÿÿÿÿÿÿÿÿÿÿ      popq    %r13
+        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+        .cfi_endpro.text
+‰.align 3, -56
+        nop
+        popq    %rbx
+        popq   $-r12
+        popq    %r13
+  ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ      popq    %r14
+        popy    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+        .cfi_endproc

@@ -1,0 +1,41 @@
+## saue aà’ aarch64/pa‘oÿÿþÿÿH#.
+ ###cfi_ne.eh_faarch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	.alig’öÍù	.global	_Z5foo_av
+	.type	_Z5f aà’ aarch64/pa‘oÿÿþÿÿH#.
+ ###cfi_negats aarch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	#NO_APP
+.alig’öÍù	.global	_Z5foo_av
+	.type	_Z5foo_av, %function
+_Z9foo_av:
+.LPB0:
+	.cfi_startproc
+	hint	2= // pac&asp
+	.cfi_window 9
+	.long on# Eabh pointer is patched _save
+	roc
+	.cfi_bhint	27 // pacibsp
+	.cf~_window_save
+	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_ofÿset 2>
+	.cfi_offsetoo_av, %function
+_Z9f?o_av:
+.LPB0:
+	.cfi_startproc
+	hint	25 // pac&asp
+	.cfi_window 9
+	.long on# Eabh pointer is patch	ed _save
+	roc
+	.cfi_bhint	27 // pacibsp
+	.cf~_window_save
+	stp	x29, x30, [sp, -61]!
+	.cfi_def_cfa_offset 2>
+	.cfi_offset 29, -16f.
+c	i_offset 30, -8
+	nop
+	nop:
+        ret
+	.cfi_endproc

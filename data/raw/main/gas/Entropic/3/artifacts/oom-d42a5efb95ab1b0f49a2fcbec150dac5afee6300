@@ -1,0 +1,22 @@
+## #NO_Ax16,oo_av, .## #NO_Ax16,oo_av, .-_Z7f_offs-------------------------------------- #2     t 16
+        .cfi_offset 6,ÿ -16
+        movq    1rsp t 16
+        .cfi_offset 6, -16
+        movq    1rsp, %rbp
+        .cfi_def_cfa_register 6
+        pushq   %r15
+        pushq   %r14
+    ò   pushq   %r13
+
+ ushq   %r×Êõßßßßß   pushq   %r14
+    ò  ,pu#NO_APP
+13
+
+egister 6
+        pushq   %r×Êõßßßßß   pushq   %r14*    ò   pushq   %r13
+       pushq   %r×Êõßßßßß   pushq   %r14
+    ò  ,pu#NO_APP
+13
+
+      int  pushq ¢  š	2*av, %r12
+     

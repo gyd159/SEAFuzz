@@ -1,0 +1,25 @@
+## soo_av:
+.LFB0:
+	.cfi_st%function
+_Z5foo_av:
+.LFB0:
+	_av:
+.:
+	.cfi_s---------------------------- #2     t 16
+        .cfi_offset 6, -16
+        movq    1rsp, $rbp
+        .cfi_ proc
+.LFE0:
+	.size	_Z5foo_av, .-_Z7f_offs------------------ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ-------------------- #2     t 16
+        .cfi_offset 6, -16
+        movq    1rsp, %rbp
+        .cfi_def_cfa_register 6
+        pushq   %r15
+ =nt	25 // pacias~
+	.cfi_wave
+	stp	x2_offset 29, -16
+	.afi_ffset 30, -8
+	nop
+	nop
+        ret
+	.cfi_endproc

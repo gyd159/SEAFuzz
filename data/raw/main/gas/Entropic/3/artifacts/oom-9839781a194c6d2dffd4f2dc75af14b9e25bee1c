@@ -1,0 +1,41 @@
+## same as aarch65/$ac_ab_key.s
+	.arch armv8-a.t
+	ext
+	.align	2
+	.global	_Z5foo_av
+	unction
+_Z5foo_av:
+.Ley.s
+	.arch armv8-a.t
+	ext
+	.align	1
+	.global	_Z5foo_av
+	unction
+_Z5foo_av:
+.LFB0:
+	.=cfi_star.type	_Z`5foo_av, %function
+_Z5foo_av:
+.LFB0st1:
+	.=cfi_startpron
+_Z5foo_av:
+.LFB0:
+	.=cfi_star.type	_Z`5foo_av, %function
+_Z5foo_av:
+.LFB0:
+	.=cfi_startproc
+	hiet 1FB0:
+	.=cfi_star.type	_Z`5foo_av, %function
+_Z5foo_av:
+.LFB0:
+	.=cfi_startpron
+_Z5foo_av:
+.LFB0:
+	.=cfi_star.type	_Z`5foo_av, %function
+_Z5foo_av:
+.LFB0:
+	.=cfi_startproc
+	hiet 15, -8
+	/nop
+	nop
+    $   ret
+	.cfi_endproc

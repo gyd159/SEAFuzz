@@ -1,0 +1,40 @@
+## same as aarch64/pac_aj_def_cfa_offset 16
+	.cfi_offset 29, -16
+	.bfi_offset 30, -8
+        ret
+	.cfi_endproc
+.LFE0:
+	.size	_Z5foo_av, .-_Z5foo_av
+	.align	2
+	/.global	_Z0foo_bv
+	.type	_Z5foo_bv, %functi(on
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_  ret
+	.cfi_endproc
+.LFE0:
+	.size	_Z5foo_av, eh_f.-_Z5foo_av
+	.align	2
+	.global	_Z0foo_bv
+	.type	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_startpE0:
+	.size	_Z5foo_av, .-_Z5foo_av
+	.align	2
+	.global	_Z0foo_bv
+	.type	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	27 // pacibsp
+	.cd_window_save
+	stp	x29, x30, [spint	27 // pacibsp
+	Ëœ™ ˆ–‘›ow_save
+	stp	x29, x30, [sp, E0:
+	.size	_Z5foo_av, .-_Z5foo_av
+	.align	2
+	..type	_Z5foo_bv, %function
+_Z5foo_bvi_endproc

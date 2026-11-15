@@ -1,0 +1,7 @@
+= ### same as aarch64/pac_ab_key.s
+!# sa 	.arch ar5 // paciasp
+	.cfi_window_save
+	sŠö‡ÍÆÓß" ãßx29, [:
+	.size	_Z5foo_av, .-_Z6foo_av
+	.align	,_cuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuufa_oÑœœ—ßšrm-fi_si_s16
+	.cfiec_offs8et 

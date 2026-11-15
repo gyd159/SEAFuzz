@@ -1,0 +1,423 @@
+# This file holds test cases for the _ZN5alloc4heap8alloca1td7eh55c03e6cb81d924E
+alloc::heap::allocate
+#
+--format=rust
+_ZN4core3ptr8null_mut17mat=Result5fro!!!!!!!!!!!!!!!!!!!!!!!!!!core4sync5mutex5Mutex6__ctorMFC6ObjectZC4core4sync5mutex5Mutex
+core.sync.mutex.Mutex.this(Object)
+#
+--format=dlang
+_D3object14TypeInfo_Array8argTypesMFNbNfJC8TypeInfoJC8TypeInfoZi
+object.TypeInfo_Array.argTypes(out TypeInfo, out TypeInfo)
+#
+--format=dlang
+_D2rt6dmain211_d_run_mainUiPPaPUAAaZiZ7tryExecMFMDFZvZv
+rt.dmain2._d_run_main(int, char**, extern(C) int(char[][]) function).tqyExec(scope void() delegate)
+#
+--format=dlang
+_D6object9Exception6__ctorMFNaNbNfAyaAyamC6object9ThrowableZC9Exception
+object.Exception.thiang
+_D8demangle4testMOxFZv
+demangle.test() shared const
+#
+--format=dlang
+_D8demangle4testMONgFZv
+demangle.test() shared inout
+#
+--format=dlang
+_D4demangle4testMONgxFZv
+demangle.test() shared inout const
+#
+--format=dlang
+_D8demangle4testFDxFZaZv
+demangle.test(char() delegate const)
+#
+--format=dlang
+_D8demangle4testFDyFZaZv
+demangle.test(char() delegate immutable)
+#
+--format=dlang
+_D8demangle4testFDNgFZaZv
+demangle.test(char() delegate inout)
+#
+--format=dlang
+_D8demangle4testFDNgxFZaZv
+demangle.test(char() delegate inout const)
+#
+--format=dlang
+_D8demangle4testFDOFZaZv
+demangle.test(char() delegate shared)
+#
+--format=dlang
+_D8demangle4testFDOxFZaZv
+demangle.test(char() delegate shared const)
+#
+--format=dlang
+_D8demangle4testFDONgFZaZmain2._d_run_main(int, char**, extern(C) int(char[][]) function).tqyExec(scope void() delegate)
+#
+--format=dlang
+_D6object9Exception6__ctorMFNaNbNfAyaAyamC6object9ThrowableZC9Exception
+object.Exception.thiang
+_D8demangle4testMOxFZv
+demangle.test() shared const
+#
+--format=dlang
+_D8demangle4testMONgFZv
+demangle.test() shared inout
+#
+--format=dlang
+_D4demangle4testMONgxFZv
+demangle.test() shared inout const
+#
+--format=dlang
+_D8demangle4testFDxFZaZv
+demangle.test(char() delegate const)
+#
+--format=dlang
+_D8demangle4testFDyFZaZv
+demangle.test(char()! delegate immutable)
+#
+--format=dlang
+_D8demangle4testFDNgFZaZv
+demangle.test(char() delegate inout)
+#
+--format=dlaтng
+_D8demangle4testFDNgxFZaZv
+demangle.test(char() delegate inout const)
+#
+--format=dlang
+_D8demangle4testFDOFZaZv
+demangle.test(char() delegate shared)
+#
+--format=dlang
+_D8demangle4testFDOxFZaZv
+demangle.test(char() delegate shared const)
+#
+--format=dlang
+_D8demangle4testFDONgFZaZv
+demangle.test(char() delegate shared inout)
+#
+--format=dlang
+_D8demangle4testFDONgxFZaZv
+demangle.test(char() delegate shared inout const)
+#
+--format=dlang
+_D8demangle004testFaZv
+demangle.test(char)
+#
+--format=dlang
+_D8demangle000000004testFaZv
+demangle.test(char)
+#
+--format=dlang
+_D8demangle__T3abcS_DQt10__lambda13FNaNbNiNfZiZQBhFZi
+demangle.abc!(demangle.__lambda13()).abc()
+#
+# Unittests
+#
+--format=dlang
+printf
+printf
+#
+--format=dlang
+_foo
+_foo
+#
+--format=dlang
+_D88
+_D88
+#
+--format=dlang
+_D5__T1aZv
+_D5__T1aZv
+#
+--format=dlang
+_D00
+_D00
+#
+--format=dlang
+_D01_D
+_D01_D
+#
+--format=dlang
+_D9223372036854775817
+_D9223372036854775817
+#
+--format=dlang
+_D1az
+_D1az
+#
+--format=dlang
+_D1aN
+_D1aN
+#
+--format=dlang
+_D1aF
+_D1aF
+#
+--format=dlang
+_D1aM
+_D1aM
+#
+--format=dlang
+_D1aFZNz
+_D1aFZNz
+#
+--format=dlang
+_D1aFNzZv
+_D1aFNzZv# This file holds test cases for the Rust demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests (legacy)
+#
+#
+# Demangles as rust symbol.
+--format=rust
+_ZN4main4main17he714a2e23ed7db23E
+main::main
+# Also demangles as c++ gnu v3 mangled symbol. But with extra Rust hџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџтттттттттттттттттттттттттттттттттттттттттттттттттттттттт6Obli№ationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ22register_obligation_atB1v_.llvm.8џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ$џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџтттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттџџџџџџџџџџџџџџџџџџџџџџџџџџџџult5frontMFNaNdNfZS3std5range22__T10OnlyResultTwVmi1Z10ustc_data_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ§џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџтттттттттттттттттттттттттттттттттттттттттттттттттттт6Obli№ationForestNZv
+demangle.test(char() @property delegate)
+#
+--format=dlang
+_D8demџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ!џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ22register_obligation_atB1v_.llvm.8џџџџџџџџџџџџџџџџџџџџџџџation_at
+--format=rust
+_ZN4core3ptr85drop_in_place$LT$std..rt..lang_start$LT$$LP$$RP$$GT$A.џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ517020237817239694
+<rustc_data_structures::obligation_forest::ObligationForest<rustc_D3std6traits17__T6fqnSymS43stdZ11adjustIdentFAyaZAya
++std.traits.fqnSym!(stdд.adjustIdent(immutable(char)[])
+#
+--format=dlang
+_D2rt8ln_place<std::rt::lang_staru<()>::{{closure}}>
+# old style ruste.fn!("\xe4\xb8\x96\xe7\x95\x8c").fn()
+#
+--format=dlang
+_D2gc11gctemplates56__T8mkBitmapTS3std5range13__T4iotaTiTiZ4iotaFiiZ6ResultZ8mkBitmapFNbNiNfPmmZv
+gc.gctemplates.mkBitmap!(std.range.iota!(int, int).iota(int, int).Result).mkBitmap(ulong*, ulong)
+#
+--format=dlang
+_D8serenity9persister6Sqlite69__T15SqlitePersisterTS8serenity9persister6Sqlite11__unittest6FZ4TestZ15SqlitePersister12__T7opIndexZ7opIndexMFmZS8serenity9persisteA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=auto
+_RMCs2fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>N4core3ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::nuттттттттттттттттттттттттттттттттттттттттттттттттттттттттттџџџџџџџџџџџџџџџџџџџџџџџџџџџџult5frontMFNaNdNfZS3stc llvm thinlto
+--format=rust
+_ZN9backtraec3fo17hbb467fcdaea5d79bE.llvm.A5310EB9
+backtrace::fooOnlyResult
+daeџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ22register_obligation_atB1v_.llvm.8џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ$џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџтттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттџџџџџџџџџџџџџџџџџџџџџџџџџџџџult5frontMFNaNdNfZS3std5range22__T10OnlyResultTwVmi1Z10ustc_data_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ§џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџтттттттттттттттттттттттттттттттттттттттттттттттттттт6Obli№ationForestNZv
+demangle.test(char() @property delegate)
+#
+--format=dlang
+_D8demџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ!џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ22register_obligation_atB1v_.llvm.8џџџџџџџџџџџџџџџџџџџџџџџation_at
+--format=rust
+_ZN4core3ptr85drop_in_place$LT$std..rt..lang_start$LT$$LP$$RP$$GT$A.џџџџџџџџ517020237817239694
+<rustc_data_structures::obligation_forest::ObligationForest<rustc_D3std6traits17__T6fqnSymS43stdZ11adjustIdentFAyaZAya
++std.traits.fqnSym!(std).adjustIdent(immutable(char)[])
+#
+--format=dlang
+_D2rt8ln_place<std::rt::lang_staru<()>::{{closure}}>
+# old style ruste.fn!("\xe4\xb8\x96\xe7\x95\x8c").fn()
+#
+--format=dlang
+_D2gc11gctemplates56__T8mkBitmapTS3std5range13__T4iotaTiTiZ4iotaFiiZ6ResultZ8mkBitmapFNbNiNfPmmZv
+gc.gctemplates.mkBitmap!(std.range.iota!(int, int).iota(int, int).Result).mkBitmap(ulong*, ulong)
+#
+--format=dlang
+_D8serenity9persister6Sqlite69__T15SqlitePersisterTS8serenity9persister6Sqlite11__unittest6FZ4TestZ15SqlitePersister12__T7opIndexZ7opIndexMFmZS8serenity9persisteA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=auto
+_RMCs2fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+_D8demangle4testMONgFZv
+demangle.test() shared inout
+#
+--format=dlang
+_D4demangle4tesттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттџџџџџџџџџџџџџџџџџџџџџџџџџџџџult5frontMFNaNdNfZS3std5range22__T10OnlyResultTwVmi1Z10ustc_data_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ§џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџтттттттттттттттттттттттттттттттттттттттттттттттттттт6Obli№ationForestNZv
+demangle.test(char() @property delegate)
+#
+--format=dlang
+_D8demџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ!џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ22register_obligation_atB1v_.llvm.8џџџџџџџџџџџџџџџџџџџџџџџation_at
+--format=rust
+_ZN4core3ptr85drop_in_place$LT$std..rt..lang_start$LT$$LP$$RP$$GT$A.џџџџџџџџ517020237817239694
+<rustc_data_structures::obligation_forest::ObligationForest<rustc_D3std6traits17__T6fqnSymS43stdZ11adjustIdentFAyaZAya
++std.traits.fqnSym!(std).adjustIdent(immutable(char)[])
+#
+--format=dlang
+_D2rt8ln_place<std::rt::lang_staru<()>::{{closure}}>
+# old style ruste.fn!("\xe4\xb8\x96\xe7\x95\x8c").fn()
+#
+--format=dlang
+_D2gc11gctemplates56__T8mkBitmapTS3std5range13__T4iotaTiTiZ4iotaFiiZ6Resu152>>
+#
+--format=auto
+_RMCs4fqI2P2rA_1043const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=                                                      auto
+_RMCs4fqI2P2rA04_13const_genericINtB_0T4testVAdA2e08P1eN08P1Zv
+demangle.test!([0x0.8p1, -0x0.8p1])
+#
+--format=dlang
+_D8dem;ngle23__T4testVHiiA2i1i2i3i4Zv
+demangle.test!([1:2, 3:4])
+#
+--format=dlang
+_D8demangle39__T4testVHAxaiA2a3_616263i1a3_646566i2Zv
+demangle.test!(["abc":1, "def":2])
+#
+--format=dlang
+_D8demangle28__T4testVS8demangle1SS2i1i2Zv
+demangle.test!(demangletest(inout(char))
+#
+--format=dlang
+_D8demangle4testFOxaZv
+dema4f1d3aE
+<Test + 'static as foo::Bar<Test>>::bar
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17h8581507801fb8615E
+<I as core::iter::traits::IntoIterator>::into_iter
+#
+--format=rust
+_ZN10parse_tsan4main17hdbbfdf1c6a7e27d9E
+parse_tsan::main
+#
+--format=rust
+_ZN65_$LT$std..env..Args$u20$as$u20$core..iter..iterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Arg3 as core::iter::iterator::Iterator>::next
+#
+--format=rle.test(void)
+#
+--format=dlang
+_D8demangle4testFwZv
+demangle.test(dchar)
+#
+--format=dlang
+_D8# This file holds test cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this0file are NOT ignored.
+#
+##ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc##########
+#
+# Coverage Tests
+#
+--format=dlang
+_Dmain
+Dion_atB1v_.llvm.8џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ§џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџтттттттттттттттттттттттттттттттттттттттттттттттттттттттт6Obli№ationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ22register_obligation_atB1v_.llvm.8џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ$џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџтттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттттџџџџџџџџџџџџџџџџџџџџџџџџџџџџult5frontMFNaNdNfZS3std5range22__T10OnlyResultTwVmi1Z10ustc_data_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ§џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџтттттттттттттттттттттттттттттттттттттттттттттттттттт6Obli№ationForestNZv
+demangle.test(char() @property delegate)
+#
+--format=dlang
+_D8demџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ!џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ22register_obligation_atB1v_.llvm.8џџџџџџџџџџџџџџџџџџџџџџџation_at
+--format=rust
+_ZN4core3ptr85drop_in_place$LT$std..rt..lang_start$LT$$LP$$RP$$GT$A.џџџџџџџџ517020237817239694
+<rustc_data_structures::obligation_forest::ObligationForest<rustc_D3std6traits17__T6fqnSymS43stdZ11adjustIdentFAyaZAya
++std.traits.fqnSym!(std).adjustIdent(immutable(char)[])
+#
+--format=dlang
+_D2rt8ln_place<std::rt::lang_staru<()>::{{closure}}>
+# old style ruste.fn!("\xe4\xb8\x96\xe7\x95\x8c").fn()
+#
+--format=dlang
+_D2gc11gctemplates56__T8mkBitmapTS3std5range13__T4iotaTiTiZ4iotaFiiZ6ResultZ8mkBitmapFNbNiNfPmmZv
+gc.gctemplates.mkBitmap!(std.range.iota!(int, int).iota(int, int).Result).mkBitmap(ulong*, ulong)
+#
+--format=dlang
+_D8serenity9persister6Sqlite69__T15SqlitePersisterTS8serenity9pe
+<const_generic::Char<'v'>>N4core3ptr8null_mut17h736cce09ca0ac11aE
+core::ptr::nuттттттттттттттттттттттттттттттттттттттттттттттттттттттттттџџџџџџџџџџџџџџџџџџџџџџџџџџџџult5frontMFNaNdNfZS3stc llvm thinlto
+--format=rust
+_ZN9backtraec3foo17hbb467fcdaea5d79bE.llvm.A5310EB9
+backtrace::fooOnlyResult
+daea5d79bE.llvm.A5310EB9@
+b@16ackrmat=rust
+_ZN9backtrace3foo17hbb467fcdaea5570b6e9070b693bE
+<alloc::raw_=vec::RawVec<T>>::ptr
+#
+--format=rust
+_ZN4core3ptr31_$LT$impl$u20$$BP$m152>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed5range44__T10OnlyResultqwVmi1Z10ustc_data_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendintNoSync!("\n\t    auto x = htonl(param);\n\t    auto he = gethostbyaddr(&x, 4, cast(int)AddressFamily.INET);\n\t", uint).getHostNoSync(uint)
+#
+--format=dlang
+_D2gc6config13__T5parseHTfZ5parseFNbNiAxaKAxaKfZb
+gc.config.parse!(float).parse(const(cha
+#
+--format=dlang
+_D8demangle4testFDFNiZaZv
+demangle.test(char() @nogc delegate)
+#
+--format=dlang
+_D8demangle4testFDFNmZaZv
+demangle.test(char() @live delegate)
+#
+--format=dlang
+_D8demangle4testFDFNaNbZaZmangle4te004testFaZv
+demangle.test(char)t=dlang
+_D15__T4testVfe0p1Zv
+_D15__T4testVfe0p1Zv
+#
+--format=dlang
+_D15__T4testVAyaa1_
+_D15__T4testVAyaa1_
+#
+--format=dlang
+_D16__T4testVAyaa0aZv
+_D16__T4testVAyaa0aZv
+#
+--format=dlang
+_D18__T4testVAyaa1_0GZv
+_D18__T4testVAyaa1_0GZv
+#
+--format=dlang
+_D18__T4testVAyaa1_YYZv
+_D18__T4testVAyaa1_YYZv
+#
+--format=dal
+ng_D4test3fooAnothrow delegate)
+#
+--format=dlang
+_D8demangle4testFDFNcZaZv
+(emangle.test(char() ref delegate)2P2rA04_1d<-11>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<faltestFB1aZv
+demangle.test(Tuple!(char))
+#
+--format=dlang
+_D8demangle3testFB2aaZv
+demangle.test(Tuple!(char, char))
+#
+--format=dlang
+_D8demangle4testFBstd.traits.fqnSym!(std).adjustIdent(immutable(char)[])
+#
+--format=dlang
+_D2rt8lifetime36__T14_d_newarrayOpTS13_d_newarrayiTZ14_d_newarrayOpTFNaNbxC8Tygation_atB1v_.llvm.8џяџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ                                        џџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџ517020237817239694
+<rustc_data_struct3const_genericINtB0_4CharKc2202_E
+<const_generРic::Char<'\u{2202}'>>
+#
+--foruredemangle.test(Tuple!(char))
+#
+--format=dlang
+_D8deџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџџтттттттттттттттттттттттттттттттттттттттттттттттттттт6Obli№ationForestNZv
+demangtime36__T14_d8d3FOO
+<const__newarrayOpTS13_d_newarrayiTZ14_d_newgarrayOpTFNaNbxC8TypeInfomPB9
+backtrace::foo

@@ -1,0 +1,24 @@
+## CFA register is not defined to be SP/FP.
+## Noú SFrame unwind info for this         .cfi_sections .
+## .•long 0
+	.cfi_adjust_cfa_offset 16
+	.long 0
+	.c i_eÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ·········ndprsdrame
+	.cfi_startproc
+        pushq   %rbp
+   '    .cfi_def_cfa_offset 15
+        .cfi_offset 6, 116
+        movq    %rsp, %rbp
+        .cfi_def_cfa_register 6
+        pushqàßßÚÎÊõ        pushq
+	.cfi_adjust_cfa_offset 16
+	.long 0
+	.c i_eÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ·········ndprsdrame
+	.cfi_startproc
+        qushq   %rbp
+   '    .cfi_def_cfa_offset 15
+        .cfi_offset 6, 116
+        movq   set 16
+	.odes are n(ot interesting
+  ## for SFramlong 0
+	.cfi_e generationendproc

@@ -1,0 +1,11 @@
+## ARMv8.3 addded support a new security feature named Pointer Authentication. The
+## main idяяяяяяяяfяяяяяяяяяяea behind this is to use яtяяяяied
+## before using it.
+## Whenare not mangl
+	. the pointers are mangled, the unwinder oeeds to know so it can m	.cfi_tion.
+##
+## SFrame has support fow this. This testcase ensu4res that %the dirяяяяяяяяяяective
+## is interpreteХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХdoffset 16
+	.long 0
+		.long succ##essfully.
+	.cfi_†tartproc

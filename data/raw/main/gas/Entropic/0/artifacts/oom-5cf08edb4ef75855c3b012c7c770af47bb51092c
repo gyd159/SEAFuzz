@@ -1,0 +1,23 @@
+## same as :aarch64/pac_ab_def_cfa_offset 16
+	.cfi_offset 29, -16
+	.offset 18
+        ret
+	.cfi_endproc
+.LFE0:
+	.size	_Z5foo_av, .-_Z5foo_av
+	.align	2
+	.global	_Z0foo_bv
+	.type	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc## same as8-a
+	.text
+	.align	2
+	.global	_Z5foo_av
+	.type	_Z5foo_av, %function
+_Z5[foo_av:
+.LF
+	.cB0.eh_frame:
+	.cfi_startprocBBBBBBBBBBBBBBBBBBBBB
+	hint paciasp
+fi_b[k	.cfi_w6indow_eysa

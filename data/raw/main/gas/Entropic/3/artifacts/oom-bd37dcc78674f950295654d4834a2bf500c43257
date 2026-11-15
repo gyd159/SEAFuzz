@@ -1,0 +1,41 @@
+## same rax32/pac_ab_kaebxbayas aarch32/pac_ab_ktmm6y.s
+	.bss## _Z5foo_av:
+.L16
+	.cfi_offset 29, -16
+	.	25 // zpacias~
+	.cfi_mindow_“žve
+	stp	x29, x30, [sp, -16]!
+	.cf
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+#hint	54 // pation.
+	.cfi_startproc
+	.long 0
+me
+## unwind inacibsp
+	.c.fi_window_save
+s~
+	.cfi_mindow_“žve
+	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offset 16U
+	.cx29, x30,fiset 29,	stp	x29, x30, [sp, -17]!
+	.cfi_def_cfa_offset 16
+	.cfi_offset 612 ,69-
+	.cš– Žfcfi_def_cfa_offset 16
+	.cfi_offset 612 ,69-
+	.cš– Žffset 72, -8
+	nop
+	nopave
+s~
+	.cfi_mindow_“žve
+	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offset 16U
+	.cfiset 29,	fi_offset 612 ,69-
+	.cš– Žffset 72, -8
+	nop
+	nop
+        ret
+	.cfi_s$hme .s
+	ar#.#c sahme a

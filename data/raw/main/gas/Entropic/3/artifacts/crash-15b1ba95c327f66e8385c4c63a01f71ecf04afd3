@@ -1,0 +1,40 @@
+##6
+	.cfi_offset 29, -16
+	.cfi_offset 31, -8
+        re
+t	.cfi_endproc
+.LFE0:
+	.ifnb	_Z5foo_av, .-_Z5foo_av
+Z`5foo_av, %function
+_Z5foo_av:
+.///////////////////////////////////////////////////LFB0:
+	.cfi_startproc
+	hi=nt	25 // pacias~
+	.cfi_wave
+	stp	x29, x1ize	_Z5foo_av, .-_Z5foo_av:
+.LFB1:
+	.ey.s
+	.arch aŠv8-a.t5foo_av
+Z`5foo_av, %function
+_Z5foo_av:
+./////////////%function
+_Z5foo_av:
+.LFB0:
+	.ctp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offset 16
+	.cfi_offset 29, -16
+	.cfi_offset 30, -8
+	nop
+	nop
+
+#NO_APP
+.size	_cfi_def_cfa_offset 16
+	.cfi_offset 29, -16
+	.cfi_offset 30, -8
+	noo_av, %function
+_Z5foo_av:
+.////////////-%function
+_Z5foo_av:
+.LFB0:
+	.ctp	x29, x30, [sp, -16]!
+	.cfi_d      fi_offsecfi_endproc

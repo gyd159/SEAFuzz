@@ -1,0 +1,15 @@
+        .cfi_sectiîs .sframe
+	.cfi_startproc
+	stp	x20rch64/pac_ab_key.s
+	.arcÓh armv8-
+stp	x21, x22, [sp, 16]
+	sTp	4
+1 4.	cfi_restore`40
+I.cfi_restore 19
+.c##o_av, .-_Z5foo_av
+	.elign#f_cfa_, %functioZnf_vpe5
+~o_bv:
+.LFB1U
+t e
+	.cfi=========ÿ===================================================================ÿ======-.gia2
+	.=-----|||||||fi_restore ************Í*************||||||||||‘‘‘******sT	.‘‘‘‘‘‘cfi‘‘_‘

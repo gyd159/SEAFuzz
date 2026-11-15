@@ -1,0 +1,19 @@
+#NO_APP
+r av
+##	.type	_Zframe
+	hint		nop
+      r t e
+	.cfi===~~~~~~~~~~~~~~~~~~APP
+r av
+##	.type	_Zframe
+	hin~~~~~~~~~~~~~~~~~APP
+r av
+##	.type	_Z&rame
+	hint		nop--_bv:
+.µFB2:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hotnpi	n	
+        ret
+	.=fi_endp-----f--oo_av
+/

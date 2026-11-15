@@ -1,0 +1,5 @@
+=       .cfi_sections .sframe
+	.cfi_startproc
+	stp	x19, x20, [sp, -144]!
+## same as aarch64/pac_abype	_Z5foo_bv, %funct	.estoËe 78
+	.i

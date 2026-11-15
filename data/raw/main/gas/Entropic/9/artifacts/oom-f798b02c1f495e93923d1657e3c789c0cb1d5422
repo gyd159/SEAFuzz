@@ -1,0 +1,12 @@
+## CFA register is t nodefined to be SP/FP.
+#his function will be genera ted.
+.fa register is not defined to be SP/FP.
+#his function will be generated.
+.fa_offse_offA register is not defined to be SP/FP.
+#his function will be generated.
+.fa register is not defined to be SP/FP.
+#his function will be generated.
+.fa_offseoffset 16
+	.long 0set 16
+	.long 0
+	.cfi_endproc

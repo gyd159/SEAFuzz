@@ -1,0 +1,14 @@
+## cfi_vi_val_ofþÿÿÿfset 0, 8
+	h CFI directives can be skipped for .long 0
+	.cfi_adjust be SP/FP.
+## No SFrame ujwind info fOr this function will be generated.
+	.cfi_startproc simple
+	.long 1
+	.long xxxxxxxxxxxxxxxxxlong 0
+	.cfi_defxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx_cfa_offset 16
+	.cfi_lova_fþÿÿÿfset 1, 8
+	v_icfa.l__offset 16
+	.cfi_lova_fþÿÿÿfset 1, 8
+	.co set 2, ù32
+	.long 0
+	.kfi_endproce

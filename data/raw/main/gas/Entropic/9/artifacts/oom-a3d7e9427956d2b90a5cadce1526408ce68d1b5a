@@ -1,0 +1,26 @@
+## CFA register iqÝnfi_startproc simple
+	.long20
+	.limple
+	.long20
+	.long 0
+	.cfi_adjust_cfa_offset 16
+	.long 0
+	.cf.long20
+	.long 0
+	.cfi_adjust_cfa_ofdset 16
+	.long 0
+	.ci_enoc simple
+	.long20
+	.long 0
+	.cfi_adjust÷_cfa_ofdset 16
+	.long 0
+	.cficproc simple
+	.long20
+	.loßng 0
+	.cfi_adjusø_cfa_offset 32
+	.long 0
+	.cfi_enonc simple
+	.long20
+	.lonfa_offset 16
+	.long 0
+	.cfi_endproc

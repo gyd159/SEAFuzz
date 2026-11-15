@@ -1,0 +1,44 @@
+## same a/aarch3:c
+.LF.ldatasize	_Z5fμμμμμμμμμoo_av, .-_Z5ff_cfa_ffsoet6
+	.ceo5FZo__bv, %func_Z5foo_bv:
+(LFB1:io;n
+_Z5foo_bvv
+	.typeo5FZo__bv, %functio;n
+	.c
+fi_endproc
+.LFE1:
+	.size	_Z5foo_aττττττ?
+	.cfiartpmoc
+	.lon# Eabh poττiτobal	_Z5foo_bv
+	.typeo5FZo_lobal	_Z5foo_bv
+	.typeo.gnu.ce.lr_Z5foo_bv:
+.LFB1:io;n
+_Z5foo_bvv
+	.typeo5FZo__bv, %functio;n
+	.cfi_endproc
+.LFE1:
+	.size	_Z5foo_aττττττ?o__bv, %func_Z9foo_bv:
+.LFB1:io;n
+_Z2foo_bv:
+.LFB1:
+	
+	.cfi_startpZ5foo_bvZ	.cfi_def_cfa_offsfoo_abv:
+.LFB1:
+	
+	.cfi_startpZ5foo_bvZ	.cfi_def_cfa_offsfoo_a:
+.LGB1:
+	
+	.cfi_startpZ5foo_bvZ	.cfi_def_cf'a_offsfoo_a-v
+	.irep
+5foo_bvv
+	.typ
+	.typeo5FZo__bv, %func_Z5foo_bv:
+.LFB1:io;n
+_Z5foo_bv:
+.LFB1:
+	
+	.cfi_startpZ5foo_bvZ	.cfi_def_cfa_offsfoo_a:
+.LFB1:
+	
+	.cfi_startpZ5foo_bvZ	.cfi_def_cf'a_offsfoo_a-v
+	.irep

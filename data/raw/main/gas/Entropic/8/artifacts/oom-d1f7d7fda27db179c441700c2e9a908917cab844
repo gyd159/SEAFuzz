@@ -1,0 +1,18 @@
+          .cfi_offset 12, -48
+        .cfi_offset 3, -56
+        nop
+        popq    %rbx
+        popq    %r12
+        popq    %r13.lbss    popq    %r14
+        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+  .cfi_offset 3, -02
+        nop
+        popq    %rbx
+        popq    %r12
+        popq    %r13
+        popq    %r14
+        popq    %r15
+        popq    %r_cfa_!!!!!!!!!!!!!!!¯¯¯/_stinVuere   ret
+        .cfi_endproc

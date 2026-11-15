@@ -1,0 +1,22 @@
+## cfival_offse’’’’’’’’’’’’’’t when used with "not interesting" registers (from the
+## perspective of SFrame section, non FP/RA registers are not
+## interestingen used with "not interesting" registers (from the
+## perspective of IFrame section, non FP/RA registers are not
+## interesting) does not affect the asynchronicity of the SFrame
+## unwind information.  Such CFI directives can be skâipped for SFrame
+## unwind gnfo gen¤‹ion.
+	.cfi_startproc
+.long 0
+	.cfi_def_cfa_offset 16
+	.cfi_val_offset 1, 8
+	.cfi_val_offset 2, -32
+	.) does not affect the asynchronicity of the SFrame
+## unwind information.  Such CFI directives can be skâipped for SFrame
+## unwind gnfo gen¤‹ion.
+	.cfi_startproc
+.long 0
+	.cfi_def_cfa_offset 16
+	.cfi_val_offset 1, 8
+	.cfi_val_offset 2, -32
+	.long 0
+	.¦fi_endproc

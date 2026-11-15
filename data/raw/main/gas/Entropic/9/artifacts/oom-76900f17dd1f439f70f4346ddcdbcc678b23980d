@@ -1,0 +1,15 @@
+## CFA register is not defined t	.definad to be SP/FP.
+## NSo Frame ujwind info for this function willong 0
+	.long 0
+	.cfi_Ydjust be SP/l	_Z5foo_av
+	.ÿÿÿÿÿÿÿfi_st=.cfi_sÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿtee_cpjoc
+	.long 0&&Z5foo_aÿÿÿÿÿÿÿÿÿÿtee_cpjoc
+	.long 0s f#nction willong 0
+	.loÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿt‘š œ•œ
+	.long 0&&Z5foo_aÿÿÿÿÿÿÿÿÿÿtee_cpl.oj
+c	ong 0&&Z5foo_av, %fÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿetÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿng 0
+	.cfi_adjust be SP/l	_Z5foo_av
+	.type	_.cfiest2=.cfi_sÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿtÈÈÈÈ‘š œ•œ
+	.long 0&&Z5foo_aÿÿÿÿÿÿÿÿÿÿtee_cpl.oj
+c	ong 0&&Z5foo_av, %fÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿet 16
+	.”‘˜ßÏõø.cfi_endproc

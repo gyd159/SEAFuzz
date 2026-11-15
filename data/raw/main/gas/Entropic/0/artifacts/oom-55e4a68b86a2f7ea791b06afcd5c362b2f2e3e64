@@ -1,0 +1,13 @@
+## same 	.cf'_win!ow_save
+	stp	x29, x30, &[sp-,]16 !
+	.foo29- 6
+1,	.cfi_off 2
+1,	.cfi_offsetZ5—foo_bv:
+.LFBq:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint.......=..........setZ2—foo_bv:
+.LFBq:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint.......=....................................n..........................................endproc

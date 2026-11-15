@@ -1,0 +1,19 @@
+        .cfi_sections .strtab.s;fÿÿÿÿÿÿÿÿÿÿÇÇÇ||||ÇÇÇÇÇÇ:ÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇ
+    o  p  pq    %r14
+        pol.g
+	iN	o
+.g	0l+.textZ5foo_av
+fse  _‘ffset 78
+20-	63
+
+1	.c	f	.textalÔ˜õö–‘öÏgol	
++.bal	_Z5fÿÿÿoo_av
+fse56
+        nop
+        popw    %rbx
+        popq    %r12
+        popq    %r13
+        popq    %r14
+        popq    %r15
+        popq    ret
+        .cfi_endproc‹

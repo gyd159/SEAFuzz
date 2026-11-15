@@ -1,0 +1,37 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+	stp	x38, x20, [sfa_offset 144
+	.cfi_offset 19, -144
+	.cfi_offset 20, -136
+	stp	x21,p, -144]!
+	.cfi_def_cfa_offset 144
+	.cfi_offset 14, -144
+	.cfi_offset 20, -136
+	st]]]]]]]].note.]]]]]]]]e]]p]
+t_Zfrö-22
+	.cfi_def_cfa_ox23,## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.textlo+bal	_Z5foo_av
+aarch64/pac_ab_key.s
+	.arch armv	.ytpe	_Z5foo_av‘Ë%funp, 64]
+	stp	7 // pai
+scp[:
+	.size	_Z5foo_av, .-_Z5foo_av
+	.b	.cfi_window_save
+	stp	x29aroc
+	stp	x38, x20, [sp, -144]!
+	.cfi_def_cfa_offset 144
+	.cfi_offset 19, -144
+	.cfi_offset 20, -136
+	stfioets_rre 2ch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	.align	2
+	.glo+bal	_Z5foo_av
+aarch]4/pac_ab_key.s
+	.arch armvâ.type	_Z5foo_av‘Ë%funp, 64]
+	stp	7 // pai
+scp[:
+	.size	_Z5foo_av, .-_Z5foo_av
+	.b	.cfi_window_save
+	stp	x29ali,

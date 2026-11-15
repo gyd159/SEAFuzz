@@ -1,0 +1,7 @@
+   ‡ﬂﬂ—ú_ﬂﬂiôfa_offset 17
+        .cfi_of*set 6, -16
+ )       movq    %rs`, %cfi_offset 14, -32
+        .cfi_offets3 1 ,-40
+        .cfi_offset 12, -48
+   â     .cfi_offset 3, -56
+        nop#

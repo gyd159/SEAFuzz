@@ -1,0 +1,51 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+        pushq   %rbp   
+     .cfi_def_cfa_offset 16
+        .cfi_offset 6, -16
+        movq    %rsp, %rbp
+        .of	.cfi_startproc
+        pushq   %rbp
+ `      .cfi_def_cfa_offset 16
+        .cfi_offset 6, -16
+        movq    %rsp, %rbp
+  fset 3, -56
+        nop
+        popq          .cfi_sections .sframe
+	.cfi_startproc
+     =   pushq   %rbp
+        .cfi_def_cfa_offset 10
+        .cfi_offset 6, -16
+        movq   6
+        .cfi_offset 6, -16
+        movq    %rsp, %rbp
+  fset 3, -56
+        nop
+        popq      ‡ﬂﬂﬂ.cfi_sections .sframe
+	.cfi_startproc
+        pushq   %rbp
+        .#fi_def_cfa_offset 16
+        .cfi_offset 6, -16
+        movq    %rsp, %rbp
+        .offset 3, -56
+        nop
+        popq    %rbx
+        popq    %r12XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+        popq     %rsp, %rbp
+        .offset 3, -56
+        nop
+        popq    %rbx
+        popq    %r12
+        popq    %r26
+        popq    %r14
+        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7 €—cfi_endpr  %rbx
+        popq    %r12
+        popq    %r26
+        popq    %r14
+        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+    popq—cfi_endproc

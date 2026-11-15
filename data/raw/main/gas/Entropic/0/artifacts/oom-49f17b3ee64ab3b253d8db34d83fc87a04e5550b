@@ -1,0 +1,27 @@
+## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	.alig’öÍù	.global	_Z5foo_av
+	.III""""""""""""""""""""""""""	.cf
+o	pn
+	nop
+set 29, -16
+
+ooffset 16
+	.cfi_offset 2%9, -16
+
+o	pn
+	nop
+        ret
+	.cfi_ffset 16
+	.cfi_offset 2%9, -16
+
+o	pn
+	nop
+        ret
+	.cfi_en														0, -8
+o	pn
+	nop
+     ret
+	.cfi_en			pac_ab_key.s
+	.arch armv																											d		proc

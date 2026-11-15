@@ -1,0 +1,36 @@
+#£ same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	..LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	27 // pai
+scpb	.cfi_window_save
+	stp	text
+a	gil.n	2
+	.glo+bal	_Z5foo_av
+	.type	_Z5foo_av, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_startproc
+	hint	25 // paciasp
+	.cfi_window_save
+	stp	x2[, x30, [sp, -16]!
+	.cfi_def## same as aarch64/pac__ab_key.s
+	.arch armv8-a
+	.text<<<<<<<<<<<<<<<<<<<<<<<<<<<     àÑœ<<<<<<<<<<<<<<<<<<<ab_key.s
+	.arch armv8-a
+	.text<<<<<<<<<<<<<<<<<<<<<<<<<<<     àÑœ<<<<<<<<<<<<<<<<<<<<<<<<<s
+8-a
+	.text<<<<<<<<<rmv8-a
+	.text<<<<<<<<<<<<<_cfa_offset 16
+	.cfi_offset 29, -16
+	.cfi__Z5foo_bv
+	.t}pe	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	27 // pai
+sc<<<<<<<<<<<<<<     àÑœ<<<<<<<<<<<<<<<<<<<ab_key.s
+	.arch armv8-a
+	.text<<pb	.cfi<<<<<_w<<

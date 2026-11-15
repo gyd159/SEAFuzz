@@ -1,0 +1,25 @@
+## cfiregistei0s#,# same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	.align	4
+	.global	_Z5foo_axt
+	.align	4
+	.global	_Z0foo_aŠõöÊtv
+	.type	_Z5foo_av, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_stírtproc
+ame as aarch64	.of.global	_Z0foo_aŠõö‰Êtv
+	.type	_Z5foo ‹_av, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_s˜…tírtproc
+	hint	2lon.listûûûûûûûcÿÿÿÿÿÿÿÿÿÿÿtproc
+	.longfunction
+_Z5 //5foo_av:
+.LFB0:
+	.cfi_stírtproc
+	hint pac#NO_APP
+fi_ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿst	.align	4
+	.global		2et
+	5.#

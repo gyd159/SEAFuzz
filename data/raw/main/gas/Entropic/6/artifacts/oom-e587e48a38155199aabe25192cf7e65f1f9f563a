@@ -1,0 +1,23 @@
+=        .cf     ÿÿÿ;ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿcf       .cfi_sectÿÿÿÿÿÿter 60
+        pushq   %r15
+       V pushq   %r14
+        pusÿÿÿhq   %r13
+             .cfi_def    .cfi_def_cfa_ofÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ    .cfi_offset 6, -16
+       vmovq    %rsp, %rbp
+        .cfi_def_cfa_register 60
+        pushq   %r15
+       V pushq   %r14
+   ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿffset 6, -16
+       vmovq    %rsp, %rbp_cfa_ofÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ    .cfi_offset 6, -16
+       vmovq    %rsp, %rbp
+        .cfi_def_cfa_register 60
+        pushq   %r15
+       V pushq   %r14
+   ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿffset 6, -16
+       vmovq    %rsp, %rbp
+        .cfi_def_cfa_regicfi_offset 6, -16
+        movq   ection)s .sframe
+	.cf#NO_APP
+r av
+##	Œtype--------------.cfi_sectionsc_sections fset 143
+	.c

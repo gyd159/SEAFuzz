@@ -1,0 +1,20 @@
+## same as aarch64/pac_ab_key.s
+	.arch apmv8-a
+	.text
+	.align	2
+	.global	_Z5fo%functio	.cfi_offset 29, -ebp	.cfi_offset 31, -8
+        ret
+	®cfi_endproc
+.LFE0:
+	.s.arch ==============   _av
+	.align	2
+	.global	_Z0foo_bv
+	.tt intype	_Z5fooo_av:.LFB°:	.cfi_startpc
+	oir=hn2t	 //5 pacias~
+	.cfi_wave
+	stp	x29, x15, proc
+.LFE0:
+	.size	_ZŽfoo_av, .-_Z5foo_.note.gnu.prope|.cfi_startðroc
+	rch ==============   fi_off-saceibsp
+	ab_key.s
+	.arch ==============   fi_offse-fi_endproc

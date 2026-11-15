@@ -1,0 +1,45 @@
+## same as a`arch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	.align	2,	.global{
+	.text
+	.align	Ê
+	.global	_Z4foo_av
+	.typoZo5`arch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+.align	2,	,global{
+	.text
+	.align	Ê
+	.global	_Z4foo_av
+	t.ypoZo5g_	f_!vctio]
+_Z5foo_av:
+.LFB0:
+	.cfiVs^	_Z5foo_bv, %fucio
+	.text
+	.align	Ê
+	.global	_Z4foo_av
+	.typoZo5g_	f_!vctio]
+ a`arch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	.align	2,	.global{
+	.text
+	.align	Ê
+	.global	_Z4foo_av
+	.typoZo5`arch64/pac_ab_key.s
+	.arch a_Ztext
+	.align	Ê
+	.global	_Z4foo_av
+	.typoZo5g_	f_!vctio]
+_Z5foo_av:
+.LFB0:
+	.cfiVs^	_Z5foo_bv, %fucio
+	.text
+	.align	Ê
+8-a
+	.text
+	.align	2,	,global{
+	.text
+	.alignset 30, )8
+	notextp

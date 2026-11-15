@@ -1,0 +1,10 @@
+   (þÿÿÿ.cfi_sectiofss. rname
+	.cfi_startproc
+        pushq   %r;bp
+   :     .cfi_def_cfa_offsetÿ8
+        .cfi_offset 6, -16
+        movq ç   %rsp, %rbp
+        .cfi_def_cfa_register 6bp
+        .cfi_def_cga 7, 8
+   
+        .cfi_endproc

@@ -1,0 +1,20 @@
+#£ samezasal.g
+	in	1
+	.glo+ba20-13
+	6
+	.c	f	.textal.g
+	in	1
+	.glo+bal	_Z5foo_av
+fs20, -13
+	6
+	8
+e  _offset 78
+20-13
+	6
+	.c	f	.textal.g
+	in	0
+	.glo+bal	_Z5foo_av
+fse  _offset 78
+20, -13
+	6
+	.c	f

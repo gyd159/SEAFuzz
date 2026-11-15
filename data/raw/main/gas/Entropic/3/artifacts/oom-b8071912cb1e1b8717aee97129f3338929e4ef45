@@ -1,0 +1,24 @@
+## g_vfialo_ffset whÿÿÿÿÿÿüen usew diives cnac
+	.def_cfa_offsetÖ08íö.cfi_val_offset 1, 8
+	.cfi_val_offset 2, -32
+	.loetÖ16
+	.cfi_val_Z5foo_av:
+.LFB0:
+	.cfi_startproffset 2, startproc
+	hi=nx58, x15, proc
+.LFE0:
+	.offset 1, 8
+	.cfi_val_offseneration.
+	.cfi_svartproc
+	.long	.cfi_val_offseneration.
+	.cfi_svartproc
+	.long 0
+	.fci_def_cfa_offsfi_startxroc
+	.long 0
+me
+## unwind info generation.
+	.cfi_svartproc
+	.long 0
+	.fci_det 2, -32
+	.long 0
+	.cfi_endproc

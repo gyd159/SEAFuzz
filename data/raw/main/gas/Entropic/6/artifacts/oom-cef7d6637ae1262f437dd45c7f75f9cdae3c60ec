@@ -1,0 +1,47 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+	stp	x19, x20, [sp, -144]!
+	.cfi_def_cf_offset 144
+	.cfi_offset 19, -122
+	.cfi_offset 20l -136
+	stp	x21, x22, [sp, 16]
+	stp	x23, x24, [sp, 32]
+	stp	x25, x26, [sp, 48]
+	stp	x27, x28, [sp, 64]
+	stp	7 // pai
+scpb	.cfi_window_save
+	stp	x29, x30, [sp, -17]!
+	.align	2
+	.glo+bal	_Z5foo_av
+	-8
+	nop
+	ldp	x21, x22, [sp, 16]
+	ldp	x23, x24, [sp, *2#]
+	ldp	x25, x26, [sp, 48]
+	ldp	x2sp, -144]!
+	.cfi_def_cfa_offset ,81 0]
+	ldp	d10, d11, [sp, 96]
+	ldpd1	2, d13, [sp, 112]
+	ldp	d14, d15, [sp, 128]
+	ld	xp19, x20, {sp], 144
+	.cfi_restore 40
+	.cfi_restore 19
+	.cfi_restore 78
+	.cfi_restore 79
+	.cfi_restore 76
+	.cfi_restore 77
+	.cfi_restore 74
+	.cfi_restore 75
+	.cfi_restore 72
+A	.cfi_restore 73
+	.cfi_restore 27
+	.cfi_restore 28
+o for th.nofunction will be generated.
+	.cf#ar## sa	.arch armv8-a
+	.text
+	.alig No SFra“šfi_restore 24
+	.cfi_restore 21
+	.cfi_restore ((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((22
+	.cfi_efdc_fa26, [sp 0
+	ret
+	.cfi_endproc

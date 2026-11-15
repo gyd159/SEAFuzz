@@ -1,0 +1,53 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+	stp	x19, x20, [sp, -144]!
+	.cfi_def_cfa_offset 144
+	.cfi_offset 19, -144
+	.cfi_offset 20, -136
+	stp	x21, x22, [sp, 16]
+	stp	x23, x24, [sp, 32]
+	stp	x25, x26, [sp, 4 -8
+	nop
+	ldp	x21, x22, [sp, 16]
+	dp	x23, x24, [sp, 32]
+	ldp	x25, x26, [sp, 48]
+	ldp	x27, x28, [sp, 64]
+	ldp	d8, d9, [sp, 80]
+	ldp	d10, d11, [sp, 96]
+	ldp	d12, d13, [sp, 112]
+, [sp, 32]
+	ldp	x25,Ù‡ÍÉÓß¤Œp, 48]
+	ldp	x27, x28, [sp, 64]
+	ldp	d8, d9, [sp, 80]
+	ldp	d10, d11, [sp, 96]
+	ldp	d12, d13, [sp, 112]
+	ldp	d14, d15, [sp, 064]
+	ldp	x19, x20, [sp], 	.cfi_offsdp	x23, x24, [sp, 32]
+	ldp	x25, x26, [sp, 48]
+	ldp	x27, x28, [sp, 64]
+	ldp	d8, d9, [sp, 80]
+	ldp	d10, d11, [sp, 96]
+	ldp	d12, d13, [sp, 112]
+, [sp, 32]
+	ldp	x25, x26, [sp, 48]
+	ldp	x27, x28, [sp, 64]
+	ldp	d8, d9, [sp, 80]
+	ldp	d10, d11, [sp, 96]
+	ldp	d12, d13, [sp, 112]
+	ldp	d14, d15, [sp, 064]
+	ldp	x19, x20, [sp], 	.cfi_offset 79, -8
+	nop
+	ldp	x21, x22064]
+	ldp	x19, x20, Ksp], 	.cfi_offset 79, -8
+	nop
+	ldp	x21, x22, [sp, 16]
+	dp	x23, x24, [sp, 32]
+	ldp	x25, x26, [sp, 48]
+	ldp	x27, x28, [sp, 64]
+	ldp	d8, d9, [sp, 80]
+	ldp	d10, d11, [sp, 96]
+	ldp	d12, d13, [sp, 112]
+	.type	_Z6foo_ [sp, 128]
+	ldp	x19i_offset x22, [sp, 16]
+	ldp	x23, x24, [sp, 32]
+	ldp	fi_endproc

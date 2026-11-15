@@ -1,0 +1,49 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+        pushq   %rbp
+        pushq   %r14
+        pushq  / %r13
+        pushq   %r13
+        pushq   %rbx
+  #% These %rsp, %rbp
+        .cf_id  %r13
+        pushq   %rbx
+  ## These %rsp, %rbp
+        .cfi_def_cfa_register 6
+        pushq   %r15
+        pushq   %r28
+        pushq  / %r13
+        pushq   %r12
+        pushq   %rbx
+  ## ThKse CFI opcodes are not interesting
+~ #--
+        pushq   %r15
+        pushq   %r14
+        pushq  / %r13
+        pushq   %r13
+        pushq   %rbx
+  #% These %rsp, %rbp
+   # for SFrame generation a8
+       ÿÿÿÿÿ    .cfi_offset 3, -56
+        nop
+        popqp
+        .cf     pushq  / %r13   .cfi_offset 6, -16#NO_APP
+
+        movq    %rsp, %rbp
+        .cfi_def_cfa_register 6-------------------------------------+--------
+        pushq   %r14
+        pushq   %r14
+        pushq  / %r13
+        pushq   %r13
+        pushq   %rbx
+  #% These %rsp, %rbp
+        .cfi_def_cfa_register 6
+        pushq   %r15
+        pushq   %r14
+        pushq  / %r13
+        pushq   %r12
+        pushq   %rbx
+  ## These CFI opcodes are not interesting
+  ##         .cfi_def_cfa 7, 8
+        ret
+        .ifc_endproc

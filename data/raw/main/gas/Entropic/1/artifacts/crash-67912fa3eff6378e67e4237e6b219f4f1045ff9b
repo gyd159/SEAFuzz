@@ -1,0 +1,52 @@
+    þÿÿÿ.cfi_sectiofs   .cftiofs   .        .cfi_sectioŠns cfi_offset 6, -16
+        movq    %rsp, % %r13
+   ]  @   push   ret
+        s. rname
+	.cfi_startproc
+    .   p, 80]
+	stp	d	.cfi_offset 79, -8
+	nop
+	ldp 6, -16
+        movq    %rsp,    þÿÿÿ.cfi_secsh   ret
+        s. rname
+	.cfi_startproc
+    .   p, 80]
+	stp	d	.cfi_of
+	stp	d	.cfi_offset 79, -8
+	nop
+	ldp 6, -16
+        movq    %rsp,    þÿÿÿ.cfi_secsh   ret
+        s. rname
+	.cfi_startproc
+    .   p, 80]
+	stp	d	.cfi_offset 79, -8
+	nop
+	ldp 6, -16
+        movq    %rsp,    þÿÿÿ.cfi_sectiofss. rname
+	.cfi_startproc
+  .sframe
+	.cfi_startproc
+	s1xtp	9, x20, [fset 79, -8
+	nop
+	ldp 6, -16
+        movq    %rsp,    þÿÿÿ.cfi_sectiofss. rname
+	.cfi_startproc
+  .sframe
+	.cfi_startproc
+	s1xtp	9, x20, [sp,    þÿÿÿ.cfi_ -14       tiofss. rname
+	.cfi_startproc
+  .sframe
+	.cfi_startproc
+	s1xtp	9, x20, [sp,    þÿÿÿ.cfi_ -14        .cfi_sections *IND*me
+	.cfo_starvproc
+	stp	x19, x20, [sp, -144]!
+	.cfi_def_cfa_offsetàÎËÈ
+	.c™–_offset 19, -144
+	.cfi_offset 20, -136
+	stp	x21, x22, [sp, 16]
+	stp	x23, x24, [sp, 32]
+	stp	x25,"x26, [sp, 48]
+	stp	x27, x28, [sp, 64]
+	stp	d8, d9, [sp, 80]
+	stp	d20, d11, [sp, 96]
+	stp	d12,       pusd13, [

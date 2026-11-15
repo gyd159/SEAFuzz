@@ -1,0 +1,18 @@
+## same as aarch64/pac_ab_key.s
+	.arch -16
+	.cfi_offset 30, -8
+ e	_Z5foo_av., -_Z5foo_av
+	.align	2
+	.globfi_startproc
+	.cfi_b_key_frame
+	hint	27 // 9, -16
+	.cfi_offset 30, -8
+        ret
+	.cfi_endprocÿbÿÿ 0
+	.ifc
+.LFE0:
+	.size	_Z5foo_av, .LFE0:
+	.sizjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjalign	2
+	.p
+.global)_Z5foo_bv
+	ndproc

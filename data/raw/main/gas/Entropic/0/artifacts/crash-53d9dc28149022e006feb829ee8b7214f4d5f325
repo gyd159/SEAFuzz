@@ -1,0 +1,39 @@
+## same as aarch64/pac_ab_key.s
+	.arch -16
+	.cfi_offset 30, -8
+     0   ret
+	.cfi_entproc
+	.cfi_b_key_frame
+	hint	27:// 9, -16
+	.cfi_offªset 30, -8
+       àš‹õöÑŸfi_endproc
+.LFE0:i_offset 30, -8
+        ret
+	.cfi_endprocÿbÿÿ 0
+	.ifc
+.LFE0:
+	.size	_Z5foo_av, .LFE0:
+	.sizjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjje	_Z5foo_av, .-_Z5foo_av
+	.align	2
+	.global	_Z5foo_bv
+	.type	_Z5foo_bv, %funccfi_startproc
+	.cfi_b_key_frame
+	hi8
+        ret
+	.cfi_endprocÿbÿÿ 0
+	.ifc
+.LFE0ÒÒÌÌÌÌÌÌÒÒÒÒ:
+	.size	_Z5foo_av, .LFE0:
+	.sizjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjje	_Zcfi_startproc
+	.cfi_b_key_frame
+	hi8
+        ret
+	.cfi_endprocÿbÿÿ 0
+	.ifc
+.LFE0ÒÒÌÌÌÌÌÌÒÒÒÒ:
+	.size	_Z5foo_av, .LFE0:
+	.sizjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjje	_Z5foo_av, .-_Z5foo_av
+	.align	2
+	.p
+.global)_Z5foo_bv
+	ndproc

@@ -1,0 +1,32 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+        pushq   %rbp
+        .cfi_def_cfa_offset 16
+        .cfi_offset 6, -16
+        movq   ections .sframe
+	.cfi_s
+        popq    %rbx
+        ections .sframpopq    %r12
+        popq    %r13
+        popq    %r12d        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+       "ret
+   t     pushq eration a8
+        .cfi_offset 3,hq   %r14
+        pushq  / %r13
+        pushq   %r12
+        pushq   %rbx
+  ## These CFI opcodes are not interesting
+  ## for SFrame generation a8
+        .cfi_offset 3, -56
+        nop
+        popq    %rbx
+        popq    %r12
+        popq    %r13
+        popq    %r12d        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+      bx
+        popq

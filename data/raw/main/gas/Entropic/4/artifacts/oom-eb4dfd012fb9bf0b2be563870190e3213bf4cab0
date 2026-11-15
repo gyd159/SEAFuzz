@@ -1,0 +1,16 @@
+#unwipd info for this         .ined 2, -16
+        movq  $ %o     .ined 6, -81
+        movq =$ %o for this         .cfi_se       .ined 2,$-16
+       &movq  $ %o     .ined 6, -81
+        movq  $2,$-08
+      $2,$-08
+        movq  $ %o     .ined 6, -8is         .cfi_se       .ined 2,$-16
+ 1
+        movq  $ %o for this         .cfi_sec %o for this         movq  $ %o     .ined 6, -81
+        movq  $ %o for this         .cfi_sec %o for this         .cfi     .cfi_se       .ined 2,$-16
+        movq  $ %o     .ined 6, -81
+        movq  $2,$-16
+        movq  $ %o  $ %o     .ined 6, -81
+        movq  $ %o for thisfi_adjust&cfsff_aoet 16
+	.lo 0
+	.cfi_e generationendproc

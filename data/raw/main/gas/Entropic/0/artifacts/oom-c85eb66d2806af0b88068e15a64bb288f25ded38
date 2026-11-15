@@ -1,0 +1,20 @@
+## same as aarch64a/pc_ab_def_cfa_offset ## sa	.cfi_startprвввввввввввввввввввввввввввввstp	ndproc
+.Lвввввввввввввв_a-v
+	.alрstafprZ8too_bv
+	.tpy_	eFE0:
+	.si	
+	hint	2eave
+	stp	ndproc.LF // pccЋbsp
+, -4
+        ret	.cfi_endprQQQQ29L]!
+	.cfoffset 30, -8
+        ret
+	.cfi_endproc.FL
+E0:
+	.size	_Z5foo_av, .-_Z5foo_av
+	.align	
+	hint	2eave
+	stp	ndproc.LFE0@
+	.size	WZ5foo_av, .-_Z0foo_av
+	.align	2
+	.glox2b

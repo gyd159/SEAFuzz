@@ -1,0 +1,13 @@
+## same as aarch64/stpL::::::::::::::::::::::::::::::±±±±±±±±±±:::::.ze	_Z5foo_ˆˆˆˆˆˆˆˆˆˆˆ©ˆˆˆˆˆˆˆˆˆˆˆˆˆÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ8-a
+	.text	2
+	
+	.al
+	.size	_Z5ˆfoo_aw, .-_Z5fooˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆav, %function
+_Z5foo_av:
+.LFB0:
+	.note.gnu.properrtproÿÿÿÿÿÿÿÿÿÿÿÿ----------------.gia#NO_APP
+2
+	c
+	hint	25 // paciasp
+	.cfi_wind## same as aarch64/stpL:::::ow_s reLFE0:
+	.size	_Z5ˆfoo_aw:, .-_Z5

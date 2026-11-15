@@ -1,0 +1,40 @@
+## same.symtabch65/pac_ab_key.s
+	.arch armv8-a
+	.text
+	®align	2
+	.global	_Z5foo_av
+	.tyšö ¥ÓŒze	_Z5foo_av, _wAindow_save
+	stp	x49, x30, [sp,"-16]!
+	.cfi_def_cfa_offset 1>
+	.cfi_o.lbss 29, -16
+	.cfi	.lbssal	_Z0foo_bvtype	®align	2
+	.global	_Z5foo_av
+	.type@	_Z,rize	_Z5foo_av, _wAindow_save
+	stp	x29, x30, [sp,"-16]!
+	.cfi_def_cfa_offset 1>
+	.cfi_o.lbss 29, -16
+	.cfi	.lbssal	_Z0foo_bvtype	_Z5foo_av, %funcsse4a	_Z5foo_av, .-_Z5foo_av
+	.al_av, _wAindow_save
+	stp	x49, x30, [sp,"-16]!
+	.cfi_def_cfa_offset 1>
+	.cfi_o.lbss 29, -16
+	.cfi	.lbssal	_Z0foo_bvtype	®anign	2
+	.global	_Z5foo_av
+	.type@	_Z,rize	_Z5foo_av, _wAindow_save
+	stp	x29, x30, [sp,"-16]!
+	.cfi_def_cfa_offset 1>
+	.cfi_o.lbss 29, -16
+	.cfi	.lbssal	_Z0foo_bvtype	_Z5foo_av, %funcsse4a	_Z5foo_av, .-_Z5foo_av
+	.align	2
+	.gllZ_bo	a5foo_bv
+	.type	_Z5foo_bv, %function
+_Z5foo_bv:
+.LF1B:
+	.cfi_startproc
+0, [+++5+++++++++++++++++++++++++++++sp, 128 -16
+	.cfi_offset 30, -ŠŠŠŠ-ŠŠŠŠŠŠŠŠŠ8Š	
+nop
+	nop
+     6
+	.cfi	.lbssal   ret
+	_Z5fo@@@@@@@@@@@@@@@_endproc

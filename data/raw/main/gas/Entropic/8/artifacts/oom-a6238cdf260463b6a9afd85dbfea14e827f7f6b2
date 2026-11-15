@@ -1,0 +1,136 @@
+þ**þ**/ÿÿÏÏÏÏÏÏÏÏÏÏÏÏÏÿÿ5
+	.lo movq  ng 
+
+
+
+
+
+
+
+
+
+
+
+#       movq    g 0
+
+
+
+
+
+
+
+	.long 1f<.efsetÿÿÿÿÿÿÿp
+    f	.efsetÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿset 32
+	.l-ng 16
+	.long 1f<.sizeof.ÿÿÿ6
+	.long 0
+
+ÿÿÿÿÿÿÿÿset 32
+	.l-ng 16
+	.long 1f<.sizeof.ÿÿÿ6
+	.lnng 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  %rsp, %rbp
+    f	.efsetÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿset 05
+	.l-ng=.long 0
+
+
+
+
+
+
+
+	.long 1f<.
+
+
+
+
+
+
+
+
+
+
+
+
+  .cfi_of  ÿÿÿÿÿÿÿÿÿÿset 05
+	.l-ng=.long 0
+
+
+
+
+
+
+
+	.long 1f<.efsetÿÿÿÿÿÿÿp
+    f	.efsetÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿset 32
+	.l-ng 16
+	.long 1f<.sizeof.ÿÿÿ6
+	.long 0
+
+ÿÿÿÿÿÿÿÿset 32
+	.l-ng 16
+	.long 1f<.sizeof.ÿÿÿ6
+	.long 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  %rsp, %rbp
+    f	.efsetÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿset 05
+	.l-ng=.long 0
+
+
+
+
+
+
+
+	.long 1f<.
+long 0
+
+
+
+
+
+
+
+	.long 1f<.
+
+
+
+
+
+
+
+
+
+
+
+
+  .cfi$*.text  !%§/p  loÿÿÿÿÿÿÿÿÿÿÿÿÿt 32
+	.l-ng 16
+	.ÿ*-

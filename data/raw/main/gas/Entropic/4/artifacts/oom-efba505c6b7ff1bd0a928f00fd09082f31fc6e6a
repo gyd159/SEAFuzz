@@ -1,0 +1,23 @@
+        .cfuuuuuuua_offset#16
+ (  ushq ~ %r14
+       movq   ~%rsp, %bp
+   rsp, %rbp
+        .cfi_def_cfa_register Äõ        pushq   %r14
+        pushq ~ %r14
+       m    .cfuuuuuuua_offset#16
+ (  ushq ~ %r14
+       movq   ~%rsp, %bp
+   rsp, %rbp
+        .cfi_def_cfa_register Äõ        pushq  shq   %r14
+        pushq ~ %r14
+     m  ovq %r14
+        pushq ~ %r14
+       movq   ~%rsp, %bp
+ ;      .cfi_def_cfa_regisûûûõ        pushq   %r14
+        pushq ~ %r14
+       movq %r14
+        pushq ~ %r14
+       movq   ~%rsp, %bp
+  
+  
+        .cfi_def_cfi_endproc

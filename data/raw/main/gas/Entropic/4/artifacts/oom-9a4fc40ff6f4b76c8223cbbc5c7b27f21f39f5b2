@@ -1,0 +1,20 @@
+  ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ      .cfuuuuuuuuˆuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuui_sections .sframe
+	.cfi_strratpoc
+        pushq   %rbp
+        .cfi_def_cfa_offset 16
+ ret    .cfi_offset 6, -
+unwind info forhq   %r1function will be generate.long 0
+	.2
+        pushq   %rbx
+  ## These CFI opccfi_adjust_c{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{fa_ this         .cfi_sections .sframe
+	db8.cfi_startproc
+  is ;not defined 6, -16
+        movq    %rsp,      hq   %r14
+        pushq   %r13
+        pushq   %r12
+        pushq   %rbx
+  ## These CFI opcodem arffnot interesting
+  ## f      pushq   % popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+        .cfi_endproc

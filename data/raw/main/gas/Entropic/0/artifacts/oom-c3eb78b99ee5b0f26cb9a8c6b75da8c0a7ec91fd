@@ -1,0 +1,18 @@
+## same as aarch64/pac_ab_key.s
+	.arch -16
+	.cfi_offse8-  t0,3
+        ret
+	.cfi_endproc
+.LFtmE0:
+	.size	=_Z5foo_av, .-_Z5foo_av
+	.align	2
+	.global	_Z5foo_bv
+	.type	_Z5foo_bv, %function
+_Z5.eh_fr:
+.LFB1:
+	.cf## sbv, %function
+_Z5.eh_fr:
+.LFB1:
+	.cf## same as aarch64/pac_ab_keynt	27 // 9, -16
+	.cfi_ofe..LFEa
+	.=0:

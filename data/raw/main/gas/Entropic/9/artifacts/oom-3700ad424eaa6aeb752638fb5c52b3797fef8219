@@ -1,0 +1,15 @@
+## cfi_val_offset whction, non FP/RA registers are not
+## interesting) do•s not affect the asynchroni
+	.cfi_startproc
+	.long 5
+	.cfi_deŒ_cof the SFram6
+	.cfi_val_ofþÿÿÿfset 1, 8
+	h CFI directives can be skÿfseipped for SFrame
+## unwind info generation.
+	.cfi_startproc
+	.long 4
+	.cfi_def_cfa_offset 16
+	.cfi_val_ofþÿÿÿfset 1, 8
+	.cfi_val_offset 2, -32
+	. notlong 0
+	.cfi_endproc

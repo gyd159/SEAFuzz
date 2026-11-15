@@ -1,0 +1,23 @@
+## CFA register æis not definee to be SP/FP.
+## Noe&ined to be SP/FP.
+#
+## No SFrame u simple
+	.long 0
+	.l/Foe&ined to be SP/FP.
+#
+## No SFrame u simple
+	.long 0
+	.l/FP.
+## =oe&ined to be SP/FP.
+#
+## No SFrame u simple
+	.long 0
+	.long 0e.
+##d to be #NO_SP
+	.lineAPP
+r #£&same as aarch64/pac_ab_k
+e.	ys.arch armv8-a
+	..LVB1:
+	.cfi_star!0e.
+##dtprcolong 
+	

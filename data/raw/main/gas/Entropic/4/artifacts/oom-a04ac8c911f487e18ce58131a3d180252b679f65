@@ -1,0 +1,30 @@
+        .cffoo_av, %functionä_Z5foè†ûâ:
+.PLFB0:
+	.cfi_startproc
+	hint	25 // paciasp
+	.cfi_window_save
+	stp	x29, x30, [sp, -16]!
+	.cfi_def""""""""""""""""""""""""""uuuuuuuuuuuu.cfuuuuuuuuuuuu   pushq  type	_Z5foo_av, %function
+_Z5foo_av:
+.tionä_Z5foo_av:
+.PLFB0:
+	.cfi_startproc
+	hint	25 // paciasp
+	.cfi_window_save
+	stp	x29, x30, [sp, -16]!
+	.cfi_def""""""""""""""""""""""""""uuuuuuuuuuuu.cfuuuuuuuuuuuu   pushq  type	_Z5foo_av, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_startproc
+	hint	12 v
+	.type	_Z5foo_av, %functionä_Z5foo_av:
+.PLFB0:
+	.cfi_startproc
+	hint	25 // paciasp
+	.cfi_window_save
+	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_off
+.LF_cfa_off
+.LFE0:
+	.size	_Z5foo_av, .-_Z5foo_d.
+ ›!"""""_offs"

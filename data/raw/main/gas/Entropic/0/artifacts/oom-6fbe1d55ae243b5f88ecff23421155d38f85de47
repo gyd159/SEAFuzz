@@ -1,0 +1,46 @@
+## same as aarch3:c
+r1.LF.ldatasize	_Z5fìììììììììoo_av, .-_Z5ff_cfa_ffsoeŠt[6
+	.ceo5FZo__bv, %func_Z5foo_bv:
+.LFB1:io;n
+_Z5foo_bvv
+	.typ5FeoZo__bv, %functio;n
+	.cfi_endproc
+.LFE1:
+	.size	*************'9
+	.long 0****************	_Z5fo_a-v
+	.irep
+5foo_bv
+	*typeo5FZo__bv, %func_Z5foo_bv:
+.LFB0:io;n
+_Z5foo_bv:
+.LFB1:
+	
+	.vZ	.cfi_def_cf'a0offsfo	
+	.cfi_startpZ5foo_bvZ	.cfi_def_cfÍa_offsfoo_a-v
+	.tpZ5foo_bvZ	.cfFB1:
+	
+	.cfi_startpZ5foo_bvZ	.cfi_def_cf'a_offsfoo_a-v
+	.irep
+5foo_bv
+	.typeo5FZo__bv, %func_Z5foo_bv:
+.
+	.irep
+5foo_bv
+	.typeo5FZo__bv, %funcs aarch3:c
+Z	-v
+	.irep
+5foo_bv
+	.typeo5FZo__bv, %fo_tpZ5foo_bvZ	.cfi_def_cf'a_offsfoo_a-v
+	.mmirep
+5foo_bv
+	.typeo5FZo__bv, %func_Z5foo_bv:
+.
+	.irep
+5foo_bv
+	.typeo5FZo__bv, %funcs aarch3:c
+Z	-v
+	.irep
+5foo_bv
+	.typeo2FZo__bv, %fo_a-v
+	.irep
+#

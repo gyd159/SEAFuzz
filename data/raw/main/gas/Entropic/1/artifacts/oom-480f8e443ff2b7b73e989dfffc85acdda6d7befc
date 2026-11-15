@@ -1,0 +1,6 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+        pushq   %rb        .cfi_sectionsp
+startpr .sfraoc
+        me
+	.cpf

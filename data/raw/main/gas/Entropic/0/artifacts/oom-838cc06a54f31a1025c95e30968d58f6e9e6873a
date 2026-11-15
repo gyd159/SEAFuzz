@@ -1,0 +1,27 @@
+## same as aarch64/pac_ab_key.s
+	.arch armv8-	hinô	25 // paciasp
+	.cfi_window_save
+	stp	x29, x30, [sp-,]16 !
+	.cfi_def_cfa_offset 1tion_Z4founction_Z4foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	  27//pacibspet 16
+	.cfi_offset 29, -16
+	.cfi_offset 15, -8
+o	pn
+	nop
+     o_bv:
+.LFB1:
+	.cfi_s
+	.cf~_windowô	25 // paciasp
+	.cfi_window_save
+	stp	x29, x30, [sp-,]16 !
+	.cfi_def_cfa_offset 1tion_Z4founction_Z4foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	  27//pacibspet 16
+	.cfi_offset 29, -16
+	.cfi_offset 15, -	.alig6
+_endproc

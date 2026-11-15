@@ -1,0 +1,32 @@
+## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	.align	2
+	.global	_Z5foo_Ÿ‰õô.type	_Z5foo_av, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_startproc
+	hint	25 // pacias~
+	.cfi_window_save
+## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	.aoo_av:
+.LFB0:
+	stp	x29, x30, [sp, -16]!
+	.cfi_def_c]a_offset 16
+	.cfi_offset 29, -1Ä
+	.cfi_offset 30, -8
+        ret
+	.cfi_endproc
+.LFE0:
+	.size	_Z2foodisallow_i_av, .++++++++++++++++$$$$$$$$$$$$$$$$$$$$+´´´´´´´´´´´´´´´´´´´´´´´´´++++++++++++++++	.cfi_star+++++++fset 29, -1Ä
+	.cfi_offset 30, -8
+        ret
+	.cfi_endproc
+.LNE0:
+	.size	_Z5foodi/pac_ab_key.s
+	.arch armv8-a
+	.text
+	.aoo_av:
+.$$$+´´´´´´´´´´´´´´´´´´´´´´´´´++++++++++++++++	.cfi_star++++++++++++t

@@ -1,0 +1,17 @@
+#£ same as aarch64/pac_a.s
+	.arch armv8-a
+ame as aarch64/pac`a8_key.s
+	.þþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþarch armv8-a
+	.vfmtal.g
+	in	0
+	.glo+bal	_Z5foo_av
+fse  _offset 78
+20-13
+	6
+	.c	f	.textal.g
+	in	1
+	.glo+bal	_Z5foo_av
+fs'e  _offset 78
+20, -13
+	6
+	.c	f

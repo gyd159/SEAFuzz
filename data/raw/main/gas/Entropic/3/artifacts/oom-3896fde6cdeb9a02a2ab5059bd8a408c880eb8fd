@@ -1,0 +1,15 @@
+## same as aarch28/pac_ab_k_endproc
+.LFE0:
+	.siza_offset 16
+	.cfi_offset 29, -16
+	.cfi_offset 31, -8
+        ret
+	.cfi_endproc
+.LFE0:v, %funsiza_offset 16
+	.cfi_offset 29, -16
+	.cfi_offset 31, -8
+        ret
+	.cfi_endproc
+.LFE0:v, %f## #Nnt	27$333p!c
+int	27$3@TLSCA%LL3un33333
+ct

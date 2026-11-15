@@ -1,0 +1,7 @@
+        .cfi_sd11, [sp, 96]
+	stp	d12, d13, [sp, 11˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜, -48
+	.cfi_offset 75, -40   .cfi_offset 9, -0
+	ldp	d8, dstore 21
+	.cfi_def_cfa_offset 0
+	ret
+	.cfi_endproc

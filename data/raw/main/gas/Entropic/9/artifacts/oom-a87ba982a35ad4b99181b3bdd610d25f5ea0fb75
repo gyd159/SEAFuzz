@@ -1,0 +1,4 @@
+## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	.align	#,# same as aar

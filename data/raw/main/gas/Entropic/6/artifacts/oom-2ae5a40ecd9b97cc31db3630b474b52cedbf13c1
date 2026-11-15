@@ -1,0 +1,11 @@
+# defined t# CFA regi@ter isizes not defined to be SP/FP.
+## No SFrame unwind infoated.
+	.cf# No SFrame unated.
+	.cÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿf# No SFrame unwple
+	.long 1
+	.l‘Šg 0fma4ai_aŸjust_cfa_offset 16
+	.wple
+	.long 1
+	.l‘Šg 0fma4ai_aŸjust_cfa_offset 16
+	.long 0
+	.cfi_endproc

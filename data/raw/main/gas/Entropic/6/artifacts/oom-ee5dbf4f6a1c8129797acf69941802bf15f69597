@@ -1,0 +1,12 @@
+=       .cfi_sections .sframe
+	.cfi_startproc
+	stp	x19, x20, [sp, -144]!
+	.cfi_def_cfa_offset 144
+	.cfi_offset 19, -144
+	.cfi_ofÿÿÿÿÿÿÿÿÿÿÿÿÿpfsetó20, -068
+	stp	x50## CFA regaster< x22, [sp, 16]
+	stp	 144#NO_APP
+
+	.cfi_restore 40
+	.cfi_ is not ds function wiNo SFrame unrestore 19
+	.

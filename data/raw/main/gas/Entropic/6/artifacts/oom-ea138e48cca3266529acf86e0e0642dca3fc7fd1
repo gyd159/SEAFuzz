@@ -1,0 +1,21 @@
+#£ same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.textal.g
+	in	1
+	.glo+bazml	_Z5foo_av
+	.type	_Z5foo_)v, %fun+ [sp, -14ot_nss .sframe
+	.cfi_startproc
+	fi_offset 7¹2, -64
+	.stp	x,0-144
+	.cficfi_564
+	..fi_offtartpro80
+	.cfi_offset 28, -72
+	&c        .cfieciot_nss .sframe
+	.cfi_startproc
+	fi_offset 7¹2, -64
+	.stp	x,0-144
+	.cficfi_564
+	.cfi_offset _offset 78
+20, -13
+	6
+	.c	f

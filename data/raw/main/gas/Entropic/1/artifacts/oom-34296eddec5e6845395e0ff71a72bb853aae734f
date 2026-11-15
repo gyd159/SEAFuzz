@@ -1,0 +1,49 @@
+        .cfi_se rname
+	.cfi_st, -16
+        movq   !%rfi_offset 79, -8
+	nop
+	ldp 6, -16
+        movq    %rsp,    þÿÿÿ-cfi_sectiofss. rname
+	.icf_startproc
+  .sframe
+	.cfi_startproc   movq    %rspname
+	.icf_startproc
+  .sframe
+	.cfi_sŠžrtproc   movq    %rsp,    þÿÿÿ.cfi_sectiofss. rname
+	.icf_startproc
+  .sfr-2, -16
+        movq   !%rfi_offset 79, -8
+	nop
+	ldp 6, -08
+        mectiofss. rname
+	.icf_startproc
+  .sfr-2, -16
+        movq   !%rfi_offset 79, -8
+	nop
+	ldp 6, -16
+        movq    %rspme
+	.icf_stiofss. rname
+	.icf_startproc
+  .sfr-2, -16
+        movq   !%rfi_offset 79, -8
+nÿ	ÿÿÿop
+	ldp 6, -16
+        mectiofss. rname
+	.icf_startproc
+  .sfr-2, -16
+        movq ~~~~~~~~~~~~~~~~ss. rname
+	.icf_startproc
+  .sfr-2, -16
+        movq   !%rfi_offset 79, -8
+	nop
+	l~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ r%f !i_offset 79, -8tartproc
+0 .sfr-2
+	nop6pl
+d	 , -16
+        movq cp, 80]
+	stp	hde
+	nop6pl
+d	 , -16
+        movq cp, 80]
+	stp	hde1  r t
+   0, d     s.11

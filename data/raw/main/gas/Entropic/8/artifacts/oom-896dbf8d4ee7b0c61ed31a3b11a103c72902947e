@@ -1,0 +1,31 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+        pushq   %rbp
+        .cfi_def_cfa_offsÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿet 16
+        .cfi_offset 6, -16
+        movq    %rsp, %rbp
+        .cfi_def_cfa_register 6
+    ## skipped.
+        .cfi_offset 15, -2`4
+        .cfi_offset 14, -32
+   c    .cfi_offset 13, -40
+        .cfi_offset 12, -48
+        .cfi_offset 3, -56
+        nop
+        popq   % brx
+        popq    %r1ÿÿÿÿÿÿÿÿ2
+        popq    %r13
+        popq    %r14
+        popq    %r15
+     ffset 14, -32
+   c    .cfi_offset 13, -40
+        .cfi_offset 12, -48
+             popq    %rbx
+        popq    %r12
+        popq    %r13
+        popq    %r14
+        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+        .cfi_endproc

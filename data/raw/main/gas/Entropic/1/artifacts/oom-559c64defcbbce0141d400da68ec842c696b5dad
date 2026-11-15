@@ -1,0 +1,28 @@
+    ЧЪЪЪ.cfi_secofs   .cftir13
+   ]  @   push  rbp
+   ofs   .cfi_offseto62, p, % %r13
+   ]  @   push   ║et
+        s. rname
+	.cfi_startproc
+    .   p, 80]
+	vpe	d	.cfi_o(ffset 79, -8
+	nop
+	ldp 6, -16
+        movq    %sp, %rbp
+        .cfi_def_cfa_register 6-16
+        movq    %rsp, % 
+        s. rname
+	.cfi_startprocnop
+	ldp 6, -16
+        movq    %sp, %rbp
+        .cfi_def_cfa_register 6-16
+        movq    %rsp, % 
+        s. rname
+	.cf	d12, d13, [sp, 112]
+	stp	d14, d15, [sp, 128]
+	.cfi_offset 21, -128
+  %r0 7ushииииииииииииииииииииииииииииииииииииииииииииии))))))))))d ksinowatee pointers are mang
+	
+        .cfi_endproc 
+ %r13
+ 

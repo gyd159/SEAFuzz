@@ -1,0 +1,19 @@
+#NOŒŒŒŒŒŒŒŒŒŒŒ'ŒŒŒ;ŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒŒ_APP
+r av
+##	.type	_Zframe
+	hint		nop
+      r t e
+	.cfi===~~~~~~~~~~~~~~~~~~APP
+r av
+##	.type	_Zframe
+	hin~~~~~~~~~~~~~~~~~APP
+r av
+##	.type	_Zframe
+	hint		nop--_bv:
+.µFB0:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint		nop
+        ret
+	.=fi_endp-----f--oo_av
+/

@@ -1,0 +1,8 @@
+##1"ÿÿÿÿ\\\\\\\\\\\\\\\\\\\## same as aarch64/pac_ab_ke2., [:
+	.s]
+	dp	x2-8
+	nop
+	ldp	x2212 x ,,[sp, 16]
+	dp	x23, x24, [spp	x23, x24, [sp, 32]
+	ldp	x25, x26, [sp sfa.m\\\\e
+\\\\†\\\\	.cfnnf

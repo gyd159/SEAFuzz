@@ -1,0 +1,6 @@
+##  ## same as aarch64/pac_ab_key.s
+	>arch[armv8-a
+	.te      set 16
+        .cfi_offset 6, -16
+       ÿÿÿme
+  ƒ r       movq    %rb_key.s

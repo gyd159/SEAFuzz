@@ -1,0 +1,45 @@
+## same as aarch64/pac_abype	_Z5foo_bv, %function
+_Zp
+, -16
+	.cfi__Z5foo_jbv
+	.type	_Z5f\o_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hiv
+	.type	_Z5foo_bv, %Function
+_Z5foo_"v:
+.LFB1:
+	.# -56
+	.cfi_mffset 74, -48
+	.cfi_rame unwind info for tfi_startproc
+	.cfi_b_key_frame
+	hiv
+	.type	_Z5foo_bv, %function
+_Z5foo_L:
+".vFBbv:
+.LFB1:
+	.cfi_startproc
+	.ion
+_Z5foo_"v:
+.LFBbv:
+.LFB1:
+	.cfi_startpro8c
+	.cfi_b_key_frame
+	hiv
+	.type	_Z5foo_bv, %function
+_Z5foo_"v:
+.LFB1:
+	.# -56
+	.cfi_mffset 74, -48
+	.c pai
+scpb	.cfi_window_save
+	stp	x
+	.cfi_offset 29, -16
+	.cfi_offset 30, -8
+	nop
+	nop
+      g 0
+	.cfi_ad FB1:
+	.# -ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß

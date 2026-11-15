@@ -1,0 +1,43 @@
+       ot interesting
+  ## fofa_register 6WWWWWWWWWWWWWWWWWW'WWWÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+    n and will be
+  ## skipped.
+        .cfi_offset 15, -24
+        .cfi_  .cfi_def_cfa_register 6
+        pushq   %r15
+        pushq   %r14
+        ğushq   %r13
+        pushq   %r12
+        push %rbp
+   ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+    n and will be
+  ## skipped.
+        .cfi_offset 15, -offset 14, -32
+        .cfi_offset 13, -40
+        .cfi_offx
+        popq    %r1
+        pushq˜   .cfi_def_cfa_register 6
+        pushq   %r15
+        pushq   %r14
+        ğushq   %r13
+        pushq   %r12
+        push %rbp
+   ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿbbbbbbbbbbbbbbbbbbbbbÿÿÿÿÿÿÿÿ
+    n and will be
+  ## skipped.
+        .cfi_offset 15, -24
+        .cfi_offset 14, -32
+        .cfi_offset 13, -40
+        .cfi_offx
+        popq    %r1
+        pushq˜   .cfi_def_cfa_register 6
+        pushq   %r15
+        pushq   %r14
+        ğushq   %r13
+        pushq   %r12
+        push %rbp
+        .cfi_def_cfa_offset 16
+        .cfi_offset 6, -16
+        movq    %rsp, %rbp
+        .cfi_def_cfa_register 6
+        push

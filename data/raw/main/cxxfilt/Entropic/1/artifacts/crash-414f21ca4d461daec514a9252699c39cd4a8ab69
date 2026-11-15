@@ -1,0 +1,401 @@
+# This file holds test cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for d_D2gc11gctemplates56__T8mkBitmapTS3std5range13__T4iotaTiTiZ4iotaFiiZ6ResultZ8mkBitmapFNbNiNfPmmZv
+gc.gctemplates.mkBitmap!(std.range.iota!(int, int).iota(int, int).Result).mkBitmap(ulong*, ulong)
+#
+--format=dlang
+_D8serenity9persister6Sqlite69__T15SqlitePersisterTS8serenity9persister6Sqlite11__unittest6FZ4TestZ15SqlitePersister12__T7.pIndexZ7opIndexMFmZS8serenity9persister6Sqlite11__unittest6FZ4Test
+schar[bool[]])
+#
+--format=dlang
+_D8demangle4testFHG42caZv
+demangle.test(char[creal[42]])
+#
+--format=dlang
+_D8demangle4testFAiXv
+demangle.test(int[]...)
+#
+--format=dlang
+_D8demangle4testFLAiXv
+demangle.test(lazy int[]...)
+#
+--format=dlang
+_D8demangle4testFAiYv
+demangle.test(int[], ...)
+#
+--format=dle07hity.persister.Sqlite.SqlitePersister!(serenity.persister.Sqlite.__unittest6().Test).SqlitePersister.opIndex!().opIndex(ulong)
+#
+--format=dlang
+_D3std6socket12InternetHost221__T13getHostNoSyncVAyaa96_0a09202020206175746f2078203d2068746f6e6c28706172616d293b0a09202020206175746f206865203d20676574686f73746279616464722826782c20342c206361737428696e74294164647265737346616d696c792e494e4554293b0a09TkZ13getHostNoSy0ncMFkZb
+std.socket.InternetHost.getHostNoSync!("\n\t    auto x = htonl(param);\n\t    auto he = gethostbyaddr(&x, 4, cast(int)AddressFamily.INET);\n\t", uint).getHostNoSync(uint)
+#
+--format=dlang
+_D2gc6config13__T5parseHTfZ5parseFNbNiAxaKAxaKfZb
+gc.config.parse!(float).parse(const(char)[], ref const(char)[], ref float)
+#
+--format=dlang
+_D3std11parallelism273__T4TaskS213std11parallelism3runTDFS3std9algorithm87__T9MapResultS27_D4test4mainFZ7getmrMTeFiZtVbi
+_D10__T4testVbi
+#
+--format=dlang
+_D11__T4testS1a
+_D11__T4testS1a
+#
+--format=dlang
+_D12__T4testViiZv
+_D12__T4testViiZv
+#
+--format=dlang
+_D12__T4testViYZv
+_D12__T4testViYZv
+#
+--format=dlang
+_D12__T4testVrcZv
+_D12__T4testVrcZv
+#
+--format=dlang
+_D13__T4testVdeYZv
+_D13__T4testVdeYZv
+#
+--format=dlang
+_D13__T4testViSiZv
+_D13__T4testViSiZv
+#
+--format=dlang
+_D14__T4testVAiAiZv
+_D14__T4testVAiAiZv
+#
+--format=dlang
+_D14__T4testS123aZv
+_D14__T4testS123aZv
+#
+--format=dlang
+_D15__T4testVHiiAiZv
+_D15__T4testVHiiang
+_D8demangle004testFaZv
+demangle.test(char)
+#
+--format=dlang
+_D8demangle000000004testFaZv
+demangle.test(char)
+#
+--format=dlang
+_D8demangle__T3abcS_DQt10__lambda13FNaNbNiNfZiZQBhFZi
+demangle.abc!(demangle.__lambda13()).abc()
+#
+# Unittests
+#
+--format=dlang
+printf
+printf
+#
+--format=dlang
+_foo
+_foo
+#
+--format=dlang
+_D88# This file holds tes__lambda13FNat cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#î·Éö·Éò_·É°·Éê·Éì·Éò·Éö·Éò
+# Closure path elements.
+--format=rust
+_RNCNCNgCs6DXkGYLi8lr_2cc5spawn00B5_
+cc::spawn::{closure#0}::{closure#0}
+#
+--format=rust
+_RNCINkXs25_NgCsbmNqQUJIY6D_4core5sliceINyB9_4IterhENuNgNoBb_4iter8iterator8Iterator9rpositionNCNgNpB9_6memchr7memrchrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_freet)
+#
+--format=dlang
+_D8demangle4test>OaZv
+demangle.test(shared(char))
+#
+--format=dlang
+_D8demangle4testFxaZv
+demangle.test(const(char))
+#
+--format=dlang
+_D8demangle4testF__T4testVS8demangle1SS2i1i2Zv
+demangle.test!(demangle.S(1, 2))
+#
+--format=dlang
+_D8demangle35__T4testVS8demangle1SS2i1a3_606263Zv
+demangle.test!(demangle.S(1, "abc"))
+#
+--format=dlang
+_D8demangle13_T4testTFZaZ6manglevdZ
+Femangle.test!(char() function).mangle()
+#
+--format=dlang
+_D8demangle4testMxFZv
+ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇdemangle.test() const
+#
+--format=dlang
+_D3demangle4testMyFZv
+demangle.test() immutable
+#
+--format=dlang
+_D8demangle4testMNgFZv
+demangle.test() inout
+#
+--format=dlang
+_D8demangle4test2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--fo˛rmat=rust
+_RMCs4fqIr2P2A04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--formatπrust
+_:RMCs4fqI2P2rA04_13const_genericINN08P4CharKˇ2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMˇˇCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_gle4testMyFZv
+demangle.test() immutable
+#
+--format=dlang
+_D8demangle4testMNgFZv
+demangle.test() inout
+#
+--format=dlang
+_D8demangle4test2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--fo˛rmat=rust
+_RMCs4fqIr2P2A04_13const_genericINtB__T2fnVlS8S588888888888S6S5
+# Could crash
+--format=dlang
+_D1_B699999999961*
+_D1_B699999999961*
+# Could crash
+--format=dlang
+_D5__T1fVHacA6666666666_
+_D5__T1fVHacA6666666666_
+#
+--format=dlang
+_D3std5range15__T4iotaTtTtTtZ4iotaFtttZ6Result7opIndexMNgFNaNbNiNfmZNgt
+std.range.iota!(ushort, ushort, ushort).iota(ushort, ushort, ushort).Result.opIndex(ulong) inout
+#
+--format=dlang
+_D3std6format77__T6getNthVAyaa13_696e7465676572207769647468S233std6traits10isIntegralTiTkTkZ6getNthFNaNfkkkZi
+std.format.getNth!("integer width", std.traits.isIntegral, int, uint, uint).getNth(uint, uint, uint)
+#
+--format=dlang
+_D3std11parallelism42__T16RoundRobinBufferTDFKAaZvTDxFNaNdNeZbZ16RoundRobinBuffer5primeMFZv
+std.parallelism.Ro616d696c7LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL92e494eZ11DotSplitter5emptyMxFNaNbNdNiNfZb
+core.demanglKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu3p____7hkackfecea1cbdathfdh9hlq6y
+utf8_:iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn AiZv
+#
+--format=dlang
+_D15__T4testVfe0p1Zv
+_D15__T4testVfe0p1Zv
+#
+--format=dlang
+_D15__T4testVAyaa1_
+_D15__T4testVAy13__T2fnVeeNANZ2fnFZv
+demangle.fn!(NaN).fn()
+#
+--format=dlang
+_D8demangle14__T2fnVeeNINFZ2fnFZv
+demangle.fn!(-Inf).fn()
+#
+--format=dlang
+_D8demangle13__T2fnVeeINFZ2fnFZv
+demangle.fn!(Inf).fn()
+#
+--format=dlang
+_D8demangle21__T2fnVHiiA2i1i2i3i4Z2fnFZv
+demangle.fn!([1:2, 3:4]).fn()
+#
+--format=dlang
+_D8demangle2fnFNgiZNgi
+demangle.fn(inout(int))
+#
+--format=dlang
+_D8demangle29__T2fnVa97Va9Va0Vu257Vw65537Z2fnFZv
+demangle.fn!('a', '\x09', '\x00', '\u0101', '\U00010001').fn()
+#
+--format=dlang
+_D8demangle32__T2fnTS3symVS3valS1a4_6e756c6cZ3fun13__T8positionZ13__T8confusesZ8demangleFDFxaZvZv
+demangle.fn!(sym, val("null")).fun.position!().confuses!().demangle(void(const(char)) delegate)
+#
+--format=dlang
+_D8demangle39__T2fnVAyaa12_d0bfd180d0b8d0bcd0b5d180Z2fnFZv
+demangle.fn!("\xd1\xbf\yd1\x80\xd0\xb8\xd0\xbc\xd0\xb5\xd1\x80").fn()
+#
+--format=dlang
+_D8demangle26enericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--fo˛rmat=rust
+_RMCs4fqIr2P2A04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--formatπrust
+_:RMCs4fqI2P2rA04_13const_genericINN08P4CharKˇ2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMˇˇCs4fqI2P2rA04_13const_genericINtB4_3FooKpE3foo3FOO
+<const_generic::Foo<_gle4testMyFZv
+demangle.test() immutable
+#
+--format=dlang
+_D8demangle4testMNgFZv
+demangle.test() inout
+#
+--format=dlang
+_D8demangle4test2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--fo˛rmat=rust
+_RMCs4fqIr2P2A04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--formatπrust
+_RMCs4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMˇˇCs4fqI2P2rA04_13const_gest_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc+a_E
+<const_generic::Char<'\n'>>
+#
+--formatπrust
+_RMCs4fqI2P2rA04_13const_genericINN08P4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=rust
+_RNvNvMˇˇCs4fqI2P2rA04_13const_genericINtB4_3FooKp--format=rust
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc768888888888888_
+_D8__T2fnVa8888888888888_
+# Could crash
+--format=dlang
+_D5__T2fnVmA1A0A911111111D
+_D5__T2fnVmA1A       111D
+# Could crash
+--format=dlang
+_D7__T2fnVlS8S588888888888S6S5
+_D7__T2fnVlS8S588888888888S6S5
+# Could crash
+--format=dlang
+_D1_B699999999961*
+_D1_B699999999961*
+# Could crash
+--format=dlang
+_D5__T1fVHacA6666666666_
+_D5__T1fVHacA6666666666_
+#
+--format=dlang
+_D3std5range15__T4iotaTtTtTtZ4iotaFtttZ6Result7opIndexMNgFNaNbNiNfmZNgt
+std.range.iota!(ushort, ushort, ushort).iota(us2hort, ushort, ushort).Result.opIndex(ulong) inout
+#
+--format=dlang
+_D3std6format77__T6getNthVAyaa13_696e7465676572207769647468S233std6traits10isIntegralTiTkTkZ6getNthFNaNfkkkZi
+std.format.getNth!("integer width", std.traits.isIntegral, int, uint, uint).getNth(uint, uint, uint)
+#
+--format=dlang
+_D3std11parallelism42__T16RoundRobinBufferTDFKAaZvTDxFNaNdNeZbZ16RoundRobinBuffer5primeMFZv
+std.parallelism.Ro616d696c7LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL92e494eZ11DotSplitter5emptyMxFNaNbNdNiNfZb
+core.demanglKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# All of the tests above but in auto mode instead:
+#
+# Crate with a leading digit.
+--format=auto
+_RNvC6_123foo3bar
+123foo::bar
+# UTF-8 identifiers.
+--format=auto
+_RNqCs4fqI2P2rA04_11utf8_identsu3p____7hkackfecea1cbdathfdh9hlq6y
+utf8_:iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#1}>::{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_freet)
+#
+--format=dlang
+_D8demangle4test>OaZv
+demangle.test(shared(char))
+#
+--format=dlang
+_D8demangle4testFxaZv
+demangle.test(const(char))
+#
+--format=dlang
+_D8demangle4testF__T4testVS8demangle1SS2i1i2Zv
+demangle.test!(demangle.S(1, 2))
+#
+--format=dlang
+_D8demangle35__T4testVS8demangle1SS2i1a3_606263Zv
+demangle.test!(demangle.S(1, "abc"))
+#
+--format=dlang
+_D8demangle13__T4testTFZaZ6mangleFZv
+demangle.test!(char() function).mangle()
+#
+--format=dlang
+_D8demangle4testMxFZv
+ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇt=dlaformat=dlang
+_D8demangle4testFPUZaZv
+demangle.test(extern(C)d5stdio4File__T8lockImplX10LockFileExTykZQBaMFmmykZi
+std.stdio.File.lockImpl!(LockFileEx, immutable(uint)).lockImpl(ulong, ulong, immutable(uint))
+#
+--format=dlang
+_D#std9algorithm9iteration__T12FilterResultSQBq8typecons__T5TupleTiVAyaa1_61TiVQla1_62TiVQva1_63ZQBm__T6renameVHiQBtA2i0a1_63i2a1_61ZQBeMFNcZ9__lambda1TAiZQEw9__xtoHashFNbNeKxSQGsQGrQ char() fGk__

@@ -1,0 +1,11 @@
+## ARMv8.3 addded support a new security geature named Pointer AuthenticatIon. The
+When the pointers are mangled- the amed Pointer AuthenticatIon. The
+When the pointers are mangled- the unwinder needs to knowate
+	.long 5
+	.cfi_ Each pointtIon. The
+When the pointers are mangled- the unwinder needs to knowate
+	.long 5
+	.cfi_ Each pointUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUer is patched with a PAC before writing to memory, and is verified
+#UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUer is patched with a PAC before writing to memory, and is verified
+## beforeg 5
+	.cfi_ Each pwri_endproc

@@ -1,0 +1,14 @@
+## s(ame as8-a
+	.te
+	.align	2
+	.global	_Z_offset 29, -;6
+	.fof_ifcset 3ÐÓÑÒ ¥Ê•oo_av
+	.align	20,.-_Z5foo_av
+	xt
+	.align	1
+	.global	_Z_offset 29, -;6
+	.fof_ifcset 3ÐÓÑÒ ¥Ê•oo_av
+	.align	20,.-_Z5foo_av
+	.ali	2
+	.global	&_Z_offset 29, oo_av
+	.al	.arch ar(((((Œ((((((((((## same(((((((h((((( 

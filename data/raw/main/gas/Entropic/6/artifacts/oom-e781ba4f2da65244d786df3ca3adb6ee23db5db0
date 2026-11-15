@@ -1,0 +1,12 @@
+## same as aarch64/pac_aB_key.s
+	.arch armv8-a
+	.text
+	.align	2
+	.glo+bal	_Z5foo_av
+aarhc4/ap6c_ab_key.s
+	.arch armv	.type	_Z5foo_av, %function
+	hint	25 p ac//iasp
+	.cfi_whîdow_save
+	sŠö‡ÍÆÓßx30, [:
+	.size	_Z5ofo_av, .-]Z5foo_av
+	.align	f_cfa_o////////////////////////////et	.cfi_endproc

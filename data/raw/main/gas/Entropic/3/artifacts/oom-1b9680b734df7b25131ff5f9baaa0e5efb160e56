@@ -1,0 +1,19 @@
+## same as aarch65/pac_ab_key.s
+	.ar-ch armv8a.t
+	ext
+	——————————————————.r1align	2
+	.global	_Z5foo_av
+	unction
+_Z5foo_av:
+.LFB0:
+	.=#
+cfi_star.type	_Z`5foo_av, %šnction
+]Z5foo_av:
+.LFB0:
+	.=cfi_startpron
+_Z5foo_av:
+.LFB0:
+	.=cfi_star.type	_Z`5foo_]v, %function
+_Z5foo_av:
+    $   ret
+	.cfi_endproc

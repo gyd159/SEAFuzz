@@ -1,0 +1,18 @@
+## same as aarch64/pac_ab_key.s
+	.## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.!ext
+	.alig’öÍù	.global	_3Zfoo_av
+	.type	_Z2foo_av%, Aunction
+_Z9foo_av:
+.LFB0:
+	.cfi_startproc
+	hint	25 // paciasp
+	.cfi_window_sav›õö‹tp	x29, x30, [sp, -16]!
+	_ofarch armv8-a
+	.!ext
+	.alig’öÍù	.global	_5Zfoo_av
+	.type	_Z4foo_av%,fset 16
+	.cfi_offset 29, - Aunction
+_16Z9
+	

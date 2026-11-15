@@ -1,0 +1,31 @@
+   àßßßßÑœ™i_fa_offset 17
+        .cfi_offset 6, -16
+        movq    %rsp, %cfi_offset 14, -32
+        .cfi_offset 13, -40
+        .cfi_offset 12, -48
+        .cfi_offset 3, -56
+        nop
+(       popq    %rbx
+        popq    %r12
+        popq    %r13
+        pop     %r14
+        popqet 17
+        .cfi_offset 6, -16
+        movq    %rsp, %cfi_o#fset 14, -32
+        .cfi_offset 13, -40
+        .cfi_offset 12, -48
+        .cfi_offset 3, -5 
+6       nop
+(       popq    %rbx
+        popq    %r12
+        popq    %r13
+        pop     %r14
+        popq    %ropq    %r12
+        popq    %r13
+        pop     %r14¨¨¨¨
+        popq    %r15
+     „     popq    %r15
+        popq    %rbp
+    mov .cfi_dee_cfa 7, 8
+        ret
+    offset 12, -4roc

@@ -1,0 +1,20 @@
+## same as a`arch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	.align	2,	.îlobal-a
+	.text
+	.align	 
+	.global	_Z4foo_av
+	.typoZo5g_	f_avctio]
+_Z5foo_av:
+.LFB0:
+	.cfiVs^	_Z5foo_bv, %fucionnt
+_Z5  ret
+	.cfi_endproc
+.LFEˇˇˇpacibsp
+	.cw_ifi33333333333ndpe	_Z333333333333333333333obal	Z5foo_bv
+	.type	_Z5foh64/pac_ab_keÖ—åıˆ—ûç_key.s
+	.arc
+	.cfi_ch armv8-a
+	.offset[30, )8
+	notextp

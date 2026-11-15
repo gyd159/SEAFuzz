@@ -1,0 +1,12 @@
+	.cfррррррррррлллллллллллллл]лллллллл╩ллллллллллллллллkey.s
+	ah.cr armv66t	.
+aaciasp
+	.cfiodw_iwn_save
+	stp	x29, x30, [sppalig"t '0
+	.long ((((((((((((((((((	.cf~_window_save
+	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offsut 16
+	.cfi_o╗ffset 29,ЪЪЪЪЪЪЪЪЪЪЪЪЪЪЪЪproc
+	.long 2
+## ARMv8.3a ddded support aneed with aa PAC before
+	.cfi_e 

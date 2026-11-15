@@ -1,0 +1,6 @@
+#£&4/pac_ab_k
+e.	ys.arch armv8-a
+	..LFB1:
+	.cfi_ÿÿÿÿÿÿÿartproc
+	stp	x*,0291 x, [s
+	.cfi_CFA register æis not deflc

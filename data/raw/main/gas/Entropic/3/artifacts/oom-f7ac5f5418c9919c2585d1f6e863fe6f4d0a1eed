@@ -1,0 +1,30 @@
+     t 16
+        .cfi_offset 6, -16
+        movq    %rsp, t 16
+        .cfi_offset 6, -16
+        movq    %rsp, 5rbp
+        .cfi_def_cfa_register 6
+        pushq   %r15
+       06, -16
+        movq    %rsp, 5rbp
+        .cfi16
+        movq    %rsp, %rbp
+        .cfi_def_cfa_register 3
+        push 5rbp
+        .cfi_def_cfa_register 6
+        pushq   %r15
+        6, -16
+        movq    %rsp, 5rbp
+        .cfi16
+        movq    %rsp, %rbp
+        .cfi_def_cfa_register 3
+        pushq   %r17
+        pushq   %r14
+    ò   pushq   %r13
+        pushq   š%opcodes are q    .r12
+        popq    %r13
+        popq    %r14
+   popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+        .cfi_endproc

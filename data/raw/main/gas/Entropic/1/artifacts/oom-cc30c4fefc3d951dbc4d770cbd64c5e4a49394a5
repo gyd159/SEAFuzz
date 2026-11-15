@@ -1,0 +1,40 @@
+        .i_r1%%%%%%%%%%%%%%%%%  ¼¼¼¼¼¼¼¼¼¼¼¼¼ðððððððððð 
+pb :     .fill,        popq ÿÿÿÿÿÿÿ 2%%%%%%%%%%%%%%.ldata19cfiam$
+e popq    %r15
+   @   push  rbp      popq (  %rbp
+        .cfi_def_cfa 7, 8
+      r
+ et        ÛÑcfi_endproc
+ .note.ppq  .cfi_sectlofss. r²a-e
+	.cfi_startpŽ‹c
+  @     p rname
+	.cfi_startpro™õß.gnu.linkonce.lb   
+pb :     .cfi_def_cfa_oÊief_vq ç  .%rsp, %rbp
+        .cdb=0dðððððððððððöððð 
+pb :   cf16
+        popq  1%%%%%%%%%%%%%%.ldat
+	.cfi_startproc
+  @     pushu%r     
+pb :     .cfi_def_cfa_oÊief_vqÿÿÿ ç  .%rsp, %rbp
+        .cdb=0dððððððððððððððð 
+pb :     .fill,        popq ÿÿÿÿÿÿÿ 2%%%%%%%%%%%%%%.ldata19cfiam$
+e popq    %r15
+   @   push  rbp      popq (  %rbp
+        .cfi_def_cfa 7, 8
+        ret
+       ÛÑcfi_endproc
+ .note.ppq  .cfi_sectlofss. r²a-e
+	.cfi_startpŽ‹c
+  @     p rname
+	.cfi_startpro™õß.gnu.linkonce.lb   
+pb :     .cfi_def_cfa_oÊief_vq ç  .%rsp, %rbp
+        .cdb=0dðððððððððððöððð 
+pb :     .cf16
+        popq  1%%%%%%%%%%%%% %.ldat
+	.cfi_startproc
+  @     pushu%r     ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿi_ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+pb :    ÙÑœ™i_def_cfa_oÊie`_vq ç  .%rsp, %rbp
+    )n  .cdb=0dððððððððððððððð 
+pb :     .fill
+        popq ÿÿÿÿÿÿÿ 1%%%%%%%%%%%%%%.ldata19cfiam$
+e =	.

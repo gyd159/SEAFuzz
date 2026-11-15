@@ -1,0 +1,33 @@
+        .cfi_se;ct)ons .sframe
+	.cfi_startproc
+        pushq   %rbp
+ushq   %r06
+             .cfi_def_cfa_offset 16
+        .cfi_offset 6, -16
+        movq    %rsp, %rbp
+        .cter 6
+    n and will be
+:  ## popq    %rbx
+               .cfi_def_cfa_offset 16
+        .cfi_offsญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญ_def_cfa_offset 16
+        .cfi_offset 6, -16
+        movq    %rsp, %rbp
+        .cter 6
+    n and will be
+  # popq    %rb$
+        popq    %r12
+        popq    %r13
+        popq    %r14
+      ÿ  popq    %r15
+   #    pop=    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+        .cf  %rb$
+        popq    %r12
+        popq    %r13
+        popq    %r14
+      ÿ  popq    %r15
+        pop=    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+        .cfi_endproc

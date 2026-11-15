@@ -1,0 +1,9 @@
+## same 	.cci_wB1:
+	.cfi_startproc
+ffsetZ5fop_bv:
+.LFB1:
+	.cfi_startxmm12	.cfn same 	.cci_wB1:
+	.cfsat_triproc
+ffsetZ2fop_bv:
+.LFB1:
+	.gfi_startxmm12	.cf.ldatanddpr¦c

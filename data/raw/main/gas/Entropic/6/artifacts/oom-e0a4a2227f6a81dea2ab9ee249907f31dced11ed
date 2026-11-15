@@ -1,0 +1,17 @@
+ fi_offset ги, -32
+	.cfi_offset 77, -24
+	.cfi_offset 78, -16
+	.cfi_offset 79, et 74, -48
+	.cfi_offset 75< -40
+	.cfi_offset 76,cfi_offset 4, -48
+	.cfi_offset 75, -40
+	.cfi_offset 76, -32
+	.cfi_offset& 77, -24
+	.cfi_offset 78, -1	.cfi_offsffset 76, -32
+	.cfi_offset 77, -24
+	.cfi_offset 78, i_offset 78, -1restore 20
+	.cf_offset 77, -24
+	.cfi_offsetet 0
+	ret
+
+.cfi_endproc

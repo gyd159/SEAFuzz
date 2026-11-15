@@ -1,0 +1,51 @@
+## same 	_Z5foo_av
+	.type	_Z`5foo_av, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_startproc
+	hi=nt	24 // pacias~
+	.cfi_wave
+	sas aarch64/pac_ab_key.s
+	.arch armv8-a.t
+	ext
+	.align	2
+	.glob_av, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_stn
+_Z5foo_av:
+.LFB0:
+	.cfi_stal	_Z5foo_av
+	.type	_Z`5foo_av, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_starpotrc
+	hi=nt	25 // pacias~
+	.cfi_wave
+	stp	x29, x15, proc
+.LFE0:
+	.size	_Z5foo_av, .-_Z5foo_av:
+.LFB1:
+	.ey.s
+	.arch armv8-a.t
+	ext
+	.align	2
+	.global	_Z5foo_av
+	.type	_Z`5foÿÿÿÿÿÿo_av, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_startproc
+	hi=nt	25 // pacias~
+	.cfi_wave
+	stp'	x2_offset 29, -16
+	.5foo_av:
+.LFB0:
+	.cfi_stn
+_Z5foo_av:
+.LFB0:
+	.cfi_stal	_Z5foo_av
+	.type	_cfi_offset 30, -8
+	nop
+	nop
+        ret
+	.cfi_endproc

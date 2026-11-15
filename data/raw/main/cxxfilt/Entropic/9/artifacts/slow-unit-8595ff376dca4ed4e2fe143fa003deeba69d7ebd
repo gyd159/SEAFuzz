@@ -1,0 +1,1315 @@
+# This file holds test cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported options.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests
+#
+--format=dlang
+_Dmain
+D main
+#
+--format=dlang
+_D8demangleZ
+demangle
+#
+--format=dlang
+_D8demangle4testZ
+demangle.test
+#
+--format=dlang
+_D8demangle4testPFLAiYi
+demangle.test
+#
+--format=dlang
+_D8demangle4testFZv
+demangle.test()
+#
+--format=dlang
+_D8demangle4testMFZ2fnMFZv
+demangle.test().fn()
+#
+--format=dlang
+_D8demangle4testFaZv
+demangle.test(char)
+#
+--format=dlang
+_D8demangle4testFbZv
+demangle.test(bool)
+#
+--format=dlang
+_D8demangle4testFcZv
+demangle.test(creal)
+#
+--format=dlang
+_D8demangle4testFdZv
+demangle.test(double)
+#
+--format=dlang
+_D8demangle4testFeZv
+demangle.test(real)
+#
+--format=dlang
+_D8demangle4testFfZv
+demangle.test(floa
+std.stream.BOMEndian
+#
+--format=dlang
+_D3std8internal7uni_tab10unicodeNkoyS3std8internal3uni12CodepointSet
+std.internal.uni_tab.unicodeNko
+#
+--format=dlang
+_D2gc2gc2GC6addrOfMFPvZPv
+gc.gc.GC.addrOf(void*)
+#
+--format=dlang
+_D3std7process10setCLOEXECFibZv
+std.process.setCLOEXEC(int, bool)
+#
+--format=dlang
+_D3std6digest2md3MD53putMFNaNbNeMAxhXv
+std.digest.md.MD5.put(scope const(ubyte)[]...)
+#
+--format=dlang
+_D3std6mmfile6MmFile13opIndexAssignMFhmZh
+std.mmfile.MmFile.opIndexAssign(ubyte, ulong)
+#
+--fo¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥rmat=dlang
+_D3std7process18escapeShellCommandFxAAaXAya
+std.process.escapeShellCommand(const(char[][])...)
+#
+--format=dlang
+_D4core4sync5mutex5Mutex6__ctorMFC6ObjectZC4core4sync5mutex5Mutex
+core.sync.mutex.Mutex.this(Object)
+#
+--format=dlang
+_D6object14TypeInfo_Array8argTypesMFNbNfJC8TypeUUUUUUUUUUUZv
+UUUUUUUUUUInfoJC8TypeInfoZi
+object.TypeInfo_Array.argTypes(out TypeInfo, out TypeInfo)
+#
+--format=dlang
+_D2rt6dmain211_d_run_mainUiPPaPUAAaZiZ7tryExecMFMDFZvZv
+rt.dmain2._d_run_main(int, char**, extern(C) int(char[][]) function).tryExec(scope void() delegate)
+#
+--format=dlang
+_D6objerate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAOa
+plugin.generate(int, int)
+#
+--format=dlang
+_D8demangle3fnAFZ3fnBMFZv
+demangle.fnA().fnB()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnCMFZv
+demang#
+--format=d7lZv
+UUUUUUUUUUUUUUUUUUUUUle.main().S.fnC()
+#
+--format=dlang
+_D8demangle4mainFZ1S3›nDMFZv
+demangle.main().S.fnD()
+#
+--format=dlang
+_D8demangle4mainFZ5localMFZi
+demangle.main().local()
+#
+--format=dlang
+_D3std5ascii9uppercaseyAa
+std.ascii.uppercase
+#
+--format=dlang
+_D3std6stream9BOMEndianyG5E3std6system6Endian
+std.stream.BOMEndian
+#
+--format=dlang
+_D3std8internal7uni_tab10unicodeNkoyS3std8internal3uni12CodepointSet
+std.internal.uni_tab.unicodeNko
+#
+--format=dlang
+_D2gc2gc2GC6addrOfMFPvZPv
+gc.gc.GC.addrOf(void*)
+#
+--format=dlang
+_D3std7process10setCLOEXECFibZv
+std.process.setCLOEXEC(int, bool)
+#
+--format=dlang
+_D3std6digest2md3MD53putMFNaNbNeMAxhXv
+std.digest.md.MD5.put(scope const(ubyte)[]...)
+#
+--format=dlang
+_D3std6mmfile6MmFile13opIndexAssignMFhmZh
+std.mmfile.MmFilel3uni12CodepointSet
+std.internal.uni_tab.unicodeNko
+#
+--format=dlang
+_D2gc2gc2GC6addrOfMFPvZPv
+gc.gc.GC.addrOf(void*)
+#
+--format=dlang
+_D3std7process10setCLOEXECFibZv
+std.process.setCLOEXEC(int, bool)
+#
+--format=dlang
+_D3std6digest2md3MD53putMFNaNbNeMAxhXv
+std.digest.md.MD5.put(scope const(ubyte)[]...)
+#
+--format=dlang
+_D3std6mmfile6MmFile13opIndexAssignMFhmZh
+std.mmfile.MmFile.opIndexAssign(ubyte, ulong)
+#
+--format=dlang
+_D3std7process18escapeShellCommandFxAAaXAya
+std.process.escapeShellCommand(const(char[][])...)
+#
+--format=dlang
+_D4core4sync5mutex5Mutex6__ctorMFC6ObjectZC4core4sync5mutex5Mutex
+core.sync.mutex.Mutex.this(Object)
+#
+--format=dlang
+_D6object14TypeInfo_Array8argTypesMFNbNfJC8TypeUUUUUUUUUUUZv
+UUUUUUUUUUInfoJC8TypeInfoZi
+object.TypeInfo_Array.argTypes(out TypeInfo, out TypeInfo)
+#
+--format=dlang
+_D2rt6dmain211_d_run_mainUiPPaPUAAaZiZ7tryExecMFMDFZvZv
+rt.dmain2._d_run_main(int, char**, extern(C) int(char[][]) function).tryExec(scope void() delegate)
+#
+--format=dlang
+_D6object9Exception6__ctorMFNaNbNfAyaAyamC6object9ThrowableZC9Exception
+object.Exception.this(immutable(char)[], immutable(char)[], ulong, object.Throwable)
+#
+--formaang
+_D4core4sync5mutex5Mutex6__ctorMFC6ObjectZC4core4sync5mutex5Mutex
+core.sync.mutex.Mutex.this(Object)
+#
+--format=dlang
+_D6object14TypeInfo_Array8argTypesMFNbNfJC8TypeUUUUUUUUUUUZv
+UUUUUUUUUUInfoJC8TypeInfoZi
+object.TypeInfo_Array.argTypes(out TypeInfo, out TypeInfo)
+#
+--format=dlang
+_D2rt6dmain211_d_run_mainUiPPaPUAAaZiZ7tryExecMFMDFZvZv
+rt.dmain2._d_run_main(int, char**, extern(C) int(char[][]) function).tryExec(scope void() delegate)
+#
+--format=dlang
+_D6objerate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAOa
+plugin.generate(int, int)
+#
+--format=dlang
+_D8demangle3fnAFZ3fnBMFZv
+demangle.fnA().fnB()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnCMFZv
+demang#
+--format=d7lZv
+UUUUUUUUUUUUUUUUUUUUUle.main().S.fnC()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnDMFZv
+demangle.main().S.fnD()
+#
+--format=dlang
+_D8demangle4mainFZ5localMFZi
+demangle.main().local()
+#
+--format=dlang
+_D3std5ascii9uppercaseyAa
+std.ascii.uppercase
+#
+--format=dlang
+_D3std6stream9BOMEndianyG5E3std6system6Endian
+std.stream.BOMEndian
+#
+--format=dlang
+_D3std8internal7uni_tab10unicodeNkoyS3std8internal3uni12CodepointSet
+std.internal.uni_tab.unicodeNko
+#
+--format=dlang
+_D2gc2gc2GC6addrOfMFPvZPv
+gc.gc.GC.addrOf(void*)
+#
+--format=dlang
+_D3std7process10setCLOEXECFormat=dlang
+_D4core4sync5mutex5Mutex6__ctorMFC6ObjectZC4core4sync5mutex5Mutex
+core.sync.mutex.Mutex.this(Object)
+#
+--format=dlang
+_D6object14TypeInfo_Array8argTypesMFNbNfJC8TypeUUUUUUUUUUUZv
+UUUUUUUUUUInfoJC8TypeInfoZi
+object.TypeInfo_Array.argTypes(out TypeInfo, out TypeInfo)
+#
+--format=dlang
+_D2rt6dmain211_d_run_mainUiPPaPUAAaZiZ7tryExecMFMDFZvZv
+rt.dmain2._d_run_main(int, char**, extern(C) int(char[][]) function).tryExec(scope void() delegate)
+#
+--format=dlang
+_D6object9Exception6__ctorMFNaNbNfAyaAyamC6object9ThrowableZC9Exception
+object.Exception.this(immutable(char)[], immutable(char)[], u€ong, object.Throwable)
+#
+--format=dlang
+_D3gcc3deh17parse_lsda_a
+test.foo
+#
+--format=dlang
+_D8demangle8demangleFAaZAa
+demangle.demangle(char[])
+#
+--format=dlang
+_D6object6Object8opEqualsFC6ObjectZi
+object.Object.opEquals(Object)
+#
+--format=dlang
+_D6object6Object8opAssignFC6ObjectZi
+object.Object.opAssign(Otecbj)
+#
+--format=dlang
+_D4test2dgDFiYd
+test.dg
+#
+--format=dlang
+_D1a1bi
+a.b
+#
+n2._d_run_main(int, char**, extern(C) int(char[][]) function).tryExec(scope void() delegate)
+#
+--format=dlang
+_D6object9Exception6__ctorMFNaNbNfAyaAyamC6object9ThrowableZC9Exception
+object.Exception.this(immutable(char)[], immutable(char)[], u€ong, object.Throwable)
+#
+--format=dlang
+_D3gcc3deh17parse_lsda_a
+test.foo
+#
+--format=dlang
+_D8demangle8demangleFAaZAa
+demangle.demangle(char[])
+#
+--format=dlang
+_D6object6Object8opEqualsFC6ObjectZi
+object.Object.opEquals(Object)
+#
+--format=dlang
+_D6object6Object8opAssignFC6ObjectZi
+object.Object.opAssign(Object)
+#
+--format=dlang
+_D4test2dgDFiYd
+test.dg
+#
+--format=dlang
+_D1a1bi
+a.b
+#
+--format=dlang
+_D1a1bPFiZi
+a.b
+#
+--format=dlang
+_D4test34__T3barVG3uw3_616263VG3wt3_646566Z1xi
+test.bar!("abc"w, "def"d).x
+#
+--format=dlang
+_D4test21__T3funVwi4294967295Z3funFNaNbNiNfZv
+test.fun!('\Uffffffff').fun()
+#
+--format=dlang
+_D3test21__T3funVwi4294967296Z3funFNaNbNiNfZv
+_D4test21__T3funVwi4296967296Z3funFNaNbNiNfZv
+#
+--format=dlang
+_D6plugin8generateFiiZAya
+plugin.generate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAxa
+plugin.generate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAOa
+plugin.generate(int, int)
+#
+--format=dlang
+_D8demangle3fnAFZ3fnBMFZv
+demangle.fnA().fnB()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnCMFZv
+demang#
+m-format=d7lZv
+UUUUUUUUUUUUUUUUUUUUUle.main().S.fnC()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnDMFZv
+demangle.main().S.fnD()
+#
+--format=dlang
+_D8demangle4mainFZ5localMFZi
+demangle.main().local()
+#
+--format=dlang
+_D3std5ascii9uppercaseyAa
+std.ascii.uppercase
+#
+--format=dlang
+_D3std6stream9BOMEndianyG5E3std6system6Endian
+std.stream.BOMEndian
+#
+--format=dlang
+_D3std8internal7uni_tab10unicodeNkoyS3std8internal3uni12CodepointSet
+std.internal.uni_tab.unicodeNko
+#
+--format=dlang
+_D2gc2gc2GC6addrOfMFPvZPv
+gc.gc.GC.addrOf(void*)
+#
+--format=dlang
+_D3std7process10setCLOEXECFibZv
+std.process.setCLOEXEC(int, bool)
+#
+--format=dlang
+_D2std6digest2md3MD53putMFNaNbNeMAxhXv
+std.digest.md.MD5.put(scope const(ubyte)[]...)
+#
+--format=dlang
+_D3std6mmfile6MmFile13opIndexAssignMFhmZh
+std.mmfile.MmFile.opIndexAssign(ubyte, ulong)
+#
+--format=dlang
+_D3std7process18escapeShellCommandFxAAaXAya
+std.process.escapeShellCommand(const(char[][])...)
+#
+--format=dlang
+_D4core4sync5mutex5Mutex6__ctorMFC6ObjectZC4core4sync5mutex5Mutex
+core.sync.mutex.Mutex.this(Object)
+#
+--format=dlang
+_D6object14TypeInfo_Array8argTypesMFNbNfJC8TypeUUUUUUUUUUUZv
+UUUUUUUUUUInfoJC8TypeInfoZi
+object.TypeInfo_Array.argTypes(out TypeInfo, out TypeInfo)
+#
+--format=dlang
+_D2rt6dmain211_d_run_mainUiPPaPUAAaZiZ7tryExecMFMDFZvZv
+rt.dmain2._d_run_main(int, char**, extern(C) int(char[][]) function).tryExec(scope void() delegate)
+#
+--format=dlang
+_D6objerate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAOÿa
+plugin.generate(int, int)
+#
+--format=dlang
+_D8demangle3fnAFZ3fnBMFZv
+demangle.fnA().fnB()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnCMFZv
+demang#
+--format=d7lZv
+UUUUUUUUUUUUUUUUUUUUUle.main().S.fnC()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnDMFZv
+demangle.main().S.fnD()
+#
+--format=dlang
+_D8demangle4mainFZ5localMFZi
+demangle.main().local()
+#
+--format=dlang
+_D3std5ascii9uppercaseyAa
+std.ascii.uppercase
+#
+--format=dlang
+_D3std6stream9BOMEndianyG5E3std6system6Endian
+std.stream.BOMEndian
+#
+--format=dlang
+_D3std8internal7uni_tab10unicodeNkoyS3std8internal3uni12CodepointSet
+std.internal.uni_tab.unicodeNko
+#
+--format=dlang
+_D2gc2gc2GC6addrOfMFPvZPv
+gc.gc.GC.addrOf(void*)
+#
+--format=dlang
+_D3std7process10setCLOEXECFibZv
+std.process.setCLOEXEC(int, bool)
+#
+--format=dlang
+_D3std6digest2md3MD53putMFNaNbNeMAxhXv
+std.digest.md.MD5.put(scope const(ubyte)[]...)
+#
+--format=dlang
+_D3std6mmfile6MmFile13opIndexAssignMFhmZh
+std.mmfile.MmFile.opIndexAssign(ubyte, ulong)
+#
+--format=dlang
+_D3std7process18escapeShellCommandFxAAaXAya
+std.process.escapeShellCommand(const(char[][])...)
+#
+--format=dlang
+_D4core4sync5mutex5Mutex6__ctorMFC6ObjectZC4core4sync5mutex5Mutex
+core.sync.mutex.Mutex.this(Object)
+#
+--format=dlang
+_D6object14TypeInfo_Array8argTypesMFNbNfJC8TypeUUUUUUUUUUUZv
+UUUUUUUUUUInfoJC8TypeInfoZi
+object.TypeInfo_Array.argTypes(out TypeInfo, out TypeInfo)
+#
+--format=dlang
+_D2rt6dmain211_d_run_mainUiPPaPUAAaZiZ7tryExecMFMDFZvZv
+rt.dmain2._d_run_main(int, char**, extern(C) int(char[][]) function).tryExec(scope void() delegate)
+#
+--format=dlang
+_D6object9Exception6__ctorMFNaNbNfAyaAyamC6object9ThrowableZC9Exception
+object.Exception.this(immutable(char)[], immutable(char)[], ulong, object.Throwable)
+#
+--formaang
+_D4core4sync5mutex5Mutex6__ctorMFC6ObjectZC4core4syncNbNfJC8TypeUUUUUUUUUUUZv
+UUUUUUUUUUInfoJC8TypeInfoZi
+object.TypeInfo_Array.argTypes(out TypeInfo, out TypeInfo)
+#
+--format=dlang
+5mutex5Mutex
+core.sync.mutex.Mutex.this(Object)
+#
+--format=dlang
+_D6object14TypeInfo_Array8argTypesMFNbNfJC8TypeUUUUUUUUUUUZv
+UUUUUUUUUUInfoJC8TypeInfoZi
+object.TypeInfo_Array.argTypes(out TypeInfo, out TypeInfo)
+#
+--format=dlang
+_D2rt6dmain211_d_run_mainUiPPaPUAAaZiZ7tryExecMFMDFZvZv
+rt.dmain2._d_run_main(int, char**, extern(C) int(char[][]) function).tryExec(scope void() delegate)
+#
+--format=dlang
+_D6objerate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAOa
+plugin.generate(int, int)
+#
+--format=dlang
+_D8demangle3fnAFZ3fnBMFZv
+demangle.fnA().fnB()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnCMFZv
+demang#
+--format=d7lZv
+UUUUUUUUUUUUUUUUUUUUUle.main().S.fnC()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnDMFZv
+demangle.main().S.fnD()
+#
+--format=dlang
+_D8demangle4mainFZ5localMFZi
+demangle.main().local()
+#
+--format=dlang
+_D3std5ascii9uppercaseyAa
+std.ascii.uppercase
+#
+--format=dlang
+_D3std6stream9BOMEndianyG5E3std6system6Endaan
+std.stream.BOMEndian
+#
+--format=dlang
+_Ddst38internal7uni_tab10unicodeNkoyS3std8internal3uni12CodepointSet
+std.internal.uni_tab.unicodeNko
+#
+--format=dlang
+_D2gc2gc2GC6addrOfMFPvZPv
+gc.gc.GC.addrOf(void*)
+#
+--format=dlang
+_D3std7process10setCLOEXECFibZv
+std.process.setCLOEXEC(int, bool)
+#
+--format=dlang
+_D3std6digest2md3MD53putMFNaNbNeMAxhXv
+std.digest.md.MD5.put(scope const(ubyte)[]...)
+#
+--format=dlang
+_D3std6mmfile6MmFile13opIndexAssignMFhmZh
+std.mmfile.MmFile.opIndexAssign(ubyte, ulong)
+#
+--format=dlang
+_D3std7process18escapeShellCommandFxAAaXAya
+std.process.escapeShellCommand(const(char[][])...)
+#
+--format=dlang
+_D4core4sync5mutex5Mutex6__ctorMFC6ObjectZC4core4sync5mutex5Mutex
+core.sync.WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW-format=dlang
+_D5demangle4mainFZ5localMFZi
+demangle.main().local()
+#
+--format=dlang
+_D3std5ascii9uppercaseyAa
+std.ascii.uppercase
+#
+--format=dlang
+_D3std6stream9BOMEndianyG5E3std6system6Endian
+std.stream.BOMEndian
+#
+--format=dlang
+_D3std8internal7uni_tab10unicodeNkoyS3std8internal3uni12CodepointSet
+std.internal.uni_tab.unicodeNko
+#
+--format=dlang
+_D2gc2gc2GC6addrOfMFPvZPv
+gc.gc.GC.addrOf(void*)
+#
+--format=dlang
+_D3std7process10setCLOEXECFibZv
+std.process.setCLOEXEC(int, bool)
+#
+--format=dlang
+_D3std6digest2md3MD53putMFNaNbNeMAxhXv
+std.digest.md.MD5.put(scope const(ubyte)[]...)
+#
+--format=dlang
+_D3std6mmfile6MmFile13opIndexAssignMFhmZh
+std.mmfile.MmFilel3uni12CodepointSet
+std.internal.uni_tab.unicodeNko
+#
+--format=dlang
+_D2gc2gc3GC6addrOfMFPvZPv
+gc.gc.GC.addrOf(void*)
+#
+--format=dlang
+_D3std7process10setCLOEXECFibZv
+std.process.setCLOEXEC(int, bool)
+#
+--format=dlang
+_D3std6digest2md3MD53putMFNaNbNeMAxhXv
+std.digest.md.MD5.put(scope const(ubyte)[]...)
+#
+--format=dlang
+_D3std6mmfile6MmFile13opIndexAssignMFhmZh
+std.mmfile.MmFile.opIndexAssign(ubyte, ulong)
+#
+--format=dlang
+_D3std7process18escapeShellCommandFxAAaXAya
+std.process.escapeShellCommand(const(char[][])...)
+#
+--format=dlang
+_D4core4sync5mutex5Mutex6__ctorMFC6ObjectZC4core4sync5mutex5Mutex
+core.sync.mutex.Mutex.this(Object)
+#
+--format=dlang
+_D6object14TypeInfo_Array8argTypesMFNbNfJC8TypeUUUUUUUUUUUZv
+UUUUUUUUUUInfoJC8TypeInfoZi
+object.TypeInfo_Array.argTypes(out TypeInfo, out TypeInfo)
+#
+--format=dlang
+_D2rt6dmain211_d_run_mainUiPPaPUAAaZiZ7tryExecMFMDFZvZv
+rt.dmain2._d_run_main(int, char**, extern(C) int(char[][]) function).tryExec(scope void() delegate)
+#
+--format=dlang
+_D6object9Exception6__ctorMFNaNbNfAyaAyamC6object9ThrowableZC9Exception
+object.Exception.this(immutable(char)[], immutable(char)[], ulong, object.Throwable)
+#
+--formaang
+_D4core4sync5mutex5Mutex6__ctorMFC6ObjectZC4core4sync5mutex5Mutex
+core.sync.mutex.Mutex.this(Object)
+#
+--format=dlang
+_D6object14TypeInfo_Array8argTypesMFNbNfJC8TypeUUUUUUUUUUUZv
+UUUUUUUUUUInfoJC8TypeInfoZi
+object.TypeInfo_Array.argTypes(out TypeInfo, out TypeInfo)
+#
+--format=dlang
+_D2rt6dmain211_d_run_mainUiPPaPUAAaZiZ7tryExecMFMDFZvZv
+rt.dmain2._d_run_main(int, char**, extern(C) int(char[][]) function).tryExec(scope void() delegate)
+#
+--format=dlang
+_D6objerate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAOa
+plugin.generate(int, int)
+#
+--format=dlang
+_D8demangle3fnAFZ3fnBMFZv
+demangle.fnA().fnB()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnCMFZv
+demang#
+--format=d7lZv
+UUUUUUUUUUUUUUUUUUUUUle.main().S.fnC()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnDMFZv
+demangle.main().S.fnD()
+#
+--format=dlang
+_D8demangle4mainFZ5localMFZi
+demangle.main().local()
+#
+--format=dlang
+_D3std5ascii9uppercaseyAa
+std.ascii.uppercase
+#
+--format=dlang
+_D3std6stream9BOMEndianyG5E3std6system6Endian
+std.stream.BOMEndian
+#
+--format=dlang
+_D3std8internal7uni_tab10unicodeNkoyS3std8internal3uni12CodepointSet
+std.internal.uni_tab.unicodeNko
+#
+--format=dlang
+_D2gc2gc2GC6addrOfMFPvZPv
+gc.gc.GC.addrOf(void*)
+#
+--format=dlang
+_D3std7process10setCLOEXECFibZv
+std.process.setCLOEXEC(int, bool)
+#
+--format=dlang
+_D3std6digest2md3MD53putMFNaNbNeMAxhXv
+std.digest.md.MD5.put(scope const(ubyte)[]...)
+#
+--format=dlang
+_D3std6mmfile6MmFile13opIndexAssignMFhmZh
+std.mmfile.MmFile.opIndexAssign(ubyte, ulong)
+#
+--format=dlang
+_D3std7process18escapeShellCommandFxAAaXAya
+std.process.escapeShellCommand(const(char[][])...)
+#
+--format=dlang
+_D4core4sync5mutex5Mutex6__ctorMFC6ObjectZC4core4sync5mutex5Mutex
+core.sync.mutex.Mutex.this(Object)
+#
+--format=dlang
+_D6object14TypeInfo_Array8argTypesMFNbNfJC7TypeUUUUUUUUUUUZv
+UUUUUUUUUUInfoJC8TypeInfoZi
+object.TypeInfo_Array.argTypes(out TypeInfo, out TypeInfo)
+#
+--format=dlang
+_D2rt6dmain211_d_run_mainUiPPaPUAAaZiZ7tryExecMFMDFZvZv
+rt.dmain2._d_run_main(int, char**, extern(C) int(char[][]) function).tryExec(scope void() delegate)
+#
+--format=dlang
+_D6object9Exception6__ctorMFNaNbNfAyaAyamC6object9ThrowableZC9Exception
+object.Exception.this(immutable(char)[], immutable(char)[], u€ong, object.Throwable)
+#
+--format=dlang
+_D3gcc3deh17parse_lsda_a
+test.foo
+#
+--format=dlang
+_D8demangle8demangleFAaZAa
+demangle.demangle(char[])
+#
+--format=dlang
+_D6object6Object8opEqualsFC6ObjectZi
+object.Object.opEquals(Object)
+#
+--format=dlang
+_D6object6Object8opAssignFC6ObjectZi
+object.Object.opAssign(Object)
+#
+--format=dlang
+_D4test2dgDFiYd
+test.dg
+#
+--format=dlang
+_D1a1bi
+a.b
+#
+n2._d_run_main(int, char**, extern(C) int(char[][]) function).tryExec(scope void() delegate)
+#
+--format=dlang
+_D6object9Exception6__ctorMFNaNbNfAyaAyamC6object9ThrowableZC9Exception
+object.Exception.this(immutable(char)[], immutable(char)[], u€ong, object.Throwable)
+#
+--format=dlang
+_D3gcc3deh17parse_lsda_a
+test.foo
+#
+--format=dlang
+_D8demangle8demangleFAaZAa
+demangle.demangle(char[])
+#
+--format=dlang
+_D6object6Object8opEqualsFC6ObjectZi
+object.Object.opEquals(Object)
+#
+--format=dlang
+_D6object6Object8opAssignFC6ObjectZi
+object.Object.opAssign(Object)
+#
+--format=dlang
+_D4test2dgDFiYd
+test.dg
+#
+--format=dlang
+_D1a1bi
+a.b
+#
+--format=dlang
+_D1a1bPFiZi
+a.b
+#
+--format=dlang
+_D4test34__T3barVG3uw3_616263VG3wd3_646566Z1xi
+test.bar!("abc"w, "def"d).x
+#
+--format=dlang
+_D4test21__T3funVwi4294967295Z3funFNaNbNiNfZv
+test.fun!('\Uffffffff').fun()
+#
+--format=dlang
+_D3test21__T3funVwi4294967296Z3funFNaNbNiNfZv
+_D4test21__T3funVwi4296967296Z3funFNaNbNiNfZv
+#
+--format=dlang
+_D6plugin8generateFiiZAya
+plugin.generate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAxa
+plugin.generate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAOa
+plugin.generate(int, int)
+#
+--format=dlang
+_D8demanmat=dlang
+_D6object6Object8opAssignFC6ObjectZi
+object.Object.opAssign(Object)
+#
+--format=dlang
+_D4test2dgDFiYd
+test.dg
+#
+--format=dlang
+_D1a1bi
+a.b
+#
+--format=dlang
+_D1a1bPFiZi
+a.b
+#
+--format=dlang
+_D4test34__T3barVG3uw3_616263VG3wd3_646566Z1xi
+test.bar!("abc"w, "def"d).x
+#
+--format=dlang
+_D4test21__T3funVwi4294967295Z3funFNaNbNiNfZv
+test.fun!('\Uffffffff').fun()
+#
+--format=dlang
+_D4test21__T3funVwi4294967296Z3funFNaNbNiNfZv
+_D4test'1__T3funVwi4294967296Z3funFNaNbNiNfZv
+#
+--format=dlang
+_D6plugin8generateFiiZAya
+plugin.generate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAxa
+plugin.generate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAOa
+plugin.generate(int, int)
+#
+--format=dlang
+_D8demangle3fnAFZ3fnBMFZv
+demangle.fnA().fnB()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnCMFZv
+demang#
+m-format=d7lZv
+UUUUUUUUUUUUUUUUUUUUUle.main().S.fnC()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnDMFZv
+demangle.main().S.fnD()
+#
+--format=dlang
+_D8demangle4mainFZ5localMFZi
+demangle.main().local()
+#
+--format=dlang
+_D3std5ascii9uppercaseyAa
+std.ascii.uppercase
+#
+--format=dlang
+_D3std6stream9BOMEndianyG5E3std6system6Endian
+std.stream.BOMEndian
+#
+--format=dlang
+_D3std8internal7uni_tab10unicodeNkoyS3std8internal3uni12CodepointSet
+std.internal.uni_tab.unicodeNko
+#
+--format=dlang
+_D2gc2gc2GC6addrOfMFPvZPv
+gc.gc.GC.addrOf(void*)
+#
+--format=dlang
+_D3std7process10setCLOEXECFibZv
+std.process.setCLOEXEC(int, bool)
+#
+--format=dlang
+_D3std6digest2md3MD53putMFNaNbNeMAxhXv
+std.digest.md.MD5.put(scope const(ubyte)[]...)
+#
+--format=dlang
+_D3std6mmfile6MmFile13opIndexAssignMFhmZh
+std.mmfile.MmFile.opIndexAssign(ubyte, ulong)
+#
+--format=dlang
+_D3std7process18escapeShellCommandFxAAaXAya
+std.process.escapeShellCommand(const(char[][])...)
+#
+--format=dlang
+_D4core4sync5mutex5Mutex6__ctorMFC6ObjectZC4core4sync5mutex5Mutex
+core.sync.mutex.Mutex.this(Object)
+#
+--format=dlang
+_D6object14TypeInfo_Array8argTypesMFNbNfJC8TypeUUUUUUUUUUUZv
+UUUUUUUUUUInfoJC8TypeInfoZi
+object.TypeInfo_Array.argTypes(out TypeInfo, out TypeInfo)
+#
+--format=dlang
+_D2rt6dmain211_d_run_mainUiPPaPUAAaZiZ7tryExecMFMDFZvZv
+rt.dmain2._d_run_main(int, char**, extern(C) int(char[][]) function).tryExec(scope void() delegate)
+#
+--format=dlang
+_D6objerate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAOÿa
+plugin.generate(int, int)
+#
+--format=dlang
+_D8demangle3fnAFZ3fnBMFZv
+demangle.fnA().fnB()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnCMFZv
+demang#
+--format=d7lZv
+ZvZv
+rt.dmain2._d_run_main(int, char**, extern(C) int(char[][]) function).tryExec(scope void() delegate)
+#
+--format=dlang
+_D6object9Exception6__ctorMFNaNbNfAyaAyamC6object9ThrowableZC9Exception
+object.Exception.this(immutable(char)[], immutable(char)[], ulong, object.Throwable)
+#
+--formaang
+_D4core4sync5mutex5Mutex6__ctorMFC6ObjectZC4core4sync5mutex5Mutex
+core.sync.mutex.Mutex.this(Object)
+#
+--format=dlang
+_D6object14TypeInfo_Array8argTypesMFNbNfJC8TypeUUUUUUUUUUUZv
+UUUUUUUUUUInfoJC8TypeInfoZi
+object.TypeInfo_Array.argTypes(out TypeInfo, out TypeInfo)
+#
+--format=dlang
+_D2rt6dmain211_d_run_mainUiPPaPUAAaZiZ7tryExecMFMDFZvZv
+rt.dmain2._d_run_main(int, char**, extern(C) int(char[][]) function).tryExec(scope void() delegate)
+#
+--format=dlang
+_D6objerate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAOa
+plugin.generate(int, int)
+#
+--format=dlang
+_D8demangle3fnAFZ3fnBMFZv
+demangle.fnA().fnB()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnCMFZv
+demang#
+--format=d7lZv
+UUUUUUUUUUUUUUUUUUUUUle.main().S.fnC()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnDMFZv
+demangle.main().S.fnD()
+#
+--format=dlang
+_D8demangle4mainFZ5localMFZi
+demangle.main().local()
+#
+--format=dlang
+_D3std5ascii9uppercaseyAa
+std.ascii.uppercase
+#
+--format=dlang
+_D3std6stream9BOMEndianyG5E3std6system6Endian
+std.stream.BOMEndian
+#
+--format=dlang
+_D3std8internal7uni_tab10unicodeNkoyS3std8internal3uni12CodepointSet
+std.internal.uni_tab.unicodeNko
+#
+--format=dlang
+_D2gc2gc2GC6addrOfMFPvZPv
+gc.gc.GC.addrOf(void*)
+#
+--format=dlang
+_D3std7process10setCLOEXECFibZv
+std.process.setCLOEXEC(int, bool)
+#
+--format=dlang
+_D3std6digest2md3MD53putMFNaNbNeMAxhXv
+std.digest.md.MD5.put(scope const(ubyte)[]...)
+#
+--format=dlang
+_D3std6mmfile6MmFile13opIndexAssignMFhmZh
+std.mmfile.MmFile.opIndexAssign(ubyte, ulong)
+#
+--format=dlang
+_D3std7process18escapeShellCommandFxAAaXAya
+std.process.escapeShellCommand(const(char[][])...)
+#
+--format=dlang
+_D4core4sync5mutex5Mutex6__ctorMFC6ObjectZC4core4sync5mutex5Mutex
+core.sync.mutex.Mutex.this(Object)
+#
+--format=dlang
+_D6object14TypeInfo_Array8argTypesMFNbNfJC7TypeUUUUUUUUUUUZv
+UUUUUUUUUUInfoJC8TypeInfoZi
+object.TypeInfo_Array.argTypes(out TypeInfo, out TypeInfo)
+#
+--format=dlang
+_D2rt6dmain211_d_run_mainUiPPaPUAAaZiZ7tryExecMFMDFZvZv
+rt.dmain2._d_run_main(int, char**, extern(C) int(char[][]) function).tryExec(scope void() delegate)
+#
+--format=dlang
+_D6object9Exception6__ctorMFNaNbNfAyaAyamC6object9ThrowableZC9Exception
+object.Exception.this(immutable(char)[], immutable(char)[], u€ong, object.Throwable)
+#
+--format=dlang
+_D3gcc3deh17parse_lsda_a
+test.foo
+#
+--format=dlang
+_D8demangle8demangleFAaZAa
+demangle.demangle(char[])
+#
+--format=dlang
+_D6object6Object8opEqualsFC6ObjectZi
+object.Object.opEquals(Object)
+#
+--format=dlang
+_D6object6Object8opAssignFC6ObjectZi
+object.Object.opAssign(Object)
+#
+--format=dlang
+_D4test2dgDFiYd
+test.dg
+#
+--format=dlang
+_D1a1bi
+a.b
+#
+n2._d_run_main(int, char**, extern(C) int(char[][]) function).tryExec(scope void() delegate)
+#
+--format=dlang
+_D6object9Exception6__ctorMFNaNbNfAyaAyamC6object9ThrowableZC9Exception
+object.Exception.this(immutable(char)[], immutable(char)[], u€ong, object.Throwable)
+#
+--format=dlang
+_D3gcc3deh17parse_lsda_a
+test.foo
+#
+--format=dlang
+_D8demangle8demangleFAaZAa
+demangle.demangle(char[])
+#
+--format=dlang
+_D6object6Object8opEqualsFC6ObjectZi
+object.Object.opEquals(Object)
+#
+--format=dlang
+_D6object6Object8opAssignFC6ObjectZi
+object.Object.opAssign(Object)
+#
+--format=dlang
+_D4test2dgDFiYd
+test.dg
+#
+--format=dlang
+_D1a1bi
+a.b
+#
+--format=dlang
+_D1a1bPFiZi
+a.b
+#
+--format=dlang
+_D4test34__T3barVG3uw3_616263VG3wd3_646566Z1xi
+test.bar!("abc"w, "def"d).x
+#
+--format=dlang
+_D4test21__T3funVwi4294967295Z3funFNaNbNiNfZv
+test.fun!('\Uffffffff').fun()
+#
+--format=dlang
+_D3test21__T3funVwi4294967296Z3funFNaNbNiNfZv
+_D4test21__T3funVwi4296967296Z3funFNaNbNiNfZv
+#
+--format=dlang
+_D6plugin8generateFiiZAya
+plugin.generate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAxa
+plugin.generate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAOa
+plugin.generate(int, int)
+#
+--format=dlang
+_D8demanmat=dlang
+_D6object6Object8opAssignFC6ObjectZi
+object.Object.opAssign(Object)
+#
+--format=dlang
+_D4test2dgDFiYd
+test.dg
+#
+--format=dlang
+_D1a1bi
+a.b
+#
+--format=dlang
+_D1a1bPFiZi
+a.b
+#
+--format=dlang
+_D4test34__T3barVG3uw3_616263VG3wd3_646566Z1xi
+test.bar!("abc"w, "def"d).x
+#
+--format=dlang
+_D4test21__T3funVwi4294967295Z3funFNaNbNiNfZv
+test.fun!('\Uffffffff').fun()
+#
+--format=dlang
+_D4test21__T3funVwi4294967296Z3funFNaNbNiNfZv
+_D4test'1__T3funVwi4294967296Z3funFNaNbNiNfZv
+#
+--format=dlang
+_D6plugin8generateFiiZAya
+plugin.generate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAxa
+plugin.generate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAOa
+plugin.generate(int, int)
+#
+--format=dlang
+_D8demangle3fnAFZ3fnBMFZv
+demangle.fnA().fnB()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnCMFZv
+demang#
+m-format=d7lZv
+UUUUUUUUUUUUUUUUUUUUUle.main().S.fnC()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnDMFZv
+demangle.main().S.fnD()
+#
+--format=dlang
+_D8demangle4mainFZ5localMFZi
+demangle.main().local()
+#
+--format=dlang
+_D3std5ascii9uppercaseyAa
+std.ascii.uppercase
+#
+--format=dlang
+_D3std6stream9BOMEndianyG5E3std6system6Endian
+std.stream.BOMEndian
+#
+--format=dlang
+_D3std8internal7uni_tab10unicodeNkoyS3std8internal3uni12CodepointSet
+std.internal.uni_tab.unicodeNko
+#
+--format=dlang
+_D2gc2gc2GC6addrOfMFPvZPv
+gc.gc.GC.addrOf(void*)
+#
+--format=dlang
+_D3std7process10setCLOEXECFibZv
+std.process.setCLOEXEC(int, bool)
+#
+--format=dlang
+_D3std6digest2md3MD53putMFNaNbNeMAxhXv
+std.digest.md.MD5.put(scope const(ubyte)[]...)
+#
+--format=dlang
+_D3std6mmfile6MmFile13opIndexAssignMFhmZh
+std.mmfile.MmFile.opIndexAssign(ubyte, ulong)
+#
+--format=dlang
+_D3std7process18escapeShellCommandFxAAaXAya
+std.process.escapeShellCommand(const(char[][])...)
+#
+--format=dlang
+_D4core4sync5mutex5Mutex6__ctorMFC6ObjectZC4core4sync5mutex5Mutex
+core.sync.mutex.Mutex.this(Object)
+#
+--format=dlang
+_D6object14TypeInfo_Array8argTypesMFNbNfJC8TypeUUUUUUUUUUUZv
+UUUUUUUUUUInfoJC8TypeInfoZi
+object.TypeInfo_Array.argTypes(out TypeInfo, out TypeInfo)
+#
+--format=dlang
+_D2rt6dmain211_d_run_mainUiPPaPUAAaZiZ7tryExecMFMDFZvZv
+rt.dmain2._d_run_main(int, char**, extern(C) int(char[][]) function).tryExec(scope void() delegate)
+#
+--format=dlang
+_D6objerate(int, int)
+#
+--format=dlang
+_D6plugin8generateFiiZAOÿa
+plugin.generate(int, int)
+#
+--format=dlang
+_D8demangle3fnAFZ3fnBMFZv
+demangle.fnA().fnB()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnCMFZv
+demang#
+--format=d7lZv
+UUUUUUUUUUUUUUUUUUUUUle.main().S.fnC()
+#
+--format=dlang
+_D8demangle4mainFZ1S3fnDMFZv
+demangle.main().S.fnD()
+#
+--format=dlang
+_D8demangle4mainFZ5localMFZi
+demangle.main().local()
+#
+--format=dlang
+_D3std5ascii9uppercaseyAa
+std.ascii.uppercase
+#
+--format=dlang
+_D3std6stream9BOMEndianyG5E3std6system6Endian
+std.stream.BOMEndian
+#
+--format=dlang
+_D3std8internal7uni_tab10unicodeNkoyS3std8internal3uni12CodepointSet
+std.internal.uni_tab.unicodeNko
+#
+--format=dlang
+_D2gc2gc2GC6addfOrMFPvZPv
+gc.gc.GC.addrOf(void*)
+#
+--format=dlang
+_D3std7process10setCLOEXECFibZv
+std.process.setCLOEXEC(int, bool)
+#
+--format=dlang
+_D3std6digest2md3MD53putMFNaNbNeMAxhXv
+std.digest.md.MD5.put(scope const(ubyte)[]...)
+#
+--format=dlang
+_D3std6mmfile6MmFile11opIndexAssignMFhmZh
+std.mmfile.MmFile.opIndexAssign(ubyte, ulong)
+#
+--format=dlang
+_D3std7process18escapeShellCommandFxAAaXAya
+std.process.escapeShellCommand(const(char[][])...)
+#
+--format=dlang
+_D4core4sync5mutex5Mutex6__ctorMFC6ObjectZC4core4sync5mutex5Mutex
+core.sync.mutex.Mutex.this(Object)
+#
+--format=dlang
+_D6object14TypeInfo_Array8argTypesMFNbNfJC8TypeUUUUUUUUUUUZv
+UUUUUUUUUUIn           foJC8TypeInfoZi
+object.TypeInfo_Array.argTypes(out TypeInfo, out TypeInfo)
+#
+--format=dlang
+_D2rt6dmain211_d_run_mainUiPPaPUAAaZiZ7tryExecMFMDFZvZv
+rt.dmain2._d_run_main(int, char**, extern(C) int(char[][]) function).tryExec(scope void() delegate)
+#
+--format=dlang
+_D6object9Exception6__ctorMFNaNbNfAyaAyamC6object9ThrowableZC9Exception
+object.Exception.this(immutable(char)[], immutable(char)[], ulong, object.Throwable)
+#
+--format=dlang
+_D3gcc3deh17parse_lsda_headerFPS3gcc6unwind7generic15_Unwind_ContextPhPS3gcc3deh16lsda_header_infoZPh
+gcc.deh.parse_lsda_header(gcc.unwind.generic._Unwind_Context*, ubyte*, gcc.deh.lsda_header_info*)
+#
+--format=dlang
+_D3std6socket23UnknownAddressReference6__ctorMFPS4core3sys5posix3sys6socket8sockaddrkZC3std6socket23UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUnknownAddressReference
+std.socket.UnknownAddressReference.this(core.sys.posix.sys.socket.sockaddr*, uint)
+#
+--format=dlang
+_D8demangle20__T2fnVAiA4i1i2i3i4Z2fnFZv
+demangle.fn!([1, 2, 3, 4]).fn()
+#
+--format=dlang
+_D8demangle11__T2fnVii1Z2fnFZv
+demangle.fn!(1).fn()
+#
+--format=dlang
+_D8demangle26__T2fnVS8demangle1SS2i1i2Z2fnFZv
+demangle.fn!(demangle.S(1, 2)).fn()
+#
+--format=dlang
+_D8demangle13__T2fnVee-ANZ2fnFZv
+demangle.fn!(NaN).fn()
+#
+--format=dlang
+_D8demangle14__T2fnVeeNANFZ2fnFZv
+demangle.fn!(-Inf).Çn()
+#
+--format=dlang
+_D8demangle13__T2fnVeeINFZ2fnFZv
+demangle.fn!(Inf).fn()
+#
+--format=dlang
+_D8UUUUUUUUUUUUUUdemangle21_UUUUUUUUUUUUUUU_T2fnVHiiA2i1i2i3i4Z2fnFZv
+demangle.fnèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèè!([0:2, 3:4]).fn()
+#
+--format=dlang
+_D8demangle2fnFNgiZNgi
+demanglUUUUe.fn(inout(int))
+#
+--format=dlang
+_D8demangle29__T2fnVa97Va9Va0Vu257Vw65537Z2fnFZv
+demangle.fn!('a',UUUUUUUUUUUUd '\x09', '\x00', 

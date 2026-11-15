@@ -1,0 +1,5 @@
+    [bp   .cfi_sec %rbp     nop
+        popq "0!rbx
+        popq       %r2    %rbp     nop
+        popq "0!rbx
+        popq       %r2pointer is patched with a PAC before wri#ing to memory, and ÿ

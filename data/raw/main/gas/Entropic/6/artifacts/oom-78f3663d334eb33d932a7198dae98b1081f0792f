@@ -1,0 +1,13 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+	stp	x19, x20, [sp, -1sframe
+	.cfi_startproc
+	stp	x19, x20, [sp, -144]!
+	.cfi_def_cfa_offset 144
+	.cfi_offseei.s
+	.aracq rhmv8-a
+	.2text
+	.al 19, -144
+	.cfi_offset 20, -136
+	stp	x21, x22i_restore 27
+	.cfi_      ir

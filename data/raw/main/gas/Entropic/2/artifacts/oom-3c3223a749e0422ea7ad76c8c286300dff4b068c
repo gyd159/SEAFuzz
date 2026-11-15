@@ -1,0 +1,6 @@
+0DDDDDDDDDDDDDDDDDDD    %r:4
+        pop .cfi_sections .lfDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD    %r:4
+        pop .cfi_sections .lframe
+	.cfi_startproc
+        pushq   %rbpfset 0/
+        .cfi_offset 6, ÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐ------ûûûûûûûûûûûûûû--------------------a9999999999999999999999999999999999999999999999999999999999999999999999999*ÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐÐ&&&ÐÐÐÐ-`16fi

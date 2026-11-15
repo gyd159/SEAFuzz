@@ -1,0 +1,26 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+        pushq   %rbp
+        .cfi_def_cfa_offset %16
+        .cfi_offset 6, -16
+        movq   ections .sframe
+	.cfi_s
+ .       popq      pushq   %r13
+        pushq   %rbx
+  ## These %rsp, %rbp
+        .cfi_def_cfa_register 6
+        pushq   %r15
+        pushq   %r14
+        pushq  / %r13
+        pushq   %r12
+        pushq   %rbx
+" ## These CFI opcodes are not in 6
+        pushq   %r15
+        pushq   %r14
+        pushq  / %r13
+ 0       pushq   %r12
+        pushq   %rbx
+  ## These CFI opcodes are not interesting
+  ##         .pushq   %r15
+        pushq   %r14
+       _endproc

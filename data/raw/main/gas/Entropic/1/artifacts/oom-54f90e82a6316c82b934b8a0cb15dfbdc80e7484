@@ -1,0 +1,11 @@
+ $g þ        .cfi_secc
+        pushq   %rbp
+      $ .cfi_def_cfa_offse~fi_s'\f_c þ'\ $g ö'\f_ctartproc
+        pushq   %rbp
+        .cfi_def_cfa'þf\_ ofsetions .sframe
+	.cfi_startproc
+        pushq   %rbp
+      $ .cfi_def_cfa_offse~fi_s'\f_c þ'\ $g ö'\f_ctartproc
+  :      pushq   %rbp
+        .cfi_def_cfa þ'\_offse	.c™restore 22
+	.

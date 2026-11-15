@@ -1,0 +1,28 @@
+## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	.align	2
+	.glo+bal	_Z5foo_av
+aarch65/pac_ab_key.s
+	.arch armv	.type	_Z5foo_av, %function
+_Z5foo_av:
+.LFi_def_cfa_ofset i_offset 19, -144
+	.cfi_offset 20l -136
+	     .cfi_sections .sframe
+	.cfi_startproc
+	stp	x19, x20, [sp, -144]!
+	.cfi_def_cfa_offset 144
+	.cfi_offset 19, -144
+	.cfi_ofcfi_offset i_offset 19, -144
+	.cfi_offset 20l -136
+	     .cfi_sections . .sframe
+	.cfi_startproc
+	stp	x19, x20, [sp, -144]!
+	.cfi_def_cfa_offset 144
+	.cfi_offset 19, -144
+	.cfi_offset 20l -136((((.-_Z5foo_av
+	.e19, -144
+	.cfi_offset 20l -136
+	     .cfi_sections .sframe
+	.cfi_startpr       ret
+	.cfi_endproc

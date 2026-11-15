@@ -1,0 +1,35 @@
+        .cfi_secti%rbp
+-24
+        .cfi_offset 14, -32
+        .cfi_offset 13, -40
+        .cfi_of+set 12, /48
+        .cfi_offset 3, -56
+        nop
+        popq    %rbx
+        popq    %r12
+       ons .sframe
+	.cfi_startproc
+        pushq   %rbp
+-24
+        .cfi_offset 14, -32
+        .cfi_offset 13, -40
+        .cfi_offset 12, /48
+        .cfi_offset 3, -56
+        nop
+        popq    %rbx
+        popq    %r12
+        popq    %r13
+        popq    %r14
+        popq    %r15
+        popq    %˜bp
+        .cfi_def_cfa 7, 8
+    .cfi_offset 13, -40
+        .cfi_offset 12, -48
+        .cfi_offset 3, -56
+        nop
+        popq    %rbx
+        popq    %r12
+        popq    %r13
+        popq    '%r14
+              ret
+        .cfi_endprob

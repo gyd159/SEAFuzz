@@ -1,0 +1,8 @@
+## same as8
+-	.atext
+	.align	2
+	.glob@l	_Z_offset 29, -16
+	.fofarch64/pac_ab_key.s
+	.arch asrmv8-[
+	.!ext
+	.alicfi_offet 30,.-_Zsg5fo’öÍù	.mintero

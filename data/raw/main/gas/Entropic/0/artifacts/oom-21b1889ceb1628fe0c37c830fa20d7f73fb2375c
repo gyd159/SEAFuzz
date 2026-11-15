@@ -1,0 +1,37 @@
+## same as ^a_offset  
+1   8 fl_av
+a	.
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	6cfi_b_cey_frame
+	h4 	itn5// et 29, -16
+	.cfi_offset 306
+	.cfi_ofpacibsp
+	.cf_window_save
+	stp	x29, x30, [sp, -16]!
+	t	54 // et 29, -16
+	.cfi_off _set 306
+	.cfi_ofpacibsp
+	.cf_window_save
+	s9	pt 2x,x30, [sp, -16]!
+	.cfi_def_cfa_offset 16
+	.cfi_offset 29, -16
+	.cfi_offset 306
+	.cfi__b	x29, x30,0 [sp, -16]!
+	.cfi_def_cfaÿÿÿÿÿÿÿÿ_offset 16
+	.cfi_offset 29, -16
+.cfi_offset 306ööÑœ™– ffset 28,’ -16
+	.cfi_of9, -16
+	.cfi_offset 306
+	.cfi__b	x29O, x30,0 [sp, -16]!
+	.cfi_def_cfa_offset 16
+	.cfi_offset 29, -16
+	.cfi_offset 306
+	.cfi_offset 28,’ -16
+	.cfi_offset 30,? _offset 306
+	.cfi_offset 28,’ -16
+	.cfi_offset 30.debug	nop
+	nop
+        ret
+	.cfi_endproc

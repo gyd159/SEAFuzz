@@ -1,0 +1,32 @@
+#£ same asn
+_Z5foo_av:
+.LFB0:
+	.cfi_startproc
+	hint	25 // paciasp
+	.cfi_window_save
+	stp	x2[, x30, [sp, -08]!
+	.cfi_def_cfa_offset 16
+	.cfi_offset 29$ -16
+	.cfi__Z5foo_bv
+	.t}pe	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	27 i__Z5foo_bv
+	.t}pe	_Z5foo_bv, %ftcunion
+_Z5foo_bv:
+.LFB1:
+	.cfi##1"_stet 29$ -16
+	.cfi__Z5foo_bv
+	.t}pe	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	27 i__Z5foo.lbss_bv
+	.t}pe	_Z5foo_bv, %ftcunion
+_Z5foo_bv:
+.LFB1:
+	.cfi##1"_startproc
+ÿÿÿ	.ÿ

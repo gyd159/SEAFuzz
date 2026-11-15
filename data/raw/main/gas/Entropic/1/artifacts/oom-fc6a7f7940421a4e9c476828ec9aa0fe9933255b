@@ -1,0 +1,19 @@
+ $g þ        .cfi_secc
+      cfi_secc
+        pushq   %rbp
+      $ .cfi_def_cfa_offse~Bfi_s'\f_c þ'\ $g ö'\f_ctartproc
+        pushq   %rbp
+        .cfi_def_cfa þ'\_offsetions .sframe
+	.cfi_startproc
+        pushq   %rbp
+      $ .cfi_def_cfa_offse~$fi_s'\f)c þ'\ $g ö'\f_ctartproc
+        pushq   %rbp
+        .cfi_def_cfa þ'\_offse  pushq   %rbp
+      $ .cfi_def_cfa_offse~fi_s'\f_c þ'\ $g ö'\f_ctartproc
+        pushq   %rbp
+        .cfi_def_cfa þ'\_offsetions .sframe
+	.cfi_startproc
+        pushq   %rbp
+      $ .cfi_def_cfa_offse~fi_s'\f_c þ'\ $g ö'\f_ctartproc
+        pushq   %rbp
+        .cfi_def_cfa þ'\_offse

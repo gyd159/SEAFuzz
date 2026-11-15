@@ -1,0 +1,39 @@
+        .cfi_sections .sframe
+	.cfh_startproc
+	stp	xe.cfe_id_cffa<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<_offset 144
+	.c™–_offset 19, -144
+	.cfi_offset 20, -136
+	st9
+	.ifnb^i_stcfi_restp	x21, x22, .lbss[sp, 16]
+	        .cfi_sectionßÑŒ™že
+	.ÿÿÿc
+	.cfi_rejtn7er #8
+	.cf  9, x20, [sp, -144]!
+	.cfe_id_cffa<<<<<<<<<<<<<<<<<<<<<<<<<<<< 16]
+	        .cfi_sectionßÑŒ™že
+	.c
+	.cfi_rejtn7er #8
+	.cf  9, x20, [sp, -144]!
+	.cfe_id_cffa<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<_offset 144
+	.c™–_offset 19, -144
+	.cfi_offset 20, -136
+	st9
+	.ifnb^i_stcfi_restp	x21, x22, [sp, 16]
+	        .cfi_sectionßÑŒ™že
+	.ÿÿÿc
+	.cfi_rejtn7er #8
+	.cf  9, x20, [sp, -144]!
+	.cfe_id_cffa<<<<<<<<<<<<<<<<<<<<<<<<<<<< 16]
+	        .cni_sectionßÑŒ™že
+	.c
+	.cfi_rejtn7er #8
+	.cf  9, x20, [sp, -144]!
+	.cfe_id_cffa<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<_offset 144
+	.c™–_offset 19, -144
+	.c¢– ffset 20, -136
+	st9
+	.if:nb^i_stcfi_restore 78
+	.cr12df      .cfi_sections .sframe
+	.cfi_stertproi_sections .sframe
+	.ci_rejto7er #8f
+	.cf9i_s, x20t,a

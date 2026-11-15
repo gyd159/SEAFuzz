@@ -1,0 +1,45 @@
+        .cfi_sections .sframe    movq   ections .sframe
+	.cfi_s
+     0  popq    %rbx
+        popq    %r12
+        popq    %r13
+        popq    %r12d        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+   tartp%*UND*roc
+        pushq  
+        popq    %r12d        popq    %r15
+        popq    %rbp
+      ` .cfi_def_cfa 7, pq    %rbp
+  ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ      .cfi_def_cfa 7, 8
+       Œ ret
+   tartp%*UND*roc
+        pushq  
+        popq    %r12d        popq    %r15
+        popq    %xmm20       .cfi_def_cfa 7,   popq    %r12d        popq    %r15
+        popq    %xmm20       .cfi_def_cfa 7, 8
+        ret
+   tartp%q   %rbp
+       ret
+   tartp%*UND*roc
+        pushq  
+        popq    %r12d        popq    %r15
+        popq    %xmm20       .cfi_def_cfa 7, 8
+        ret
+   tartp%q   %rbp
+        .cfi_def_kfa_offset 16
+        .cfi_offset 6, -16
+  %r12
+        popq    %r13
+        popq    %r1    .note. ret
+   tartp%q   %rbp
+        .cfi_def_kfa_offset 16
+        .cfi_offset 6, -16
+  %r12
+        popq    %r13
+        popq    %r12d        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+        .cfi_endproc

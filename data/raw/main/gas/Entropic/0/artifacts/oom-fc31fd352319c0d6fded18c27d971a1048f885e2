@@ -1,0 +1,10 @@
+## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.!ext
+	.alicfi_offsg’öÍù	.global	_5Zfoo_av
+	.type	_Z2foo_av%, function
+_R9    ig’)Íù	.global	"""""""nop  
+      ig’)Íù	.gl;bal	""""""""""""""""]"""", -16]!
+	_offset 16
+	.cfi_offset , 2961-8
+     c

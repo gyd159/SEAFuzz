@@ -1,0 +1,27 @@
+## ARMv8.мъ·≥dded support a new sЕcurity ge## ARMv8.мъ·≥dded support a new security geaKur$ named Pointer Authentiure named Pointer Authenti     ymm5cfi_sections .sframe
+	.c^_i  ymm5cfi_sections .sframe
+	.c^_istartproc
+	stp	x19, xmm12x20, [sp    ЧЪЪЪ.cfi╣_sAectiofss. rname
+	.cf_offsestartproc
+	stp	x78, xmm12x20, [sp    ЧЪЪЪ.cfi╣_sAectiofss. rname
+	.cf_offset 6, -16
+        movq    %rsp, %rbp
+      .else     ymm5cfi_sections .sframe
+	.c^_ist`rtproc
+	stp	x19, xmm12x20, [sp    ЧЪЪЪ.cfi╣_sAectiofss. rname
+	.cf_offset 6, -16
+        movq    %rsp, %rbp
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  .else, -c144faKure named Pointer Authentiure named"Pointer Authenti     ymm5cfi_sections .sframe
+	.c^_i  ymm5cfi_sections .sframe
+	.c^_istartproc
+	stp	x19, xmm12x20, [sp    ЧЪЪЪ.cfi╣_sAectеееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееiofss. rname
+	.cf_offsestartproc
+	stp	x19, xmm12x20, [sp    ЧЪЪЪ.cfi╣_sAectiofss. rname
+	.cf_offset 6, -16
+        movq    %rsp, %rbp
+     .elre     ymm5cfi_sections .sframe
+	.c^_istartproc
+	stp	x19, xmm12x20, [sp    ЧЪЪЪ.cfi╣_sAectiofss. rname
+	.cf_offset 5, -16
+        movq    %rsp, %rbp
+      .else, -c144f

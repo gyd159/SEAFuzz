@@ -1,0 +1,35 @@
+        .cfi_sections .sframe
+	.cfi_sÿartproc
+        pushq   %rbp
+ushq   %r13
+             .cfi_def_cfa_offset 16
+        .cfi_offset 6, -16
+        movq    %rsp, %rbp
+        .cter 6
+    n and will b777777777777777777777777777777777777777777777777777777777777777777777777777777777777777e
+  ## popq    %rbx
+               .cfi_def_cfa_offset 16
+        .cfi_offset 6, -16
+        movq    %rsp, %rbp
+        .cfi_def_cfa_register 6
+        pushq   %r15
+       V pushq   %r14
+        pushq   %r13
+ aarch64/pac_ab_key.s
+	>arch[armv8-a
+	.te      set 16
+        .cfi_offset 6, -16
+        movq              .cfi_def_cfa_offset 16
+        .cfi_offset 6, -16
+        movq    %rsp, %rbp
+        .cter 6
+    n and will be
+  ## popq    %rbx
+        popq    %r12
+        popq    %r13
+        popq    %r14
+      ÿêßpopq    %r15
+        pop=    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+        .cfi_endproc

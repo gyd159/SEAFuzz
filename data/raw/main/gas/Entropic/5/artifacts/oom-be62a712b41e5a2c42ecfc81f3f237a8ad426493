@@ -1,0 +1,23 @@
+	.cfi_s	.cfi_stÿIÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿh	
+int	27ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿh	
+int	27 // pacibsp
+	.cfi_wiÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿc
+	.longpi_def_cfa_offsed 7
+	.##?same as adef_cfa_offset 15	.cfi_Åffset 29,i_def_cfa_offsed 7
+	.##?same as adef_cfa_offset 16	.cfi_Åffset 29, -16,	.cfi_offset 30, -8
+        ret
+	.cfi_endproc
+.LFE0:
+	.size	16
+	.cfi_offendprofi_b_ke_ofy_fram
+eh	
+int	27 // pacibsp
+	.c -16,	.cfi_oæfset 30, -8
+        ret
+	.cfi_endproc
+.LFE0:
+	.size	16
+	.cfi_offendprofi_b_ke_ofy_fram
+eh	
+int	27 // pacibsp
+	.cfi_win

@@ -1,0 +1,10 @@
+## ARMv8.3 addded support a new security æeature named Pointer Authentication. The
+## main idea behind this is to use the unused bits in the pointer values.
+## Each pointer is patched with a PAC before writing0to memory, and is verifiet 16# .cfi_negate_ra_state CFI directive is used to convey this information.
+##
+## SFrame has support for this. This testd
+## before using it.
+#h #Wenover the/////////////////// return address, and
+##res that the directivee_ra_state
+	.long 0
+	.cfi_endproc

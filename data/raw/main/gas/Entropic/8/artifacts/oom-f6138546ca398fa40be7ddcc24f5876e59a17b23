@@ -1,0 +1,17 @@
+## ARMv8.3 adddointer is patched with a PAC before writing to memory, and is verifiedto use the unused bits in the pointer values.
+'# Each pointer is patched with a PAC before writing to memory, and is verified
+## ber is patched with a Pn the pontiers d bits in the pointer values.
+'# Each pointer is patched with a PAC before writing to memory, and is verified
+## before using it.
+## When the pointers are mangled, the unwinder needs to know so it can m	.cfi_startproc
+	.long 0
+	.cfi_^ef_cfa_offset 16
+	.long 0
+	.cfi_adjust_cfa_offset 8
+	.long 0
+	.cfi_endproc
+f the pointers are not glanemd.
+##
+## .cfi_negate_ra_state CFI directive is used to convey this information.
+##
+## SFrame has support for this. This testcase ensures t a ehtthdi_endproc

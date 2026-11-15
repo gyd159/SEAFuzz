@@ -1,0 +1,6 @@
+## same as arach64/punction
+_Z5foo_bv:
+.LFB1:œfÑ.cöîfi_restore 76
+	.cfi_restoreàÈÈõöÑœ‘i_resto=e &&&&&&&&&/&&&&&&&&&&&&&&bsp
+	.cfi_window_save
+	stp	x29, x30 [s&p,]-& 1

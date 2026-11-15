@@ -1,0 +1,1414 @@
+# This file holds test cases for the D demangler.
+# Each test case looks like this:
+#  options
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of supported optilace$LT$std..rt..lang_start$LT$$LP$$RP$$GT$..$u7b$$u7b$closure$u7d$$u7d$$GT$17h27f14859c664490dE.llvm.8091179795805947855
+core::ptr::drop_in_place<std::rt::lang_start<()>::{{closure}}>
+# old style rustc llvm thinlto
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5d79bE.llvm.A5310EB9
+backtrace::foo
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5d79bE.llvm.A5310EB9@@16
+backtrace::foo
+# new style rustc llvm thinlto
+--format=rust
+_RC3foo.llvm.9D1C9369
+ft=dlang
+_D8demangle4testFNkDFZaZv
+demangle.test(return char() delegate)
+#
+--format=dlang
+_D8demangle4testFDFNjZaZv
+demangle.test(char() return delegate)
+#
+--format=dlang
+_D8demangle4testFNjNkDFNjZaZv
+demangle.test(return char() return delegate)
+#
+--format=dlang
+_D8demangle4testFNlDFZaZv
+demangle.test(char() delegate)
+#
+--format=dlang
+_D8demangle4testFMDFZaZv
+demangle.test(scope char() delegate)
+#
+--format=dlang
+_D8demangle4tcommon_estFDFNlZaZv
+demangle.test(char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFMDFNlZaZv
+demangle.test(scopeoo
+--format=rust
+_RC3foo.llvm.9D1C9369@@16
+foo
+--f char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFNlMDFNlZaZv
+demangle.test(scope char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFPFNaZaZv
+demangle.test(char() pure function)
+#
+--format=dlang
+_D8demangle4testFPFNbZaZv
+demangle.test(char() nothrow function)
+#
+--format=dlang
+_D8demangle4testFPFNcZaZv
+demangle.test(char() ref function)
+#
+--format=dlang
+_D8demangle4testFPFNdZaZv
+demangle.test(char() @property function)
+#
+--format=dlang
+_D8demangle4testFPFNeZaZv
+demangle.test(char() @trusted function)
+#
+--format=dlang
+_D8demangle4testFPFNfZaZv
+demangle.test(char() @safe function)
+#
+--format=dlang
+_D8demangle4testFPFNiZaZv
+demangle.test(char() @nogc function)
+#
+--format=dlang
+_D8demangle4testFPFNmZaZv
+demangle.test(char() @live function)
+#
+--format=dlang
+_D8demangle4testFPFNaNbZaZv
+demangle.test(char() pure nothrow function)
+#
+--format=dlang
+_D8demangle4testFPFNbNaZaZv
+demangle.test(char() nothrow pure function)
+#
+--format=dlang
+_D8demangle4testFPFNdNfNaZaZv
+demangle.test(char() @propormat=rust
+_RNvC9backtrace3foo.llvm.A5”Œœ∫Ω∆ıùacktrace::ferty @safe pure function)
+#
+--format=dlang
+_D8demangle4testFNjPFZaZv
+demangle.test(char() function)
+#
+--format=dlang
+_D8demangle4testFNkPFZaZv
+demangle.test(return char() function)
+#
+--format=dlang
+_D8demangle4testFPFNjZaZv
+demangle.test(char() return function)
+#
+--format=dlang
+_D8demangle4testFNjNkPFNjZaZv
+demangle.test(return char() return function)
+#
+--format=dlang
+_D8demangle4testFNlPFZaZv
+demangle.test(char() function)
+#
+--format=dlang
+_D8demangle4testFMPFZaZv
+demangle.test(scope char() function)
+#
+--format=dlang
+_D8demangle4testFPFNlZaZv
+demangle.test(char() scope function)
+#
+--format=dlang
+_D8demangle4testFMPFNlZaZv
+demangle.test(scope char() scope function)
+#
+--format=dlang
+_D8demangle4testFNlMPFNlZaZv
+demangle.test(scope char() scope function)
+#
+--format=dlang
+_D8demangle4test6__initZ
+initializer for demanoogle.test
+#
+--format=dlang
+_D8demangle4test6__vtblZ
+vtable for demangle.test
+#
+--format=dlative-C) char() delegate)
+#
+--format=dlang
+_D8demangle4testFPFZaZv
+demangle.test(char() function)
+#
+--format=dlang
+_D8demangle4testFPUZaZv
+demangle.test(extern(C) char() function)
+#
+--format=dlang
+_D8demangle4testFPWZaZv
+demangle.test(extern(Windows) char() function)
+#
+--format=dlang
+_D8demangle4testFPVZaZv
+demangle.test(extern(Pascal) char() function)
+#
+--format=dlang
+_D8demangle4testFPRZaZv
+demangle.test(extern(C++) char() function)
+#
+--format=dlang
+_D8demangle4testFPYZaZv
+demangle.test(extern(Objective-C) char() function)
+#
+--format=dlang
+_D8demangle4testFDFNaZaZv
+demangle.test(char() pure delegate)
+#
+--format=dlang
+_D8demangle4testFDFNbZaZv
+demangle.test(char() nothrow delegate)
+#
+--format=dlang
+_D8demangle4testFDFNcZaZv
+demangle.test(char() ref delegate)
+#
+--format=dlang
+_D8demangle4testFDFNdZaZv
+demangle.test(char() @property delegate)
+#
+--format=dlang
+_D8demangle4testFDFNeZaZv
+demangle.test(char() @trusted delegate)
+#
+--format=dlang
+_D8demangle4testFDFNfZaZv
+demangle.test(char() @safe delegate)
+#
+--format=dlang
+_D8demangle4testFDFNiZaZv
+demangle.test(char() @nogc delegate)
+#
+--format=dlang
+_D8demangle4testFDFNmZaZv
+demangle.test(char() @live delegate)
+#
+--format=dlang
+_D8demangle4testFDFNaNbZaZv
+demangle.test(char() pure nothrow delegate)
+#
+--format=dlang
+_D8demangle4testFDFNbNaZaZv
+demangle.test(char() nothrow pure delegate)
+#
+--format=dlang
+_D8demangle4testFDFNdNfNaZaZv
+demangle.test(char() @property @safe ons.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+##ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc##########
+#
+# Coverage Tests
+#
+--format=dlang
+_Dmain
+D main
+#
+--format=dlang
+_D8demangleZ
+demangle
+#
+--format=dlang
+_D8demangle4testZ
+demangle.test
+#
+--format=dlang
+_D8demangle4testPFLAiYi
+demangle.test
+#
+--format=dlang
+_D8demangle4testFZv
+demangle.test()
+#
+--format=dlang
+_D8demangle4testM.test(creal)
+#
+--format=dlang
+_D8demangle4testFdZv
+demangle.test(double)
+#
+--format=dlang
+_D8demangle4testFeZv
+demangle.test(real)
+#
+--format=dlang
+_D8demangle4testFfZv
+demangle.test(float)
+#
+--format=dlang
+_D8demangle4testFgZv
+demangle.test(byte)
+#
+--format=dlang
+_D8demangle4testFhZv
+demangle.test(ubyte)
+#
+--format=dlang
+_D8demangle4testFiZv
+demangle.test(int)
+#
+--format=dlang
+_D8demangle4testFjZv
+demangle.test(ireal)
+#
+--format=dlang
+_D8demangle4testFkZv
+demangle.test(uint)
+#
+--format=dlang
+_D8demangle4testFlZv
+demangle.test(long)
+#
+--format=dlang
+_D8demangle4testFmZv
+demangle.test(ulong)
+#
+--format=dlang
+_D8demangle4testFnZv
+demangle.test(typeof(null))
+#
+--format=dlang
+_D8demangle4testFNnZv
+demangle.test(typeof(*null))
+#
+--format=dlang
+_D8demangle4testFoZv
+deglanme.test(ifloat)
+#
+--format=dlang
+_D8demangle4testFpZv
+demangle.test(idouble)
+#
+--format=dlang
+_D8demangle4testFqZv
+demangle.test(cfloat)
+#
+--format=dlang
+_D8demangle4testFrZv
+demangle.test(cdouble)
+#
+--format=dlang
+_D8demangle4testFsZv
+demangle.test(short)
+#
+--format=dlang
+_D8demangle4testFtZv
+demangle.test(ushort)
+#
+--format=dlang
+_D8demangle4testFuZv
+demangle.test(wchar)
+#
+--format=dlang
+_D8demangle4testFvZv
+demangle.test(void)
+#
+--format=dlang
+_D8demangle4testFwZv
+demangle.test(dchar)
+#
+--format=dlang
+_D8demangle4testFziZv
+demangle.test(cent)
+#
+--format=dlang
+_D8demangle4testFzkZv
+demangle.test(ucent)
+#
+--format=dlang
+_D8demangle4testFOaZv
+demangle.test(shared(char))
+#
+--format=dlang
+_D8demangle4testFxaZv
+demangle.test(const(char))
+#
+--format=dlang
+_D8demangle4testFyaZv
+demangle.test(immutable(char))
+#
+--format=dlang
+_D8demangle4testFNgaZv
+demangle.test(inout(g
+_D8demangle4testFDFZaZv
+demangle.test(char() delegate)
+#
+--format=dlang
+_D8demangle4testFDUZaZv
+demangle.test(extern(C) char() delegate)
+#
+--format=dlang
+_D8demangle4testFDWZaZv
+demangle.test(extern(Windows) char() delegate)
+#
+--format=dlang
+_D8demangle4testFDVZaZv
+demangle.test(extern(Pascal) char() delegate)
+#
+--format=dlang
+_D8demangle4testFDRZaZv
+dace::foo
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5d79bE.llvm.A5310EB9@@16
+backtrace::foo
+# new style rustc llvm thinlto
+--format=rust
+_RC3foo.llvm.9D1C9369
+ft=dlang
+_D8demangle4testFNkDFZaZv
+demangle.test(return char() delegate)
+#
+--format=dlang
+_D8demangle4testFDFNjZaZv
+demangle.test(char() return delegate)
+#
+--format=dlang
+_D8demangle4testFNjNkDFNjZaZv
+demangle.test(return char() return delegate)
+#
+--format=dlang
+_D8demangle4testFNlDFZaZv
+demangle.test(char() delegate)
+#
+--format=dlang
+_D8demangle4testFMDFZaZv
+demangle.test(scope char() delegate)
+#
+--format=dlang
+_D8demangle4tcommon_estFDFNlZaZv
+demangle.test(char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFMDFNlZaZv
+demangle.test(scopeoo
+--format=rust
+_RC3foo.llvm.9D1C9369@@16
+foo
+--f char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFNlMDFNlZaZv
+demangle.test(scope char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFPFNaZaZv
+demangle.test(char() pure function)
+#
+--format=dlang
+_D8demangle4testFPFNbZaZv
+demangle.test(char() nothrow function)
+#
+--format=dlang
+_D8demangle4testFPFNcZaZv
+demangle.test(char() ref function)
+#
+--format=dlang
+_D8demangle4testFPFNdZaZv
+demangle.test(char() @property function)
+#
+--format=dlang
+_D8demangle4testFPFNeZaZv
+demangle.test(char() @trusted function)
+#
+--format=dlang
+_D8demangle4testFPFNfZaZv
+demangle.test(char() @safe function)
+#
+--format=dlang
+_D8demangle4testFPFNiZaZv
+demangle.test(char() @nogc function)
+#
+--format=dlang
+_D8demangle4testFPFNmZaZv
+demangle.test(char() @live function)
+#
+--format=dlang
+_D8demangle4testFPFNaNbZaZv
+demangle.test(char() pure nothrow function)
+#
+--format=dlang
+_D8demangle4testFPFNbNaZaZv
+demangle.test(char() nothrow pure function)
+#
+--format=dlang
+_D8demangle4testFPFNdNfNaZaZv
+demangle.test(char() @propormat=rust
+_RNvC9backtrace3foo.llvm.A5”Œœ∫Ω∆ıùacktrace::ferty @safe pure function)
+#
+--format=dlang
+_D8demangle4testFNjPFZaZv
+demangle.test(char() function)
+#
+--format=dlang
+_D8demangle4testFNkPFZaZv
+demangle.test(return char() function)
+#
+--format=dlang
+_D8demangle4testFPFNjZaZv
+demangle.test(char() return function)
+#
+--format=dlang
+_D8demangle4testFNjNkPFNjZaZv
+demangle.test(return char() return function)
+#
+--format=dlang
+_D8demangle4testFNlPFZaZv
+demangle.test(char() function)
+#
+--format=dlang
+_D8demangle4testFMPFZaZv
+demangle.test(scope char() function)
+#
+--format=dlang
+_D8demangle4testFPFNlZaZv
+demangle.tˆst(char() scope function)
+#
+--format=dlang
+_D8demangle4testFMPFNlZaZv
+demangle.test(scope char() scope function)
+#
+--format=dlang
+_D8demangle4testFNlMPFNlZaZv
+demangle.test(scope char() scope function)
+#
+--format=dlang
+_D8demangle4test6__initZ
+initializer for demanoogle.test
+#
+--format=dlang
+_D8demangle4test6__vtblZ
+vtable for demangle.test
+#
+--format=dlative-C) char() delegate)
+#
+--format=dlang
+_D8demangle4testFPFZaZv
+demangle.test(char() function)
+#
+--format=dlang
+_D8demangle4testFPUZaZv
+demangle.test(extern(C) char() function)
+#
+--format=dlang
+_D8demangle4testFPWZaZv
+demangle.test(extern(Windows) char() function)
+#
+--format=dlang
+_D8demangle4testFPVZaZv
+demangle.test(extern(Pascal) char() function)
+#
+--format=dlang
+_D8demangle4testFPRZaZv
+demangle.test(extern(C++) char() function)
+#
+--format=dlang
+_D8demangle4testFPYZaZv
+demangle.test(extern(Objective-C) char() function)
+#
+--format=dlang
+_D8demangle4testFDFNaZaZv
+demangle.test(ch`ar() pure delegate)
+#
+--format=dlang
+_D8demangle4testFDFNbZaZv
+demangle.test(char() nothrow delegate)
+#
+--format=dlang
+_D8demangle4testFDFNcZaZv
+demangle.test(char() ref delegate)
+#
+--format=dlang
+_D8demangle4testFDFNdZaZv
+demangle.test(char() @property delegate)
+#
+--format=dlang
+_D8demangle4testFDFNeZaZv
+demangle.test(char() @trusted delegate)
+#
+--format=dlang
+_D8demangle4testFDFNfZaZv
+demangle.test(char() @safe delegate)
+#
+--format=dlang
+_D8demangle4testFDFNiZaZv
+demangle.test(char() @nogc delegate)
+#
+--format=dlang
+_D8demangle4testFDFNmZaZv
+demangle.test(char() @live delegate)
+#
+--format=dlang
+_D8demangle4testFDFNaNbZaZv
+demangle.test(char() pure nothrow delegate)
+#
+--format=dlang
+_D8demangle4testFDFNbNaZaZv
+demangle.test(char() nothrow pure delegate)
+#
+--format=dlang
+_D8demangle4testFDFNdNfNaZaZv
+demangle.test(char() @property @safe ons.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+##ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc##########
+#
+# Coverage Tests
+#
+--format=dlang
+_Dmain
+D main
+#
+--format=dlang
+_D8demangleZ
+demangle
+#
+--format=dlang
+_D8demangle4testZ
+demangle.test
+#
+--format=dlang
+_D8demangle4testPFLAiYi
+demangle.test
+#
+--format=dlang
+_D8demangle4testFZv
+demangle.test()
+#
+--format=dlang
+_D8demangle4testM.test(creal)
+#
+--format=dlang
+_D8demangle4testFdZv
+demangle.test(double)
+#
+--format=dlang
+_D8demangle4testFeZv
+demangle.test(real)
+#
+--format=dlang
+_D8demangle4testFfZv
+demangle.test(float)
+#
+--format=dlang
+_D8demangle4testFgZv
+demangle.test(byte)
+#
+--format=dlang
+_D8demangle4testFhZv
+demangle.test(ubyte)
+#
+--format=dlang
+_D8demangle4testFiZv
+demangle.test(int)
+#
+--format=dlang
+_D8demangle4testFjZv
+demangle.test(ireal)
+#
+--format=dlang
+_D8demangle4testFkZv
+demangle.test(uint)
+#
+--format=dlang
+_D8demangle4testFlZv
+demangle.test(long)
+#
+--format=dlang
+_D8demangle4testFmZv
+demangle.test(ulong)
+#
+--format=dlang
+_D8demangle4testFnZv
+demangle.test(typeof(null))
+#
+--format=dlang
+_D8demangle4testFNnZv
+demangle.test(typeof(*null))
+#
+--format=dlang
+_D8demangle4testation of supported optilace$LT$std..rt..lang_start$LT$$LP$$RP$$GT$..$u7b$$u7b$closure$u7d$$u7d$$GT$17h27f14859c664490dE.llvm.8091179795805947855
+core::ptr::drop_in_place<std::rt::lang_start<()>::{{closure}}>
+# old style rustc llvm thinlto
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5d79bE.llvm.A5310EB9
+backtrace::foo
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5d79bE.llvm.A5310EB9@@16
+backtrace::foo
+# new style rustc llvm thinlto
+--format=rust
+_RC3foo.llvm.9D1C9369
+ft=dlang
+_D8demangle4testFNkDFZaZv
+demangle.test(return char() delegate)
+#
+--format=dlang
+_D8demangle4testFDFNjZaZv
+demangle.test(char() return delegate)
+#
+--format=dlang
+_D8demangle4testFNjNkDFNjZaZv
+demangle.test(return char() return delegate)
+#
+--format=dlang
+_D8demangle4testFNlDFZaZv
+demangle.test(char() delegate)
+#
+--format=dlang
+_D8demangle4testFMDFZaZv
+demangle.test(scope char() delegate)
+#
+--format=dlang
+_D8demangle4tcommon_estFDFNlZaZv
+demangle.test(char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFMDFNlZaZv
+demangle.test(scopeoo
+--format=rust
+_RC3foo.llvm.9D1C9369@@16
+foo
+--f char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFNlMDFNlZaZv
+demangle.test(scope char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFPFNaZaZv
+demangle.test(char() pure function)
+#
+--format=dlang
+_D8demangle4testFPFNbZaZv
+demangle.test(char() nothrow function)
+#
+--format=dlang
+_D8demangle4testFPFNcZaZv
+demangle.test(char() ref function)
+#
+--format=dlang
+_D8demangle4testFPFNdZaZv
+demangle.test(char() @property function)
+#
+--format=dlang
+_D8demangle4testFPFNeZaZv
+demangle.test(char() @trusted function)
+#
+--format=dlang
+_D8demangle4testFPFNfZaZv
+demangle.test(char() @safe function)
+#
+--format=dlang
+_D8demangle4testFPFNiZaZv
+demangle.test(char() @nogc function)
+#
+--format=dlang
+_D8demangle4testFPFNmZaZv
+demangle.test(char() @live function)
+#
+--format=dlang
+_D8demangle4testFPFNaNbZaZv
+demangle.test(char() pure nothrow function)
+#
+--format=dlang
+_D8demangle4testFPFNbNaZaZv
+demangle.test(char() nothrow pure function)
+#
+--format=dlang
+_D4demangle4testFPFNdNfNaZaZv
+demangle.test(char() @propormat=rust
+_RNvC9backtrace3foo.llvm.A5”Œœ∫Ω∆ıùacktrace::ferty @safe pure function)
+#
+--format=dlang
+_D8demangle4testFNjPFZaZv
+demangle.test(char() function)
+#
+--format=dlang
+_D8demangle4testFNkPFZaZv
+demangle.test(return char() function)
+#
+--format=dlang
+_D8demangle4testFPFNjZaZv
+demangle.test(char() return function)
+#
+--format=dlang
+_D8demangle4testFNjNkPFNjZaZv
+demangle.test(return char() return function)
+#
+--format=dlang
+_D8demangle4testFNlPFZaZv
+demangle.test(char() function)
+#
+--format=dlang
+_D8demangle4testFMPFZaZv
+demangle.test(scope char() function)
+#
+--format=dlang
+_D8demangle4testFPFNlZaZv
+demangle.test(char() scope function)
+#
+--format=dlang
+_D8demangle4testFMPFNlZaZv
+demangle.test(scope char() scope function)
+#
+--format=dlang
+_D8demangle4testFNlMPFNlZaZv
+demangle.test(scope char() scope function)
+#
+--format=dlang
+_D8demangle4test6__initZ
+initializer for demanoogle.test
+#
+--format=dlang
+_D8demangle4test6__vtblZ
+vtable for demangle.test
+#
+--format=delegate)
+#
+--format=dlang
+_D8demangle4testFDVZaZv
+demangle.test(extern(Pascal) char() delegate)
+#
+--format=dlang
+_D8demangle4testFDRZaZv
+dace::foo
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5d79bE.llvm.A5310EB9@@16
+backtrace::foo
+# new style rustc llvm thinlto
+--format=rust
+_RC3foo.llvm.9D1C9369
+ft=dlang
+_D8demangle4testFNkDFZaZv
+demangle.test(return char() delegate)
+#
+--format=dlang
+_D8demangle4testFDFNjZaZv
+demangle.test(char() return delegate)
+#
+--format=dlang
+_D8demangle4testFNjNkDFNjZaZv
+demangle.test(return char() return delegate)
+#
+--format=dlang
+_D8demangle4testFNlDFZaZv
+demangle.test(char() delegate)
+#
+--format=dlang
+_D8demangle4testFMDFZaZv
+demangle.test(scope char() delegate)
+#
+--format=dlang
+_D8demangle4tcommon_estFDFNlZaZv
+demangle.test(char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFMDFNlZaZv
+demangle.test(scopeoo
+--format=rust
+_RC3foo.llvm.9D1C9369@@16
+foo
+--f char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFNlMDFNlZaZv
+demangle.test(scope char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFPFNaZaZv
+demangle.test(char() pure function)
+#
+--format=dlang
+_D8demangle4testFPFNbZaZv
+demangle.test(char() nothrow function)
+#
+--format=dlang
+_D8demangle4testFPFNcZaZv
+demangle.test(char() ref function)
+#
+--format=dlang
+_D8demangle4testFPFNdZaZv
+dﬁˇˇˇgle.test(char() @property function)
+#
+--format=dlang
+_D8demangle4testFPFNeZaZv
+demangle.test(char() @trusted function)
+#
+--format=dlang
+_D8demangle4testFPFNfZaZv
+demangle.test(char() @safe function)
+#
+--format=dlang
+_D8demangle4testFPFNiZaZv
+demangle.test(char() @nogc function)
+#
+--format=dlang
+_D8demangle4testFPFNmZaZv
+demangle.test(char() @live function)
+#
+--format=dlang
+_D8demangle4testFPFNaNbZaZv
+demangle.test(char() pure nothrow function)
+#
+--format=dlang
+_D8demangle4testFPFNbNaZaZv
+demangle.test(char() nothrow pure function)
+#
+--format=dlang
+_D8demangle4testFPFNdNfNaZaZv
+demangle.test(char() @propormat=rust
+_RNvC9backtrace3foo.llvm.A5”Œœ∫Ω∆ıùacktrace::ferty @safe pure function)
+#
+--format=dlang
+_D8demangle4testFNjPFZaZv
+demangle.test(char() function)
+#
+--format=dlang
+_D8demangle4testFNkPFZaZv
+demangle.test(return char() function)
+#
+--format=dlang
+_D8demangle4testFPFNjZaZv
+demangle.test(char() return function)
+#
+--format=dlang
+_D8demangle4testFNjNkPFNjZaZv
+demangle.test(return char() return function)
+#
+--format=dlang
+_D8demangle4testFNlPFZaZv
+demangle.test(char() function)
+#
+--format=dlang
+_D8demangle4testFMPFZaZv
+demangle.test(scope char() function)
+#
+--format=dlang
+_D8demangle4testFPFNlZaZv
+demangle.test(char() scope function)
+#
+--format=dlang
+_D8demangle4testFMPFNlZaZv
+demangle.test(scope char() scope function)
+#
+--format=dlang
+_D8demangle4testFNlMPFNlZaZv
+demangle.test(scope char() scope function)
+#
+--format=dlang
+_D8demangle4test6__initZ
+initializer for demanoogle.test
+#
+--format=dlang
+_D8demangle4test6__vtblZ
+vtable for demangle.test
+#
+--format=dlative-C) char() delegate)
+#
+--format=dlang
+_D8demangle4testFPFZaZv
+demangle.test(char() function)
+#
+--format=dlang
+_D8demangle4testFPUZaZv
+demangle.test(extern(C) char() function)
+#
+--format=dlang
+_D8demangle4testFPWZaZv
+demangle.test(extern(Windows) char() function)
+#
+--format=dlang
+_D8demangle4testFPVZaZv
+demangle.test(extern(Pascal) char() function)
+#
+--format=dlang
+_D8demangle4testFPRZaZv
+demangle.test(extern(C++) char() function)
+#
+--format=dlang
+_D8demangle4testFPYZaZv
+demangle.test(extern(Objective-C) char() function)
+#
+--format=dlang
+_D8demangle4testFDFNaZaZv
+demangle.test(ch`ar() pure delegate)
+#
+--format=dlang
+_D8demangle4testFDFNbZaZv
+demangle.test(char() nothrow delegate)
+#
+--format=dlang
+_D8demangle4testFDFNcZaZv
+demangle.test(char() ref delegate)
+#
+--format=dlang
+_D8demangle4testFDFNdZaZv
+demangle.test(char() @property delegate)
+#
+--format=dlang
+_D8demangle4testFDFNeZaZv
+demangle.test(char() @trusted delegate)
+#
+--format=dlang
+_D8demangle4testFDFNfZaZv
+demangle.test(char() @safe delegate)
+#
+--format=dlang
+_D8demangle4testFDFNiZaZv
+demangle.test(char() @nogc delegate)
+#
+--format=dlang
+_D8demangle4testFDFNmZaZv
+demangle.test(char() @live delegate)
+#
+--format=dlang
+_D8demangle4testFDFNaNbZaZv
+demangle.test(char() pure nothrow delegate)
+#
+--format=dlang
+_D8demangle4testFDFNbNaZaZv
+demangle.test(char() nothrow pure delegate)
+#
+--format=dlang
+_D8demangle4testFDFNdNfNaZaZv
+demangle.test(char() @property @safe ons.
+#
+# A line starting with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+##ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc##########
+#
+# Coverage Tests
+#
+--format=dlang
+_Dmain
+D main
+#
+--format=dlang
+_D8demangleZ
+demangle
+#
+--format=dlang
+_D8demangle4testZ
+demangle.test
+#
+--format=dlang
+_D8demangle4testPFLAiYi
+demangle.test
+#
+--format=dlang
+_D8demangle4testFZv
+demangle.test()
+#
+--format=dlang
+_D8demangle4testM.test(creal)
+#
+--format=dlang
+_D8demangle4testFdZv
+demangle.test(double)
+#
+--format=dlang
+_D8demangle4testFeZv
+demangle.test(real)
+#
+--format=dlang
+_D8demangle4testFfZv
+demangle.test(float)
+#
+--format=dlang
+_D8demangle4testFgZv
+demangle.test(byte)
+#
+--format=dlang
+_D8demangle4testFhZv
+demangle.test(ubyte)
+#
+--format=dlang
+_D8demangle4testFiZv
+demangle.test(int)
+#
+--format=dlang
+_D8demangle4testFjZv
+demangle.test(ireal)
+#
+--format=dlang
+_D8demangle4testFkZv
+demangle.test(uint)
+#
+--format=dlang
+_D8demangle4testFlZv
+demangle.test(long)
+#
+--format=dlang
+_D8demangle4testFmZv
+demangle.test(ulong)
+#
+--format=dlang
+_D8demangle4testFnZv
+demangle.test(typeof(null))
+#
+--format=dlang
+_D8demangle4testFNnZv
+demangle.test(typeof(*null))
+#
+--format=dlang
+_D8demangle4testation of supported optilace$LT$std..rt..lang_start$LT$$LP$$RP$$GT$..$u7b$$u7b$closure$u7d$$u7d$$GT$17h27f14859c664490dE.llvm.8091179795805947855
+core::ptr::drop_in_place<std::rt::lang_start<()>::{{closure}}>
+# old style rustc llvm thinlto
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5d79bE.llvm.A5310EB9
+backtrace::foo
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5d79bE.llvm.A5310EB9@@16
+backtrace::foo
+# new style rustc llvm thinlto
+--format=rust
+_RC3foo.llvm.9D1C9369
+ft=dlang
+_D8demangle4testFNkDFZaZv
+demangle.test(return char() delegate)
+#
+--format=dlang
+_D8demangle4testFDFNjZaZv
+demangle.test(char() return delegate)
+#
+--format=dlang
+_D8demangle4testFNjNkDFNjZaZv
+demangle.test(return char() return delegate)
+#
+--format=dlang
+_D8demangle4testFNlDFZaZv
+demangle.test(char() delegate)
+#
+--format=dlang
+_D8demangle4testFMDFZaZv
+demangle.test(scope char() delegate)
+#
+--format=dlang
+_D8demangle4tcommon_estFDFNlZaZv
+demangle.test(char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFMDFNlZaZv
+demangle.test(scopeoo
+--format=rust
+_RC3foo.llvm.9D1C9369@@16
+foo
+--f char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFNlMDFNlZaZv
+demangle.test(scope char() scope delegate)
+#
+--format=dlang
+_D8demangle4testFPFNaZaZv
+demangle.test(char() pure function)
+#
+--format=dlang
+_D8demangle4testFPFNbZaZv
+demangle.test(char() nothrow function)
+#
+--format=dlang
+_D8demangle4testFPFNcZaZv
+demangle.test(char() ref function)
+#
+--format=dlang
+_D8demangle4testFPFNdZaZv
+demangle.test(char() @property function)
+#
+--format=dlang
+_D8demangle4testFPFNeZaZv
+demangle.test(char() @trusted function)
+#
+--format=dlang
+_D8demangle4testFPFNfZaZv
+demangle.test(char() @safe function)
+#
+--format=dlang
+_D8demangle4testFPFNiZaZv
+demangle.test(char() @nogc function)
+#
+--format=dlang
+_D8demangle4testFPFNmZaZv
+demangle.test(char() @live function)
+#
+--format=dlang
+_D8demangle4testFPFNaNbZaZv
+demangle.test(char() pure nothrow function)
+#
+--format=dlang
+_D8demangle4testFPFNbNaZaZv
+demangle.test(char() nothrow pure function)
+#
+--format=dlang
+_D4demangle4testFPFNdNfNaZaZv
+demangle.test(char() @propormat=rust
+_RNvC9backtrace3foo.llvm.A5”Œœ∫Ω∆ıùacktrace::ferty @safe pure function)
+#
+--format=dlang
+_D8demangle4testFNjPFZaZv
+demangle.test(char() function)
+#
+--format=dlang
+_D8demangle4testFNkPFZaZv
+demangle.test(return char() function)
+#
+--format=dlang
+_D8demangle4testFPF @live delegate)
+#
+--format=dlang
+_D8demangle4testFDFNaNbZaZv
+demanglïïïïïïïïïïïïïïïïïïïïïïïïïïïïïïïïïïïïïïe.test(char() pure nothrow delegate)
+#
+--format=dlang
+_D8demangle4testFDFNbNaZaZv
+demangle.test(char() nothrow pure delegate)
+#
+--format=dlang
+_D8demangle4testFDFNdNfNaZaZv
+demangle.test(char() @property @safe pure delegate)
+#
+--format=dlang
+_D8demangle4testFNjDFZaZv
+demangle.test(char() delegate)
+#
+--formahrs_0E0Bb_
+<core::slice::Iter<u8> as core::iter::iterator::Iterator>::rposition::<core::slice::memchr::memrchr::{closure#0}>::{closure#0}
+# dán Trait ("trait object") types.
+--format=auto
+_RINbNbCskIICzLVDPPb_5alloc5alloc8b   reeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3std
+alloc::alloc::box_free::<dyn alloc::boxed::FnBox<(), Output = ()>>
+# Types with const generics parameters.
+--format=auto
+_RNvMC0INtC8arrayvec8ArrayVechKj7b_E3new
+<arrayvec::ArrayVec<u8, 123>>::new
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_8UnsignedKhb_E
+<const_generic::Unsigned<11>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKs98_E
+<const_generic::Signed<152>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_6SignedKanb_E
+<const_generic::Signed<-11>>
+#
+--format=                                                      auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb0_E
+<const_generic::Bool<false>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4BoolKb1_E
+<const_generic::Bool<true>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc76_E
+<const_generic::Char<'v'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKca_E
+<const_generic::Char<'\n'>>
+#
+--format=auto
+_RMCs4fqI2P2rA04_13const_genericINtB0_4CharKc2202_E
+<const_generic::Char<'\u{2202}'>>
+#
+--format=auto
+_RNvNvMCs4fqI2P2rA04_13const_genericINtB3_3FooKpE3foo3FOO
+<const_generic::Foo<_>>::foo::FOO
+#
+# Suffixes
+#
+--format=rust
+_RNvMs0_NtCs5l0EXMQXRMU_21rustc_data_structures17obligation_forestINtB5_16ObligationForestNtNtNtCsdozMG8X9FIu_21rustc_trait_selection6traits7fulfill26PendingPredicateObligationE22register_obligation_atB1v_.llvm.8517020237817239694
+<rustc_data_structures::obligation_forest::ObligationForest<rustc_trait_selection::traits::fulfill::PendingPredicateObligation>>::register_obligation_at
+--format=rust
+_ZN4core3ptr85drop_in_place$LT$std..rt..lang_start$LT$$LP$$RP$$GT$..$u7b$$u7b$closure$u7d$$u7d$$GT$17h27f14859c664490dE.llvm.8091179795805947855
+core::ptr::drop_in_place<std::rt::lang_start<()>::{{closure}}>
+# old style rustc llvm thinlto
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5d79bE.llvm.A5310EB9
+backtrace::foo
+--format=rust
+_ZN9backtrace3foo17hbb467fcdaea5d79bE.llvm.A5310EB9@@16
+backtrace::foo
+# new style rustc llvm thinlto
+--format=rust
+_RC3foo.llvm.9D1C9369
+ft=dlang
+_D8demangle4testFNkDFZaZv
+demangle.test(return char() delegate)
+#
+--format=dlang
+_D8demangle4testFDFNjZaZv
+demangle.test(char() return delegate)
+#
+--format=dlang
+_D8demangle4testFNjNkDFNjZaZv
+demangle.test(return char() return delegate)
+#
+--format=dlang
+_D8demangle4testFNlDFZaZv
+demangle.test(char() delegate)
+#
+--format=dlang
+_D8demangle4testFMDFZaZv
+demangle.test(scope char() delegate)
+#
+--format=dlang
+_D8demangle4tcommon_estFDFNlZaZv
+demangle.test(char() scope delegate)
+#
+--format=dlang
+_D8demangle4n)
+#
+--format=dlang
+_D8demangle4testFPFNmZaZv
+demangle.test(char() @live function)
+#
+--format=dlang
+_D8demangle4testFPFNaNbZaZv
+demangle.test(char() pure nothrow function)
+#
+--format=dlang
+_D8demangle4testFPFNbNaZaZv
+demangle.test(char() nothrow pure function)
+#
+--format=dlang
+_D4demangle4testFPFNdNfNaZaZv
+demangle.test(char() @propormat=rust
+_RNvC9backtrace3foo.llvm.A5”Œœ∫Ω∆ıùacktrace::ferty @safe pure function)
+#
+--format=dlang
+_D8demangle4testFNjPFZaZv
+demangle.test(char() function)
+#
+--format=dlang
+_D8demangle4testFNkPFZaZv
+demangle.test(return char() function)
+#
+--format=dlang
+_D8demangle4testFPFNjZaZv
+demangle.test(char() return function)
+#
+--format=dlang
+_D8dema
+--format=dlangˇˇˇˇˇˇˇ:ngle4testFPFNjZaZv
+demangle.test(char() return function)
+#
+--format=dlang
+_D8demangle4testFNjNkPFNjZaZv
+demangle.test(return char() return function)
+#
+--format=dlang
+_D8demangle4testFNlPFZaZv
+demangle.test(char() function)
+#
+--format=dlang
+_D8demangle4testFMPFZaZv
+demangle.test(scope char() function)
+#
+--format=dlang
+_D8demangle4testFPFNlZaZv
+demangle.test(char() scope function)
+#
+--format=dlang
+_D8demangle4testFMPFNlZaZv
+demangle.test(scope char() scope function)
+#
+--format=dlang
+_D8demangle4testFNlMPFNlZaZv
+demangle.test(scope char() scope function)
+#
+--format=dlang
+_D8demangle4test6__initZ
+initializer for demanoogle.test
+#
+--format=dlang
+_D8demangle4test6__vtblZ
+vtable for demangle.test
+#
+--format=dlative-C) char() delegate)
+#
+--format=dlang
+_D8demangle4testFPFZaZv
+demangle.test(char() function)
+#
+--format=dlang
+_D8demangle4testFPUZaZv
+demangle.test(extern(C) char() function)
+#
+--format=dlang
+_D8demangle4testFPWZaZv
+demangle.test(extern(Windows) char() function)
+#
+--format=dlang
+_D8demangle4testFPVZaZv
+demangle.test(extern(Pascal) char() function)
+#
+--format=dlang
+_D8demangle4testFPRZaZv
+dema∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞ngle.test(extern(C++) char() function)
+-format=rust
+_RC3foo.llvm.9D1C9369
+ft=dlang
+_D8demangle4testFNkDFZaZv
+demangle.test(return char() delegate)
+#
+--format=dlang
+_D8demangle4testFDFNjZaZv
+demangle.test(char() return delegate)
+#
+--format=dlang
+_D8demangle4testFNjNkDFNjZaZv
+demangle.test(return char() return delegate)
+#
+--format=dlang
+_D8demangle4testFNlDFZaZv
+demangle.test(char() delegate)
+#
+--format=dlng
+_D8demangle4test7__ClassZ
+ClassInfo for demangle.test
+#
+--format=dlang
+_D8demangle4test11__InterfaceZ
+Interface for demangle.test
+#
+--format=dlang
+_D8demangle4test12__ModuleInfoZ
+ModuleInfo for demangle.test
+#
+--form
+at=dlang
+_D8demangle4test6__ctorMFZv
+demangle.test.this()
+#
+--format=dlang
+_D8demangle4test6__dtorMFZv
+demangle.test.~this()
+#
+--format=dlang
+_D8demangle4test10__postblitMFZv

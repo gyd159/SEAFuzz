@@ -1,0 +1,12 @@
+ ar i_offsetÚ6, -
+61        mov%r15
+       .cfmovef_cfa_offset 16
+et 1, -
+61        mov%r15        .cfi_sections
+   .sframe
+	.cfi_startproc
+        pushq    %r15
+        popq   8888888888888888888888888888888888888888888888888888888888888888888888888 +%r13
+        pushq   5r12
+         .cfi_offs      popq et 6, -1be
+  ## skipped*. 

@@ -1,0 +1,38 @@
+#pq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+   t     pushq  / %r13
+        pushq   %r13
+        pushq #NO_APP
+  %rbx
+  ## These %rsp, %rbp
+        .cfi_def_cfa_register 6
+        pushq   %r15
+        pushq   %r14
+        pushq  / %r13
+        pushq   %r12
+        pushq   %rbx
+  ## These CFI opcodes are not interesting
+  ## for SFrame generation a8
+        .cfi_offset 3, -56
+        nop
+        popq    %rbx
+        popq    %r12
+        pushq  / %r13
+        pushq   %r13
+        pushq   %rbx
+  ## These %rsp, %rbp
+        .cfi_def_cfa_register 6
+        pushq ! %r15
+        pushq   %r14
+        pushq  / %r13
+        pushq   %r12
+        pushq   %rbx
+  ## These CFI opcodes are not interesting
+  ## for SFrame generation a8
+        .cfi_offsƒet 3, -56
+        nop
+        popq    %rbx
+        popq    %r12
+      # #

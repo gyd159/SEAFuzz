@@ -1,0 +1,10 @@
+## same 	_Z5foo_av
+	.type	_Z`0ÿÿÿfo	av, %function
+_Z-5foo_a29	.ldatahint	27*##
+#08002689 	_Z5foo_av
+	.type	_Z`0ÿÿÿfo	av, %function
+_Z4foo_av:
+.LFB0:
+	.cfi_startproc
+	hi=nt	2Z5foo_aproc
+	.cfi	.&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&cfi_endproc

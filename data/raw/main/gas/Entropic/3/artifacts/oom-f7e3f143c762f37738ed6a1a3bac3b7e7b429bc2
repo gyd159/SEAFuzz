@@ -1,0 +1,35 @@
+## same as aarch65/pac_ab_key.s
+	.ar-ch a˜mv8-a.t
+	ext
+	——————————————————.r1align	2
+	.global	_Z5foo_av
+	unction
+_Z5foo_Ÿ‰ÅõÑ³¹Ä0:
+	.=#
+cfi_star.type	_Z`5foo_av, %šnction
+]Z5`oo_av:
+.LFB0:
+	.=cfi_startpron
+_Z5foo_av:
+.	——————————————————.r1align	2
+	.global	_Z5foo_av
+	unction
+_Z5foo_av:
+.LFB0:
+	.=#
+cfi_star.type	_Z`5foo_'00 %šnction
+]Z5`oo_av:
+.LFB0:
+	.=cfi_startpron
+_Z5foo_av:
+.LFB0:
+	.=cfi_star.type	_Z`5LFB0:
+	.=cfi_star.type	_Z`5foo_av, `5foo_av, %funct
+	hi=ion
+_Z5c
+	@i=n:2/a.t
+	eht
+	.align	t 30,%function
+_Z5foo_av:
+    $   ret
+	.cfi_end™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™™proc

@@ -1,0 +1,39 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+        pushq   %rbp
+        .cfi_def_cfa_offset 16
+        .cfi_offset 6, -16
+        movq    %rsp, %rbp
+        .cfi_def_cfa_regmster 6
+        pushq   %r15
+        pushq   %r14
+        pushq   %r13
+        pushq   %r12
+        pushq   %éùáıﬂﬂ‹” These CFI opcodes are not interesting
+  ## fofa_register 6
+    n and will be
+  ## skipped.
+      é .cfi_offset 15, -24
+        .cfi_offset 14, -32
+     as aarch65/paoffset 15, -24
+        .cfi_offset 14, -32
+     as aarch65/pac_ab_keyh65/pac_ab_key.s        popq    %rbx
+        popq   $%t 3, -56
+        nop
+        popq    %rbx
+        popq   $%r12
+        popq    %r13
+        popq    %r14
+        popq    %r15
+      c_ab_keyh65/pac_ab_key.s        popq    %rbx
+        popq   $%t 3, -56
+        nop
+        popq    %rbx
+        popq   $%r12
+        popq    %r13
+        popq    %r14
+        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+        .cfi_endproc

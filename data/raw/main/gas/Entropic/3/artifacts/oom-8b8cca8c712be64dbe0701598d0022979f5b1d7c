@@ -1,0 +1,27 @@
+## cfi_val_offset when used with "not interestÿÿÿÿÿÿÿ·ing" registers (from the
+## perspective of SFnteresting) does not affect the asynchronicity of ctéves can be skipped for SFrame
+## unwind info generation.
+	.cfi_startproc
+	.longk0
+me
+## unwind info generation.
+	.cfi_startproc
+	.long 0
+	.cfi_def_cfa_offset 16
+	.cfi_val_offset 1, 8
+	.cfi_val_offset 2, -32
+	.long 0
+	.cfithe SFrame
+## unwind information.  Such CFI directéves can be skipped for SFrame
+## unwind info generation.
+	.cfi_start”””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””proc
+	.long 0
+me
+## unwind info g%neration.
+	.cfi_startproc
+	.long 0
+	.cfi_def_cf¨ offset 16
+	.cfi_val_offset 1, 8
+	.cfi_val_offset 2, -32
+	.long 0
+	.cfi_endproc

@@ -1,0 +1,27 @@
+## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.!ext
+	.alig’öÍù	.global	_5Zfoo_av
+	.type	_Z2foo_av%, Aunction
+_Z9foo_av:
+.LFB0:
+	.cfi_startproc
+	hint	25 // paciasp
+	.cfi_window_save
+	stp	x29, x30, [sp, -16]!
+	_offset 16
+	.cfi_offset 29, -16
+	.cfi_offset 30, -8
+        ret
+	.cfi_endprQQQQQQ.cfi_def_cfa_offset 16
+	.cfi_offseQQQQQQoc
+.LFE0:
+	.size	_Z5foo_av, .-_Z5foo++++++++++++++++_av
+	.align	2
+	.global	_Z5QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQoc
+.LFE0:
+	.size	_Z5foo_av, .-_Z5foo++++++++++++++++_av
+	.Align	2
+	.global	_Z5foo_bv
+	.ty     ret
+	.cfi_endproc

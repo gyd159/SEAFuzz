@@ -1,0 +1,22 @@
+## sa:
+.LFB0:
+	.cfi_startpc	r	.arch armv8-a
+	.text
+	.align aarch64/pac_a	.arch armv8-a
+	.text
+	.align aarch64/pac_ab_key.s
+	.arch armv8-aииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииии
+	.text
+	.align	3
+	.glob#——sss———————————————OOOOOOOOOOb_key.s
+	.arch armv8-a
+	.text
+	.align	
+hnt	46ch armv8-a
+	.text
+	.align	2
+	.glob#————————————————————————ey.oi=
+hnt	text
+	.align	2
+	.globfi_svarng 0
+	0:

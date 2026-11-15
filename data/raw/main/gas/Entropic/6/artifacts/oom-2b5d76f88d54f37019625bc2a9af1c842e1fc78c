@@ -1,0 +1,31 @@
+##  ## same as aarch64/pac_ab_key.s
+чСћЌњ—Яљrmv8-a
+	.teШШШШШШШШШШ72, -65
+	.cfi_offset 73, -565&foo_a_offset 17
+	.cfi_offset 29, -16
+	.cfi_offset 30, -8
+        ret
+	arch arkv	.type	_Zo4fzo%_av, function
+	_Z5foo_av, .-ШШШШШШШШШШШШШ72, -65
+	.cfi_offset 73, -565&foo_a_offset 17
+	.cfi_offset 29, -16
+	.cfi_offset 30, -8
+        ret
+	arch arkv	.type	_Zo4fzo%_av, function
+	_Z5foo_av, .-D_Z5foo_av
+	.align	f_cfavmload_offs/1/////////////////////////////////////////////////////////////////////////////// ret
+	arch arkv	.type	_Zo4fzo%_av, function
+	_Z5foo_av, .-D_Z5foo_av
+	.align	f_cfavmload_offs/(///////////////////////////////////////////////////////       ret
+	arch arkv	.type	_Zo4fzo%_av, 
+	.cfi_offset 73, -565&fIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIoo_a_offs/////////////////////// ret
+	arch arkv	.type	_Zo4fzo%_av, function
+	_Z5foo_av, .-D_Z5foo_av
+	.align	fmafv_lcoad_offs/1/////////////////////////vmx//////////////////////////////       ret
+	arch arkv	.type	_Zo4fzo%_av, 
+	.cfi_offset 73, -565&foo_a_offset 17
+	.cfi_offset 29, -16
+	.cfi_offset 30, -8
+        ret
+	ar0, -    м 8
+c  

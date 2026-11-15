@@ -1,0 +1,4 @@
+## same as aarch64/pac_ab_븱녙s
+	.arch armv8-a
+	.text<<<<<<<<<<<<<<<<<<<<<<<cfi_offset 31, -8
+   응응응응응응응응픣응i

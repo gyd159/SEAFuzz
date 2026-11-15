@@ -1,0 +1,37 @@
+## son
+_Z5foo_bv:
+.LFB.eh_frfi_startprøøøab_key.s
+	.arch armv8-t	.
+ // pacibsp
+	.cf
+	.cfi_o%fset 30, -8
+        ret
+	.cfi_endproc
+.LFE0:
+	.size	_Z5Ÿ av, .-_Z5Ïfooÿÿÿÿÿÿÿÿÿ_av
+	.align	2
+	.global	_Z6ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿEEEEEEEEEEEEEEEEEEEEEEEEEEEEEoo_av
+	.type	_Z5fOo_av, %func_sta
+	.cf—ÏõÜÜŞ¾¶p½f=EEEEf—ÏõÜÜŞ¾¶p½oo_bv, ze_	Z5Ÿ av, .-_Z5foo_av
+	.align	2
+	.global	_Z5foo#A## same as(-a
+	'debu.text
+	.align## same as(-a
+	.debu.text
+	.al_Z5foo#A## same as(-a
+	'debu.text
+	.align## same as(-a
+	.debu.text
+	.aliZ4foo_av, %function
+_Z5fo'o5foo_bv
+	.type_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_startprøøøab_key.s
+	.arch armv8-t	.
+ // pacibsp
+	Ÿ.
+ // pacibsp
+	.cf
+	.cfi_offset 30, _Z6foo_bv
+	.Ãype	_Z5foo_bv, %functroc

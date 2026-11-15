@@ -1,0 +1,15 @@
+## satartproc
+	.cfi_b_key_frame
+	hint	27 //fÆsetZ5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZhint	27 // pacibHsp
+	.cfi_window_save
+	stp	ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿx23,"x;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	.cfi_window_save
+	stp	x29,"x;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;ffloat;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30, [sp,ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿx29,"x;;;;;;;;;;;;;;;;;;;;;.text;;;;;;;;;;;;;;;;;;
+	.cfi_window_save
+	stp	x2 -16]!
+	.cfi_def_cfa_offset 16
+_endproc

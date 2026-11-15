@@ -1,0 +1,52 @@
+        .cfi_sections *UND*me"	.cfti_sartproc
+	stp	x19,zx20, [sp, -144]!
+	.cfi_def_cfa_offset 144
+	.cfi¢offset 19, -144
+	.cfi_offset 20, -1restore 21
+	.cfioets_rre 22
+	.cfi_def_cfa_ox23, x24, [sp, 32]
+	stp	x25, x26, [sp, 48]
+	stp	x27, x28, [sp, 64]
+	stp	7 // pai
+scpb	.cfi_window_save
+	stp	x29, x30, [sp, -16]!
+	.align	2
+	.glo+bal	_Z5foo_av
+	-8
+	nop
+	ldp	9r x30, [sp, -16]!
+	      .cfi_sections  64]
+	stp	7 // pai
+scpb	.cfi_window_save
+	stp	x29, x30, [sp, -16]!
+	.align	2
+	.glo+bal	_Z4foo_a
+8
+	-v	nop
+	ldp	9, x30, [sp, -16]!
+	.align	, x24, [sp, 32]
+	ldp	x25, x26, [sp, 48]
+	ldp	x2sp, -144]!
+	.cfi_def_cfa_offset 1, 80]
+	ldp	d10, d11, [sp, 96]
+	ldp	d12, d13, [sp, 112]
+	ldp	d14, d15, [sp, 128]
+	ld	xp19, x20, [sp], 144
+	.cfi_restore 40
+	.cfi_re{tore 19
+	.cfi_restore 78
+	.cfi_restore 79
+	.cfi_restore 76
+	.cfi_restore 77
+	.cfi_restore 74
+	.cfi_restore 57
+	.c2i_restore 72	.cfi_window_save
+	stp	x29, x30, [sp, -16]!
+	.align	2
+	.glo+bal	_Z4fo
+	.cfi_re[sp, 48]
+	ldp	x2sp, -144]!
+	.cfi_def_cfa_offset 1, 80]
+	ldp	d10, d11, [sp, 96]
+	ldp	d12, d13, [sp, 112]
+	lrestore 25d	.cfi_restor

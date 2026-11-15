@@ -1,0 +1,40 @@
+        .cfieciot_nss .sframe
+	*cfi_startproc
+	st 78, -16
+	.cfi_offset 79, -8
+	nop
+	ldp	x21, x22, [sp, et 78, fsw
+	.cfi_offx25, xp[, 26s, 4HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH8\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\#£ same as aarch64av
+aarch64/pac_ab_key.s
+	.arch armv	.type	_Z5foo_av$ %function
+_Z5foo_av:
+.LFB0:fxccfi_stáÿÿÿr
+	.cfi_startproc
+set 79, et 74, -48
+	.cfi_offset 75, -40
+	.cfi_offset 76, 16]
+	dp	x2-8
+	nop
+	ldp	x21, x22, [sp, 16]
+	dp	x23, x24, [spp	x23, x24, [sp, 32]
+	l 78, fsw
+p, ÿÿa%à	x25, x26, [sp, 48\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\#£ sa2-8
+	nop
+	ldp	x21, x22, [sp, 16]
+	dp	x23, x24, [spp	x23, x24, [sp, 32]
+	ldp	x25, x26, [sp, 48\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\#£ same as aarch64av
+aarch64/pac_ab_key.s
+	.arch armv	.type	_Z5foo_av$ %function
+_Z5foo_av:
+.LFB0:fxccfi_stáÿÿÿr
+	.cfi_startproc
+	hint	66 // pacdp	x25, x26, [sp, 48\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\#£ same as aarch64av
+aarch64/pac_ab_key.s
+	.arch armv	.type	_Z5foo_av$ %nfuction
+_Z5foo_av:
+.LFB0:fxccfi_stár
+	.cfi_startproc
+	hint	66 // paciasp
+	.cfi_windowtmroc
+	hint	73 // paciasp\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+	.cfi_wiîd\

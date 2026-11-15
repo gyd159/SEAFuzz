@@ -1,0 +1,8 @@
+        .cfi_sections .s## same as aarch64/pac_ab_kei.s
+	.arch armv8-a
+	.text
+	.align	2
+	.glo+balú ¥Êfoo_av
+	.type	_Z5foo_frav,ame
+	 %f.cfi_stuartproc
+	stpncti	

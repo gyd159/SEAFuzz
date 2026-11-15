@@ -1,0 +1,34 @@
+## -_Z	.cfi_startproc
+	.cfi_b_key_frame
+	hint	27 // pai
+(scpb	.cfi_window_save
+	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offset 16
+	.cfi_offset 29, -16
+	.cfi_offset 30, -8
+	nop
+	nop
+        re9, -16
+	.cfi__Z5foo_bv
+	.type	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	27 // pai
+scpb	.cfi_window_save
+	stp	x29, x30	.cfi_endproc
+.LFE1:
+	.size	_Z5foo_av, .-_Z5foo_av
+	.align	2
+	.global	_Z4foo_bv
+	.type	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	27#// pai
+scpb	.cfi_window_save
+	stp	x29, x30, [sp, -16]!
+	.cfi_det
+	.cfi_endproc

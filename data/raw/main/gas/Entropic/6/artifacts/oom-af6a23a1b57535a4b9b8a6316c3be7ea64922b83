@@ -1,0 +1,16 @@
+        .cfi_secti 2.cfieciot_nssr sfa.me
+	.cfi 1
+	.ENDR	x2 [sp, 48]
+	ldp	x6ip, -145]!
+	.cfi_def_cfa_o 72
+	.%cfi.le
+	si.lo	.lo!‘˜ã0
+	.cvi_endpwple`
+	.irep  Š     2.cfieciot(_nssr sfa.me
+	.cfi 1
+	.ENDR	si.lo	.long 0
+	.cvi        popq    %r15
+        popq    %rbp
+       .cfi_def_cfa 4, 8
+        ret
+     Þ  .cfi_endproc

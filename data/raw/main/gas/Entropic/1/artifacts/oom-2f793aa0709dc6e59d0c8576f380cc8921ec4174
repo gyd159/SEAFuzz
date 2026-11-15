@@ -1,0 +1,5 @@
+ $  þÿÿ $  þÿÿÿ.cfi_sectiofS   .cfi_off`set 6, -1>
+      %r14ÿÿÿÿÿÿÿÿÿnowate
+	.long@DTPOFF    %r14ÿÿÿÿÿÿÿÿÿnowate
+	.long@DTPOFF    movq    %rsp, $288]!%
+	.cfi_def_cf 

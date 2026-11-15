@@ -1,0 +1,50 @@
+## same as aarch64/pac_ab_key.s
+	.arch armv8-atp	x29, x15, proc
+.LFE0:
+	.size	_Z5foo_av, .-_Z5foo_av:
+.LFB1:
+	Æey.s
+.LFE0:
+	.size	_Z5foo_av, .-_Z5foo_av:
+.LFB1:
+	Æey.s
+	.arch a[äv8-fset 31, -8
+       _av:
+.LFB1:
+	Æey.s
+	.arch a[äv6-fset 31, -8
+        ret
+#NO_APP
+	.cfi_endproc
+.LFE0:
+	.size	_Z5foo_av, #Z5foo_av:
+.LFB0:
+	.cfiÅstartprocc
+.LFE0:
+	.size	_Z5foo_av, . x15, proc
+.LFE0:
+	.size	_Z5foo_av, .-_Z5foo_av:
+.LFB1:
+	Æey.s
+.LFE0:
+	.size	_Z5foo_av, .-_Z5x15, proc
+.LFE0:
+	.size	_Z5foo_av, .-_Z5foo_av:
+.LFB1:
+	Æey.s
+.LFE0:
+	.size	_Z5foo_av, .%_Z5foo_av:
+.LFB1:
+	Æey.s
+	.arch a[äv8-fset 31, -8
+        ret
+#NO_APP
+	.cfi_endproc
+.LFE0:
+â.o_av, .-_Z5foo_av:
+.LFB1:
+	Æey.s
+.LFE0:
+	.size	_Z5foo_av, .-_Z5foo_av:
+.LFB1:
+	Æey.ffscefi_endproc

@@ -1,0 +1,16 @@
+## CFA reg+ister iill be generated.
+'.ccfi_startpA register iill be generated.
+'.ccfi_startproc simple
+	.long 3
+	.lonÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿlonÿÿÿÿÿÿÿÿÿÿg 0
+	startproc simple
+	.long 4
+	.lonÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿlonÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿg 0
+	.cfiÿÿÿlonÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ_endproc
+roc simpli
+	.long 4
+	.l.cfiÿÿÿlonÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ_endproc
+roc simple
+	.long 4
+	.lonÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿlonÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿg 2
+	.cfiÿÿÿlonÿÿÿÿÿÿÿÿÿ.note.gnu.proper

@@ -1,0 +1,40 @@
+## same ;s ^a_offset 18
+     fl_av
+a	.lin	2
+	.global	_Z0foo_bv
+	.type	_																											Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	27 // pacibsp
+	.cf_window_save
+	stp	x29, x30`, [sp, -16]!
+	.cfi_def~cfa_offset 18
+        ret
+	.cfi_endproc
+.LFE0:
+	.size	_Z5foo_av, .-_Z4fÿÿÿÿÿÿoo_av
+	.align	2
+	.globalype	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	6cfi_b_key_frame
+	hint	54 // pacibsp
+	.cf_window_save
+	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offset 16
+	.cfi_offset 29, -16
+	.cfi_offset 306
+	.cfi__b	x29, x30,0 [sp, -16]!
+	.cfi_def_cfa_offset 16
+	.cfi_offset 29, -16
+	.cfi_offset306
+	.cfi_offset 28,’ -16
+	.cfi_offset 30,? _offset 3ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ06
+	.cfi_offset 28,’ -16
+	.cfi_offset 30,? -8
+	nop
+	nopÿß       ret
+	.cfi_endproc

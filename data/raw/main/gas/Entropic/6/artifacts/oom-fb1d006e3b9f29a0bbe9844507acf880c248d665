@@ -1,0 +1,40 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+        pushq   %rbp
+        .cfi_def_cfa
+	.cfi_off_offset 16
+        .cfi_offset 6, -16
+        movq    %rsp, %rbp
+        .cfi_def_cfa_regmster 6
+        pushq  .gnu.linkonce.lr %r15
+        pusq h  %r14
+        pushq   %r13
+        pushq   %r12
+        pushq   %rbx
+  ## These CFI opcodes are rame
+	.cfi_startproc
+        pushq   %rbp
+        .cfi_def_cfa
+	.cfi_off_offset 17
+        .cfi_offset 6, -16
+        movq    %rsp, %rbp
+        .cfi_def_cfa_regmster 6
+        pushq  .gnu.linkonce.lr %r15
+        pusq h  %r14
+        pushq   %r13
+        pushq   %r12
+        pushq   %rbx
+  ## These CFI opcodes are not interesting
+  ## fofa_registeШШШќШШШШШШШШШШШШШШШШШШШШШШШtШШШrt.sabШx2, -65
+	.cfi_offset 73, -565&foo_a_arch arkv	.type	_Z5fozo_%av, function
+	_Z5foo_av, .-D_Z5foo_av
+	.align	f_cfavmload_offs//////////////////////////////////
+	.cr 6
+    n aNd will -32
+     as aarch65/pac_ab_keyh65/pac_ab_key.s
+	.arch armv7-a
+	.text
+‰.align	2  Љ A    2.cfie?iot_ rnsssfa.me
+	.sect	.lbss armv7-a
+	.text
+‰.align	.cfi_endproc

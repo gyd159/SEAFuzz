@@ -1,0 +1,13 @@
+tartproc
+	.long 0
+	.cfi_def_cfa_offset 8
+	.long 0
+	.cfi_offset 0,08
+	.long 0
+	.cfi_endÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ	.cfi_startproc
+&	.long 0
+	.cfi_.gnu.linkonce.lbdef_cfa_offset 8
+	.long 0
+	.cfi_offset 0, 8
+	.long 0
+	.cfi_endÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿproc

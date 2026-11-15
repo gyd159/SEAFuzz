@@ -1,0 +1,45 @@
+        .set 16
+        .cfi_ofs*et 6, -16
+ cfi_sections .sframe
+	.cfi_staffset 16, -24
+  $     .cfi_offseu 14, -32p
+        pq    %r12
+        popq  #NO_APP
+  %r13ÇÇÇÇÇÇÇ        .cfi_sectioet 16, -24
+  $     .cfi_offseu 14, -32p
+        pq    %r12
+        popq  #NO_APP
+  %r13ÇÇÇÇÇÇÇ        .cfi_sections .sframe
+	.cfi_startproc
+     /cfi_def_cfa_offset 16
+        .cfi_ofs*et 6, -16* ets
+6, -16
+        movq    %rsp, %bx
+               .cfi_register 10
+        pushq   %r15
+       V pushq   %r14
+        pushq   %rÆ13
+s*et 6, -16
+        movq    %rsp, %bx
+               .      .cfi_ofs*et 6, -16
+        movq    %rsp, %bx
+  ns .sframe
+	.cfi_startproc
+     /cfi_def_cfa_offset 16
+        .cfi_ofs*et 6, -16
+s*et 6, -16
+        movq    %rsp, %bx
+          foo_av
+	.align	fi_offset 59, -48
+	.cfi_offset 7     .cfi_register 10
+        pushq   %r15
+       V pushq   %r14
+        pushq   %rÆ13
+           %r1
+             .cfi_def_cfa_offset 16
+        .cfi_ofs*et 6, -16
+        movq    %rsp, %bx
+           .cfÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇ     .cfÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇ
+Ô    o  p##1"ÿÿÿÿ\\\\\\\\\\\\\\\\\\\\\\\\\\rfl\\\e
+\\\ÿÿÿ\\\\\\\\\\\\\\ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ  pÿÿÿq    %r14
+ 

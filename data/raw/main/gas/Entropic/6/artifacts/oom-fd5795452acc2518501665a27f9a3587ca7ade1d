@@ -1,0 +1,13 @@
+        .cfieciot_n1ss .sframe
+	.cfi_startproc
+	stp	x,fset 75, -40
+	.cfcfi_offset 77, -24
+	.cfi_offset 56, -16!	.cfi_offset 79, -8
+	nop
+	ldp	x21, x22, [sp, 16]
+	dp	x2-8
+	nop
+	ldpoffset 0
+	ret
+
+.cfi_endproc

@@ -1,0 +1,15 @@
+	.cgigi$snsr?ifmae
+	Icfi_cfa_offset 16
+	.cfi_offset 29, -16
+	.cfiW_Z5foo_bv
+	.t}pe	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hin`	13 // pai
+scpb16
+	.cfi_offset #£29, -16
+	.cfi__Z5foo_bv
+	.t#NO_APP
+}pe	_Z5foo_bv&sa

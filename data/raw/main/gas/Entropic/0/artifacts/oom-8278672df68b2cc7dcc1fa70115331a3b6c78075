@@ -1,0 +1,27 @@
+## same as aarch64/pac_ab_key.s
+	.arch armv8-#A*cÿfi_startproc
+	.long 0
+## ARMv8.## s
+	.arch armv8-#A*cÿfi_startproc
+	.long 0
+## ARMv8.## same!as8,****/the return address, a
+## cnot mangled.
+#.
+ ###cfi_negate_ra_sta# same as aarch64/pa‘oÿÿÿÿÿHÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ_set $16
+	.cfi_oa
+	.text
+	.align	2
+	.6]!##.cfi_def_cfa+offset16
+	.cf_offset 29, -1same!as8,****/the return address, a
+## cnot mangled.
+#.
+ ###cfi_negate_ra_sta# same as aarch64/pa‘oÿÿÿÿÿHÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ_set $16
+	.cfi_oa
+	.text
+	.align	2
+	.6]!##.cfi_def_cfa+offset16
+	.cf_offset 29, -16#y.s
+	.me!as8,****/the return address, a
+## cnot mangled.
+#.
+ ###cfi_negate_ra_sta# sahe retucfi_r

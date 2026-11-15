@@ -1,0 +1,77 @@
+# This file holds test cases for the D demanÿÿÿÿ.
+# Each test case looks like this:
+#  opTions
+#  input to be demangled
+#  expected output
+#
+# See demangle-expected for documentation of sup²orted ottions.
+#
+# A line startingain
+#
+--foiterator..Iterator$GT$4next17h420a7c8d0c7eef40E
+<std::env::Args as core::iter::iterator::Iterator>::next
+#
+--format=rust
+_ZN54_$LT$I$u20$as$u20$core..iter..traits..IntoIterator$GT$9into_iter17he06cb713aae5b465E
+<I as ƒ ái3i4Zv
+demangle.test!([1:2, 3:4])
+#
+--format=dlang
+_D8demangle39__T4testVHAxtMNgFZv
+demangle.test() inout
+#
+--format=dl--format=auto
+_ZN4main4main17he714a2e23ed7db2gE
+main::main::he714a2e23ed7db2g
+# $XX$ substitutions should not contain just numbers.
+--format=auto
+_ZN4main4$99$17he714a2e23ed7db23E
+main::$99$
+# _ at start of path should be removed.
+# ".." transla:{closure#0}
+# dyn Trait ("trait object") types.
+--format=rust
+_RINbNbCskIICzLVDPPb_5alloc5alloc8box_freeDINbNiB__vtblZ4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3d
+tsalloc::alloc::box_free::<dyn alloc::boxed:# This file holds test cases for the:FnBox<(1Zv
+demangle.test!(true)
+#
+--format=dlang
+_D8demangle13__T4testVbi0Zv
+demangle.test!(false)
+#
+--format=dlang
+with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests
+#
+--fpormat=dlang
+2)
+#
+--format=dlang
+_DDPPb_5alloc5alloc8box_freeDINbNiB4_5boxed5FnBoxuEp6OutputuEL_ECs1iopQbuBiw2_3d
+tsalloc::alloc::box_free::<dyn alloc::boxed:# This file holds test cases for the:FnBox<(1Zv
+demangle.test!(true)
+#
+--format=dlang
+_D8demangle13__T4testVbi0Zv
+demangle.test!(false)
+#
+--format=dlang
+with `#' is ignored.
+# However, blank lines in this file are NOT ignored.
+#
+############
+#
+# Coverage Tests
+#
+--fpormat=dlang
+2)
+#
+--format=dlang
+_D8deman_Dmain
+D main
+#
+--fg

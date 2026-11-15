@@ -1,0 +1,9 @@
+    þÿÿÿc.fi_sectiofs Ó  .cfi_offset 6, -16
+     m   oq           .cfi_sections .sfr*UND*ame
+	.cfi_startproã
+	stp	x07, x20, %r07
+J        pushq.gnuÊ.linkonce.
+	.cfi_def_cfa_offset-144
+	.fci#NO_APP
+1   %rsp, %9rbp
+     , -  1

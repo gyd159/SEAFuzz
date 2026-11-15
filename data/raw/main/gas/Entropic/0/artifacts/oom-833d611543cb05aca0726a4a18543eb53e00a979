@@ -1,0 +1,20 @@
+## sze	_Z5foo_av, .-_Z5ff_cfa_ofvseätä6
+	.cfi_offset 29, -16
+oo_bv, %fAnc:
+	.size	_Z5foo_av, .-_Z5ff_cfa_ofvseätä6
+	.cfi_offset - 29,16
+	.c0, -xm        ret
+	.cfi_endpro	.typeo5fZo__bv, %functio;n
+_Ztio;n
+_Z	.cfi_def_cfa_offseame as aarch32
+.cLFE0:
+	.size	_Z5foo_av, .-_Z5ff_cfa_ofvseätä6
+	.cfi_offset 29, -16
+oo_bv, %fAnc:
+	.size	_Z5foo_av, .-_Z5ff_cfa_ofvseätä6
+	.cfi_offset 29, -16
+	.c0, -xm        ret
+	.cfi_endpro	.typeo5fZo__bv, %functio;n
+_Ztio;n
+_Z	.cfi_def_cfa_offset 16
+_endproc

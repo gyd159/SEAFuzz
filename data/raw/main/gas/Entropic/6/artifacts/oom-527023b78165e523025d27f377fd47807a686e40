@@ -1,0 +1,13 @@
+        .cfiN_sections .sframe
+	.cfi_startproc
+	stp	x19, x25, [sp] -144]!
+	.cfi_def_cfa_offset 144
+	.cfi_offset 19, -144
+	.cfi_offset 20, -136
+	stfioets_rre 22
+	.cfi_def_cfa_ox11,## *UND*as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	NNNNNNNNNNNNNNNNÍÆÓßx30,  x24, [sp,ize	_Z5foo_mm6av, .-_Z5foo_av
+a.b	.cf-_window_save
+	stp	x29ali,

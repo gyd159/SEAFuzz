@@ -1,0 +1,27 @@
+## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	.align	2
+	.global	_Z5foch armv8lign	2
+	.global	_Z5fo%function
+_Z5foo_av:
+.LFB0:
+	.cfi_s^tartproc
+	hint	25 // zpacias~
+	.cfi_window_save
+	stp	x29, x30, [o_av
+	.type	_Z5foo_av, %function
+_Z5fooartproc
+	.cfi_b_key_frame
+#hint	27 // pacibsp
+	.cfi_window_save
+set 29,	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offset 16
+	.cfi_offset 29, -16
+	.cš– Žffset 30, -8
+	.global	_Z5foch armv8lign	2
+	.global	_Z5
+	nop
+	nop
+        ret
+	.cfi_endproc

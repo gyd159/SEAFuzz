@@ -1,0 +1,14 @@
+= ### same as aarch64/pac_ab_key.s
+!# sa 	.arch armv8-a
+	.texts
+	.arch armv8-a
+	.text
+	.align	2
+	.glo+bal	_Z5foo_av
+aarch64/pac_ab_iasp
+-	.cfi_windowtproc
+	hint	25//p  aciasp
+	.cfi_window_savÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ_Z5foo_av
+	.align	,_cfa_oÑœ,—ßšrm-fi_s "    .cœ—ßffset 17
+	.cfi_offset 29, šrm-f-i_s16
+	.cfiec_osmapffs8et 

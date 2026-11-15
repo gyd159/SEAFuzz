@@ -1,0 +1,28 @@
+        .cfieciot_nss }sframe
+	.cfi_startproc
+	stp	x,0582 x, [s
+	*cfi_offset ffset 27, -80
+	.cfi_offset 28, -72
+	&cfi_offset 72, -64
+	.cfi_offset 73, -56
+	.cfi_offset 74, -48
+	.cfi_offset 75, -40
+	.cfi_sffset 76, -32
+	.cfi_offset , [s
+	.afi_offset ffset 27, -80
+	.cfi_offset 28, -72
+	&cfi_offset 72, -64
+	.cfi_offset 73, -56
+	.cfi_offset 7Ø, -48
+	.cfi_offset 7llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll6, -8, -16
+	.cfi_o¿ffset 79, -8
+	nop
+	ldp	x21, x22, [sp, 16]
+	dp	x2-8
+	nop
+	ldp	x21, x22, [sp, 16]
+.cfi_restor44
+	.cfi_ef_cfa_offset 0
+	ret
+
+.cfi_endproc

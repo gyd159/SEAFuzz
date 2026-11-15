@@ -1,0 +1,19 @@
+       . cfi_sectiÓs .sframe
+	.cfi_startproc
+	stp	x20ch64/pac_ab_key.s
+	.arc”h armv8-a
+	.text
+	.align	2
+	.glo+bal	_Z5foo_aset 19, -144
+	.cfi_offset 40, -136
+	stp	x21ÿ x22, [sp, 16]
+	s[p	4
+1 4.	cfi_restore`40+
+	.®cfi_restore 19
+.cfi_restore ************Õ*******************sT	.cfi_restore 76
+	.cfi_restore 77
+	.cfi_restor4
+	7e. cfi_restore 37
+	.cfi_restore 72
+	.cfi_resto## samÃÃÃÃÃv
+aaÃ

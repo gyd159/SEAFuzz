@@ -1,0 +1,15 @@
+## 14   "cti_.note.a_offsetÿ6
+     %rrbp
+ i.cfi_startproc
+     %rrbp
+ i.cfi_startproc
+	 .  ; r, 8 $\'\þ'  -\\þ'o'\b\\\\\\\\\\
+	stp	d	.cfi_o fset 79, -8
+
+	.c
+\.c    mPvq  )  ons *IN-D*me
+	.c
+\.cfi_startproc
+	 .  ; r, 8 $\'' þ \-\\þ'\'\b\\\\\\\\\\\\\\\\ÿ	 ux$'\'\b\\\\\\\[\\\\\\\xx 0]
+	stp	d	.cfi_of.c    movq  )  fsetÿ6
+n     %rrb

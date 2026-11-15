@@ -1,0 +1,20 @@
+## CFA rezgister is not defined to ## No SFrame unwind info for this function will be generated.
+	.cfi_startproc sim-----------/--=----------Í--ÿÿÿÿÿÿÿÿCALx64 -56
+	.cfi_offset 74, -is function wi@TLSCALx64 -56
+	.cfi_offset 74,ÈÈÈÈ -48
+	.cfi_offset 75, -40
+ifneobffi_s6, -32
+	.offset 73,ple
+	.long 0
+	.long 0
+	.cfi_adjust_%cfa_offset 32
+	.long 0
+	.cfi_endprobe SP/FP.
+## No SFrame unwind info for this function w#NO_APP
+enerated.
+	.cfi_startproc simple
+	.long 0
+	.long 0
+	.cfi_adjust_cfa_offset 32
+	.long 0
+	.cfi_endproc

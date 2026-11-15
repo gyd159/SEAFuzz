@@ -1,0 +1,18 @@
+	.cfiWstk1££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££set 75
+	.long 0
+		.lkng 0
+	.cfi_def_cfa_offset 16
+	.long 0
+	.cfi_adjust_cfa_off	.ffset 16
+	.long 1!
+	.l$ng 0
+	.cfi_adji_def_cfa_offset 16g 0
+	.cfi_adji_def_cfa_offset 75J	.long 0
+		.ds.b 0
+	.cfi_def_cfa_offset 16
+	.long 0
+	.cfi_adjust_cfa_off	.ffset 16
+	.long 1!
+	.long 5
+	.cflon
+g 0c

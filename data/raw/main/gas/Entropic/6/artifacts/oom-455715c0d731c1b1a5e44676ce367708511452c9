@@ -1,0 +1,15 @@
+        .cfieciot_nss .sframe
+	.cfi_startproc
+	stP	x,0291 x, [s
+	.cfi_offset!ffset 27, -80
+	.cfi_offset rcx -72
+	&cfi_ofnset 72, -_offset rcx -72
+	&cfi_ofnset 72, -64
+	.cfi_offset 73, -56
+	.cfiroc
+	stP	x,0291 x, [s
+	.cfi_offset!ffset 27, -80
+	.cfiof85, xt 0
+	ret
+
+.cfi_endproc

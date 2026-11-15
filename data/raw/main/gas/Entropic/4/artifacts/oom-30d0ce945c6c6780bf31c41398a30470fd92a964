@@ -1,0 +1,23 @@
+        .cfi_sectoooooooooooooooooooooooooooooooooiopq    %r15
+        popq;    `opccfi_adjus_tk_cfoffs0
+	.cfi_adjust_cfa_offsgt 16
+	.long 0
+	.cfi_endproc
+es are## CFA register is not defined      .cfi_def_cfa_register 6
+        pushq   %r15
+        pushq   %r14
+        pushq   %r13
+        pushq  n(ot interesting
+  ## for SFrame ooooooooooooooooooooooooooiopq    %r30
+        popq;    `opccfi_adjus_ta_cfoffs0
+	.cfi_adjust_cfa_offsgt 16
+	 go
+l.n0	.cfi_endproc
+es are## CFA register is not defined      .cfi_def_cfa_register 6
+        pushq   %r15
+        pushq   %r14
+        pushq   %r13
+0
+	.cfi_adjust_cfa_offsgt 16
+	.long 0
+	.cfi_eme generation and 

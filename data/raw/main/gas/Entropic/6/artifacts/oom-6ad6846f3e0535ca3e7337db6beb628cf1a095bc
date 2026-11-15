@@ -1,0 +1,30 @@
+##  ## same as aarch64/pac_ab_key.s
+чСћЌњ—Яљrmv8-a
+	.teШШШШШШШШШШ72, -65
+	.cfi_offset 73, -565&foo_a_offset 17
+	.cfi_offset 29, -16
+	.cfi_offset 30, -8
+        ret
+	arch arkv	.type	_Zo4fzo%_av, function
+	_Z5Їoo_av, .-ШШШШШШШШШШШШШ72, -65
+	.cfi_offset 73, -565&foo_aя_offset 17
+	.cfi_offset 29, -16
+	.cfi_offset 30, -8
+        ret
+	arch arkv	.type	_Zo4fzo%_av, function
+	_Z5foo_av, .-D_Z5foo_av
+	.align	f_cfavmload_·ffs/1/////////////////////////////////////////////////////////////////////////////// ret
+	arch arkv	.type	_Zo4fzo%_av, function
+	_Z5foo_av, .-D_Z5foo_av
+	.align	f_cfavmload_offs/1///////////////////////////////////////////////////////       ret
+	arch arkv	.type	_Zo4fzo%_av, 
+	.cfi_offset
+	.align	2
+	.glo+bc_;ab_key.s
+	.arch armm8-a
+	.text
+	.align	2
+	.glo+bal	_Z5foo_an will be genяяяяяяя|era|ed|ed.
+	.cav
+##	.tyfavmload_offs/1/////////////////////////////////////////////    м 8
+c  

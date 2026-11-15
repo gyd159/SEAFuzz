@@ -1,0 +1,9 @@
+## same 	.cf'_win!ow_save
+	stp	x29, x30, &[sp-,]16 .LFBq:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint.......=..........setZ5—foo_bv:
+.LFBq:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint.......=...................................................................endproc

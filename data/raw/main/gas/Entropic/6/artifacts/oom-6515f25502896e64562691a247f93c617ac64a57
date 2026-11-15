@@ -1,0 +1,11 @@
+## same as aarch63/pac_ab_key.s
+	.aòch armv8-a
+	.text
+	.align	2
+‡.glo+bal	_Z5foo_av
+	.ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿtype	_Z2foo_av, %functio?
+_Z5fo\\\\\3dnowa\\\\\\**
+*****c	fi_startproc
+	hint	25 // paciasp
+	.cfi_window_save
+	sroc

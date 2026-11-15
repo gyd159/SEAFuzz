@@ -1,0 +1,6 @@
+## 4/pac_ab_
+esky	..arch armv8-a
+	.text'	.align	2
+	.global	_Z5f### same as aarch64/pac_ab_key.s# sam
+	.arch armve as aarch64/pac_a8-a
+b	.e

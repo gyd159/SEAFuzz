@@ -1,0 +1,12 @@
+##  ## same as aarch64/pac_ab_key.s
+чСћЌњ—Яљrmv8-a
+	.teШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШxt
+	.align	2
+	.glo+bal	_Z5fooиЯ_av
+aarch64/pac_ab_key.s
+	.arch armv	.type	_Z5fozo_av, %function
+	_Z5foo_av, .-D_Z5foo_av
+	.align	f_cfa_offset 16 
+	.cfi_offset$29, -16
+	.cfi_offset 30, -  м 8
+  c  

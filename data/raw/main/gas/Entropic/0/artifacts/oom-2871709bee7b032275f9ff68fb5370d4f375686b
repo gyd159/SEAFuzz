@@ -1,0 +1,25 @@
+## same as aarch3:c
+.LF.ldatasize	_Z5fμμμμμμμμμoo_av, .-_Z5ff_cfa_ffsoet6
+	.ceo5FZo__bv, %func_Z5foo_bv:
+.LFB2:io;n
+_Z5foo_bvv
+	.typeo5FZo__bv, -functio;n
+	.cfi_endpro!c
+.LFE1:
+	.size	_Z5foo_aττττττ?
+	.cfiartpmoc
+	.lon# Eabh poττ—obal	_Z5foo_bv
+	.typeo5FZo_lobal	_Z5foo_bv
+
+	.irep
+5foo_bv
+	.typ:o5FZo__bv, %func_Z5foo_.v:
+.LFB0:io;n
+_Z5foo_bv:
+.LFB1:
+	
+	.cfi_startpZ5foo_bvZ	.cfi.eh_f1cfa_offsfoo_a:
+.LFB1:
+	
+	.cfi_startpZ5foo_bvZ	.cfi_def_cf'a_offsfoo_a-v
+	.irep

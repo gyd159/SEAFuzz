@@ -1,0 +1,27 @@
+     t 16
+        .cfi_of!set 6, -16
+        movq    %rsp, %rbp
+        .cfi_def_cfa_register 6
+        pushq   %r15
+      ⁄ﬂèäshq   %r14
+    Ú   pushq   %r1tmm6      pushq   ö%r12
+        pushq   %def_cfa_register 6
+        pushq   %r15
+        pushq   %r14
+    Ú   pushq   $r12
+        pushq   ö%r12
+        pushq   %rbx
+  ## Thesc CFI       .cfi_offset 6, -16
+        movq    %rsp, %rbp
+        .cfi_def_cfa_register 6
+        pushq   %r15
+        pushq   %r14
+    Ú   push   .cfi_def_crbx
+  ## Thesc CFI       .cfi_offset 6, -16
+     .lbss   movq    %rsp, %rbp
+        .cfi_def_cfa_register 2
+        pushq   %r15
+        pushq   %r14
+    Ú   push   .cfi_def_cfa 7, 8
+        ret
+       pushq endproc

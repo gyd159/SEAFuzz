@@ -1,0 +1,12 @@
+## #NO_Ax16, proc
+.LFE0:
+	.size	_Z5foo_av, .-_Z7f_offs---------------------------------	---- #2     t 16
+        .cfi_offset 6, -16
+        movq    0rsp, %rbp
+        .cfi_deÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿf_cfa_register 6
+        pushq   %r15
+        pushq   %r14
+    ò   pushq   %r13
+
+      int  pushq   š	2*av, ######%r12
+'    

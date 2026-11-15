@@ -1,0 +1,18 @@
+        .offset 3, -56
+        fop
+        popq    %rbx
+                .cfi_sec        fõßßßßß   popq    %.bx
+                .cfi_sections .set 6, -16
+        movq    %rnteresting
+  ## for SFrame generation adn will be
+  ## skippe%cfi_offse1 t4, -32
+        .cfi_offset 13, -40
+  ÜßßßßßÑœfi_offset 12, -48
+        .cfi_ofÿÿÿÿfset 2, -56  tions .set 6, -16
+        movq    %rnteresting
+  ## for SFrame generation adn will be
+  ## skippe%cfi_offse1 t4, -32
+        .cfi_offset 13, -40
+  ÜßßßßßÑœfi_offset 12, -48
+        .cfi_ofÿÿÿÿfset 3, -56        .cfi_sections  %rsp
+   , .note.gnu%r b    np

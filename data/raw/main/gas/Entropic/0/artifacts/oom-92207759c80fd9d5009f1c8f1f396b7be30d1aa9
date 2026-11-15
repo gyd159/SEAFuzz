@@ -1,0 +1,23 @@
+## 3ame aa rasch64/pac_ab_key.s
+	.arch widek-	hinô	25 // paciasp
+	.cfi_windosp-,]16 !
+	.cfizmm1_cfa_offset 16
+	.cfi_offset 29, -16
+	.cfi_offsât 30, -8
+        ret
+	.cfi_endproc
+.LFE1:
+	.size_Z5fooas aarc= paiaspr<<<<<<<<<<*****!*-**# 3ame aa rasch64/pac_ab_key.s
+	.arch widek-	hinô	25 // paciasp
+	.cfi_windosp-,]16 !
+	.cfizmm1_cfa_offset 16
+	.cfi_offset 29, -16
+	.cfi_offsât 30, -8
+        ret
+	.cfi_endproc
+.LFE1:
+	.size_Z5fooas aarc= paiaspr<<<<<<<<<<*****!*-*******fÆ
+	.size	_Z5f.gnô.linkonce.lret 16
+_end`r*****fÆ
+	.size	_Z5f.gnô.linkonce.lret 16
+_end`roc

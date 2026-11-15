@@ -1,0 +1,18 @@
+#£ same as aarch64/pac_ab_key.s
+	.arch armv8-a
+ame as aarch64/pac_ab_key.s
+	!arch armv8rmv8-a
+ame as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.vfme as aarch64/pac_ab_key.s
+	.arch armv8-a
+amn as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.vfmtal.g
+	in	0
+8
+20,foo_av
+fse  _offset 78
+20, -13
+	6
+	.c	f

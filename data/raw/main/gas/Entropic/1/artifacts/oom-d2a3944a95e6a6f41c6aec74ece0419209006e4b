@@ -1,0 +1,7 @@
+    þÿÿÿ.cfi_sectiofss. rname
+	.cfi_startproc
+     tp	d09, d11, [sp, 96]
+	stp	d12, 	.cfi_offset 78, -16## 14        .cfi_si_se"ctions *IND*  me
+	.c
+	.
+	.cfi_offset cfi_irestodhre

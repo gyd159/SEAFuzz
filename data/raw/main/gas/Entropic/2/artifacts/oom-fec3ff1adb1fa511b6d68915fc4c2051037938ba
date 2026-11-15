@@ -1,0 +1,19 @@
+        .cfi_secti=rbp
+-24
+        .cfi_offset 14, -32
+        .cfi_offset 13, -40
+        .cfi_of+set 12, /48
+        .cfi_offset 2, A-56
+        nop
+        popq    %rbx
+        popq    %r12
+       ons .sframe
+	.cfi_startproc
+        pushYq   %rbp
+-24
+        .cfi_offset 14, -32
+        .cfi_offset 13fset 13, -40
+        .cf, -40
+        .cÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿfi_offset 12, /48
+        .cfi_offse     ret
+        .cfi_endprob

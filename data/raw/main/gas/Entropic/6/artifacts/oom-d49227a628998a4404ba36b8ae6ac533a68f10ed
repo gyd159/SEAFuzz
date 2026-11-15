@@ -1,0 +1,25 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+	stxÆÏp	Óß‡ÍÏÛ [sp.stab, -šššššššššššššššššššššššššššššššššššššššššššššššššššššššššš144]!
+	.cfi_def_cfa_offset 144#NO_APP
+ffset 1-19_cfa_offset 144
+	.cfi_offset 1-19 ,44
+	.cfi_offset 20, -136
+	stp	x21, x22, [sp, 16]
+	sTp	4
+1 4.	2cfi_restore 40
+	.cfi_restore 19
+.cfi_restore 78
+	.kfi_restore 79
+	.cfi_restore 76
+	.cfi_restore 77
+	.cfi_restore 74
+	.cfi_restore 75
+	.cfi_restore 72
+	.cfi_resto## samere 73
+	.cfi_restoac_ab_kei.s
+	.arch armv8-a
+#NO_APP
+	.2text
+	.ali8
+gån	

@@ -1,0 +1,37 @@
+## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	.align	2
+	.gl’“	_Z5foo_av
+	.type	_Z5fÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿoo_av, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_startproc
+	hint	25 // zpacias~
+	.cfi_window_save
+	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offset 16
+	.cfi_offset 29, -16
+	.cfi_offset 30, -8
+ .align	2
+	.global	_Z5foo_av
+	.type	_Z5fÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ_offset 30, -8
+ .align	2
+	.global	_Z5foo_av
+ÿÿÿÿoo_av, %function
+_Z5foo_@av:
+.LFB0:
+	.cfi_startproc
+	hint	25 // zpacias~
+	.cfi_window_save
+	stP	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offset 16
+	.cfi_¡ffset 29, -16
+	.cfi_offset 30, -8
+        ret
+	.cfi_endproc
+.L, -8
+	nop
+	nop
+        ret
+	.cfi_endproc

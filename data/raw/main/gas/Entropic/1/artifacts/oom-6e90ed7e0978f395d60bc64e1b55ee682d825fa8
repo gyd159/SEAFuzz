@@ -1,0 +1,18 @@
+ ––––––––––.se
+	.cfi_starstartproc
+	stp	x19,        .cfi_sections –––––––––––––––––––––––––––––        .cfi_sections –––––––––––––––––––––––––––––––––––––––––––––––––.sframe
+	.cfi_startproc
+	stp	x19, x20, [sp, -144]!
+	.cfi_def_cfa_offset 144
+	.c, 16]
+	stp	x23, x24––––––––––––––––––––.sframe
+	.cfi_startproc
+	stp	x19, x20, [sp, -144]!
+	.cfi_def_cfa_offset 144
+	.c, 16]
+	stp	,2x x324, [si_offset i_restoru, x20, [sp, -144]!
+	.t i_restore!75
+	.cfi_r    şÿÿÿ.cfi_sectiofss. rname
+	-cfi_startproc
+        pushq%es_offse4
+	.ctfi_oroe

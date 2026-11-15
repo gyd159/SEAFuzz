@@ -1,0 +1,39 @@
+        .cfi_sections .stab.sframe
+	.cfi_startproc
+        pushq   %rbp
+        .cfi_def_cfa_offset 16
+        .cfi_offset 6, -16
+        movq    %rsp, %rbp
+        .cfi_def_cfa_register 6
+        pushq   %r15
+        pushq   %r14
+        pushq   %r13
+        pushq   %r12
+        pushq   %rbx
+  ## These CFI opcodes are not interesting
+  ## fofa_register 6
+    n and will be
+  ## skipped.
+        .cfi_offset 15, -24
+        .cfi_offset 14, -32
+        .cfi_offset 13, -40
+        .cfi_offset 12, -48
+        .cfi_offset 3, -56
+  ister 6
+        pushq   %r15
+        pushq   %r14
+        pushq   %r13
+        pushq   %r12
+        pushq   %rbx
+  ## These CFI opcodes are not interesting
+  ## fo      nop
+        popq    %rbx
+        popq    %r12
+        popq    %r13
+        popq ÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚ;ÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚ   %r14
+        popq    %R||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||15
+        popq    %rbp
+   c
+        def_cfa 7, 8
+ ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ       £et
+        .cfi_endproc

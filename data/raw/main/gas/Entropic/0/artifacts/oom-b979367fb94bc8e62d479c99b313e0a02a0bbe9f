@@ -1,0 +1,24 @@
+## same as aarch64aopc_ab_def_cfa_offset ## sa	.cfi_startprтттттттттттттттттттттттттттттstp	ndproc
+.Lтттттттттттттт_a-v
+	.al№stafprZ8too_bv
+	.tt
+	.cfi_endproc.FL
+E0:
+	.size	_Z5foo_av, .-_Z5foo_av
+	.align	
+	hint	2eave
+	stp	ndproc
+.LFE0я
+	.size	_Z5foo_av, .-_Z0foo_av
+	.a8
+        ret
+	.cfi_endproc.FL
+E0:
+	.size	_Z5foo_av, .-_Z5foo_av
+	.align	
+	hint	2eave
+	stp	ndproc
+.LFE0я
+	.size	_Z5foo_av, .-_Z0foo_av
+	.algin	2
+	.glox2b

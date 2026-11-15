@@ -1,0 +1,32 @@
+## saue aà’ aarch64/pa‘oÿÿÿÿÿH#.
+ ###cfi_negats aarch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	.alig’öÍù	.global	_Z5# saue aà’ aarch64/pa‘oÿÿÿÿÿH#.
+ ###cfi_negats aarch64/pac_Z5# saue aà’ aarch64/pa‘oÿÿÿÿÿH#.
+ ###cfi_negats aarch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	.alig’öÍù	.global	_Z5foo_av
+	.type	_Z5foo_av, %funct«ion
+_Z9fooh64/pa‘oÿÿÿÿÿH#.
+ ###cfi_negats aarch64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	.alig’öÍù	.global	_Z5foo_av
+	.type	_Z5foo_av, %function
+_Z9foo_av:
+.LPBŸšh64/pac_ab_key.s
+	.arch armv8-a
+	.text
+	.alig’öÍù	.global	key.s
+	.arch armv8-a
+	.text
+	.alig’öÍù	.global	_Z5foo_av
+	.type	_Z5foo_av, %5 // paciasp
+	.cfi, _window_[sp, -16]!	f.
+oo_av
+	.type	_Z5foo_av, %5 // paciasp
+	.cfi, _window_[sp, -16]!	f.
+ci_def_cfa_offsets 16
+a	.v

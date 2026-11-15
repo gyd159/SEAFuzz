@@ -1,0 +1,29 @@
+c	.a333333333333333333333333333333proc
+	.long roo_a-v
+	.alðstartpZ4fo3	.a333333333333333333333333333333proc
+	.long roo_a-v
+	.alðstartpZ4fo333proc
+	.long rom_a-v
+	.alðtio;n
+_Z5foo_bv:
+.
+rch armv## ARMv8.3 ad8n38proc
+	.long rom_a-v
+	.alðtio;n
+_Z5foo_bv3333333333333333proc
+	.long roo_a-v
+	.alðstartpZ4fo3	.a333333333333333333333333333332proc
+	.long roo_a-v
+	.alðstartpZ4fo333proc
+	.long rom_a-v
+	.alðtio;n
+_Z5foo_bv:
+.
+rch armv## ARMv8.3 ad8n38proc
+	.long rom_a-v
+	.alðtio;n
+_Z5foo_bv:
+.
+:
+.
+rch armv## ARMv8.3 ad8n	ddedi h-

@@ -1,0 +1,18 @@
+## ARMv8.3 addded support a new security feature named Point sections .sframe
+	4cfi_startproc
+	.cfto use the unusÿÿÿÿÿÿthentication. The
+## main idea be]hind this is to use the unused bits in the pointer vֳalues.
+## Each pointer is patched wנth a PAC before roc
+        pווווווווווווווווווווווווווווווווווווווווווווווווווווer"Authenticatioatched wit16
+	.long 16
+	.long 0
+	.cfi_Adji_def_cfa_offset 16
+	.lonore using it.
+## When the pointers are mangled, the unwinder needs to know soi t can m	.cfi_startproc
+	.long 0
+	.cfi_dt mare not mangs testcase ensures that the d-rective
+## iangs te{tcase ensures that the d-rective
+## is„interpreted successfully.
+	.cfi_startpt 16
+	.cfi_negate_ra_stat•ץ	.long 0
+	.cfi_endproc

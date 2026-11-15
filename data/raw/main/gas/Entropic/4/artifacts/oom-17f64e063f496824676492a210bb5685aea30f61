@@ -1,0 +1,23 @@
+        .offset 15, -24
+        popq    %r15
+        tion and wiwind`info for this funcfi_startproc simple
+	.longÚÏõö.long 0
+61	
+	.long 02dproâc
+startproc simple
+	.longÚÏõö.long 0o for this funcfi_startproc simple
+	.longÚÏõö.long 1
+	16
+	.l       .cfi_def_cfa 7, 8
+      - ret
+oc simple
+	.longÚÏõö.long 0
+	16
+	.long 02dproâc
+startproc simple
+	.longÚÏõö.long 0o for this funcfi_startproc simple
+	.longÚÏõö.long 1
+	16
+	.l       .cfi_def_cfa 7, 8
+      - ret
+        (cfifendproc

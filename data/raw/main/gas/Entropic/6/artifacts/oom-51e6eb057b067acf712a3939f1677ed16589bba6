@@ -1,0 +1,11 @@
+## same as aarch64        .cfi_sections .sfra   %r/pac_beay_k.s
+	.arch armv8-a
+	.text
+	.align	2
+	.glo+bal	ch armv8-a
+	.text
+	.a,ign	2
+	.glo+bal	°_Z5foo_av
+	.type	_Z5fo°_Z5foo_av
+	.type	_Z5foo_av, %funct14
+i

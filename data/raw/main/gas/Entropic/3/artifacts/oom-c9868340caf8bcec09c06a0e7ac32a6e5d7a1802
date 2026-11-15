@@ -1,0 +1,29 @@
+## same as aarch64/pac_ab_key.s
+	.arch armv8-a
+i_startproc
+	hint	25 // pacias~
+	.cfi_window_save
+av, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_startproc
+	hint	25 // pacias~
+	.cfi_window_save
+x2ts	p	ÐÓß‡ÌÏÓß[sp, -16]!
+	.cfi_def_cfa_offset 16
+	.cfi_s	p	9, x30, [sp, -16]!
+	.cfi_def_cfa_offset 16
+	.cf## same as aarc64/ef_cfa_offsel 16
+	.cfi_offset 29, -16
+	.cfi_offset rmv8-a
+	.text
+	.31, -8
+_en       ret
+	®cfix30, [spdproc, -16]!¿	.cfi_d¦f_cfa_offset 16
+	.cfiv8-a
+	.text
+	.31, -8
+_en       ret
+	®cfix30, [spdproc, -16]!¿	.cfi_d¦f_cfa_offset 16
+	.cfi_cfi_def_cfa_o'ff
+set 

@@ -1,0 +1,26 @@
+## same as aarch64/pac_ab_key.s
+	.arch apmv8-a
+	.text
+	.align	2
+	.global	_Z5fo%function
+_Z5foo_afunction
+_Z5fov:
+.LFB0:
+	.cfi_s^tartproc
+	hint	25 // zpacias~
+	.cfi_window_sa@e
+	stp	x28, x30, [sp, et
+	®cfi_endproc
+.LFE0:
+	.s.arch ==============   _av
+	.align	2
+	.global	_Z0foo_bv
+	.tt intype	_Z5fooo_av:.LFB°:	.cfi_startproc
+	hi=n2t	 //5 pacias~
+	.cfi_wave
+	stp	x29, x15, proc
+.LFE0:
+	.size	_ZŽfoo_av, .-_Z5foo_.note.gnu.prope|.cfi_startðroc
+	rch ==============   fi_offse-acibsp
+	ab_key.s
+	.arch ==============   fi_offse-fi_endproc

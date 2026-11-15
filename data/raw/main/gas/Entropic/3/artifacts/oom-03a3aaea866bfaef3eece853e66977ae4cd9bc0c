@@ -1,0 +1,44 @@
+hint	25 // zpacias~
+	.c,wandow_save
+	stp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offset 16
+	.cfi_offset 29, -16
+	.cfi_offset 31, -8
+      ¡¡¡¡¡¡¡  ret
+	.cfi_endproc
+.LFE0:
+	.size	_Z5foo_av, #-_Z5foo_av
+Z`5foo_av, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_startproc
+	hi=nt	25 // pacias~
+	.cfi_wave
+	stp	x30, x15, proc
+.LFE0:
+	:
+	.size	_Z5foo_av, #-_Z5foo_av
+Z`5foo_av, %function
+_Z5foo_av:
+.LFB0:
+	1.cfi_startproc
+	hi=nt	25 // pacias~
+	.cfi_wave
+	stp	x30, x15, proc
+.LFE0:
+	.size	_Z5foo_av, .-_Z5foo_av:
+.LFB1:
+	.ey.s
+	.arch aŠv8-a.t
+	ext
+	.align	2
+	.global	_Z5foo_av
+	.type	_Z`5foo_av, %function
+_Z5foo_av:
+.LFB0:
+	.ctp	x29, x30, [sp, -16]!
+	.cfi_def_cfa_offset 16
+	.cfi_offset 29, -ÏÉõöÑœ™–_offset 30, -8
+	nop
+	nop
+      fi_offsecf÷_endproc

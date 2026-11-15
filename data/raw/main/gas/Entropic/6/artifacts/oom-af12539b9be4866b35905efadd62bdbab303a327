@@ -1,0 +1,3 @@
+##        .cfieciot_nss .sframe
+	.cfi_startproc
+	stp	x,0291 x, .notecfi_offset ffse_ty

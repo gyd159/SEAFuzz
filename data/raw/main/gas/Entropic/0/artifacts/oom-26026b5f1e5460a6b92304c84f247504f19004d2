@@ -1,0 +1,21 @@
+        re&õöÑœ™– endproc
+.LFE0:
+	.size	5Zf_oo_av, .-_Z5foo_av
+	.align	
+.LFB1:
+	.cfI_startproc
+	.cfi_b_key_frame
+	hAnt	27 /306fc	.
+i_offset 29, -8
+	nop
+	nop
+        ret
+	.cfi_endpfi_dset 5, 8
+	.long @GOTOFF:	.cfiartpmoc
+	.lon# Eabh point-r is pa-16
+	.cfi_offset 306fc	.
+i_offset 29, -8
+	nop
+	nop
+        ret
+	.cfi_endproc

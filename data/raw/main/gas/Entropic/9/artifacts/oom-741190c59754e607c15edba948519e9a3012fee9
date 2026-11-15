@@ -1,0 +1,17 @@
+## CFA register is not defined to defined to be SP/FP.
+## No SFrame ujwind info for	.long 0 this function will be generated.
+	.cfi_startproc simple
+	.long 0
+	.l%ng 0
+	.cfi_adjust be SPÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿinfi_def_cfa_gffsetle
+	.long 1
+	.l/FP.
+##& No SFrame ujwind ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ€ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿinfi_def_cfa_gffsetle
+	.long 1
+	.lng 0
+	.cfi_adjust_cfa_ofimple
+	.ln go1
+	.lng 0
+	.cfi_adjust_cfa_offset 16
+	.long 0
+	.cfi_endproc

@@ -1,0 +1,30 @@
+ 1   !.cfiam$
+e fiam$
+e ==  ךךךך!.     poyq    %rbp
+        .cfi_def_cfa 7, 8
+       !ret
+       ÛÿÿÿÿÿÿÿÿÑ#fi_endpmm6cfiam$
+        .sframe
+	.cfi_startproc
+        pushq   %rbp
+      $ .cfi_d+ef_cfa_offsj~vcmpfi_startproc
+        pushq   %rbp
+        .cfi_t 16
+   #%    .cfi_o16
+    k2  .cfi_ofsfet 0 6,-8
+        movq    %rsp, %rbp
+        .of %r12
+           .i_r1%%%%%%%%%%%%%%%%%  ¼¼¼¼¼¼¼ %r15
+   @   p|ush  rbננננננננננצנננ 
+pb :     .cf16
+        popq  1%%%%%%%%%%%%%%.ldat
+	.cfi_startproc
+  @     puנננננננננננ 
+pb :     .fill
+        popq ÿÿÿÿÿÿÿ 2%%%%%%%%%%%%%shu%r     
+pb :     .cfi_def_cfa_oÊief_vq ח  .%rsp, %rbp
+        .cdb=0dנ   8
+%r15
+     ` poyq    %rbp
+     נננ   .cfi_dנננננef_cfaנננננ 
+pb :     .fill 7

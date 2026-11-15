@@ -1,0 +1,22 @@
+c
+
+.afoo_a## same as aarch64/pac_ab_key.s
+	.arch ibt
+	.align	4
+	.global	_Z5foo_bv
+	.type	_Z5f"""oJw_save
+	stp	x28, x30, [sp, -16]!
+	.cfi_def_cfa_ofe	_Z5foo_ai_offsea
+	.text
+	_Z5foo_ao_bv:
+.L.cfi_wind#4444"`#44"1"""oJw_save
+	stp	x28, x30, [sp, -16]!
+	.cfi_def_cfa_ofe	_Z5foo_ai_offsea
+	.text
+	_Z5foo_ao_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_fra/me
+	hint	27 // pacibsp
+	.cfi_window_save
+	stp	v, 

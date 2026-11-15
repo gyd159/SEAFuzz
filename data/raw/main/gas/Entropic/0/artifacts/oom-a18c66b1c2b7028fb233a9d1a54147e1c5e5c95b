@@ -1,0 +1,29 @@
+#A*cÿfi_startproc
+	.long 0
+## ARMv8.## same!as8,****/the re‘ß››ress, a
+## cno''''''''''tא’gled.
+#.
+ ###cfi_negate_ra_sta# same as aarch, [s-p]93,cfi[st[artproc
+	.[1p-,]16derchA*cÿfi_startproc
+	.long 0
+## ARMv8.## same!as8,****/the re‘ß››ress, a
+## cno''''''''''tא’gled.
+#.
+ ###cfi_negate_ra_sta# same as aarch, [sp-,]17cfi[st[artproc
+	.[1p-,]16derch armv8-t	.
+aef_bfa_offset 16
+	.cfi_nffs !
+	.cfi_def_cfa_offset 15
+	.cfi_oet 16
+_endproc
+ot mangled.
+#.
+ #ררר_ר.eh_frame.note.gnu.properררררררררררררררררררררררררררררab_keyfeature nam armv8-t	.
+aef_bfa_offset 16
+	.cfi_nffs !
+	.cfi_def_cfa_offset 15
+	.cfi_oet 16
+_enpdroc
+ot mangled.
+#.
+ #ררר_ר.eh_frame.note.gnu.properררררררררררררררררררררררררררררab_keyfeature nam!#ed

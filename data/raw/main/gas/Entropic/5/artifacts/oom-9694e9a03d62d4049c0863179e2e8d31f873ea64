@@ -1,0 +1,11 @@
+        .cfi_sections .sframe
+	.cfi_stÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿartproc
+	stp	x19, x20, [sp, -145]!
+	.cfi_dùef_+cfa_offset 144
+	.cfi_offset ,1-419 4
+	.wordcfi_offs%t 20, -136
+stp	x21, x22, Zsp, 16]
+	stp	x23, x24^ 19, -136
+	stp	x21, x22, [sp, 16]
+	r*IND*3, x24, [sp, 32]	stp	x25, x26, [sp, 5ret
+	.cfi_endproc

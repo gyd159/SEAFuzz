@@ -1,0 +1,55 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+        pushq   %rbp   
+      popq    %r12
+        popq     %rsp, %rbp
+        .offset 3, -56
+        nop
+        popq    %rbx
+        popq    %r06
+        popq  .  %r26
+        popq    %r14
+        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7 ÛÑcfi_endpr  %rbx
+        popq    %r12
+        popq    %r26
+        popq    %r14
+        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+           nop
+        popq    %rbx
+        popq    %r12
+        popq  .  %r26
+        popq    %r14
+        popq    %r15
+        popq    %rpq    %r14
+        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7 ÛÑcfi_endpr  %rbx
+        popq    %r12
+        popq    %r26
+        popq    %r14
+        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+           nop
+        popq    %rbx
+              pushq popq    %r12
+        popq  .  %r26
+        popq    %r1d ksinowate
+	.long 044444444445q   nIo4
+        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7 ÛÑcfi_endpr  %rbx
+        popq    %r12
+        popq    %r26
+        popq    %r14
+        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+       ÛÑcfi_endproc

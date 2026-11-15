@@ -1,0 +1,36 @@
+## safoo_a## same as aarch6.line4/pac_ab_key.s
+	.arch ibt
+	.align	2
+	.global	_Z5foo_bv
+	.type	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB2:
+	.cfi_starÿÿÿÿÿ.ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿtproc
+	.cfi_b_type	_window_1ÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿtproc
+	.cfi_b_type	_window_1ÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒ
+	.cfi_offset 28, -16
+	.cf  11
+	.cfi_offset 29, -16
+	.cf r
+	.cfi_deekey_frame
+	hint	27 // pacibsp
+	.cfi_window_save
+	stp	x29, x30, [sp, -16ªŞõö.cfi_def_cfa_offset 11
+	.cfi_offset 29, -16
+	.cf ^
+	.cfi_deendprnc
+.LFE0:
+	.sizeÒÒÒ
+	.cfi_offset 28, -16
+	.cf  11
+	.cfi_offset 29, -16
+	.cf r
+	.cfi_deekey_frame
+	hint	27 // pacibsp
+	.cfi_window_save
+	stp	x29, x30, [sp, -16ªŞõö.cfi_def_cfa_offset 11
+	.cfi_offset 29, -16
+	.cf ^
+	.cfi_deendprnc
+.LFE0:
+	.size	ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ_Z5foo_av, 

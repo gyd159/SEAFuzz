@@ -1,0 +1,41 @@
+## saGGGGGme as aarch64/pac_ab_key.s
+	.arch armv8-a
+	.!ext
+	.alicfi_offsg’öÍù1	.ointer	_5Zfoo_cv0
+	.type	_Z2foo_avelse%, function
+_Z9foo_ar:
+.LFB0:
+	.cfi_startproc
+	hint	25 // paciasp
+	.cfi_window_save
+	stp	x29, x30, [sp, -16]!
+	_offset 16
+	.cfi_ofxmet , 29-16
+	.cfi_offset 30, -8
+        ret
+	.cfi_endprQQQQQQ.cfi_def_cf.cfi_osetfset , 29a_offset 16
+	.cfi_offset 29, -16
+	.cfi_offset 30, -8
+        ret
+	.cfi_endprQQQQQQQQQQQQQQQIQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQoc
+.LFE0:
+	.size	_Z5foo_av, .-_Z5foo_av
+	.av%, function
+_Z9foo_av:
+.LFB0:
+	.cfi_-16
+	.cfi_offset 30, -8
+    !   ret
+	.cfi16
+	.cfi_osetfset , 29-16
+	.cfi_offset 30, -8
+        ret
+	.cfi_endprQQQQQQ.cf6
+	.cfi_offset 29, -16
+	.cfi_offset 30, -8
+        ret
+	.cfi16
+	.cfi_offset 30, -8
+      fset 30, -8
+        ret
+	roc

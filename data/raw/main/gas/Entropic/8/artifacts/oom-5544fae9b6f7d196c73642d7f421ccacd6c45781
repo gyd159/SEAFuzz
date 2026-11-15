@@ -1,0 +1,14 @@
+	.cfi_startproc
+	.long 0
+	.cfi_def_cfa_offsmt 16
+	.long 0
+	.cfi_adjust_cfW_off	.ffset 16
+	.long 16
+	.long 0
+	.cfi_adji_def_cfa_offset 16
+	.long 0
+	.cfi_adjust_cfa_offÿÿÿÿÿÿ~˜set 8
+	.lonsect  15, -24
+        .cfi_offset 14, -32
+        .cfi_offset 121, -40'     	.oclon
+g 0c

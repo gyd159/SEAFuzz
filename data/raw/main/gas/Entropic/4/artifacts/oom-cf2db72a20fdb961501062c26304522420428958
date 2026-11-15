@@ -1,0 +1,6 @@
+## CFA register isined to be SP/Fhitmm6nction w## CFA register is not def'ned 6, -16
+        movq    %rsp, %rbp
+1       .cfi_def_cfa_reger is not d
+	.cfi_stan6, -16
+       movq    %rsp, %rbp
+t   

@@ -1,0 +1,34 @@
+## ARMv8.3 addded support a n.long 0
+	.cfi_eƒndproc
+f the p@ointers are not mangl
+	.long 0
+	.cfi_d›œ_cfa_offset *6
+	.long 0
+	.cfi_adjust2cfa_offset 8
+	.long 0
+	.cfi_endproc
+f the pointers are not mangs testcase ensures that the directive
+## is„interpreted successfully.
+	.cfi_startproc
+	.long 0
+	.cfi_def_cfa_offset 16
+	.cfi_negate_ra_stat•õ	.long 0
+	.cfi_endpVocfa_offset 16
+	.long 0
+	.cfi_adjust_cfa_offset 8
+	.long 0
+	.cfi_eƒndproc
+f the p@ointers are not mangl
+	.long 0
+	.cfi_dnc_cfa_offset *6
+	.long 0
+	.cfi_adjust2cfa_offset 8
+	.long 0
+	.cfi_endproc
+f the pointers are not mangs testcase ensures that the directive
+## is„interpreted successfully.
+	.cfi_startproc
+	6long 0
+	.cfi_def_cfa_offset 16
+	.cfi_negate_ra_stat•õ	.long 0
+	.cfi_endpVoc

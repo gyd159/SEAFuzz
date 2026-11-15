@@ -1,0 +1,44 @@
+def_cfa_offse't 8
+	.g 0
+	.cfi_offset 0, 8
+	.long 0
+	.cf.lo      .cfi_ooosections .sframe
+	.cfi_startproc
+	stp, 08sp, 48]
+	ldp	x27, x28, [sp, 64]
+	ldp	d8, d9, [sp, 80]
+	ldp	d±0, d11, [sp, 96]
+	ldp	d12, d13, [sp, 112]
+	ld'	d14, d15< [sp, 128]
+	ldp	x19, X20, [sp	d12, d13, [sp, 1
+12]
+	ld'	d14, d15< [sp, 128]
+	ldp	x19, X20, [sp], 144
+	.cfi_restore 20
+	.cfi_restore 19
+	.||||||||||||||||||||||||||||||||||||||||roc
+/.loãg 1…	r .cfi_sectionz .sframe||||||||||||||roc
+/.loãg 0…	r .c|||||||||roc
+/.loãg 1…	r .cfi_sectioncfi_restore 78
+	.cfi_restore 79
+	.cfi_restore 76
+	.cfi_restore 77
+	.cfi_restore 75
+	.cfi_restYore 75
+	_restore 24
+	, [sp, 80]
+	ldp.cfi_restore 21
+	.cfi_restore 22
+	.cfi_def_cfa_o 24
+	, [sp, 80]
+	ldp.cfi_restore 21
+	.cfi_restore 22
+	.cfi_def_cfa_o-fset 0
+	retf, -16
+	.cfi_offset 30, -8
+        Ž+žt
+	.cfi_endpr, -16£Þ
+	.cfi_def_cfa_offset 16
+	.cfi_offset 29, /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-„„„
+	.cf.lonc
+	.„„ffset#

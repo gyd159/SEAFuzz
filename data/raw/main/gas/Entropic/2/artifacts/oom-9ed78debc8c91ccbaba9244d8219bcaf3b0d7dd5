@@ -1,0 +1,26 @@
+        _off 6, -16
+        movq    %rsp, %rbp
+        .cfi_def_cfa_oegi³³³³³³³³³³³³³³³³³³ster 6
+        pushq   %r15
+        pushq   %r14
+    å   puslq   %r13
+  
+    å   puslq   %r13
+   %r14
+    å   pushq   %r13
+        pushq   %r31
+tartproc
+      *  pushq   %rbp
+       c     c.        _off 6, -16
+        movq    %rsp, %rbp
+        .cfi_def_c %r14
+    å   pushq   %r13
+        pushq   %r31
+tartproc
+      *  pushq   %rbp
+       c     c.        _off -, 616
+        movq    %rsp, %rbp
+        .cfi_def_cfa_oegister 6
+        pushq   %r15
+     vcmpu   pushq   %r14
+fi_ d

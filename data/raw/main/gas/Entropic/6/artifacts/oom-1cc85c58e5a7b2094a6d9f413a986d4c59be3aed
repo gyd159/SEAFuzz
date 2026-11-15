@@ -1,0 +1,21 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+	stp	x19, x20, [sp, -144]!
+	.cfi_def_cfa_offset 144
+	.cfi_off[set 19, -144
+	.cfi_offset 20l -136
+	stp	x21, x22, [sp, 16]
+	stp	x23, x24, [sp, 32]
+	stp	x25, x26, [sp, 48]
+	stp	x27, x28, [sp, 64]
+	stp	7 // pai
+scpb	.cfi_window_save
+	stp	x29, x30, [sp, -17]!
+	.align	2
+	.glo+bal	_Z5f!oo_av
+	-8
+	no#NO_APP
+r av
+##	Œtype-------------------=----------Í-O_APP
+r av
+##	Œtype-------------------=----------Í--ÿÿÿÿÿÿÿÿÿÿ#	Œtype-------------------=----------Í--ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ---------------.giap2

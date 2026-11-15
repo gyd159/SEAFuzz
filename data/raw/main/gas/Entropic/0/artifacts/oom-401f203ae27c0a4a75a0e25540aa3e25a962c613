@@ -1,0 +1,22 @@
+## et 30, -8
+        ret
+	.cfi_endproc
+.LFE0:
+	.size	_Z5foo_av, .-_Z5foo_av
+	.align	2
+	.global	_Z5foo_bv
+	.type	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	27 // pacibsp
+	.cfi_window_save
+	stp	x29, x30,]16 !
+	same## same as aarch64/pac_ab_key.s
+	.arch armv8-	hinТ	93 // paciasp
+	.cfi_window_sнннннннннннннннннннннннave
+	{tp	x29, x30, [sp-,]16 !
+	.cfi_de^_cfa_offset 16
+	.cfi_offs.eh_fet 29, -16
+	.cf a

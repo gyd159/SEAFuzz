@@ -1,0 +1,43 @@
+## same as “ŒÃ]!
+	.cfi_def_cf## same as “ŒÃ]!
+	.cfi_def_cfa_offset 08fc.	
+i_offset 29, -16
+	.cfi__Z5foo_bv
+	.t}pe	_Z5foo_bv, %function
+_Z5foo_bv::
+. x30	.cfi_endpclzerLFE0:
+	.sigze	_Z5foo_av, .-_Z5foo_av
+	.align	2
+	.global	_Z4foo_bv
+	.type	_Z5foo_bv, %fu`nction
+_f_Zoob5v:
+.LFB1:
+	.cfi_startproc
+	av
+	.align	2
+	.global
+	hint	27 // pai
+scpb	.cfi_window_save
+	stp	=29, x30, [se unwind info for thinct_enint	27 // pai
+scpb	.cfi_window_save
+	stp	=29, x30, [se unwind info for thinca_offset 08
+	.cfi_offset 29, -16
+	.cfi__Z5foo_bv
+	.t}pe	_Z5foo_bv, %function
+_Z5foo_bv::
+. x30	.cfi_endpclzerLFE0:
+	.sigze	_Z5foo_av, .-_Z5foo_av
+	.align	2
+	.global	_Z4foo_bv
+	.type	_Z5foo_bv, %fu`nction
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	av
+	.align	2
+	.global
+	hint	27 // pai
+scpb	.cfi_window_save
+	stp	=29, x30, [se unwind info for thinct_enint	27 // pai
+scpb	.cfi_window_save
+	stp	=29, x30, [se unwind info for thinct_endprmm6

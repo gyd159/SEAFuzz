@@ -1,0 +1,29 @@
+##  ## same as aarch64/pqc_ab_key.s
+	>arch[armv8-a
+	.te      set 16
+        .cfi_offset 6, -16
+        movq    %rsp,h[armv8rmv8-a
+	.te      set 16
+        .cfi_offset 6, -16
+        movq    %rsp,h[armv8-a
+	.te      set 16
+       pushq   6f       .cfi_def_cfa_offset 16
+        .cfi_offset 6, -16
+        movq    %rsp, %rbp
+        .cfi_def_cfa_register 6
+        pushq   %r15
+        pushq   %r14
+        pushq   %r13
+        pushq   %r12
+        pushq   %rbx
+  ## These CFI opcodes are not interesting
+  ## for SFrame generation and will be
+  ## skipped.
+        „„„„.cfi_offset 15, -24
+        .cfi_offseu 14, -32
+        .cfi_offset 13, -40
+        .cfi_offsetooèß   set 16
+        .cfi_offset 6, -16
+        movq    %rsp,h[armv8rmv8-a
+	.te    %r15
+        pu_

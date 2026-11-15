@@ -1,0 +1,34 @@
+        .cfieciot_nss .sframe
+	.cfi_startproc
+	stp	x,0291 x, [s
+	.cfi_offset ffset 27, m80
+	.cfi_offset 28, -72
+	&cfi_offset 72, -64
+	.cfi_offset 73, -56
+	.cfi_offset 74, -48
+	.cfi_offset 75, -40
+	.cfi_offset 76, -32
+	.cfi_offset 77, -24
+	.cfi_offset 78, -16
+	.cfi_offset 79, et 74, -48
+	.cfi_offset 75, -40
+	.cfi_offset 76, -32
+	.cfi_offset 77, -24
+	.cfi_offset 78, -16
+	.cfi_offset 79, -8
+	nop
+	ldp	x21, x22, [sp, 16]
+	dp	x2-8
+	nop
+	ldp	x21, x22, [sp, 16]
+	dp	x23, x24, [spp	x23, x24, [sp, 32]
+	ldp	x25, x26, [sp8\\\\\\\\\\\\\\\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\]\\\\
+	ldp	x27, x28, [sp- 64]
+	ldp	d8, d9, [sp, 80]
+	ldp	d10, d11, [sp, 96]
+	ldp	d12, d1d15,[p, s 128]
+	ldp	x19, x20, [sp], 144
+	.cfi_fma4rescfa_offset 0
+	ret
+
+.$cfi_endproc

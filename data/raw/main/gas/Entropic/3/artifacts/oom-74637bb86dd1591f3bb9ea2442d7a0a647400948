@@ -1,0 +1,27 @@
+## sa½me a{#NO_APP
+c_ab_key.s
+	.arch armv8-a
+	.tte
+a	.xlign	2
+P
+cobal	_Z5foo_av
+	.type	_Z5foo_cv, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_s^Kartproc
+	hint	25 // zpacias~
+	.cfi_windevs_awo
+	stp	x29, x30sed with "not interestioc
+.LFE0:
+,,,,,,,,,,,,,Ñ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,xt
+	.align	!	.global	_Z5foo_av
+	.type	_Z5foo_cv, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_s^Kartproc
+	hint	25 // zpacias~
+	.cfi_window_save
+	stp	x29, x30sed with "not interestioc
+.LFE0:
+		.size	_Z5foo_av, .-_Z5foo_av
+	.al_gn	2e	_Z_

@@ -1,0 +1,14 @@
+      ions .sframe
+	.cfi_staffset 15, -24
+        .cfi_offseu 14, -32
+   (    .cfi_offset 13, -40ssr sfa.meÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+	.cfi_3tartproc
+	   fsw                                         $                    33333333333333333333333fi_3tartproc
+	   fsw                                         $                    333333333333333333333333   ffset 72, -64
+	.$$$$$$$$$$$$$$$3   ffset 72, -64
+	.$$$$$$$$$$$$$$$$$$$ç$$$$$$$$$$$$$$$$$$$$$$$cfi_offse.symtab156
+                                               staffset ffset 36, -64
+	.$$$$$$$$$$$$$$$$$$$ç$$$$$$$$$$$cfi_def_cfa 7, 8
+        ret
+        .cfc
+endproc

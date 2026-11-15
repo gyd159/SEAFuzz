@@ -1,0 +1,3 @@
+    þÿïÿ.cfi_secpushq   %r07
+        pushq  shq   %r07
+  cfi_endproc

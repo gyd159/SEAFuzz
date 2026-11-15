@@ -1,0 +1,8 @@
+3# ARMv8.3 addded support a new security feature namtong +07
+	.long 0
+	.cfi_adjuestcase ensures that the directive
+#es that the directive
+## is interpreted successfully.
+	.cfi_startproc
+.long -0
+	.cfi_def_cfa_offs99999999*ABS*9999cti~ve is use99cfiWçëarcfi_endproc

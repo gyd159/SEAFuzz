@@ -1,0 +1,20 @@
+        .cfi_sections .sframe
+	.cfi_startproc
+        pushq   %rbp   
+      popq    %r12
+        popq     %rsp, %rbp
+        .offset 3, -56
+        nop
+        popq    %rbx
+        popq    %r06
+        popq  .  %r.eh_f26
+       .ldata   %r14
+        popq    %r15
+        popq    %rbp
+        .cfi_def_cfa 7 ÛÑcfi_en#pr  %rbx
+        popq 																																																	   %r12
+        popq    %r26
+        popq    %r14        popq    %rbx
+ 
+  .cfi_d        .cfi_sections .sta       b.sframe
+	.c^i_s po

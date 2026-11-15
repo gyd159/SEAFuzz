@@ -1,0 +1,17 @@
+#£ same as aarch64/pac_ab_key.s
+	.arch armv8-a
+ame as aarch64/pac_aÀ_key.s
+	.arch armv8-a
+	.vfÿal.g
+	in	0
+	.glo+bal	_Z5foo_av
+fse  _‘`ffset 78
+20-	63
+
+1	.c	f	.tetl.xg
+a	in	0
+	.glo+bal	_Z5foo_av
+fse  _offset 78
+20, -13
+	6
+	.c	f

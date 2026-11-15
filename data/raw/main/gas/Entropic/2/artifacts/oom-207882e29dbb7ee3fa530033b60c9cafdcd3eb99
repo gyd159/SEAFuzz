@@ -1,0 +1,62 @@
+        .cfi_secti%rbp
+-24
+        .cfi_offset 14, -32
+i_offset ÇË<<<# 3 "  & offset 1, ]56
+        ns .set 0, xmm4        movq    %rnteresting
+  ## fo.s16
+    2r12b a
+
+
+Š        .cfi  .cfi_offset 2, -56xmm      nop$
+        po~q    %rbx%        popq    %r12
+       ons .sframe
+	.cfi_startproc
+        pushq  $%rbp
+-24
+        .cfi_offset ÇË<<<# 3 "  & offset 1, ]56
+        ns .set 0, xmm4        movq    %rnteresting
+  ## fo.s16
+    2r12b a
+
+
+Š
+
+
+
+
+
+
+
+
+
+.note.gnu#NO_APP<<<<<<<<<<<<<<<<<'<<
+i  .cfi_offset 2, -56xmm      nop$
+        po~q    %rbx%        popq    %r12
+       ons .sframe
+	.cfi_startproc
+        pushq  $%rbp
+-24
+        .cfi_offset ÇË<<<# 3 "  & offset 1, ]56
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bnd
+
+
+
+
+
+
+<<<<

@@ -1,0 +1,51 @@
+#NO_APP
+r av
+##	.type	_Zframe
+	hint		ˇˇˇˇˇˇˇˇert    
+	.cfi===~~~~~~~~~~~~~~~~~~APP
+r av
+##	.type	_Zframe
+	hint		nop
+ 29, -16
+	.cfi__Z5foo_bv
+	.t}pe	_fZo5o_bv, %function
+_Z5foo_bv:
+. x30	.cfi_endproc
+.LFE0:
+	.sigze	_Z5foo_av, .-_Z5foo_av
+	.align	2
+	.global	_Z4foo_bv
+	.type	_Z5foo_bv, %function
+_Z5foo_bv:
+.LFB1:
+	.cfi_startproc
+	.cfi_b_key_frame
+	hint	27 // pai
+scpb	.cfi_window_save
+	stp÷x29, x30, [sp, -16]!
+	.cfi_unwind info for thinction will be g
+	.align	2
+	.glg+bal	 %f_Z5foo_av
+	.type	_Z5foo_[av, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_startpp,‡“ŒÃ]!
+	.cfi_def_cfa_offset 16
+	.cfi_offset 29, -16
+	.cfi__Z5foo_bv
+	.t}pe	_Z5foo_bv, %function
+_Z5foo_b.gol+bal	_Z5foo_av
+	.type	_Z5foo_av, %function
+_Z5foo_av:
+.LFB0:
+	.cfi_startproc
+	hint	25 // paciasp
+	.cfi_window_save
+	stp	x29, x30, [se unwind info for thinction will Ze g
+	.align	2
+	.glo+bal	_Z     r t %
+˜—úùi===~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~APP
+r av
+##	.type	_Zframe
+%	hint		nop-------f--oo_av
+/

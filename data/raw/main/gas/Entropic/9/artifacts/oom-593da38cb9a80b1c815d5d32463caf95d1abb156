@@ -1,0 +1,15 @@
+	.,rv8-a
+te
+	.reloc	.arlign	4
+aliœga
+te
+	.reloc
+	.##1 same as a#NO_APP
+arch63	.,rv8-a
+te
+	.reloc	.arlign	4
+aliœga
+te
+	.reloc
+	.##1 same as a#NO_APP
+arch/paca_b_kn	
