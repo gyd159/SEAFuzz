@@ -22,11 +22,11 @@ fast track remain enabled; statistics for the other mechanism are disabled.
 
 Use each new option as a separate argument: `-RF` differs from `-R -F`, and
 `-EF` differs from `-E -F`. The existing `-R` disables rarity, `-E` disables
-entropy, and `-F` disables only the entropy fast track.
+entropy.
 
 `-A` keeps both fast tracks and disables added energy weighting; `-P` keeps
 only added energy weighting. `-A`, `-P`, `-RF`, and `-EF` are mutually exclusive
-and cannot be combined with `-R`, `-E`, or `-F`. The new modes override
+and cannot be combined with `-R`, or `-E`. The new modes override
 `AFL4_FAST_CHANNEL`, `AFL4_ENERGY_SCHEDULE`, and `AFL_ENTROPIC`; invalid environment
 values still fail validation. As with existing entropy modes, the entropy
 mechanism is disabled in uninstrumented (`-n`) mode.
