@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """Draw a readable two-row entropy-distribution heatmap and export EPS/PDF."""
@@ -11,20 +12,22 @@ from matplotlib.colors import LinearSegmentedColormap, PowerNorm
 
 
 # ============================================================
-# 1. 用户只需要修改这三个路径
+# 1. Users only need to modify these three paths
 # ============================================================
 
-INPUT_CSV = Path(r"D:\outputx\outputx_alpha\afl4_aflpha_0.2格子\entropy_heatmap_data.csv")
-OUTPUT_EPS = Path(r"D:\outputx\outputx_alpha\afl4_aflpha_0.2格子\热力图\entropy_distribution_heatmap_final_v2.eps")
-OUTPUT_PDF = Path(r"D:\outputx\outputx_alpha\afl4_aflpha_0.2格子\热力图\entropy_distribution_heatmap_final_v2.pdf")
+INPUT_CSV = Path(r"D:\outputx\outputx_alpha\afl4_aflpha_0.2_grid\entropy_heatmap_data.csv")
+OUTPUT_EPS = Path(r"D:\outputx\outputx_alpha\afl4_aflpha_0.2_grid\heatmap\entropy_distribution_heatmap_final_v2.eps")
+OUTPUT_PDF = Path(r"D:\outputx\outputx_alpha\afl4_aflpha_0.2_grid\heatmap\entropy_distribution_heatmap_final_v2.pdf")
 
 
 # ============================================================
-# 2. 图像布局与字体设置（一般不需要修改）
+# 2. Figure layout and font settings (usually no changes needed)
 # ============================================================
 
-# 原来的 3+2 排版不变；增高画布、增大热力图和字体，热力条放下方。
-FIGSIZE = (19, 22.36)  # 高度在上一版基础上增加 30%
+# Keep the original 3+2 layout unchanged.
+# Increase the figure height, enlarge the heatmaps and fonts,
+# and place the colorbar at the bottom.
+FIGSIZE = (19, 22.36)  # Height increased by 30% compared with the previous version
 
 FONT_SUPTITLE = 19
 FONT_PANEL_TITLE = 24
@@ -42,14 +45,14 @@ plt.rcParams["ps.fonttype"] = 3  # EPS: Type 3 glyphs, broadly compatible with P
 
 def main():
     if not INPUT_CSV.is_file():
-        raise FileNotFoundError(f"找不到输入 CSV 文件：{INPUT_CSV}")
+        raise FileNotFoundError(f"Input CSV file not found: {INPUT_CSV}")
 
     data = pd.read_csv(INPUT_CSV)
 
     required = {"program", "alpha", "entropy_bin", "percentage"}
     missing = required - set(data.columns)
     if missing:
-        raise ValueError(f"CSV 缺少必要列：{sorted(missing)}")
+        raise ValueError(f"Missing required columns in CSV: {sorted(missing)}")
 
     programs = sorted(data["program"].dropna().unique())
     alphas = sorted(data["alpha"].dropna().unique(), key=float)
@@ -58,25 +61,34 @@ def main():
 
     if len(alphas) > 5:
         raise ValueError(
-            f"当前脚本的两行布局最多支持 5 个 alpha，实际检测到 {len(alphas)} 个。"
+            f"The current two-row layout supports at most 5 alpha values, "
+            f"but {len(alphas)} were detected."
         )
 
-    # 所有子图共用颜色范围，确保不同 alpha 之间可以直接比较。
+    # Use a shared color range for all subplots to ensure
+    # direct comparability across different alpha values.
     max_percentage = float(data["percentage"].max())
     vmax = max(10.0, (max_percentage // 10 + 1) * 10)
 
-    # 颜色调整：不改变原始数据，只调整颜色显示。
-    # 0% 格子显示为浅灰；大于 0% 的格子使用蓝色渐变。
-    # 截掉 Blues 里最浅的、接近白色的部分，以提高低占比可见性。
+    # Color adjustments:
+    # Do not modify the original data; only adjust the color representation.
+    # Cells with 0% are displayed in light gray.
+    # Cells with values greater than 0% use a blue gradient.
+    # Remove the lightest, nearly white portion of the Blues colormap
+    # to improve the visibility of low-percentage values.
     blue_colors = plt.get_cmap("Blues")(np.linspace(0.25, 1.0, 256))
     cmap = LinearSegmentedColormap.from_list("VisibleBlues", blue_colors)
     cmap.set_bad("#F0F0F0")
 
-    # gamma < 1 放大低比例区间的视觉差异；所有子图共用相同归一化。
+    # gamma < 1 enhances visual differences in the low-percentage range.
+    # All subplots use the same normalization.
     norm = PowerNorm(gamma=0.4, vmin=0, vmax=vmax)
 
-    # 仍是原来的 3+2 两行布局；扩展绘图区，同时留足大字体的空间。
-    # 坐标为整张画布的相对位置 (left, bottom, width, height)。
+    # Maintain the original 3+2 two-row layout.
+    # Expand the plotting area while leaving sufficient space
+    # for larger fonts and axis labels.
+    # Coordinates are relative to the entire figure:
+    # (left, bottom, width, height).
     fig = plt.figure(figsize=FIGSIZE)
     panel_width = 0.25
     panel_height = 0.31
@@ -103,19 +115,22 @@ def main():
         )
         matrix = matrix.reindex(index=bins, columns=programs, fill_value=0)
 
-        # 只遮罩占比恰好为 0 的格子（不影响 H=0 这一熵区间的正常统计）。
+        # Mask only cells with an exact percentage of 0.
+        # This does not affect the statistics of the H=0 entropy bin.
         values = matrix.to_numpy(dtype=float)
         masked_values = np.ma.masked_where(values == 0, values)
+
         image = ax.imshow(
             masked_values,
             aspect="auto",
             cmap=cmap,
             norm=norm,
             interpolation="nearest",
-            origin="lower",  # 熵值从下往上递增
+            origin="lower",  # Entropy values increase from bottom to top
         )
 
         ax.set_title(f"α = {float(alpha):g}", fontsize=FONT_PANEL_TITLE, pad=11)
+
         ax.set_xticks(range(len(programs)))
         ax.set_xticklabels(
             programs,
@@ -126,35 +141,69 @@ def main():
         )
         ax.set_xlabel("Program", fontsize=FONT_AXIS_LABEL, labelpad=9)
 
-        # 纵坐标使用简洁的整数刻度：0、1、2、...、10。
-        # 每 1 个熵单位对应 1 / bin_width 个分箱；不显示区间括号。
+        # Use simple integer tick labels on the y-axis:
+        # 0, 1, 2, ..., 10.
+        # Each entropy unit corresponds to 1 / bin_width bins.
+        # Do not display interval brackets.
         rows_per_unit = max(1, round(1.0 / bin_width))
         tick_positions = list(range(0, len(bins), rows_per_unit))
         tick_labels = [str(i) for i in range(len(tick_positions))]
+
         ax.set_yticks(tick_positions)
         ax.set_yticklabels(tick_labels, fontsize=FONT_Y_TICK)
 
-        # 不添加额外的纵轴标题；熵值从底部 0 向顶部递增。
+        # Do not add an extra y-axis title.
+        # Entropy values increase upward, starting from 0 at the bottom.
 
-        ax.tick_params(axis="both", which="major", length=3.5, width=0.8)
+        ax.tick_params(
+            axis="both",
+            which="major",
+            length=3.5,
+            width=0.8,
+        )
+
         for spine in ax.spines.values():
             spine.set_linewidth(0.8)
 
-    # 底部公共水平热力条，释放原来右侧占用的绘图空间。
+    # Place a shared horizontal colorbar at the bottom.
+    # This frees up the space previously occupied by
+    # the vertical colorbar on the right.
     cax = fig.add_axes([0.24, 0.052, 0.52, 0.018])
-    colorbar = fig.colorbar(image, cax=cax, orientation="horizontal")
+
+    colorbar = fig.colorbar(
+        image,
+        cax=cax,
+        orientation="horizontal",
+    )
+
     colorbar.set_label(
         "Seed Proportion (%)",
         fontsize=FONT_COLORBAR,
         labelpad=10,
     )
-    # PowerNorm 为非线性映射；用较疏的真实百分比刻度避免标签拥挤。
-    colorbar_ticks = sorted(set(v for v in [0, 1, 5, 10, 20, 40, 60, vmax] if v <= vmax))
-    colorbar.set_ticks(colorbar_ticks)
-    colorbar.ax.tick_params(labelsize=FONT_COLORBAR - 1, length=3)
 
-    # 自动创建输出目录，并分别保存 EPS、PDF。
-    # EPS 使用 Type 3 字体以提高 PostScript/LaTeX 工具链兼容性；PDF 仍使用 Type 42。
+    # PowerNorm uses nonlinear color mapping.
+    # Use relatively sparse ticks representing actual percentages
+    # to prevent the colorbar labels from overlapping.
+    colorbar_ticks = sorted(
+        set(
+            v for v in [0, 1, 5, 10, 20, 40, 60, vmax]
+            if v <= vmax
+        )
+    )
+
+    colorbar.set_ticks(colorbar_ticks)
+    colorbar.ax.tick_params(
+        labelsize=FONT_COLORBAR - 1,
+        length=3,
+    )
+
+    # Automatically create the output directories
+    # and save the figure in both EPS and PDF formats.
+    #
+    # EPS uses Type 3 fonts for improved compatibility
+    # with PostScript/LaTeX toolchains.
+    # PDF continues to use Type 42 fonts.
     OUTPUT_EPS.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_PDF.parent.mkdir(parents=True, exist_ok=True)
 
@@ -164,6 +213,7 @@ def main():
         bbox_inches="tight",
         pad_inches=0.15,
     )
+
     fig.savefig(
         OUTPUT_PDF,
         format="pdf",
@@ -171,10 +221,10 @@ def main():
         pad_inches=0.15,
     )
 
-    print("\n生成完成：")
-    print(f"  输入 CSV：{INPUT_CSV}")
-    print(f"  EPS：{OUTPUT_EPS}")
-    print(f"  PDF：{OUTPUT_PDF}")
+    print("\nGeneration completed successfully:")
+    print(f"  Input CSV: {INPUT_CSV}")
+    print(f"  EPS output: {OUTPUT_EPS}")
+    print(f"  PDF output: {OUTPUT_PDF}")
 
     plt.close(fig)
 
