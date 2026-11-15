@@ -1,0 +1,6 @@
+  初始种子选择（Binutils）
+  针对 binutils 目标程序（objdump/nm/cxxfilt/gas），我们选取与其输入格式严格一致的样本，并遵循“小而多样”的原则以提升执行效率和覆盖探索能力。
+
+  - 对 objdump 与 nm，选取构建目录中的 .o / .a 文件作为输入，这些文件是其最典型的处理对象；
+  - 对 cxxfilt，采用 binutils 自带 demangler 测试集（demangle-expected、d-demangle-expected、rust-demangle-expected 等），保证覆盖多种符号格式；
+  - 对 gas，使用 gas testsuite 中的 .s 汇编文件（优先选择与目标架构相关的 x86_64/i386/cfi 子集）。
