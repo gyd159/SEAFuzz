@@ -4,3 +4,4 @@
 - **`main/`** contains the raw experimental data collected from the baseline fuzzers.
 - **`parameter/`** contains the raw data from the parameter sensitivity experiments.
 - **`alpha_heatmap/`** contains the data used to investigate how different smoothing coefficients (α) affect the distribution of entropy values across different seeds in the target programs.
+- **`paths data scripts/`** contains scripts related to path data.
