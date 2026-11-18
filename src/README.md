@@ -48,8 +48,8 @@ For a target that accepts an input-file argument:
 ```sh
 ASAN_OPTIONS_VALUE="abort_on_error=1:symbolize=0:detect_leaks=0:allocator_may_return_null=1"
 src/SEAFuzz/afl-fuzz \
-  -i /path/to/seeds -o /path/to/results -m none -- \
-  /path/to/instrumented_target @@
+  -i /path/to/seeds -o /path/to/results -m none -d \
+  -- /path/to/instrumented_target @@
 ```
 
 This is a command template. Use the target's actual arguments and the experiment's deterministic-stage setting. `-d`, when supplied, skips AFL's deterministic stages.
@@ -118,7 +118,7 @@ make -C src/AFL-DiPri/llvm_mode -j2 LLVM_CONFIG=llvm-config-10
 
 DIPRI_MODE=A DIPRI_MEASURE=H \
   src/AFL-DiPri/afl-fuzz \
-  -i /path/to/seeds -o /path/to/results -m none -- \
+  -i /path/to/seeds -o /path/to/results -m none -d -- \
   /path/to/instrumented_target @@
 ```
 
