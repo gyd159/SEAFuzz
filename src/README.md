@@ -125,7 +125,7 @@ DIPRI_MODE=A DIPRI_MEASURE=H \
 `DIPRI_MODE` accepts `V`, `P`, or `A`; `DIPRI_MEASURE` accepts `H`, `E`, or `J`. `DIPRI_PERIOD` controls the Periodical mode and defaults to 60 seconds. `DIPRI_EVAL_TYPE` selects distance or a supported intrinsic seed metric; `DIPRI_PLUSPLUS`, when nonempty, enables the additional bitmap-size ordering. Leave these two variables unset for the distance-only example above.
 
 ## How to use SEAFuzz(script)
-
+```sh
 ASAN_OPTIONS_VALUE="abort_on_error=1:symbolize=0:detect_leaks=0:allocator_may_return_null=1"\
 SEAFuzz/AFL/afl-fuzz \
 -i seeds\
@@ -133,5 +133,5 @@ SEAFuzz/AFL/afl-fuzz \
 -m none \
 -o output \
 -- TARGET
-
+```
 In these sets, '-d' means skip the deterministic phase, '-o' means no memory limit.
