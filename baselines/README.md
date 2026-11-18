@@ -132,13 +132,14 @@ statistics is:
 ```sh
 ASAN_OPTIONS_VALUE="abort_on_error=1:symbolize=0:detect_leaks=0:allocator_may_return_null=1"
 LSAN_OPTIONS_VALUE="detect_leaks=0:symbolize=0"
+taskset -c 0 \
 /path/to/libfuzzer_target \
   -entropic=1 -fork=1 -max_total_time=86400 \
   -fork_stats_file=/path/to/results/fork_stats.csv \
   -artifact_prefix=/path/to/results/artifacts/ \
   /path/to/corpus
 ```
-
+taskset -c 0 binds to CPU core 0
 Create the results, artifacts, and corpus directories first. This template illustrates the interface; the experiment configuration must record the actual fork settings, seed, limits, harness, and sanitizer options.
 
 The source defaults for the Entropic options are:
