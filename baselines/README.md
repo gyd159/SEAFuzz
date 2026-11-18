@@ -135,6 +135,10 @@ LSAN_OPTIONS_VALUE="detect_leaks=0:symbolize=0"
 taskset -c 0 \
 /path/to/libfuzzer_target \
   -entropic=1 -fork=1 -max_total_time=86400 \
+  -fork_job_duration=300 \
+  -max_total_time=86400 \
+  -rss_limit_mb=1024 \
+  -malloc_limit_mb=1024 \
   -fork_stats_file=/path/to/results/fork_stats.csv \
   -artifact_prefix=/path/to/results/artifacts/ \
   /path/to/corpus
