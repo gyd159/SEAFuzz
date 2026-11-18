@@ -36,8 +36,8 @@ make -C baselines/AFL -j2
 
 ASAN_OPTIONS_VALUE="abort_on_error=1:symbolize=0:detect_leaks=0:allocator_may_return_null=1"
 baselines/AFLFast/afl-fuzz -p fast \
-  -i /path/to/seeds -o /path/to/results -- \
-  /path/to/instrumented_target @@
+  -i /path/to/seeds -o /path/to/results -m none -d \
+  -- /path/to/instrumented_target @@
 ```
 
 When LLVM instrumentation is needed, build `baselines/AFL/llvm_mode` with the LLVM toolchain specified by the target's build configuration.
@@ -48,9 +48,9 @@ When LLVM instrumentation is needed, build `baselines/AFL/llvm_mode` with the LL
 make -C baselines/AFLFast -j2
 
 ASAN_OPTIONS_VALUE="abort_on_error=1:symbolize=0:detect_leaks=0:allocator_may_return_null=1"
-baselines/AFLFast/afl-fuzz -p fast \
-  -i /path/to/seeds -o /path/to/results -- \
-  /path/to/instrumented_target @@
+baselines/AFLFast/afl-fuzz \
+  -i /path/to/seeds -o /path/to/results -m none -d \
+  -- /path/to/instrumented_target @@
 ```
 
 `fast` is the default power schedule in this snapshot.
@@ -62,8 +62,8 @@ make -C baselines/EcoFuzz/EcoFuzz -j2
 
 ASAN_OPTIONS_VALUE="abort_on_error=1:symbolize=0:detect_leaks=0:allocator_may_return_null=1"
 baselines/EcoFuzz/EcoFuzz/afl-fuzz \
-  -i /path/to/seeds -o /path/to/results -- \
-  /path/to/instrumented_target @@
+  -i /path/to/seeds -o /path/to/results -m none -d\
+  -- /path/to/instrumented_target @@
 ```
 
 ## DiPri: AFL++ implementation
@@ -76,8 +76,8 @@ make -C baselines/DiPri source-only
 ASAN_OPTIONS_VALUE="abort_on_error=1:symbolize=0:detect_leaks=0:allocator_may_return_null=1"
 DIPRI_MODE=A DIPRI_MEASURE=H \
   baselines/DiPri/afl-fuzz \
-  -i /path/to/seeds -o /path/to/results -- \
-  /path/to/instrumented_target @@
+  -i /path/to/seeds -o /path/to/results -m none -d \
+  -- /path/to/instrumented_target @@
 ```
 
 The command explicitly selects **Adaptive + Hamming**. Without these overrides, this AFL++ implementation defaults to **Vanilla + Hamming**. `DIPRI_MODE=P` selects Periodical mode; `DIPRI_MEASURE=E` or `J` selects Euclidean or Jaccard distance. Distance evaluation is the default when `DIPRI_EVAL_TYPE` is unset. Leave `DIPRI_PLUSPLUS` unset for the distance-only example.
